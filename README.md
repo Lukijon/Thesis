@@ -56,7 +56,9 @@ Etapa atual do projeto. Para viabilizar os testes de H1, H1a e H2, é necessári
 
 - [x] Pré-projeto redigido (ver `docs/pre-projeto.docx`)
 - [x] Estrutura do repositório definida
-- [ ] Scripts de aquisição de dados (DFPs/notas, mercado, fundamentos, consenso de analistas)
+- [x] Aquisição das notas de dívida via CVM (piloto validado em 8 empresas x 2 exercícios; ver `src/acquisition/`) — pendente rodar em escala para 2015–2024
+- [ ] Aquisição de dados de mercado e fundamentos (Bloomberg)
+- [ ] Aquisição do consenso de EPS dos analistas (Bloomberg BEst)
 - [ ] Extração e limpeza de texto das notas
 - [ ] Cálculo de similaridade de cosseno / mudança textual (TF-IDF)
 - [ ] Construção das variáveis de controle
