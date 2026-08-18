@@ -74,9 +74,18 @@ def load_dfp_index(year: int, cache_dir: Path, force: bool = False) -> pd.DataFr
     return df
 
 
-def build_company_universe(years: list[int], cache_dir: Path, force: bool = False) -> pd.DataFrame:
+def build_company_universe(
+    years: list[int],
+    cache_dir: Path,
+    force: bool = False,
+    cd_cvm_filter: set[int] | None = None,
+) -> pd.DataFrame:
     """One row per non-financial company per fiscal year, keeping only the
     latest filed version (VERSAO) of the DFP document.
+
+    ``cd_cvm_filter``, if given, restricts the result to that set of CD_CVM
+    codes (e.g. the current IBOV constituents) instead of the full
+    non-financial universe -- useful for staging the download in tranches.
     """
     cadastral = load_cadastral(cache_dir, force=force)
     # CD_CVM isn't consistently zero-padded across CVM's own files (cadastral
@@ -85,6 +94,8 @@ def build_company_universe(years: list[int], cache_dir: Path, force: bool = Fals
     non_financial_codes = set(
         cadastral.loc[~cadastral["SETOR_ATIV"].apply(is_financial_sector), "CD_CVM_INT"]
     )
+    if cd_cvm_filter is not None:
+        non_financial_codes &= set(cd_cvm_filter)
     sector_by_code = cadastral.drop_duplicates("CD_CVM_INT").set_index("CD_CVM_INT")["SETOR_ATIV"]
 
     yearly_frames = []
