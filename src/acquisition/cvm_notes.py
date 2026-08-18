@@ -105,35 +105,55 @@ def download_filing_zip(id_doc: str, cache_dir: Path, force: bool = False) -> by
     )
 
 
-def _find_main_xml_name(zf: zipfile.ZipFile) -> str:
-    candidates = [
-        n
-        for n in zf.namelist()
-        if n.lower().endswith(".xml") and n not in ("FormularioCadastral.xml", "FormularioDemonstracaoFinanceiraDFP.xml")
-    ]
-    if not candidates:
-        raise FileNotFoundError("No main DFP XML found in filing package")
-    # The main XML is by far the largest of the remaining candidates.
-    return max(candidates, key=lambda n: zf.getinfo(n).file_size)
+LEGACY_ATTACHMENT_TAG = "AnexoDocumento"
 
 
-def list_attachments(zip_bytes: bytes) -> list[FilingAttachment]:
-    """Every PDF attachment embedded in the filing's main XML, decoded."""
-    with zipfile.ZipFile(BytesIO(zip_bytes)) as zf:
-        xml_name = _find_main_xml_name(zf)
-        xml_bytes = zf.read(xml_name)
-
+def _parse_attachments(xml_bytes: bytes, tag: str, nested: bool) -> list[FilingAttachment]:
     root = ElementTree.fromstring(xml_bytes)
     attachments = []
-    for node in root.iter(ATTACHMENT_TAG):
-        name_el = node.find("NomeArquivoPdf")
-        data_el = node.find("ImagemObjetoArquivoPdf")
+    for node in root.iter(tag):
+        # Modern format: NomeArquivoPdf/ImagemObjetoArquivoPdf are direct
+        # children. Legacy format nests them one level deeper, under
+        # <Documento>, so search recursively there instead.
+        name_el = node.find(".//NomeArquivoPdf" if nested else "NomeArquivoPdf")
+        data_el = node.find(".//ImagemObjetoArquivoPdf" if nested else "ImagemObjetoArquivoPdf")
         if name_el is None or data_el is None or not data_el.text:
             continue
         attachments.append(
             FilingAttachment(filename=name_el.text, pdf_bytes=base64.b64decode(data_el.text))
         )
     return attachments
+
+
+def list_attachments(zip_bytes: bytes) -> list[FilingAttachment]:
+    """Every PDF attachment embedded in the filing package, decoded.
+
+    Filings from roughly 2021 onward carry a single top-level XML
+    (`XmlDemonstracoesFinanceiras`) with the attachments inline. Older
+    filings package them differently: a `.dfp` file that is itself a ZIP,
+    containing `AnexoDocumento.xml` with the same idea but a different
+    tag/nesting -- and legacy attachment names are opaque internal temp
+    paths (e.g. "C:\\EMPRESASNET\\...\\00121604120000000000000000.pdf.pdf"),
+    not descriptive names, so downstream selection falls back to picking
+    the largest one rather than matching by filename.
+    """
+    with zipfile.ZipFile(BytesIO(zip_bytes)) as zf:
+        modern_candidates = [
+            n
+            for n in zf.namelist()
+            if n.lower().endswith(".xml") and n not in ("FormularioCadastral.xml", "FormularioDemonstracaoFinanceiraDFP.xml")
+        ]
+        if modern_candidates:
+            xml_name = max(modern_candidates, key=lambda n: zf.getinfo(n).file_size)
+            return _parse_attachments(zf.read(xml_name), ATTACHMENT_TAG, nested=False)
+
+        legacy_candidates = [n for n in zf.namelist() if n.lower().endswith(".dfp")]
+        if legacy_candidates:
+            with zipfile.ZipFile(BytesIO(zf.read(legacy_candidates[0]))) as inner_zf:
+                if "AnexoDocumento.xml" in inner_zf.namelist():
+                    return _parse_attachments(inner_zf.read("AnexoDocumento.xml"), LEGACY_ATTACHMENT_TAG, nested=True)
+
+    raise FileNotFoundError("No recognized DFP attachment structure (neither modern nor legacy) found in filing package")
 
 
 def select_source_attachments(attachments: list[FilingAttachment]) -> tuple[list[FilingAttachment], str]:
@@ -169,7 +189,13 @@ def save_company_year_notes(cd_cvm: str, ano: int, id_doc: str, cache_dir: Path,
     debt note, and save them under ``out_root/{cd_cvm}/{ano}/``. Returns a
     metadata dict for logging.
     """
-    out_dir = out_root / str(cd_cvm) / str(ano)
+    # Callers commonly pass pandas/numpy row values (e.g. numpy.int64 for a
+    # year); normalize to plain Python types so the metadata is JSON-safe.
+    cd_cvm = str(cd_cvm)
+    ano = int(ano)
+    id_doc = str(id_doc)
+
+    out_dir = out_root / cd_cvm / str(ano)
     matches, tier = extract_notes_pdf(id_doc, cache_dir, force=force)
 
     result = {
