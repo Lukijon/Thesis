@@ -94,7 +94,15 @@ def _looks_like_zip(data: bytes) -> bool:
 
 def download_filing_zip(id_doc: str, cache_dir: Path, force: bool = False) -> bytes:
     url = FILING_URL.format(id_doc=id_doc)
-    return get_bytes(url, cache_dir / f"{id_doc}.zip", force=force, timeout=180, validate=_looks_like_zip)
+    return get_bytes(
+        url,
+        cache_dir / f"{id_doc}.zip",
+        force=force,
+        timeout=180,
+        validate=_looks_like_zip,
+        min_interval=2.0,
+        pace_key="rad_cvm_filing",
+    )
 
 
 def _find_main_xml_name(zf: zipfile.ZipFile) -> str:
