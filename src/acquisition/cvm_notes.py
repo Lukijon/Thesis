@@ -98,7 +98,7 @@ def download_filing_zip(id_doc: str, cache_dir: Path, force: bool = False) -> by
         url,
         cache_dir / f"{id_doc}.zip",
         force=force,
-        timeout=180,
+        timeout=60,
         validate=_looks_like_zip,
         min_interval=2.0,
         pace_key="rad_cvm_filing",
