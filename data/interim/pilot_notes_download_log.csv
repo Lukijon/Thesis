@@ -1,0 +1,21 @@
+CD_CVM,ANO,ID_DOC,n_attachments_matched,match_tier,files,DENOM_CIA
+023264,2023,134335,1,statements_filename_match,"[{'path': 'data\\raw\\dfp\\023264\\2023\\notas_explicativas.pdf', 'original_filename': 'DFP  2023_Ambev SA.pdf', 'size_bytes': 2217965}]",AMBEV S.A.
+023264,2024,145022,1,statements_filename_match,"[{'path': 'data\\raw\\dfp\\023264\\2024\\notas_explicativas.pdf', 'original_filename': 'DFP 2024_Ambev SA.pdf', 'size_bytes': 3122421}]",AMBEV S.A.
+003980,2023,134146,1,statements_filename_match,"[{'path': 'data\\raw\\dfp\\003980\\2023\\notas_explicativas.pdf', 'original_filename': 'Minuta GSA Dez23.pdf', 'size_bytes': 743730}]",GERDAU S.A.
+003980,2024,144975,1,statements_filename_match,"[{'path': 'data\\raw\\dfp\\003980\\2024\\notas_explicativas.pdf', 'original_filename': 'MINUTA Gerdau Dez 2024.pdf', 'size_bytes': 961670}]",GERDAU S.A.
+020575,2023,135145,1,notes_filename_match,"[{'path': 'data\\raw\\dfp\\020575\\2023\\notas_explicativas.pdf', 'original_filename': 'DF JBS 311223 Português - Notas Explicativas.pdf', 'size_bytes': 1053583}]",JBS S.A.
+020575,2024,145755,1,largest_attachment_fallback,"[{'path': 'data\\raw\\dfp\\020575\\2024\\notas_explicativas.pdf', 'original_filename': 'PT - RELATORIO DA ADM 2024.pdf', 'size_bytes': 2323403}]",JBS S.A.
+024813,2023,134725,1,notes_filename_match,"[{'path': 'data\\raw\\dfp\\024813\\2023\\notas_explicativas.pdf', 'original_filename': '4. Notas explicativas Localiza Fleet DFs 2023.pdf', 'size_bytes': 1949514}]",LOCALIZA FLEET S.A.
+024813,2024,145231,1,notes_filename_match,"[{'path': 'data\\raw\\dfp\\024813\\2024\\notas_explicativas.pdf', 'original_filename': '6. Notas explicativas Localiza Fleet DF24 - SP.pdf', 'size_bytes': 1922745}]",LOCALIZA FLEET S.A.
+019739,2023,134662,1,notes_filename_match,"[{'path': 'data\\raw\\dfp\\019739\\2023\\notas_explicativas.pdf', 'original_filename': '2. Notas explicativas Localiza DFs 2023_v_.Final.pdf', 'size_bytes': 2775370}]",LOCALIZA RENT A CAR S.A.
+019739,2024,145116,1,notes_filename_match,"[{'path': 'data\\raw\\dfp\\019739\\2024\\notas_explicativas.pdf', 'original_filename': '5. Notas explicativas Localiza DFs24 Sem Páginas.pdf', 'size_bytes': 2364341}]",LOCALIZA RENT A CAR S.A.
+008656,2023,134148,1,statements_filename_match,"[{'path': 'data\\raw\\dfp\\008656\\2023\\notas_explicativas.pdf', 'original_filename': 'Minuta MG Dez23.pdf', 'size_bytes': 694729}]",METALURGICA GERDAU S.A.
+008656,2024,144977,1,statements_filename_match,"[{'path': 'data\\raw\\dfp\\008656\\2024\\notas_explicativas.pdf', 'original_filename': 'MINUTA Metalúrgica  Dez 2024.pdf', 'size_bytes': 899216}]",METALURGICA GERDAU S.A.
+009512,2023,135086,1,notes_filename_match,"[{'path': 'data\\raw\\dfp\\009512\\2023\\notas_explicativas.pdf', 'original_filename': 'Notas Explicativas 2023.pdf', 'size_bytes': 2000268}]",PETROLEO BRASILEIRO S.A. PETROBRAS
+009512,2024,145077,1,largest_attachment_fallback,"[{'path': 'data\\raw\\dfp\\009512\\2024\\notas_explicativas.pdf', 'original_filename': 'Notas.pdf', 'size_bytes': 2680208}]",PETROLEO BRASILEIRO S.A. PETROBRAS
+013986,2023,134318,1,notes_filename_match,"[{'path': 'data\\raw\\dfp\\013986\\2023\\notas_explicativas.pdf', 'original_filename': '2023-12-DFP Suzano PT_notas explicativas.pdf', 'size_bytes': 2106607}]",SUZANO S.A.
+013986,2024,144744,1,largest_attachment_fallback,"[{'path': 'data\\raw\\dfp\\013986\\2024\\notas_explicativas.pdf', 'original_filename': '2024-12-ITR Suzano PT_NEs_v1.pdf', 'size_bytes': 1825759}]",SUZANO S.A.
+004170,2023,134200,1,notes_filename_match,"[{'path': 'data\\raw\\dfp\\004170\\2023\\notas_explicativas.pdf', 'original_filename': 'Demonstrações financeiras BRGAAP PT - 2023 (notas explicativas).pdf', 'size_bytes': 2177799}]",VALE S.A.
+004170,2024,145455,1,notes_filename_match,"[{'path': 'data\\raw\\dfp\\004170\\2024\\notas_explicativas.pdf', 'original_filename': 'Notas explicativas - BRGAAP (19.02).pdf', 'size_bytes': 3391545}]",VALE S.A.
+005410,2023,134151,1,notes_filename_match,"[{'path': 'data\\raw\\dfp\\005410\\2023\\notas_explicativas.pdf', 'original_filename': 'Notas Explicativas.pdf', 'size_bytes': 893070}]",WEG S.A.
+005410,2024,145023,1,notes_filename_match,"[{'path': 'data\\raw\\dfp\\005410\\2024\\notas_explicativas.pdf', 'original_filename': 'Notas Explicativas 2024 WEG.pdf', 'size_bytes': 972324}]",WEG S.A.

@@ -12,18 +12,30 @@ env/
 .env.*
 !.env.example
 
-# Data (never commit large/raw data or datasets pulled from paid sources)
+# Data
 data/raw/*
 !data/raw/*/
 !data/raw/*/.gitkeep
-data/raw/dfp/*
-!data/raw/dfp/.gitkeep
+
+# CVM DFP: the raw filing zips are a re-derivable download cache (multi-GB,
+# never worth backing up -- re-fetchable from CVM any time), so stay
+# ignored. The extracted notes PDFs + metadata under data/raw/dfp/<CD_CVM>/
+# are the actual acquisition output and are tracked via git-lfs (see
+# .gitattributes) so they survive beyond this machine.
+data/raw/dfp/_cache/
+
+# Bloomberg-derived market/analyst data: likely redistribution-restricted
+# under Bloomberg's data license, so never commit regardless of size.
 data/raw/market/*
 !data/raw/market/.gitkeep
 data/raw/analysts/*
 !data/raw/analysts/.gitkeep
+
+# Small manifest/log CSVs describing what was acquired are worth keeping;
+# everything else in interim is regenerable from raw + code.
 data/interim/*
 !data/interim/.gitkeep
+!data/interim/*.csv
 data/processed/*
 !data/processed/.gitkeep
 data/external/*
