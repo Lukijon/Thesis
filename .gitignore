@@ -36,6 +36,13 @@ data/raw/analysts/*
 data/interim/*
 !data/interim/.gitkeep
 !data/interim/*.csv
+
+# POC (small, and cited directly in reports/poc_note_extraction_findings.md)
+!data/interim/poc/
+data/interim/poc/*
+!data/interim/poc/*.csv
+!data/interim/poc/sections/
+
 data/processed/*
 !data/processed/.gitkeep
 data/external/*
