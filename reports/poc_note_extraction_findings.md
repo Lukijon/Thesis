@@ -2,9 +2,11 @@
 
 **Scope:** 20 non-financial IBOV companies, hand-picked for sector diversity, drawn from the 613 filings already acquired in part 1 (2015–2024). No new downloads. Code: `src/processing/pdf_text.py`, `src/processing/locate_note_section.py`, `src/processing/run_poc_tfidf.py`. Results: `data/interim/poc/similarity_results.csv`, per-company-year sections in `data/interim/poc/sections/`.
 
+**Status: two rounds.** Round 1 (below) established the concept works but flagged note-*isolation* as the weak link. Round 2 (§5) fixed four concrete, generalizable bugs found by chasing the round-1 outliers to ground; the reliable-cohort mean rose from 0.75 to 0.87 and every exact-zero degenerate score disappeared.
+
 ## Bottom line
 
-**The core measurement idea holds up — where extraction is reliable, TF-IDF/cosine similarity on the isolated debt note produces a believable, interpretable signal.** But automated note-*isolation* (finding exactly where the note starts and ends inside a 30–150 page filing) is the weak link, not the similarity measure itself. Roughly half of company-years get a precisely bounded note; the rest fall back to a much less precise method or fail outright. Scaling to the full universe needs the extraction step hardened first — this is a solvable, well-understood problem now, not an open question about whether the approach works.
+**The core measurement idea holds up — where extraction is reliable, TF-IDF/cosine similarity on the isolated debt note produces a believable, interpretable signal.** Automated note-*isolation* (finding exactly where the note starts and ends inside a 30–150 page filing) was the weak link, not the similarity measure itself — round 2 made real progress on it, but roughly half of company-years still fall back to a less precise method. Scaling to the full universe should continue hardening this step (§5's recommendations), not revisit whether the approach works.
 
 ## 1. Are the PDFs readable?
 
@@ -61,3 +63,31 @@ So: every degenerate score checked traces to a **known, explainable extraction m
 2. **Add an automated red-flag check** before trusting any similarity score: exact 1.0/0.0 scores, or notes under some minimum length (e.g. 200 characters), should be auto-flagged for review rather than fed into the analysis silently — this POC found that every such case was a real extraction failure, not a genuine finding.
 
 With those in place, re-running this same 20-company check should show the `font_heading`-only pattern (mean ~0.75–0.90, sensible spread, no degenerate outliers) across the full sample, at which point scaling acquisition (part 2) and building the full pipeline is a reasonable next investment.
+
+## 5. Round 2: hardening the extraction heuristic
+
+Following the round-1 recommendation, each remaining degenerate/outlier case was traced to its root cause in the actual PDF (not guessed at) and fixed generally, not patched per-company. Four real bugs found:
+
+1. **Size should dominate the tie-break, not "purity."** The original tie-break picked the *purest*-looking candidate title first, which wrongly penalized legitimate compound titles — Vale's `"Empréstimos, financiamentos e caixa e equivalentes de caixa"` (a combined net-debt note) lost to an unrelated smaller-font subsection for mentioning "caixa." A distinctly larger font reliably marks the true top-level note across every filer checked; purity now only breaks ties *between same-sized* candidates. Fixed Vale's early years and Lojas Renner.
+2. **Lettered-subsection markers collide with Portuguese articles.** `"(o) Empréstimos e financiamentos"` (an accounting-policy subsection marker) scored as pure as a real title because "o" ("the") is a legitimate connector word — the letter and the article are indistinguishable by spelling alone. Added an explicit penalty for a leading `(x)`-style marker. Fixed Ambev 2018 and similar years.
+3. **Table-of-contents entries look identical to real headings.** Ambev's page-1 index lists every note number and title back-to-back in the same bold/size styling as the real section headings deep in the document — "16" / "EMPRÉSTIMOS E FINANCIAMENTOS" / "17" / "PROVISÕES..." Added a detector for dense runs of consecutive bare-number entries (a real note body never has another top-level number within a handful of lines; a TOC lists all of them in immediate succession) and excluded them from candidacy. Fixed Ambev 2024.
+4. **Long compound titles wrap onto a second PDF line at identical styling.** Two separate failures from the same cause: (a) the heading-length cutoff (100 chars) excluded titles like Vale's ~120-character combined net-debt title entirely, leaving only a shorter, wrong lettered subsection to be found instead; (b) even once found, the wrapped continuation line (e.g. `"curto prazo"`) was itself short, bold, same-size, and keyword-free — exactly matching the "next unrelated heading" signal, truncating the section to almost nothing. Loosened the length cutoff and added explicit absorption of same-style continuation lines right after the heading. Fixed Vale 2020–2022 (previously the worst-behaved company in the sample).
+
+**Result**, restricted to pairs where both years got the reliable `font_heading` extraction (still 64 pairs — these fixes corrected *which* text was extracted, not *whether* a font-based heading was found at all):
+
+| | Round 1 | Round 2 |
+|---|---:|---:|
+| Mean | 0.75 | **0.87** |
+| Std dev | 0.34 | **0.17** |
+| Min | 0.0000 (artifact) | **0.11** (no more exact-zero artifacts) |
+| Vale (worst offender) | 0.42 mean, unstable 31–5,438 chars/year | **0.78 mean**, stable across every year |
+| Ambev | 0.30 mean (two wrong-note years) | **0.95 mean** |
+| Lojas Renner | 0.54 mean | **0.91 mean** |
+
+Overall extraction-trigger rate barely moved (`font_heading` still 86/200 — these were accuracy fixes, not detection fixes): `regex_only` rose slightly to 99/200 and `not_found` dropped to 15/200 as a side effect of the same fixes recovering a few previously-empty documents.
+
+**Still open, not chased further this round** (diminishing returns for single-company, single-year quirks vs. the four general fixes above):
+- Yduqs and Sabesp still show exact-1.0 similarity in some years — a *different* root cause than what was fixed here: the real note simply isn't styled distinctly in those specific years at all, so there's no larger/differently-styled candidate to prefer. This needs either the DFP index-page approach or an LLM fallback (round-1 recommendation, still valid), not another heuristic tweak.
+- Suzano 2019 (853 chars, likely related to that year's Fibria merger restructuring the notes) remains a one-off truncation not yet root-caused.
+
+**Updated recommendation:** the extraction heuristic is now meaningfully more trustworthy, but the two round-1 recommendations still stand for the remaining ~57% (`regex_only`/`not_found`) — the DFP-index-page investigation and an automated red-flag check (exact 0/1 similarity, or notes under ~200 characters) before scaling to part 2.

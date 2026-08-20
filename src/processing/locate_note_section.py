@@ -39,7 +39,12 @@ from dataclasses import dataclass
 
 from src.processing.pdf_text import Line
 
-MAX_HEADING_LEN = 100
+# Brazilian filers often title a combined "net debt" note very long, e.g.
+# Vale 2020: "Empréstimos, financiamentos, arrendamentos, caixa e
+# equivalentes de caixa e aplicações financeiras de curto prazo" (~120
+# chars) -- too strict a cutoff here excludes the real heading entirely,
+# leaving only a shorter lettered subsection to be found instead.
+MAX_HEADING_LEN = 160
 SIZE_MARGIN = 1.0  # a heading must be at least this much larger than body text
 KEYWORD_STEMS = ("emprestimo", "financiamento", "debenture")
 CONNECTOR_WORDS = {"e", "de", "do", "dos", "da", "das", "em", "no", "na", "nos", "nas", "a", "o", "os", "as", "nota"}
@@ -54,18 +59,32 @@ def _debt_keyword_score(text: str) -> int:
     return sum(kw in normalized for kw in KEYWORD_STEMS)
 
 
+LETTERED_SUBSECTION_RE = re.compile(r"^\(?[a-z]\)\s")
+
+
 def _heading_impurity(text: str) -> int:
     """Count of words that aren't the note's own keywords, digits, or common
     connectors -- low for a real title, high for a sentence that happens to
     mention the keywords in passing.
+
+    A leading lettered-subsection marker ("(o) Empréstimos e
+    financiamentos") is penalized explicitly: single-letter connector words
+    ("o" = "the", "a" = "the"/"to") collide with exactly the letters used
+    for subsection markers, so without this a marker like "(o)" scores as
+    pure as a real numbered title -- seen for real on Ambev, where "(o)"
+    (an accounting-policy subsection) tied a genuine "15. EMPRÉSTIMOS E
+    FINANCIAMENTOS" on both size and impurity and won on document order.
     """
     normalized = _strip_accents(text).lower()
     words = re.findall(r"[a-z]+", normalized)
-    return sum(
+    impurity = sum(
         1
         for w in words
         if w not in CONNECTOR_WORDS and not any(w.startswith(s) or s.startswith(w) for s in KEYWORD_STEMS)
     )
+    if LETTERED_SUBSECTION_RE.match(normalized):
+        impurity += 2
+    return impurity
 
 
 def _body_size(lines: list[Line]) -> float:
@@ -129,6 +148,38 @@ def _bare_note_number(text: str) -> int | None:
     return int(m.group(1)) if m else None
 
 
+TOC_RUN_GAP = 6  # max lines between consecutive bare-number entries to count as the same run
+TOC_MIN_RUN_LENGTH = 3  # entries needed before a run counts as a TOC, not a real number+continuation
+
+
+def _toc_region_lines(lines: list[Line]) -> set[int]:
+    """Indices belonging to a dense run of bare top-level numbers -- i.e. a
+    table-of-contents listing (every note number + title, back-to-back),
+    not real section headings. A real note body never has another bare
+    top-level number within a handful of lines of the previous one; a TOC
+    lists every note in immediate succession. Seen for real on Ambev 2024,
+    whose page-1 index ("16" / "EMPRÉSTIMOS E FINANCIAMENTOS" / "17" / ...)
+    otherwise looks identical in style to the real heading deep in the
+    document.
+    """
+    number_positions = [i for i, l in enumerate(lines) if l.bold and _bare_note_number(l.text) is not None]
+    toc_indices: set[int] = set()
+    i = 0
+    while i < len(number_positions):
+        run = [number_positions[i]]
+        j = i + 1
+        while j < len(number_positions) and number_positions[j] - run[-1] <= TOC_RUN_GAP:
+            run.append(number_positions[j])
+            j += 1
+        if len(run) >= TOC_MIN_RUN_LENGTH:
+            for idx in run:
+                toc_indices.add(idx)
+                if idx + 1 < len(lines):
+                    toc_indices.add(idx + 1)  # the title line right after each number
+        i = j
+    return toc_indices
+
+
 @dataclass
 class NoteSection:
     text: str
@@ -142,10 +193,18 @@ FALLBACK_MAX_LINES = 500  # cap for the no-formatting fallback, which has no str
 
 
 def _next_heading_boundary(
-    lines: list[Line], from_idx: int, heading_size: float, note_number: int | None, body_size: float, boilerplate: set[str]
+    lines: list[Line],
+    from_idx: int,
+    heading_size: float,
+    note_number: int | None,
+    body_size: float,
+    boilerplate: set[str],
+    toc_region: set[int],
 ) -> int:
     """Index of the next section boundary after `from_idx`, or len(lines)."""
     for i in range(from_idx, len(lines)):
+        if i in toc_region:
+            continue
         l = lines[i]
         if note_number is not None:
             # Precise signal: the next bare top-level number at the same
@@ -176,27 +235,48 @@ def locate_note_section(lines: list[Line]) -> NoteSection:
 
     body_size = _body_size(lines)
     boilerplate = _repeated_lines(lines)
-    visual_candidates = [i for i, l in enumerate(lines) if _is_debt_heading_candidate(l, body_size, boilerplate)]
+    toc_region = _toc_region_lines(lines)
+    visual_candidates = [
+        i for i, l in enumerate(lines) if i not in toc_region and _is_debt_heading_candidate(l, body_size, boilerplate)
+    ]
 
     if visual_candidates:
-        start_idx = min(visual_candidates, key=lambda i: (_heading_impurity(lines[i].text), -lines[i].size))
+        # Size is the primary signal (a distinctly larger font reliably marks
+        # the top-level note across every filer checked); impurity only
+        # breaks ties between same-sized candidates. Prioritizing impurity
+        # first was wrong: it penalized legitimate compound titles like
+        # Vale's "Empréstimos, financiamentos e caixa e equivalentes de
+        # caixa" (a combined net-debt note) for mentioning "caixa", handing
+        # the match to an unrelated smaller-font subsection instead.
+        start_idx = min(visual_candidates, key=lambda i: (-lines[i].size, _heading_impurity(lines[i].text)))
         diagnostic = "font_heading"
         heading_size = lines[start_idx].size
 
+        title_idx = start_idx
         note_number = None
-        if start_idx > 0 and lines[start_idx - 1].size == heading_size and lines[start_idx - 1].bold:
+        if start_idx > 0 and start_idx - 1 not in toc_region and lines[start_idx - 1].size == heading_size and lines[start_idx - 1].bold:
             note_number = _bare_note_number(lines[start_idx - 1].text)
         if note_number is not None:
             start_idx -= 1  # include the number line itself in the section
+
+        # A long compound title (common for Brazilian "net debt" notes, e.g.
+        # "Empréstimos, financiamentos, arrendamentos, caixa e equivalentes
+        # de caixa e aplicações financeiras de curto prazo") can wrap onto a
+        # second PDF line at the identical size/bold styling. Without
+        # absorbing that continuation, the boundary search below mistakes
+        # it for the start of an unrelated next section, since taken alone
+        # it has no debt keywords of its own.
+        end_idx = title_idx + 1
+        while end_idx < len(lines) and lines[end_idx].bold and lines[end_idx].size == heading_size and len(lines[end_idx].text) < 60:
+            end_idx += 1
 
         # Some filers split the debt disclosure into adjacent notes (e.g.
         # Usiminas: note 20 "Empréstimos e financiamentos", note 21
         # "Debêntures" immediately after). The thesis scope is the combined
         # debt content regardless of how a filer chose to split it, so keep
         # extending through boundaries that are themselves debt-related.
-        end_idx = start_idx + 1
         for _ in range(MAX_CONTINUATION_NOTES):
-            end_idx = _next_heading_boundary(lines, end_idx, heading_size, note_number, body_size, boilerplate)
+            end_idx = _next_heading_boundary(lines, end_idx, heading_size, note_number, body_size, boilerplate, toc_region)
             if end_idx >= len(lines):
                 break
             # In bare-number style the boundary line is just "21" -- the
