@@ -41,7 +41,7 @@ Mais especificamente: em que medida a mudança textual ano a ano (medida por TF-
     └── figures/            # Figuras e tabelas geradas para a dissertação
 ```
 
-`data/` é ignorado pelo git (ver [.gitignore](.gitignore)) — os dados não são versionados aqui, apenas o código que os gera/processa. Cada subpasta mantém um `.gitkeep` para preservar a estrutura.
+A maior parte de `data/` é ignorada pelo git (ver [.gitignore](.gitignore)) — cache de download, dados de mercado/analistas (Bloomberg) e intermediários não são versionados. As notas de dívida já extraídas (`data/raw/dfp/<CD_CVM>/<ANO>/`) são a exceção: ficam versionadas via [git-lfs](https://git-lfs.com) para não depender só desta máquina. Cada subpasta mantém um `.gitkeep` para preservar a estrutura mesmo quando vazia.
 
 ## Dados a serem coletados
 
@@ -56,7 +56,8 @@ Etapa atual do projeto. Para viabilizar os testes de H1, H1a e H2, é necessári
 
 - [x] Pré-projeto redigido (ver `docs/pre-projeto.docx`)
 - [x] Estrutura do repositório definida
-- [x] Aquisição das notas de dívida via CVM (piloto validado em 8 empresas x 2 exercícios; ver `src/acquisition/`) — pendente rodar em escala para 2015–2024
+- [x] Aquisição das notas de dívida via CVM — **parte 1 concluída**: 613/613 arquivos-empresa-ano das constituintes não financeiras do Ibovespa, 2015–2024 (ver `src/acquisition/run_ibov.py`; log em `data/interim/ibov_notes_download_log.csv`). Uma nota (Vibra Energia 2023) é um PDF escaneado e vai precisar de OCR na etapa de processamento.
+- [ ] Aquisição das notas de dívida via CVM — **parte 2**: restante do universo não financeiro da B3 (fora do Ibovespa)
 - [ ] Aquisição de dados de mercado e fundamentos (Bloomberg)
 - [ ] Aquisição do consenso de EPS dos analistas (Bloomberg BEst)
 - [ ] Extração e limpeza de texto das notas
