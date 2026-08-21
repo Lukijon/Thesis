@@ -1,0 +1,9 @@
+{
+  "cd_cvm": "014176",
+  "name": "Eletropaulo Metropolitana Eletricidade de São Paulo S.A.",
+  "year": 2024,
+  "diagnostic": "regex_only",
+  "heading": "Pagamento de empréstimos e financiamentos (principal)",
+  "n_total_lines": 8958,
+  "text": "Pagamento de empréstimos e financiamentos (principal)\n15\n(1.807.733)\n(319.820)\nPagamento de debêntures (principal)\n16\n(350.000)\n(697.974)\nPagamento de arrendamento (principal)\n(71.490)\n(62.544)\nPagamento de instrumento financeiro derivativo (principal)\n(20.898)\nPagamento de dividendos\n20\n(59.500)\nPagamento de juros sobre capital próprio\n20\n(388.102)\n106.285\n(1.124.740)\n31. Eventos subsequentes\n31.1 Mútuo Enel Finance\nEm 06 de janeiro de 2025, a Companhia com necessidade de capital de giro, captou nova operação de mútuo\ncom a Enel Finance no montante de EUR 80.000 (valor desembolsado de R$ 506.806). A operação possui\nvencimento em 20 de outubro de 2025 a uma taxa de EUR + 3,6970% a.a.\n31.2 Contrato de instrumento financeiro derivativo (SWAP)\nEm 06 de janeiro de 2025, com o objetivo de reduzir a exposição da Companhia ao risco cambial, foi contratado\num SWAP com troca de EUR + 4,3494% a.a. para CDI + 0,5175%a.a. O SWAP tem vigência com início em 06\nde janeiro de 2025 e vencimento em 20 de outubro de 2025."
+}

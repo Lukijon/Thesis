@@ -2,7 +2,7 @@
 
 **Scope:** 20 non-financial IBOV companies, hand-picked for sector diversity, drawn from the 613 filings already acquired in part 1 (2015–2024). No new downloads. Code: `src/processing/pdf_text.py`, `src/processing/locate_note_section.py`, `src/processing/run_poc_tfidf.py`. Results: `data/interim/poc/similarity_results.csv`, per-company-year sections in `data/interim/poc/sections/`.
 
-**Status: two rounds.** Round 1 (below) established the concept works but flagged note-*isolation* as the weak link. Round 2 (§5) fixed four concrete, generalizable bugs found by chasing the round-1 outliers to ground; the reliable-cohort mean rose from 0.75 to 0.87 and every exact-zero degenerate score disappeared.
+**Status: three rounds.** Round 1 (below) established the concept works but flagged note-*isolation* as the weak link. Round 2 (§5) fixed four concrete, generalizable bugs found by chasing the round-1 outliers to ground; the reliable-cohort mean rose from 0.75 to 0.87 and every exact-zero degenerate score disappeared. Round 3 (§6) extends the check to the survivorship-bias fix: does dropping out of IBOV/delisting correlate with more textual change? Promising, not yet settled — see §6 for why.
 
 ## Bottom line
 
@@ -91,3 +91,33 @@ Overall extraction-trigger rate barely moved (`font_heading` still 86/200 — th
 - Suzano 2019 (853 chars, likely related to that year's Fibria merger restructuring the notes) remains a one-off truncation not yet root-caused.
 
 **Updated recommendation:** the extraction heuristic is now meaningfully more trustworthy, but the two round-1 recommendations still stand for the remaining ~57% (`regex_only`/`not_found`) — the DFP-index-page investigation and an automated red-flag check (exact 0/1 similarity, or notes under ~200 characters) before scaling to part 2.
+
+## 6. Round 3: does dropping out of IBOV correlate with textual change?
+
+Part 1's acquisition originally covered only *today's* 66 non-financial IBOV constituents — a real survivorship-bias problem for a thesis about debt-distress signals, since a company that went bankrupt, got acquired, or was delisted mid-sample is exactly the kind most likely to both show large textual change *and* disappear from the index, and would have been entirely absent. That gap is closed (see `src/acquisition/b3_ibov_historical.py`): 36 more companies were found that were IBOV members at some point in 2015–2024 but aren't today — 26 via Internet Archive snapshots of B3's retired portfolio page, 10 more via a user-provided Bloomberg historical-composition export. Several are directly on-theme: Oi, Light, and Rossi Residencial are currently in *recuperação judicial*; MMX Mineração is a bankruptcy estate.
+
+**Method:** the same note-locator and TF-IDF pipeline (`src/processing/run_delisted_analysis.py`) run on these 36 companies (34 with usable filings, 401 year-over-year pairs), compared against the original 20 "stayed" companies from §5, fit as one shared TF-IDF corpus so results are directly comparable.
+
+**Result, reliable (`font_heading`/`font_heading`) pairs only:**
+
+| Group | n | Mean | Median | Std |
+|---|---:|---:|---:|---:|
+| Dropped / delisted | 104 | 0.742 | 0.866 | 0.288 |
+| Stayed in IBOV | 64 | 0.876 | 0.924 | 0.161 |
+
+Mann-Whitney U (dropped < stayed, one-sided): **p = 0.0028**.
+
+**Robustness check — does this survive the same skepticism applied everywhere else in this project?** The dropped/delisted group is newer to the pipeline and hasn't had round-2's hardening, so restricting to pairs where the extracted note length is reasonably consistent across both years (`size_ratio >= 0.5`, a proxy for "the locator found comparable content both times") is a direct test of whether the gap is real or extraction noise:
+
+| Group (size-consistent only) | n | Mean | Median |
+|---|---:|---:|---:|
+| Dropped / delisted | 81 | 0.859 | 0.905 |
+| Stayed in IBOV | 60 | 0.904 | 0.926 |
+
+p rises to **0.068** — the direction holds, but conventional significance doesn't survive the stricter filter. Honest reading: part of the raw gap is genuinely extraction noise specific to this newer company set, not pure signal.
+
+**Two spot-checks, both sides of that honestly:**
+- **Grupo Casas Bahia (Via Varejo) 2023→2024 (similarity 0.577, size-consistent):** the actual diff shows real debt restructuring — new debenture issuances (10ª emissão replacing the 8ª), materially changed interest-rate spreads (CDI+4.00%→CDI+1.28% on one line item) — during the company's known 2023–2024 financial distress. This is the pipeline working as intended.
+- **MMX Mineração (bankruptcy estate) 2016→2018 (similarity 0.363):** both years captured the generic IFRS accounting-*policy* paragraph again — the same failure mode as the Yduqs artifact in §3 — not real bankruptcy-specific disclosure. A company literally in bankruptcy proceedings is exactly the case where the real note would be most informative, and exactly the case this pipeline currently fails on.
+
+**Recommendation:** promising, not yet settled. Treat as a hypothesis worth pursuing, not a finding to cite yet — extend round-2-style hardening to this 36-company set specifically (distressed filers are the hardest case: irregular formats, mid-restructuring documents, inconsistent filers) before relying on this result in the thesis. Full detail and reproducible numbers in `notebooks/poc_overview.ipynb` §5.
