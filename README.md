@@ -56,7 +56,7 @@ Etapa atual do projeto. Para viabilizar os testes de H1, H1a e H2, é necessári
 
 - [x] Pré-projeto redigido (ver `docs/pre-projeto.docx`)
 - [x] Estrutura do repositório definida
-- [x] Aquisição das notas de dívida via CVM — **parte 1 concluída**: 613/613 arquivos-empresa-ano das constituintes não financeiras do Ibovespa, 2015–2024 (ver `src/acquisition/run_ibov.py`; log em `data/interim/ibov_notes_download_log.csv`). Uma nota (Vibra Energia 2023) é um PDF escaneado e vai precisar de OCR na etapa de processamento.
+- [x] Aquisição das notas de dívida via CVM — **parte 1 concluída, agora com histórico completo do Ibovespa**: 102 empresas não financeiras (66 constituintes atuais + 26 encontradas via Internet Archive + 10 encontradas via export histórico do Bloomberg), corrigindo o viés de sobrevivência da versão inicial (que só cobria membros atuais). 913 arquivos-empresa-ano no total, 2015–2024 (ver `src/acquisition/run_ibov.py`, `run_ibov_historical.py` e `b3_ibov_historical.py`; logs em `data/interim/ibov_notes_download_log.csv` e `ibov_historical_notes_download_log.csv`). Uma nota (Vibra Energia 2023) é um PDF escaneado e vai precisar de OCR na etapa de processamento.
 - [ ] Aquisição das notas de dívida via CVM — **parte 2**: restante do universo não financeiro da B3 (fora do Ibovespa) — pausada para a POC abaixo
 - [x] **POC de extração + TF-IDF concluída** em 20 empresas (ver `reports/poc_note_extraction_findings.md`): a ideia central se sustenta onde a extração é confiável (43% dos casos), mas a localização automática da nota precisa de mais robustez antes de rodar em escala — próximo passo antes da parte 2
 - [ ] Aquisição de dados de mercado e fundamentos (Bloomberg)
