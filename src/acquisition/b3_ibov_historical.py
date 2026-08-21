@@ -1,5 +1,5 @@
-"""Historical (not just current) Ibovespa membership, 2013-2021, resolved to
-CD_CVM. Fixes a real survivorship-bias gap in the original IBOV tranche
+"""Historical (not just current) Ibovespa membership, resolved to CD_CVM.
+Fixes a real survivorship-bias gap in the original IBOV tranche
 (`b3_ibov.py`): that module resolves *today's* IBOV composition only, so any
 company that was in the index at some point in 2015-2024 but has since been
 removed -- delisted, bankrupt, acquired, or just fell out on liquidity -- was
@@ -7,52 +7,54 @@ entirely absent. That's a serious gap for a thesis about debt-distress
 signals specifically, since distressed companies are exactly the ones most
 likely to both show large textual change *and* drop out of the index.
 
-B3's live composition API (GetPortfolioDay, used in b3_ibov.py) does not
-accept a historical date -- confirmed empirically, it ignores every
-plausible date/year/month parameter and always returns today's portfolio.
-There is no historical-composition endpoint or downloadable series on B3's
-current site.
+Two sources, in the order they were used:
 
-What does work: the Internet Archive has snapshots of B3's now-retired
-"ResumoCarteiraQuadrimestre.aspx" portfolio page (the pre-2021 legacy site,
-under two URL generations) at various points in time, each showing the
-IBOV constituent list valid for that snapshot's 4-month rebalance period.
-Real, verified periods recovered this way:
+1. **Internet Archive snapshots** (`WAYBACK_ADDITIONS`) of B3's now-retired
+   "ResumoCarteiraQuadrimestre.aspx" portfolio page, used first because
+   B3's live composition API (GetPortfolioDay) does not accept a historical
+   date -- confirmed empirically, it ignores every plausible date/year/month
+   parameter and always returns today's portfolio, and there is no
+   historical-composition endpoint on B3's current site. Real, verified
+   periods recovered this way: 2013-11-27, 2014-07-23, 2015-09-23,
+   2016-02-29, Jan-Apr 2019, Sep-Dec 2019, Sep-Dec 2020, Jan-Apr 2021 --
+   real coverage, but with gaps (most of 2016-2018, all of 2022-2024).
 
-    2013-11-27, 2014-07-23, 2015-09-23, 2016-02-29,
-    Jan-Apr 2019, Sep-Dec 2019, Sep-Dec 2020, Jan-Apr 2021
+2. **User-provided Bloomberg export** (`BLOOMBERG_ADDITIONS`) -- quarterly
+   IBOV membership 2015-2024 pulled from Bloomberg
+   (`data/raw/market/ibov_composition/ibov_members_bloomberg.csv` +
+   `ibov_names_bloomberg.csv`, git-ignored like all Bloomberg-derived data --
+   see .gitignore), which closes the gaps the Wayback method left. This is
+   the authoritative source going forward; the Wayback list is kept for its
+   own sake since it was independently verified and its companies all check
+   out against the Bloomberg data too (cross-checked -- every Wayback-only
+   addition is confirmed by a corresponding Bloomberg ticker for the same
+   company).
 
-IMPORTANT LIMITATION: this does not cover every quadrimestre in
-2015-2024 -- there are real gaps (most of 2016-2018, and all of 2022-2024,
-have no archived snapshot of this page). The company list below is the
-union of tickers seen across the periods that ARE recovered, resolved to
-CD_CVM via the current B3 registry (`b3_ibov.fetch_b3_company_registry`)
-where the company is still listed under a matching issuer code, plus manual
-lookup in CVM's cadastral registry (`cvm_dfp.load_cadastral`, which retains
-CANCELADA/delisted entries) for tickers that no longer resolve via the live
-registry (renamed, merged away, or fully delisted). It is a real, evidenced
-improvement on "current members only," but not a complete quadrimestre-by-
-quadrimestre reconstruction. If more precision is needed later, filling the
-2016-2018 and 2022-2024 gaps would need either more Wayback digging, a
-paid provider (Bloomberg/Economatica both carry historical index
-membership), or manually sourced B3 rebalance announcements.
+Both sets resolve tickers to CD_CVM via the current B3 registry
+(`b3_ibov.fetch_b3_company_registry`) where the company is still listed
+under a matching issuer code, plus manual lookup in CVM's cadastral
+registry (`cvm_dfp.load_cadastral`, which retains CANCELADA/delisted
+entries) for tickers that no longer resolve via the live registry (renamed,
+merged away, or fully delisted, e.g. a company acquired mid-sample whose
+original CNPJ/CD_CVM stopped filing independently afterward).
 
-A handful of tickers seen in the archived snapshots were NOT resolved
-(genuinely delisted/deregistered older names not yet chased down further,
-diminishing-returns cutoff): ALLL3 (ALL - América Latina Logística),
-BTOW3 (B2W Digital), OGXP3 (OGX Petróleo), LLXL3 (LLX Logística), VVAR3
-(Via Varejo). Several other unmatched tickers turned out to be old tickers
-of companies already covered under a later name (Ambev, Fibria->Suzano,
-Estácio->Yduqs, Kroton->Cogna, Tractebel->Engie, CTEEP->ISA Energia) or
-financial-sector entities correctly excluded (Cetip, BM&FBovespa/Bovespa
-Holding, SulAmérica).
+Tickers seen in either source that resolved to a company *already* in the
+current-IBOV set (`b3_ibov.build_ibov_non_financial_universe`) or renamed/
+merged into one (e.g. Fibria->Suzano's ticker persisting historically,
+Estácio->Yduqs, Kroton->Cogna, Tractebel->Engie, CTEEP->ISA Energia,
+3R Petroleum/Enauta->Brava Energia, CCR->Motiva, Eletrobras->Axia,
+ALL/Rumo->Rumo) are not repeated here -- they're already covered. A few
+tickers remain unresolved after both passes (diminishing-returns cutoff,
+not chased further): BTOW3 (B2W Digital), OGXP3 (OGX Petróleo), LLXL3 (LLX
+Logística) -- all pre-2015-adjacent bankruptcies/mergers where the legal
+entity appears to be fully purged from CVM's cadastral registry, not just
+marked CANCELADA.
 """
 from __future__ import annotations
 
-# CD_CVM codes found in IBOV during at least one recovered historical period
-# (2013-2021) but not in the current (2026) composition. See module
-# docstring for the methodology and its limitations.
-NEW_HISTORICAL_CD_CVM: dict[int, str] = {
+# Found via Internet Archive snapshots of B3's retired portfolio page
+# (2013-2021 coverage, with gaps). See module docstring.
+WAYBACK_ADDITIONS: dict[int, str] = {
     2577: "CESP - Companhia Energética de São Paulo",
     4057: "Souza Cruz S.A.",
     8087: "Lojas Americanas S.A. (pre-2021 restructuring entity)",
@@ -80,3 +82,20 @@ NEW_HISTORICAL_CD_CVM: dict[int, str] = {
     24112: "Azul S.A.",
     24384: "Notre Dame Intermédica Participações S.A.",
 }
+
+# Found via the user-provided Bloomberg quarterly membership export
+# (full 2015-2024 coverage), additional to WAYBACK_ADDITIONS above.
+BLOOMBERG_ADDITIONS: dict[int, str] = {
+    6505: "Grupo Casas Bahia S.A. (Via Varejo)",
+    12793: "Fibria Celulose S.A. (pre-Suzano-merger entity)",
+    19763: "EDP Energias do Brasil S/A",
+    19925: "BR Properties S.A.",
+    22691: "Companhia de Locação das Américas (Locamerica)",
+    23140: "Smiles S.A.",
+    24171: "Atacadão S.A.",
+    24252: "Smiles Fidelidade S.A.",
+    24783: "Natura & Co Holding S.A. (pre-restructuring parent entity)",
+    25011: "Grupo de Moda Soma S.A.",
+}
+
+NEW_HISTORICAL_CD_CVM: dict[int, str] = {**WAYBACK_ADDITIONS, **BLOOMBERG_ADDITIONS}
