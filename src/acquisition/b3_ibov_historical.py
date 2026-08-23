@@ -49,6 +49,23 @@ not chased further): BTOW3 (B2W Digital), OGXP3 (OGX Petróleo), LLXL3 (LLX
 Logística) -- all pre-2015-adjacent bankruptcies/mergers where the legal
 entity appears to be fully purged from CVM's cadastral registry, not just
 marked CANCELADA.
+
+3. **`BLOOMBERG_FULL_CHECK_ADDITIONS`** -- found by a real gap in the process
+   above, not a new source. When the Bloomberg file was first processed,
+   only the tickers that *failed* direct ticker->CD_CVM resolution were
+   cross-checked against what was already covered; the ~100+ tickers that
+   *did* resolve cleanly were assumed to already be accounted for and never
+   actually diffed against the covered set. They weren't all covered.
+   Re-doing that diff properly (resolve every ticker in the file, non-
+   financial filter, subtract the already-covered set) surfaced 10 more
+   real companies, including Americanas S.A. -- the 2023 accounting-fraud/
+   debt-restructuring case, about as on-theme for this thesis as it gets,
+   and missed for over a week of work before this check. Lesson: "the
+   unmatched ones are the only ones that need checking" was an unverified
+   assumption, exactly the kind of thing this project has otherwise been
+   careful to check against real data. If you add a fourth data source
+   later, diff its *entire* resolved set against coverage, not just the
+   leftovers.
 """
 from __future__ import annotations
 
@@ -98,4 +115,20 @@ BLOOMBERG_ADDITIONS: dict[int, str] = {
     25011: "Grupo de Moda Soma S.A.",
 }
 
-NEW_HISTORICAL_CD_CVM: dict[int, str] = {**WAYBACK_ADDITIONS, **BLOOMBERG_ADDITIONS}
+# Found by properly diffing *every* Bloomberg-resolved ticker (not just the
+# ones that failed direct resolution) against the already-covered set. See
+# module docstring point 3 for how this gap happened.
+BLOOMBERG_FULL_CHECK_ADDITIONS: dict[int, str] = {
+    10456: "Alpargatas S.A.",
+    17892: "Santos Brasil Participações S.A.",
+    18627: "Cia. de Saneamento do Paraná (Sanepar)",
+    20362: "Positivo Tecnologia S.A.",
+    20516: "São Martinho S.A.",
+    20990: "Americanas S.A. - Em Recuperação Judicial",
+    24910: "LWSA S/A (Locaweb)",
+    25232: "Meliuz S.A.",
+    25917: "Raízen S.A.",
+    27707: "Automob Participações S.A.",
+}
+
+NEW_HISTORICAL_CD_CVM: dict[int, str] = {**WAYBACK_ADDITIONS, **BLOOMBERG_ADDITIONS, **BLOOMBERG_FULL_CHECK_ADDITIONS}

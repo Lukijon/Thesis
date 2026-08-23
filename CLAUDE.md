@@ -10,12 +10,12 @@ The user is doing the actual academic work; this repo is the data/code side. The
 
 ## Status (see README.md "Status" section for the checklist)
 
-- **Acquisition part 1: done.** 913 company-fiscal-year debt-note PDFs, 2015–2024, for 102 non-financial companies — the 66 *current* Ibovespa constituents plus 36 more found via a historical-IBOV reconstruction (see "Historical IBOV" below) to fix survivorship bias. All present locally on disk; **not tracked in git** (see Data/git conventions below — this was tried via git-lfs and reversed).
+- **Acquisition part 1: done.** 993 company-fiscal-year debt-note PDFs, 2015–2024, for 111 non-financial companies — the 66 *current* Ibovespa constituents plus 45 more found via a historical-IBOV reconstruction (`src/acquisition/b3_ibov_historical.py`) to fix survivorship bias. Includes Americanas S.A. (added in a second, corrective Bloomberg pass — see that file's docstring point 3 for a real process gap worth reading before trusting a "we checked X" claim at face value). All present locally on disk; **not tracked in git** (see Data/git conventions below — this was tried via git-lfs and reversed).
 - **POC: done, three rounds**, all in `notebooks/poc_overview.ipynb` + `reports/poc_note_extraction_findings.md`:
   1. Does the TF-IDF idea hold up at all? Yes, where extraction is reliable.
   2. Hardened the note-extraction heuristic (4 real bugs fixed) — reliable-cohort mean similarity 0.75 → 0.87.
-  3. Extended to the 36 historical-IBOV companies: dropped-from-IBOV/delisted companies show more textual change than companies that stayed, but the effect weakens under a stricter robustness check (p=0.0028 → p=0.068) — **promising, not yet settled**, needs the same hardening work extended to that company set before it's citable.
-- **Not started:** acquisition part 2 (rest of the non-financial B3 universe, ~756 more companies — see `src/acquisition/cvm_dfp.py build_company_universe` with no `cd_cvm_filter`), Bloomberg market/fundamentals/analyst data, control variables, abnormal returns, regressions.
+  3. Extended to 36 of the (now 45) historical-IBOV companies: dropped-from-IBOV/delisted companies show more textual change than companies that stayed, but the effect weakens under a stricter robustness check (p=0.0028 → p=0.068) — **promising, not yet settled**, needs the same hardening work extended to that company set before it's citable. This ran *before* the 10-company corrective addition (Americanas et al. — see acquisition note above), so the quantitative §5/§6 comparison in the notebook doesn't include them yet; PDFs are downloaded and ready, just not run through `run_delisted_analysis.py` yet.
+- **Not started:** acquisition part 2 (rest of the non-financial B3 universe, ~756 more companies — see `src/acquisition/cvm_dfp.py build_company_universe` with no `cd_cvm_filter`), re-running the delisted-company POC analysis with the 10 newly-added companies, Bloomberg market/fundamentals/analyst data, control variables, abnormal returns, regressions.
 - **Outstanding asks of the user:** see `TODO.md` — market data, control variables, and analyst consensus (all Bloomberg).
 
 ## Repo map
