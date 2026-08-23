@@ -10,7 +10,7 @@ Lista de itens que dependem de você (acesso, dados, decisões) para o projeto c
 
 - [ ] **Dados de mercado: preços e retornos das ações**
 
-  Necessário para calcular o retorno anormal acumulado nos 12 meses seguintes à divulgação (variável dependente de H1/H1a). Export do Bloomberg (`PX_LAST` diário ou mensal, mais um índice de mercado tipo Ibovespa para calcular retorno anormal) para as ~137 empresas do universo atual (66 + 36 históricas) cobrindo 2015–2025 (precisa de ~12 meses após a última divulgação de 2024).
+  Necessário para calcular o retorno anormal acumulado nos 12 meses seguintes à divulgação (variável dependente de H1/H1a). Export do Bloomberg (`PX_LAST` diário ou mensal, mais um índice de mercado tipo Ibovespa para calcular retorno anormal) para as 102 empresas do universo atual (66 atuais + 36 históricas) cobrindo 2015–2025 (precisa de ~12 meses após a última divulgação de 2024).
 
 - [ ] **Variáveis de controle (fundamentos econômico-financeiros)**
 
@@ -20,6 +20,6 @@ Lista de itens que dependem de você (acesso, dados, decisões) para o projeto c
 
   Necessário para a análise complementar (H2) — revisão do consenso de EPS após a divulgação. Export do Bloomberg BEst (`BEST_EPS`, histórico de revisões) para o mesmo universo de empresas.
 
-- [ ] **Decisão: Data Pack do GitHub para o LFS**
+- [x] **Decisão: PDFs baixados no GitHub?** — ✅ resolvido: não
 
-  O payload de PDFs já passa de ~2GB (parte 1 completa, incluindo o histórico do Ibovespa) e vai crescer bastante mais na parte 2. A cota gratuita do GitHub LFS é 1GB/mês (armazenamento e banda). Se quiser manter o repositório sincronizado no GitHub (não só local), em algum momento vamos precisar de um Data Pack pago (~$5/50GB) — vale decidir antes de tentarmos sincronizar tudo de uma vez.
+  Chegamos a subir os PDFs via git-lfs (payload ~1,8GB), mas você pediu para tirar do GitHub. Reescrevemos o histórico do git (`git-filter-repo`) e demos force-push para remover — os arquivos continuam seguros no seu disco local (`data/raw/dfp/`), só não estão mais no git/GitHub. Ver `CLAUDE.md` para o histórico completo dessa decisão.

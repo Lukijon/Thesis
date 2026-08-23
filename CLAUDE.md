@@ -10,13 +10,13 @@ The user is doing the actual academic work; this repo is the data/code side. The
 
 ## Status (see README.md "Status" section for the checklist)
 
-- **Acquisition part 1: done.** 913 company-fiscal-year debt-note PDFs, 2015–2024, for 102 non-financial companies — the 66 *current* Ibovespa constituents plus 36 more found via a historical-IBOV reconstruction (see "Historical IBOV" below) to fix survivorship bias. All committed via git-lfs.
+- **Acquisition part 1: done.** 913 company-fiscal-year debt-note PDFs, 2015–2024, for 102 non-financial companies — the 66 *current* Ibovespa constituents plus 36 more found via a historical-IBOV reconstruction (see "Historical IBOV" below) to fix survivorship bias. All present locally on disk; **not tracked in git** (see Data/git conventions below — this was tried via git-lfs and reversed).
 - **POC: done, three rounds**, all in `notebooks/poc_overview.ipynb` + `reports/poc_note_extraction_findings.md`:
   1. Does the TF-IDF idea hold up at all? Yes, where extraction is reliable.
   2. Hardened the note-extraction heuristic (4 real bugs fixed) — reliable-cohort mean similarity 0.75 → 0.87.
   3. Extended to the 36 historical-IBOV companies: dropped-from-IBOV/delisted companies show more textual change than companies that stayed, but the effect weakens under a stricter robustness check (p=0.0028 → p=0.068) — **promising, not yet settled**, needs the same hardening work extended to that company set before it's citable.
 - **Not started:** acquisition part 2 (rest of the non-financial B3 universe, ~756 more companies — see `src/acquisition/cvm_dfp.py build_company_universe` with no `cd_cvm_filter`), Bloomberg market/fundamentals/analyst data, control variables, abnormal returns, regressions.
-- **Outstanding asks of the user:** see `TODO.md` — market data, control variables, analyst consensus (all Bloomberg), and a GitHub Data Pack decision for LFS storage.
+- **Outstanding asks of the user:** see `TODO.md` — market data, control variables, and analyst consensus (all Bloomberg).
 
 ## Repo map
 
@@ -25,7 +25,7 @@ src/acquisition/   CVM + B3 data acquisition (see .claude/skills/cvm-debt-notes/
 src/processing/    PDF text extraction, note-section isolation, TF-IDF POC scripts
 src/analysis/      empty — where regressions/hypothesis tests will go
 src/features/      empty — where control-variable construction will go
-data/raw/dfp/      acquired debt-note PDFs, one folder per CD_CVM/fiscal year (git-lfs tracked)
+data/raw/dfp/      acquired debt-note PDFs, one folder per CD_CVM/fiscal year (gitignored, local-only -- see below)
 data/raw/dfp/_cache/  raw CVM filing zips -- gitignored, 8.6GB+ locally, freely re-derivable, never needs backing up
 data/raw/market/   Bloomberg-derived data (gitignored — see licensing note below)
 data/interim/      manifest/log CSVs (tracked) + data/interim/poc/ (POC intermediates + results, tracked)
@@ -46,14 +46,14 @@ Full detail lives in `.claude/skills/cvm-debt-notes/SKILL.md` and in code docstr
 
 ## Data/git conventions
 
-- Raw acquired PDFs: tracked via **git-lfs** (`.gitattributes`), so they survive beyond this machine.
+- **Raw acquired PDFs (`data/raw/dfp/`) are gitignored, local-only — do not track or push them.** They were briefly tracked via git-lfs and pushed to GitHub, then reversed: history was rewritten with `git-filter-repo` to strip them (see the commit around "Add CLAUDE.md" in `git log` for where this happened) and force-pushed. The files themselves were restored to disk afterward from the still-populated local LFS object store (`.git/lfs/objects` retains blobs even after they're untracked, until explicitly pruned) — they're safe on disk, just not in git anymore. `.gitattributes` no longer declares any LFS-tracked paths. If you're tempted to `git lfs track` these again, don't without asking — that's exactly what got reversed.
 - `data/raw/dfp/_cache/` (raw CVM zips) and `data/raw/market/` + `data/raw/analysts/` (Bloomberg-derived data — redistribution-restricted under Bloomberg's license) are **gitignored**, never commit these regardless of size.
 - Small manifest/log CSVs under `data/interim/` are tracked; bulk intermediate caches generally aren't, except `data/interim/poc/` which is small enough (~5MB) to keep for reproducibility.
-- **Pushing to GitHub**: the LFS payload is large (multi-GB) and GitHub's free LFS quota is 1GB/month. Check with the user before pushing if it's been a while or the payload has grown a lot since the last push — this has been a real, live constraint, not a hypothetical one.
+- **Force-pushes / history rewrites**: only ever done once so far, explicitly requested by the user to remove the PDFs above. Don't do this again without the same kind of explicit, specific request — it's about as destructive as git gets.
 
 ## How this user likes to work (learned this session, not guessed)
 
 - **Verify findings against the real underlying data before trusting a number.** Repeatedly, an aggregate stat (a similarity score, a "current members" list) turned out to hide an artifact (wrong PDF section captured, survivorship bias) that only showed up by reading actual text or checking a concrete example. Default to that level of skepticism on this project — it's been right every time so far.
 - Report honest caveats and negative/mixed results plainly (e.g. the round-3 "promising, not yet settled" finding) rather than smoothing them over.
-- For genuinely large or costly actions (big new downloads, git push against an LFS quota, spending significant new effort in a new direction), check in briefly before proceeding rather than assuming — but don't over-ask for routine continuations of already-agreed-on work.
+- For genuinely large or costly/hard-to-reverse actions (big new downloads, force-pushes, spending significant new effort in a new direction), check in briefly before proceeding rather than assuming — but don't over-ask for routine continuations of already-agreed-on work. When in doubt about what belongs in a push, ask rather than assume — a mid-flight correction here is exactly what led to the history rewrite documented above.
 - Prefers concrete numbers and real examples over descriptions ("here's the actual diff" beats "the text changed").
