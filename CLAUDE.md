@@ -15,10 +15,11 @@ The user is doing the actual academic work; this repo is the data/code side. The
   1. Does the TF-IDF idea hold up at all? Yes, where extraction is reliable.
   2. Hardened the note-extraction heuristic (4 real bugs fixed) — reliable-cohort mean similarity 0.75 → 0.87.
   3. Extended to 36 of the (now 45) historical-IBOV companies: dropped-from-IBOV/delisted companies show more textual change than companies that stayed, but the effect weakens under a stricter robustness check (p=0.0028 → p=0.068) — **promising, not yet settled**, needs the same hardening work extended to that company set before it's citable. This ran *before* the 10-company corrective addition (Americanas et al. — see acquisition note above), so the quantitative §5/§6 comparison in the notebook doesn't include them yet; PDFs are downloaded and ready, just not run through `run_delisted_analysis.py` yet.
-- **Not started:** acquisition part 2 (rest of the non-financial B3 universe, ~756 more companies — see `src/acquisition/cvm_dfp.py build_company_universe` with no `cd_cvm_filter`), re-running the delisted-company POC analysis with the 10 newly-added companies, Bloomberg market/fundamentals/analyst data, control variables, abnormal returns, regressions.
+- **Not started:** acquisition part 2 (rest of the non-financial B3 universe, ~756 more companies — see `src/acquisition/cvm_dfp.py build_company_universe` with no `cd_cvm_filter`), re-running the delisted-company POC analysis with the 10 newly-added companies, fundamentals/control-variable data, analyst-consensus data, the real (full-universe, controlled) regressions.
 - **Market data: received and verified.** `data/raw/market/prices/stock_prices_bloomberg.csv` (153 tickers, daily `PX_LAST`, 2014–2026) + `ibov_index_bloomberg.csv` (Ibovespa daily level, same period) — all 66 current-universe tickers covered; 9 tickers are stale pre-rename duplicates that resolve `#N/A` (e.g. EMBR3→EMBJ3, MRFG3→MBRF3, CCRO3→MOTV3) but the current-name column has full data, so use the current B3 ticker per company when mapping to CD_CVM. Of the ~45 historical/delisted companies, ~40 resolve to a current tradeable ticker (via B3's live registry); the rest (Souza Cruz, MMX, Fibria, etc.) are genuinely gone from the market (went private/merged/bankrupt) — a real gap, not a data bug. See `TODO.md` for full notes.
 - **First H1 checkpoint: done, pipeline runs end-to-end, no signal yet (expected).** `src/acquisition/build_filing_dates.py` builds `data/interim/dfp_filing_dates.csv` (993 rows — the actual CVM disclosure date per filing, `DT_RECEB`, which existing acquisition code had silently discarded). `src/analysis/compute_abnormal_returns.py` uses that to compute a market-adjusted (stock minus Ibovespa buy-and-hold, no beta) 12-month abnormal return per company-year and correlates it against POC note similarity — see `poc_overview.ipynb` §7. Correlation is ~0, which is the expected result without controls/full universe, not a finding against H1a; this only proves the pipeline is wired correctly end to end.
 - **Outstanding asks of the user:** see `TODO.md` — fundamentals/control variables and analyst consensus (both Bloomberg).
+- **Natural next step:** either extend round-2-style extraction hardening to the historical/delisted company set (needed before the §5 survivorship finding is citable), or get fundamentals/control variables from the user so §7's abnormal-return checkpoint can become a real, controlled test. Both are legitimate; ask the user which they'd rather prioritize rather than assuming.
 
 ## Repo map
 
@@ -31,6 +32,8 @@ data/raw/dfp/      acquired debt-note PDFs, one folder per CD_CVM/fiscal year (g
 data/raw/dfp/_cache/  raw CVM filing zips -- gitignored, 8.6GB+ locally, freely re-derivable, never needs backing up
 data/raw/market/   Bloomberg-derived data (gitignored — see licensing note below)
 data/interim/      manifest/log CSVs (tracked) + data/interim/poc/ (POC intermediates + results, tracked)
+data/interim/dfp_filing_dates.csv   real CVM disclosure date per acquired filing (event date for return calcs)
+data/interim/poc/abnormal_returns_poc.csv   POC-scale market-adjusted abnormal return per similarity pair
 notebooks/poc_overview.ipynb   the POC narrative with real charts and text evidence, executed in place
 reports/           narrative writeups (markdown)
 ```
