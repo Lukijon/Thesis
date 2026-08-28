@@ -1,0 +1,9 @@
+{
+  "cd_cvm": "008656",
+  "name": "METALURGICA GERDAU S.A.",
+  "quarter": "2021Q1",
+  "diagnostic": "regex_only",
+  "heading": "Pagamentos de empréstimos e financiamentos",
+  "n_total_lines": 1704,
+  "text": "Pagamentos de empréstimos e financiamentos\n(1.229.008)\n(1.238.867)\nPagamento de arrendamento mercantil\n(66.302)\n(62.918)\nFinanciamentos com empresas ligadas, líquido\n1.111\n4.818\nCaixa líquido (aplicado) gerado nas atividades de financiamentos\n(1.464.286)\n192.783\nEfeito de variação cambial sobre o caixa e equivalentes de caixa\n117.528\n367.363\n(Redução) Aumento do caixa e equivalentes de caixa\n(375.343)\n1.174.224\nCaixa e equivalentes de caixa no início do período\n4.617.274\n2.641.713\nCaixa e equivalentes de caixa no final do período\n4.241.931\n3.815.937"
+}

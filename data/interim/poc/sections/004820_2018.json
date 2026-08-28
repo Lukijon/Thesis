@@ -2,8 +2,8 @@
   "cd_cvm": "004820",
   "name": "BRASKEM",
   "year": 2018,
-  "diagnostic": "not_found",
-  "heading": null,
+  "diagnostic": "regex_only",
+  "heading": "Debêntures",
   "n_total_lines": 2384,
-  "text": ""
+  "text": "Debêntures\n267\n286\n-7%\nOperações com derivativos\n162\n0\nn.a.\nTributos a Recolher\n86\n53\n63%\nMútuo de acionista não controlador na Braskem Idesa\n2.184\n1.757\n24%\nIR e CS Diferidos\n325\n940\n-65%\nBenefícios pós emprego\n206\n194\n7%\nContigências\n965\n1.093\n-12%\nAcordo de Leniência\n1.155\n1.372\n-16%\nProvisões Diversas\n233\n235\n-1%\nOutras Obrigações\n150\n148\n1%\nPatrimônio Líquido\n5.911\n5.690\n4%\nCapital Social\n8.043\n8.043\n0%\nReserva de Capital\n232\n232\n0%\nReservas de Lucros\n4.673\n3.946\n18%\nAjustes de Avaliação Patrimonial**\n-6.111\n-5.654\n8%\nAções em Tesouraria\n-50\n-50\n0%\nTotal Atribuível ao Acionista da Companhia\n6.788\n6.518\n4%\nParticipação de Acionista não Controlador na Braskem Idesa\n-876\n-828\n6%\nTotal do Passivo e PL\n59.194\n53.342\n11%\nATIVO (R$ milhões)\nPASSIVO E P.L. (R$ milhões)"
 }

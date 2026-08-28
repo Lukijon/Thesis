@@ -1,7 +1,14 @@
 """POC: does isolating the debt note and comparing it year-over-year with
-TF-IDF + cosine similarity produce a sane signal, on a small, sector-diverse
-sample of companies already downloaded (see .claude/skills/cvm-debt-notes
+TF-IDF + cosine similarity produce a sane signal, across the full current
+non-financial IBOV universe already downloaded (see .claude/skills/cvm-debt-notes
 and the acquisition pipeline in src/acquisition/)?
+
+Originally run (rounds 1-2, see reports/poc_note_extraction_findings.md) on
+a hand-picked 20-company sector-diverse subset; extended to the full 66
+current non-financial IBOV constituents once the extraction heuristic was
+hardened enough to trust at scale. See run_delisted_analysis.py for the
+parallel run over historical/delisted (dropped-from-IBOV) companies, which
+imports POC_COMPANIES from here so it automatically covers the same set.
 
 This does NOT touch acquisition or download anything new -- it only reads
 already-acquired PDFs under data/raw/dfp/.
@@ -25,32 +32,22 @@ from src.processing.pdf_text import extract_lines
 
 warnings.filterwarnings("ignore")  # pymupdf's fitz-deprecation warning
 
-# 20 companies hand-picked for sector diversity from the 52 IBOV
-# non-financial companies with full 2015-2024 coverage (see
-# data/interim/ibov_non_financial_universe.csv +
-# data/interim/ibov_notes_download_log.csv for the full candidate list).
-POC_COMPANIES = {
-    "004170": "VALE",
-    "009512": "PETROBRAS",
-    "023264": "AMBEV",
-    "003980": "GERDAU",
-    "014320": "USIMINAS",
-    "005410": "WEG",
-    "020087": "EMBRAER",
-    "013986": "SUZANO",
-    "004820": "BRASKEM",
-    "002453": "CEMIG",
-    "014443": "SABESP",
-    "008133": "LOJAS RENNER",
-    "005258": "RAIA DROGASIL",
-    "020915": "MRV",
-    "020788": "MARFRIG",
-    "019992": "TOTVS",
-    "021881": "FLEURY",
-    "017671": "TELEFONICA BRASIL",
-    "021016": "YDUQS",
-    "019739": "LOCALIZA",
-}
+UNIVERSE_CSV = Path("data/interim/ibov_non_financial_universe.csv")
+
+
+def _load_current_universe() -> dict[str, str]:
+    """All current non-financial IBOV constituents (66 as of this writing),
+    keyed by zero-padded CD_CVM. Loaded from the universe file rather than
+    hardcoded so this stays in sync automatically if that file is refreshed.
+    """
+    universe = pd.read_csv(UNIVERSE_CSV, dtype={"CD_CVM": str})
+    return {
+        f"{int(row.CD_CVM):06d}": row.ASSET
+        for row in universe.itertuples()
+    }
+
+
+POC_COMPANIES = _load_current_universe()
 
 YEARS = list(range(2015, 2025))
 RAW_ROOT = Path("data/raw/dfp")

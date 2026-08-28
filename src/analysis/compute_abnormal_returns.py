@@ -13,19 +13,20 @@ This is deliberately simple, not the thesis's final regression:
     *current* fiscal year of each (year_prev, year_curr) similarity pair --
     i.e. when the changed note actually became public -- not the fiscal
     year-end (DT_REFER), which nobody could trade on.
-  - Only the POC's already-computed similarity pairs are used (the 20
-    core companies + the 45-company historical/delisted set), since those
-    are the only company-years with a note-extraction diagnostic attached.
-    Scaling this to the full universe is part 2 of acquisition, not here.
+  - Only the POC's already-computed similarity pairs are used (the 66
+    current-IBOV companies + the 46-company historical/delisted set), since
+    those are the only company-years with a note-extraction diagnostic
+    attached. Scaling to the rest of the non-financial B3 universe (part 2
+    of acquisition, ~756 more companies) is a separate, larger step.
 
 Prerequisite: python -u -m src.acquisition.build_filing_dates (writes
 data/interim/dfp_filing_dates.csv, the event-date reference this reads).
 
 Ticker resolution: the 66 current-IBOV companies map directly via
-data/interim/ibov_non_financial_universe.csv (COD). The 45 historical/
+data/interim/ibov_non_financial_universe.csv (COD). The 46 historical/
 delisted companies have no such mapping yet -- resolved here via B3's live
 company registry (issuer-code prefix), which only succeeds for companies
-still listed under *some* ticker today (~30/45 -- the other ~15 went
+still listed under *some* ticker today (30/46 -- the other 16 went
 private, merged away entirely, or are bankruptcy estates, which is exactly
 the kind of company this section can't compute a forward return for).
 """
@@ -155,7 +156,7 @@ def compute_returns(events: pd.DataFrame, ticker_map: pd.DataFrame) -> pd.DataFr
 
 def main() -> None:
     core = pd.read_csv(POC / "similarity_results.csv")
-    core["poc_group"] = "core_20"
+    core["poc_group"] = "current_66"
     delisted = pd.read_csv(POC / "delisted_similarity_results.csv")
     delisted["poc_group"] = delisted["group"]
     sim = pd.concat([core, delisted], ignore_index=True, sort=False)
@@ -172,9 +173,11 @@ def main() -> None:
 
     both_reliable = merged[(merged["diagnostic_prev"] == "font_heading") & (merged["diagnostic_curr"] == "font_heading")]
 
+    current_codes = set(pd.read_csv(INTERIM / "ibov_non_financial_universe.csv")["CD_CVM"])
+    hist_resolved = ticker_map.loc[~ticker_map["CD_CVM"].isin(current_codes), "CD_CVM"].nunique()
     print(f"{len(sim)} note-similarity pairs in the POC corpus")
     print(f"{ticker_map['CD_CVM'].nunique()} companies with a resolved ticker "
-          f"({ticker_map['CD_CVM'].isin(delisted['cd_cvm']).sum()} of the historical/delisted set)")
+          f"({hist_resolved} of the historical/delisted set)")
     print(f"{len(merged)} pairs have both a similarity score and a computable 12-month abnormal return\n")
 
     for label, df in [("All computable pairs", merged), ("Reliable extraction only (font_heading/font_heading)", both_reliable)]:

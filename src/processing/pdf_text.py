@@ -43,3 +43,15 @@ def extract_lines(pdf_path: Path) -> list[Line]:
 
 def lines_to_dicts(lines: list[Line]) -> list[dict]:
     return [asdict(l) for l in lines]
+
+
+def extract_bookmarks(pdf_path: Path) -> list[tuple[int, str, int]]:
+    """The PDF's native outline/bookmark tree, if the filer's document-
+    generation software embedded one: (level, title, 1-indexed page). Most
+    filings don't have one (checked empirically: ~5% of currently-unreliable
+    annual filings), but where present it's a far more precise section
+    boundary signal than font heuristics -- an explicit navigational entry,
+    not an inference from styling.
+    """
+    doc = fitz.open(pdf_path)
+    return doc.get_toc()

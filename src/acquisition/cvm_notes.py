@@ -125,7 +125,12 @@ def _parse_attachments(xml_bytes: bytes, tag: str, nested: bool) -> list[FilingA
     return attachments
 
 
-def list_attachments(zip_bytes: bytes) -> list[FilingAttachment]:
+def list_attachments(
+    zip_bytes: bytes,
+    modern_tag: str = ATTACHMENT_TAG,
+    modern_exclude: tuple[str, ...] = ("FormularioCadastral.xml", "FormularioDemonstracaoFinanceiraDFP.xml"),
+    legacy_extension: str = ".dfp",
+) -> list[FilingAttachment]:
     """Every PDF attachment embedded in the filing package, decoded.
 
     Filings from roughly 2021 onward carry a single top-level XML
@@ -136,24 +141,30 @@ def list_attachments(zip_bytes: bytes) -> list[FilingAttachment]:
     paths (e.g. "C:\\EMPRESASNET\\...\\00121604120000000000000000.pdf.pdf"),
     not descriptive names, so downstream selection falls back to picking
     the largest one rather than matching by filename.
+
+    ITR (quarterly) filings share this exact structure but use different
+    tag names/extensions -- `src/acquisition/cvm_itr.py` calls this with
+    `modern_tag=ITR_ATTACHMENT_TAG`, `modern_exclude` swapped to the ITR
+    cover-form filename, and `legacy_extension=".itr"`. The nested legacy
+    `AnexoDocumento.xml` structure itself is identical between DFP and ITR,
+    confirmed by inspection, so `LEGACY_ATTACHMENT_TAG`/`nested=True` stay
+    the same for both.
     """
     with zipfile.ZipFile(BytesIO(zip_bytes)) as zf:
         modern_candidates = [
-            n
-            for n in zf.namelist()
-            if n.lower().endswith(".xml") and n not in ("FormularioCadastral.xml", "FormularioDemonstracaoFinanceiraDFP.xml")
+            n for n in zf.namelist() if n.lower().endswith(".xml") and n not in modern_exclude
         ]
         if modern_candidates:
             xml_name = max(modern_candidates, key=lambda n: zf.getinfo(n).file_size)
-            return _parse_attachments(zf.read(xml_name), ATTACHMENT_TAG, nested=False)
+            return _parse_attachments(zf.read(xml_name), modern_tag, nested=False)
 
-        legacy_candidates = [n for n in zf.namelist() if n.lower().endswith(".dfp")]
+        legacy_candidates = [n for n in zf.namelist() if n.lower().endswith(legacy_extension)]
         if legacy_candidates:
             with zipfile.ZipFile(BytesIO(zf.read(legacy_candidates[0]))) as inner_zf:
                 if "AnexoDocumento.xml" in inner_zf.namelist():
                     return _parse_attachments(inner_zf.read("AnexoDocumento.xml"), LEGACY_ATTACHMENT_TAG, nested=True)
 
-    raise FileNotFoundError("No recognized DFP attachment structure (neither modern nor legacy) found in filing package")
+    raise FileNotFoundError("No recognized attachment structure (neither modern nor legacy) found in filing package")
 
 
 def select_source_attachments(attachments: list[FilingAttachment]) -> tuple[list[FilingAttachment], str]:

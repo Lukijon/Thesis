@@ -31,9 +31,9 @@ Lista de itens que dependem de você (acesso, dados, decisões) para o projeto c
 
   Alavancagem, rentabilidade, tamanho (valor de mercado ou ativos totais), retorno passado — mencionados no pré-projeto como controles necessários para testar H1. Parte pode ser derivada diretamente das próprias DFPs já baixadas (ex.: alavancagem contábil), mas valor de mercado/capitalização precisa do Bloomberg. Vale definirmos juntos exatamente quais variáveis de controle entram no modelo antes de montar essa extração.
 
-- [ ] **Consenso de previsões de EPS dos analistas (Bloomberg BEst)**
+- [x] **Consenso de previsões de EPS dos analistas (Bloomberg BEst)** — ✅ recebido (cobertura ainda não conferida a fundo)
 
-  Necessário para a análise complementar (H2) — revisão do consenso de EPS após a divulgação. Export do Bloomberg BEst (`BEST_EPS`, histórico de revisões) para o mesmo universo de empresas.
+  Você adicionou `data/interim/eps estimates.csv` (export do Bloomberg, `is_eps` com `fpt=Q`/`ae=E` — série histórica trimestral do consenso de EPS, uma linha por data de referência, confirmada como o histórico de estimativas por trimestre); movido para `data/raw/analysts/eps_consensus_bloomberg.csv` (git-ignorado, como todo dado Bloomberg). 153 tickers (mesmo conjunto do arquivo de preços), 133 datas trimestrais, 6/2013–12/2026. Conferido contra o universo antes de aceitar: **64 das 66 empresas atuais do Ibovespa têm pelo menos alguma cobertura** (58 com cobertura densa, ≥20 dos ~52 trimestres desde 2015); **Klabin (KLBN11) e Iguatemi (IGTI11) têm cobertura zero**. Ainda não cruzado contra as 46 empresas históricas/deslistadas. Falta ainda: confirmar a definição exata de "revisão" para o H2 (variação do consenso entre duas datas para o mesmo trimestre-alvo) e decidir a janela de revisão em torno de cada divulgação.
 
 - [x] **Decisão: PDFs baixados no GitHub?** — ✅ resolvido: não
 

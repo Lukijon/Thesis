@@ -1,0 +1,9 @@
+{
+  "cd_cvm": "014826",
+  "name": "Companhia Brasileira de Distribuição (GPA)",
+  "quarter": "2023Q1",
+  "diagnostic": "regex_only",
+  "heading": "Empréstimos e financiamentos",
+  "n_total_lines": 5164,
+  "text": "Empréstimos e financiamentos\n602\n582\nPassivo de arrendamento\n1.525\n1.504\nImposto de renda e contribuição social diferidos\n1.086\n1.016\nOutros passivos não circulantes\n170\n204\nTotal do passivo não circulante\n3.383\n3.306\nPatrimônio Líquido\n9.622\n9.548\nTotal do passivo e patrimônio líquido\n20.506\n20.809\nFluxos de Caixa:\nCaixa aplicado nas atividades operacionais\n(987)\n(1.609)\nCaixa líquido aplicado nas atividades de investimento\n(182)\n(93)\nCaixa líquido aplicado nas atividades de financiamento\n368\n(167)\nVariação de caixa no período\n(801)\n(1.869)\nDemonstração do Resultado – Grupo Éxito\nReceita líquida de vendas\n5.967\n6.159\nLucro bruto\n1.595\n1.556\nLucro (prejuízo) antes do imposto de renda e da contribuição social\n301\n150\nImposto de renda e contribuição social\n(99)\n(87)\nLucro (prejuízo) do período\n202\n63\n(b) Operação descontinuada Extra Hiper\nEm 31 de dezembro de 2021 a Companhia iniciou o processo de desmobilização e descontinuidade\ndas operações da bandeira Extra Hiper, e o resultado líquido está apresentado como operação\ndescontinuada (vide nota nº1.1). Segue abaixo a demonstração de resultado resumida:\nDemonstração do Resultado – Extra Hiper\nReceita líquida de vendas\n27\n506\nLucro bruto\n12\nLucro (prejuízo) antes do imposto de renda e da contribuição social\n(123)\n2.009\nImposto de renda e contribuição social\n42\n(498)\nLucro (prejuízo) do período\n(81)\n1.511\n(c) Reconciliação do lucro líquido:\nReconciliação do Lucro Líquido das operações descontinuadas\nGrupo Éxito\n202\n63\nExtra Hiper\n(81)\n1.511\nVia\nLucro das operações descontinuadas\n120\n1.573"
+}

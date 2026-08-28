@@ -27,6 +27,11 @@ data/raw/*
 data/raw/dfp/*
 !data/raw/dfp/.gitkeep
 
+# ITR (quarterly) debt-note PDFs -- pilot for a quarterly-frequency textual
+# similarity check, local-only like the annual DFP corpus above.
+data/raw/itr/*
+!data/raw/itr/.gitkeep
+
 # Bloomberg-derived market/analyst data: likely redistribution-restricted
 # under Bloomberg's data license, so never commit regardless of size.
 data/raw/market/*
@@ -40,20 +45,27 @@ data/interim/*
 !data/interim/.gitkeep
 !data/interim/*.csv
 
-# POC (small, and cited directly in reports/poc_note_extraction_findings.md)
+# POC (small, and cited directly in reports/poc_note_extraction_findings.md).
+# lines_cache/ and bookmarks_cache/ are NOT excepted here deliberately --
+# they're a large (1.6GB+), purely regenerable raw-PDF-parsing cache for
+# iterating on the extraction heuristic (see src/processing/eval_note_locator.py),
+# the same category as data/raw/dfp/_cache/ above: never commit regardless of size.
 !data/interim/poc/
 data/interim/poc/*
 !data/interim/poc/*.csv
 !data/interim/poc/sections/
+!data/interim/poc/itr_sections/
 
 data/processed/*
 !data/processed/.gitkeep
 data/external/*
 !data/external/.gitkeep
 
-# Reports / generated figures
+# Reports / generated figures -- real chart deliverables are tracked
+# (small PNGs); this still blocks anything else that lands here.
 reports/figures/**
 !reports/figures/.gitkeep
+!reports/figures/*.png
 
 # OS / editor
 .DS_Store

@@ -1,0 +1,9 @@
+{
+  "cd_cvm": "004030",
+  "name": "SID NACIONAL",
+  "year": 2020,
+  "diagnostic": "regex_only",
+  "heading": "Captações empréstimos e financiamentos",
+  "n_total_lines": 2907,
+  "text": "Captações empréstimos e financiamentos\n2.077.354\n943.860\nAmortização empréstimos - principal\n(1.128.542)\n(2.346.349)\nCusto de Captação de empréstimos\n(3.251)\n(16.751)\nAmortização de arrendamento\n(28.250)\n(24.924)\nDividendos e juros sobre capital próprio pagos\n(174.429)\n(134.751)\nVariação Cambial sobre caixa e equivalentes de Caixa\n1.841\n(5.214)\nAumento (Redução) do Caixa e Equivalentes de Caixa\n4.220.158\n1.510.876\nCaixa e equivalentes de caixa no início do período\n5.724.428\n4.213.552\nCaixa e equivalentes de caixa no fim do período\n9.944.586\n5.724.428"
+}

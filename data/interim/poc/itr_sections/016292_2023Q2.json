@@ -1,0 +1,9 @@
+{
+  "cd_cvm": "016292",
+  "name": "BRF S.A.",
+  "quarter": "2023Q2",
+  "diagnostic": "regex_only",
+  "heading": "Pagamento de empréstimos e financiamentos",
+  "n_total_lines": 2186,
+  "text": "Pagamento de empréstimos e financiamentos\n(1,532)\n(1,387)\nPagamento de juros\n(244)\n(336)\nPagamento de derivativos de juros - hedge de valor justo\n(268)\n(29)\nAumento de capital com emissão de ações\n0\n(5)\nPagamento de arrendamento\n(182)\n(161)\nCaixa líquido gerado (aplicado) nas atividades de financiamento\n(1,041)\n(1,591)\nEfeito da variação cambial em Caixa e Equivalentes de Caixa\n(101)\n340\nAumento (decréscimo) líquido no saldo de caixa e equivalentes de caixa\n(972)\n(1,195)\nConciliação Fluxo de Caixa Contábil vs.\nGerencial\nVar. caixa\nContábil\nAVP e\nDerivativos\nArrend.\nmercantil\nJuros\nrecebidos, VC\nCaixa e Outros\nResgates e\nAplicações\nVar. caixa\nGerencial1\n(-) Captações e\nAmortizações\nFluxo de Caixa\nLivre\nFluxo de Caixa Operacional\n743\n570\n-\n(139)\n(8)\n1.166\n-\n1.166\nFluxo de Caixa Investimentos\n(573)\n-\n(182)\n-\n48\n(707)\n-\n(707)\nFluxo de Caixa Financeiro\n(1.041)\n(570)\n182\n(72)\n-\n(1.500)\n346\n(1.153)\nVariação cambial de caixa e equivalentes de caixa\n(101)\n-\n-\n101\n-\n-\n-\n-\nTotal\n(972)\n-\n-\n(109)\n40\n(1.041)\n346\n(695)"
+}

@@ -1,402 +1,817 @@
 cd_cvm,name,group,year_prev,year_curr,cosine_similarity,chars_prev,chars_curr,diagnostic_prev,diagnostic_curr
-002453,CEMIG,stayed,2015,2016,0.9439,15917,15122,font_heading,font_heading
-002453,CEMIG,stayed,2016,2017,0.8983,15122,17835,font_heading,font_heading
-002453,CEMIG,stayed,2017,2018,0.8649,17835,16893,font_heading,font_heading
-002453,CEMIG,stayed,2018,2019,0.9242,16893,15903,font_heading,font_heading
-002453,CEMIG,stayed,2019,2020,0.9461,15903,15944,font_heading,font_heading
-002453,CEMIG,stayed,2020,2021,0.8997,15944,15904,font_heading,font_heading
-002453,CEMIG,stayed,2021,2022,0.8173,15904,16412,font_heading,font_heading
-002453,CEMIG,stayed,2022,2023,0.8511,16412,11722,font_heading,font_heading
-002453,CEMIG,stayed,2023,2024,0.8713,11722,15533,font_heading,font_heading
-002577,CESP - Companhia Energética de São Paulo,dropped_or_delisted,2015,2016,0.0309,686,1699,font_heading,font_heading
-002577,CESP - Companhia Energética de São Paulo,dropped_or_delisted,2016,2017,0.2336,1699,154,font_heading,font_heading
+002437,AXIA ENERGIA,stayed,2015,2016,0.6422,9586,14143,regex_only,regex_only
+002437,AXIA ENERGIA,stayed,2016,2017,0.8665,14143,10090,regex_only,regex_only
+002437,AXIA ENERGIA,stayed,2017,2018,0.0274,10090,1362,regex_only,regex_only
+002437,AXIA ENERGIA,stayed,2018,2019,0.0,1362,239,regex_only,font_heading
+002437,AXIA ENERGIA,stayed,2019,2020,0.3954,239,17147,font_heading,font_heading
+002437,AXIA ENERGIA,stayed,2020,2021,0.9397,17147,19339,font_heading,font_heading
+002437,AXIA ENERGIA,stayed,2021,2022,0.2013,19339,4828,font_heading,font_heading
+002437,AXIA ENERGIA,stayed,2022,2023,0.2297,4828,16334,font_heading,font_heading
+002437,AXIA ENERGIA,stayed,2023,2024,0.6915,16334,7881,font_heading,font_heading
+002453,CEMIG,stayed,2015,2016,0.9436,15917,15122,font_heading,font_heading
+002453,CEMIG,stayed,2016,2017,0.8993,15122,17835,font_heading,font_heading
+002453,CEMIG,stayed,2017,2018,0.8597,17835,16893,font_heading,font_heading
+002453,CEMIG,stayed,2018,2019,0.9253,16893,15903,font_heading,font_heading
+002453,CEMIG,stayed,2019,2020,0.9449,15903,15944,font_heading,font_heading
+002453,CEMIG,stayed,2020,2021,0.8937,15944,15904,font_heading,font_heading
+002453,CEMIG,stayed,2021,2022,0.8102,15904,16412,font_heading,font_heading
+002453,CEMIG,stayed,2022,2023,0.8459,16412,11722,font_heading,font_heading
+002453,CEMIG,stayed,2023,2024,0.8666,11722,15533,font_heading,font_heading
+002577,CESP - Companhia Energética de São Paulo,dropped_or_delisted,2015,2016,0.0324,686,1699,font_heading,font_heading
+002577,CESP - Companhia Energética de São Paulo,dropped_or_delisted,2016,2017,0.2397,1699,154,font_heading,font_heading
 002577,CESP - Companhia Energética de São Paulo,dropped_or_delisted,2017,2018,1.0,154,154,font_heading,font_heading
-002577,CESP - Companhia Energética de São Paulo,dropped_or_delisted,2018,2019,0.0363,154,9692,font_heading,regex_only
-002577,CESP - Companhia Energética de São Paulo,dropped_or_delisted,2019,2020,0.0883,9692,3042,regex_only,font_heading
-002577,CESP - Companhia Energética de São Paulo,dropped_or_delisted,2020,2023,0.4019,3042,5068,font_heading,font_heading
-002577,CESP - Companhia Energética de São Paulo,dropped_or_delisted,2023,2024,0.0991,5068,2585,font_heading,regex_only
-003980,GERDAU,stayed,2015,2016,0.9194,17066,21919,regex_only,regex_only
-003980,GERDAU,stayed,2016,2017,0.9399,21919,25772,regex_only,regex_only
-003980,GERDAU,stayed,2017,2018,0.9099,25772,24797,regex_only,regex_only
-003980,GERDAU,stayed,2018,2019,0.1612,24797,2977,regex_only,regex_only
-003980,GERDAU,stayed,2019,2020,0.8774,2977,3256,regex_only,regex_only
-003980,GERDAU,stayed,2020,2021,0.1508,3256,32644,regex_only,regex_only
-003980,GERDAU,stayed,2021,2022,0.9588,32644,30652,regex_only,regex_only
-003980,GERDAU,stayed,2022,2023,0.454,30652,12322,regex_only,regex_only
-003980,GERDAU,stayed,2023,2024,0.8416,12322,9767,regex_only,regex_only
-004170,VALE,stayed,2015,2016,0.8556,5438,8641,font_heading,font_heading
-004170,VALE,stayed,2016,2017,0.9422,8641,9102,font_heading,font_heading
-004170,VALE,stayed,2017,2018,0.7666,9102,4664,font_heading,font_heading
-004170,VALE,stayed,2018,2019,0.1577,4664,20656,font_heading,regex_only
-004170,VALE,stayed,2019,2020,0.2,20656,9653,regex_only,font_heading
-004170,VALE,stayed,2020,2021,0.9238,9653,10136,font_heading,font_heading
-004170,VALE,stayed,2021,2022,0.902,10136,6682,font_heading,font_heading
-004170,VALE,stayed,2022,2023,0.1232,6682,554,font_heading,font_heading
+002577,CESP - Companhia Energética de São Paulo,dropped_or_delisted,2018,2019,0.0354,154,9692,font_heading,regex_only
+002577,CESP - Companhia Energética de São Paulo,dropped_or_delisted,2019,2020,0.085,9692,3042,regex_only,font_heading
+002577,CESP - Companhia Energética de São Paulo,dropped_or_delisted,2020,2022,0.4171,3042,451,font_heading,font_heading
+002577,CESP - Companhia Energética de São Paulo,dropped_or_delisted,2022,2023,0.223,451,5068,font_heading,font_heading
+002577,CESP - Companhia Energética de São Paulo,dropped_or_delisted,2023,2024,0.0941,5068,2585,font_heading,regex_only
+003980,GERDAU,stayed,2015,2016,0.9132,6325,5022,font_heading,font_heading
+003980,GERDAU,stayed,2016,2017,0.8342,5022,5266,font_heading,font_heading
+003980,GERDAU,stayed,2017,2018,0.8987,5266,5334,font_heading,font_heading
+003980,GERDAU,stayed,2018,2019,0.1261,5334,2727,font_heading,regex_only
+003980,GERDAU,stayed,2019,2020,0.8534,2727,3256,regex_only,regex_only
+003980,GERDAU,stayed,2020,2021,0.086,3256,3332,regex_only,font_heading
+003980,GERDAU,stayed,2021,2022,0.7894,3332,3399,font_heading,font_heading
+003980,GERDAU,stayed,2022,2023,0.8069,3399,1936,font_heading,font_heading
+003980,GERDAU,stayed,2023,2024,0.7381,1936,3287,font_heading,font_heading
+004030,SID NACIONAL,stayed,2015,2016,0.7917,5211,5743,font_heading,font_heading
+004030,SID NACIONAL,stayed,2016,2017,0.6466,5743,6926,font_heading,font_heading
+004030,SID NACIONAL,stayed,2017,2018,0.7278,6926,7544,font_heading,font_heading
+004030,SID NACIONAL,stayed,2018,2019,0.7376,7544,5921,font_heading,font_heading
+004030,SID NACIONAL,stayed,2019,2020,0.0909,5921,556,font_heading,regex_only
+004030,SID NACIONAL,stayed,2020,2021,0.1212,556,6982,regex_only,font_heading
+004030,SID NACIONAL,stayed,2021,2022,0.6806,6982,4393,font_heading,font_heading
+004030,SID NACIONAL,stayed,2022,2023,0.989,4393,4389,font_heading,font_heading
+004030,SID NACIONAL,stayed,2023,2024,0.8961,4389,4138,font_heading,font_heading
+004170,VALE,stayed,2015,2016,0.85,5438,8641,font_heading,font_heading
+004170,VALE,stayed,2016,2017,0.9413,8641,9102,font_heading,font_heading
+004170,VALE,stayed,2017,2018,0.772,9102,4664,font_heading,font_heading
+004170,VALE,stayed,2018,2019,0.3278,4664,16358,font_heading,regex_only
+004170,VALE,stayed,2019,2020,0.3021,16358,11224,regex_only,font_heading
+004170,VALE,stayed,2020,2021,0.926,11224,12192,font_heading,font_heading
+004170,VALE,stayed,2021,2022,0.4325,12192,2673,font_heading,font_heading
+004170,VALE,stayed,2022,2023,0.0575,2673,554,font_heading,font_heading
 004170,VALE,stayed,2023,2024,1.0,554,554,font_heading,font_heading
-004820,BRASKEM,stayed,2017,2019,0.7618,14000,15282,regex_only,regex_only
-004820,BRASKEM,stayed,2019,2021,0.8925,15282,18691,regex_only,regex_only
-004820,BRASKEM,stayed,2021,2022,0.9914,18691,18541,regex_only,regex_only
-004820,BRASKEM,stayed,2022,2024,0.1012,18541,1199,regex_only,font_heading
-005258,RAIA DROGASIL,stayed,2015,2016,0.9793,2768,2725,regex_only,regex_only
-005258,RAIA DROGASIL,stayed,2016,2017,0.2973,2725,520,regex_only,regex_only
-005258,RAIA DROGASIL,stayed,2017,2018,0.9774,520,553,regex_only,regex_only
-005258,RAIA DROGASIL,stayed,2018,2019,0.0434,553,9054,regex_only,regex_only
-005258,RAIA DROGASIL,stayed,2019,2020,0.9521,9054,7973,regex_only,regex_only
-005258,RAIA DROGASIL,stayed,2020,2021,0.1081,7973,10190,regex_only,font_heading
-005258,RAIA DROGASIL,stayed,2021,2022,0.906,10190,12138,font_heading,font_heading
-005258,RAIA DROGASIL,stayed,2022,2023,0.7799,12138,5541,font_heading,font_heading
-005258,RAIA DROGASIL,stayed,2023,2024,0.7701,5541,14023,font_heading,font_heading
-005410,WEG,stayed,2015,2016,0.9909,2516,2501,font_heading,font_heading
-005410,WEG,stayed,2016,2017,0.9876,2501,2524,font_heading,font_heading
-005410,WEG,stayed,2017,2018,0.984,2524,2615,font_heading,font_heading
-005410,WEG,stayed,2018,2019,0.9819,2615,2633,font_heading,font_heading
-005410,WEG,stayed,2019,2020,0.971,2633,2695,font_heading,font_heading
-005410,WEG,stayed,2020,2021,0.8961,2695,2214,font_heading,font_heading
-005410,WEG,stayed,2021,2022,0.9079,2214,2482,font_heading,font_heading
-005410,WEG,stayed,2022,2023,0.9765,2482,2322,font_heading,font_heading
-005410,WEG,stayed,2023,2024,0.9192,2322,2484,font_heading,font_heading
-006505,Grupo Casas Bahia S.A. (Via Varejo),dropped_or_delisted,2015,2016,0.8034,3122,3231,font_heading,font_heading
-006505,Grupo Casas Bahia S.A. (Via Varejo),dropped_or_delisted,2016,2017,0.9082,3231,3485,font_heading,font_heading
-006505,Grupo Casas Bahia S.A. (Via Varejo),dropped_or_delisted,2017,2018,0.842,3485,3880,font_heading,font_heading
-006505,Grupo Casas Bahia S.A. (Via Varejo),dropped_or_delisted,2018,2019,0.7891,3880,6079,font_heading,font_heading
-006505,Grupo Casas Bahia S.A. (Via Varejo),dropped_or_delisted,2019,2020,0.171,6079,11088,font_heading,regex_only
-006505,Grupo Casas Bahia S.A. (Via Varejo),dropped_or_delisted,2020,2021,0.0804,11088,533,regex_only,font_heading
+004820,BRASKEM,stayed,2017,2018,0.3192,6565,776,regex_only,regex_only
+004820,BRASKEM,stayed,2018,2019,0.3287,776,5403,regex_only,regex_only
+004820,BRASKEM,stayed,2019,2020,0.2169,5403,1044,regex_only,regex_only
+004820,BRASKEM,stayed,2020,2021,0.2609,1044,11088,regex_only,regex_only
+004820,BRASKEM,stayed,2021,2022,0.9576,11088,11707,regex_only,regex_only
+004820,BRASKEM,stayed,2022,2024,0.3307,11707,1199,regex_only,font_heading
+005258,RAIA DROGASIL,stayed,2015,2016,0.9765,2768,2725,regex_only,regex_only
+005258,RAIA DROGASIL,stayed,2016,2017,0.3139,2725,520,regex_only,regex_only
+005258,RAIA DROGASIL,stayed,2017,2018,0.9792,520,553,regex_only,regex_only
+005258,RAIA DROGASIL,stayed,2018,2019,0.1676,553,8158,regex_only,font_heading
+005258,RAIA DROGASIL,stayed,2019,2020,0.6315,8158,25292,font_heading,font_heading
+005258,RAIA DROGASIL,stayed,2020,2021,0.6433,25292,10190,font_heading,font_heading
+005258,RAIA DROGASIL,stayed,2021,2022,0.9068,10190,12138,font_heading,font_heading
+005258,RAIA DROGASIL,stayed,2022,2023,0.772,12138,5541,font_heading,font_heading
+005258,RAIA DROGASIL,stayed,2023,2024,0.7652,5541,14023,font_heading,font_heading
+005410,WEG,stayed,2015,2016,0.9897,2516,2501,font_heading,font_heading
+005410,WEG,stayed,2016,2017,0.9844,2501,2524,font_heading,font_heading
+005410,WEG,stayed,2017,2018,0.9838,2524,2615,font_heading,font_heading
+005410,WEG,stayed,2018,2019,0.9795,2615,2633,font_heading,font_heading
+005410,WEG,stayed,2019,2020,0.969,2633,2695,font_heading,font_heading
+005410,WEG,stayed,2020,2021,0.8906,2695,2214,font_heading,font_heading
+005410,WEG,stayed,2021,2022,0.8947,2214,2482,font_heading,font_heading
+005410,WEG,stayed,2022,2023,0.9751,2482,2322,font_heading,font_heading
+005410,WEG,stayed,2023,2024,0.9083,2322,2484,font_heading,font_heading
+006505,Grupo Casas Bahia S.A. (Via Varejo),dropped_or_delisted,2015,2016,0.8085,3122,3231,font_heading,font_heading
+006505,Grupo Casas Bahia S.A. (Via Varejo),dropped_or_delisted,2016,2017,0.9081,3231,3485,font_heading,font_heading
+006505,Grupo Casas Bahia S.A. (Via Varejo),dropped_or_delisted,2017,2018,0.8403,3485,3880,font_heading,font_heading
+006505,Grupo Casas Bahia S.A. (Via Varejo),dropped_or_delisted,2018,2019,0.7987,3880,6079,font_heading,font_heading
+006505,Grupo Casas Bahia S.A. (Via Varejo),dropped_or_delisted,2019,2020,0.1693,6079,11088,font_heading,regex_only
+006505,Grupo Casas Bahia S.A. (Via Varejo),dropped_or_delisted,2020,2021,0.0756,11088,533,regex_only,font_heading
 006505,Grupo Casas Bahia S.A. (Via Varejo),dropped_or_delisted,2021,2022,1.0,533,533,font_heading,font_heading
-006505,Grupo Casas Bahia S.A. (Via Varejo),dropped_or_delisted,2022,2023,0.2876,533,10433,font_heading,font_heading
-006505,Grupo Casas Bahia S.A. (Via Varejo),dropped_or_delisted,2023,2024,0.5767,10433,9969,font_heading,font_heading
+006505,Grupo Casas Bahia S.A. (Via Varejo),dropped_or_delisted,2022,2023,0.3103,533,10433,font_heading,font_heading
+006505,Grupo Casas Bahia S.A. (Via Varejo),dropped_or_delisted,2023,2024,0.5741,10433,9969,font_heading,font_heading
 008087,Lojas Americanas S.A. (pre-2021 restructuring entity),dropped_or_delisted,2015,2016,1.0,819,819,font_heading,font_heading
-008087,Lojas Americanas S.A. (pre-2021 restructuring entity),dropped_or_delisted,2016,2017,0.0714,819,7903,font_heading,regex_only
-008087,Lojas Americanas S.A. (pre-2021 restructuring entity),dropped_or_delisted,2017,2018,0.8896,7903,6207,regex_only,regex_only
-008087,Lojas Americanas S.A. (pre-2021 restructuring entity),dropped_or_delisted,2018,2019,0.0547,6207,10978,regex_only,font_heading
-008087,Lojas Americanas S.A. (pre-2021 restructuring entity),dropped_or_delisted,2019,2020,0.936,10978,14513,font_heading,font_heading
-008133,LOJAS RENNER,stayed,2015,2016,0.0531,614,3876,font_heading,regex_only
-008133,LOJAS RENNER,stayed,2016,2017,0.0965,3876,3358,regex_only,regex_only
-008133,LOJAS RENNER,stayed,2017,2018,0.0628,3358,433,regex_only,regex_only
-008133,LOJAS RENNER,stayed,2018,2019,0.736,433,647,regex_only,regex_only
-008133,LOJAS RENNER,stayed,2019,2020,0.2726,647,1603,regex_only,regex_only
-008133,LOJAS RENNER,stayed,2020,2021,0.1795,1603,1676,regex_only,regex_only
-008133,LOJAS RENNER,stayed,2021,2022,0.0874,1676,6249,regex_only,font_heading
-008133,LOJAS RENNER,stayed,2022,2023,0.8924,6249,5236,font_heading,font_heading
-008133,LOJAS RENNER,stayed,2023,2024,0.9466,5236,4613,font_heading,font_heading
-009512,PETROBRAS,stayed,2016,2017,0.3043,23145,12295,regex_only,regex_only
-009512,PETROBRAS,stayed,2017,2018,0.8067,12295,12765,regex_only,regex_only
-009512,PETROBRAS,stayed,2018,2021,0.203,12765,19443,regex_only,regex_only
-009512,PETROBRAS,stayed,2021,2022,0.9257,19443,16454,regex_only,regex_only
-009512,PETROBRAS,stayed,2022,2023,0.9246,16454,15791,regex_only,regex_only
-009512,PETROBRAS,stayed,2023,2024,0.872,15791,11850,regex_only,regex_only
-011312,Oi S.A. - Em Recuperação Judicial,dropped_or_delisted,2015,2016,0.8623,454,581,font_heading,font_heading
-011312,Oi S.A. - Em Recuperação Judicial,dropped_or_delisted,2016,2017,0.051,581,826,font_heading,regex_only
-011312,Oi S.A. - Em Recuperação Judicial,dropped_or_delisted,2017,2018,0.1459,826,24910,regex_only,regex_only
-011312,Oi S.A. - Em Recuperação Judicial,dropped_or_delisted,2018,2019,0.1176,24910,987,regex_only,font_heading
-011312,Oi S.A. - Em Recuperação Judicial,dropped_or_delisted,2019,2020,0.7029,987,1600,font_heading,font_heading
+008087,Lojas Americanas S.A. (pre-2021 restructuring entity),dropped_or_delisted,2016,2017,0.0683,819,7885,font_heading,regex_only
+008087,Lojas Americanas S.A. (pre-2021 restructuring entity),dropped_or_delisted,2017,2018,0.8909,7885,6172,regex_only,regex_only
+008087,Lojas Americanas S.A. (pre-2021 restructuring entity),dropped_or_delisted,2018,2019,0.0463,6172,10978,regex_only,font_heading
+008087,Lojas Americanas S.A. (pre-2021 restructuring entity),dropped_or_delisted,2019,2020,0.9334,10978,14513,font_heading,font_heading
+008133,LOJAS RENNER,stayed,2015,2016,0.0593,614,3405,font_heading,regex_only
+008133,LOJAS RENNER,stayed,2016,2017,0.103,3405,6401,regex_only,font_heading
+008133,LOJAS RENNER,stayed,2017,2018,0.6752,6401,4064,font_heading,font_heading
+008133,LOJAS RENNER,stayed,2018,2019,0.0516,4064,647,font_heading,regex_only
+008133,LOJAS RENNER,stayed,2019,2020,0.0516,647,8055,regex_only,font_heading
+008133,LOJAS RENNER,stayed,2020,2021,0.0947,8055,1676,font_heading,regex_only
+008133,LOJAS RENNER,stayed,2021,2022,0.0483,1676,2231,regex_only,font_heading
+008133,LOJAS RENNER,stayed,2022,2023,0.0823,2231,3472,font_heading,font_heading
+008133,LOJAS RENNER,stayed,2023,2024,0.0628,3472,4613,font_heading,font_heading
+008451,MARCOPOLO,stayed,2015,2016,1.0,703,703,font_heading,font_heading
+008451,MARCOPOLO,stayed,2016,2017,1.0,703,703,font_heading,font_heading
+008451,MARCOPOLO,stayed,2017,2018,1.0,703,703,font_heading,font_heading
+008451,MARCOPOLO,stayed,2018,2019,1.0,703,703,font_heading,font_heading
+008451,MARCOPOLO,stayed,2019,2020,1.0,703,703,font_heading,font_heading
+008451,MARCOPOLO,stayed,2020,2021,1.0,703,703,font_heading,font_heading
+008451,MARCOPOLO,stayed,2021,2022,0.9818,703,701,font_heading,font_heading
+008451,MARCOPOLO,stayed,2022,2023,1.0,701,701,font_heading,font_heading
+008451,MARCOPOLO,stayed,2023,2024,1.0,701,701,font_heading,font_heading
+008656,GERDAU MET,stayed,2015,2016,0.8764,8286,6643,font_heading,font_heading
+008656,GERDAU MET,stayed,2016,2017,0.9082,6643,6558,font_heading,font_heading
+008656,GERDAU MET,stayed,2017,2018,0.9204,6558,7916,font_heading,font_heading
+008656,GERDAU MET,stayed,2018,2019,0.8347,7916,6858,font_heading,font_heading
+008656,GERDAU MET,stayed,2019,2021,0.1682,6858,15491,font_heading,regex_only
+008656,GERDAU MET,stayed,2021,2022,0.1364,15491,2538,regex_only,font_heading
+008656,GERDAU MET,stayed,2022,2023,0.8318,2538,1968,font_heading,font_heading
+008656,GERDAU MET,stayed,2023,2024,0.7272,1968,3969,font_heading,font_heading
+008672,IGUATEMI S.A,stayed,2015,2017,0.0364,455,1727,font_heading,font_heading
+008672,IGUATEMI S.A,stayed,2017,2018,0.5266,1727,1879,font_heading,font_heading
+008672,IGUATEMI S.A,stayed,2018,2019,0.9667,1879,1845,font_heading,font_heading
+008672,IGUATEMI S.A,stayed,2019,2021,0.082,1845,10631,font_heading,font_heading
+008672,IGUATEMI S.A,stayed,2021,2022,0.9968,10631,10800,font_heading,font_heading
+008672,IGUATEMI S.A,stayed,2022,2023,0.7553,10800,23133,font_heading,font_heading
+008672,IGUATEMI S.A,stayed,2023,2024,0.9289,23133,19519,font_heading,font_heading
+009512,PETROBRAS,stayed,2016,2017,0.4262,23145,11894,regex_only,regex_only
+009512,PETROBRAS,stayed,2017,2018,0.4707,11894,12765,regex_only,regex_only
+009512,PETROBRAS,stayed,2018,2019,0.1018,12765,172,regex_only,font_heading
+009512,PETROBRAS,stayed,2019,2020,0.2632,172,3255,font_heading,regex_only
+009512,PETROBRAS,stayed,2020,2021,0.1826,3255,11583,regex_only,regex_only
+009512,PETROBRAS,stayed,2021,2022,0.9162,11583,12686,regex_only,regex_only
+009512,PETROBRAS,stayed,2022,2023,0.9443,12686,12535,regex_only,regex_only
+009512,PETROBRAS,stayed,2023,2024,0.8688,12535,14601,regex_only,regex_only
+010456,Alpargatas S.A.,dropped_or_delisted,2015,2016,0.7808,3926,5798,font_heading,font_heading
+010456,Alpargatas S.A.,dropped_or_delisted,2016,2017,0.9193,5798,6834,font_heading,font_heading
+010456,Alpargatas S.A.,dropped_or_delisted,2017,2019,0.8291,6834,5840,font_heading,font_heading
+010456,Alpargatas S.A.,dropped_or_delisted,2019,2020,0.1169,5840,879,font_heading,regex_only
+010456,Alpargatas S.A.,dropped_or_delisted,2020,2021,0.2224,879,1640,regex_only,regex_only
+010456,Alpargatas S.A.,dropped_or_delisted,2021,2022,0.2462,1640,847,regex_only,regex_only
+010456,Alpargatas S.A.,dropped_or_delisted,2022,2023,0.6309,847,574,regex_only,regex_only
+010456,Alpargatas S.A.,dropped_or_delisted,2023,2024,0.1362,574,6831,regex_only,font_heading
+011312,Oi S.A. - Em Recuperação Judicial,dropped_or_delisted,2015,2016,0.8642,454,581,font_heading,font_heading
+011312,Oi S.A. - Em Recuperação Judicial,dropped_or_delisted,2016,2017,0.2413,581,6191,font_heading,font_heading
+011312,Oi S.A. - Em Recuperação Judicial,dropped_or_delisted,2017,2018,0.4525,6191,4472,font_heading,font_heading
+011312,Oi S.A. - Em Recuperação Judicial,dropped_or_delisted,2018,2019,0.1676,4472,987,font_heading,font_heading
+011312,Oi S.A. - Em Recuperação Judicial,dropped_or_delisted,2019,2020,0.7119,987,1600,font_heading,font_heading
 011312,Oi S.A. - Em Recuperação Judicial,dropped_or_delisted,2020,2021,1.0,1600,1600,font_heading,font_heading
-011312,Oi S.A. - Em Recuperação Judicial,dropped_or_delisted,2021,2022,0.7029,1600,984,font_heading,font_heading
-011312,Oi S.A. - Em Recuperação Judicial,dropped_or_delisted,2022,2023,0.9374,984,978,font_heading,font_heading
-011312,Oi S.A. - Em Recuperação Judicial,dropped_or_delisted,2023,2024,0.9747,978,1028,font_heading,font_heading
-012793,Fibria Celulose S.A. (pre-Suzano-merger entity),dropped_or_delisted,2015,2016,0.2502,10601,4301,regex_only,regex_only
-012793,Fibria Celulose S.A. (pre-Suzano-merger entity),dropped_or_delisted,2016,2017,0.9732,4301,4378,regex_only,regex_only
-012793,Fibria Celulose S.A. (pre-Suzano-merger entity),dropped_or_delisted,2017,2018,0.22,4378,10072,regex_only,regex_only
-013986,SUZANO,stayed,2015,2016,0.097,9391,6662,font_heading,regex_only
-013986,SUZANO,stayed,2016,2017,0.0916,6662,7269,regex_only,font_heading
-013986,SUZANO,stayed,2017,2018,0.7027,7269,10630,font_heading,font_heading
-013986,SUZANO,stayed,2018,2019,0.1395,10630,853,font_heading,font_heading
-013986,SUZANO,stayed,2019,2020,0.0837,853,8844,font_heading,regex_only
-013986,SUZANO,stayed,2020,2021,0.7833,8844,12216,regex_only,regex_only
-013986,SUZANO,stayed,2021,2022,0.8886,12216,11836,regex_only,regex_only
-013986,SUZANO,stayed,2022,2023,0.9381,11836,11229,regex_only,regex_only
-013986,SUZANO,stayed,2023,2024,0.1017,11229,14611,regex_only,font_heading
-014176,Eletropaulo Metropolitana Eletricidade de São Paulo S.A.,dropped_or_delisted,2015,2016,0.7181,13345,17680,regex_only,regex_only
-014176,Eletropaulo Metropolitana Eletricidade de São Paulo S.A.,dropped_or_delisted,2016,2017,0.3955,17680,25297,regex_only,regex_only
-014176,Eletropaulo Metropolitana Eletricidade de São Paulo S.A.,dropped_or_delisted,2017,2018,0.1658,25297,24995,regex_only,font_heading
-014176,Eletropaulo Metropolitana Eletricidade de São Paulo S.A.,dropped_or_delisted,2018,2019,0.1604,24995,17198,font_heading,regex_only
-014176,Eletropaulo Metropolitana Eletricidade de São Paulo S.A.,dropped_or_delisted,2019,2020,0.8479,17198,14968,regex_only,regex_only
-014176,Eletropaulo Metropolitana Eletricidade de São Paulo S.A.,dropped_or_delisted,2020,2021,0.0494,14968,226,regex_only,font_heading
-014176,Eletropaulo Metropolitana Eletricidade de São Paulo S.A.,dropped_or_delisted,2021,2022,0.2122,226,18409,font_heading,font_heading
-014176,Eletropaulo Metropolitana Eletricidade de São Paulo S.A.,dropped_or_delisted,2022,2023,0.1855,18409,13122,font_heading,regex_only
-014176,Eletropaulo Metropolitana Eletricidade de São Paulo S.A.,dropped_or_delisted,2023,2024,0.1316,13122,1018,regex_only,regex_only
-014320,USIMINAS,stayed,2015,2016,0.7724,8699,10028,font_heading,font_heading
-014320,USIMINAS,stayed,2016,2017,0.7464,10028,12194,font_heading,font_heading
-014320,USIMINAS,stayed,2017,2018,0.7266,12194,7252,font_heading,font_heading
-014320,USIMINAS,stayed,2018,2019,0.7934,7252,8049,font_heading,font_heading
-014320,USIMINAS,stayed,2019,2020,0.7025,8049,4754,font_heading,font_heading
-014320,USIMINAS,stayed,2020,2021,0.9803,4754,4363,font_heading,font_heading
-014320,USIMINAS,stayed,2021,2022,0.9393,4363,4446,font_heading,font_heading
-014320,USIMINAS,stayed,2022,2023,0.9893,4446,4175,font_heading,font_heading
-014320,USIMINAS,stayed,2023,2024,0.8262,4175,6498,font_heading,font_heading
-014443,SABESP,stayed,2015,2016,0.2712,16266,4650,regex_only,regex_only
-014443,SABESP,stayed,2016,2018,0.6772,4650,6152,regex_only,regex_only
-014443,SABESP,stayed,2018,2019,0.1273,6152,3971,regex_only,regex_only
-014443,SABESP,stayed,2019,2020,0.3441,3971,16704,regex_only,regex_only
-014443,SABESP,stayed,2020,2021,0.2735,16704,4423,regex_only,regex_only
-014443,SABESP,stayed,2021,2022,0.411,4423,4852,regex_only,regex_only
-014443,SABESP,stayed,2022,2023,0.0855,4852,1565,regex_only,font_heading
-014443,SABESP,stayed,2023,2024,1.0,1565,1565,font_heading,font_heading
-014761,Cia Hering,dropped_or_delisted,2015,2017,0.1774,822,14494,font_heading,regex_only
-014761,Cia Hering,dropped_or_delisted,2017,2018,0.9262,14494,12473,regex_only,regex_only
-014761,Cia Hering,dropped_or_delisted,2018,2020,0.8393,12473,16318,regex_only,regex_only
-014826,Companhia Brasileira de Distribuição (GPA),dropped_or_delisted,2015,2016,0.8269,7026,8890,font_heading,font_heading
-014826,Companhia Brasileira de Distribuição (GPA),dropped_or_delisted,2016,2017,0.899,8890,8070,font_heading,font_heading
-014826,Companhia Brasileira de Distribuição (GPA),dropped_or_delisted,2017,2018,0.9052,8070,8590,font_heading,font_heading
-014826,Companhia Brasileira de Distribuição (GPA),dropped_or_delisted,2018,2019,0.1536,8590,6367,font_heading,regex_only
-014826,Companhia Brasileira de Distribuição (GPA),dropped_or_delisted,2019,2020,0.4168,6367,1093,regex_only,regex_only
-014826,Companhia Brasileira de Distribuição (GPA),dropped_or_delisted,2020,2021,0.0761,1093,6845,regex_only,font_heading
-014826,Companhia Brasileira de Distribuição (GPA),dropped_or_delisted,2021,2022,0.9454,6845,7065,font_heading,font_heading
-014826,Companhia Brasileira de Distribuição (GPA),dropped_or_delisted,2022,2024,0.1432,7065,14904,font_heading,regex_only
-016101,Gafisa S.A.,dropped_or_delisted,2015,2016,0.8999,9999,9460,font_heading,font_heading
-016101,Gafisa S.A.,dropped_or_delisted,2016,2017,0.9214,9460,9321,font_heading,font_heading
-016101,Gafisa S.A.,dropped_or_delisted,2017,2018,0.9204,9321,10509,font_heading,font_heading
-016101,Gafisa S.A.,dropped_or_delisted,2018,2019,0.9273,10509,7976,font_heading,font_heading
-016101,Gafisa S.A.,dropped_or_delisted,2019,2020,0.9205,7976,9382,font_heading,font_heading
-016101,Gafisa S.A.,dropped_or_delisted,2020,2021,0.9258,9382,9858,font_heading,font_heading
-016101,Gafisa S.A.,dropped_or_delisted,2021,2022,0.891,9858,8175,font_heading,font_heading
-016101,Gafisa S.A.,dropped_or_delisted,2022,2023,0.8883,8175,8508,font_heading,font_heading
-016101,Gafisa S.A.,dropped_or_delisted,2023,2024,0.1705,8508,1659,font_heading,regex_only
-016292,BRF S.A.,dropped_or_delisted,2015,2016,0.0444,18236,689,regex_only,regex_only
-016292,BRF S.A.,dropped_or_delisted,2016,2017,0.8717,689,1305,regex_only,regex_only
-016292,BRF S.A.,dropped_or_delisted,2017,2018,0.0809,1305,10115,regex_only,regex_only
-016292,BRF S.A.,dropped_or_delisted,2018,2019,0.2054,10115,4500,regex_only,regex_only
-016292,BRF S.A.,dropped_or_delisted,2019,2020,0.8558,4500,4833,regex_only,regex_only
-016292,BRF S.A.,dropped_or_delisted,2020,2021,0.8336,4833,5457,regex_only,regex_only
-016292,BRF S.A.,dropped_or_delisted,2021,2022,0.8342,5457,4879,regex_only,regex_only
-016292,BRF S.A.,dropped_or_delisted,2022,2023,0.0903,4879,7521,regex_only,font_heading
-016292,BRF S.A.,dropped_or_delisted,2023,2024,0.9479,7521,7917,font_heading,font_heading
-016306,Rossi Residencial S.A. - Em Recuperação Judicial,dropped_or_delisted,2015,2016,0.4262,9179,4700,regex_only,regex_only
-016306,Rossi Residencial S.A. - Em Recuperação Judicial,dropped_or_delisted,2016,2017,0.9183,4700,5878,regex_only,regex_only
-016306,Rossi Residencial S.A. - Em Recuperação Judicial,dropped_or_delisted,2017,2018,0.899,5878,4872,regex_only,regex_only
-016306,Rossi Residencial S.A. - Em Recuperação Judicial,dropped_or_delisted,2018,2020,0.8215,4872,4765,regex_only,regex_only
-016306,Rossi Residencial S.A. - Em Recuperação Judicial,dropped_or_delisted,2020,2021,0.8075,4765,6995,regex_only,regex_only
-016306,Rossi Residencial S.A. - Em Recuperação Judicial,dropped_or_delisted,2021,2022,0.029,6995,592,regex_only,font_heading
-016306,Rossi Residencial S.A. - Em Recuperação Judicial,dropped_or_delisted,2022,2023,0.7271,592,532,font_heading,font_heading
-016306,Rossi Residencial S.A. - Em Recuperação Judicial,dropped_or_delisted,2023,2024,0.2426,532,4224,font_heading,font_heading
-017671,TELEFONICA BRASIL,stayed,2015,2016,0.8252,11820,16072,regex_only,regex_only
-017671,TELEFONICA BRASIL,stayed,2016,2017,0.8443,16072,11862,regex_only,regex_only
-017671,TELEFONICA BRASIL,stayed,2017,2018,0.884,11862,16987,regex_only,regex_only
-017671,TELEFONICA BRASIL,stayed,2018,2019,0.8782,16987,13356,regex_only,regex_only
-017671,TELEFONICA BRASIL,stayed,2019,2020,0.6324,13356,22047,regex_only,regex_only
-017671,TELEFONICA BRASIL,stayed,2020,2021,0.3159,22047,6982,regex_only,font_heading
-017671,TELEFONICA BRASIL,stayed,2021,2022,0.2072,6982,7331,font_heading,regex_only
-017671,TELEFONICA BRASIL,stayed,2022,2023,0.5264,7331,4356,regex_only,regex_only
-017671,TELEFONICA BRASIL,stayed,2023,2024,0.5564,4356,14477,regex_only,regex_only
-017914,Massa Falida da MMX Mineração e Metálicos S.A.,dropped_or_delisted,2015,2016,0.023,1008,296,font_heading,font_heading
-017914,Massa Falida da MMX Mineração e Metálicos S.A.,dropped_or_delisted,2016,2018,0.3634,296,355,font_heading,font_heading
-017914,Massa Falida da MMX Mineração e Metálicos S.A.,dropped_or_delisted,2018,2019,0.0332,355,7939,font_heading,regex_only
-017914,Massa Falida da MMX Mineração e Metálicos S.A.,dropped_or_delisted,2019,2020,0.8516,7939,9328,regex_only,regex_only
-019453,Ecorodovias Infraestrutura e Logística S.A.,dropped_or_delisted,2015,2016,0.9541,21893,21501,font_heading,font_heading
-019453,Ecorodovias Infraestrutura e Logística S.A.,dropped_or_delisted,2016,2017,0.5894,21501,32671,font_heading,font_heading
-019453,Ecorodovias Infraestrutura e Logística S.A.,dropped_or_delisted,2017,2018,0.1958,32671,8947,font_heading,regex_only
-019453,Ecorodovias Infraestrutura e Logística S.A.,dropped_or_delisted,2018,2019,0.8939,8947,8739,regex_only,regex_only
-019453,Ecorodovias Infraestrutura e Logística S.A.,dropped_or_delisted,2019,2020,0.9202,8739,9459,regex_only,regex_only
-019453,Ecorodovias Infraestrutura e Logística S.A.,dropped_or_delisted,2020,2022,0.2484,9459,27845,regex_only,font_heading
-019453,Ecorodovias Infraestrutura e Logística S.A.,dropped_or_delisted,2022,2023,0.2703,27845,10569,font_heading,regex_only
-019453,Ecorodovias Infraestrutura e Logística S.A.,dropped_or_delisted,2023,2024,0.5679,10569,17013,regex_only,regex_only
-019569,Gol Linhas Aéreas Inteligentes S.A.,dropped_or_delisted,2015,2016,0.0591,8084,6087,regex_only,font_heading
-019569,Gol Linhas Aéreas Inteligentes S.A.,dropped_or_delisted,2016,2017,0.8705,6087,15564,font_heading,font_heading
-019569,Gol Linhas Aéreas Inteligentes S.A.,dropped_or_delisted,2017,2018,0.8768,15564,15388,font_heading,font_heading
-019569,Gol Linhas Aéreas Inteligentes S.A.,dropped_or_delisted,2018,2019,0.0574,15388,448,font_heading,font_heading
-019569,Gol Linhas Aéreas Inteligentes S.A.,dropped_or_delisted,2019,2020,0.7489,448,857,font_heading,font_heading
-019569,Gol Linhas Aéreas Inteligentes S.A.,dropped_or_delisted,2020,2021,0.9921,857,865,font_heading,font_heading
-019569,Gol Linhas Aéreas Inteligentes S.A.,dropped_or_delisted,2021,2022,0.2101,865,15643,font_heading,font_heading
-019569,Gol Linhas Aéreas Inteligentes S.A.,dropped_or_delisted,2022,2023,0.2101,15643,868,font_heading,font_heading
-019569,Gol Linhas Aéreas Inteligentes S.A.,dropped_or_delisted,2023,2024,1.0,868,865,font_heading,font_heading
-019623,Diagnósticos da América S.A. (Dasa),dropped_or_delisted,2015,2016,0.9397,14621,15689,font_heading,font_heading
-019623,Diagnósticos da América S.A. (Dasa),dropped_or_delisted,2016,2017,0.5744,15689,7299,font_heading,font_heading
-019623,Diagnósticos da América S.A. (Dasa),dropped_or_delisted,2017,2018,0.751,7299,4634,font_heading,font_heading
-019623,Diagnósticos da América S.A. (Dasa),dropped_or_delisted,2018,2019,0.8949,4634,3530,font_heading,font_heading
-019623,Diagnósticos da América S.A. (Dasa),dropped_or_delisted,2019,2020,0.9128,3530,5414,font_heading,font_heading
-019623,Diagnósticos da América S.A. (Dasa),dropped_or_delisted,2020,2021,0.7347,5414,9547,font_heading,font_heading
-019623,Diagnósticos da América S.A. (Dasa),dropped_or_delisted,2021,2022,0.8191,9547,5936,font_heading,font_heading
-019623,Diagnósticos da América S.A. (Dasa),dropped_or_delisted,2022,2023,0.426,5936,1547,font_heading,font_heading
-019623,Diagnósticos da América S.A. (Dasa),dropped_or_delisted,2023,2024,0.2625,1547,10077,font_heading,font_heading
-019739,LOCALIZA,stayed,2015,2016,0.1979,23955,5377,regex_only,regex_only
-019739,LOCALIZA,stayed,2016,2017,0.8821,5377,5260,regex_only,regex_only
-019739,LOCALIZA,stayed,2017,2018,0.9917,5260,5706,regex_only,regex_only
-019739,LOCALIZA,stayed,2018,2019,0.9699,5706,6588,regex_only,regex_only
-019739,LOCALIZA,stayed,2019,2020,0.0944,6588,10470,regex_only,font_heading
-019739,LOCALIZA,stayed,2020,2021,0.9787,10470,11718,font_heading,font_heading
-019739,LOCALIZA,stayed,2021,2022,0.7837,11718,22520,font_heading,font_heading
-019739,LOCALIZA,stayed,2022,2023,0.9417,22520,24362,font_heading,font_heading
-019739,LOCALIZA,stayed,2023,2024,0.4893,24362,4867,font_heading,regex_only
-019763,EDP Energias do Brasil S/A,dropped_or_delisted,2015,2016,0.9899,934,835,font_heading,font_heading
-019763,EDP Energias do Brasil S/A,dropped_or_delisted,2016,2017,0.9486,835,558,font_heading,font_heading
-019763,EDP Energias do Brasil S/A,dropped_or_delisted,2017,2018,1.0,558,596,font_heading,font_heading
-019763,EDP Energias do Brasil S/A,dropped_or_delisted,2018,2019,0.9626,596,559,font_heading,font_heading
-019763,EDP Energias do Brasil S/A,dropped_or_delisted,2019,2020,0.9803,559,628,font_heading,font_heading
-019763,EDP Energias do Brasil S/A,dropped_or_delisted,2020,2021,0.9459,628,724,font_heading,font_heading
-019763,EDP Energias do Brasil S/A,dropped_or_delisted,2021,2022,0.9459,724,689,font_heading,font_heading
-019763,EDP Energias do Brasil S/A,dropped_or_delisted,2022,2023,0.9602,689,762,font_heading,font_heading
-019763,EDP Energias do Brasil S/A,dropped_or_delisted,2023,2024,1.0,762,643,font_heading,font_heading
-019879,Light S.A. - Em Recuperação Judicial,dropped_or_delisted,2017,2018,0.3626,14233,30379,regex_only,font_heading
-019879,Light S.A. - Em Recuperação Judicial,dropped_or_delisted,2018,2019,0.9927,30379,27401,font_heading,font_heading
-019879,Light S.A. - Em Recuperação Judicial,dropped_or_delisted,2019,2021,0.9739,27401,11805,font_heading,font_heading
-019879,Light S.A. - Em Recuperação Judicial,dropped_or_delisted,2021,2022,0.1314,11805,6173,font_heading,regex_only
-019879,Light S.A. - Em Recuperação Judicial,dropped_or_delisted,2022,2023,0.1343,6173,7503,regex_only,font_heading
-019879,Light S.A. - Em Recuperação Judicial,dropped_or_delisted,2023,2024,0.8374,7503,2805,font_heading,font_heading
-019909,BR Malls Participações S.A.,dropped_or_delisted,2015,2016,0.8756,5575,5469,regex_only,regex_only
-019909,BR Malls Participações S.A.,dropped_or_delisted,2016,2017,0.4112,5469,5352,regex_only,regex_only
-019909,BR Malls Participações S.A.,dropped_or_delisted,2017,2019,0.0638,5352,991,regex_only,font_heading
-019909,BR Malls Participações S.A.,dropped_or_delisted,2019,2020,0.4084,991,1505,font_heading,font_heading
-019909,BR Malls Participações S.A.,dropped_or_delisted,2020,2021,0.1486,1505,5319,font_heading,font_heading
-019909,BR Malls Participações S.A.,dropped_or_delisted,2021,2022,0.8057,5319,5606,font_heading,font_heading
-019909,BR Malls Participações S.A.,dropped_or_delisted,2022,2023,0.8182,5606,4244,font_heading,font_heading
-019909,BR Malls Participações S.A.,dropped_or_delisted,2023,2024,0.1837,4244,9392,font_heading,regex_only
-019925,BR Properties S.A.,dropped_or_delisted,2015,2016,0.7245,6506,15592,font_heading,font_heading
-019925,BR Properties S.A.,dropped_or_delisted,2016,2017,0.9287,15592,12223,font_heading,font_heading
-019925,BR Properties S.A.,dropped_or_delisted,2017,2018,0.6887,12223,11005,font_heading,font_heading
-019925,BR Properties S.A.,dropped_or_delisted,2018,2019,0.9683,11005,11809,font_heading,font_heading
-019925,BR Properties S.A.,dropped_or_delisted,2019,2020,0.9008,11809,12403,font_heading,font_heading
-019925,BR Properties S.A.,dropped_or_delisted,2020,2021,0.978,12403,14446,font_heading,font_heading
-019925,BR Properties S.A.,dropped_or_delisted,2021,2022,0.5469,14446,7339,font_heading,font_heading
-019992,TOTVS,stayed,2015,2016,0.924,6249,6499,font_heading,font_heading
-019992,TOTVS,stayed,2016,2017,0.8802,6499,6265,font_heading,font_heading
-019992,TOTVS,stayed,2017,2018,0.9399,6265,5505,font_heading,font_heading
-019992,TOTVS,stayed,2018,2019,0.894,5505,5432,font_heading,font_heading
-019992,TOTVS,stayed,2019,2020,0.239,5432,13441,font_heading,regex_only
-019992,TOTVS,stayed,2020,2021,0.2994,13441,10375,regex_only,regex_only
-019992,TOTVS,stayed,2021,2022,0.2479,10375,9112,regex_only,regex_only
-019992,TOTVS,stayed,2022,2023,0.8953,9112,8784,regex_only,regex_only
-019992,TOTVS,stayed,2023,2024,0.9716,8784,8692,regex_only,regex_only
-020087,EMBRAER,stayed,2016,2017,0.8914,13199,11464,regex_only,regex_only
-020087,EMBRAER,stayed,2017,2019,0.5628,11464,14862,regex_only,regex_only
-020087,EMBRAER,stayed,2019,2021,0.106,14862,18619,regex_only,regex_only
-020087,EMBRAER,stayed,2021,2023,0.0843,18619,5696,regex_only,font_heading
-020087,EMBRAER,stayed,2023,2024,0.6609,5696,4372,font_heading,font_heading
-020478,PDG Realty S.A. Empreendimentos e Participações,dropped_or_delisted,2015,2016,0.529,2925,14388,font_heading,font_heading
-020478,PDG Realty S.A. Empreendimentos e Participações,dropped_or_delisted,2016,2017,0.851,14388,12479,font_heading,font_heading
-020478,PDG Realty S.A. Empreendimentos e Participações,dropped_or_delisted,2017,2018,0.0955,12479,1862,font_heading,regex_only
-020478,PDG Realty S.A. Empreendimentos e Participações,dropped_or_delisted,2018,2019,0.8485,1862,2566,regex_only,regex_only
-020478,PDG Realty S.A. Empreendimentos e Participações,dropped_or_delisted,2019,2020,0.5063,2566,5103,regex_only,regex_only
-020478,PDG Realty S.A. Empreendimentos e Participações,dropped_or_delisted,2020,2021,0.4456,5103,1127,regex_only,regex_only
-020478,PDG Realty S.A. Empreendimentos e Participações,dropped_or_delisted,2021,2022,0.3962,1127,2405,regex_only,regex_only
-020478,PDG Realty S.A. Empreendimentos e Participações,dropped_or_delisted,2022,2023,0.2766,2405,3332,regex_only,regex_only
-020478,PDG Realty S.A. Empreendimentos e Participações,dropped_or_delisted,2023,2024,0.2368,3332,2258,regex_only,regex_only
-020494,Iguatemi Empresa de Shopping Centers S/A (pre-restructuring entity),dropped_or_delisted,2015,2016,0.9743,23831,22208,font_heading,font_heading
-020494,Iguatemi Empresa de Shopping Centers S/A (pre-restructuring entity),dropped_or_delisted,2016,2017,0.8553,22208,18088,font_heading,font_heading
-020494,Iguatemi Empresa de Shopping Centers S/A (pre-restructuring entity),dropped_or_delisted,2017,2018,0.9233,18088,19235,font_heading,font_heading
-020494,Iguatemi Empresa de Shopping Centers S/A (pre-restructuring entity),dropped_or_delisted,2018,2021,0.8959,19235,22155,font_heading,font_heading
-020494,Iguatemi Empresa de Shopping Centers S/A (pre-restructuring entity),dropped_or_delisted,2021,2022,0.1939,22155,6659,font_heading,regex_only
-020494,Iguatemi Empresa de Shopping Centers S/A (pre-restructuring entity),dropped_or_delisted,2022,2023,0.9255,6659,7269,regex_only,regex_only
-020494,Iguatemi Empresa de Shopping Centers S/A (pre-restructuring entity),dropped_or_delisted,2023,2024,0.9363,7269,6035,regex_only,regex_only
-020524,Even Construtora e Incorporadora S/A,dropped_or_delisted,2015,2016,0.9878,8254,8321,regex_only,regex_only
-020524,Even Construtora e Incorporadora S/A,dropped_or_delisted,2016,2017,0.0642,8321,8175,regex_only,regex_only
-020524,Even Construtora e Incorporadora S/A,dropped_or_delisted,2017,2018,0.0627,8175,5385,regex_only,regex_only
-020524,Even Construtora e Incorporadora S/A,dropped_or_delisted,2018,2019,0.1154,5385,9952,regex_only,regex_only
-020524,Even Construtora e Incorporadora S/A,dropped_or_delisted,2019,2020,0.0675,9952,4582,regex_only,regex_only
-020524,Even Construtora e Incorporadora S/A,dropped_or_delisted,2020,2021,0.4398,4582,4366,regex_only,regex_only
-020524,Even Construtora e Incorporadora S/A,dropped_or_delisted,2021,2022,0.8871,4366,6542,regex_only,regex_only
-020524,Even Construtora e Incorporadora S/A,dropped_or_delisted,2022,2023,0.0927,6542,3659,regex_only,font_heading
-020524,Even Construtora e Incorporadora S/A,dropped_or_delisted,2023,2024,0.1474,3659,983,font_heading,font_heading
-020605,JHSF Participações S.A.,dropped_or_delisted,2015,2016,0.9487,2678,2137,regex_only,regex_only
-020605,JHSF Participações S.A.,dropped_or_delisted,2016,2017,0.9664,2137,1857,regex_only,regex_only
-020605,JHSF Participações S.A.,dropped_or_delisted,2017,2019,0.9803,1857,2011,regex_only,regex_only
-020605,JHSF Participações S.A.,dropped_or_delisted,2019,2020,0.4407,2011,3021,regex_only,regex_only
-020605,JHSF Participações S.A.,dropped_or_delisted,2020,2021,0.1369,3021,5532,regex_only,regex_only
-020605,JHSF Participações S.A.,dropped_or_delisted,2021,2023,0.159,5532,4764,regex_only,regex_only
-020605,JHSF Participações S.A.,dropped_or_delisted,2023,2024,0.1681,4764,5959,regex_only,regex_only
-020770,EZ Tec Empreendimentos e Participações S/A,dropped_or_delisted,2015,2016,1.0,140,126,regex_only,regex_only
-020770,EZ Tec Empreendimentos e Participações S/A,dropped_or_delisted,2016,2017,1.0,126,113,regex_only,regex_only
-020770,EZ Tec Empreendimentos e Participações S/A,dropped_or_delisted,2017,2018,0.0653,113,4979,regex_only,regex_only
-020770,EZ Tec Empreendimentos e Participações S/A,dropped_or_delisted,2018,2019,0.1231,4979,476,regex_only,regex_only
-020770,EZ Tec Empreendimentos e Participações S/A,dropped_or_delisted,2019,2021,0.0483,476,2727,regex_only,regex_only
-020770,EZ Tec Empreendimentos e Participações S/A,dropped_or_delisted,2021,2022,0.0281,2727,504,regex_only,regex_only
-020770,EZ Tec Empreendimentos e Participações S/A,dropped_or_delisted,2022,2023,0.2685,504,185,regex_only,regex_only
-020770,EZ Tec Empreendimentos e Participações S/A,dropped_or_delisted,2023,2024,0.0879,185,3040,regex_only,regex_only
-020788,MARFRIG,stayed,2015,2016,0.8831,15187,15988,regex_only,regex_only
-020788,MARFRIG,stayed,2016,2017,0.2116,15988,2492,regex_only,regex_only
-020788,MARFRIG,stayed,2017,2019,0.4231,2492,1014,regex_only,regex_only
-020788,MARFRIG,stayed,2019,2020,0.317,1014,4600,regex_only,regex_only
-020788,MARFRIG,stayed,2020,2021,0.1791,4600,5575,regex_only,regex_only
-020788,MARFRIG,stayed,2021,2022,0.2953,5575,5573,regex_only,regex_only
-020788,MARFRIG,stayed,2022,2023,0.2169,5573,2403,regex_only,regex_only
-020788,MARFRIG,stayed,2023,2024,0.2315,2403,603,regex_only,regex_only
-020915,MRV,stayed,2015,2016,0.7633,5979,7654,regex_only,regex_only
-020915,MRV,stayed,2016,2017,0.8043,7654,5438,regex_only,regex_only
-020915,MRV,stayed,2017,2018,0.6323,5438,3362,regex_only,regex_only
-020915,MRV,stayed,2018,2019,0.1416,3362,12970,regex_only,regex_only
-020915,MRV,stayed,2019,2021,0.1595,12970,19037,regex_only,font_heading
-020915,MRV,stayed,2021,2022,0.7729,19037,21706,font_heading,font_heading
-020915,MRV,stayed,2022,2023,0.9798,21706,22888,font_heading,font_heading
-020915,MRV,stayed,2023,2024,0.9724,22888,21203,font_heading,font_heading
+011312,Oi S.A. - Em Recuperação Judicial,dropped_or_delisted,2021,2022,0.7119,1600,984,font_heading,font_heading
+011312,Oi S.A. - Em Recuperação Judicial,dropped_or_delisted,2022,2023,0.9443,984,978,font_heading,font_heading
+011312,Oi S.A. - Em Recuperação Judicial,dropped_or_delisted,2023,2024,0.9608,978,1028,font_heading,font_heading
+012653,KLABIN S/A,stayed,2015,2016,0.915,11782,13303,font_heading,font_heading
+012653,KLABIN S/A,stayed,2016,2017,0.0535,13303,1166,font_heading,regex_only
+012653,KLABIN S/A,stayed,2017,2018,0.4625,1166,7677,regex_only,regex_only
+012653,KLABIN S/A,stayed,2018,2019,0.8356,7677,8121,regex_only,regex_only
+012653,KLABIN S/A,stayed,2019,2020,0.7877,8121,11643,regex_only,regex_only
+012653,KLABIN S/A,stayed,2020,2021,0.2332,11643,19829,regex_only,font_heading
+012653,KLABIN S/A,stayed,2021,2022,0.8404,19829,22209,font_heading,font_heading
+012653,KLABIN S/A,stayed,2022,2023,0.4937,22209,2909,font_heading,font_heading
+012653,KLABIN S/A,stayed,2023,2024,0.8358,2909,2496,font_heading,font_heading
+012793,Fibria Celulose S.A. (pre-Suzano-merger entity),dropped_or_delisted,2015,2016,0.2553,10601,4301,regex_only,regex_only
+012793,Fibria Celulose S.A. (pre-Suzano-merger entity),dropped_or_delisted,2016,2017,0.9743,4301,4378,regex_only,regex_only
+012793,Fibria Celulose S.A. (pre-Suzano-merger entity),dropped_or_delisted,2017,2018,0.2229,4378,10072,regex_only,regex_only
+013986,SUZANO,stayed,2015,2016,0.0995,9391,6662,font_heading,regex_only
+013986,SUZANO,stayed,2016,2017,0.0929,6662,7269,regex_only,font_heading
+013986,SUZANO,stayed,2017,2018,0.6995,7269,10630,font_heading,font_heading
+013986,SUZANO,stayed,2018,2019,0.1538,10630,853,font_heading,font_heading
+013986,SUZANO,stayed,2019,2020,0.0826,853,8844,font_heading,regex_only
+013986,SUZANO,stayed,2020,2021,0.7835,8844,12216,regex_only,regex_only
+013986,SUZANO,stayed,2021,2022,0.89,12216,11836,regex_only,regex_only
+013986,SUZANO,stayed,2022,2023,0.9376,11836,11229,regex_only,regex_only
+013986,SUZANO,stayed,2023,2024,0.1822,11229,4120,regex_only,font_heading
+014176,Eletropaulo Metropolitana Eletricidade de São Paulo S.A.,dropped_or_delisted,2015,2016,0.6824,13345,17680,regex_only,regex_only
+014176,Eletropaulo Metropolitana Eletricidade de São Paulo S.A.,dropped_or_delisted,2016,2017,0.3749,17680,25297,regex_only,regex_only
+014176,Eletropaulo Metropolitana Eletricidade de São Paulo S.A.,dropped_or_delisted,2017,2018,0.1643,25297,24995,regex_only,font_heading
+014176,Eletropaulo Metropolitana Eletricidade de São Paulo S.A.,dropped_or_delisted,2018,2019,0.1605,24995,17198,font_heading,regex_only
+014176,Eletropaulo Metropolitana Eletricidade de São Paulo S.A.,dropped_or_delisted,2019,2020,0.8471,17198,14968,regex_only,regex_only
+014176,Eletropaulo Metropolitana Eletricidade de São Paulo S.A.,dropped_or_delisted,2020,2021,0.0481,14968,226,regex_only,font_heading
+014176,Eletropaulo Metropolitana Eletricidade de São Paulo S.A.,dropped_or_delisted,2021,2022,0.2039,226,18409,font_heading,font_heading
+014176,Eletropaulo Metropolitana Eletricidade de São Paulo S.A.,dropped_or_delisted,2022,2023,0.9069,18409,22117,font_heading,font_heading
+014176,Eletropaulo Metropolitana Eletricidade de São Paulo S.A.,dropped_or_delisted,2023,2024,0.5732,22117,15608,font_heading,font_heading
+014311,COPEL,stayed,2015,2016,0.458,17420,17398,font_heading,regex_only
+014311,COPEL,stayed,2016,2017,0.8724,17398,19354,regex_only,regex_only
+014311,COPEL,stayed,2017,2018,0.4815,19354,22622,regex_only,font_heading
+014311,COPEL,stayed,2018,2019,0.8712,22622,21372,font_heading,font_heading
+014311,COPEL,stayed,2019,2020,0.9701,21372,20763,font_heading,font_heading
+014311,COPEL,stayed,2020,2021,0.9607,20763,21909,font_heading,font_heading
+014311,COPEL,stayed,2021,2023,0.9262,21909,25112,font_heading,font_heading
+014311,COPEL,stayed,2023,2024,0.4435,25112,2548,font_heading,font_heading
+014320,USIMINAS,stayed,2015,2016,0.7538,8699,10028,font_heading,font_heading
+014320,USIMINAS,stayed,2016,2017,0.7355,10028,12194,font_heading,font_heading
+014320,USIMINAS,stayed,2017,2018,0.7026,12194,7252,font_heading,font_heading
+014320,USIMINAS,stayed,2018,2019,0.7877,7252,8049,font_heading,font_heading
+014320,USIMINAS,stayed,2019,2020,0.6984,8049,4754,font_heading,font_heading
+014320,USIMINAS,stayed,2020,2021,0.9812,4754,4363,font_heading,font_heading
+014320,USIMINAS,stayed,2021,2022,0.9406,4363,4446,font_heading,font_heading
+014320,USIMINAS,stayed,2022,2023,0.9894,4446,4175,font_heading,font_heading
+014320,USIMINAS,stayed,2023,2024,0.8265,4175,6498,font_heading,font_heading
+014443,SABESP,stayed,2015,2016,0.2638,17142,4650,regex_only,regex_only
+014443,SABESP,stayed,2016,2017,0.2426,4650,39928,regex_only,regex_only
+014443,SABESP,stayed,2017,2018,0.0223,39928,87,regex_only,regex_only
+014443,SABESP,stayed,2018,2019,0.0417,87,3971,regex_only,regex_only
+014443,SABESP,stayed,2019,2020,0.3325,3971,16704,regex_only,regex_only
+014443,SABESP,stayed,2020,2021,0.1407,16704,1827,regex_only,regex_only
+014443,SABESP,stayed,2021,2022,0.1235,1827,4852,regex_only,regex_only
+014443,SABESP,stayed,2022,2023,0.0836,4852,1565,regex_only,font_heading
+014443,SABESP,stayed,2023,2024,0.045,1565,590,font_heading,font_heading
+014460,CYRELA REALT,stayed,2015,2016,0.3758,98953,8306,font_heading,font_heading
+014460,CYRELA REALT,stayed,2016,2017,0.7649,8306,6450,font_heading,font_heading
+014460,CYRELA REALT,stayed,2017,2018,0.7162,6450,7697,font_heading,font_heading
+014460,CYRELA REALT,stayed,2018,2019,0.9563,7697,7233,font_heading,font_heading
+014460,CYRELA REALT,stayed,2019,2020,0.1361,7233,8375,font_heading,regex_only
+014460,CYRELA REALT,stayed,2020,2021,0.8654,8375,7038,regex_only,regex_only
+014460,CYRELA REALT,stayed,2021,2022,0.9576,7038,7433,regex_only,regex_only
+014460,CYRELA REALT,stayed,2022,2023,0.042,7433,628,regex_only,font_heading
+014460,CYRELA REALT,stayed,2023,2024,0.0407,628,7813,font_heading,regex_only
+014761,Cia Hering,dropped_or_delisted,2015,2017,0.1751,822,14494,font_heading,regex_only
+014761,Cia Hering,dropped_or_delisted,2017,2018,0.9247,14494,12473,regex_only,regex_only
+014761,Cia Hering,dropped_or_delisted,2018,2020,0.8391,12473,16318,regex_only,regex_only
+014826,Companhia Brasileira de Distribuição (GPA),dropped_or_delisted,2015,2016,0.8257,7026,8890,font_heading,font_heading
+014826,Companhia Brasileira de Distribuição (GPA),dropped_or_delisted,2016,2017,0.8972,8890,8070,font_heading,font_heading
+014826,Companhia Brasileira de Distribuição (GPA),dropped_or_delisted,2017,2018,0.8987,8070,8590,font_heading,font_heading
+014826,Companhia Brasileira de Distribuição (GPA),dropped_or_delisted,2018,2019,0.1482,8590,6367,font_heading,regex_only
+014826,Companhia Brasileira de Distribuição (GPA),dropped_or_delisted,2019,2020,0.3999,6367,1093,regex_only,regex_only
+014826,Companhia Brasileira de Distribuição (GPA),dropped_or_delisted,2020,2021,0.0805,1093,6845,regex_only,font_heading
+014826,Companhia Brasileira de Distribuição (GPA),dropped_or_delisted,2021,2022,0.9408,6845,7065,font_heading,font_heading
+014826,Companhia Brasileira de Distribuição (GPA),dropped_or_delisted,2022,2024,0.1369,7065,14904,font_heading,regex_only
+015253,ENERGISA,stayed,2015,2016,0.9726,34472,34892,font_heading,font_heading
+015253,ENERGISA,stayed,2016,2017,0.94,34892,39827,font_heading,font_heading
+015253,ENERGISA,stayed,2017,2018,0.9394,39827,34264,font_heading,font_heading
+015253,ENERGISA,stayed,2018,2019,0.4476,34264,12980,font_heading,font_heading
+015253,ENERGISA,stayed,2019,2020,0.7642,12980,16257,font_heading,font_heading
+015253,ENERGISA,stayed,2020,2021,0.958,16257,16193,font_heading,font_heading
+015253,ENERGISA,stayed,2021,2022,0.9393,16193,19696,font_heading,font_heading
+015253,ENERGISA,stayed,2022,2023,0.8316,19696,18983,font_heading,font_heading
+015253,ENERGISA,stayed,2023,2024,0.9317,18983,17850,font_heading,font_heading
+016101,Gafisa S.A.,dropped_or_delisted,2015,2016,0.8982,9999,9460,font_heading,font_heading
+016101,Gafisa S.A.,dropped_or_delisted,2016,2017,0.9208,9460,9321,font_heading,font_heading
+016101,Gafisa S.A.,dropped_or_delisted,2017,2018,0.9183,9321,10509,font_heading,font_heading
+016101,Gafisa S.A.,dropped_or_delisted,2018,2019,0.9225,10509,7976,font_heading,font_heading
+016101,Gafisa S.A.,dropped_or_delisted,2019,2020,0.9197,7976,9382,font_heading,font_heading
+016101,Gafisa S.A.,dropped_or_delisted,2020,2021,0.9204,9382,9858,font_heading,font_heading
+016101,Gafisa S.A.,dropped_or_delisted,2021,2022,0.8882,9858,8175,font_heading,font_heading
+016101,Gafisa S.A.,dropped_or_delisted,2022,2023,0.8837,8175,8508,font_heading,font_heading
+016101,Gafisa S.A.,dropped_or_delisted,2023,2024,0.046,8508,150,font_heading,regex_only
+016292,BRF S.A.,dropped_or_delisted,2015,2016,0.0429,14058,689,font_heading,regex_only
+016292,BRF S.A.,dropped_or_delisted,2016,2017,0.8641,689,1305,regex_only,regex_only
+016292,BRF S.A.,dropped_or_delisted,2017,2018,0.0578,1305,21724,regex_only,font_heading
+016292,BRF S.A.,dropped_or_delisted,2018,2019,0.1233,21724,578,font_heading,font_heading
+016292,BRF S.A.,dropped_or_delisted,2019,2020,0.0846,578,4833,font_heading,regex_only
+016292,BRF S.A.,dropped_or_delisted,2020,2021,0.8307,4833,5457,regex_only,regex_only
+016292,BRF S.A.,dropped_or_delisted,2021,2022,0.8403,5457,4879,regex_only,regex_only
+016292,BRF S.A.,dropped_or_delisted,2022,2023,0.0885,4879,7521,regex_only,font_heading
+016292,BRF S.A.,dropped_or_delisted,2023,2024,0.9456,7521,7917,font_heading,font_heading
+016306,Rossi Residencial S.A. - Em Recuperação Judicial,dropped_or_delisted,2015,2016,0.2094,7447,2722,font_heading,font_heading
+016306,Rossi Residencial S.A. - Em Recuperação Judicial,dropped_or_delisted,2016,2017,0.1749,2722,5799,font_heading,regex_only
+016306,Rossi Residencial S.A. - Em Recuperação Judicial,dropped_or_delisted,2017,2018,0.9062,5799,4872,regex_only,regex_only
+016306,Rossi Residencial S.A. - Em Recuperação Judicial,dropped_or_delisted,2018,2020,0.8585,4872,4765,regex_only,regex_only
+016306,Rossi Residencial S.A. - Em Recuperação Judicial,dropped_or_delisted,2020,2021,0.1295,4765,6777,regex_only,font_heading
+016306,Rossi Residencial S.A. - Em Recuperação Judicial,dropped_or_delisted,2021,2022,0.3737,6777,592,font_heading,font_heading
+016306,Rossi Residencial S.A. - Em Recuperação Judicial,dropped_or_delisted,2022,2023,0.7194,592,532,font_heading,font_heading
+016306,Rossi Residencial S.A. - Em Recuperação Judicial,dropped_or_delisted,2023,2024,0.2381,532,4224,font_heading,font_heading
+017329,ENGIE BRASIL,stayed,2015,2016,0.032,20039,242,regex_only,font_heading
+017329,ENGIE BRASIL,stayed,2016,2017,0.1355,242,3983,font_heading,font_heading
+017329,ENGIE BRASIL,stayed,2017,2018,0.9408,3983,4181,font_heading,font_heading
+017329,ENGIE BRASIL,stayed,2018,2019,0.1248,4181,325,font_heading,font_heading
+017329,ENGIE BRASIL,stayed,2019,2020,0.9028,325,421,font_heading,font_heading
+017329,ENGIE BRASIL,stayed,2020,2021,0.2008,421,25142,font_heading,font_heading
+017329,ENGIE BRASIL,stayed,2021,2022,0.0977,25142,244,font_heading,font_heading
+017329,ENGIE BRASIL,stayed,2022,2023,0.0666,244,382,font_heading,font_heading
+017329,ENGIE BRASIL,stayed,2023,2024,0.4171,382,1127,font_heading,font_heading
+017450,RUMO S.A.,stayed,2015,2016,0.2794,3870,7952,font_heading,font_heading
+017450,RUMO S.A.,stayed,2016,2017,0.2308,7952,2860,font_heading,font_heading
+017450,RUMO S.A.,stayed,2017,2018,0.1436,2860,8182,font_heading,font_heading
+017450,RUMO S.A.,stayed,2018,2019,0.1648,8182,3119,font_heading,font_heading
+017450,RUMO S.A.,stayed,2019,2020,0.0877,3119,5555,font_heading,font_heading
+017450,RUMO S.A.,stayed,2020,2021,0.1046,5555,6332,font_heading,regex_only
+017450,RUMO S.A.,stayed,2021,2022,0.995,6332,6541,regex_only,regex_only
+017450,RUMO S.A.,stayed,2022,2023,0.9455,6541,7063,regex_only,regex_only
+017450,RUMO S.A.,stayed,2023,2024,0.9951,7063,7008,regex_only,regex_only
+017671,TELEFONICA BRASIL,stayed,2015,2016,0.7712,28026,17162,font_heading,font_heading
+017671,TELEFONICA BRASIL,stayed,2016,2017,0.673,17162,8175,font_heading,font_heading
+017671,TELEFONICA BRASIL,stayed,2017,2018,0.9238,8175,10249,font_heading,font_heading
+017671,TELEFONICA BRASIL,stayed,2018,2019,0.7392,10249,7547,font_heading,font_heading
+017671,TELEFONICA BRASIL,stayed,2019,2020,0.8633,7547,12121,font_heading,font_heading
+017671,TELEFONICA BRASIL,stayed,2020,2021,0.7372,12121,6982,font_heading,font_heading
+017671,TELEFONICA BRASIL,stayed,2021,2022,0.1642,6982,5949,font_heading,regex_only
+017671,TELEFONICA BRASIL,stayed,2022,2023,0.2308,5949,15075,regex_only,font_heading
+017671,TELEFONICA BRASIL,stayed,2023,2024,0.8274,15075,18193,font_heading,font_heading
+017892,Santos Brasil Participações S.A.,dropped_or_delisted,2015,2016,0.825,4688,6844,font_heading,font_heading
+017892,Santos Brasil Participações S.A.,dropped_or_delisted,2016,2017,0.8657,6844,6053,font_heading,font_heading
+017892,Santos Brasil Participações S.A.,dropped_or_delisted,2017,2018,0.6572,6053,6202,font_heading,font_heading
+017892,Santos Brasil Participações S.A.,dropped_or_delisted,2018,2019,0.8413,6202,8711,font_heading,font_heading
+017892,Santos Brasil Participações S.A.,dropped_or_delisted,2019,2020,0.847,8711,7312,font_heading,font_heading
+017892,Santos Brasil Participações S.A.,dropped_or_delisted,2020,2021,0.9535,7312,7143,font_heading,font_heading
+017892,Santos Brasil Participações S.A.,dropped_or_delisted,2021,2022,0.9594,7143,7046,font_heading,font_heading
+017892,Santos Brasil Participações S.A.,dropped_or_delisted,2022,2023,0.8341,7046,5564,font_heading,font_heading
+017892,Santos Brasil Participações S.A.,dropped_or_delisted,2023,2024,0.8681,5564,7757,font_heading,font_heading
+017914,Massa Falida da MMX Mineração e Metálicos S.A.,dropped_or_delisted,2015,2016,0.0335,1008,296,font_heading,font_heading
+017914,Massa Falida da MMX Mineração e Metálicos S.A.,dropped_or_delisted,2016,2018,0.3914,296,355,font_heading,font_heading
+017914,Massa Falida da MMX Mineração e Metálicos S.A.,dropped_or_delisted,2018,2019,0.0327,355,7939,font_heading,regex_only
+017914,Massa Falida da MMX Mineração e Metálicos S.A.,dropped_or_delisted,2019,2020,0.3525,7939,1405,regex_only,regex_only
+017973,COGNA ON,stayed,2015,2016,0.8426,4975,3968,font_heading,font_heading
+017973,COGNA ON,stayed,2016,2017,0.9729,3968,3638,font_heading,font_heading
+017973,COGNA ON,stayed,2017,2018,0.461,3638,4416,font_heading,font_heading
+017973,COGNA ON,stayed,2018,2019,0.1489,4416,2791,font_heading,regex_only
+017973,COGNA ON,stayed,2019,2020,0.2486,2791,2263,regex_only,regex_only
+017973,COGNA ON,stayed,2020,2021,0.1401,2263,7109,regex_only,regex_only
+017973,COGNA ON,stayed,2021,2022,0.1632,7109,1844,regex_only,regex_only
+017973,COGNA ON,stayed,2022,2023,0.1613,1844,6288,regex_only,regex_only
+017973,COGNA ON,stayed,2023,2024,0.1052,6288,617,regex_only,font_heading
+018376,ISA ENERGIA,stayed,2015,2016,0.0587,14444,822,regex_only,regex_only
+018376,ISA ENERGIA,stayed,2016,2017,0.0738,822,13585,regex_only,regex_only
+018376,ISA ENERGIA,stayed,2017,2018,0.9875,13585,14762,regex_only,regex_only
+018376,ISA ENERGIA,stayed,2018,2019,0.9701,14762,13122,regex_only,regex_only
+018376,ISA ENERGIA,stayed,2019,2020,0.0106,13122,101,regex_only,font_heading
+018376,ISA ENERGIA,stayed,2020,2021,0.0786,101,17697,font_heading,font_heading
+018376,ISA ENERGIA,stayed,2021,2022,0.0649,17697,137,font_heading,font_heading
+018376,ISA ENERGIA,stayed,2022,2023,0.0416,137,8302,font_heading,regex_only
+018376,ISA ENERGIA,stayed,2023,2024,0.0416,8302,137,regex_only,font_heading
+018465,ULTRAPAR,stayed,2015,2016,0.9484,16113,18070,font_heading,font_heading
+018465,ULTRAPAR,stayed,2016,2017,0.9255,18070,21145,font_heading,font_heading
+018465,ULTRAPAR,stayed,2017,2018,0.9223,21145,22697,font_heading,font_heading
+018465,ULTRAPAR,stayed,2018,2019,0.3248,22697,7980,font_heading,regex_only
+018465,ULTRAPAR,stayed,2019,2020,0.2173,7980,7765,regex_only,font_heading
+018465,ULTRAPAR,stayed,2020,2022,0.7067,7765,15272,font_heading,font_heading
+018465,ULTRAPAR,stayed,2022,2023,0.5121,15272,3756,font_heading,font_heading
+018465,ULTRAPAR,stayed,2023,2024,0.2767,3756,1063,font_heading,font_heading
+018627,Cia. de Saneamento do Paraná (Sanepar),dropped_or_delisted,2015,2016,0.7787,29849,36790,regex_only,regex_only
+018627,Cia. de Saneamento do Paraná (Sanepar),dropped_or_delisted,2016,2017,0.8094,36790,18979,regex_only,regex_only
+018627,Cia. de Saneamento do Paraná (Sanepar),dropped_or_delisted,2017,2018,0.3676,18979,9747,regex_only,regex_only
+018627,Cia. de Saneamento do Paraná (Sanepar),dropped_or_delisted,2018,2019,0.3907,9747,12165,regex_only,regex_only
+018627,Cia. de Saneamento do Paraná (Sanepar),dropped_or_delisted,2019,2020,0.8183,12165,14409,regex_only,regex_only
+018627,Cia. de Saneamento do Paraná (Sanepar),dropped_or_delisted,2020,2021,0.1295,14409,19434,regex_only,font_heading
+018627,Cia. de Saneamento do Paraná (Sanepar),dropped_or_delisted,2021,2022,0.987,19434,20248,font_heading,font_heading
+018627,Cia. de Saneamento do Paraná (Sanepar),dropped_or_delisted,2022,2023,0.9924,20248,19989,font_heading,font_heading
+018627,Cia. de Saneamento do Paraná (Sanepar),dropped_or_delisted,2023,2024,0.8483,19989,16772,font_heading,font_heading
+018660,CPFL ENERGIA,stayed,2015,2016,0.9137,4678,4904,font_heading,font_heading
+018660,CPFL ENERGIA,stayed,2016,2017,0.4937,4904,19138,font_heading,font_heading
+018660,CPFL ENERGIA,stayed,2017,2018,0.5746,19138,10117,font_heading,font_heading
+018660,CPFL ENERGIA,stayed,2018,2019,0.9017,10117,7733,font_heading,font_heading
+018660,CPFL ENERGIA,stayed,2019,2020,0.9253,7733,7737,font_heading,font_heading
+018660,CPFL ENERGIA,stayed,2020,2021,0.5933,7737,1691,font_heading,font_heading
+018660,CPFL ENERGIA,stayed,2021,2022,0.6357,1691,9052,font_heading,font_heading
+018660,CPFL ENERGIA,stayed,2022,2023,0.9728,9052,8482,font_heading,font_heading
+018660,CPFL ENERGIA,stayed,2023,2024,0.4491,8482,4118,font_heading,font_heading
+018724,BRADESPAR,stayed,2015,2016,0.476,11722,43152,regex_only,font_heading
+018724,BRADESPAR,stayed,2016,2017,0.9164,43152,58200,font_heading,font_heading
+018724,BRADESPAR,stayed,2017,2018,0.8347,58200,63961,font_heading,font_heading
+018724,BRADESPAR,stayed,2018,2019,0.4047,63961,2393,font_heading,font_heading
+018724,BRADESPAR,stayed,2019,2020,0.877,2393,2468,font_heading,font_heading
+018724,BRADESPAR,stayed,2020,2021,0.1174,2468,24268,font_heading,regex_only
+018821,MOTIVA SA,stayed,2015,2016,0.9314,9423,13449,font_heading,font_heading
+018821,MOTIVA SA,stayed,2016,2017,0.9216,13449,11710,font_heading,font_heading
+018821,MOTIVA SA,stayed,2017,2018,0.9448,11710,9348,font_heading,font_heading
+018821,MOTIVA SA,stayed,2018,2019,0.2964,9348,4644,font_heading,font_heading
+018821,MOTIVA SA,stayed,2019,2020,0.5683,4644,31458,font_heading,font_heading
+018821,MOTIVA SA,stayed,2020,2021,0.8274,31458,54787,font_heading,font_heading
+018821,MOTIVA SA,stayed,2021,2022,0.674,54787,13867,font_heading,font_heading
+018821,MOTIVA SA,stayed,2022,2023,0.9394,13867,12155,font_heading,font_heading
+018821,MOTIVA SA,stayed,2023,2024,0.0588,12155,2349,font_heading,regex_only
+019445,COPASA,stayed,2015,2016,0.8387,16283,10847,font_heading,font_heading
+019445,COPASA,stayed,2016,2017,0.7522,10847,8160,font_heading,font_heading
+019445,COPASA,stayed,2017,2018,0.7922,8160,11609,font_heading,font_heading
+019445,COPASA,stayed,2018,2019,0.1348,11609,2137,font_heading,font_heading
+019445,COPASA,stayed,2019,2020,0.9364,2137,1778,font_heading,font_heading
+019445,COPASA,stayed,2020,2021,0.1794,1778,11512,font_heading,font_heading
+019445,COPASA,stayed,2021,2022,0.8215,11512,8878,font_heading,font_heading
+019445,COPASA,stayed,2022,2023,0.1756,8878,31181,font_heading,regex_only
+019445,COPASA,stayed,2023,2024,0.1404,31181,9557,regex_only,font_heading
+019453,Ecorodovias Infraestrutura e Logística S.A.,dropped_or_delisted,2015,2016,0.934,15235,14580,font_heading,font_heading
+019453,Ecorodovias Infraestrutura e Logística S.A.,dropped_or_delisted,2016,2017,0.4898,14580,25398,font_heading,font_heading
+019453,Ecorodovias Infraestrutura e Logística S.A.,dropped_or_delisted,2017,2018,0.8932,25398,30686,font_heading,font_heading
+019453,Ecorodovias Infraestrutura e Logística S.A.,dropped_or_delisted,2018,2019,0.9848,30686,36829,font_heading,font_heading
+019453,Ecorodovias Infraestrutura e Logística S.A.,dropped_or_delisted,2019,2020,0.3982,36829,8710,font_heading,font_heading
+019453,Ecorodovias Infraestrutura e Logística S.A.,dropped_or_delisted,2020,2021,0.3252,8710,23998,font_heading,regex_only
+019453,Ecorodovias Infraestrutura e Logística S.A.,dropped_or_delisted,2021,2022,0.2156,23998,13937,regex_only,font_heading
+019453,Ecorodovias Infraestrutura e Logística S.A.,dropped_or_delisted,2022,2023,0.7702,13937,9155,font_heading,font_heading
+019453,Ecorodovias Infraestrutura e Logística S.A.,dropped_or_delisted,2023,2024,0.3824,9155,10653,font_heading,font_heading
+019550,NATURA,stayed,2015,2016,0.4085,9237,5875,font_heading,regex_only
+019550,NATURA,stayed,2016,2017,0.4147,5875,15583,regex_only,font_heading
+019550,NATURA,stayed,2017,2018,0.0884,15583,357,font_heading,font_heading
+019550,NATURA,stayed,2018,2019,0.1454,357,128,font_heading,font_heading
+019550,NATURA,stayed,2019,2020,1.0,128,189,font_heading,font_heading
+019550,NATURA,stayed,2020,2021,1.0,189,177,font_heading,font_heading
+019550,NATURA,stayed,2021,2022,1.0,177,177,font_heading,font_heading
+019550,NATURA,stayed,2022,2024,1.0,177,171,font_heading,font_heading
+019569,Gol Linhas Aéreas Inteligentes S.A.,dropped_or_delisted,2015,2016,0.8216,12418,6087,font_heading,font_heading
+019569,Gol Linhas Aéreas Inteligentes S.A.,dropped_or_delisted,2016,2017,0.877,6087,15564,font_heading,font_heading
+019569,Gol Linhas Aéreas Inteligentes S.A.,dropped_or_delisted,2017,2018,0.8829,15564,15388,font_heading,font_heading
+019569,Gol Linhas Aéreas Inteligentes S.A.,dropped_or_delisted,2018,2019,0.0646,15388,448,font_heading,font_heading
+019569,Gol Linhas Aéreas Inteligentes S.A.,dropped_or_delisted,2019,2020,0.7422,448,857,font_heading,font_heading
+019569,Gol Linhas Aéreas Inteligentes S.A.,dropped_or_delisted,2020,2021,0.9934,857,865,font_heading,font_heading
+019569,Gol Linhas Aéreas Inteligentes S.A.,dropped_or_delisted,2021,2022,0.1854,865,15643,font_heading,font_heading
+019569,Gol Linhas Aéreas Inteligentes S.A.,dropped_or_delisted,2022,2023,0.1854,15643,868,font_heading,font_heading
+019569,Gol Linhas Aéreas Inteligentes S.A.,dropped_or_delisted,2023,2024,0.0241,868,382,font_heading,font_heading
+019623,Diagnósticos da América S.A. (Dasa),dropped_or_delisted,2015,2016,0.9363,14621,15689,font_heading,font_heading
+019623,Diagnósticos da América S.A. (Dasa),dropped_or_delisted,2016,2017,0.5709,15689,7299,font_heading,font_heading
+019623,Diagnósticos da América S.A. (Dasa),dropped_or_delisted,2017,2018,0.7532,7299,4634,font_heading,font_heading
+019623,Diagnósticos da América S.A. (Dasa),dropped_or_delisted,2018,2019,0.9001,4634,3530,font_heading,font_heading
+019623,Diagnósticos da América S.A. (Dasa),dropped_or_delisted,2019,2020,0.9109,3530,5414,font_heading,font_heading
+019623,Diagnósticos da América S.A. (Dasa),dropped_or_delisted,2020,2021,0.7283,5414,9547,font_heading,font_heading
+019623,Diagnósticos da América S.A. (Dasa),dropped_or_delisted,2021,2022,0.8284,9547,5936,font_heading,font_heading
+019623,Diagnósticos da América S.A. (Dasa),dropped_or_delisted,2022,2023,0.4398,5936,1547,font_heading,font_heading
+019623,Diagnósticos da América S.A. (Dasa),dropped_or_delisted,2023,2024,0.2679,1547,10077,font_heading,font_heading
+019739,LOCALIZA,stayed,2015,2016,0.138,23783,830,regex_only,font_heading
+019739,LOCALIZA,stayed,2016,2017,0.8155,830,439,font_heading,font_heading
+019739,LOCALIZA,stayed,2017,2018,0.6254,439,1012,font_heading,font_heading
+019739,LOCALIZA,stayed,2018,2019,0.9872,1012,1108,font_heading,font_heading
+019739,LOCALIZA,stayed,2019,2020,0.776,1108,10470,font_heading,font_heading
+019739,LOCALIZA,stayed,2020,2021,0.9812,10470,11718,font_heading,font_heading
+019739,LOCALIZA,stayed,2021,2022,0.766,11718,22520,font_heading,font_heading
+019739,LOCALIZA,stayed,2022,2023,0.9441,22520,24362,font_heading,font_heading
+019739,LOCALIZA,stayed,2023,2024,0.9532,24362,27006,font_heading,font_heading
+019763,EDP Energias do Brasil S/A,dropped_or_delisted,2015,2016,0.9218,687,707,font_heading,font_heading
+019763,EDP Energias do Brasil S/A,dropped_or_delisted,2016,2017,0.9825,707,709,font_heading,font_heading
+019763,EDP Energias do Brasil S/A,dropped_or_delisted,2017,2018,0.0036,709,904,font_heading,font_heading
+019763,EDP Energias do Brasil S/A,dropped_or_delisted,2018,2019,0.0036,904,776,font_heading,font_heading
+019763,EDP Energias do Brasil S/A,dropped_or_delisted,2019,2020,1.0,776,756,font_heading,font_heading
+019763,EDP Energias do Brasil S/A,dropped_or_delisted,2020,2021,0.9342,756,872,font_heading,font_heading
+019763,EDP Energias do Brasil S/A,dropped_or_delisted,2021,2022,1.0,872,790,font_heading,font_heading
+019763,EDP Energias do Brasil S/A,dropped_or_delisted,2022,2023,0.9342,790,765,font_heading,font_heading
+019763,EDP Energias do Brasil S/A,dropped_or_delisted,2023,2024,0.9327,765,643,font_heading,font_heading
+019836,COSAN,stayed,2015,2016,0.1902,12142,11221,regex_only,font_heading
+019836,COSAN,stayed,2016,2017,0.132,11221,2447,font_heading,font_heading
+019836,COSAN,stayed,2017,2018,0.0397,2447,4903,font_heading,font_heading
+019836,COSAN,stayed,2018,2019,0.8062,4903,4560,font_heading,font_heading
+019836,COSAN,stayed,2019,2020,0.6356,4560,10620,font_heading,font_heading
+019836,COSAN,stayed,2020,2021,0.8029,10620,12354,font_heading,font_heading
+019836,COSAN,stayed,2021,2022,0.7315,12354,10560,font_heading,font_heading
+019836,COSAN,stayed,2022,2023,0.5838,10560,15390,font_heading,font_heading
+019836,COSAN,stayed,2023,2024,0.1255,15390,1530,font_heading,font_heading
+019879,Light S.A. - Em Recuperação Judicial,dropped_or_delisted,2017,2018,0.374,14242,30379,regex_only,font_heading
+019879,Light S.A. - Em Recuperação Judicial,dropped_or_delisted,2018,2019,0.9939,30379,27401,font_heading,font_heading
+019879,Light S.A. - Em Recuperação Judicial,dropped_or_delisted,2019,2021,0.961,27401,2874,font_heading,font_heading
+019879,Light S.A. - Em Recuperação Judicial,dropped_or_delisted,2021,2022,0.9131,2874,16761,font_heading,font_heading
+019879,Light S.A. - Em Recuperação Judicial,dropped_or_delisted,2022,2023,0.8883,16761,7503,font_heading,font_heading
+019879,Light S.A. - Em Recuperação Judicial,dropped_or_delisted,2023,2024,0.7485,7503,16450,font_heading,font_heading
+019909,BR Malls Participações S.A.,dropped_or_delisted,2015,2016,0.1156,168,137,font_heading,font_heading
+019909,BR Malls Participações S.A.,dropped_or_delisted,2016,2017,0.1156,137,168,font_heading,font_heading
+019909,BR Malls Participações S.A.,dropped_or_delisted,2017,2019,0.0441,168,991,font_heading,font_heading
+019909,BR Malls Participações S.A.,dropped_or_delisted,2019,2020,0.3887,991,1505,font_heading,font_heading
+019909,BR Malls Participações S.A.,dropped_or_delisted,2020,2021,0.1524,1505,5319,font_heading,font_heading
+019909,BR Malls Participações S.A.,dropped_or_delisted,2021,2022,0.8123,5319,5606,font_heading,font_heading
+019909,BR Malls Participações S.A.,dropped_or_delisted,2022,2023,0.8183,5606,4244,font_heading,font_heading
+019909,BR Malls Participações S.A.,dropped_or_delisted,2023,2024,0.3353,4244,6967,font_heading,font_heading
+019925,BR Properties S.A.,dropped_or_delisted,2015,2016,0.7134,6506,15592,font_heading,font_heading
+019925,BR Properties S.A.,dropped_or_delisted,2016,2017,0.9252,15592,12223,font_heading,font_heading
+019925,BR Properties S.A.,dropped_or_delisted,2017,2018,0.6772,12223,11005,font_heading,font_heading
+019925,BR Properties S.A.,dropped_or_delisted,2018,2019,0.9672,11005,11809,font_heading,font_heading
+019925,BR Properties S.A.,dropped_or_delisted,2019,2020,0.8971,11809,12403,font_heading,font_heading
+019925,BR Properties S.A.,dropped_or_delisted,2020,2021,0.9766,12403,14446,font_heading,font_heading
+019925,BR Properties S.A.,dropped_or_delisted,2021,2022,0.5214,14446,7339,font_heading,font_heading
+019992,TOTVS,stayed,2015,2016,0.9177,6249,6499,font_heading,font_heading
+019992,TOTVS,stayed,2016,2017,0.8814,6499,6265,font_heading,font_heading
+019992,TOTVS,stayed,2017,2018,0.936,6265,5505,font_heading,font_heading
+019992,TOTVS,stayed,2018,2019,0.8871,5505,5432,font_heading,font_heading
+019992,TOTVS,stayed,2019,2020,0.2075,5432,3835,font_heading,regex_only
+019992,TOTVS,stayed,2020,2021,0.3105,3835,2439,regex_only,font_heading
+019992,TOTVS,stayed,2021,2022,0.8705,2439,2561,font_heading,font_heading
+019992,TOTVS,stayed,2022,2023,0.9318,2561,2132,font_heading,font_heading
+019992,TOTVS,stayed,2023,2024,0.8854,2132,2914,font_heading,font_heading
+020010,EQUATORIAL,stayed,2015,2016,0.3267,2225,11692,font_heading,font_heading
+020010,EQUATORIAL,stayed,2016,2017,0.9086,11692,14847,font_heading,font_heading
+020010,EQUATORIAL,stayed,2017,2018,0.9205,14847,20180,font_heading,font_heading
+020010,EQUATORIAL,stayed,2018,2020,0.4245,20180,8046,font_heading,font_heading
+020010,EQUATORIAL,stayed,2020,2021,0.6845,8046,10833,font_heading,font_heading
+020010,EQUATORIAL,stayed,2021,2022,0.2965,10833,2725,font_heading,font_heading
+020010,EQUATORIAL,stayed,2022,2024,0.2163,2725,7485,font_heading,regex_only
+020087,EMBRAER,stayed,2016,2017,0.9685,8126,8610,font_heading,font_heading
+020087,EMBRAER,stayed,2017,2019,0.1358,8610,14862,font_heading,regex_only
+020087,EMBRAER,stayed,2019,2021,0.1065,14862,18619,regex_only,regex_only
+020087,EMBRAER,stayed,2021,2023,0.0884,18619,5696,regex_only,font_heading
+020087,EMBRAER,stayed,2023,2024,0.6614,5696,4372,font_heading,font_heading
+020257,TAESA,stayed,2015,2017,0.6924,17590,11617,font_heading,font_heading
+020257,TAESA,stayed,2017,2018,0.2576,11617,62673,font_heading,font_heading
+020257,TAESA,stayed,2018,2019,0.2468,62673,2580,font_heading,font_heading
+020257,TAESA,stayed,2019,2020,0.1921,2580,10742,font_heading,regex_only
+020257,TAESA,stayed,2020,2021,0.0335,10742,2365,regex_only,regex_only
+020257,TAESA,stayed,2021,2022,0.0777,2365,83109,regex_only,font_heading
+020257,TAESA,stayed,2022,2023,0.5015,83109,12343,font_heading,font_heading
+020257,TAESA,stayed,2023,2024,0.5556,12343,84843,font_heading,font_heading
+020362,Positivo Tecnologia S.A.,dropped_or_delisted,2015,2016,0.9338,10028,11128,regex_only,regex_only
+020362,Positivo Tecnologia S.A.,dropped_or_delisted,2016,2017,0.2092,11128,6002,regex_only,regex_only
+020362,Positivo Tecnologia S.A.,dropped_or_delisted,2017,2018,0.0407,6002,5713,regex_only,regex_only
+020362,Positivo Tecnologia S.A.,dropped_or_delisted,2018,2019,0.0539,5713,6062,regex_only,regex_only
+020362,Positivo Tecnologia S.A.,dropped_or_delisted,2019,2020,0.0043,6062,140,regex_only,regex_only
+020362,Positivo Tecnologia S.A.,dropped_or_delisted,2020,2021,0.0497,140,5757,regex_only,font_heading
+020362,Positivo Tecnologia S.A.,dropped_or_delisted,2021,2022,0.1102,5757,116,font_heading,font_heading
+020362,Positivo Tecnologia S.A.,dropped_or_delisted,2022,2023,0.1764,116,5059,font_heading,font_heading
+020478,PDG Realty S.A. Empreendimentos e Participações,dropped_or_delisted,2015,2016,0.5343,2925,14388,font_heading,font_heading
+020478,PDG Realty S.A. Empreendimentos e Participações,dropped_or_delisted,2016,2017,0.8364,14388,12479,font_heading,font_heading
+020478,PDG Realty S.A. Empreendimentos e Participações,dropped_or_delisted,2017,2018,0.0936,12479,1862,font_heading,regex_only
+020478,PDG Realty S.A. Empreendimentos e Participações,dropped_or_delisted,2018,2019,0.8483,1862,2566,regex_only,regex_only
+020478,PDG Realty S.A. Empreendimentos e Participações,dropped_or_delisted,2019,2020,0.5072,2566,5103,regex_only,regex_only
+020478,PDG Realty S.A. Empreendimentos e Participações,dropped_or_delisted,2020,2021,0.4535,5103,1127,regex_only,regex_only
+020478,PDG Realty S.A. Empreendimentos e Participações,dropped_or_delisted,2021,2022,0.4168,1127,2405,regex_only,regex_only
+020478,PDG Realty S.A. Empreendimentos e Participações,dropped_or_delisted,2022,2023,0.2778,2405,3332,regex_only,regex_only
+020478,PDG Realty S.A. Empreendimentos e Participações,dropped_or_delisted,2023,2024,0.2389,3332,2258,regex_only,regex_only
+020494,Iguatemi Empresa de Shopping Centers S/A (pre-restructuring entity),dropped_or_delisted,2015,2016,0.9742,23831,22208,font_heading,font_heading
+020494,Iguatemi Empresa de Shopping Centers S/A (pre-restructuring entity),dropped_or_delisted,2016,2017,0.8511,22208,18088,font_heading,font_heading
+020494,Iguatemi Empresa de Shopping Centers S/A (pre-restructuring entity),dropped_or_delisted,2017,2018,0.9271,18088,19235,font_heading,font_heading
+020494,Iguatemi Empresa de Shopping Centers S/A (pre-restructuring entity),dropped_or_delisted,2018,2020,0.2253,19235,9194,font_heading,regex_only
+020494,Iguatemi Empresa de Shopping Centers S/A (pre-restructuring entity),dropped_or_delisted,2020,2021,0.1167,9194,10693,regex_only,font_heading
+020494,Iguatemi Empresa de Shopping Centers S/A (pre-restructuring entity),dropped_or_delisted,2021,2022,0.8208,10693,18986,font_heading,font_heading
+020494,Iguatemi Empresa de Shopping Centers S/A (pre-restructuring entity),dropped_or_delisted,2022,2023,0.9829,18986,18890,font_heading,font_heading
+020494,Iguatemi Empresa de Shopping Centers S/A (pre-restructuring entity),dropped_or_delisted,2023,2024,0.9358,18890,15286,font_heading,font_heading
+020516,São Martinho S.A.,dropped_or_delisted,2015,2016,0.9444,4492,4593,regex_only,regex_only
+020516,São Martinho S.A.,dropped_or_delisted,2016,2017,0.9615,4593,4899,regex_only,regex_only
+020516,São Martinho S.A.,dropped_or_delisted,2017,2018,0.987,4899,3809,regex_only,regex_only
+020516,São Martinho S.A.,dropped_or_delisted,2018,2019,0.1391,3809,4267,regex_only,font_heading
+020516,São Martinho S.A.,dropped_or_delisted,2019,2020,0.1243,4267,1388,font_heading,regex_only
+020516,São Martinho S.A.,dropped_or_delisted,2020,2021,0.0736,1388,1615,regex_only,font_heading
+020516,São Martinho S.A.,dropped_or_delisted,2021,2022,0.2622,1615,14454,font_heading,regex_only
+020516,São Martinho S.A.,dropped_or_delisted,2022,2023,0.9119,14454,17088,regex_only,regex_only
+020516,São Martinho S.A.,dropped_or_delisted,2023,2024,0.9076,17088,14850,regex_only,regex_only
+020524,Even Construtora e Incorporadora S/A,dropped_or_delisted,2015,2016,0.1534,4881,3990,font_heading,font_heading
+020524,Even Construtora e Incorporadora S/A,dropped_or_delisted,2016,2017,0.8301,3990,3584,font_heading,font_heading
+020524,Even Construtora e Incorporadora S/A,dropped_or_delisted,2017,2018,0.0114,3584,5385,font_heading,regex_only
+020524,Even Construtora e Incorporadora S/A,dropped_or_delisted,2018,2019,0.0131,5385,3346,regex_only,font_heading
+020524,Even Construtora e Incorporadora S/A,dropped_or_delisted,2019,2020,0.0261,3346,4582,font_heading,regex_only
+020524,Even Construtora e Incorporadora S/A,dropped_or_delisted,2020,2021,0.3998,4582,4366,regex_only,regex_only
+020524,Even Construtora e Incorporadora S/A,dropped_or_delisted,2021,2022,0.8686,4366,6542,regex_only,regex_only
+020524,Even Construtora e Incorporadora S/A,dropped_or_delisted,2022,2023,0.0991,6542,3659,regex_only,font_heading
+020524,Even Construtora e Incorporadora S/A,dropped_or_delisted,2023,2024,0.1613,3659,983,font_heading,font_heading
+020605,JHSF Participações S.A.,dropped_or_delisted,2015,2016,0.9494,2678,2137,regex_only,regex_only
+020605,JHSF Participações S.A.,dropped_or_delisted,2016,2017,0.9646,2137,1857,regex_only,regex_only
+020605,JHSF Participações S.A.,dropped_or_delisted,2017,2019,0.9794,1857,2011,regex_only,regex_only
+020605,JHSF Participações S.A.,dropped_or_delisted,2019,2020,0.2472,2011,1102,regex_only,regex_only
+020605,JHSF Participações S.A.,dropped_or_delisted,2020,2021,0.0533,1102,266,regex_only,regex_only
+020605,JHSF Participações S.A.,dropped_or_delisted,2021,2022,0.0494,266,3312,regex_only,regex_only
+020605,JHSF Participações S.A.,dropped_or_delisted,2022,2023,0.7899,3312,4764,regex_only,regex_only
+020605,JHSF Participações S.A.,dropped_or_delisted,2023,2024,0.0464,4764,394,regex_only,regex_only
+020745,SLC AGRICOLA,stayed,2020,2021,0.9375,7972,6226,font_heading,font_heading
+020745,SLC AGRICOLA,stayed,2021,2022,0.8482,6226,4527,font_heading,font_heading
+020745,SLC AGRICOLA,stayed,2022,2023,0.7369,4527,4229,font_heading,font_heading
+020745,SLC AGRICOLA,stayed,2023,2024,0.5936,4229,12758,font_heading,font_heading
+020770,EZ Tec Empreendimentos e Participações S/A,dropped_or_delisted,2015,2016,0.9932,1160,1169,font_heading,font_heading
+020770,EZ Tec Empreendimentos e Participações S/A,dropped_or_delisted,2016,2017,0.996,1169,1170,font_heading,font_heading
+020770,EZ Tec Empreendimentos e Participações S/A,dropped_or_delisted,2017,2018,0.9938,1170,1144,font_heading,font_heading
+020770,EZ Tec Empreendimentos e Participações S/A,dropped_or_delisted,2018,2019,0.9435,1144,1276,font_heading,font_heading
+020770,EZ Tec Empreendimentos e Participações S/A,dropped_or_delisted,2019,2021,0.9093,1276,1276,font_heading,font_heading
+020770,EZ Tec Empreendimentos e Participações S/A,dropped_or_delisted,2021,2022,0.6953,1276,3322,font_heading,font_heading
+020770,EZ Tec Empreendimentos e Participações S/A,dropped_or_delisted,2022,2023,0.9766,3322,3631,font_heading,font_heading
+020770,EZ Tec Empreendimentos e Participações S/A,dropped_or_delisted,2023,2024,0.8857,3631,4384,font_heading,font_heading
+020788,MARFRIG,stayed,2015,2016,0.9698,16520,20447,font_heading,font_heading
+020788,MARFRIG,stayed,2016,2017,0.0613,20447,117,font_heading,font_heading
+020788,MARFRIG,stayed,2017,2019,1.0,117,117,font_heading,font_heading
+020788,MARFRIG,stayed,2019,2020,1.0,117,117,font_heading,font_heading
+020788,MARFRIG,stayed,2020,2021,0.1891,117,7719,font_heading,font_heading
+020788,MARFRIG,stayed,2021,2022,0.655,7719,8859,font_heading,font_heading
+020788,MARFRIG,stayed,2022,2023,0.6636,8859,9363,font_heading,font_heading
+020788,MARFRIG,stayed,2023,2024,0.5054,9363,2978,font_heading,font_heading
+020915,MRV,stayed,2015,2016,0.7634,5979,7654,regex_only,regex_only
+020915,MRV,stayed,2016,2017,0.7981,7654,5438,regex_only,regex_only
+020915,MRV,stayed,2017,2018,0.6127,5438,3261,regex_only,regex_only
+020915,MRV,stayed,2018,2019,0.1395,3261,12970,regex_only,regex_only
+020915,MRV,stayed,2019,2021,0.1632,12970,19037,regex_only,font_heading
+020915,MRV,stayed,2021,2022,0.7895,19037,21706,font_heading,font_heading
+020915,MRV,stayed,2022,2023,0.9789,21706,22888,font_heading,font_heading
+020915,MRV,stayed,2023,2024,0.9719,22888,21203,font_heading,font_heading
+020931,MINERVA,stayed,2015,2016,0.969,661,718,regex_only,regex_only
+020931,MINERVA,stayed,2016,2017,0.0736,718,5027,regex_only,font_heading
+020931,MINERVA,stayed,2017,2018,0.0335,5027,1152,font_heading,regex_only
+020931,MINERVA,stayed,2018,2019,0.0599,1152,4213,regex_only,font_heading
+020931,MINERVA,stayed,2019,2020,0.0563,4213,1667,font_heading,regex_only
+020931,MINERVA,stayed,2020,2021,0.0962,1667,19117,regex_only,font_heading
+020931,MINERVA,stayed,2021,2022,0.1553,19117,7198,font_heading,regex_only
+020931,MINERVA,stayed,2022,2023,0.1453,7198,22809,regex_only,font_heading
+020931,MINERVA,stayed,2023,2024,0.9655,22809,27384,font_heading,font_heading
+020982,MULTIPLAN,stayed,2015,2016,0.9154,24248,20028,font_heading,font_heading
+020982,MULTIPLAN,stayed,2016,2017,0.9749,20028,23411,font_heading,font_heading
+020982,MULTIPLAN,stayed,2017,2018,0.8991,23411,28237,font_heading,font_heading
+020982,MULTIPLAN,stayed,2018,2019,0.9049,28237,24363,font_heading,font_heading
+020982,MULTIPLAN,stayed,2019,2020,0.9531,24363,28421,font_heading,font_heading
+020982,MULTIPLAN,stayed,2020,2021,0.9717,28421,26955,font_heading,font_heading
+020982,MULTIPLAN,stayed,2021,2022,0.953,26955,22429,font_heading,font_heading
+020982,MULTIPLAN,stayed,2022,2023,0.9878,22429,20942,font_heading,font_heading
+020982,MULTIPLAN,stayed,2023,2024,0.9744,20942,19500,font_heading,font_heading
+020990,Americanas S.A. - Em Recuperação Judicial,dropped_or_delisted,2015,2016,0.7638,12599,19484,regex_only,regex_only
+020990,Americanas S.A. - Em Recuperação Judicial,dropped_or_delisted,2016,2017,0.6379,19484,9601,regex_only,regex_only
+020990,Americanas S.A. - Em Recuperação Judicial,dropped_or_delisted,2017,2020,0.1428,9601,12966,regex_only,regex_only
+020990,Americanas S.A. - Em Recuperação Judicial,dropped_or_delisted,2020,2021,0.0949,12966,801,regex_only,font_heading
+020990,Americanas S.A. - Em Recuperação Judicial,dropped_or_delisted,2021,2022,1.0,801,804,font_heading,font_heading
+020990,Americanas S.A. - Em Recuperação Judicial,dropped_or_delisted,2022,2023,0.8419,804,595,font_heading,font_heading
+020990,Americanas S.A. - Em Recuperação Judicial,dropped_or_delisted,2023,2024,0.9646,595,661,font_heading,font_heading
 021016,YDUQS,stayed,2015,2016,1.0,648,648,font_heading,font_heading
 021016,YDUQS,stayed,2016,2017,1.0,648,648,font_heading,font_heading
 021016,YDUQS,stayed,2017,2018,1.0,648,648,font_heading,font_heading
 021016,YDUQS,stayed,2018,2019,1.0,648,648,font_heading,font_heading
-021016,YDUQS,stayed,2019,2020,0.0596,648,10471,font_heading,regex_only
-021016,YDUQS,stayed,2020,2021,0.9824,10471,9829,regex_only,regex_only
-021016,YDUQS,stayed,2021,2022,0.9861,9829,10726,regex_only,regex_only
-021016,YDUQS,stayed,2022,2023,0.8803,10726,8392,regex_only,regex_only
-021016,YDUQS,stayed,2023,2024,0.9941,8392,9001,regex_only,regex_only
-021091,Dexco S.A. (formerly Duratex),dropped_or_delisted,2015,2016,0.4793,5978,11785,regex_only,regex_only
-021091,Dexco S.A. (formerly Duratex),dropped_or_delisted,2016,2017,0.4532,11785,6197,regex_only,regex_only
-021091,Dexco S.A. (formerly Duratex),dropped_or_delisted,2017,2018,0.8306,6197,7977,regex_only,regex_only
-021091,Dexco S.A. (formerly Duratex),dropped_or_delisted,2018,2019,0.653,7977,9199,regex_only,regex_only
-021091,Dexco S.A. (formerly Duratex),dropped_or_delisted,2019,2020,0.9248,9199,8534,regex_only,regex_only
-021091,Dexco S.A. (formerly Duratex),dropped_or_delisted,2020,2021,0.6863,8534,17036,regex_only,regex_only
-021091,Dexco S.A. (formerly Duratex),dropped_or_delisted,2021,2022,0.7356,17036,10271,regex_only,regex_only
-021091,Dexco S.A. (formerly Duratex),dropped_or_delisted,2022,2023,0.8754,10271,8482,regex_only,regex_only
-021091,Dexco S.A. (formerly Duratex),dropped_or_delisted,2023,2024,0.6719,8482,9196,regex_only,regex_only
-021881,FLEURY,stayed,2015,2016,0.151,11141,1847,regex_only,regex_only
-021881,FLEURY,stayed,2016,2017,0.069,1847,1433,regex_only,regex_only
-021881,FLEURY,stayed,2017,2018,0.1016,1433,11016,regex_only,regex_only
-021881,FLEURY,stayed,2018,2019,0.1781,11016,5527,regex_only,regex_only
-021881,FLEURY,stayed,2019,2020,0.135,5527,4249,regex_only,regex_only
-021881,FLEURY,stayed,2020,2021,0.1911,4249,11169,regex_only,regex_only
-021881,FLEURY,stayed,2021,2022,0.9175,11169,12344,regex_only,regex_only
-021881,FLEURY,stayed,2022,2023,0.1258,12344,6469,regex_only,font_heading
-021881,FLEURY,stayed,2023,2024,0.0516,6469,3635,font_heading,regex_only
-022691,Companhia de Locação das Américas (Locamerica),dropped_or_delisted,2015,2016,0.0676,5294,3004,font_heading,regex_only
-022691,Companhia de Locação das Américas (Locamerica),dropped_or_delisted,2016,2017,0.7428,3004,6842,regex_only,regex_only
-022691,Companhia de Locação das Américas (Locamerica),dropped_or_delisted,2017,2018,0.261,6842,1448,regex_only,regex_only
-022691,Companhia de Locação das Américas (Locamerica),dropped_or_delisted,2018,2019,0.9534,1448,1533,regex_only,regex_only
-022691,Companhia de Locação das Américas (Locamerica),dropped_or_delisted,2019,2020,0.2197,1533,17887,regex_only,regex_only
-022691,Companhia de Locação das Américas (Locamerica),dropped_or_delisted,2020,2021,0.7356,17887,16319,regex_only,regex_only
-022691,Companhia de Locação das Américas (Locamerica),dropped_or_delisted,2021,2022,0.2073,16319,12373,regex_only,font_heading
-022691,Companhia de Locação das Américas (Locamerica),dropped_or_delisted,2022,2023,0.9018,12373,12467,font_heading,font_heading
-022691,Companhia de Locação das Américas (Locamerica),dropped_or_delisted,2023,2024,0.082,12467,4902,font_heading,regex_only
-023264,AMBEV,stayed,2015,2016,0.9463,1633,1715,font_heading,font_heading
+021016,YDUQS,stayed,2019,2020,0.0886,648,1983,font_heading,regex_only
+021016,YDUQS,stayed,2020,2021,0.0618,1983,9829,regex_only,regex_only
+021016,YDUQS,stayed,2021,2022,0.986,9829,10726,regex_only,regex_only
+021016,YDUQS,stayed,2022,2023,0.0763,10726,396,regex_only,regex_only
+021016,YDUQS,stayed,2023,2024,0.0407,396,9001,regex_only,regex_only
+021091,Dexco S.A. (formerly Duratex),dropped_or_delisted,2015,2016,0.8452,2914,2220,regex_only,regex_only
+021091,Dexco S.A. (formerly Duratex),dropped_or_delisted,2016,2017,0.0775,2220,6197,regex_only,regex_only
+021091,Dexco S.A. (formerly Duratex),dropped_or_delisted,2017,2018,0.8356,6197,7977,regex_only,regex_only
+021091,Dexco S.A. (formerly Duratex),dropped_or_delisted,2018,2019,0.6656,7977,9291,regex_only,regex_only
+021091,Dexco S.A. (formerly Duratex),dropped_or_delisted,2019,2020,0.8924,9291,8731,regex_only,regex_only
+021091,Dexco S.A. (formerly Duratex),dropped_or_delisted,2020,2021,0.7223,8731,15581,regex_only,regex_only
+021091,Dexco S.A. (formerly Duratex),dropped_or_delisted,2021,2022,0.7393,15581,10412,regex_only,regex_only
+021091,Dexco S.A. (formerly Duratex),dropped_or_delisted,2022,2023,0.8659,10412,8186,regex_only,regex_only
+021091,Dexco S.A. (formerly Duratex),dropped_or_delisted,2023,2024,0.2778,8186,11764,regex_only,font_heading
+021237,ENEVA,stayed,2015,2016,0.5557,23415,7861,font_heading,font_heading
+021237,ENEVA,stayed,2016,2017,0.1946,7861,1422,font_heading,font_heading
+021237,ENEVA,stayed,2017,2018,0.2397,1422,14344,font_heading,font_heading
+021237,ENEVA,stayed,2018,2019,0.1238,14344,332,font_heading,font_heading
+021237,ENEVA,stayed,2019,2020,0.1922,332,3836,font_heading,font_heading
+021237,ENEVA,stayed,2020,2021,0.9454,3836,4039,font_heading,font_heading
+021237,ENEVA,stayed,2021,2022,0.013,4039,51,font_heading,regex_only
+021237,ENEVA,stayed,2022,2023,0.0801,51,16722,regex_only,font_heading
+021237,ENEVA,stayed,2023,2024,0.3997,16722,18082,font_heading,regex_only
+021350,DIRECIONAL,stayed,2015,2016,0.9772,5752,5769,regex_only,regex_only
+021350,DIRECIONAL,stayed,2016,2017,0.0699,5769,1256,regex_only,font_heading
+021350,DIRECIONAL,stayed,2017,2018,0.0806,1256,5846,font_heading,regex_only
+021350,DIRECIONAL,stayed,2018,2019,0.8471,5846,5405,regex_only,regex_only
+021350,DIRECIONAL,stayed,2019,2020,0.4878,5405,2565,regex_only,regex_only
+021350,DIRECIONAL,stayed,2020,2021,0.0706,2565,7530,regex_only,regex_only
+021350,DIRECIONAL,stayed,2021,2022,0.8955,7530,12101,regex_only,regex_only
+021350,DIRECIONAL,stayed,2022,2023,0.876,12101,7639,regex_only,regex_only
+021350,DIRECIONAL,stayed,2023,2024,0.0082,7639,222,regex_only,regex_only
+021431,HYPERA,stayed,2015,2016,0.8254,7145,4386,font_heading,font_heading
+021431,HYPERA,stayed,2016,2017,0.4834,4386,7971,font_heading,font_heading
+021431,HYPERA,stayed,2017,2018,0.9195,7971,7263,font_heading,font_heading
+021431,HYPERA,stayed,2018,2019,0.9173,7263,10966,font_heading,font_heading
+021431,HYPERA,stayed,2019,2020,0.9189,10966,12912,font_heading,font_heading
+021431,HYPERA,stayed,2020,2021,0.9461,12912,14355,font_heading,font_heading
+021431,HYPERA,stayed,2021,2022,0.9349,14355,17498,font_heading,font_heading
+021431,HYPERA,stayed,2022,2023,0.9645,17498,18355,font_heading,font_heading
+021431,HYPERA,stayed,2023,2024,0.9661,18355,19434,font_heading,font_heading
+021881,FLEURY,stayed,2015,2016,0.05,3076,1847,font_heading,regex_only
+021881,FLEURY,stayed,2016,2017,0.0523,1847,757,regex_only,regex_only
+021881,FLEURY,stayed,2017,2018,0.0587,757,4237,regex_only,font_heading
+021881,FLEURY,stayed,2018,2019,0.8938,4237,4042,font_heading,font_heading
+021881,FLEURY,stayed,2019,2020,0.1127,4042,617,font_heading,regex_only
+021881,FLEURY,stayed,2020,2021,0.1254,617,4983,regex_only,font_heading
+021881,FLEURY,stayed,2021,2022,0.9848,4983,5456,font_heading,font_heading
+021881,FLEURY,stayed,2022,2023,0.9082,5456,6469,font_heading,font_heading
+021881,FLEURY,stayed,2023,2024,0.7125,6469,4716,font_heading,font_heading
+022187,PRIO,stayed,2015,2016,0.0557,3533,3128,font_heading,regex_only
+022187,PRIO,stayed,2016,2017,0.1364,3128,4238,regex_only,regex_only
+022187,PRIO,stayed,2017,2018,0.0878,4238,3027,regex_only,regex_only
+022187,PRIO,stayed,2018,2019,0.0837,3027,6934,regex_only,font_heading
+022187,PRIO,stayed,2019,2020,0.1041,6934,1407,font_heading,regex_only
+022187,PRIO,stayed,2020,2021,0.1319,1407,7693,regex_only,regex_only
+022349,AZZAS 2154,stayed,2015,2016,0.9549,3375,3226,font_heading,font_heading
+022349,AZZAS 2154,stayed,2016,2017,0.8965,3226,4863,font_heading,font_heading
+022349,AZZAS 2154,stayed,2017,2018,0.8592,4863,6709,font_heading,font_heading
+022349,AZZAS 2154,stayed,2018,2019,0.9291,6709,5976,font_heading,font_heading
+022349,AZZAS 2154,stayed,2019,2021,0.8674,5976,6852,font_heading,font_heading
+022349,AZZAS 2154,stayed,2021,2022,0.9605,6852,6314,font_heading,font_heading
+022349,AZZAS 2154,stayed,2022,2023,0.9692,6314,6276,font_heading,font_heading
+022349,AZZAS 2154,stayed,2023,2024,0.7837,6276,7794,font_heading,font_heading
+022357,ALLOS,stayed,2015,2016,0.7577,8449,5021,font_heading,font_heading
+022357,ALLOS,stayed,2016,2017,0.9305,5021,6107,font_heading,font_heading
+022357,ALLOS,stayed,2017,2018,0.9678,6107,6544,font_heading,font_heading
+022357,ALLOS,stayed,2018,2020,0.0871,6544,219,font_heading,regex_only
+022357,ALLOS,stayed,2020,2022,0.1139,219,9626,regex_only,font_heading
+022357,ALLOS,stayed,2022,2023,0.6056,9626,8340,font_heading,font_heading
+022357,ALLOS,stayed,2023,2024,0.8827,8340,11962,font_heading,font_heading
+022470,MAGAZ LUIZA,stayed,2015,2016,0.4044,2390,2794,regex_only,regex_only
+022470,MAGAZ LUIZA,stayed,2016,2017,0.3052,2794,5080,regex_only,regex_only
+022470,MAGAZ LUIZA,stayed,2017,2018,0.1382,5080,3489,regex_only,font_heading
+022470,MAGAZ LUIZA,stayed,2018,2019,0.1323,3489,8540,font_heading,regex_only
+022470,MAGAZ LUIZA,stayed,2019,2020,0.1043,8540,2709,regex_only,regex_only
+022470,MAGAZ LUIZA,stayed,2020,2021,0.1027,2709,3599,regex_only,font_heading
+022470,MAGAZ LUIZA,stayed,2021,2022,0.1099,3599,6769,font_heading,regex_only
+022470,MAGAZ LUIZA,stayed,2022,2023,0.9828,6769,7978,regex_only,regex_only
+022470,MAGAZ LUIZA,stayed,2023,2024,0.9396,7978,8837,regex_only,regex_only
+022691,Companhia de Locação das Américas (Locamerica),dropped_or_delisted,2015,2016,0.0689,5294,3004,font_heading,regex_only
+022691,Companhia de Locação das Américas (Locamerica),dropped_or_delisted,2016,2017,0.1002,3004,112,regex_only,regex_only
+022691,Companhia de Locação das Américas (Locamerica),dropped_or_delisted,2017,2018,0.0748,112,1448,regex_only,regex_only
+022691,Companhia de Locação das Américas (Locamerica),dropped_or_delisted,2018,2019,0.9553,1448,1533,regex_only,regex_only
+022691,Companhia de Locação das Américas (Locamerica),dropped_or_delisted,2019,2020,0.0668,1533,1056,regex_only,regex_only
+022691,Companhia de Locação das Américas (Locamerica),dropped_or_delisted,2020,2021,0.1041,1056,15139,regex_only,regex_only
+022691,Companhia de Locação das Américas (Locamerica),dropped_or_delisted,2021,2022,0.1315,15139,12373,regex_only,font_heading
+022691,Companhia de Locação das Américas (Locamerica),dropped_or_delisted,2022,2023,0.9113,12373,12467,font_heading,font_heading
+022691,Companhia de Locação das Américas (Locamerica),dropped_or_delisted,2023,2024,0.0761,12467,4902,font_heading,regex_only
+023140,Smiles S.A.,dropped_or_delisted,2015,2016,0.9788,10693,9715,regex_only,regex_only
+023264,AMBEV,stayed,2015,2016,0.9486,1633,1715,font_heading,font_heading
 023264,AMBEV,stayed,2016,2017,0.9997,1715,1712,font_heading,font_heading
-023264,AMBEV,stayed,2017,2018,0.9443,1712,2042,font_heading,font_heading
-023264,AMBEV,stayed,2018,2019,0.9285,2042,2143,font_heading,font_heading
-023264,AMBEV,stayed,2019,2020,0.8043,2143,4024,font_heading,font_heading
-023264,AMBEV,stayed,2020,2021,0.0999,4024,24896,font_heading,regex_only
-023264,AMBEV,stayed,2021,2022,0.0772,24896,3299,regex_only,font_heading
-023264,AMBEV,stayed,2022,2023,0.9667,3299,3718,font_heading,font_heading
-023264,AMBEV,stayed,2023,2024,0.9829,3718,3657,font_heading,font_heading
-023272,LOG Commercial Properties e Participações,dropped_or_delisted,2015,2016,0.9393,11052,12814,font_heading,font_heading
-023272,LOG Commercial Properties e Participações,dropped_or_delisted,2016,2017,0.7888,12814,11956,font_heading,font_heading
-023272,LOG Commercial Properties e Participações,dropped_or_delisted,2017,2021,0.3115,11956,1338,font_heading,font_heading
-023272,LOG Commercial Properties e Participações,dropped_or_delisted,2021,2022,0.0,1338,68,font_heading,font_heading
-023272,LOG Commercial Properties e Participações,dropped_or_delisted,2022,2023,0.0209,68,660,font_heading,font_heading
-023272,LOG Commercial Properties e Participações,dropped_or_delisted,2023,2024,0.0515,660,1262,font_heading,regex_only
-023310,CVC Brasil Operadora e Agência de Viagens S.A.,dropped_or_delisted,2015,2016,0.8405,932,1779,font_heading,font_heading
-023310,CVC Brasil Operadora e Agência de Viagens S.A.,dropped_or_delisted,2016,2017,0.0963,1779,9584,font_heading,regex_only
-023310,CVC Brasil Operadora e Agência de Viagens S.A.,dropped_or_delisted,2017,2018,0.255,9584,11313,regex_only,font_heading
-023310,CVC Brasil Operadora e Agência de Viagens S.A.,dropped_or_delisted,2018,2019,0.8464,11313,10977,font_heading,font_heading
-023310,CVC Brasil Operadora e Agência de Viagens S.A.,dropped_or_delisted,2019,2020,0.104,10977,5936,font_heading,regex_only
-023310,CVC Brasil Operadora e Agência de Viagens S.A.,dropped_or_delisted,2020,2021,0.9762,5936,6428,regex_only,regex_only
-023310,CVC Brasil Operadora e Agência de Viagens S.A.,dropped_or_delisted,2021,2022,0.7821,6428,8334,regex_only,regex_only
-023310,CVC Brasil Operadora e Agência de Viagens S.A.,dropped_or_delisted,2022,2023,0.9267,8334,8431,regex_only,regex_only
-023310,CVC Brasil Operadora e Agência de Viagens S.A.,dropped_or_delisted,2023,2024,0.9723,8431,8137,regex_only,regex_only
-024112,Azul S.A.,dropped_or_delisted,2016,2017,0.6052,6218,5593,font_heading,font_heading
-024112,Azul S.A.,dropped_or_delisted,2017,2018,0.8492,5593,6330,font_heading,font_heading
-024112,Azul S.A.,dropped_or_delisted,2018,2019,0.8189,6330,5506,font_heading,font_heading
-024112,Azul S.A.,dropped_or_delisted,2019,2020,0.183,5506,933,font_heading,regex_only
-024112,Azul S.A.,dropped_or_delisted,2020,2021,0.3807,933,2423,regex_only,regex_only
-024112,Azul S.A.,dropped_or_delisted,2021,2022,0.1314,2423,8098,regex_only,font_heading
-024112,Azul S.A.,dropped_or_delisted,2022,2023,0.6039,8098,8617,font_heading,font_heading
-024112,Azul S.A.,dropped_or_delisted,2023,2024,0.9049,8617,6714,font_heading,font_heading
-024171,Atacadão S.A.,dropped_or_delisted,2016,2017,0.0941,4497,7763,regex_only,regex_only
-024171,Atacadão S.A.,dropped_or_delisted,2017,2018,0.2069,7763,9797,regex_only,regex_only
-024171,Atacadão S.A.,dropped_or_delisted,2018,2019,0.3129,9797,8095,regex_only,regex_only
-024171,Atacadão S.A.,dropped_or_delisted,2019,2021,0.8254,8095,9802,regex_only,regex_only
-024171,Atacadão S.A.,dropped_or_delisted,2021,2022,0.5824,9802,8356,regex_only,regex_only
-024171,Atacadão S.A.,dropped_or_delisted,2022,2023,0.8458,8356,7583,regex_only,regex_only
-024171,Atacadão S.A.,dropped_or_delisted,2023,2024,0.8282,7583,10846,regex_only,regex_only
-024252,Smiles Fidelidade S.A.,dropped_or_delisted,2016,2017,0.6432,904,655,font_heading,font_heading
-024384,Notre Dame Intermédica Participações S.A.,dropped_or_delisted,2017,2018,0.0631,6756,767,font_heading,regex_only
-024384,Notre Dame Intermédica Participações S.A.,dropped_or_delisted,2018,2019,0.774,767,639,regex_only,regex_only
-024783,Natura & Co Holding S.A. (pre-restructuring parent entity),dropped_or_delisted,2019,2020,0.2771,9909,12138,regex_only,font_heading
-024783,Natura & Co Holding S.A. (pre-restructuring parent entity),dropped_or_delisted,2020,2021,0.231,12138,167,font_heading,font_heading
-024783,Natura & Co Holding S.A. (pre-restructuring parent entity),dropped_or_delisted,2021,2022,1.0,167,173,font_heading,font_heading
-024783,Natura & Co Holding S.A. (pre-restructuring parent entity),dropped_or_delisted,2022,2023,1.0,173,167,font_heading,font_heading
+023264,AMBEV,stayed,2017,2018,0.9471,1712,2042,font_heading,font_heading
+023264,AMBEV,stayed,2018,2019,0.9276,2042,2143,font_heading,font_heading
+023264,AMBEV,stayed,2019,2020,0.7976,2143,4024,font_heading,font_heading
+023264,AMBEV,stayed,2020,2021,0.0994,4024,24896,font_heading,regex_only
+023264,AMBEV,stayed,2021,2022,0.0782,24896,3299,regex_only,font_heading
+023264,AMBEV,stayed,2022,2023,0.969,3299,3718,font_heading,font_heading
+023264,AMBEV,stayed,2023,2024,0.9843,3718,3657,font_heading,font_heading
+023272,LOG Commercial Properties e Participações,dropped_or_delisted,2015,2016,0.9358,11052,12814,font_heading,font_heading
+023272,LOG Commercial Properties e Participações,dropped_or_delisted,2016,2017,0.8182,12814,11956,font_heading,font_heading
+023272,LOG Commercial Properties e Participações,dropped_or_delisted,2017,2021,0.2973,11956,1338,font_heading,font_heading
+023272,LOG Commercial Properties e Participações,dropped_or_delisted,2021,2022,0.0025,1338,68,font_heading,font_heading
+023272,LOG Commercial Properties e Participações,dropped_or_delisted,2022,2023,0.026,68,660,font_heading,font_heading
+023272,LOG Commercial Properties e Participações,dropped_or_delisted,2023,2024,0.0494,660,1262,font_heading,regex_only
+023310,CVC Brasil Operadora e Agência de Viagens S.A.,dropped_or_delisted,2015,2016,0.8316,932,1779,font_heading,font_heading
+023310,CVC Brasil Operadora e Agência de Viagens S.A.,dropped_or_delisted,2016,2017,0.0536,1779,6383,font_heading,regex_only
+023310,CVC Brasil Operadora e Agência de Viagens S.A.,dropped_or_delisted,2017,2018,0.2712,6383,11313,regex_only,font_heading
+023310,CVC Brasil Operadora e Agência de Viagens S.A.,dropped_or_delisted,2018,2019,0.5621,11313,69472,font_heading,font_heading
+023310,CVC Brasil Operadora e Agência de Viagens S.A.,dropped_or_delisted,2019,2020,0.132,69472,1518,font_heading,regex_only
+023310,CVC Brasil Operadora e Agência de Viagens S.A.,dropped_or_delisted,2020,2021,0.0987,1518,9375,regex_only,font_heading
+023310,CVC Brasil Operadora e Agência de Viagens S.A.,dropped_or_delisted,2021,2022,0.0565,9375,520,font_heading,regex_only
+023310,CVC Brasil Operadora e Agência de Viagens S.A.,dropped_or_delisted,2022,2023,0.1945,520,8866,regex_only,font_heading
+023310,CVC Brasil Operadora e Agência de Viagens S.A.,dropped_or_delisted,2023,2024,0.7762,8866,7691,font_heading,font_heading
+024112,Azul S.A.,dropped_or_delisted,2016,2017,0.6156,6218,5593,font_heading,font_heading
+024112,Azul S.A.,dropped_or_delisted,2017,2018,0.8455,5593,6330,font_heading,font_heading
+024112,Azul S.A.,dropped_or_delisted,2018,2019,0.807,6330,5506,font_heading,font_heading
+024112,Azul S.A.,dropped_or_delisted,2019,2020,0.3878,5506,7808,font_heading,font_heading
+024112,Azul S.A.,dropped_or_delisted,2020,2021,0.7612,7808,11428,font_heading,font_heading
+024112,Azul S.A.,dropped_or_delisted,2021,2022,0.6534,11428,8098,font_heading,font_heading
+024112,Azul S.A.,dropped_or_delisted,2022,2023,0.5774,8098,8617,font_heading,font_heading
+024112,Azul S.A.,dropped_or_delisted,2023,2024,0.9017,8617,6714,font_heading,font_heading
+024171,Atacadão S.A.,dropped_or_delisted,2016,2017,0.0944,4497,7763,regex_only,regex_only
+024171,Atacadão S.A.,dropped_or_delisted,2017,2018,0.0177,7763,591,regex_only,font_heading
+024171,Atacadão S.A.,dropped_or_delisted,2018,2019,0.1194,591,10917,font_heading,regex_only
+024171,Atacadão S.A.,dropped_or_delisted,2019,2020,0.1907,10917,7779,regex_only,regex_only
+024171,Atacadão S.A.,dropped_or_delisted,2020,2021,0.1235,7779,3251,regex_only,font_heading
+024171,Atacadão S.A.,dropped_or_delisted,2021,2022,0.742,3251,6919,font_heading,font_heading
+024171,Atacadão S.A.,dropped_or_delisted,2022,2023,0.7452,6919,5723,font_heading,font_heading
+024171,Atacadão S.A.,dropped_or_delisted,2023,2024,0.3364,5723,8781,font_heading,regex_only
+024252,Smiles Fidelidade S.A.,dropped_or_delisted,2016,2017,0.5913,904,655,font_heading,font_heading
+024252,Smiles Fidelidade S.A.,dropped_or_delisted,2017,2018,0.1034,655,12053,font_heading,regex_only
+024252,Smiles Fidelidade S.A.,dropped_or_delisted,2018,2019,0.5349,12053,12712,regex_only,regex_only
+024252,Smiles Fidelidade S.A.,dropped_or_delisted,2019,2020,0.9396,12712,13325,regex_only,regex_only
+024260,SMART FIT,stayed,2016,2017,0.9431,8802,14198,font_heading,font_heading
+024260,SMART FIT,stayed,2017,2018,0.0738,14198,1238,font_heading,regex_only
+024260,SMART FIT,stayed,2018,2019,0.1425,1238,5566,regex_only,font_heading
+024260,SMART FIT,stayed,2019,2020,0.6898,5566,5934,font_heading,font_heading
+024260,SMART FIT,stayed,2020,2021,0.6722,5934,11623,font_heading,font_heading
+024260,SMART FIT,stayed,2021,2022,0.6194,11623,3416,font_heading,font_heading
+024260,SMART FIT,stayed,2022,2023,0.1791,3416,818,font_heading,font_heading
+024260,SMART FIT,stayed,2023,2024,0.3794,818,939,font_heading,font_heading
+024295,VIBRA,stayed,2016,2017,0.8826,26906,24992,regex_only,regex_only
+024295,VIBRA,stayed,2017,2018,0.3279,24992,10466,regex_only,regex_only
+024295,VIBRA,stayed,2018,2019,0.3629,10466,2193,regex_only,regex_only
+024295,VIBRA,stayed,2019,2020,0.1085,2193,2917,regex_only,font_heading
+024295,VIBRA,stayed,2020,2021,0.2318,2917,4518,font_heading,font_heading
+024295,VIBRA,stayed,2021,2022,0.3598,4518,2209,font_heading,font_heading
+024295,VIBRA,stayed,2022,2024,0.1608,2209,7551,font_heading,regex_only
+024384,Notre Dame Intermédica Participações S.A.,dropped_or_delisted,2017,2018,0.0426,6756,692,font_heading,regex_only
+024384,Notre Dame Intermédica Participações S.A.,dropped_or_delisted,2018,2019,0.8204,692,594,regex_only,regex_only
+024392,HAPVIDA,stayed,2018,2019,0.0325,5167,901,regex_only,regex_only
+024392,HAPVIDA,stayed,2019,2020,0.1405,901,5592,regex_only,font_heading
+024392,HAPVIDA,stayed,2020,2021,0.8326,5592,8286,font_heading,font_heading
+024392,HAPVIDA,stayed,2021,2022,0.0484,8286,632,font_heading,regex_only
+024392,HAPVIDA,stayed,2022,2023,0.0316,632,14431,regex_only,font_heading
+024392,HAPVIDA,stayed,2023,2024,0.9486,14431,16114,font_heading,font_heading
+024716,VAMOS,stayed,2018,2019,0.7075,7425,11240,font_heading,font_heading
+024716,VAMOS,stayed,2019,2020,0.8608,11240,14101,font_heading,font_heading
+024716,VAMOS,stayed,2020,2021,0.9119,14101,15688,font_heading,font_heading
+024716,VAMOS,stayed,2021,2022,0.2241,15688,4613,font_heading,regex_only
+024716,VAMOS,stayed,2022,2023,0.2044,4613,26838,regex_only,font_heading
+024716,VAMOS,stayed,2023,2024,0.2257,26838,6304,font_heading,regex_only
+024783,Natura & Co Holding S.A. (pre-restructuring parent entity),dropped_or_delisted,2019,2020,0.0106,9909,179,regex_only,font_heading
+024783,Natura & Co Holding S.A. (pre-restructuring parent entity),dropped_or_delisted,2020,2021,1.0,179,167,font_heading,font_heading
+024783,Natura & Co Holding S.A. (pre-restructuring parent entity),dropped_or_delisted,2021,2022,1.0,167,106,font_heading,font_heading
+024783,Natura & Co Holding S.A. (pre-restructuring parent entity),dropped_or_delisted,2022,2023,1.0,106,167,font_heading,font_heading
 024783,Natura & Co Holding S.A. (pre-restructuring parent entity),dropped_or_delisted,2023,2024,1.0,167,167,font_heading,font_heading
-025011,Grupo de Moda Soma S.A.,dropped_or_delisted,2021,2022,0.0702,5675,6068,regex_only,regex_only
+024805,VIVARA S.A.,stayed,2019,2020,0.5814,4384,3098,font_heading,font_heading
+024805,VIVARA S.A.,stayed,2020,2021,0.9406,3098,2655,font_heading,font_heading
+024805,VIVARA S.A.,stayed,2021,2022,0.8753,2655,2651,font_heading,font_heading
+024805,VIVARA S.A.,stayed,2022,2023,0.9512,2651,2599,font_heading,font_heading
+024805,VIVARA S.A.,stayed,2023,2024,0.8373,2599,2468,font_heading,font_heading
+024821,REDE D OR,stayed,2018,2019,0.8784,9155,11336,regex_only,regex_only
+024821,REDE D OR,stayed,2019,2020,0.2062,11336,34318,regex_only,font_heading
+024821,REDE D OR,stayed,2020,2021,0.9295,34318,36125,font_heading,font_heading
+024821,REDE D OR,stayed,2021,2022,0.8738,36125,42204,font_heading,font_heading
+024821,REDE D OR,stayed,2022,2023,0.7003,42204,16114,font_heading,font_heading
+024821,REDE D OR,stayed,2023,2024,0.1977,16114,1006,font_heading,regex_only
+024848,CEA MODAS,stayed,2018,2019,0.1625,5575,12509,regex_only,regex_only
+024848,CEA MODAS,stayed,2019,2020,0.7093,12509,8566,regex_only,regex_only
+024848,CEA MODAS,stayed,2020,2021,0.1808,8566,4690,regex_only,regex_only
+024848,CEA MODAS,stayed,2021,2023,0.1099,4690,3117,regex_only,regex_only
+024910,LWSA S/A (Locaweb),dropped_or_delisted,2018,2019,0.2697,67958,2969,font_heading,font_heading
+024910,LWSA S/A (Locaweb),dropped_or_delisted,2019,2020,0.5368,2969,5682,font_heading,font_heading
+024910,LWSA S/A (Locaweb),dropped_or_delisted,2020,2021,0.937,5682,5423,font_heading,font_heading
+024910,LWSA S/A (Locaweb),dropped_or_delisted,2021,2022,0.9485,5423,4388,font_heading,font_heading
+024910,LWSA S/A (Locaweb),dropped_or_delisted,2022,2023,0.9363,4388,4513,font_heading,font_heading
+024910,LWSA S/A (Locaweb),dropped_or_delisted,2023,2024,0.9784,4513,4671,font_heading,font_heading
+024929,TIM,stayed,2018,2019,0.8827,6181,6103,font_heading,font_heading
+024929,TIM,stayed,2019,2020,0.7007,6103,7270,font_heading,font_heading
+024929,TIM,stayed,2020,2021,0.7959,7270,6616,font_heading,font_heading
+024929,TIM,stayed,2021,2022,0.8403,6616,4707,font_heading,font_heading
+024929,TIM,stayed,2022,2023,0.8813,4707,3885,font_heading,font_heading
+024929,TIM,stayed,2023,2024,0.9042,3885,3870,font_heading,font_heading
+025011,Grupo de Moda Soma S.A.,dropped_or_delisted,2021,2022,0.0631,5675,6068,regex_only,regex_only
+025100,CURY S/A,stayed,2019,2020,0.9395,4120,4327,font_heading,font_heading
+025100,CURY S/A,stayed,2020,2021,0.0893,4327,1984,font_heading,regex_only
+025100,CURY S/A,stayed,2021,2022,0.0957,1984,7435,regex_only,font_heading
+025100,CURY S/A,stayed,2022,2023,0.4275,7435,44162,font_heading,font_heading
+025100,CURY S/A,stayed,2023,2024,0.1747,44162,940,font_heading,regex_only
+025232,Meliuz S.A.,dropped_or_delisted,2021,2022,0.8003,5482,5858,regex_only,regex_only
+025232,Meliuz S.A.,dropped_or_delisted,2022,2023,0.8524,5858,5196,regex_only,regex_only
+025291,BRAVA,stayed,2020,2021,0.8887,1860,3944,font_heading,font_heading
+025291,BRAVA,stayed,2021,2022,0.068,3944,3720,font_heading,regex_only
+025291,BRAVA,stayed,2022,2023,0.0886,3720,775,regex_only,regex_only
+025291,BRAVA,stayed,2023,2024,0.0142,775,475,regex_only,font_heading
+025372,ASSAI,stayed,2019,2020,0.0172,93,8890,font_heading,regex_only
+025372,ASSAI,stayed,2020,2021,0.0257,8890,60,regex_only,font_heading
+025372,ASSAI,stayed,2021,2022,0.2012,60,368,font_heading,font_heading
+025372,ASSAI,stayed,2022,2023,0.0416,368,15900,font_heading,regex_only
+025372,ASSAI,stayed,2023,2024,0.9457,15900,16196,regex_only,regex_only
+025585,CSNMINERACAO,stayed,2020,2021,0.1505,639,3901,regex_only,font_heading
+025585,CSNMINERACAO,stayed,2021,2022,0.481,3901,1047,font_heading,font_heading
+025585,CSNMINERACAO,stayed,2022,2023,0.4603,1047,3366,font_heading,font_heading
+025585,CSNMINERACAO,stayed,2023,2024,0.7517,3366,2724,font_heading,font_heading
+025780,PETRORECSA,stayed,2020,2021,0.2681,7853,7351,regex_only,font_heading
+025780,PETRORECSA,stayed,2021,2022,0.6204,7351,4742,font_heading,font_heading
+025780,PETRORECSA,stayed,2022,2023,0.2081,4742,1694,font_heading,regex_only
+025780,PETRORECSA,stayed,2023,2024,0.152,1694,9797,regex_only,font_heading
+025917,Raízen S.A.,dropped_or_delisted,2020,2021,0.1887,4966,1964,font_heading,regex_only
+025917,Raízen S.A.,dropped_or_delisted,2021,2022,0.3092,1964,1483,regex_only,regex_only
+025917,Raízen S.A.,dropped_or_delisted,2022,2023,0.04,1483,459,regex_only,regex_only
+025917,Raízen S.A.,dropped_or_delisted,2023,2024,0.368,459,14625,regex_only,font_heading
+026620,AUREN,stayed,2021,2022,0.0982,14836,7412,regex_only,font_heading
+026620,AUREN,stayed,2022,2023,0.5028,7412,7899,font_heading,font_heading
+026620,AUREN,stayed,2023,2024,0.6502,7899,11325,font_heading,font_heading
+027707,Automob Participações S.A.,dropped_or_delisted,2023,2024,0.1662,8497,5514,regex_only,regex_only

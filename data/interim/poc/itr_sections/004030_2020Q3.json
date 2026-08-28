@@ -1,0 +1,9 @@
+{
+  "cd_cvm": "004030",
+  "name": "CIA SIDERURGICA NACIONAL",
+  "quarter": "2020Q3",
+  "diagnostic": "regex_only",
+  "heading": "Captações empréstimos e financiamentos",
+  "n_total_lines": 1436,
+  "text": "Captações empréstimos e financiamentos\n943.860\n510.718\nAmortização empréstimos - principal\n(2.346.349)                   (610.101)\nCusto de Captação de empréstimos\n(16.751)                     (10.041)\nAmortização de arrendamento\n(24.924)                     (26.564)\nDividendos e juros sobre capital próprio pagos\n(134.751)                             (34)\nVariação Cambial sobre caixa e equivalentes de Caixa\n(5.214)\n(12.261)\nAumento (Redução) do Caixa e Equivalentes de Caixa\n1.510.876\n932.414\nCaixa e equivalentes de caixa no início do período\n4.213.552\n3.281.138\nCaixa e equivalentes de caixa no fim do período\n5.724.428\n4.213.552"
+}

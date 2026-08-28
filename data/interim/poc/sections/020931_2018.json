@@ -1,0 +1,9 @@
+{
+  "cd_cvm": "020931",
+  "name": "MINERVA",
+  "year": 2018,
+  "diagnostic": "regex_only",
+  "heading": "Empréstimos e financiamentos liquidados",
+  "n_total_lines": 2659,
+  "text": "Empréstimos e financiamentos liquidados\n-1.716.233\n-722.006\n-798.662\n-3.732.765\n-3.156.879\nVariação na participação de não controladores\n0\n0\n0\n0\n-1.444\nIntegralização do capital em dinheiro\n964.725\n0\n15.680\n980.405\n0\nDividendos\n0\n0\n0\n0\n-11.433\nAções em tesouraria\n0\n-20.947\n0\n-4.489\n-163.914\nFluxo de caixa proveniente de atividades de financiamento\n-300.989\n816.720\n-323.815\n-606.106\n1.205.348\nVariação cambial sobre caixa e equivalente de caixa\n227.903\n-7.697\n-62.282\n54.956\n40.459\nAumento/Redução líquido de caixa e equivalente de caixa\n223.719\n607.651\n-25.698\n589.643\n409.472\nCaixa e equivalentes de caixa\nNo início do período\n4.173.266\n3.199.691\n4.198.964\n3.807.342\n3.397.870\nNo fim do período\n4.396.985\n3.807.342\n4.173.266\n4.396.985\n3.807.342\nAumento/Redução líquido de caixa e equivalente de caixa\n223.719\n607.651\n-25.698\n589.643\n409.472\n023\nANEXO 4 – CÂMBIO\n(USD - Fechamento)\nBrasil (BRL/USD)\n3,87\n4,05\n3,88\n3,31\n3,31\nParaguai (PYG/USD)\n5.963,90\n5.895,80\n5.693,20\n5.548,30\n5.588,00\nUruguai (UYU/USD)\n32,40\n33,28\n31,49\n28,39\n28,74\nArgentina (ARG/USD)\n37,67\n41,30\n28,94\n20,15\n18,62\nColômbia (COP/USD)\n3.249,75\n2.964,75\n2.932,13\n2.795,03\n2.985,78"
+}

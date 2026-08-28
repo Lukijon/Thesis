@@ -2,8 +2,8 @@
   "cd_cvm": "004820",
   "name": "BRASKEM",
   "year": 2020,
-  "diagnostic": "not_found",
-  "heading": null,
+  "diagnostic": "regex_only",
+  "heading": "Debêntures",
   "n_total_lines": 3433,
-  "text": ""
+  "text": "Debêntures\n182\n228\n-20%\nDerivativos\n559\n170\nImposto de renda e contribuição social\n576\n-\nTributos a Recolher\n1\n129\n-99%\nProvisão de gastos Alagoas\n4.826\n1.933\n150%\nMútuo de acionista não controlador na Braskem Idesa\n3.222\n2.396\n35%\nImposto de renda e contribuição social diferidos\n1.234\n273\nBenefícios pós emprego\n472\n389\n21%\nAdiantamentos de Clientes\n382\n-\nContingências\n1.151\n1.152\n0%\nAcordo de Leniência\n1.077\n1.380\n-22%\nProvisões Diversas\n512\n302\n69%\nOutras Obrigações\n235\n134\n76%\nArrendamento Mercantil\n2.313\n2.001\n16%\nPatrimônio Líquido\n(3.867)\n3.945\nCapital Social\n8.043\n8.043\n0%\nReserva de Capital\n-\n232\n-100%\nReservas de Lucros\n(0)\n1.905\nÁgio na aquisição de controlada sob controle comum\n(488)\n(488)\n0%\nOutros resultados abrangentes\n(5.178)\n(4.758)\n9%\nAções em Tesouraria\n(50)\n(50)\n0%\nLucros Acumulados\n(4.530)\n0\nTotal Atribuível ao Acionista da Companhia\n(2.202)\n4.885\nParticipação de Acionistas não Controladores em Controladas\n(1.664)\n(941)\n77%\nTotal do Passivo e PL\n86.084\n68.129\n26%\nATIVO (R$ milhões)\nPASSIVO E P.L. (R$ milhões)"
 }

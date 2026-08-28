@@ -2,8 +2,8 @@
   "cd_cvm": "009512",
   "name": "PETROBRAS",
   "year": 2019,
-  "diagnostic": "not_found",
-  "heading": null,
+  "diagnostic": "font_heading",
+  "heading": "Aquisição de debêntures de sua emissão",
   "n_total_lines": 1902,
-  "text": ""
+  "text": "Aquisição de debêntures de sua emissão\nInformamos que no último exercício social não houve aquisição de debêntures de nossa emissão, por valor\nigual ou inferior ao nominal."
 }

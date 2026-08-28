@@ -117,18 +117,69 @@ def _repeated_lines(lines: list[Line]) -> set[str]:
     return {text for text, pages in pages_by_text.items() if len(pages) >= threshold}
 
 
+# Some filers (found via corpus-wide diagnostic breakdown: Gerdau, Sid
+# Nacional and others show 0% font_heading across every year checked) never
+# elevate note-heading font size above body text at all -- the heading is
+# distinguished from body text only by being bold *and* either ALL-CAPS
+# ("NOTA 13 - EMPRÉSTIMOS E FINANCIAMENTOS", same 9.9pt as body) or a
+# numbered prefix ("18. Empréstimos e financiamentos", Marfrig, same 12pt as
+# body). Confirmed by direct inspection of these filers' actual line data
+# before adding this, not guessed at. A same-size heading still needs to be
+# bold and keyword-bearing like any other candidate -- this only widens
+# *which* same-size lines are eligible, it doesn't relax the other checks
+# (debt-keyword score, impurity tie-break) that keep false positives down.
+NUMBERED_PREFIX_RE = re.compile(r"^\(?\d{1,3}\)?[.\-–—]\s")
+
+# Toggle for isolated before/after measurement of this specific fix against
+# the corpus (see eval_note_locator.py) -- always True in normal use.
+ENABLE_SAME_SIZE_HEADING = True
+
+
 def _is_heading_shaped(line: Line, body_size: float, boilerplate: set[str]) -> bool:
-    return (
+    base = (
         len(line.text) < MAX_HEADING_LEN
-        and line.bold
-        and line.size >= body_size + SIZE_MARGIN
         and _looks_substantive(line.text)
         and line.text.strip().lower() not in boilerplate
     )
+    if not base:
+        return False
+    size_elevated = line.size >= body_size + SIZE_MARGIN
+    if line.bold and size_elevated:
+        return True
+    if not ENABLE_SAME_SIZE_HEADING:
+        return False
+    is_upper = line.text.isupper()
+    has_number_prefix = bool(NUMBERED_PREFIX_RE.match(line.text.strip()))
+    if line.bold and (is_upper or has_number_prefix):
+        return True
+    # Found empirically (companies 020770, 024260): some filers style
+    # headings as ALL-CAPS + numbered with no bold at all -- e.g. "11.
+    # EMPRÉSTIMOS E FINANCIAMENTOS", not bold, same size as body text.
+    # Not bold on its own is too weak a signal (way too much body text
+    # qualifies), so this only fires when BOTH caps and numbering agree.
+    if (not line.bold) and is_upper and has_number_prefix:
+        return True
+    return False
+
+
+def _has_qualifying_keywords(text: str) -> bool:
+    """"Debênture" alone is an unambiguous heading signal -- unlike
+    "empréstimo"/"financiamento" alone, which also show up in unrelated
+    headings (e.g. "Fluxo de caixa de atividades de financiamento", a cash-
+    flow-statement line; "Empréstimos a Empregados", employee loans). Found
+    empirically: company 022187 titles its note plainly "Debêntures" with no
+    "Empréstimos e Financiamentos" heading anywhere, so the normal 2-stem
+    requirement never matched it at all.
+    """
+    normalized = _strip_accents(text).lower()
+    stems_present = {s for s in KEYWORD_STEMS if s in normalized}
+    if "debenture" in stems_present:
+        return True
+    return len(stems_present) >= 2
 
 
 def _is_debt_heading_candidate(line: Line, body_size: float, boilerplate: set[str]) -> bool:
-    return _is_heading_shaped(line, body_size, boilerplate) and _debt_keyword_score(line.text) >= 2
+    return _is_heading_shaped(line, body_size, boilerplate) and _has_qualifying_keywords(line.text)
 
 
 BARE_NUMBER_RE = re.compile(r"^\(?(\d{1,3})\)?\.?$")
@@ -180,6 +231,40 @@ def _toc_region_lines(lines: list[Line]) -> set[int]:
     return toc_indices
 
 
+def _bookmark_section(lines: list[Line], bookmarks: list[tuple[int, str, int]]) -> "NoteSection | None":
+    """If the PDF has a native outline/bookmark entry mentioning debt
+    keywords, use it directly: far more precise than inferring boundaries
+    from font styling, since it's an explicit navigational entry the filer's
+    own software generated. The section runs from that entry's page to the
+    next bookmark entry at any level (empirically ~5% of currently-
+    unreliable filings have any outline at all, so this is a small but
+    strictly additive win, checked before falling back to font/regex).
+    """
+    candidates = [
+        i for i, (_, title, page) in enumerate(bookmarks) if page and page > 0 and _debt_keyword_score(title) >= 1
+    ]
+    if not candidates:
+        return None
+    idx = candidates[0]
+    _, title, page = bookmarks[idx]
+    start_page = page - 1  # get_toc() pages are 1-indexed; Line.page is 0-indexed
+    end_page = None
+    for _, _, p in bookmarks[idx + 1 :]:
+        if p and p - 1 > start_page:
+            end_page = p - 1
+            break
+    section_lines = [l for l in lines if l.page >= start_page and (end_page is None or l.page < end_page)]
+    if not section_lines:
+        return None
+    return NoteSection(
+        text="\n".join(l.text for l in section_lines),
+        diagnostic="font_heading",  # as precisely bounded as the font-heading tier, if not more so
+        start_line=None,
+        end_line=None,
+        heading=title,
+    )
+
+
 @dataclass
 class NoteSection:
     text: str
@@ -229,9 +314,14 @@ def _next_heading_boundary(
 MAX_CONTINUATION_NOTES = 3  # cap on how many adjacent debt-related notes to merge
 
 
-def locate_note_section(lines: list[Line]) -> NoteSection:
+def locate_note_section(lines: list[Line], bookmarks: list[tuple[int, str, int]] | None = None) -> NoteSection:
     if not lines:
         return NoteSection(text="", diagnostic="not_found", start_line=None, end_line=None, heading=None)
+
+    if bookmarks:
+        bookmark_result = _bookmark_section(lines, bookmarks)
+        if bookmark_result is not None:
+            return bookmark_result
 
     body_size = _body_size(lines)
     boilerplate = _repeated_lines(lines)
@@ -291,7 +381,7 @@ def locate_note_section(lines: list[Line]) -> NoteSection:
         # guess is the last short keyword mention, since earlier ones tend
         # to be table-of-contents/cross-references. No structural signal
         # for where the section ends, so cap it at a fixed window.
-        weak_candidates = [i for i, l in enumerate(lines) if len(l.text) < MAX_HEADING_LEN and _debt_keyword_score(l.text) >= 2]
+        weak_candidates = [i for i, l in enumerate(lines) if len(l.text) < MAX_HEADING_LEN and _has_qualifying_keywords(l.text)]
         if not weak_candidates:
             return NoteSection(text="", diagnostic="not_found", start_line=None, end_line=None, heading=None)
         start_idx = weak_candidates[-1]
