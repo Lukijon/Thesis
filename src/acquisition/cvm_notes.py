@@ -65,6 +65,16 @@ def looks_like_statements_attachment(filename: str) -> bool:
 # Attachment types that are never the financial statements, used to keep the
 # largest-attachment fallback from grabbing one of these instead (e.g. a
 # Management Report is often bigger than a shorter "Minuta" statements draft).
+#
+# "_er_"/"earnings release"/"resultados" added after finding real contaminated
+# cases in the whole-notes-document POC (2026-08): the fallback tier picked an
+# earnings-release PDF instead of the actual statements for ~4% of filings --
+# e.g. Magazine Luiza 2022's filename was literally "MGLU_ER_4T22_POR.pdf".
+# Confirmed by reading the extracted text, not guessed at -- see
+# reports/wholenote_data_quality_correction.md for the full investigation.
+# This filename check only catches cases with a descriptive filename; legacy-
+# era filings with opaque temp-file names (no filename signal at all) need
+# the content-based check in `looks_like_earnings_release_text` instead.
 NON_STATEMENT_KEYWORDS = [
     "relatorio da administracao",
     "administracao",
@@ -74,12 +84,37 @@ NON_STATEMENT_KEYWORDS = [
     "sustentabil",
     "comentarios",
     "ata de reuniao",
+    "_er_",
+    "earnings release",
+    "release de resultados",
+    "divulgacao de resultados",
 ]
 
 
 def looks_like_non_statement_attachment(filename: str) -> bool:
     normalized = _strip_accents(filename).lower()
     return any(kw in normalized for kw in NON_STATEMENT_KEYWORDS)
+
+
+EARNINGS_RELEASE_TEXT_RE = re.compile(
+    r"(?i)divulga[cç][aã]o de resultados|release de resultados|teleconfer[eê]ncia|"
+    r"earnings release|resultados do \d[ºo] trimestre"
+)
+
+
+def looks_like_earnings_release_text(first_page_text: str) -> bool:
+    """Content-based fallback for opaque legacy filenames (e.g.
+    "C:\\CVM\\EmpresasNet\\Temp\\files\\00125016530000000000000000.pdf.pdf")
+    that carry no usable filename signal at all -- an earnings-release PDF
+    still starts with recognizable boilerplate ("Divulgação de Resultados",
+    "Teleconferência...") even with no descriptive filename. Intended to be
+    checked against the first page of any `largest_attachment_fallback`
+    candidate before it's trusted; not yet wired into the fallback-selection
+    path itself (would need re-running acquisition against the already-
+    cached filing zips -- no new downloads required, but out of scope for
+    this pass; see the correction doc for why that wasn't done automatically).
+    """
+    return bool(EARNINGS_RELEASE_TEXT_RE.search(first_page_text))
 
 
 @dataclass

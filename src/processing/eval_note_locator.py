@@ -19,6 +19,7 @@ import sys
 from concurrent.futures import ProcessPoolExecutor, as_completed
 from pathlib import Path
 
+from src.acquisition.cvm_notes import looks_like_earnings_release_text
 from src.processing.locate_note_section import locate_note_section
 from src.processing.pdf_text import Line, extract_bookmarks, extract_lines, lines_to_dicts
 
@@ -103,6 +104,24 @@ def build_bookmarks_cache(force: bool = False) -> None:
         if i % 100 == 0 or i == len(items):
             print(f"  [{i}/{len(items)}] cached")
     print("done")
+
+
+def is_wrong_attachment(cd_cvm: int | str, year: int, n_lines_to_check: int = 15) -> bool | None:
+    """Whether this company-year's cached lines look like an earnings-release
+    document instead of the real financial statements (see
+    reports/wholenote_data_quality_correction.md) -- checked against the
+    first few lines, where that boilerplate reliably appears. Returns None
+    if there's no cached extraction for this company-year at all.
+    """
+    key = f"dfp_{int(cd_cvm):06d}_{int(year)}"
+    cache_path = LINES_CACHE / f"{key}.json"
+    if not cache_path.exists():
+        return None
+    lines = load_cached_lines(key)
+    if not lines:
+        return None
+    first_text = " ".join(l.text for l in lines[:n_lines_to_check])
+    return looks_like_earnings_release_text(first_text)
 
 
 def load_cached_bookmarks(key: str) -> list[tuple[int, str, int]]:
