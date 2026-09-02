@@ -1,0 +1,994 @@
+CD_CVM,ANO,ID_DOC,found,tier,files,DENOM_CIA
+25291,2019,96710,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\25291\\2019\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV16000\\Temp\\files\\00130116530000000000000000.pdf.pdf', 'size_bytes': 638398}]",3R PETROLEUM ÓLEO E GÁS S.A.
+22357,2015,53830,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\22357\\2015\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00121316530000000000000000.pdf.pdf', 'size_bytes': 156447}]",ALLOS S.A.
+22357,2016,62921,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\22357\\2016\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00121516530000000000000000.pdf.pdf', 'size_bytes': 49651}]",ALLOS S.A.
+22357,2017,72215,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\22357\\2017\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00121516530000000000000000.pdf.pdf', 'size_bytes': 291384}]",ALLOS S.A.
+22357,2018,82088,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\22357\\2018\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV14000\\Temp\\files\\00121516530000000000000000.pdf.pdf', 'size_bytes': 69004}]",ALLOS S.A.
+22357,2019,91493,False,not_found,[],ALLOS S.A.
+22357,2020,100818,False,not_found,[],ALLOS S.A.
+22357,2021,113219,False,not_found,[],ALLOS S.A.
+22357,2022,124844,False,not_found,[],ALLOS S.A.
+22357,2023,134911,False,not_found,[],ALLOS S.A.
+22357,2024,145461,False,not_found,[],ALLOS S.A.
+23264,2015,53611,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\23264\\2015\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00124616530000000000000000.pdf.pdf', 'size_bytes': 213598}]",AMBEV S.A.
+23264,2016,76263,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\23264\\2016\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV13\\Temp\\files\\00125816530000000000000000.pdf.pdf', 'size_bytes': 217415}]",AMBEV S.A.
+23264,2017,76265,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\23264\\2017\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV13\\Temp\\files\\00125916530000000000000000.pdf.pdf', 'size_bytes': 212101}]",AMBEV S.A.
+23264,2018,80947,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\23264\\2018\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV14000\\Temp\\files\\00121216530000000000000000.pdf.pdf', 'size_bytes': 380683}]",AMBEV S.A.
+23264,2019,91199,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\23264\\2019\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV15002\\Temp\\files\\00123216530000000000000000.pdf.pdf', 'size_bytes': 369566}]",AMBEV S.A.
+23264,2020,100436,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\23264\\2020\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV17000\\Temp\\files\\00122116530000000000000000.pdf.pdf', 'size_bytes': 1006601}]",AMBEV S.A.
+23264,2021,112011,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\23264\\2021\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV17001\\Temp\\files\\00124016530000000000000000.pdf.pdf', 'size_bytes': 1152799}]",AMBEV S.A.
+23264,2022,123818,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\23264\\2022\\relatorio_administracao.pdf', 'original_filename': '1 - Relatório da administração 2022.pdf', 'size_bytes': 1160105}]",AMBEV S.A.
+23264,2023,134335,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\23264\\2023\\relatorio_administracao.pdf', 'original_filename': '1 - Relatório da administração 2023.pdf', 'size_bytes': 526222}]",AMBEV S.A.
+23264,2024,145022,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\23264\\2024\\relatorio_administracao.pdf', 'original_filename': '1 - Relatório da administração 2024.pdf', 'size_bytes': 724034}]",AMBEV S.A.
+26620,2021,113048,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\26620\\2021\\relatorio_administracao.pdf', 'original_filename': 'RELATÓRIO DA ADMINISTRAÇÃO VTRM_2021_27.03.2022_final.pdf', 'size_bytes': 169503}]",AUREN ENERGIA S.A.
+26620,2022,123594,False,not_found,[],AUREN ENERGIA S.A.
+26620,2023,133972,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\26620\\2023\\relatorio_administracao.pdf', 'original_filename': 'Relatório da Administração Auren 2023_vf.pdf', 'size_bytes': 1077491}]",AUREN ENERGIA S.A.
+26620,2024,144969,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\26620\\2024\\relatorio_administracao.pdf', 'original_filename': 'Relatório da Administração Auren Energia_2024_21022025.pdf', 'size_bytes': 2405764}]",AUREN ENERGIA S.A.
+2437,2022,124141,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\2437\\2022\\relatorio_administracao.pdf', 'original_filename': 'Relatório da Administração 2022.pdf', 'size_bytes': 2586050}]",AXIA ENERGIA S.A.
+2437,2023,137285,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\2437\\2023\\relatorio_administracao.pdf', 'original_filename': 'Relatório da Administração 2023.pdf', 'size_bytes': 4164363}]",AXIA ENERGIA S.A.
+2437,2024,145424,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\2437\\2024\\relatorio_administracao.pdf', 'original_filename': 'Relatório de Administração 2024 - Eletrobras_final_pareceres_CAE (1).pdf', 'size_bytes': 2038989}]",AXIA ENERGIA S.A.
+22349,2015,53767,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\22349\\2015\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00122016530000000000000000.pdf.pdf', 'size_bytes': 608436}]",AZZAS 2154 S.A.
+22349,2016,62971,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\22349\\2016\\relatorio_administracao.pdf', 'original_filename': 'C:\\Program Files (x86)\\CVM\\EmpresasNet\\Temp\\files\\00122416530000000000000000.pdf.pdf', 'size_bytes': 497883}]",AZZAS 2154 S.A.
+22349,2017,72053,False,not_found,[],AZZAS 2154 S.A.
+22349,2018,80780,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\22349\\2018\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV14000\\Temp\\files\\00123916530000000000000000.pdf.pdf', 'size_bytes': 820299}]",AZZAS 2154 S.A.
+22349,2019,92868,False,not_found,[],AZZAS 2154 S.A.
+22349,2020,100689,False,not_found,[],AZZAS 2154 S.A.
+22349,2021,112444,False,not_found,[],AZZAS 2154 S.A.
+22349,2022,125277,False,not_found,[],AZZAS 2154 S.A.
+22349,2023,134550,False,not_found,[],AZZAS 2154 S.A.
+22349,2024,145319,False,not_found,[],AZZAS 2154 S.A.
+18724,2015,54217,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\18724\\2015\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00122716530000000000000000.pdf.pdf', 'size_bytes': 541214}]",BRADESPAR S.A.
+18724,2016,63373,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\18724\\2016\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00124716530000000000000000.pdf.pdf', 'size_bytes': 476665}]",BRADESPAR S.A.
+18724,2017,72464,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\18724\\2017\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00123816530000000000000000.pdf.pdf', 'size_bytes': 471333}]",BRADESPAR S.A.
+18724,2018,81696,False,not_found,[],BRADESPAR S.A.
+18724,2019,91842,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\18724\\2019\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV15002\\Temp\\files\\00121116530000000000000000.pdf.pdf', 'size_bytes': 993250}]",BRADESPAR S.A.
+18724,2020,102213,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\18724\\2020\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV17000\\Temp\\files\\00121916530000000000000000.pdf.pdf', 'size_bytes': 948465}]",BRADESPAR S.A.
+18724,2021,113117,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\18724\\2021\\relatorio_administracao.pdf', 'original_filename': 'Rel Adm_4T_21_V3 LIMPA_sem dividendos.pdf', 'size_bytes': 555757}]",BRADESPAR S.A.
+18724,2022,124650,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\18724\\2022\\relatorio_administracao.pdf', 'original_filename': 'Rel Adm_4T_22 V6 Limpa.pdf', 'size_bytes': 943703}]",BRADESPAR S.A.
+18724,2023,135181,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\18724\\2023\\relatorio_administracao.pdf', 'original_filename': 'Rel Adm_4T_23 V2 Limpa.pdf', 'size_bytes': 663992}]",BRADESPAR S.A.
+18724,2024,145726,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\18724\\2024\\relatorio_administracao.pdf', 'original_filename': 'Versão Final.pdf', 'size_bytes': 582722}]",BRADESPAR S.A.
+4820,2015,53451,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\4820\\2015\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00122816530000000000000000.pdf.pdf', 'size_bytes': 947743}]",BRASKEM S.A.
+4820,2016,68264,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\4820\\2016\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00123616530000000000000000.pdf.pdf', 'size_bytes': 814552}]",BRASKEM S.A.
+4820,2017,72881,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\4820\\2017\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00124116530000000000000000.pdf.pdf', 'size_bytes': 868818}]",BRASKEM S.A.
+4820,2018,81173,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\4820\\2018\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV14000\\Temp\\files\\00122116530000000000000000.pdf.pdf', 'size_bytes': 882890}]",BRASKEM S.A.
+4820,2019,92224,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\4820\\2019\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV16000\\Temp\\files\\00121516530000000000000000.pdf.pdf', 'size_bytes': 1196185}]",BRASKEM S.A.
+4820,2020,100840,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\4820\\2020\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV17000\\Temp\\files\\00122416530000000000000000.pdf.pdf', 'size_bytes': 2325249}]",BRASKEM S.A.
+4820,2021,112600,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\4820\\2021\\relatorio_administracao.pdf', 'original_filename': 'RA_2021_PORT_16032022_Slim.pdf', 'size_bytes': 1421518}]",BRASKEM S.A.
+4820,2022,124488,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\4820\\2022\\relatorio_administracao.pdf', 'original_filename': 'RA_2022_PORT_22032023.pdf', 'size_bytes': 2103665}]",BRASKEM S.A.
+4820,2023,139362,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\4820\\2023\\relatorio_administracao.pdf', 'original_filename': 'RA_2023_PORT_20240318_slim.pdf', 'size_bytes': 2321676}]",BRASKEM S.A.
+4820,2024,145080,False,not_found,[],BRASKEM S.A.
+25291,2020,101006,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\25291\\2020\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV17000\\Temp\\files\\00121704120000000000000000.pdf.pdf', 'size_bytes': 1111360}]",BRAVA ENERGIA S.A.
+25291,2021,111958,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\25291\\2021\\relatorio_administracao.pdf', 'original_filename': 'Notas Explicativas.pdf', 'size_bytes': 1420561}]",BRAVA ENERGIA S.A.
+25291,2022,123994,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\25291\\2022\\relatorio_administracao.pdf', 'original_filename': 'DF 3ROG - 2022 Anual_Final.pdf', 'size_bytes': 891150}]",BRAVA ENERGIA S.A.
+25291,2023,134516,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\25291\\2023\\relatorio_administracao.pdf', 'original_filename': 'DF 3ROG - 2023_PT - Sem quadros.pdf', 'size_bytes': 1099044}]",BRAVA ENERGIA S.A.
+25291,2024,145612,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\25291\\2024\\relatorio_administracao.pdf', 'original_filename': 'Notas explicativas_DF Brava - 4T24 v9.5.pdf', 'size_bytes': 1423238}]",BRAVA ENERGIA S.A.
+24848,2018,87072,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\24848\\2018\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV15000\\Temp\\files\\00121316530000000000000000.pdf.pdf', 'size_bytes': 407858}]",C&A MODAS S.A.
+24848,2019,91737,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\24848\\2019\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV15002\\Temp\\files\\00121216530000000000000000.pdf.pdf', 'size_bytes': 165067}]",C&A MODAS S.A.
+24848,2020,102056,False,not_found,[],C&A MODAS S.A.
+24848,2021,112425,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\24848\\2021\\relatorio_administracao.pdf', 'original_filename': '20220310_Relatório da Aministração.pdf', 'size_bytes': 797021}]",C&A MODAS S.A.
+24848,2022,123795,False,not_found,[],C&A MODAS S.A.
+24848,2023,134324,False,not_found,[],C&A MODAS S.A.
+24848,2024,145051,False,not_found,[],C&A MODAS S.A.
+18821,2015,53651,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\18821\\2015\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00135716530000000000000000.pdf.pdf', 'size_bytes': 118535}]",CCR S.A.
+18821,2016,62916,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\18821\\2016\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00122316530000000000000000.pdf.pdf', 'size_bytes': 259541}]",CCR S.A.
+18821,2017,71809,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\18821\\2017\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00124516530000000000000000.pdf.pdf', 'size_bytes': 253128}]",CCR S.A.
+18821,2018,81414,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\18821\\2018\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV14000\\Temp\\files\\00121116530000000000000000.pdf.pdf', 'size_bytes': 530608}]",CCR S.A.
+18821,2019,91386,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\18821\\2019\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV16000\\Temp\\files\\00121616530000000000000000.pdf.pdf', 'size_bytes': 438048}]",CCR S.A.
+18821,2020,100683,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\18821\\2020\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV17000\\Temp\\files\\00124016530000000000000000.pdf.pdf', 'size_bytes': 274079}]",CCR S.A.
+2437,2015,54894,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\2437\\2015\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00121916530000000000000000.pdf.pdf', 'size_bytes': 5571417}]",CENTRAIS ELET BRAS S.A. - ELETROBRAS
+2437,2016,63647,False,not_found,[],CENTRAIS ELET BRAS S.A. - ELETROBRAS
+2437,2017,72695,False,not_found,[],CENTRAIS ELET BRAS S.A. - ELETROBRAS
+2437,2018,81620,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\2437\\2018\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV14000\\Temp\\files\\00123816530000000000000000.pdf.pdf', 'size_bytes': 4691045}]",CENTRAIS ELET BRAS S.A. - ELETROBRAS
+2437,2019,91942,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\2437\\2019\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV15002\\Temp\\files\\00124516530000000000000000.pdf.pdf', 'size_bytes': 5922423}]",CENTRAIS ELET BRAS S.A. - ELETROBRAS
+2437,2020,102103,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\2437\\2020\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV17000\\Temp\\files\\00122016530000000000000000.pdf.pdf', 'size_bytes': 8913527}]",CENTRAIS ELET BRAS S.A. - ELETROBRAS
+2437,2021,112739,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\2437\\2021\\relatorio_administracao.pdf', 'original_filename': 'Relatório da Administração e Demonstrações Financeiras 2021.pdf', 'size_bytes': 4703903}]",CENTRAIS ELET BRAS S.A. - ELETROBRAS
+2453,2015,60912,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\2453\\2015\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00125816530000000000000000.pdf.pdf', 'size_bytes': 1830154}]",CIA ENERGETICA DE MINAS GERAIS - CEMIG
+2453,2016,64232,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\2453\\2016\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00128816530000000000000000.pdf.pdf', 'size_bytes': 1244272}]",CIA ENERGETICA DE MINAS GERAIS - CEMIG
+2453,2017,72887,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\2453\\2017\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00125116530000000000000000.pdf.pdf', 'size_bytes': 1142018}]",CIA ENERGETICA DE MINAS GERAIS - CEMIG
+2453,2018,81934,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\2453\\2018\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV14000\\Temp\\files\\00126204190000000000000000.pdf.pdf', 'size_bytes': 316693}]",CIA ENERGETICA DE MINAS GERAIS - CEMIG
+2453,2019,92147,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\2453\\2019\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV16000\\Temp\\files\\00121116530000000000000000.pdf.pdf', 'size_bytes': 1731013}]",CIA ENERGETICA DE MINAS GERAIS - CEMIG
+2453,2020,102461,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\2453\\2020\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV17000\\Temp\\files\\00121516530000000000000000.pdf.pdf', 'size_bytes': 1709182}]",CIA ENERGETICA DE MINAS GERAIS - CEMIG
+2453,2021,113213,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\2453\\2021\\relatorio_administracao.pdf', 'original_filename': 'Relatório de administração e comentário de desempenho.pdf', 'size_bytes': 1537915}]",CIA ENERGETICA DE MINAS GERAIS - CEMIG
+2453,2022,124595,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\2453\\2022\\relatorio_administracao.pdf', 'original_filename': 'Cemig H DFP 2022 - Relatório da administração e comentário de desempenho.pdf', 'size_bytes': 1677594}]",CIA ENERGETICA DE MINAS GERAIS - CEMIG
+2453,2023,134993,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\2453\\2023\\relatorio_administracao.pdf', 'original_filename': 'Relatório de Administração.pdf', 'size_bytes': 1857839}]",CIA ENERGETICA DE MINAS GERAIS - CEMIG
+2453,2024,145624,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\2453\\2024\\relatorio_administracao.pdf', 'original_filename': 'Relatório da Administração.pdf', 'size_bytes': 2790040}]",CIA ENERGETICA DE MINAS GERAIS - CEMIG
+14311,2015,54155,False,not_found,[],CIA PARANAENSE DE ENERGIA - COPEL
+14311,2016,63723,False,not_found,[],CIA PARANAENSE DE ENERGIA - COPEL
+14311,2017,74522,False,not_found,[],CIA PARANAENSE DE ENERGIA - COPEL
+14311,2018,81731,False,not_found,[],CIA PARANAENSE DE ENERGIA - COPEL
+14311,2019,91838,False,not_found,[],CIA PARANAENSE DE ENERGIA - COPEL
+14311,2020,103444,False,not_found,[],CIA PARANAENSE DE ENERGIA - COPEL
+14311,2021,112827,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\14311\\2021\\relatorio_administracao.pdf', 'original_filename': 'Relatório da Administração 2021_HOL.pdf', 'size_bytes': 1276583}]",CIA PARANAENSE DE ENERGIA - COPEL
+14311,2022,124426,False,not_found,[],CIA PARANAENSE DE ENERGIA - COPEL
+14311,2023,134367,False,not_found,[],CIA PARANAENSE DE ENERGIA - COPEL
+14311,2024,145117,False,not_found,[],CIA PARANAENSE DE ENERGIA - COPEL
+14443,2015,54474,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\14443\\2015\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00124816530000000000000000.pdf.pdf', 'size_bytes': 616549}]",CIA SANEAMENTO BASICO EST SAO PAULO
+14443,2016,63644,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\14443\\2016\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00126816530000000000000000.pdf.pdf', 'size_bytes': 535154}]",CIA SANEAMENTO BASICO EST SAO PAULO
+14443,2017,72785,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\14443\\2017\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV13\\Temp\\files\\00121216530000000000000000.pdf.pdf', 'size_bytes': 654061}]",CIA SANEAMENTO BASICO EST SAO PAULO
+14443,2018,81733,False,not_found,[],CIA SANEAMENTO BASICO EST SAO PAULO
+14443,2019,91918,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\14443\\2019\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV15002\\Temp\\files\\00123916530000000000000000.pdf.pdf', 'size_bytes': 518879}]",CIA SANEAMENTO BASICO EST SAO PAULO
+14443,2020,102262,False,not_found,[],CIA SANEAMENTO BASICO EST SAO PAULO
+14443,2021,112960,False,not_found,[],CIA SANEAMENTO BASICO EST SAO PAULO
+14443,2022,124536,False,not_found,[],CIA SANEAMENTO BASICO EST SAO PAULO
+14443,2023,134989,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\14443\\2023\\relatorio_administracao.pdf', 'original_filename': '2024-03-21 - RA 2023 - Versão Final - v2.pdf', 'size_bytes': 440803}]",CIA SANEAMENTO BASICO EST SAO PAULO
+14443,2024,145844,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\14443\\2024\\relatorio_administracao.pdf', 'original_filename': 'Relatório da Administração.pdf', 'size_bytes': 831027}]",CIA SANEAMENTO BASICO EST SAO PAULO
+19445,2015,54029,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\19445\\2015\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00121804130000000000000000.doc.pdf', 'size_bytes': 231692}]",CIA SANEAMENTO DE MINAS GERAIS-COPASA MG
+19445,2016,63037,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\19445\\2016\\relatorio_administracao.pdf', 'original_filename': 'C:\\Program Files (x86)\\CVM\\EmpresasNet\\Temp\\files\\00122704120000000000000000.pdf.pdf', 'size_bytes': 1221299}]",CIA SANEAMENTO DE MINAS GERAIS-COPASA MG
+19445,2017,71739,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\19445\\2017\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00122316530000000000000000.pdf.pdf', 'size_bytes': 783053}]",CIA SANEAMENTO DE MINAS GERAIS-COPASA MG
+19445,2018,80985,False,not_found,[],CIA SANEAMENTO DE MINAS GERAIS-COPASA MG
+19445,2019,91684,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\19445\\2019\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV16000\\Temp\\files\\00121916530000000000000000.pdf.pdf', 'size_bytes': 543854}]",CIA SANEAMENTO DE MINAS GERAIS-COPASA MG
+19445,2020,102985,False,not_found,[],CIA SANEAMENTO DE MINAS GERAIS-COPASA MG
+19445,2021,116984,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\19445\\2021\\relatorio_administracao.pdf', 'original_filename': 'MENSAGEM  RELATORIO  DA ADMINISTRAÇÃO COMPLETO  2021_V27 .pdf', 'size_bytes': 1152314}]",CIA SANEAMENTO DE MINAS GERAIS-COPASA MG
+19445,2022,124409,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\19445\\2022\\relatorio_administracao.pdf', 'original_filename': 'Relatório da Administração_VFinal.pdf', 'size_bytes': 1144483}]",CIA SANEAMENTO DE MINAS GERAIS-COPASA MG
+19445,2023,134977,False,not_found,[],CIA SANEAMENTO DE MINAS GERAIS-COPASA MG
+19445,2024,145717,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\19445\\2024\\relatorio_administracao.pdf', 'original_filename': 'Relatório da Administração 2024 V15 nhf.pdf', 'size_bytes': 1199254}]",CIA SANEAMENTO DE MINAS GERAIS-COPASA MG
+4030,2015,60923,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\4030\\2015\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00122816530000000000000000.pdf.pdf', 'size_bytes': 516941}]",CIA SIDERURGICA NACIONAL
+4030,2016,69331,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\4030\\2016\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00121716530000000000000000.pdf.pdf', 'size_bytes': 390998}]",CIA SIDERURGICA NACIONAL
+4030,2017,73192,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\4030\\2017\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00121616530000000000000000.pdf.pdf', 'size_bytes': 375353}]",CIA SIDERURGICA NACIONAL
+4030,2018,80783,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\4030\\2018\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV14000\\Temp\\files\\00122616530000000000000000.pdf.pdf', 'size_bytes': 282736}]",CIA SIDERURGICA NACIONAL
+4030,2019,91368,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\4030\\2019\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV15002\\Temp\\files\\00121816530000000000000000.pdf.pdf', 'size_bytes': 275707}]",CIA SIDERURGICA NACIONAL
+4030,2020,100354,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\4030\\2020\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV16000\\Temp\\files\\00121116530000000000000000.pdf.pdf', 'size_bytes': 1167094}]",CIA SIDERURGICA NACIONAL
+4030,2021,112377,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\4030\\2021\\relatorio_administracao.pdf', 'original_filename': 'RELATÓRIO da ADMINISTRAÇÃO e RELEASE_FINAL.pdf', 'size_bytes': 1436418}]",CIA SIDERURGICA NACIONAL
+4030,2022,124211,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\4030\\2022\\relatorio_administracao.pdf', 'original_filename': 'CSN_ER_4T22 e 2022 Versão Contabilidade VFINAL 2 16032023.pdf', 'size_bytes': 2409490}]",CIA SIDERURGICA NACIONAL
+4030,2023,134513,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\4030\\2023\\relatorio_administracao.pdf', 'original_filename': '1- RA e Release.pdf', 'size_bytes': 2189257}]",CIA SIDERURGICA NACIONAL
+4030,2024,145354,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\4030\\2024\\relatorio_administracao.pdf', 'original_filename': '1-2 - R ADM.pdf', 'size_bytes': 4131305}]",CIA SIDERURGICA NACIONAL
+17973,2015,54054,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\17973\\2015\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00121716530000000000000000.pdf.pdf', 'size_bytes': 88131}]",COGNA EDUCAÇÃO S.A.
+17973,2016,63411,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\17973\\2016\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00122116530000000000000000.pdf.pdf', 'size_bytes': 390839}]",COGNA EDUCAÇÃO S.A.
+17973,2017,72338,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\17973\\2017\\relatorio_administracao.pdf', 'original_filename': 'C:\\Program Files (x86)\\CVM\\EmpresasNet\\Temp\\files\\00122916530000000000000000.pdf.pdf', 'size_bytes': 541390}]",COGNA EDUCAÇÃO S.A.
+17973,2018,85096,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\17973\\2018\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV14000\\Temp\\files\\00122016530000000000000000.pdf.pdf', 'size_bytes': 259414}]",COGNA EDUCAÇÃO S.A.
+17973,2019,92053,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\17973\\2019\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV15002\\Temp\\files\\00121216530000000000000000.pdf.pdf', 'size_bytes': 911411}]",COGNA EDUCAÇÃO S.A.
+17973,2020,102489,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\17973\\2020\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV17000\\Temp\\files\\00121716530000000000000000.pdf.pdf', 'size_bytes': 1657488}]",COGNA EDUCAÇÃO S.A.
+17973,2021,112952,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\17973\\2021\\relatorio_administracao.pdf', 'original_filename': '4. Relatório da Administração.pdf', 'size_bytes': 1047265}]",COGNA EDUCAÇÃO S.A.
+17973,2022,131083,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\17973\\2022\\relatorio_administracao.pdf', 'original_filename': 'Relatório da Administração - 4T22 (Cogna).pdf', 'size_bytes': 928221}]",COGNA EDUCAÇÃO S.A.
+17973,2023,134930,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\17973\\2023\\relatorio_administracao.pdf', 'original_filename': 'Relatório da Administração Cogna - 2023.pdf', 'size_bytes': 626708}]",COGNA EDUCAÇÃO S.A.
+17973,2024,145344,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\17973\\2024\\relatorio_administracao.pdf', 'original_filename': 'Relatório da Administração Cogna - 2024.pdf', 'size_bytes': 287285}]",COGNA EDUCAÇÃO S.A.
+19836,2015,53472,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\19836\\2015\\relatorio_administracao.pdf', 'original_filename': 'C:\\EMPRESASNET\\Disco1\\Temp\\files\\00121616530000000000000000.pdf.pdf', 'size_bytes': 117240}]",COSAN S.A.
+19836,2016,62582,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\19836\\2016\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00121916530000000000000000.pdf.pdf', 'size_bytes': 257286}]",COSAN S.A.
+19836,2017,72672,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\19836\\2017\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00121816530000000000000000.pdf.pdf', 'size_bytes': 797749}]",COSAN S.A.
+19836,2018,80687,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\19836\\2018\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV14000\\Temp\\files\\00121616530000000000000000.pdf.pdf', 'size_bytes': 1154190}]",COSAN S.A.
+19836,2019,90980,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\19836\\2019\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV15002\\Temp\\files\\00121116530000000000000000.pdf.pdf', 'size_bytes': 704088}]",COSAN S.A.
+19836,2020,100139,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\19836\\2020\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV17000\\Temp\\files\\00121916530000000000000000.pdf.pdf', 'size_bytes': 901288}]",COSAN S.A.
+19836,2021,112025,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\19836\\2021\\relatorio_administracao.pdf', 'original_filename': '2021_Relatório da Adm_CSAN_port.pdf', 'size_bytes': 238301}]",COSAN S.A.
+19836,2022,123768,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\19836\\2022\\relatorio_administracao.pdf', 'original_filename': '2022_Relatório da Adm_CSAN_port.pdf', 'size_bytes': 279618}]",COSAN S.A.
+19836,2023,138141,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\19836\\2023\\relatorio_administracao.pdf', 'original_filename': 'Relatorio da ADM.pdf', 'size_bytes': 847237}]",COSAN S.A.
+19836,2024,145271,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\19836\\2024\\relatorio_administracao.pdf', 'original_filename': 'Relatório da Administração.pdf', 'size_bytes': 806689}]",COSAN S.A.
+18660,2015,54212,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\18660\\2015\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00122216530000000000000000.pdf.pdf', 'size_bytes': 889256}]",CPFL ENERGIA S.A.
+18660,2016,63488,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\18660\\2016\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00122116530000000000000000.pdf.pdf', 'size_bytes': 850066}]",CPFL ENERGIA S.A.
+18660,2017,72757,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\18660\\2017\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00123416530000000000000000.pdf.pdf', 'size_bytes': 777904}]",CPFL ENERGIA S.A.
+18660,2018,81697,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\18660\\2018\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV14000\\Temp\\files\\00121816530000000000000000.pdf.pdf', 'size_bytes': 858221}]",CPFL ENERGIA S.A.
+18660,2019,91443,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\18660\\2019\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV15002\\Temp\\files\\00123616530000000000000000.pdf.pdf', 'size_bytes': 815046}]",CPFL ENERGIA S.A.
+18660,2020,102515,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\18660\\2020\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV17000\\Temp\\files\\00121716530000000000000000.docx.pdf', 'size_bytes': 1139230}]",CPFL ENERGIA S.A.
+18660,2021,112650,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\18660\\2021\\relatorio_administracao.pdf', 'original_filename': 'Rel.ADM.pdf', 'size_bytes': 517739}]",CPFL ENERGIA S.A.
+18660,2022,124256,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\18660\\2022\\relatorio_administracao.pdf', 'original_filename': '01_CPFL Energia_RelAdm2022 _vfinal (003).pdf', 'size_bytes': 742035}]",CPFL ENERGIA S.A.
+18660,2023,134981,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\18660\\2023\\relatorio_administracao.pdf', 'original_filename': '01_CPFL Energia_RelAdm2023_v5.pdf', 'size_bytes': 910622}]",CPFL ENERGIA S.A.
+18660,2024,145056,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\18660\\2024\\relatorio_administracao.pdf', 'original_filename': '01_CPFL Energia_RelAdm_2024.pdf', 'size_bytes': 689753}]",CPFL ENERGIA S.A.
+25585,2019,97692,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\25585\\2019\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV17000\\Temp\\files\\00121616530000000000000000.pdf.pdf', 'size_bytes': 789296}]",CSN MINERAÇÃO S.A.
+25585,2020,100356,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\25585\\2020\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV16000\\Temp\\files\\00121416530000000000000000.pdf.pdf', 'size_bytes': 1130839}]",CSN MINERAÇÃO S.A.
+25585,2021,112369,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\25585\\2021\\relatorio_administracao.pdf', 'original_filename': 'Relatorio adm + Release - v7 090322 18h50.pdf', 'size_bytes': 1441548}]",CSN MINERAÇÃO S.A.
+25585,2022,123991,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\25585\\2022\\relatorio_administracao.pdf', 'original_filename': 'CMIN_ER_4T22_2022 Versão Contabilidade Versão Final 08mar 22h10.pdf', 'size_bytes': 1495717}]",CSN MINERAÇÃO S.A.
+25585,2023,134514,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\25585\\2023\\relatorio_administracao.pdf', 'original_filename': '1- RA_release.pdf', 'size_bytes': 1780694}]",CSN MINERAÇÃO S.A.
+25585,2024,146102,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\25585\\2024\\relatorio_administracao.pdf', 'original_filename': 'RA CMIN 2024.pdf', 'size_bytes': 1456330}]",CSN MINERAÇÃO S.A.
+18376,2015,55192,False,not_found,[],CTEEP - CIA TRANSMISSÃO ENERGIA ELÉTRICA PAULISTA
+18376,2016,62762,False,not_found,[],CTEEP - CIA TRANSMISSÃO ENERGIA ELÉTRICA PAULISTA
+18376,2017,71790,False,not_found,[],CTEEP - CIA TRANSMISSÃO ENERGIA ELÉTRICA PAULISTA
+18376,2018,80990,False,not_found,[],CTEEP - CIA TRANSMISSÃO ENERGIA ELÉTRICA PAULISTA
+18376,2019,91364,False,not_found,[],CTEEP - CIA TRANSMISSÃO ENERGIA ELÉTRICA PAULISTA
+25100,2019,91176,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\25100\\2019\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV15002\\Temp\\files\\00122116530000000000000000.pdf.pdf', 'size_bytes': 124903}]",CURY CONSTRUTORA E INCORPORADORA S.A.
+25100,2020,102127,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\25100\\2020\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV17000\\Temp\\files\\00122916530000000000000000.docx.pdf', 'size_bytes': 575710}]",CURY CONSTRUTORA E INCORPORADORA S.A.
+25100,2021,112921,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\25100\\2021\\relatorio_administracao.pdf', 'original_filename': 'Rel. ADM 2021.pdf', 'size_bytes': 774961}]",CURY CONSTRUTORA E INCORPORADORA S.A.
+25100,2022,130992,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\25100\\2022\\relatorio_administracao.pdf', 'original_filename': 'Relatório da Administração vfinal.pdf', 'size_bytes': 1078725}]",CURY CONSTRUTORA E INCORPORADORA S.A.
+25100,2023,134624,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\25100\\2023\\relatorio_administracao.pdf', 'original_filename': 'Relatório da Administração 2023.V4.pdf', 'size_bytes': 968468}]",CURY CONSTRUTORA E INCORPORADORA S.A.
+25100,2024,145292,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\25100\\2024\\relatorio_administracao.pdf', 'original_filename': 'Relatório da Administração 2024.pdf', 'size_bytes': 845367}]",CURY CONSTRUTORA E INCORPORADORA S.A.
+14460,2015,54386,False,not_found,[],CYRELA BRAZIL REALTY S.A.EMPREEND E PART
+14460,2016,63477,False,not_found,[],CYRELA BRAZIL REALTY S.A.EMPREEND E PART
+14460,2017,72538,False,not_found,[],CYRELA BRAZIL REALTY S.A.EMPREEND E PART
+14460,2018,81580,False,not_found,[],CYRELA BRAZIL REALTY S.A.EMPREEND E PART
+14460,2019,91667,False,not_found,[],CYRELA BRAZIL REALTY S.A.EMPREEND E PART
+14460,2020,102043,False,not_found,[],CYRELA BRAZIL REALTY S.A.EMPREEND E PART
+14460,2021,112633,False,not_found,[],CYRELA BRAZIL REALTY S.A.EMPREEND E PART
+14460,2022,124242,False,not_found,[],CYRELA BRAZIL REALTY S.A.EMPREEND E PART
+14460,2023,134740,False,not_found,[],CYRELA BRAZIL REALTY S.A.EMPREEND E PART
+14460,2024,145594,False,not_found,[],CYRELA BRAZIL REALTY S.A.EMPREEND E PART
+21350,2015,54048,False,not_found,[],DIRECIONAL ENGENHARIA S.A.
+21350,2016,63352,False,not_found,[],DIRECIONAL ENGENHARIA S.A.
+21350,2017,72682,False,not_found,[],DIRECIONAL ENGENHARIA S.A.
+21350,2018,81114,False,not_found,[],DIRECIONAL ENGENHARIA S.A.
+21350,2019,91440,False,not_found,[],DIRECIONAL ENGENHARIA S.A.
+21350,2020,100945,False,not_found,[],DIRECIONAL ENGENHARIA S.A.
+21350,2021,112493,False,not_found,[],DIRECIONAL ENGENHARIA S.A.
+21350,2022,131606,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\21350\\2022\\relatorio_administracao.pdf', 'original_filename': 'Relatório da Administração 2022.pdf', 'size_bytes': 350439}]",DIRECIONAL ENGENHARIA S.A.
+21350,2023,134617,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\21350\\2023\\relatorio_administracao.pdf', 'original_filename': 'Relatório da Administração 2023.pdf', 'size_bytes': 368056}]",DIRECIONAL ENGENHARIA S.A.
+21350,2024,145258,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\21350\\2024\\relatorio_administracao.pdf', 'original_filename': 'Relatório da Administração 2024.pdf', 'size_bytes': 331051}]",DIRECIONAL ENGENHARIA S.A.
+20087,2015,54195,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\20087\\2015\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00121916530000000000000000.pdf.pdf', 'size_bytes': 1031794}]",EMBRAER S.A.
+20087,2016,63004,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\20087\\2016\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00122016530000000000000000.pdf.pdf', 'size_bytes': 778696}]",EMBRAER S.A.
+20087,2017,72078,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\20087\\2017\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00123016530000000000000000.pdf.pdf', 'size_bytes': 729176}]",EMBRAER S.A.
+20087,2018,81183,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\20087\\2018\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV14000\\Temp\\files\\00121416530000000000000000.pdf.pdf', 'size_bytes': 1899601}]",EMBRAER S.A.
+20087,2019,91843,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\20087\\2019\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV15002\\Temp\\files\\00122216530000000000000000.pdf.pdf', 'size_bytes': 556397}]",EMBRAER S.A.
+20087,2020,102072,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\20087\\2020\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV17000\\Temp\\files\\00123316530000000000000000.pdf.pdf', 'size_bytes': 2005432}]",EMBRAER S.A.
+20087,2021,112362,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\20087\\2021\\relatorio_administracao.pdf', 'original_filename': 'RA 2021.pdf', 'size_bytes': 2169971}]",EMBRAER S.A.
+20087,2022,124044,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\20087\\2022\\relatorio_administracao.pdf', 'original_filename': 'RA2022 V10.pdf', 'size_bytes': 1163635}]",EMBRAER S.A.
+20087,2023,134812,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\20087\\2023\\relatorio_administracao.pdf', 'original_filename': '02092024 - Relatório_da_Administração - VPT_V16.pdf', 'size_bytes': 10626934}]",EMBRAER S.A.
+20087,2024,145081,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\20087\\2024\\relatorio_administracao.pdf', 'original_filename': 'Embraer RA vfinal CVM.pdf', 'size_bytes': 25806433}]",EMBRAER S.A.
+15253,2015,54302,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\15253\\2015\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00121816530000000000000000.pdf.pdf', 'size_bytes': 1429917}]",ENERGISA S.A.
+15253,2016,63502,False,not_found,[],ENERGISA S.A.
+15253,2017,72278,False,not_found,[],ENERGISA S.A.
+15253,2018,81388,False,not_found,[],ENERGISA S.A.
+15253,2019,91629,False,not_found,[],ENERGISA S.A.
+15253,2020,102789,False,not_found,[],ENERGISA S.A.
+15253,2021,133648,False,not_found,[],ENERGISA S.A.
+15253,2022,124288,False,not_found,[],ENERGISA S.A.
+15253,2023,134790,False,not_found,[],ENERGISA S.A.
+15253,2024,145509,False,not_found,[],ENERGISA S.A.
+21237,2015,54419,False,not_found,[],ENEVA S.A
+21237,2016,68726,False,not_found,[],ENEVA S.A
+21237,2017,72277,False,not_found,[],ENEVA S.A
+21237,2018,81381,False,not_found,[],ENEVA S.A
+21237,2019,92332,False,not_found,[],ENEVA S.A
+21237,2020,100834,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\21237\\2020\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV17000\\Temp\\files\\00122016530000000000000000.pdf.pdf', 'size_bytes': 1330021}]",ENEVA S.A
+21237,2021,112782,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\21237\\2021\\relatorio_administracao.pdf', 'original_filename': 'Relatório Adm 2021_VF.pdf', 'size_bytes': 2330331}]",ENEVA S.A
+21237,2022,124551,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\21237\\2022\\relatorio_administracao.pdf', 'original_filename': 'Relatório Adm 2022_V20.pdf', 'size_bytes': 1273572}]",ENEVA S.A
+21237,2023,134773,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\21237\\2023\\relatorio_administracao.pdf', 'original_filename': 'RA2023_VF (1).pdf', 'size_bytes': 2506606}]",ENEVA S.A
+21237,2024,145597,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\21237\\2024\\relatorio_administracao.pdf', 'original_filename': 'RA2024_20Mar25_FINAL.pdf', 'size_bytes': 6454550}]",ENEVA S.A
+17329,2015,53572,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\17329\\2015\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00122116530000000000000000.pdf.pdf', 'size_bytes': 3433546}]",ENGIE BRASIL ENERGIA S.A.
+17329,2016,62765,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\17329\\2016\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00133516530000000000000000.pdf.pdf', 'size_bytes': 1623486}]",ENGIE BRASIL ENERGIA S.A.
+17329,2017,71712,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\17329\\2017\\relatorio_administracao.pdf', 'original_filename': 'C:\\Program Files (x86)\\CVM\\EmpresasNet\\Temp\\files\\00187604130000000000000000.pdf.pdf', 'size_bytes': 159296}]",ENGIE BRASIL ENERGIA S.A.
+17329,2018,80753,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\17329\\2018\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV14000\\Temp\\files\\00124116530000000000000000.pdf.pdf', 'size_bytes': 1125201}]",ENGIE BRASIL ENERGIA S.A.
+17329,2019,91118,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\17329\\2019\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV15002\\Temp\\files\\00124216530000000000000000.pdf.pdf', 'size_bytes': 2277828}]",ENGIE BRASIL ENERGIA S.A.
+17329,2020,102963,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\17329\\2020\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV17000\\Temp\\files\\00122016530000000000000000.pdf.pdf', 'size_bytes': 2339030}]",ENGIE BRASIL ENERGIA S.A.
+17329,2021,111751,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\17329\\2021\\relatorio_administracao.pdf', 'original_filename': 'DF EBE - 31.12.2021 - RADM.pdf', 'size_bytes': 3220346}]",ENGIE BRASIL ENERGIA S.A.
+17329,2022,132868,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\17329\\2022\\relatorio_administracao.pdf', 'original_filename': 'Relatório da Administração.pdf', 'size_bytes': 3730385}]",ENGIE BRASIL ENERGIA S.A.
+17329,2023,134298,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\17329\\2023\\relatorio_administracao.pdf', 'original_filename': 'Relatório da Administração.pdf', 'size_bytes': 4142876}]",ENGIE BRASIL ENERGIA S.A.
+17329,2024,144906,False,not_found,[],ENGIE BRASIL ENERGIA S.A.
+20010,2015,68808,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\20010\\2015\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00126216530000000000000000.pdf.pdf', 'size_bytes': 1591302}]",EQUATORIAL ENERGIA S.A.
+20010,2016,68809,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\20010\\2016\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00126716530000000000000000.pdf.pdf', 'size_bytes': 314500}]",EQUATORIAL ENERGIA S.A.
+20010,2017,72120,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\20010\\2017\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00127616530000000000000000.pdf.pdf', 'size_bytes': 265970}]",EQUATORIAL ENERGIA S.A.
+20010,2018,82190,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\20010\\2018\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV13004\\Temp\\files\\00127916530000000000000000.pdf.pdf', 'size_bytes': 296589}]",EQUATORIAL ENERGIA S.A.
+20010,2019,93389,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\20010\\2019\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV16000\\Temp\\files\\00122716530000000000000000.doc.pdf', 'size_bytes': 1290717}]",EQUATORIAL ENERGIA S.A.
+20010,2020,102205,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\20010\\2020\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV17000\\Temp\\files\\00122016530000000000000000.pdf.pdf', 'size_bytes': 1051579}]",EQUATORIAL S.A.
+20010,2021,113382,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\20010\\2021\\relatorio_administracao.pdf', 'original_filename': 'RAD - EQTL.pdf', 'size_bytes': 1435170}]",EQUATORIAL S.A.
+20010,2022,124802,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\20010\\2022\\relatorio_administracao.pdf', 'original_filename': 'Rel_Administração_EQTL 2022 VF_29.03.pdf', 'size_bytes': 1308006}]",EQUATORIAL S.A.
+20010,2023,135105,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\20010\\2023\\relatorio_administracao.pdf', 'original_filename': 'Relatório de Administração - EQTL ENERGIA DFP 2023.pdf', 'size_bytes': 2614445}]",EQUATORIAL S.A.
+20010,2024,146103,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\20010\\2024\\relatorio_administracao.pdf', 'original_filename': 'Rel_Administração_EQTL 2024.pdf', 'size_bytes': 1538019}]",EQUATORIAL S.A.
+21881,2015,53828,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\21881\\2015\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00121716530000000000000000.pdf.pdf', 'size_bytes': 339673}]",FLEURY S.A.
+21881,2016,63040,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\21881\\2016\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00122216530000000000000000.pdf.pdf', 'size_bytes': 461030}]",FLEURY S.A.
+21881,2017,71948,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\21881\\2017\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00121916530000000000000000.pdf.pdf', 'size_bytes': 631667}]",FLEURY S.A.
+21881,2018,82260,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\21881\\2018\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV13004\\Temp\\files\\00121416530000000000000000.pdf.pdf', 'size_bytes': 639186}]",FLEURY S.A.
+21881,2019,91099,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\21881\\2019\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV15002\\Temp\\files\\00122216530000000000000000.pdf.pdf', 'size_bytes': 635527}]",FLEURY S.A.
+21881,2020,100463,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\21881\\2020\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV17000\\Temp\\files\\00122416530000000000000000.pdf.pdf', 'size_bytes': 1318883}]",FLEURY S.A.
+21881,2021,112643,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\21881\\2021\\relatorio_administracao.pdf', 'original_filename': '4. Relato´rio da Administrac¸a~o 2021 vf.pdf', 'size_bytes': 958032}]",FLEURY S.A.
+21881,2022,124240,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\21881\\2022\\relatorio_administracao.pdf', 'original_filename': 'Relato´rio da Administrac¸a~o 2022 FV.pdf', 'size_bytes': 1531404}]",FLEURY S.A.
+21881,2023,134546,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\21881\\2023\\relatorio_administracao.pdf', 'original_filename': 'Relato´rio da Administrac¸a~o 2023 vf5.pdf', 'size_bytes': 1024936}]",FLEURY S.A.
+21881,2024,145095,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\21881\\2024\\relatorio_administracao.pdf', 'original_filename': 'Relato´rio da Administrac¸a~o 2024 vf revMC.pdf', 'size_bytes': 998467}]",FLEURY S.A.
+3980,2015,54055,False,not_found,[],GERDAU S.A.
+3980,2016,62693,False,not_found,[],GERDAU S.A.
+3980,2017,71859,False,not_found,[],GERDAU S.A.
+3980,2018,80788,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\3980\\2018\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV14000\\Temp\\files\\00124316530000000000000000.pdf.pdf', 'size_bytes': 540380}]",GERDAU S.A.
+3980,2019,91066,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\3980\\2019\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV15002\\Temp\\files\\00121116530000000000000000.pdf.pdf', 'size_bytes': 565912}]",GERDAU S.A.
+3980,2020,100393,False,not_found,[],GERDAU S.A.
+3980,2021,111961,False,not_found,[],GERDAU S.A.
+3980,2022,123775,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\3980\\2022\\relatorio_administracao.pdf', 'original_filename': '2022.12 - Relatório da Administração 2022 GSA português 01.03.pdf', 'size_bytes': 1077826}]",GERDAU S.A.
+3980,2023,134146,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\3980\\2023\\relatorio_administracao.pdf', 'original_filename': '20.02.2024 - Relatório Administração_GSA 2023 PT.pdf', 'size_bytes': 1352264}]",GERDAU S.A.
+3980,2024,144975,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\3980\\2024\\relatorio_administracao.pdf', 'original_filename': '19.02.2025 - Relatório Administração_GSA PT.pdf', 'size_bytes': 1866836}]",GERDAU S.A.
+24392,2017,73468,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\24392\\2017\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00125216530000000000000000.pdf.pdf', 'size_bytes': 1079312}]",HAPVIDA PARTICIPAÇÕES E INVESTIMENTOS S.A.
+24392,2018,81182,False,not_found,[],HAPVIDA PARTICIPAÇÕES E INVESTIMENTOS S.A.
+24392,2019,91840,False,not_found,[],HAPVIDA PARTICIPAÇÕES E INVESTIMENTOS S.A.
+24392,2020,102146,False,not_found,[],HAPVIDA PARTICIPAÇÕES E INVESTIMENTOS S.A.
+24392,2021,112866,False,not_found,[],HAPVIDA PARTICIPAÇÕES E INVESTIMENTOS S.A.
+24392,2022,123765,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\24392\\2022\\relatorio_administracao.pdf', 'original_filename': 'relatorio administração.pdf', 'size_bytes': 948790}]",HAPVIDA PARTICIPAÇÕES E INVESTIMENTOS S.A.
+24392,2023,137197,False,not_found,[],HAPVIDA PARTICIPAÇÕES E INVESTIMENTOS S.A.
+24392,2024,145552,False,not_found,[],HAPVIDA PARTICIPAÇÕES E INVESTIMENTOS S.A.
+21431,2015,53699,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\21431\\2015\\relatorio_administracao.pdf', 'original_filename': 'C:\\EMPRESASNET\\Temp\\files\\00121916530000000000000000.pdf.pdf', 'size_bytes': 1652217}]",HYPERA S.A.
+21431,2016,62612,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\21431\\2016\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00122616530000000000000000.pdf.pdf', 'size_bytes': 598286}]",HYPERA S.A.
+21431,2017,71748,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\21431\\2017\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00124116530000000000000000.pdf.pdf', 'size_bytes': 628790}]",HYPERA S.A.
+21431,2018,80822,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\21431\\2018\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV13004\\Temp\\files\\00121216530000000000000000.pdf.pdf', 'size_bytes': 637704}]",HYPERA S.A.
+21431,2019,91427,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\21431\\2019\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV15002\\Temp\\files\\00122116530000000000000000.pdf.pdf', 'size_bytes': 662147}]",HYPERA S.A.
+21431,2020,100523,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\21431\\2020\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV17000\\Temp\\files\\00121616530000000000000000.pdf.pdf', 'size_bytes': 891690}]",HYPERA S.A.
+21431,2021,112061,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\21431\\2021\\relatorio_administracao.pdf', 'original_filename': 'Relatório da Administração 2021 - 2202.pdf', 'size_bytes': 325676}]",HYPERA S.A.
+21431,2022,123590,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\21431\\2022\\relatorio_administracao.pdf', 'original_filename': 'Relatório da Administração 2022_V8.pdf', 'size_bytes': 866705}]",HYPERA S.A.
+21431,2023,134705,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\21431\\2023\\relatorio_administracao.pdf', 'original_filename': 'Relatório da Administração 2023.pdf', 'size_bytes': 290224}]",HYPERA S.A.
+21431,2024,145606,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\21431\\2024\\relatorio_administracao.pdf', 'original_filename': 'Relatório da Administração 2024.pdf', 'size_bytes': 310594}]",HYPERA S.A.
+8672,2015,54394,False,not_found,[],IGUATEMI S.A.
+8672,2016,63090,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\8672\\2016\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00141116530000000000000000.pdf.pdf', 'size_bytes': 681833}]",IGUATEMI S.A.
+8672,2017,72282,False,not_found,[],IGUATEMI S.A.
+8672,2018,81229,False,not_found,[],IGUATEMI S.A.
+8672,2019,91514,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\8672\\2019\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV16000\\Temp\\files\\00122316530000000000000000.pdf.pdf', 'size_bytes': 1005887}]",IGUATEMI S.A.
+8672,2020,100876,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\8672\\2020\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV17000\\Temp\\files\\00122116530000000000000000.pdf.pdf', 'size_bytes': 996810}]",IGUATEMI S.A.
+8672,2021,113814,False,not_found,[],IGUATEMI S.A.
+8672,2022,123760,False,not_found,[],IGUATEMI S.A.
+8672,2023,134137,False,not_found,[],IGUATEMI S.A.
+8672,2024,144853,False,not_found,[],IGUATEMI S.A.
+18376,2020,100343,False,not_found,[],ISA ENERGIA BRASIL
+18376,2021,111992,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\18376\\2021\\relatorio_administracao.pdf', 'original_filename': 'Relatório da Administração.pdf', 'size_bytes': 1030464}]",ISA ENERGIA BRASIL
+18376,2022,123675,False,not_found,[],ISA ENERGIA BRASIL
+18376,2023,134145,False,not_found,[],ISA ENERGIA BRASIL
+18376,2024,144965,False,not_found,[],ISA ENERGIA BRASIL
+12653,2015,53175,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\12653\\2015\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00124216530000000000000000.pdf.pdf', 'size_bytes': 147325}]",KLABIN S.A.
+12653,2016,62409,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\12653\\2016\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00123616530000000000000000.pdf.pdf', 'size_bytes': 215668}]",KLABIN S.A.
+12653,2017,71286,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\12653\\2017\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\Temp\\files\\00121716530000000000000000.pdf.pdf', 'size_bytes': 832482}]",KLABIN S.A.
+12653,2018,80497,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\12653\\2018\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV14000\\Temp\\files\\00122316530000000000000000.pdf.pdf', 'size_bytes': 267846}]",KLABIN S.A.
+12653,2019,90777,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\12653\\2019\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV15002\\Temp\\files\\00122716530000000000000000.pdf.pdf', 'size_bytes': 185595}]",KLABIN S.A.
+12653,2020,100067,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\12653\\2020\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV17000\\Temp\\files\\00124416530000000000000000.pdf.pdf', 'size_bytes': 470760}]",KLABIN S.A.
+12653,2021,139092,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\12653\\2021\\relatorio_administracao.pdf', 'original_filename': 'Relatório de Administração 2021 FINAL - Reapresentação v2.pdf', 'size_bytes': 404972}]",KLABIN S.A.
+12653,2022,123405,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\12653\\2022\\relatorio_administracao.pdf', 'original_filename': 'Relatório de Administração 2022 ..pdf', 'size_bytes': 1073844}]",KLABIN S.A.
+12653,2023,133886,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\12653\\2023\\relatorio_administracao.pdf', 'original_filename': '1 - Relatório da Administração 2023.pdf', 'size_bytes': 395234}]",KLABIN S.A.
+12653,2024,145024,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\12653\\2024\\relatorio_administracao.pdf', 'original_filename': 'Relatório da Administração 2024 v5_24.02.2025_limpa - v.2.pdf', 'size_bytes': 433641}]",KLABIN S.A.
+19739,2015,53834,False,not_found,[],LOCALIZA RENT A CAR S.A.
+19739,2016,62319,False,not_found,[],LOCALIZA RENT A CAR S.A.
+19739,2017,72263,False,not_found,[],LOCALIZA RENT A CAR S.A.
+19739,2018,80824,False,not_found,[],LOCALIZA RENT A CAR S.A.
+19739,2019,91474,False,not_found,[],LOCALIZA RENT A CAR S.A.
+19739,2020,100482,False,not_found,[],LOCALIZA RENT A CAR S.A.
+19739,2021,111957,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\19739\\2021\\relatorio_administracao.pdf', 'original_filename': 'Relatório da Administração 2021 - Localiza - DFP.pdf', 'size_bytes': 1094117}]",LOCALIZA RENT A CAR S.A.
+19739,2022,124700,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\19739\\2022\\relatorio_administracao.pdf', 'original_filename': 'Relatório da Administração 2022 - Localiza - DFP.pdf', 'size_bytes': 924364}]",LOCALIZA RENT A CAR S.A.
+19739,2023,134662,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\19739\\2023\\relatorio_administracao.pdf', 'original_filename': '3. Relatório da Administração 2023.pdf', 'size_bytes': 1008419}]",LOCALIZA RENT A CAR S.A.
+19739,2024,145116,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\19739\\2024\\relatorio_administracao.pdf', 'original_filename': '3. Relatório da Administração 2024 - Localiza sem página.pdf', 'size_bytes': 2436461}]",LOCALIZA RENT A CAR S.A.
+8133,2015,53231,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\8133\\2015\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00121916530000000000000000.pdf.pdf', 'size_bytes': 374071}]",LOJAS RENNER S.A.
+8133,2016,62430,False,not_found,[],LOJAS RENNER S.A.
+8133,2017,71433,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\8133\\2017\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00137516530000000000000000.pdf.pdf', 'size_bytes': 578892}]",LOJAS RENNER S.A.
+8133,2018,80521,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\8133\\2018\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV14000\\Temp\\files\\00121616530000000000000000.pdf.pdf', 'size_bytes': 675896}]",LOJAS RENNER S.A.
+8133,2019,90801,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\8133\\2019\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV15002\\Temp\\files\\00121816530000000000000000.pdf.pdf', 'size_bytes': 909077}]",LOJAS RENNER S.A.
+8133,2020,100134,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\8133\\2020\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV17000\\Temp\\files\\00122016530000000000000000.pdf.pdf', 'size_bytes': 972078}]",LOJAS RENNER S.A.
+8133,2021,112665,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\8133\\2021\\relatorio_administracao.pdf', 'original_filename': '03 - Relatório da Administração 2021_vCompleta - Final.pdf', 'size_bytes': 1577410}]",LOJAS RENNER S.A.
+8133,2022,123581,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\8133\\2022\\relatorio_administracao.pdf', 'original_filename': 'Relatório da Administração e Balanço Social.pdf', 'size_bytes': 1702556}]",LOJAS RENNER S.A.
+8133,2023,134755,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\8133\\2023\\relatorio_administracao.pdf', 'original_filename': '01 - Relatório da Administração + Balanço Social_.pdf', 'size_bytes': 580374}]",LOJAS RENNER S.A.
+8133,2024,144903,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\8133\\2024\\relatorio_administracao.pdf', 'original_filename': '02 - RA + BS_v2.pdf', 'size_bytes': 770264}]",LOJAS RENNER S.A.
+22470,2015,66576,False,not_found,[],MAGAZINE LUIZA S.A.
+22470,2016,66581,False,not_found,[],MAGAZINE LUIZA S.A.
+22470,2017,71708,False,not_found,[],MAGAZINE LUIZA S.A.
+22470,2018,80863,False,not_found,[],MAGAZINE LUIZA S.A.
+22470,2019,90983,False,not_found,[],MAGAZINE LUIZA S.A.
+22470,2020,100759,False,not_found,[],MAGAZINE LUIZA S.A.
+22470,2021,112500,False,not_found,[],MAGAZINE LUIZA S.A.
+22470,2022,124043,False,not_found,[],MAGAZINE LUIZA S.A.
+22470,2023,134839,False,not_found,[],MAGAZINE LUIZA S.A.
+22470,2024,145377,False,not_found,[],MAGAZINE LUIZA S.A.
+8451,2015,53544,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\8451\\2015\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00124616530000000000000000.pdf.pdf', 'size_bytes': 649910}]",MARCOPOLO S.A.
+8451,2016,62734,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\8451\\2016\\relatorio_administracao.pdf', 'original_filename': 'C:\\Program Files\\CVM\\EmpresasNet\\Temp\\files\\00125716530000000000000000.pdf.pdf', 'size_bytes': 773532}]",MARCOPOLO S.A.
+8451,2017,71666,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\8451\\2017\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00139516530000000000000000.pdf.pdf', 'size_bytes': 958090}]",MARCOPOLO S.A.
+8451,2018,80876,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\8451\\2018\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV14000\\Temp\\files\\00122116530000000000000000.pdf.pdf', 'size_bytes': 1118242}]",MARCOPOLO S.A.
+8451,2019,91200,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\8451\\2019\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV15002\\Temp\\files\\00122016530000000000000000.pdf.pdf', 'size_bytes': 1104055}]",MARCOPOLO S.A.
+8451,2020,100437,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\8451\\2020\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV17000\\Temp\\files\\00122616530000000000000000.pdf.pdf', 'size_bytes': 628938}]",MARCOPOLO S.A.
+8451,2021,112080,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\8451\\2021\\relatorio_administracao.pdf', 'original_filename': '06 Relatório da Administração 2021.pdf', 'size_bytes': 518743}]",MARCOPOLO S.A.
+8451,2022,123747,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\8451\\2022\\relatorio_administracao.pdf', 'original_filename': '06 Relatório da Administração 2022.pdf', 'size_bytes': 995047}]",MARCOPOLO S.A.
+8451,2023,134272,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\8451\\2023\\relatorio_administracao.pdf', 'original_filename': '06 Relatório da Administração 2023.pdf', 'size_bytes': 556350}]",MARCOPOLO S.A.
+8451,2024,144984,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\8451\\2024\\relatorio_administracao.pdf', 'original_filename': '06 Relatório da Administração 2024.pdf', 'size_bytes': 501947}]",MARCOPOLO S.A.
+20788,2015,53704,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\20788\\2015\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00122516530000000000000000.pdf.pdf', 'size_bytes': 874820}]",MARFRIG GLOBAL FOODS S.A.
+20788,2016,62782,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\20788\\2016\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00122216530000000000000000.pdf.pdf', 'size_bytes': 786156}]",MARFRIG GLOBAL FOODS S.A.
+20788,2017,72771,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\20788\\2017\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00122016530000000000000000.pdf.pdf', 'size_bytes': 1081019}]",MARFRIG GLOBAL FOODS S.A.
+20788,2018,80935,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\20788\\2018\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV13004\\Temp\\files\\00121516530000000000000000.pdf.pdf', 'size_bytes': 1438097}]",MARFRIG GLOBAL FOODS S.A.
+20788,2019,91096,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\20788\\2019\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV15002\\Temp\\files\\00121916530000000000000000.pdf.pdf', 'size_bytes': 870818}]",MARFRIG GLOBAL FOODS S.A.
+20788,2020,102751,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\20788\\2020\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV17000\\Temp\\files\\00121716530000000000000000.pdf.pdf', 'size_bytes': 534521}]",MARFRIG GLOBAL FOODS S.A.
+20788,2021,112313,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\20788\\2021\\relatorio_administracao.pdf', 'original_filename': 'RA_2021 V13.pdf', 'size_bytes': 984988}]",MARFRIG GLOBAL FOODS S.A.
+20788,2022,123796,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\20788\\2022\\relatorio_administracao.pdf', 'original_filename': 'RA_2022 V14 Clean.pdf', 'size_bytes': 434210}]",MARFRIG GLOBAL FOODS S.A.
+20788,2023,135215,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\20788\\2023\\relatorio_administracao.pdf', 'original_filename': 'RA_2023 V8..pdf', 'size_bytes': 414979}]",MARFRIG GLOBAL FOODS S.A.
+20788,2024,145071,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\20788\\2024\\relatorio_administracao.pdf', 'original_filename': 'Relatório da Administração 2024 VF.pdf', 'size_bytes': 419635}]",MARFRIG GLOBAL FOODS S.A.
+8656,2015,54056,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\8656\\2015\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00124116530000000000000000.pdf.pdf', 'size_bytes': 181679}]",METALURGICA GERDAU S.A.
+8656,2016,62694,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\8656\\2016\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00152516530000000000000000.pdf.pdf', 'size_bytes': 293584}]",METALURGICA GERDAU S.A.
+8656,2017,71860,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\8656\\2017\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00124216530000000000000000.pdf.pdf', 'size_bytes': 402851}]",METALURGICA GERDAU S.A.
+8656,2018,80789,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\8656\\2018\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV14000\\Temp\\files\\00123116530000000000000000.pdf.pdf', 'size_bytes': 535602}]",METALURGICA GERDAU S.A.
+8656,2019,91067,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\8656\\2019\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV15002\\Temp\\files\\00121216530000000000000000.pdf.pdf', 'size_bytes': 478697}]",METALURGICA GERDAU S.A.
+8656,2020,100394,False,not_found,[],METALURGICA GERDAU S.A.
+8656,2021,111963,False,not_found,[],METALURGICA GERDAU S.A.
+8656,2022,123776,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\8656\\2022\\relatorio_administracao.pdf', 'original_filename': '2022.12 - Relatório da Administração 2022 MG português 01.03.pdf', 'size_bytes': 958588}]",METALURGICA GERDAU S.A.
+8656,2023,134148,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\8656\\2023\\relatorio_administracao.pdf', 'original_filename': '20.02.2024 - Relatório Administração_MG 2023 PT.pdf', 'size_bytes': 1395196}]",METALURGICA GERDAU S.A.
+8656,2024,144977,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\8656\\2024\\relatorio_administracao.pdf', 'original_filename': '19.02.2025 - Relatório Administração_MG PT.pdf', 'size_bytes': 1711563}]",METALURGICA GERDAU S.A.
+20931,2015,53924,False,not_found,[],MINERVA S.A.
+20931,2016,62780,False,not_found,[],MINERVA S.A.
+20931,2017,71995,False,not_found,[],MINERVA S.A.
+20931,2018,81143,False,not_found,[],MINERVA S.A.
+20931,2019,91056,False,not_found,[],MINERVA S.A.
+20931,2020,100470,False,not_found,[],MINERVA S.A.
+20931,2021,112004,False,not_found,[],MINERVA S.A.
+20931,2022,123671,False,not_found,[],MINERVA S.A.
+20931,2023,135098,False,not_found,[],MINERVA S.A.
+20931,2024,145544,False,not_found,[],MINERVA S.A.
+18821,2021,112062,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\18821\\2021\\relatorio_administracao.pdf', 'original_filename': 'Relatório da Administração 2021_ v15.pdf', 'size_bytes': 332277}]",MOTIVA INFRAESTRUTURA DE MOBILIDADE S.A.
+18821,2022,123561,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\18821\\2022\\relatorio_administracao.pdf', 'original_filename': 'Relatório da Administração 2022_vf 15_02_23.pdf', 'size_bytes': 1092112}]",MOTIVA INFRAESTRUTURA DE MOBILIDADE S.A.
+18821,2023,133937,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\18821\\2023\\relatorio_administracao.pdf', 'original_filename': 'Relatório da Administração 2023_v8.pdf', 'size_bytes': 337035}]",MOTIVA INFRAESTRUTURA DE MOBILIDADE S.A.
+18821,2024,144617,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\18821\\2024\\relatorio_administracao.pdf', 'original_filename': 'Relatório da Administração 2025_04_02 v2.pdf', 'size_bytes': 341627}]",MOTIVA INFRAESTRUTURA DE MOBILIDADE S.A.
+20915,2015,53894,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\20915\\2015\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00121416530000000000000000.pdf.pdf', 'size_bytes': 2338477}]",MRV ENGENHARIA E PARTICIPACOES S.A.
+20915,2016,63110,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\20915\\2016\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00122716530000000000000000.pdf.pdf', 'size_bytes': 1329530}]",MRV ENGENHARIA E PARTICIPACOES S.A.
+20915,2017,72097,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\20915\\2017\\relatorio_administracao.pdf', 'original_filename': 'C:\\Program Files (x86)\\CVM\\EmpresasNet\\Temp\\files\\00125416530000000000000000.pdf.pdf', 'size_bytes': 1382046}]",MRV ENGENHARIA E PARTICIPACOES S.A.
+20915,2018,80989,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\20915\\2018\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV14000\\Temp\\files\\00124716530000000000000000.pdf.pdf', 'size_bytes': 1050440}]",MRV ENGENHARIA E PARTICIPACOES S.A.
+20915,2019,91299,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\20915\\2019\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV15002\\Temp\\files\\00121616530000000000000000.pdf.pdf', 'size_bytes': 523390}]",MRV ENGENHARIA E PARTICIPACOES S.A.
+20915,2020,100692,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\20915\\2020\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV17000\\Temp\\files\\00121916530000000000000000.pdf.pdf', 'size_bytes': 1286540}]",MRV ENGENHARIA E PARTICIPACOES S.A.
+20915,2021,128797,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\20915\\2021\\relatorio_administracao.pdf', 'original_filename': 'Relatório Administração 2021 - POR - VF.pdf', 'size_bytes': 992083}]",MRV ENGENHARIA E PARTICIPACOES S.A.
+20915,2022,128798,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\20915\\2022\\relatorio_administracao.pdf', 'original_filename': 'Relatório Administração 2022.pdf', 'size_bytes': 1034003}]",MRV ENGENHARIA E PARTICIPACOES S.A.
+20915,2023,134377,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\20915\\2023\\relatorio_administracao.pdf', 'original_filename': 'Relatório Administração 2023.pdf', 'size_bytes': 458378}]",MRV ENGENHARIA E PARTICIPACOES S.A.
+20915,2024,144971,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\20915\\2024\\relatorio_administracao.pdf', 'original_filename': 'Relatório Administração 2024 - POR final.pdf', 'size_bytes': 803709}]",MRV ENGENHARIA E PARTICIPACOES S.A.
+20982,2015,53601,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\20982\\2015\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00121416530000000000000000.docx.pdf', 'size_bytes': 236580}]",MULTIPLAN - EMPREEND IMOBILIARIOS S.A.
+20982,2016,63020,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\20982\\2016\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00122916530000000000000000.docx.pdf', 'size_bytes': 241474}]",MULTIPLAN - EMPREEND IMOBILIARIOS S.A.
+20982,2017,71883,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\20982\\2017\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00122816530000000000000000.docx.pdf', 'size_bytes': 242377}]",MULTIPLAN - EMPREEND IMOBILIARIOS S.A.
+20982,2018,80812,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\20982\\2018\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV13004\\Temp\\files\\00122316530000000000000000.pdf.pdf', 'size_bytes': 24645}]",MULTIPLAN - EMPREEND IMOBILIARIOS S.A.
+20982,2019,91010,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\20982\\2019\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV15002\\Temp\\files\\00122016530000000000000000.docx.pdf', 'size_bytes': 209019}]",MULTIPLAN - EMPREEND IMOBILIARIOS S.A.
+20982,2020,100117,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\20982\\2020\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV17000\\Temp\\files\\00121804120000000000000000.pdf.pdf', 'size_bytes': 1147143}]",MULTIPLAN - EMPREEND IMOBILIARIOS S.A.
+20982,2021,111691,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\20982\\2021\\relatorio_administracao.pdf', 'original_filename': 'Relatório da Adm 2021 1002.pdf', 'size_bytes': 60970}]",MULTIPLAN - EMPREEND IMOBILIARIOS S.A.
+20982,2022,123443,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\20982\\2022\\relatorio_administracao.pdf', 'original_filename': 'Rel. Administração 2022_PORT.pdf', 'size_bytes': 62542}]",MULTIPLAN - EMPREEND IMOBILIARIOS S.A.
+20982,2023,133935,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\20982\\2023\\relatorio_administracao.pdf', 'original_filename': 'Rel. Administração 2023_PORT.pdf', 'size_bytes': 60848}]",MULTIPLAN - EMPREEND IMOBILIARIOS S.A.
+20982,2024,144624,False,not_found,[],MULTIPLAN - EMPREEND IMOBILIARIOS S.A.
+19550,2015,53441,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\19550\\2015\\relatorio_administracao.pdf', 'original_filename': 'Q:\\APP_CVM_EmpresasNet_900\\EmpresasNet\\Temp\\files\\00121416530000000000000000.pdf.pdf', 'size_bytes': 380249}]",NATURA COSMETICOS S.A.
+19550,2016,62718,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\19550\\2016\\relatorio_administracao.pdf', 'original_filename': 'Q:\\EPMASNET.100\\EmpresasNET\\Temp\\files\\00121716530000000000000000.pdf.pdf', 'size_bytes': 1079671}]",NATURA COSMETICOS S.A.
+19550,2017,72264,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\19550\\2017\\relatorio_administracao.pdf', 'original_filename': 'C:\\Program Files (x86)\\CVM\\EmpresasNet\\Temp\\files\\00121816530000000000000000.pdf.pdf', 'size_bytes': 931477}]",NATURA COSMETICOS S.A.
+19550,2018,80968,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\19550\\2018\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV14000\\Temp\\files\\00121116530000000000000000.pdf.pdf', 'size_bytes': 1107269}]",NATURA COSMETICOS S.A.
+19550,2019,91402,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\19550\\2019\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV16000\\Temp\\files\\00121516530000000000000000.pdf.pdf', 'size_bytes': 806776}]",NATURA COSMETICOS S.A.
+19550,2020,102570,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\19550\\2020\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV17000\\Temp\\files\\00122016530000000000000000.pdf.pdf', 'size_bytes': 1039664}]",NATURA COSMETICOS S.A.
+19550,2021,113131,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\19550\\2021\\relatorio_administracao.pdf', 'original_filename': '4_RAD-297x520-NaturaCosmeticos_POR_Print_28.03.pdf', 'size_bytes': 839469}]",NATURA COSMÉTICOS S.A.
+19550,2022,124274,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\19550\\2022\\relatorio_administracao.pdf', 'original_filename': 'RADVF2-297x520-NaturaCosmeticos_BR202_Sem marcas.pdf', 'size_bytes': 801737}]",NATURA COSMÉTICOS S.A.
+19550,2023,134850,False,not_found,[],NATURA COSMÉTICOS S.A.
+19550,2024,145393,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\19550\\2024\\relatorio_administracao.pdf', 'original_filename': 'RAD-297x520-NaturaCosmeticos_POR2024_Final_Preview.pdf', 'size_bytes': 765339}]",NATURA COSMÉTICOS S.A.
+9512,2015,54255,False,not_found,[],PETROLEO BRASILEIRO S.A. PETROBRAS
+9512,2016,63571,False,not_found,[],PETROLEO BRASILEIRO S.A. PETROBRAS
+9512,2017,72346,False,not_found,[],PETROLEO BRASILEIRO S.A. PETROBRAS
+9512,2018,80929,False,not_found,[],PETROLEO BRASILEIRO S.A. PETROBRAS
+9512,2019,91100,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\9512\\2019\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV15002\\Temp\\files\\00121916530000000000000000.pdf.pdf', 'size_bytes': 2018246}]",PETROLEO BRASILEIRO S.A. PETROBRAS
+9512,2020,102142,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\9512\\2020\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV17000\\Temp\\files\\00121916530000000000000000.pdf.pdf', 'size_bytes': 5037174}]",PETROLEO BRASILEIRO S.A. PETROBRAS
+9512,2021,112007,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\9512\\2021\\relatorio_administracao.pdf', 'original_filename': 'RA 2021_LIMPA_22_02 - FINAL - resultado v7.pdf', 'size_bytes': 2824311}]",PETROLEO BRASILEIRO S.A. PETROBRAS
+9512,2022,123817,False,not_found,[],PETROLEO BRASILEIRO S.A. PETROBRAS
+9512,2023,135086,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\9512\\2023\\relatorio_administracao.pdf', 'original_filename': 'RA 2023_v25.03.24_português.pdf', 'size_bytes': 2670297}]",PETROLEO BRASILEIRO S.A. PETROBRAS
+9512,2024,145077,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\9512\\2024\\relatorio_administracao.pdf', 'original_filename': 'Relatório da Administração 2024.pdf', 'size_bytes': 2771402}]",PETROLEO BRASILEIRO S.A. PETROBRAS
+25780,2020,100511,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\25780\\2020\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV17000\\Temp\\files\\00131116530000000000000000.pdf.pdf', 'size_bytes': 1810134}]",PETRORECÔNCAVO S.A.
+25780,2021,116810,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\25780\\2021\\relatorio_administracao.pdf', 'original_filename': 'Relatório da administração A4.pdf', 'size_bytes': 9058883}]",PETRORECÔNCAVO S.A.
+25780,2022,124482,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\25780\\2022\\relatorio_administracao.pdf', 'original_filename': 'ENET-004-RELATÓRIO DA ADMINISTRAÇÃO-2.pdf', 'size_bytes': 7904450}]",PETRORECÔNCAVO S.A.
+25780,2023,134467,False,not_found,[],PETRORECÔNCAVO S.A.
+25780,2024,145562,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\25780\\2024\\relatorio_administracao.pdf', 'original_filename': '01_Relatório da Administração 2024.pdf', 'size_bytes': 696561}]",PETRORECÔNCAVO S.A.
+22187,2015,54391,False,not_found,[],PRIO S.A.
+22187,2016,63696,False,not_found,[],PRIO S.A.
+22187,2017,98008,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\22187\\2017\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV17000\\Temp\\files\\00121816530000000000000000.pdf.pdf', 'size_bytes': 268673}]",PRIO S.A.
+22187,2018,81123,False,not_found,[],PRIO S.A.
+22187,2019,96590,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\22187\\2019\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV15002\\Temp\\files\\00121116530000000000000000.docx.pdf', 'size_bytes': 1006472}]",PRIO S.A.
+22187,2020,100581,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\22187\\2020\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV17000\\Temp\\files\\00124516530000000000000000.pdf.pdf', 'size_bytes': 865598}]",PRIO S.A.
+22187,2021,111782,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\22187\\2021\\relatorio_administracao.pdf', 'original_filename': 'PetroRio - 2021 PTBR - Relatório de Administração.pdf', 'size_bytes': 778921}]",PRIO S.A.
+22187,2022,123803,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\22187\\2022\\relatorio_administracao.pdf', 'original_filename': 'PetroRio - 2022 PTBR - Relatório de Administração.pdf', 'size_bytes': 3302886}]",PRIO S.A.
+22187,2023,134591,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\22187\\2023\\relatorio_administracao.pdf', 'original_filename': 'Relatório de Administração.pdf', 'size_bytes': 2893721}]",PRIO S.A.
+22187,2024,145387,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\22187\\2024\\relatorio_administracao.pdf', 'original_filename': 'Relatório de Administração 2024.pdf', 'size_bytes': 2588492}]",PRIO S.A.
+5258,2015,53458,False,not_found,[],RAIA DROGASIL S.A.
+5258,2016,62573,False,not_found,[],RAIA DROGASIL S.A.
+5258,2017,71699,False,not_found,[],RAIA DROGASIL S.A.
+5258,2018,80909,False,not_found,[],RAIA DROGASIL S.A.
+5258,2019,91098,False,not_found,[],RAIA DROGASIL S.A.
+5258,2020,100794,False,not_found,[],RAIA DROGASIL S.A.
+5258,2021,111945,False,not_found,[],RAIA DROGASIL S.A.
+5258,2022,123943,False,not_found,[],RAIA DROGASIL S.A.
+5258,2023,134465,False,not_found,[],RAIA DROGASIL S.A.
+5258,2024,145584,False,not_found,[],RAIA DROGASIL S.A.
+24821,2018,98605,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\24821\\2018\\relatorio_administracao.pdf', 'original_filename': 'C:\\\\Temp\\files\\00127716530000000000000000.pdf.pdf', 'size_bytes': 2148717}]",REDE D'OR SÃO LUIZ S.A.
+24821,2019,98628,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\24821\\2019\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV16000\\Temp\\files\\00124816530000000000000000.pdf.pdf', 'size_bytes': 878719}]",REDE D'OR SÃO LUIZ S.A.
+24821,2020,100425,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\24821\\2020\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV16000\\Temp\\files\\00126716530000000000000000.pdf.pdf', 'size_bytes': 159747}]",REDE D'OR SÃO LUIZ S.A.
+24821,2021,113201,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\24821\\2021\\relatorio_administracao.pdf', 'original_filename': 'Relatório Administração 2021 Final.pdf', 'size_bytes': 145400}]",REDE D'OR SÃO LUIZ S.A.
+24821,2022,124654,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\24821\\2022\\relatorio_administracao.pdf', 'original_filename': 'Relatório Administração 2022.pdf', 'size_bytes': 144153}]",REDE D'OR SÃO LUIZ S.A.
+24821,2023,135176,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\24821\\2023\\relatorio_administracao.pdf', 'original_filename': 'Relatório Administração 2023.pdf', 'size_bytes': 898871}]",REDE D'OR SÃO LUIZ S.A.
+24821,2024,145268,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\24821\\2024\\relatorio_administracao.pdf', 'original_filename': 'Relatório Administração 2024_v06032025_v2_.pdf', 'size_bytes': 907992}]",REDE D'OR SÃO LUIZ S.A.
+17450,2015,54674,False,not_found,[],RUMO S.A.
+17450,2016,62624,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\17450\\2016\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet 10\\Temp\\files\\00123116530000000000000000.pdf.pdf', 'size_bytes': 319323}]",RUMO S.A.
+17450,2017,71838,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\17450\\2017\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00123716530000000000000000.pdf.pdf', 'size_bytes': 1043665}]",RUMO S.A.
+17450,2018,80645,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\17450\\2018\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV14000\\Temp\\files\\00121416530000000000000000.pdf.pdf', 'size_bytes': 490562}]",RUMO S.A.
+17450,2019,90947,False,not_found,[],RUMO S.A.
+17450,2020,105707,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\17450\\2020\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV17000\\Temp\\files\\00122016530000000000000000.pdf.pdf', 'size_bytes': 104753}]",RUMO S.A.
+17450,2021,111861,False,not_found,[],RUMO S.A.
+17450,2022,123564,False,not_found,[],RUMO S.A.
+17450,2023,135221,False,not_found,[],RUMO S.A.
+17450,2024,144902,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\17450\\2024\\relatorio_administracao.pdf', 'original_filename': 'Relat. Adm Rumo 2024.pdf', 'size_bytes': 189115}]",RUMO S.A.
+25372,2019,99878,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\25372\\2019\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV16000\\Temp\\files\\00121516530000000000000000.pdf.pdf', 'size_bytes': 148103}]",SENDAS DISTRIBUIDORA S.A.
+25372,2020,100574,False,not_found,[],SENDAS DISTRIBUIDORA S.A.
+25372,2021,111903,False,not_found,[],SENDAS DISTRIBUIDORA S.A.
+25372,2022,123557,False,not_found,[],SENDAS DISTRIBUIDORA S.A.
+25372,2023,134159,False,not_found,[],SENDAS DISTRIBUIDORA S.A.
+25372,2024,144897,False,not_found,[],SENDAS DISTRIBUIDORA S.A.
+20745,2015,53951,False,not_found,[],SLC AGRICOLA S.A.
+20745,2016,63591,False,not_found,[],SLC AGRICOLA S.A.
+20745,2017,72071,False,not_found,[],SLC AGRICOLA S.A.
+20745,2018,81179,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\20745\\2018\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV14000\\Temp\\files\\00122116530000000000000000.pdf.pdf', 'size_bytes': 4039043}]",SLC AGRICOLA S.A.
+20745,2019,91857,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\20745\\2019\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV15002\\Temp\\files\\00122916530000000000000000.pdf.pdf', 'size_bytes': 4967043}]",SLC AGRICOLA S.A.
+20745,2020,101024,False,not_found,[],SLC AGRICOLA S.A.
+20745,2021,112563,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\20745\\2021\\relatorio_administracao.pdf', 'original_filename': 'SLC-RAdm21-0315-22h.pdf', 'size_bytes': 1741964}]",SLC AGRICOLA S.A.
+20745,2022,124878,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\20745\\2022\\relatorio_administracao.pdf', 'original_filename': 'SLC Agricola RAD 2022 D15 sem DFs.pdf', 'size_bytes': 7716013}]",SLC AGRICOLA S.A.
+20745,2023,135676,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\20745\\2023\\relatorio_administracao.pdf', 'original_filename': 'SLCAgricola_RAD23_D7.pdf', 'size_bytes': 6209024}]",SLC AGRICOLA S.A.
+20745,2024,145742,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\20745\\2024\\relatorio_administracao.pdf', 'original_filename': 'Book SLC Agri´cola RAD 130325 - sem DFs reapresentado.pdf', 'size_bytes': 14043874}]",SLC AGRICOLA S.A.
+24260,2016,75642,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\24260\\2016\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00121116530000000000000000.docx.pdf', 'size_bytes': 252025}]",SMARTFIT ESCOLA DE GINÁSTICA E DANÇA S.A.
+24260,2017,75645,False,not_found,[],SMARTFIT ESCOLA DE GINÁSTICA E DANÇA S.A.
+24260,2018,81919,False,not_found,[],SMARTFIT ESCOLA DE GINÁSTICA E DANÇA S.A.
+24260,2019,92226,False,not_found,[],SMARTFIT ESCOLA DE GINÁSTICA E DANÇA S.A.
+24260,2020,102210,False,not_found,[],SMARTFIT ESCOLA DE GINÁSTICA E DANÇA S.A.
+24260,2021,112627,False,not_found,[],SMARTFIT ESCOLA DE GINÁSTICA E DANÇA S.A.
+24260,2022,127471,False,not_found,[],SMARTFIT ESCOLA DE GINÁSTICA E DANÇA S.A.
+24260,2023,134731,False,not_found,[],SMARTFIT ESCOLA DE GINÁSTICA E DANÇA S.A.
+24260,2024,145357,False,not_found,[],SMARTFIT ESCOLA DE GINÁSTICA E DANÇA S.A.
+13986,2015,53473,False,not_found,[],SUZANO S.A.
+13986,2016,62391,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\13986\\2016\\relatorio_administracao.pdf', 'original_filename': 'C:\\Program Files (x86)\\CVM\\EmpresasNet\\Temp\\files\\00125416530000000000000000.pdf.pdf', 'size_bytes': 255865}]",SUZANO S.A.
+13986,2017,71458,False,not_found,[],SUZANO S.A.
+13986,2018,80820,False,not_found,[],SUZANO S.A.
+13986,2019,90915,False,not_found,[],SUZANO S.A.
+13986,2020,100089,False,not_found,[],SUZANO S.A.
+13986,2021,111671,False,not_found,[],SUZANO S.A.
+13986,2022,123757,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\13986\\2022\\relatorio_administracao.pdf', 'original_filename': 'Relatório da Administração 2022 + Release de Resultados 4T22.pdf', 'size_bytes': 1282148}]",SUZANO S.A.
+13986,2023,134318,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\13986\\2023\\relatorio_administracao.pdf', 'original_filename': 'RA e Release combinado.pdf', 'size_bytes': 1469737}]",SUZANO S.A.
+13986,2024,144744,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\13986\\2024\\relatorio_administracao.pdf', 'original_filename': 'Binder 2024-12-ITR PT_RA-Release.pdf', 'size_bytes': 789572}]",SUZANO S.A.
+17671,2015,53605,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\17671\\2015\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00121616530000000000000000.pdf.pdf', 'size_bytes': 566321}]",TELEFÔNICA BRASIL S.A
+17671,2016,62682,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\17671\\2016\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00122416530000000000000000.pdf.pdf', 'size_bytes': 811081}]",TELEFÔNICA BRASIL S.A
+17671,2017,71637,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\17671\\2017\\relatorio_administracao.pdf', 'original_filename': 'C:\\\\Temp\\files\\00122116530000000000000000.pdf.pdf', 'size_bytes': 1009120}]",TELEFÔNICA BRASIL S.A
+17671,2018,80760,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\17671\\2018\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV14000\\Temp\\files\\00121516530000000000000000.pdf.pdf', 'size_bytes': 513568}]",TELEFÔNICA BRASIL S.A
+17671,2019,91063,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\17671\\2019\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV15002\\Temp\\files\\00122016530000000000000000.pdf.pdf', 'size_bytes': 250948}]",TELEFÔNICA BRASIL S.A
+17671,2020,100383,False,not_found,[],TELEFÔNICA BRASIL S.A
+17671,2021,111940,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\17671\\2021\\relatorio_administracao.pdf', 'original_filename': 'RA 2021 Parecer CA.pdf', 'size_bytes': 536268}]",TELEFÔNICA BRASIL S.A
+17671,2022,123623,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\17671\\2022\\relatorio_administracao.pdf', 'original_filename': 'Dez-22_TBRASIL_RA_V2.pdf', 'size_bytes': 352944}]",TELEFÔNICA BRASIL S.A
+17671,2023,134135,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\17671\\2023\\relatorio_administracao.pdf', 'original_filename': 'Dez-23_Relatório da Administração_V2.pdf', 'size_bytes': 3365942}]",TELEFÔNICA BRASIL S.A
+17671,2024,145006,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\17671\\2024\\relatorio_administracao.pdf', 'original_filename': '2025.02.19 - Telefônica Brasil Relatório da Administração 2024.pdf', 'size_bytes': 5244094}]",TELEFÔNICA BRASIL S.A
+24929,2018,88961,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\24929\\2018\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV15002\\Temp\\files\\00124216530000000000000000.pdf.pdf', 'size_bytes': 302642}]",TIM S.A.
+24929,2019,91425,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\24929\\2019\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV15002\\Temp\\files\\00122416530000000000000000.pdf.pdf', 'size_bytes': 343572}]",TIM S.A.
+24929,2020,100058,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\24929\\2020\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV17000\\Temp\\files\\00122816530000000000000000.pdf.pdf', 'size_bytes': 771535}]",TIM S.A.
+24929,2021,112106,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\24929\\2021\\relatorio_administracao.pdf', 'original_filename': 'TIM_MD&amp;A 2022_PORT v11 Clean_CVM.pdf', 'size_bytes': 999655}]",TIM S.A.
+24929,2022,123456,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\24929\\2022\\relatorio_administracao.pdf', 'original_filename': 'TIM_MDA 2023_PORT_CVM.pdf', 'size_bytes': 699194}]",TIM S.A.
+24929,2023,133877,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\24929\\2023\\relatorio_administracao.pdf', 'original_filename': 'TIM_MDA 2023_PT_limpa_CVM.pdf', 'size_bytes': 850880}]",TIM S.A.
+24929,2024,144695,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\24929\\2024\\relatorio_administracao.pdf', 'original_filename': 'TIM_MDA 2024_CVM.pdf', 'size_bytes': 882531}]",TIM S.A.
+19992,2015,54126,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\19992\\2015\\relatorio_administracao.pdf', 'original_filename': 'C:\\Program Files (x86)\\CVM\\EmpresasNet\\Temp\\files\\00122116530000000000000000.pdf.pdf', 'size_bytes': 392823}]",TOTVS S.A.
+19992,2016,62713,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\19992\\2016\\relatorio_administracao.pdf', 'original_filename': 'C:\\EmpresasNet\\Temp\\files\\00122816530000000000000000.pdf.pdf', 'size_bytes': 493589}]",TOTVS S.A.
+19992,2017,71390,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\19992\\2017\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\Temp\\files\\00121216530000000000000000.pdf.pdf', 'size_bytes': 479875}]",TOTVS S.A.
+19992,2018,80641,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\19992\\2018\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV14000\\Temp\\files\\00121816530000000000000000.pdf.pdf', 'size_bytes': 811340}]",TOTVS S.A.
+19992,2019,90914,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\19992\\2019\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV15002\\Temp\\files\\00121116530000000000000000.pdf.pdf', 'size_bytes': 808588}]",TOTVS S.A.
+19992,2020,111812,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\19992\\2020\\relatorio_administracao.pdf', 'original_filename': 'RA reapresentação 2020 - FINAL.pdf', 'size_bytes': 772178}]",TOTVS S.A.
+19992,2021,111818,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\19992\\2021\\relatorio_administracao.pdf', 'original_filename': 'CA_MENSAGEM.pdf', 'size_bytes': 619796}]",TOTVS S.A.
+19992,2022,123527,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\19992\\2022\\relatorio_administracao.pdf', 'original_filename': 'Relatório da Adm - 14.02.2023 - FINAL.pdf', 'size_bytes': 1037044}]",TOTVS S.A.
+19992,2023,133904,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\19992\\2023\\relatorio_administracao.pdf', 'original_filename': '2023_DFP_Relatório da Administração_PT-final.pdf', 'size_bytes': 597571}]",TOTVS S.A.
+19992,2024,144748,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\19992\\2024\\relatorio_administracao.pdf', 'original_filename': 'Relat Adm_PT-12.02.2025 FINAL.pdf', 'size_bytes': 736742}]",TOTVS S.A.
+20257,2015,54034,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\20257\\2015\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00138616530000000000000000.pdf.pdf', 'size_bytes': 670567}]",TRANSMISSORA ALIANÇA DE ENERGIA ELÉTRICA S.A.
+20257,2016,63089,False,not_found,[],TRANSMISSORA ALIANÇA DE ENERGIA ELÉTRICA S.A.
+20257,2017,74904,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\20257\\2017\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00122716530000000000000000.pdf.pdf', 'size_bytes': 1087380}]",TRANSMISSORA ALIANÇA DE ENERGIA ELÉTRICA S.A.
+20257,2018,82172,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\20257\\2018\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV13004\\Temp\\files\\00121216530000000000000000.pdf.pdf', 'size_bytes': 1071505}]",TRANSMISSORA ALIANÇA DE ENERGIA ELÉTRICA S.A.
+20257,2019,91546,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\20257\\2019\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV16000\\Temp\\files\\00121216530000000000000000.pdf.pdf', 'size_bytes': 964046}]",TRANSMISSORA ALIANÇA DE ENERGIA ELÉTRICA S.A.
+20257,2020,100641,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\20257\\2020\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV17000\\Temp\\files\\00122416530000000000000000.pdf.pdf', 'size_bytes': 1980175}]",TRANSMISSORA ALIANÇA DE ENERGIA ELÉTRICA S.A.
+20257,2021,111877,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\20257\\2021\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV17001\\Temp\\files\\00122016530000000000000000.pdf.pdf', 'size_bytes': 1476026}]",TRANSMISSORA ALIANÇA DE ENERGIA ELÉTRICA S.A.
+20257,2022,124208,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\20257\\2022\\relatorio_administracao.pdf', 'original_filename': 'RA - TAESA - 2022 v15.pdf', 'size_bytes': 577964}]",TRANSMISSORA ALIANÇA DE ENERGIA ELÉTRICA S.A.
+20257,2023,134502,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\20257\\2023\\relatorio_administracao.pdf', 'original_filename': 'RA - TAESA - 2023.pdf', 'size_bytes': 505283}]",TRANSMISSORA ALIANÇA DE ENERGIA ELÉTRICA S.A.
+20257,2024,145522,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\20257\\2024\\relatorio_administracao.pdf', 'original_filename': 'RA - TAESA - 2024 final.pdf', 'size_bytes': 463565}]",TRANSMISSORA ALIANÇA DE ENERGIA ELÉTRICA S.A.
+18465,2015,53442,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\18465\\2015\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00121816530000000000000000.docx.pdf', 'size_bytes': 579403}]",ULTRAPAR PARTICIPACOES S.A.
+18465,2016,62729,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\18465\\2016\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00123916530000000000000000.pdf.pdf', 'size_bytes': 206677}]",ULTRAPAR PARTICIPACOES S.A.
+18465,2017,71663,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\18465\\2017\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00124816530000000000000000.pdf.pdf', 'size_bytes': 240523}]",ULTRAPAR PARTICIPACOES S.A.
+18465,2018,80786,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\18465\\2018\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV14000\\Temp\\files\\00121916530000000000000000.pdf.pdf', 'size_bytes': 389383}]",ULTRAPAR PARTICIPACOES S.A.
+18465,2019,91597,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\18465\\2019\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV15002\\Temp\\files\\00122116530000000000000000.docx.pdf', 'size_bytes': 387361}]",ULTRAPAR PARTICIPACOES S.A.
+18465,2020,100462,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\18465\\2020\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV17000\\Temp\\files\\00122316530000000000000000.pdf.pdf', 'size_bytes': 594509}]",ULTRAPAR PARTICIPACOES S.A.
+18465,2021,112109,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\18465\\2021\\relatorio_administracao.pdf', 'original_filename': 'RAD Relatório da Administração 2021.pdf', 'size_bytes': 411957}]",ULTRAPAR PARTICIPACOES S.A.
+18465,2022,123567,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\18465\\2022\\relatorio_administracao.pdf', 'original_filename': 'Relatório da Administração 2022.pdf', 'size_bytes': 406124}]",ULTRAPAR PARTICIPACOES S.A.
+18465,2023,134329,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\18465\\2023\\relatorio_administracao.pdf', 'original_filename': 'Relatório da Administração 2023.pdf', 'size_bytes': 376524}]",ULTRAPAR PARTICIPACOES S.A.
+18465,2024,145073,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\18465\\2024\\relatorio_administracao.pdf', 'original_filename': 'Relatório da Administração 2024.pdf', 'size_bytes': 471294}]",ULTRAPAR PARTICIPACOES S.A.
+14320,2015,53450,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\14320\\2015\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00123216530000000000000000.pdf.pdf', 'size_bytes': 350016}]",USINAS SID DE MINAS GERAIS S.A.-USIMINAS
+14320,2016,62585,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\14320\\2016\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00123916530000000000000000.pdf.pdf', 'size_bytes': 184923}]",USINAS SID DE MINAS GERAIS S.A.-USIMINAS
+14320,2017,71440,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\14320\\2017\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00124616530000000000000000.pdf.pdf', 'size_bytes': 294655}]",USINAS SID DE MINAS GERAIS S.A.-USIMINAS
+14320,2018,80692,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\14320\\2018\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV14000\\Temp\\files\\00122216530000000000000000.pdf.pdf', 'size_bytes': 212744}]",USINAS SID DE MINAS GERAIS S.A.-USIMINAS
+14320,2019,90949,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\14320\\2019\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV15002\\Temp\\files\\00122916530000000000000000.pdf.pdf', 'size_bytes': 171422}]",USINAS SID DE MINAS GERAIS S.A.-USIMINAS
+14320,2020,100148,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\14320\\2020\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV17000\\Temp\\files\\00122416530000000000000000.pdf.pdf', 'size_bytes': 342515}]",USINAS SID DE MINAS GERAIS S.A.-USIMINAS
+14320,2021,111713,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\14320\\2021\\relatorio_administracao.pdf', 'original_filename': 'RA_2021_Português.pdf', 'size_bytes': 198294}]",USINAS SID DE MINAS GERAIS S.A.-USIMINAS
+14320,2022,123467,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\14320\\2022\\relatorio_administracao.pdf', 'original_filename': 'RA_2022_Português_FINAL.pdf', 'size_bytes': 406848}]",USINAS SID DE MINAS GERAIS S.A.-USIMINAS
+14320,2023,144312,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\14320\\2023\\relatorio_administracao.pdf', 'original_filename': 'Relatório da Administração 2023.pdf', 'size_bytes': 606780}]",USINAS SID DE MINAS GERAIS S.A.-USIMINAS
+14320,2024,144777,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\14320\\2024\\relatorio_administracao.pdf', 'original_filename': 'Relatório da Administração 2024_Final.pdf', 'size_bytes': 805771}]",USINAS SID DE MINAS GERAIS S.A.-USIMINAS
+4170,2015,53612,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\4170\\2015\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00121616530000000000000000.pdf.pdf', 'size_bytes': 392028}]",VALE S.A.
+4170,2016,62733,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\4170\\2016\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00121616530000000000000000.pdf.pdf', 'size_bytes': 475423}]",VALE S.A.
+4170,2017,71834,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\4170\\2017\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\Temp\\files\\00121216530000000000000000.pdf.pdf', 'size_bytes': 973399}]",VALE S.A.
+4170,2018,82269,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\4170\\2018\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV14000\\Temp\\files\\00121816530000000000000000.pdf.pdf', 'size_bytes': 552856}]",VALE S.A.
+4170,2019,91294,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\4170\\2019\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV15002\\Temp\\files\\00121716530000000000000000.pdf.pdf', 'size_bytes': 1953199}]",VALE S.A.
+4170,2020,100475,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\4170\\2020\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV17000\\Temp\\files\\00122116530000000000000000.pdf.pdf', 'size_bytes': 953320}]",VALE S.A.
+4170,2021,112054,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\4170\\2021\\relatorio_administracao.pdf', 'original_filename': 'REL_ADMINISTRACAO.pdf', 'size_bytes': 748607}]",VALE S.A.
+4170,2022,123591,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\4170\\2022\\relatorio_administracao.pdf', 'original_filename': 'Relatório da Administração 2022 - PT.pdf', 'size_bytes': 1156402}]",VALE S.A.
+4170,2023,134200,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\4170\\2023\\relatorio_administracao.pdf', 'original_filename': 'Vale_Relatório da Administração 2023 (1).pdf', 'size_bytes': 3434261}]",VALE S.A.
+4170,2024,145455,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\4170\\2024\\relatorio_administracao.pdf', 'original_filename': 'Vale_Relatório da Administração_2024_p3 (reapres. 17.03).pdf', 'size_bytes': 7946505}]",VALE S.A.
+24716,2018,80868,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\24716\\2018\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV14000\\Temp\\files\\00121516530000000000000000.pdf.pdf', 'size_bytes': 272539}]","VAMOS LOCAÇÃO DE CAMINHÕES, MÁQUINAS E EQUIPAMENTOS S.A."
+24716,2019,90678,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\24716\\2019\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV15002\\Temp\\files\\00121616530000000000000000.pdf.pdf', 'size_bytes': 174092}]","VAMOS LOCAÇÃO DE CAMINHÕES, MÁQUINAS E EQUIPAMENTOS S.A."
+24716,2020,100435,False,not_found,[],"VAMOS LOCAÇÃO DE CAMINHÕES, MÁQUINAS E EQUIPAMENTOS S.A."
+24716,2021,111855,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\24716\\2021\\relatorio_administracao.pdf', 'original_filename': 'Relatório Adm Grupo Vamos 4T21_final.pdf', 'size_bytes': 1829549}]","VAMOS LOCAÇÃO DE CAMINHÕES, MÁQUINAS E EQUIPAMENTOS S.A."
+24716,2022,123501,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\24716\\2022\\relatorio_administracao.pdf', 'original_filename': 'Relatório Adm Grupo Vamos 4T22 vFINAL_v2.pdf', 'size_bytes': 1206180}]","VAMOS LOCAÇÃO DE CAMINHÕES, MÁQUINAS E EQUIPAMENTOS S.A."
+24716,2023,134848,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\24716\\2023\\relatorio_administracao.pdf', 'original_filename': 'Relatório Adm Grupo Vamos 2023.pdf', 'size_bytes': 653638}]","VAMOS LOCAÇÃO DE CAMINHÕES, MÁQUINAS E EQUIPAMENTOS S.A."
+24716,2024,145913,False,not_found,[],"VAMOS LOCAÇÃO DE CAMINHÕES, MÁQUINAS E EQUIPAMENTOS S.A."
+24295,2016,70481,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\24295\\2016\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00122516530000000000000000.pdf.pdf', 'size_bytes': 447448}]",VIBRA ENERGIA S/A
+24295,2017,72366,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\24295\\2017\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00121616530000000000000000.pdf.pdf', 'size_bytes': 417831}]",VIBRA ENERGIA S/A
+24295,2018,80878,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\24295\\2018\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV13003\\Temp\\files\\00122116530000000000000000.pdf.pdf', 'size_bytes': 396813}]",VIBRA ENERGIA S/A
+24295,2019,91512,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\24295\\2019\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV16000\\Temp\\files\\00121416530000000000000000.pdf.pdf', 'size_bytes': 602105}]",VIBRA ENERGIA S/A
+24295,2020,100792,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\24295\\2020\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV17000\\Temp\\files\\00122316530000000000000000.pdf.pdf', 'size_bytes': 309469}]",VIBRA ENERGIA S/A
+24295,2021,112824,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\24295\\2021\\relatorio_administracao.pdf', 'original_filename': 'Relatorio da Administração dez21.pdf', 'size_bytes': 333567}]",VIBRA ENERGIA S/A
+24295,2022,124423,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\24295\\2022\\relatorio_administracao.pdf', 'original_filename': 'Relatório da Administração 2022.pdf', 'size_bytes': 542278}]",VIBRA ENERGIA S/A
+24295,2023,134433,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\24295\\2023\\relatorio_administracao.pdf', 'original_filename': 'Relatório da Administração.pdf', 'size_bytes': 10036179}]",VIBRA ENERGIA S/A
+24295,2024,144972,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\24295\\2024\\relatorio_administracao.pdf', 'original_filename': 'Relatório da administração.pdf', 'size_bytes': 515586}]",VIBRA ENERGIA S/A
+24805,2019,91745,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\24805\\2019\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV15002\\Temp\\files\\00121216530000000000000000.pdf.pdf', 'size_bytes': 216215}]",VIVARA PARTICIPAÇÕES S.A.
+24805,2020,101032,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\24805\\2020\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV17000\\Temp\\files\\00122516530000000000000000.pdf.pdf', 'size_bytes': 226925}]",VIVARA PARTICIPAÇÕES S.A.
+24805,2021,112662,False,not_found,[],VIVARA PARTICIPAÇÕES S.A.
+24805,2022,124253,False,not_found,[],VIVARA PARTICIPAÇÕES S.A.
+24805,2023,134923,False,not_found,[],VIVARA PARTICIPAÇÕES S.A.
+24805,2024,145515,False,not_found,[],VIVARA PARTICIPAÇÕES S.A.
+5410,2015,53579,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\5410\\2015\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00122316530000000000000000.pdf.pdf', 'size_bytes': 144876}]",WEG S.A.
+5410,2016,62688,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\5410\\2016\\relatorio_administracao.pdf', 'original_filename': 'C:\\Program Files (x86)\\CVM\\EmpresasNet\\Temp\\files\\00121216530000000000000000.pdf.pdf', 'size_bytes': 266527}]",WEG S.A.
+5410,2017,71853,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\5410\\2017\\relatorio_administracao.pdf', 'original_filename': 'C:\\Program Files (x86)\\CVM\\EmpresasNet\\Temp\\files\\00122516530000000000000000.pdf.pdf', 'size_bytes': 356632}]",WEG S.A.
+5410,2018,82128,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\5410\\2018\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV14000\\Temp\\files\\00123016530000000000000000.pdf.pdf', 'size_bytes': 230562}]",WEG S.A.
+5410,2019,91065,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\5410\\2019\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV15002\\Temp\\files\\00122216530000000000000000.pdf.pdf', 'size_bytes': 254523}]",WEG S.A.
+5410,2020,100392,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\5410\\2020\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV17000\\Temp\\files\\00122216530000000000000000.pdf.pdf', 'size_bytes': 279113}]",WEG S.A.
+5410,2021,111794,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\5410\\2021\\relatorio_administracao.pdf', 'original_filename': 'Relatório da Administração 2021.pdf', 'size_bytes': 168102}]",WEG S.A.
+5410,2022,123532,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\5410\\2022\\relatorio_administracao.pdf', 'original_filename': 'Relatório da Administração DFP.pdf', 'size_bytes': 192160}]",WEG S.A.
+5410,2023,134151,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\5410\\2023\\relatorio_administracao.pdf', 'original_filename': 'Relatório da Administração.pdf', 'size_bytes': 169106}]",WEG S.A.
+5410,2024,145023,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\5410\\2024\\relatorio_administracao.pdf', 'original_filename': 'Relatório da Administração DFP.pdf', 'size_bytes': 169018}]",WEG S.A.
+21016,2015,54001,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\21016\\2015\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00119916530000000000000000.pdf.pdf', 'size_bytes': 313711}]",YDUQS PARTICIPACOES S.A.
+21016,2016,63235,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\21016\\2016\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00133616530000000000000000.pdf.pdf', 'size_bytes': 397700}]",YDUQS PARTICIPACOES S.A.
+21016,2017,72335,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\21016\\2017\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00122416530000000000000000.pdf.pdf', 'size_bytes': 697538}]",YDUQS PARTICIPACOES S.A.
+21016,2018,81225,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\21016\\2018\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV14000\\Temp\\files\\00122516530000000000000000.pdf.pdf', 'size_bytes': 426890}]",YDUQS PARTICIPACOES S.A.
+21016,2019,91730,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\21016\\2019\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV16000\\Temp\\files\\00121316530000000000000000.pdf.pdf', 'size_bytes': 293951}]",YDUQS PARTICIPACOES S.A.
+21016,2020,101023,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\21016\\2020\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV17000\\Temp\\files\\00122116530000000000000000.pdf.pdf', 'size_bytes': 748900}]",YDUQS PARTICIPACOES S.A.
+21016,2021,112551,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\21016\\2021\\relatorio_administracao.pdf', 'original_filename': 'YDUQS - Relato´rio da Administrac¸a~o 2021_VF_PORT.pdf', 'size_bytes': 734571}]",YDUQS PARTICIPACOES S.A.
+21016,2022,124190,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\21016\\2022\\relatorio_administracao.pdf', 'original_filename': 'YDUQS - Relato´rio da Administrac¸a~o 2022_PORT.vf.pdf', 'size_bytes': 457524}]",YDUQS PARTICIPACOES S.A.
+21016,2023,134739,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\21016\\2023\\relatorio_administracao.pdf', 'original_filename': '[PORT] YDUQS - Relato´rio da Administrac¸a~o 2023_vf.pdf', 'size_bytes': 322021}]",YDUQS PARTICIPACOES S.A.
+21016,2024,146505,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\21016\\2024\\relatorio_administracao.pdf', 'original_filename': '[PORT] YDUQS - Relato´rio da Administrac¸a~o 2024_vf.pdf', 'size_bytes': 325573}]",YDUQS PARTICIPACOES S.A.
+10456,2015,53857,False,not_found,[],ALPARGATAS S.A.
+10456,2016,63433,False,not_found,[],ALPARGATAS S.A.
+10456,2017,71482,False,not_found,[],ALPARGATAS S.A.
+10456,2018,80705,False,not_found,[],ALPARGATAS S.A.
+10456,2019,90836,False,not_found,[],ALPARGATAS S.A.
+10456,2020,100169,False,not_found,[],ALPARGATAS S.A.
+10456,2021,111978,False,not_found,[],ALPARGATAS S.A.
+10456,2022,123822,False,not_found,[],ALPARGATAS S.A.
+10456,2023,134314,False,not_found,[],ALPARGATAS S.A.
+10456,2024,145308,False,not_found,[],ALPARGATAS S.A.
+20990,2015,54096,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\20990\\2015\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00122516530000000000000000.pdf.pdf', 'size_bytes': 1161637}]",AMERICANAS S.A. - EM RECUPERAÇÃO JUDICIAL
+20990,2016,62640,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\20990\\2016\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00125016530000000000000000.pdf.pdf', 'size_bytes': 2409506}]",AMERICANAS S.A. - EM RECUPERAÇÃO JUDICIAL
+20990,2017,72061,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\20990\\2017\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00121216530000000000000000.pdf.pdf', 'size_bytes': 2180285}]",AMERICANAS S.A. - EM RECUPERAÇÃO JUDICIAL
+20990,2018,81382,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\20990\\2018\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV14000\\Temp\\files\\00121916530000000000000000.pdf.pdf', 'size_bytes': 1190583}]",AMERICANAS S.A. - EM RECUPERAÇÃO JUDICIAL
+20990,2019,91171,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\20990\\2019\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV15002\\Temp\\files\\00121616530000000000000000.pdf.pdf', 'size_bytes': 2391977}]",AMERICANAS S.A. - EM RECUPERAÇÃO JUDICIAL
+20990,2020,100690,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\20990\\2020\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV17000\\Temp\\files\\00122816530000000000000000.pdf.pdf', 'size_bytes': 965781}]",AMERICANAS S.A. - EM RECUPERAÇÃO JUDICIAL
+20990,2021,112049,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\20990\\2021\\relatorio_administracao.pdf', 'original_filename': 'Americanas RA 2021 - 24_02 - 16-12hrs.pdf', 'size_bytes': 1839220}]",AMERICANAS S.A. - EM RECUPERAÇÃO JUDICIAL
+20990,2022,132682,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\20990\\2022\\relatorio_administracao.pdf', 'original_filename': 'Americanas-Relatório da Adm-22_VF.pdf', 'size_bytes': 354867}]",AMERICANAS S.A. - EM RECUPERAÇÃO JUDICIAL
+20990,2023,141202,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\20990\\2023\\relatorio_administracao.pdf', 'original_filename': '(14.08) Relatorio da Adm 2023 - VFF - Marcada.pdf', 'size_bytes': 210816}]",AMERICANAS S.A. - EM RECUPERAÇÃO JUDICIAL
+20990,2024,145807,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\20990\\2024\\relatorio_administracao.pdf', 'original_filename': 'Americanas Relatório da Administração 2024.pdf', 'size_bytes': 221006}]",AMERICANAS S.A. - EM RECUPERAÇÃO JUDICIAL
+24171,2016,67242,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\24171\\2016\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00121616530000000000000000.pdf.pdf', 'size_bytes': 89095}]",ATACADÃO S.A.
+24171,2017,71848,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\24171\\2017\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00121716530000000000000000.pdf.pdf', 'size_bytes': 1155651}]",ATACADÃO S.A.
+24171,2018,80891,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\24171\\2018\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV14000\\Temp\\files\\00121116530000000000000000.pdf.pdf', 'size_bytes': 303971}]",ATACADÃO S.A.
+24171,2019,91144,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\24171\\2019\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV15002\\Temp\\files\\00121316530000000000000000.pdf.pdf', 'size_bytes': 241110}]",ATACADÃO S.A.
+24171,2020,100225,False,not_found,[],ATACADÃO S.A.
+24171,2021,111823,False,not_found,[],ATACADÃO S.A.
+24171,2022,123495,False,not_found,[],ATACADÃO S.A.
+24171,2023,134106,False,not_found,[],ATACADÃO S.A.
+24171,2024,144849,False,not_found,[],ATACADÃO S.A.
+27707,2023,141876,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\27707\\2023\\relatorio_administracao.pdf', 'original_filename': 'Relatório da Administração Vamos Linhas Amarelas 2023.pdf', 'size_bytes': 1044638}]",AUTOMOB PARTICIPAÇÕES S.A.
+27707,2024,145756,False,not_found,[],AUTOMOB PARTICIPAÇÕES S.A.
+24112,2016,64217,False,not_found,[],AZUL S.A.
+24112,2017,72141,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\24112\\2017\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00121816530000000000000000.pdf.pdf', 'size_bytes': 285377}]",AZUL S.A.
+24112,2018,81237,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\24112\\2018\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00123516530000000000000000.pdf.pdf', 'size_bytes': 301894}]",AZUL S.A.
+24112,2019,91509,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\24112\\2019\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV14000\\Temp\\files\\00121416530000000000000000.pdf.pdf', 'size_bytes': 773315}]",AZUL S.A.
+24112,2020,100645,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\24112\\2020\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV17000\\Temp\\files\\00122116530000000000000000.pdf.pdf', 'size_bytes': 336381}]",AZUL S.A.
+24112,2021,112019,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\24112\\2021\\relatorio_administracao.pdf', 'original_filename': 'Relatório da administração 2021 PT -V5.pdf', 'size_bytes': 520599}]",AZUL S.A.
+24112,2022,123879,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\24112\\2022\\relatorio_administracao.pdf', 'original_filename': 'Relatório da administração 2022 PT_final.pdf', 'size_bytes': 652198}]",AZUL S.A.
+24112,2023,135682,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\24112\\2023\\relatorio_administracao.pdf', 'original_filename': 'ASA_4Q23_Português_FINAL_V3_Relatório ADM.pdf', 'size_bytes': 547911}]",AZUL S.A.
+24112,2024,144942,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\24112\\2024\\relatorio_administracao.pdf', 'original_filename': 'Relatório da administração 2024 PT v6 - sem link.pdf', 'size_bytes': 470737}]",AZUL S.A.
+19909,2015,54051,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\19909\\2015\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00121216530000000000000000.pdf.pdf', 'size_bytes': 23895}]",BR MALLS PARTICIPACOES S.A.
+19909,2016,63185,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\19909\\2016\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00125016530000000000000000.pdf.pdf', 'size_bytes': 28906}]",BR MALLS PARTICIPACOES S.A.
+19909,2017,72384,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\19909\\2017\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00123116530000000000000000.pdf.pdf', 'size_bytes': 19844}]",BR MALLS PARTICIPACOES S.A.
+19909,2018,81862,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\19909\\2018\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV13004\\Temp\\files\\00122416530000000000000000.pdf.pdf', 'size_bytes': 82465}]",BR MALLS PARTICIPACOES S.A.
+19909,2019,91538,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\19909\\2019\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV15002\\Temp\\files\\00121916530000000000000000.pdf.pdf', 'size_bytes': 1342964}]",BR MALLS PARTICIPACOES S.A.
+19909,2020,102775,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\19909\\2020\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV16000\\Temp\\files\\00122416530000000000000000.pdf.pdf', 'size_bytes': 1217898}]",BR MALLS PARTICIPACOES S.A.
+19909,2021,112714,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\19909\\2021\\relatorio_administracao.pdf', 'original_filename': 'Relatório da ADM (2).pdf', 'size_bytes': 10960189}]",BR MALLS PARTICIPACOES S.A.
+19909,2022,124528,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\19909\\2022\\relatorio_administracao.pdf', 'original_filename': 'Relatório da Administração 2022 vfinal..pdf', 'size_bytes': 1238312}]",BR MALLS PARTICIPACOES S.A.
+19909,2023,134922,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\19909\\2023\\relatorio_administracao.pdf', 'original_filename': 'BR Malls Participações - Comentário de desempenho Vfinal.pdf', 'size_bytes': 35831}]",BR MALLS PARTICIPACOES S.A.
+19909,2024,145599,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\19909\\2024\\relatorio_administracao.pdf', 'original_filename': 'Relatório da administração - Comentário do desempenho 4T2024.pdf', 'size_bytes': 92835}]",BR MALLS PARTICIPACOES S.A.
+19925,2015,53400,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\19925\\2015\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00168704120000000000000000.pdf.pdf', 'size_bytes': 732185}]",BR PROPERTIES S.A.
+19925,2016,66835,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\19925\\2016\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00203404120000000000000000.pdf.pdf', 'size_bytes': 1022101}]",BR PROPERTIES S.A.
+19925,2017,71365,False,not_found,[],BR PROPERTIES S.A.
+19925,2018,80509,False,not_found,[],BR PROPERTIES S.A.
+19925,2019,91755,False,not_found,[],BR PROPERTIES S.A.
+19925,2020,100345,False,not_found,[],BR PROPERTIES S.A.
+19925,2021,111933,False,not_found,[],BR PROPERTIES S.A.
+19925,2022,123391,False,not_found,[],BR PROPERTIES S.A.
+16292,2015,53666,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\16292\\2015\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00124216530000000000000000.pdf.pdf', 'size_bytes': 1191014}]",BRF S.A.
+16292,2016,62776,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\16292\\2016\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00125016530000000000000000.pdf.pdf', 'size_bytes': 2202858}]",BRF S.A.
+16292,2017,71716,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\16292\\2017\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00125716530000000000000000.pdf.pdf', 'size_bytes': 2556030}]",BRF S.A.
+16292,2018,80959,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\16292\\2018\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV14000\\Temp\\files\\00127516530000000000000000.pdf.pdf', 'size_bytes': 758745}]",BRF S.A.
+16292,2019,91306,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\16292\\2019\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV16000\\Temp\\files\\00121916530000000000000000.pdf.pdf', 'size_bytes': 444914}]",BRF S.A.
+16292,2020,100468,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\16292\\2020\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV17000\\Temp\\files\\00122316530000000000000000.pdf.pdf', 'size_bytes': 889562}]",BRF S.A.
+16292,2021,111931,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\16292\\2021\\relatorio_administracao.pdf', 'original_filename': 'Relatório da Administração 4T21_sem numeração de pg.pdf', 'size_bytes': 706602}]",BRF S.A.
+16292,2022,123762,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\16292\\2022\\relatorio_administracao.pdf', 'original_filename': 'RA 4T22 - PORT.pdf', 'size_bytes': 2041171}]",BRF S.A.
+16292,2023,134263,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\16292\\2023\\relatorio_administracao.pdf', 'original_filename': 'RA 4T23_V5..pdf', 'size_bytes': 2808424}]",BRF S.A.
+16292,2024,145059,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\16292\\2024\\relatorio_administracao.pdf', 'original_filename': '2PT. RA_4T24.pdf', 'size_bytes': 4236492}]",BRF S.A.
+2577,2015,54446,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\2577\\2015\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00124916530000000000000000.docx.pdf', 'size_bytes': 241554}]",CESP - CIA ENERGETICA DE SAO PAULO
+2577,2016,63564,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\2577\\2016\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00125416530000000000000000.docx.pdf', 'size_bytes': 276640}]",CESP - CIA ENERGETICA DE SAO PAULO
+2577,2017,72487,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\2577\\2017\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00125916530000000000000000.docx.pdf', 'size_bytes': 267927}]",CESP - CIA ENERGETICA DE SAO PAULO
+2577,2018,81455,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\2577\\2018\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV14000\\Temp\\files\\00124216530000000000000000.docx.pdf', 'size_bytes': 447579}]",CESP - CIA ENERGETICA DE SAO PAULO
+2577,2019,91018,False,not_found,[],CESP - CIA ENERGETICA DE SAO PAULO
+2577,2020,102348,False,not_found,[],CESP - CIA ENERGETICA DE SAO PAULO
+2577,2021,113047,False,not_found,[],CESP - CIA ENERGETICA DE SAO PAULO
+2577,2022,123595,False,not_found,[],CESP - CIA ENERGETICA DE SAO PAULO
+2577,2023,133921,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\2577\\2023\\relatorio_administracao.pdf', 'original_filename': 'Relatório da Administração CESP 2023_vf.pdf', 'size_bytes': 284333}]",CESP - CIA ENERGETICA DE SAO PAULO
+2577,2024,144973,False,not_found,[],CESP - CIA ENERGETICA DE SAO PAULO
+14826,2015,58356,False,not_found,[],CIA BRASILEIRA DE DISTRIBUICAO
+14826,2016,62966,False,not_found,[],CIA BRASILEIRA DE DISTRIBUICAO
+14826,2017,71607,False,not_found,[],CIA BRASILEIRA DE DISTRIBUICAO
+14826,2018,81550,False,not_found,[],CIA BRASILEIRA DE DISTRIBUICAO
+14826,2019,97921,False,not_found,[],CIA BRASILEIRA DE DISTRIBUICAO
+14826,2020,100387,False,not_found,[],CIA BRASILEIRA DE DISTRIBUICAO
+14826,2021,111994,False,not_found,[],CIA BRASILEIRA DE DISTRIBUICAO
+14826,2022,123740,False,not_found,[],CIA BRASILEIRA DE DISTRIBUICAO
+14826,2023,134162,False,not_found,[],CIA BRASILEIRA DE DISTRIBUICAO
+14826,2024,144850,False,not_found,[],CIA BRASILEIRA DE DISTRIBUICAO
+14761,2015,53643,False,not_found,[],CIA HERING
+14761,2016,62763,False,not_found,[],CIA HERING
+14761,2017,71909,False,not_found,[],CIA HERING
+14761,2018,80981,False,not_found,[],CIA HERING
+14761,2019,91385,False,not_found,[],CIA HERING
+14761,2020,100627,False,not_found,[],CIA HERING
+18627,2015,54301,False,not_found,[],CIA SANEAMENTO DO PARANA - SANEPAR
+18627,2016,62684,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\18627\\2016\\relatorio_administracao.pdf', 'original_filename': 'C:\\Arquivos de programas\\CVM\\EmpresasNet\\Temp\\files\\00124716530000000000000000.pdf.pdf', 'size_bytes': 2130053}]",CIA SANEAMENTO DO PARANA - SANEPAR
+18627,2017,71362,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\18627\\2017\\relatorio_administracao.pdf', 'original_filename': 'C:\\Arquivos de programas\\CVM\\EmpresasNet\\Temp\\files\\00126216530000000000000000.pdf.pdf', 'size_bytes': 833778}]",CIA SANEAMENTO DO PARANA - SANEPAR
+18627,2018,80809,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\18627\\2018\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV14000\\Temp\\files\\00121116530000000000000000.pdf.pdf', 'size_bytes': 867741}]",CIA SANEAMENTO DO PARANA - SANEPAR
+18627,2019,90796,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\18627\\2019\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV15002\\Temp\\files\\00123216530000000000000000.pdf.pdf', 'size_bytes': 4506353}]",CIA SANEAMENTO DO PARANA - SANEPAR
+18627,2020,100129,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\18627\\2020\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV17000\\Temp\\files\\00122016530000000000000000.pdf.pdf', 'size_bytes': 8839325}]",CIA SANEAMENTO DO PARANA - SANEPAR
+18627,2021,112044,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\18627\\2021\\relatorio_administracao.pdf', 'original_filename': 'RA 2021 (DFP CVM).pdf', 'size_bytes': 31369055}]",CIA SANEAMENTO DO PARANA - SANEPAR
+18627,2022,123587,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\18627\\2022\\relatorio_administracao.pdf', 'original_filename': 'RA 2022 CVM.pdf', 'size_bytes': 17628216}]",CIA SANEAMENTO DO PARANA - SANEPAR
+18627,2023,133929,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\18627\\2023\\relatorio_administracao.pdf', 'original_filename': 'ARQUIVO PARA O ENET 2023.pdf', 'size_bytes': 4904891}]",CIA SANEAMENTO DO PARANA - SANEPAR
+18627,2024,144899,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\18627\\2024\\relatorio_administracao.pdf', 'original_filename': 'Relatório da Administração.pdf', 'size_bytes': 8968824}]",CIA SANEAMENTO DO PARANA - SANEPAR
+22691,2015,54254,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\22691\\2015\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00122116530000000000000000.pdf.pdf', 'size_bytes': 25850}]",COMPANHIA DE LOCAÇÃO DAS AMÉRICAS
+22691,2016,65995,False,not_found,[],COMPANHIA DE LOCAÇÃO DAS AMÉRICAS
+22691,2017,72888,False,not_found,[],COMPANHIA DE LOCAÇÃO DAS AMÉRICAS
+22691,2018,82288,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\22691\\2018\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV14000\\Temp\\files\\00123916530000000000000000.pdf.pdf', 'size_bytes': 1036574}]",COMPANHIA DE LOCAÇÃO DAS AMÉRICAS
+22691,2019,91544,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\22691\\2019\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV15001\\Temp\\files\\00123516530000000000000000.pdf.pdf', 'size_bytes': 1638825}]",COMPANHIA DE LOCAÇÃO DAS AMÉRICAS
+22691,2020,100384,False,not_found,[],COMPANHIA DE LOCAÇÃO DAS AMÉRICAS
+22691,2021,112783,False,not_found,[],COMPANHIA DE LOCAÇÃO DAS AMÉRICAS
+22691,2022,124182,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\22691\\2022\\relatorio_administracao.pdf', 'original_filename': '3. Relatório Administração LCAM.pdf', 'size_bytes': 248119}]",COMPANHIA DE LOCAÇÃO DAS AMÉRICAS
+22691,2023,134627,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\22691\\2023\\relatorio_administracao.pdf', 'original_filename': '2. Relatório da Administração_LCAM_v4.pdf', 'size_bytes': 247240}]",COMPANHIA DE LOCAÇÃO DAS AMÉRICAS
+22691,2024,145230,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\22691\\2024\\relatorio_administracao.pdf', 'original_filename': '3. Relatório da Administração Locamerica 2024.pdf', 'size_bytes': 726877}]",COMPANHIA DE LOCAÇÃO DAS AMÉRICAS
+23310,2015,53476,False,not_found,[],CVC BRASIL OPERADORA E AGÊNCIA DE VIAGENS S.A.
+23310,2016,62556,False,not_found,[],CVC BRASIL OPERADORA E AGÊNCIA DE VIAGENS S.A.
+23310,2017,71407,False,not_found,[],CVC BRASIL OPERADORA E AGÊNCIA DE VIAGENS S.A.
+23310,2018,80879,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\23310\\2018\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV13004\\Temp\\files\\00121716530000000000000000.pdf.pdf', 'size_bytes': 790166}]",CVC BRASIL OPERADORA E AGÊNCIA DE VIAGENS S.A.
+23310,2019,96766,False,not_found,[],CVC BRASIL OPERADORA E AGÊNCIA DE VIAGENS S.A.
+23310,2020,102322,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\23310\\2020\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV17000\\Temp\\files\\00122116530000000000000000.pdf.pdf', 'size_bytes': 470902}]",CVC BRASIL OPERADORA E AGÊNCIA DE VIAGENS S.A.
+23310,2021,112557,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\23310\\2021\\relatorio_administracao.pdf', 'original_filename': 'Rel adm.pdf', 'size_bytes': 355539}]",CVC BRASIL OPERADORA E AGÊNCIA DE VIAGENS S.A.
+23310,2022,124434,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\23310\\2022\\relatorio_administracao.pdf', 'original_filename': 'relatorio da adm.pdf', 'size_bytes': 410096}]",CVC BRASIL OPERADORA E AGÊNCIA DE VIAGENS S.A.
+23310,2023,135166,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\23310\\2023\\relatorio_administracao.pdf', 'original_filename': 'Relatorio da adm.pdf', 'size_bytes': 256839}]",CVC BRASIL OPERADORA E AGÊNCIA DE VIAGENS S.A.
+23310,2024,145798,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\23310\\2024\\relatorio_administracao.pdf', 'original_filename': 'Rel.pdf', 'size_bytes': 139096}]",CVC BRASIL OPERADORA E AGÊNCIA DE VIAGENS S.A.
+21091,2015,53358,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\21091\\2015\\relatorio_administracao.pdf', 'original_filename': 'S:\\EmpresasNet\\Empresas.NET_V9.0\\Temp\\files\\00121216530000000000000000.pdf.pdf', 'size_bytes': 92480}]",DEXCO S.A.
+21091,2016,62390,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\21091\\2016\\relatorio_administracao.pdf', 'original_filename': 'S:\\EmpresasNet\\Empresas.NET_V10.0\\Temp\\files\\00122616530000000000000000.docx.pdf', 'size_bytes': 216078}]",DEXCO S.A.
+21091,2017,71345,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\21091\\2017\\relatorio_administracao.pdf', 'original_filename': 'S:\\EmpresasNet\\Empresas.NET_V12.00\\Temp\\files\\00132116530000000000000000.docx.pdf', 'size_bytes': 198870}]",DEXCO S.A.
+21091,2018,80649,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\21091\\2018\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV14000\\Temp\\files\\00122616530000000000000000.docx.pdf', 'size_bytes': 212594}]",DEXCO S.A.
+21091,2019,90918,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\21091\\2019\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV15002\\Temp\\files\\00121616530000000000000000.pdf.pdf', 'size_bytes': 115145}]",DEXCO S.A.
+21091,2020,100004,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\21091\\2020\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV17000\\Temp\\files\\00123616530000000000000000.docx.pdf', 'size_bytes': 616654}]",DEXCO S.A.
+21091,2021,111679,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\21091\\2021\\relatorio_administracao.pdf', 'original_filename': 'Dexco Relatório da Administração 4T21_vf.pdf', 'size_bytes': 393524}]",DEXCO S.A.
+21091,2022,123979,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\21091\\2022\\relatorio_administracao.pdf', 'original_filename': 'Dexco Relatório da Administração 4T22_v2.pdf', 'size_bytes': 938988}]",DEXCO S.A.
+21091,2023,134509,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\21091\\2023\\relatorio_administracao.pdf', 'original_filename': 'Dexco Relatório da Administração 4T23_VF (06.03).pdf', 'size_bytes': 1399188}]",DEXCO S.A.
+21091,2024,145350,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\21091\\2024\\relatorio_administracao.pdf', 'original_filename': 'Relatório da Adm 4T24 - Dexco S.A..pdf', 'size_bytes': 1547826}]",DEXCO S.A.
+19623,2015,54381,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\19623\\2015\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00121216530000000000000000.pdf.pdf', 'size_bytes': 408494}]",DIAGNOSTICOS DA AMERICA S.A.
+19623,2016,63357,False,not_found,[],DIAGNOSTICOS DA AMERICA S.A.
+19623,2017,72354,False,not_found,[],DIAGNOSTICOS DA AMERICA S.A.
+19623,2018,81214,False,not_found,[],DIAGNOSTICOS DA AMERICA S.A.
+19623,2019,91578,False,not_found,[],DIAGNOSTICOS DA AMERICA S.A.
+19623,2020,100717,False,not_found,[],DIAGNOSTICOS DA AMERICA S.A.
+19623,2021,113140,False,not_found,[],DIAGNOSTICOS DA AMERICA S.A.
+19623,2022,124722,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\19623\\2022\\relatorio_administracao.pdf', 'original_filename': 'Relatorio da Administração - 31.12.2022 Formatado.pdf', 'size_bytes': 828968}]",DIAGNOSTICOS DA AMERICA S.A.
+19623,2023,135758,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\19623\\2023\\relatorio_administracao.pdf', 'original_filename': 'RAD_26.03.2024_final.pdf', 'size_bytes': 948701}]",DIAGNOSTICOS DA AMERICA S.A.
+19623,2024,145811,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\19623\\2024\\relatorio_administracao.pdf', 'original_filename': 'RAD_25.03.2025 20h00 - Limpa.pdf', 'size_bytes': 203650}]",DIAGNOSTICOS DA AMERICA S.A.
+19453,2015,54087,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\19453\\2015\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00144216530000000000000000.pdf.pdf', 'size_bytes': 373281}]",ECORODOVIAS INFRAESTRUTURA E LOGÍSTICA S.A.
+19453,2016,62648,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\19453\\2016\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\Temp\\files\\00123516530000000000000000.pdf.pdf', 'size_bytes': 128535}]",ECORODOVIAS INFRAESTRUTURA E LOGÍSTICA S.A.
+19453,2017,71875,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\19453\\2017\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\Temp\\files\\00121416530000000000000000.pdf.pdf', 'size_bytes': 122279}]",ECORODOVIAS INFRAESTRUTURA E LOGÍSTICA S.A.
+19453,2018,81212,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\19453\\2018\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV14000\\Temp\\files\\00121716530000000000000000.pdf.pdf', 'size_bytes': 141644}]",ECORODOVIAS INFRAESTRUTURA E LOGÍSTICA S.A.
+19453,2019,91040,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\19453\\2019\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV15002\\Temp\\files\\00125416530000000000000000.pdf.pdf', 'size_bytes': 104528}]",ECORODOVIAS INFRAESTRUTURA E LOGÍSTICA S.A.
+19453,2020,100819,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\19453\\2020\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV17000\\Temp\\files\\00122216530000000000000000.pdf.pdf', 'size_bytes': 243789}]",ECORODOVIAS INFRAESTRUTURA E LOGÍSTICA S.A.
+19453,2021,112982,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\19453\\2021\\relatorio_administracao.pdf', 'original_filename': 'Ecorodovias IL_Rel Adm2021  - 04.03.2022 - PT - Limpa.pdf', 'size_bytes': 899819}]",ECORODOVIAS INFRAESTRUTURA E LOGÍSTICA S.A.
+19453,2022,124228,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\19453\\2022\\relatorio_administracao.pdf', 'original_filename': '20230315_Ecorodovias IL_Rel Adm2022_v1.pdf', 'size_bytes': 918503}]",ECORODOVIAS INFRAESTRUTURA E LOGÍSTICA S.A.
+19453,2023,134692,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\19453\\2023\\relatorio_administracao.pdf', 'original_filename': 'H001 - 20240312_Relatório da Administração_EIL_vf.pdf', 'size_bytes': 798043}]",ECORODOVIAS INFRAESTRUTURA E LOGÍSTICA S.A.
+19453,2024,145479,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\19453\\2024\\relatorio_administracao.pdf', 'original_filename': 'Relat_Adm_EIL_2024.pdf', 'size_bytes': 788567}]",ECORODOVIAS INFRAESTRUTURA E LOGÍSTICA S.A.
+19763,2015,53798,False,not_found,[],EDP - ENERGIAS DO BRASIL S.A.
+19763,2016,62728,False,not_found,[],EDP - ENERGIAS DO BRASIL S.A.
+19763,2017,72147,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\19763\\2017\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00129316530000000000000000.pdf.pdf', 'size_bytes': 881879}]",EDP - ENERGIAS DO BRASIL S.A.
+19763,2018,81087,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\19763\\2018\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV14000\\Temp\\files\\00123016530000000000000000.pdf.pdf', 'size_bytes': 774116}]",EDP - ENERGIAS DO BRASIL S.A.
+19763,2019,91055,False,not_found,[],EDP - ENERGIAS DO BRASIL S.A.
+19763,2020,103062,False,not_found,[],EDP - ENERGIAS DO BRASIL S.A.
+19763,2021,111821,False,not_found,[],EDP - ENERGIAS DO BRASIL S.A.
+19763,2022,123741,False,not_found,[],EDP - ENERGIAS DO BRASIL S.A.
+19763,2023,134268,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\19763\\2023\\relatorio_administracao.pdf', 'original_filename': 'RAD 2023 EDP_Holding 23.02.pdf', 'size_bytes': 534726}]",EDP - ENERGIAS DO BRASIL S.A.
+19763,2024,145017,False,not_found,[],EDP - ENERGIAS DO BRASIL S.A.
+14176,2015,53615,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\14176\\2015\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00123916530000000000000000.pdf.pdf', 'size_bytes': 256641}]",ELETROPAULO METROP. ELET. SAO PAULO S.A.
+14176,2016,62809,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\14176\\2016\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00127016530000000000000000.pdf.pdf', 'size_bytes': 792502}]",ELETROPAULO METROP. ELET. SAO PAULO S.A.
+14176,2017,72688,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\14176\\2017\\relatorio_administracao.pdf', 'original_filename': 'C:\\Program Files (x86)\\CVM\\EmpresasNet\\Temp\\files\\00121916530000000000000000.pdf.pdf', 'size_bytes': 1256008}]",ELETROPAULO METROP. ELET. SAO PAULO S.A.
+14176,2018,80900,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\14176\\2018\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV14000\\Temp\\files\\00121616530000000000000000.pdf.pdf', 'size_bytes': 689090}]",ELETROPAULO METROP. ELET. SAO PAULO S.A.
+14176,2019,91136,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\14176\\2019\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV15002\\Temp\\files\\00121116530000000000000000.pdf.pdf', 'size_bytes': 890030}]",ELETROPAULO METROP. ELET. SAO PAULO S.A.
+14176,2020,100423,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\14176\\2020\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV17000\\Temp\\files\\00122016530000000000000000.pdf.pdf', 'size_bytes': 1085019}]",ELETROPAULO METROP. ELET. SAO PAULO S.A.
+14176,2021,112047,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\14176\\2021\\relatorio_administracao.pdf', 'original_filename': '2 - 20220224 Enel SP - Relatório da Administração 2021 - final.pdf', 'size_bytes': 424382}]",ELETROPAULO METROP. ELET. SAO PAULO S.A.
+14176,2022,123711,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\14176\\2022\\relatorio_administracao.pdf', 'original_filename': 'Enel SP - Relatório da Administração 2022_vf_cvm.pdf', 'size_bytes': 378635}]",ELETROPAULO METROP. ELET. SAO PAULO S.A.
+14176,2023,134320,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\14176\\2023\\relatorio_administracao.pdf', 'original_filename': 'Enel SP - Relatório da Administração 2023.pdf', 'size_bytes': 471744}]",ELETROPAULO METROP. ELET. SAO PAULO S.A.
+14176,2024,145115,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\14176\\2024\\relatorio_administracao.pdf', 'original_filename': '20250225 Enel SP - Relatório da Administração 2024_CVM.pdf', 'size_bytes': 495647}]",ELETROPAULO METROP. ELET. SAO PAULO S.A.
+20524,2015,54715,False,not_found,[],EVEN CONSTRUTORA E INCORPORADORA S.A.
+20524,2016,63446,False,not_found,[],EVEN CONSTRUTORA E INCORPORADORA S.A.
+20524,2017,72684,False,not_found,[],EVEN CONSTRUTORA E INCORPORADORA S.A.
+20524,2018,81685,False,not_found,[],EVEN CONSTRUTORA E INCORPORADORA S.A.
+20524,2019,92048,False,not_found,[],EVEN CONSTRUTORA E INCORPORADORA S.A.
+20524,2020,102057,False,not_found,[],EVEN CONSTRUTORA E INCORPORADORA S.A.
+20524,2021,112820,False,not_found,[],EVEN CONSTRUTORA E INCORPORADORA S.A.
+20524,2022,124720,False,not_found,[],EVEN CONSTRUTORA E INCORPORADORA S.A.
+20524,2023,134964,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\20524\\2023\\relatorio_administracao.pdf', 'original_filename': 'Relatório da Administração.pdf', 'size_bytes': 76600}]",EVEN CONSTRUTORA E INCORPORADORA S.A.
+20524,2024,145847,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\20524\\2024\\relatorio_administracao.pdf', 'original_filename': 'Relatório da Administração_4T24.pdf', 'size_bytes': 87927}]",EVEN CONSTRUTORA E INCORPORADORA S.A.
+20770,2015,54645,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\20770\\2015\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00121216530000000000000000.pdf.pdf', 'size_bytes': 162576}]",EZ TEC EMPREEND. E PARTICIPACOES S.A.
+20770,2016,63372,False,not_found,[],EZ TEC EMPREEND. E PARTICIPACOES S.A.
+20770,2017,72336,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\20770\\2017\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00121416530000000000000000.pdf.pdf', 'size_bytes': 43333}]",EZ TEC EMPREEND. E PARTICIPACOES S.A.
+20770,2018,81445,False,not_found,[],EZ TEC EMPREEND. E PARTICIPACOES S.A.
+20770,2019,91678,False,not_found,[],EZ TEC EMPREEND. E PARTICIPACOES S.A.
+20770,2020,101015,False,not_found,[],EZ TEC EMPREEND. E PARTICIPACOES S.A.
+20770,2021,112639,False,not_found,[],EZ TEC EMPREEND. E PARTICIPACOES S.A.
+20770,2022,131018,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\20770\\2022\\relatorio_administracao.pdf', 'original_filename': 'RELATÓRIO DA ADMINISTRAÇÃO 2022.pdf', 'size_bytes': 18859}]",EZ TEC EMPREEND. E PARTICIPACOES S.A.
+20770,2023,134827,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\20770\\2023\\relatorio_administracao.pdf', 'original_filename': 'RELATÓRIO DA ADMINISTRAÇÃO 2023.pdf', 'size_bytes': 18167}]",EZ TEC EMPREEND. E PARTICIPACOES S.A.
+20770,2024,145373,False,not_found,[],EZ TEC EMPREEND. E PARTICIPACOES S.A.
+12793,2015,53085,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\12793\\2015\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00121016530000000000000000.docx.pdf', 'size_bytes': 444905}]",FIBRIA CELULOSE S.A.
+12793,2016,62596,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\12793\\2016\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00122316530000000000000000.pdf.pdf', 'size_bytes': 152136}]",FIBRIA CELULOSE S.A.
+12793,2017,71239,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\12793\\2017\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00121816530000000000000000.pdf.pdf', 'size_bytes': 588347}]",FIBRIA CELULOSE S.A.
+12793,2018,80821,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\12793\\2018\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV14000\\Temp\\files\\00121416530000000000000000.pdf.pdf', 'size_bytes': 76607}]",FIBRIA CELULOSE S.A.
+16101,2015,53837,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\16101\\2015\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00122416530000000000000000.pdf.pdf', 'size_bytes': 162321}]",GAFISA S.A.
+16101,2016,64995,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\16101\\2016\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00129716530000000000000000.pdf.pdf', 'size_bytes': 104492}]",GAFISA S.A.
+16101,2017,72149,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\16101\\2017\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\Temp\\files\\00121316530000000000000000.pdf.pdf', 'size_bytes': 202380}]",GAFISA S.A.
+16101,2018,82002,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\16101\\2018\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV14000\\Temp\\files\\00122216530000000000000000.pdf.pdf', 'size_bytes': 144468}]",GAFISA S.A.
+16101,2019,91877,False,not_found,[],GAFISA S.A.
+16101,2020,101001,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\16101\\2020\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV17000\\Temp\\files\\00121616530000000000000000.pdf.pdf', 'size_bytes': 288181}]",GAFISA S.A.
+16101,2021,112740,False,not_found,[],GAFISA S.A.
+16101,2022,124751,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\16101\\2022\\relatorio_administracao.pdf', 'original_filename': 'RA.pdf', 'size_bytes': 1377556}]",GAFISA S.A.
+16101,2023,135175,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\16101\\2023\\relatorio_administracao.pdf', 'original_filename': 'RA DFs GAFISA 2023 - VF.pdf', 'size_bytes': 609245}]",GAFISA S.A.
+16101,2024,145879,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\16101\\2024\\relatorio_administracao.pdf', 'original_filename': 'RA 2024.pdf', 'size_bytes': 2868466}]",GAFISA S.A.
+19569,2015,54661,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\19569\\2015\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00122816530000000000000000.docx.pdf', 'size_bytes': 209732}]",GOL LINHAS AEREAS INTELIGENTES S.A.
+19569,2016,62584,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\19569\\2016\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00122316530000000000000000.pdf.pdf', 'size_bytes': 131157}]",GOL LINHAS AEREAS INTELIGENTES S.A.
+19569,2017,72037,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\19569\\2017\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00121316530000000000000000.pdf.pdf', 'size_bytes': 201537}]",GOL LINHAS AEREAS INTELIGENTES S.A.
+19569,2018,80954,False,not_found,[],GOL LINHAS AEREAS INTELIGENTES S.A.
+19569,2019,91266,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\19569\\2019\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV16000\\Temp\\files\\00121316530000000000000000.pdf.pdf', 'size_bytes': 296058}]",GOL LINHAS AEREAS INTELIGENTES S.A.
+19569,2020,101035,False,not_found,[],GOL LINHAS AEREAS INTELIGENTES S.A.
+19569,2021,112467,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\19569\\2021\\relatorio_administracao.pdf', 'original_filename': 'Relatório da Administração V1.pdf', 'size_bytes': 334647}]",GOL LINHAS AEREAS INTELIGENTES S.A.
+19569,2022,124422,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\19569\\2022\\relatorio_administracao.pdf', 'original_filename': 'Relatório da Administração 4T22.pdf', 'size_bytes': 238307}]",GOL LINHAS AEREAS INTELIGENTES S.A.
+19569,2023,135272,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\19569\\2023\\relatorio_administracao.pdf', 'original_filename': 'Relatório da Administração V2.pdf', 'size_bytes': 214256}]",GOL LINHAS AEREAS INTELIGENTES S.A.
+19569,2024,145927,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\19569\\2024\\relatorio_administracao.pdf', 'original_filename': 'Relatório da Administração - 4T24.pdf', 'size_bytes': 435437}]",GOL LINHAS AEREAS INTELIGENTES S.A.
+6505,2015,58276,False,not_found,[],GRUPO CASAS BAHIA S.A.
+6505,2016,62732,False,not_found,[],GRUPO CASAS BAHIA S.A.
+6505,2017,71563,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\6505\\2017\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00121716530000000000000000.pdf.pdf', 'size_bytes': 36381}]",GRUPO CASAS BAHIA S.A.
+6505,2018,80761,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\6505\\2018\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV13004\\Temp\\files\\00121416530000000000000000.pdf.pdf', 'size_bytes': 138328}]",GRUPO CASAS BAHIA S.A.
+6505,2019,91841,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\6505\\2019\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV16000\\Temp\\files\\00121216530000000000000000.pdf.pdf', 'size_bytes': 132449}]",GRUPO CASAS BAHIA S.A.
+6505,2020,100603,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\6505\\2020\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV17000\\Temp\\files\\00121816530000000000000000.pdf.pdf', 'size_bytes': 266009}]",GRUPO CASAS BAHIA S.A.
+6505,2021,112352,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\6505\\2021\\relatorio_administracao.pdf', 'original_filename': 'Mensagem da ADM.pdf', 'size_bytes': 404458}]",GRUPO CASAS BAHIA S.A.
+6505,2022,124037,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\6505\\2022\\relatorio_administracao.pdf', 'original_filename': 'Mensagem Adm Via_4T22_09.03.2023.pdf', 'size_bytes': 394431}]",GRUPO CASAS BAHIA S.A.
+6505,2023,135112,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\6505\\2023\\relatorio_administracao.pdf', 'original_filename': 'Mensagem ADM_25.03_v2.pdf', 'size_bytes': 190814}]",GRUPO CASAS BAHIA S.A.
+6505,2024,145352,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\6505\\2024\\relatorio_administracao.pdf', 'original_filename': 'Draft 4T24_Relatorio Adm.pdf', 'size_bytes': 260729}]",GRUPO CASAS BAHIA S.A.
+25011,2019,91250,False,not_found,[],GRUPO DE MODA SOMA S.A.
+25011,2020,102684,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\25011\\2020\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV17000\\Temp\\files\\00122616530000000000000000.pdf.pdf', 'size_bytes': 8004726}]",GRUPO DE MODA SOMA S.A.
+25011,2021,112671,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\25011\\2021\\relatorio_administracao.pdf', 'original_filename': 'RA + Release.pdf', 'size_bytes': 7716729}]",GRUPO DE MODA SOMA S.A.
+25011,2022,123941,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\25011\\2022\\relatorio_administracao.pdf', 'original_filename': 'Relatório da Administração Completo.pdf', 'size_bytes': 12756411}]",GRUPO DE MODA SOMA S.A.
+25011,2023,135088,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\25011\\2023\\relatorio_administracao.pdf', 'original_filename': 'relatorio adm release.pdf', 'size_bytes': 19495750}]",GRUPO DE MODA SOMA S.A.
+20494,2015,53929,False,not_found,[],IGUATEMI EMPRESA DE SHOPPING CENTERS S.A
+20494,2016,62678,False,not_found,[],IGUATEMI EMPRESA DE SHOPPING CENTERS S.A
+20494,2017,71825,False,not_found,[],IGUATEMI EMPRESA DE SHOPPING CENTERS S.A
+20494,2018,80907,False,not_found,[],IGUATEMI EMPRESA DE SHOPPING CENTERS S.A
+20494,2019,91046,False,not_found,[],IGUATEMI EMPRESA DE SHOPPING CENTERS S.A
+20494,2020,100676,False,not_found,[],IGUATEMI EMPRESA DE SHOPPING CENTERS S.A
+20494,2021,113795,False,not_found,[],IGUATEMI EMPRESA DE SHOPPING CENTERS S.A
+20494,2022,123880,False,not_found,[],IGUATEMI EMPRESA DE SHOPPING CENTERS S.A
+20494,2023,134142,False,not_found,[],IGUATEMI EMPRESA DE SHOPPING CENTERS S.A
+20494,2024,144915,False,not_found,[],IGUATEMI EMPRESA DE SHOPPING CENTERS S.A
+20605,2015,54766,False,not_found,[],JHSF PARTICIPACOES S.A.
+20605,2016,63853,False,not_found,[],JHSF PARTICIPACOES S.A.
+20605,2017,73325,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\20605\\2017\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV13\\Temp\\files\\00122104120000000000000000.pdf.pdf', 'size_bytes': 1176949}]",JHSF PARTICIPACOES S.A.
+20605,2018,80817,False,not_found,[],JHSF PARTICIPACOES S.A.
+20605,2019,90944,False,not_found,[],JHSF PARTICIPACOES S.A.
+20605,2020,100247,False,not_found,[],JHSF PARTICIPACOES S.A.
+20605,2021,112060,False,not_found,[],JHSF PARTICIPACOES S.A.
+20605,2022,124478,False,not_found,[],JHSF PARTICIPACOES S.A.
+20605,2023,135114,False,not_found,[],JHSF PARTICIPACOES S.A.
+20605,2024,145886,False,not_found,[],JHSF PARTICIPACOES S.A.
+19879,2015,60681,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\19879\\2015\\relatorio_administracao.pdf', 'original_filename': 'C:\\Program Files\\CVM\\EmpresasNet\\Temp\\files\\00122516530000000000000000.pdf.pdf', 'size_bytes': 897621}]",LIGHT S.A. - EM RECUPERAÇÃO JUDICIAL
+19879,2016,63504,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\19879\\2016\\relatorio_administracao.pdf', 'original_filename': 'C:\\Program Files\\CVM\\EmpresasNet\\Temp\\files\\00123816530000000000000000.docx.pdf', 'size_bytes': 1262751}]",LIGHT S.A. - EM RECUPERAÇÃO JUDICIAL
+19879,2017,72794,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\19879\\2017\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00121816530000000000000000.pdf.pdf', 'size_bytes': 1156827}]",LIGHT S.A. - EM RECUPERAÇÃO JUDICIAL
+19879,2018,81727,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\19879\\2018\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV14000\\Temp\\files\\00121916530000000000000000.pdf.pdf', 'size_bytes': 893095}]",LIGHT S.A. - EM RECUPERAÇÃO JUDICIAL
+19879,2019,91540,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\19879\\2019\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV16000\\Temp\\files\\00121616530000000000000000.pdf.pdf', 'size_bytes': 1067844}]",LIGHT S.A. - EM RECUPERAÇÃO JUDICIAL
+19879,2020,102071,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\19879\\2020\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV17000\\Temp\\files\\00122216530000000000000000.pdf.pdf', 'size_bytes': 1330536}]",LIGHT S.A. - EM RECUPERAÇÃO JUDICIAL
+19879,2021,112964,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\19879\\2021\\relatorio_administracao.pdf', 'original_filename': 'Relatório Administração 2021 Light SA_Versão Final.pdf', 'size_bytes': 204669}]",LIGHT S.A. - EM RECUPERAÇÃO JUDICIAL
+19879,2022,124713,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\19879\\2022\\relatorio_administracao.pdf', 'original_filename': 'Light SA - Relato´rio Administrac¸a~o 2022 vf.pdf', 'size_bytes': 447226}]",LIGHT S.A. - EM RECUPERAÇÃO JUDICIAL
+19879,2023,135095,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\19879\\2023\\relatorio_administracao.pdf', 'original_filename': 'Light SA - Relato´rio Administrac¸a~o 2023.pdf', 'size_bytes': 708542}]",LIGHT S.A. - EM RECUPERAÇÃO JUDICIAL
+19879,2024,145883,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\19879\\2024\\relatorio_administracao.pdf', 'original_filename': '01_Relatório da Administração 2024 - Light SA.pdf', 'size_bytes': 824363}]",LIGHT S.A. - EM RECUPERAÇÃO JUDICIAL
+23272,2015,53891,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\23272\\2015\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00121216530000000000000000.pdf.pdf', 'size_bytes': 283997}]",LOG COMMERCIAL PROPERTIES E PARTICIPAÇÕES
+23272,2016,88640,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\23272\\2016\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00123016530000000000000000.pdf.pdf', 'size_bytes': 497125}]",LOG COMMERCIAL PROPERTIES E PARTICIPAÇÕES
+23272,2017,79752,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\23272\\2017\\relatorio_administracao.pdf', 'original_filename': 'C:\\Program Files (x86)\\CVM\\EmpresasNet\\Temp\\files\\00125116530000000000000000.pdf.pdf', 'size_bytes': 284519}]",LOG COMMERCIAL PROPERTIES E PARTICIPAÇÕES
+23272,2018,80590,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\23272\\2018\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV14000\\Temp\\files\\00124616530000000000000000.pdf.pdf', 'size_bytes': 1728692}]",LOG COMMERCIAL PROPERTIES E PARTICIPAÇÕES
+23272,2019,91032,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\23272\\2019\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV15002\\Temp\\files\\00121316530000000000000000.pdf.pdf', 'size_bytes': 2170304}]",LOG COMMERCIAL PROPERTIES E PARTICIPAÇÕES
+23272,2020,100040,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\23272\\2020\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV17000\\Temp\\files\\00121616530000000000000000.pdf.pdf', 'size_bytes': 620856}]",LOG COMMERCIAL PROPERTIES E PARTICIPAÇÕES
+23272,2021,111630,False,not_found,[],LOG COMMERCIAL PROPERTIES E PARTICIPAÇÕES
+23272,2022,123420,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\23272\\2022\\relatorio_administracao.pdf', 'original_filename': 'Log CP_Release 2022_Rel_ADM..pdf', 'size_bytes': 8435994}]",LOG COMMERCIAL PROPERTIES E PARTICIPAÇÕES
+23272,2023,133874,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\23272\\2023\\relatorio_administracao.pdf', 'original_filename': 'Relatório da Adminstração 1.pdf', 'size_bytes': 4258752}]",LOG COMMERCIAL PROPERTIES E PARTICIPAÇÕES
+23272,2024,144587,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\23272\\2024\\relatorio_administracao.pdf', 'original_filename': 'Rel Adm.pdf', 'size_bytes': 1673216}]",LOG COMMERCIAL PROPERTIES E PARTICIPAÇÕES
+8087,2015,54128,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\8087\\2015\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00122616530000000000000000.pdf.pdf', 'size_bytes': 1160284}]",LOJAS AMERICANAS S.A.
+8087,2016,62641,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\8087\\2016\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00122216530000000000000000.pdf.pdf', 'size_bytes': 1022303}]",LOJAS AMERICANAS S.A.
+8087,2017,72267,False,not_found,[],LOJAS AMERICANAS S.A.
+8087,2018,81383,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\8087\\2018\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV14000\\Temp\\files\\00121616530000000000000000.pdf.pdf', 'size_bytes': 1226906}]",LOJAS AMERICANAS S.A.
+8087,2019,91146,False,not_found,[],LOJAS AMERICANAS S.A.
+8087,2020,100679,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\8087\\2020\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV17000\\Temp\\files\\00122316530000000000000000.PDF.pdf', 'size_bytes': 678769}]",LOJAS AMERICANAS S.A.
+24910,2018,89994,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\24910\\2018\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV15002\\Temp\\files\\00121616530000000000000000.pdf.pdf', 'size_bytes': 204196}]",LWSA S/A
+24910,2019,91824,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\24910\\2019\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV16000\\Temp\\files\\00121416530000000000000000.pdf.pdf', 'size_bytes': 130759}]",LWSA S/A
+24910,2020,102187,False,not_found,[],LWSA S/A
+24910,2021,113147,False,not_found,[],LWSA S/A
+24910,2022,124510,False,not_found,[],LWSA S/A
+24910,2023,134904,False,not_found,[],LWSA S/A
+24910,2024,145376,False,not_found,[],LWSA S/A
+17914,2015,54794,False,not_found,[],MASSA FALIDA DA MMX MINERACAO E METALICOS S.A.
+17914,2016,63750,False,not_found,[],MASSA FALIDA DA MMX MINERACAO E METALICOS S.A.
+17914,2017,72870,False,not_found,[],MASSA FALIDA DA MMX MINERACAO E METALICOS S.A.
+17914,2018,81602,False,not_found,[],MASSA FALIDA DA MMX MINERACAO E METALICOS S.A.
+17914,2019,92113,False,not_found,[],MASSA FALIDA DA MMX MINERACAO E METALICOS S.A.
+17914,2020,102721,False,not_found,[],MASSA FALIDA DA MMX MINERACAO E METALICOS S.A.
+25232,2019,96797,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\25232\\2019\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV16000\\Temp\\files\\00140016530000000000000000.pdf.pdf', 'size_bytes': 410903}]",MÉLIUZ S.A.
+25232,2020,102488,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\25232\\2020\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV17000\\Temp\\files\\00122216530000000000000000.pdf.pdf', 'size_bytes': 916935}]",MÉLIUZ S.A.
+25232,2021,113183,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\25232\\2021\\relatorio_administracao.pdf', 'original_filename': 'Relatório da Administração.pdf', 'size_bytes': 5958596}]",MÉLIUZ S.A.
+25232,2022,131089,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\25232\\2022\\relatorio_administracao.pdf', 'original_filename': 'RA 2022.pdf', 'size_bytes': 643896}]",MÉLIUZ S.A.
+25232,2023,134710,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\25232\\2023\\relatorio_administracao.pdf', 'original_filename': 'Relatório da Administração 2023 - DFP.pdf', 'size_bytes': 2525933}]",MÉLIUZ S.A.
+25232,2024,145306,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\25232\\2024\\relatorio_administracao.pdf', 'original_filename': 'Relatório da Administração 2024.pdf', 'size_bytes': 11660808}]",MÉLIUZ S.A.
+24783,2019,91401,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\24783\\2019\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV16000\\Temp\\files\\00121616530000000000000000.pdf.pdf', 'size_bytes': 1250548}]",NATURA &CO HOLDING S.A.
+24783,2020,100680,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\24783\\2020\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV17000\\Temp\\files\\00122316530000000000000000.pdf.pdf', 'size_bytes': 737972}]",NATURA &CO HOLDING S.A.
+24783,2021,112373,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\24783\\2021\\relatorio_administracao.pdf', 'original_filename': 'RAD-297x520-Portuguese_Final_Preview.pdf', 'size_bytes': 740661}]",NATURA &CO HOLDING S.A.
+24783,2022,124139,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\24783\\2022\\relatorio_administracao.pdf', 'original_filename': 'RAD_PORTUGUESE_FINAL.pdf', 'size_bytes': 218553}]",NATURA &CO HOLDING S.A.
+24783,2023,134631,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\24783\\2023\\relatorio_administracao.pdf', 'original_filename': '240311-RAD-2023-297x520-PT-v5.pdf', 'size_bytes': 603614}]",NATURA &CO HOLDING S.A.
+24783,2024,145394,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\24783\\2024\\relatorio_administracao.pdf', 'original_filename': 'Rad_Natura &amp;Co 2024_Final_compressed.pdf', 'size_bytes': 959736}]",NATURA &CO HOLDING S.A.
+24384,2017,73450,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\24384\\2017\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00121716530000000000000000.pdf.pdf', 'size_bytes': 263996}]",NOTRE DAME INTERMÉDICA PARTICIPAÇÕES S.A.
+24384,2018,80873,False,not_found,[],NOTRE DAME INTERMÉDICA PARTICIPAÇÕES S.A.
+24384,2019,91151,False,not_found,[],NOTRE DAME INTERMÉDICA PARTICIPAÇÕES S.A.
+24384,2020,101004,False,not_found,[],NOTRE DAME INTERMÉDICA PARTICIPAÇÕES S.A.
+11312,2015,54404,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\11312\\2015\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00122516530000000000000000.pdf.pdf', 'size_bytes': 513926}]",OI S.A. - EM RECUPERAÇÃO JUDICIAL
+11312,2016,63441,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\11312\\2016\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00125416530000000000000000.pdf.pdf', 'size_bytes': 483540}]",OI S.A. - EM RECUPERAÇÃO JUDICIAL
+11312,2017,73285,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\11312\\2017\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV13\\Temp\\files\\00126716530000000000000000.pdf.pdf', 'size_bytes': 412939}]",OI S.A. - EM RECUPERAÇÃO JUDICIAL
+11312,2018,81560,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\11312\\2018\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV14000\\Temp\\files\\00121816530000000000000000.pdf.pdf', 'size_bytes': 795168}]",OI S.A. - EM RECUPERAÇÃO JUDICIAL
+11312,2019,91839,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\11312\\2019\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV16000\\Temp\\files\\00121316530000000000000000.pdf.pdf', 'size_bytes': 958963}]",OI S.A. - EM RECUPERAÇÃO JUDICIAL
+11312,2020,103694,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\11312\\2020\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV17000\\Temp\\files\\00122016530000000000000000.pdf.pdf', 'size_bytes': 1206098}]",OI S.A. - EM RECUPERAÇÃO JUDICIAL
+11312,2021,114301,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\11312\\2021\\relatorio_administracao.pdf', 'original_filename': 'Relatório da Administração Oi SA 2021_040522.pdf', 'size_bytes': 1553102}]",OI S.A. - EM RECUPERAÇÃO JUDICIAL
+11312,2022,127122,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\11312\\2022\\relatorio_administracao.pdf', 'original_filename': 'Relatório da Administração Oi SA 2022_220523_final.pdf', 'size_bytes': 703184}]",OI S.A. - EM RECUPERAÇÃO JUDICIAL
+11312,2023,135241,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\11312\\2023\\relatorio_administracao.pdf', 'original_filename': 'Relatório da Administração Oi SA_2023_270324.pdf', 'size_bytes': 409418}]",OI S.A. - EM RECUPERAÇÃO JUDICIAL
+11312,2024,145806,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\11312\\2024\\relatorio_administracao.pdf', 'original_filename': 'Relatório da Administração Oi SA_2024_2603 - POR.pdf', 'size_bytes': 296626}]",OI S.A. - EM RECUPERAÇÃO JUDICIAL
+20478,2015,54655,False,not_found,[],PDG REALTY S.A. EMPREEND E PARTICIPACOES
+20478,2016,63852,False,not_found,[],PDG REALTY S.A. EMPREEND E PARTICIPACOES
+20478,2017,73029,False,not_found,[],PDG REALTY S.A. EMPREEND E PARTICIPACOES
+20478,2018,81992,False,not_found,[],PDG REALTY S.A. EMPREEND E PARTICIPACOES
+20478,2019,92016,False,not_found,[],PDG REALTY S.A. EMPREEND E PARTICIPACOES
+20478,2020,102449,False,not_found,[],PDG REALTY S.A. EMPREEND E PARTICIPACOES
+20478,2021,113027,False,not_found,[],PDG REALTY S.A. EMPREEND E PARTICIPACOES
+20478,2022,131625,False,not_found,[],PDG REALTY S.A. EMPREEND E PARTICIPACOES
+20478,2023,135377,False,not_found,[],PDG REALTY S.A. EMPREEND E PARTICIPACOES
+20478,2024,146046,False,not_found,[],PDG REALTY S.A. EMPREEND E PARTICIPACOES
+20362,2015,54390,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\20362\\2015\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00121316530000000000000000.pdf.pdf', 'size_bytes': 151077}]",POSITIVO TECNOLOGIA S.A.
+20362,2016,63234,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\20362\\2016\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00121616530000000000000000.pdf.pdf', 'size_bytes': 249603}]",POSITIVO TECNOLOGIA S.A.
+20362,2017,72280,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\20362\\2017\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00122616530000000000000000.pdf.pdf', 'size_bytes': 244432}]",POSITIVO TECNOLOGIA S.A.
+20362,2018,81611,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\20362\\2018\\relatorio_administracao.pdf', 'original_filename': 'C:\\\\Temp\\files\\00121116530000000000000000.pdf.pdf', 'size_bytes': 282480}]",POSITIVO TECNOLOGIA S.A.
+20362,2019,91367,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\20362\\2019\\relatorio_administracao.pdf', 'original_filename': 'C:\\\\Temp\\files\\00121216530000000000000000.pdf.pdf', 'size_bytes': 271574}]",POSITIVO TECNOLOGIA S.A.
+20362,2020,101012,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\20362\\2020\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV17000\\Temp\\files\\00122116530000000000000000.pdf.pdf', 'size_bytes': 365590}]",POSITIVO TECNOLOGIA S.A.
+20362,2021,113274,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\20362\\2021\\relatorio_administracao.pdf', 'original_filename': 'Relatório da Administração_2021_22.03 (VF).pdf', 'size_bytes': 419300}]",POSITIVO TECNOLOGIA S.A.
+20362,2022,124427,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\20362\\2022\\relatorio_administracao.pdf', 'original_filename': 'Relatório da Administração_2022.pdf', 'size_bytes': 375703}]",POSITIVO TECNOLOGIA S.A.
+20362,2023,134942,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\20362\\2023\\relatorio_administracao.pdf', 'original_filename': '2. Relatório da Administração_2023 RI.pdf', 'size_bytes': 549092}]",POSITIVO TECNOLOGIA S.A.
+20362,2024,145551,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\20362\\2024\\relatorio_administracao.pdf', 'original_filename': 'Relatório da Administração_2024 RI.pdf', 'size_bytes': 1199466}]",POSITIVO TECNOLOGIA S.A.
+25917,2020,100975,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\25917\\2020\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV17000\\Temp\\files\\00122016530000000000000000.pdf.pdf', 'size_bytes': 287825}]",RAÍZEN S.A.
+25917,2021,105560,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\25917\\2021\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV17001\\Temp\\files\\00121716530000000000000000.pdf.pdf', 'size_bytes': 231333}]",RAÍZEN S.A.
+25917,2022,115219,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\25917\\2022\\relatorio_administracao.pdf', 'original_filename': 'Relatório da Administraçao.pdf', 'size_bytes': 1141223}]",RAÍZEN S.A.
+25917,2023,126609,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\25917\\2023\\relatorio_administracao.pdf', 'original_filename': 'RSA_RA_22-23.pdf', 'size_bytes': 1033616}]",RAÍZEN S.A.
+25917,2024,137210,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\25917\\2024\\relatorio_administracao.pdf', 'original_filename': 'Relatorio ADM.pdf', 'size_bytes': 326240}]",RAÍZEN S.A.
+16306,2015,54779,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\16306\\2015\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00121616530000000000000000.pdf.pdf', 'size_bytes': 137901}]",ROSSI RESIDENCIAL S.A. - EM RECUPERAÇÃO JUDICIAL
+16306,2016,63491,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\16306\\2016\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00123016530000000000000000.pdf.pdf', 'size_bytes': 140100}]",ROSSI RESIDENCIAL S.A. - EM RECUPERAÇÃO JUDICIAL
+16306,2017,72691,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\16306\\2017\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00123216530000000000000000.pdf.pdf', 'size_bytes': 227141}]",ROSSI RESIDENCIAL S.A. - EM RECUPERAÇÃO JUDICIAL
+16306,2018,81617,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\16306\\2018\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV13003\\Temp\\files\\00124616530000000000000000.docx.pdf', 'size_bytes': 64313}]",ROSSI RESIDENCIAL S.A. - EM RECUPERAÇÃO JUDICIAL
+16306,2019,91648,False,not_found,[],ROSSI RESIDENCIAL S.A. - EM RECUPERAÇÃO JUDICIAL
+16306,2020,101020,False,not_found,[],ROSSI RESIDENCIAL S.A. - EM RECUPERAÇÃO JUDICIAL
+16306,2021,112602,False,not_found,[],ROSSI RESIDENCIAL S.A. - EM RECUPERAÇÃO JUDICIAL
+16306,2022,131194,False,not_found,[],ROSSI RESIDENCIAL S.A. - EM RECUPERAÇÃO JUDICIAL
+16306,2023,139224,False,not_found,[],ROSSI RESIDENCIAL S.A. - EM RECUPERAÇÃO JUDICIAL
+16306,2024,155732,False,not_found,[],ROSSI RESIDENCIAL S.A. - EM RECUPERAÇÃO JUDICIAL
+17892,2015,53956,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\17892\\2015\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet9\\Temp\\files\\00121516530000000000000000.pdf.pdf', 'size_bytes': 295957}]",SANTOS BRASIL PARTICIPACOES S.A.
+17892,2016,62550,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\17892\\2016\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM ATual\\EmpresasNet9\\Temp\\files\\00125316530000000000000000.pdf.pdf', 'size_bytes': 257868}]",SANTOS BRASIL PARTICIPACOES S.A.
+17892,2017,75944,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\17892\\2017\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV13\\Temp\\files\\00125216530000000000000000.pdf.pdf', 'size_bytes': 219316}]",SANTOS BRASIL PARTICIPACOES S.A.
+17892,2018,80819,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\17892\\2018\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV14000\\Temp\\files\\00121816530000000000000000.pdf.pdf', 'size_bytes': 241847}]",SANTOS BRASIL PARTICIPACOES S.A.
+17892,2019,91395,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\17892\\2019\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV15002\\Temp\\files\\00122716530000000000000000.pdf.pdf', 'size_bytes': 206327}]",SANTOS BRASIL PARTICIPACOES S.A.
+17892,2020,100762,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\17892\\2020\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV17000\\Temp\\files\\00121716530000000000000000.pdf.pdf', 'size_bytes': 278818}]",SANTOS BRASIL PARTICIPACOES S.A.
+17892,2021,112430,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\17892\\2021\\relatorio_administracao.pdf', 'original_filename': 'Relatórioda AdministraçãoSBPar_2021_v16.pdf', 'size_bytes': 500987}]",SANTOS BRASIL PARTICIPACOES S.A.
+17892,2022,132843,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\17892\\2022\\relatorio_administracao.pdf', 'original_filename': 'Relatório da Administração SBPar_2022_v15.pdf', 'size_bytes': 424178}]",SANTOS BRASIL PARTICIPACOES S.A.
+17892,2023,134918,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\17892\\2023\\relatorio_administracao.pdf', 'original_filename': 'Relatório da Administração SBPar_2023_v12 (20.03.24).pdf', 'size_bytes': 388349}]",SANTOS BRASIL PARTICIPACOES S.A.
+17892,2024,144905,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\17892\\2024\\relatorio_administracao.pdf', 'original_filename': 'Relatório da Administração SBPar_2024_v14 (Versão 19.02 - Final) sem cabeçalho e rodapé.pdf', 'size_bytes': 338097}]",SANTOS BRASIL PARTICIPACOES S.A.
+20516,2015,48989,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\20516\\2015\\relatorio_administracao.pdf', 'original_filename': '\\\\fs1\\APL\\APL\\CVM_2015\\Temp\\files\\00122016530000000000000000.pdf.pdf', 'size_bytes': 512551}]",SAO MARTINHO S.A.
+20516,2016,57586,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\20516\\2016\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00121916530000000000000000.pdf.pdf', 'size_bytes': 194139}]",SAO MARTINHO S.A.
+20516,2017,66917,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\20516\\2017\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00121816530000000000000000.pdf.pdf', 'size_bytes': 526652}]",SAO MARTINHO S.A.
+20516,2018,76061,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\20516\\2018\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV13001\\Temp\\files\\00121816530000000000000000.pdf.pdf', 'size_bytes': 490319}]",SAO MARTINHO S.A.
+20516,2019,85121,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\20516\\2019\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV15000\\Temp\\files\\00122016530000000000000000.pdf.pdf', 'size_bytes': 786770}]",SAO MARTINHO S.A.
+20516,2020,94440,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\20516\\2020\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV15002\\Temp\\files\\00121416530000000000000000.pdf.pdf', 'size_bytes': 918667}]",SAO MARTINHO S.A.
+20516,2021,106077,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\20516\\2021\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV17001\\Temp\\files\\00121716530000000000000000.pdf.pdf', 'size_bytes': 802094}]",SAO MARTINHO S.A.
+20516,2022,117070,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\20516\\2022\\relatorio_administracao.pdf', 'original_filename': 'Relatório da Administração 2021_22_vfinal_20.06_limpa.pdf', 'size_bytes': 821682}]",SAO MARTINHO S.A.
+20516,2023,128513,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\20516\\2023\\relatorio_administracao.pdf', 'original_filename': 'Relatório da Administração 2022_23.pdf', 'size_bytes': 874731}]",SAO MARTINHO S.A.
+20516,2024,139142,True,filename_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\20516\\2024\\relatorio_administracao.pdf', 'original_filename': 'Relatório da Administração 2023_24.pdf', 'size_bytes': 2081810}]",SAO MARTINHO S.A.
+24252,2016,69097,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\24252\\2016\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00121316530000000000000000.pdf.pdf', 'size_bytes': 159592}]",SMILES FIDELIDADE S.A.
+24252,2017,71844,False,not_found,[],SMILES FIDELIDADE S.A.
+24252,2018,80679,False,not_found,[],SMILES FIDELIDADE S.A.
+24252,2019,91054,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\24252\\2019\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNetV15002\\Temp\\files\\00121516530000000000000000.pdf.pdf', 'size_bytes': 343355}]",SMILES FIDELIDADE S.A.
+24252,2020,100764,False,not_found,[],SMILES FIDELIDADE S.A.
+23140,2015,53723,False,not_found,[],SMILES S.A.
+23140,2016,62545,True,content_match,"[{'path': 'data\\raw\\dfp_mgmt_report\\23140\\2016\\relatorio_administracao.pdf', 'original_filename': 'C:\\CVM\\EmpresasNet\\Temp\\files\\00123116530000000000000000.docx.pdf', 'size_bytes': 513614}]",SMILES S.A.

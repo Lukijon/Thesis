@@ -32,6 +32,12 @@ data/raw/dfp/*
 data/raw/itr/*
 !data/raw/itr/.gitkeep
 
+# Relatório da Administração (Management Report) PDFs -- same local-only
+# treatment as the debt-note corpus above; re-fetchable from the already-
+# cached filing zips any time via src/acquisition/cvm_management_report.py.
+data/raw/dfp_mgmt_report/*
+!data/raw/dfp_mgmt_report/.gitkeep
+
 # Bloomberg-derived market/analyst data: likely redistribution-restricted
 # under Bloomberg's data license, so never commit regardless of size.
 data/raw/market/*
