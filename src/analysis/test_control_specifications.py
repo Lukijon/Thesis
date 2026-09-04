@@ -68,6 +68,7 @@ def run_all() -> pd.DataFrame:
         "narrow_quarterly": (POC / "abnormal_returns_itr.csv", "quarter_curr"),
         "whole_notes": (POC / "abnormal_returns_full_notes_VERIFIED.csv", "year_curr"),
         "mgmt_report": (POC / "abnormal_returns_mgmt_report.csv", "year_curr"),
+        "risk_factors": (POC / "abnormal_returns_risk_factors.csv", "year_curr"),
     }
     for name, (path, ycol) in return_scenarios.items():
         df = pd.read_csv(path)
@@ -84,6 +85,7 @@ def run_all() -> pd.DataFrame:
         "narrow_annual": POC / "delisted_similarity_results.csv",
         "whole_notes": POC / "full_notes_similarity_results_VERIFIED.csv",
         "mgmt_report": POC / "mgmt_report_similarity_results.csv",
+        "risk_factors": POC / "risk_factors_similarity_results.csv",
     }
     for name, path in delisting_scenarios.items():
         df = pd.read_csv(path)

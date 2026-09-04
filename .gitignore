@@ -38,6 +38,11 @@ data/raw/itr/*
 data/raw/dfp_mgmt_report/*
 !data/raw/dfp_mgmt_report/.gitkeep
 
+# Risk Factors (Formulario de Referencia item 4.1) PDFs -- same local-only
+# treatment; re-fetchable any time via src/acquisition/cvm_fre.py.
+data/raw/risk_factors/*
+!data/raw/risk_factors/.gitkeep
+
 # Bloomberg-derived market/analyst data: likely redistribution-restricted
 # under Bloomberg's data license, so never commit regardless of size.
 data/raw/market/*

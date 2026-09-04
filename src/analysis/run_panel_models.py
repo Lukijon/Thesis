@@ -117,6 +117,7 @@ def main() -> None:
         "narrow_quarterly": (POC / "abnormal_returns_itr.csv", "quarter_curr", "quarterly"),
         "whole_notes": (POC / "abnormal_returns_full_notes_VERIFIED.csv", "year_curr", None),
         "mgmt_report": (POC / "abnormal_returns_mgmt_report.csv", "year_curr", None),
+        "risk_factors": (POC / "abnormal_returns_risk_factors.csv", "year_curr", None),
     }
     print("=== H1 returns: two-way fixed-effects panel vs. pooled clustered OLS ===")
     for name, (path, time_col, mode) in return_scenarios.items():
