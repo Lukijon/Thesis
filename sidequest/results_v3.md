@@ -35,6 +35,22 @@ This is a genuinely important catch, and a different failure mode than anything 
 - Market-to-book and ROA/ROE: the same executive-diversity predictor showed marginal hits (p≈0.03-0.04) in the panel specification, but given the volatility result -- the strongest of the three -- didn't survive the denominator check, these weren't pursued further; they're the same predictor and almost certainly the same artifact.
 - Board-level and workforce-leadership diversity: nothing new against the four added outcomes.
 
+## Follow-up: does a softer fix (instead of hard exclusion) rescue it?
+
+Hard-excluding small executive boards is the crudest possible fix -- it throws away 37% of the sample along with the noise. Three more surgical alternatives were tried, all legitimate, none of them a "make the problem go away" move:
+
+| Specification | n | Coefficient | p-value |
+|---|---:|---:|---:|
+| Ratio, unweighted OLS (baseline) | 91 | +0.648 | 0.0007 |
+| Ratio, WLS weighted by executive-board size | 91 | +0.430 | 0.0074 |
+| Ratio, WLS weighted by (board size)² | 91 | +0.300 | 0.0325 |
+| Raw count + board size as separate regressors (no pre-built ratio) | 91 | +0.072 (count) | 0.0322 |
+| Ratio, hard-restricted to boards ≥5 members | 57 | +0.192 | 0.1973 |
+
+**This is a more honest, more complicated picture than "it's just noise."** The two softer corrections (downweighting instead of dropping, and letting count and denominator enter separately instead of pre-dividing them) both keep the result marginally significant, just weaker than the raw version. Only the hard exclusion kills it outright -- and the point estimate itself, not just its precision, shrinks by two-thirds under that specification (0.65 to 0.19), which is a bigger change than sample-size loss alone would produce.
+
+**Read plainly: the result is specification-sensitive, not specification-proof.** It swings from p=0.0007 down to p=0.20 depending on which defensible way of handling the small-board measurement issue is used, without ever clearly settling on one side. A genuinely robust finding shouldn't move that much across reasonable alternative treatments of the same underlying problem -- this is the same kind of instability, in miniature, that killed the main thesis's management-report result once tested against fixed effects. It doesn't fully vindicate "it's an artifact," and it doesn't rescue "it's real" either. The fair characterization is: unresolved, fragile, and not something to build a thesis chapter around as currently specified.
+
 ## Honest verdict on this pass
 
 A real, thorough search happened here -- 6 outcomes, 7 predictors, sector controls, a properly-specified cross-sectional design built specifically to give underpowered fixed effects a fair alternative, and the deepest stress-testing this project has applied to any single result. **Nothing survived.** The one candidate that cleared every bar this project has used before was caught by a bar this project hadn't needed to use before (small-denominator ratio noise) -- which says the bar was worth having, not that the search wasn't serious.
