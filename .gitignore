@@ -77,11 +77,6 @@ data/interim/poc/*
 !data/interim/poc/sections/
 !data/interim/poc/itr_sections/
 
-data/processed/*
-!data/processed/.gitkeep
-data/external/*
-!data/external/.gitkeep
-
 # Reports / generated figures -- real chart deliverables are tracked
 # (small PNGs); this still blocks anything else that lands here.
 reports/figures/**

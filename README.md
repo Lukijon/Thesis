@@ -20,50 +20,43 @@ Mais especificamente: em que medida a mudança textual ano a ano (medida por TF-
 
 ```
 .
-├── docs/                # Documentos da dissertação (pré-projeto, versões futuras, texto final)
+├── docs/                 # Documentos da dissertação
+│   ├── latex/              # main.tex — o documento de submissão atual (ABNT, compila via TinyTeX)
+│   ├── pre-projeto.docx     # pré-projeto original, já aprovado
+│   └── exame_qualificacao/  # guia do Exame de Qualificação (datas, requisitos)
 ├── data/
 │   ├── raw/              # Dados brutos, exatamente como coletados (nunca editados manualmente)
-│   │   ├── dfp/           # DFPs / notas explicativas de dívida (CVM)
-│   │   ├── market/        # Preços, retornos, dados de mercado (B3 / provedor de dados)
-│   │   └── analysts/      # Consenso de previsões de EPS dos analistas
-│   ├── interim/           # Dados intermediários (ex.: texto extraído e limpo das notas)
-│   ├── processed/         # Datasets finais, prontos para as análises/regressões
-│   └── external/          # Dados auxiliares de terceiros (ex.: listas de empresas, classificações setoriais)
+│   │   ├── dfp/           # DFPs / notas explicativas de dívida (CVM), gitignorado
+│   │   ├── itr/            # Notas trimestrais (CVM), gitignorado
+│   │   ├── dfp_mgmt_report/ # Relatório da Administração (CVM), gitignorado
+│   │   ├── risk_factors/    # Fatores de Risco / Formulário de Referência (CVM), gitignorado
+│   │   ├── market/         # Preços, retornos, dados de mercado (Bloomberg), gitignorado
+│   │   └── analysts/       # Consenso de previsões de EPS dos analistas (Bloomberg), gitignorado
+│   └── interim/            # Dados intermediários versionados (manifestos, CSVs pequenos, POC)
 ├── src/
 │   ├── acquisition/       # Scripts de coleta/download das fontes de dados
 │   ├── processing/        # Extração e limpeza de texto, TF-IDF, similaridade de cosseno
 │   ├── features/          # Construção de variáveis de controle (alavancagem, tamanho, retorno passado etc.)
 │   ├── analysis/          # Regressões, testes de hipótese, resultados
 │   └── utils/              # Funções auxiliares compartilhadas
-├── notebooks/             # Exploração e validações pontuais
-├── references/            # Material de apoio da revisão de literatura (bibliografia, PDFs de referência)
-└── reports/
-    └── figures/            # Figuras e tabelas geradas para a dissertação
+├── notebooks/             # POC: exploração e validações, narradas em primeira pessoa
+└── reports/               # Relatórios narrativos por rodada/investigação
+    └── figures/            # Figuras geradas para relatórios (não as da dissertação, que ficam em docs/latex/figures)
 ```
 
-A maior parte de `data/` é ignorada pelo git (ver [.gitignore](.gitignore)) — cache de download, dados de mercado/analistas (Bloomberg) e intermediários não são versionados. As notas de dívida já extraídas (`data/raw/dfp/<CD_CVM>/<ANO>/`) são gitignoradas e ficam só nesta máquina (ver `CLAUDE.md` para o histórico: chegaram a ser versionadas via git-lfs, decisão revertida depois). Cada subpasta mantém um `.gitkeep` para preservar a estrutura mesmo quando vazia.
-
-## Dados a serem coletados
-
-Etapa atual do projeto. Para viabilizar os testes de H1, H1a e H2, é necessário reunir:
-
-1. **Notas explicativas de empréstimos, financiamentos e debêntures** das DFPs anuais de empresas não financeiras listadas na B3 (fonte: portal de dados abertos da CVM / ITR-DFP).
-2. **Dados de mercado** — preços e retornos das ações para cálculo de retorno anormal acumulado nos 12 meses seguintes à divulgação.
-3. **Fundamentos econômico-financeiros** — alavancagem, rentabilidade, tamanho, retorno passado e demais variáveis de controle.
-4. **Consenso de previsões de EPS dos analistas** — dados para a análise complementar (H2).
+A maior parte de `data/` é ignorada pelo git (ver [.gitignore](.gitignore)) — cache de download, dados de mercado/analistas (Bloomberg) e intermediários volumosos não são versionados. As notas de dívida já extraídas (`data/raw/dfp/<CD_CVM>/<ANO>/`) são gitignoradas e ficam só nesta máquina (ver `CLAUDE.md` para o histórico: chegaram a ser versionadas via git-lfs, decisão revertida depois).
 
 ## Status
 
+Checklist resumido — para o detalhe rodada a rodada, ver `CLAUDE.md`.
+
 - [x] Pré-projeto redigido (ver `docs/pre-projeto.docx`)
-- [x] Estrutura do repositório definida
-- [x] Aquisição das notas de dívida via CVM — **parte 1 concluída, agora com histórico completo do Ibovespa**: 111 empresas não financeiras (66 constituintes atuais + 45 encontradas historicamente: 26 via Internet Archive + 19 via dois passes sobre o export do Bloomberg — o segundo passe corrigiu uma lacuna real no processo, incluindo a Americanas S.A., caso de fraude contábil/crise de dívida de 2023), corrigindo o viés de sobrevivência da versão inicial (que só cobria membros atuais). 993 arquivos-empresa-ano no total, 2015–2024 (ver `src/acquisition/run_ibov.py`, `run_ibov_historical.py` e `b3_ibov_historical.py`; logs em `data/interim/ibov_notes_download_log.csv` e `ibov_historical_notes_download_log.csv`). Uma nota (Vibra Energia 2023) é um PDF escaneado e vai precisar de OCR na etapa de processamento.
-- [ ] Aquisição das notas de dívida via CVM — **parte 2**: restante do universo não financeiro da B3 (fora do Ibovespa) — pausada para a POC abaixo
-- [x] **POC de extração + TF-IDF concluída, agora no universo completo e com extração já bem mais confiável** (ver `reports/poc_note_extraction_findings.md`, rodadas 4–5): validada primeiro em 20 empresas hand-picked (rodadas 1–2), estendida às 66 empresas atuais do Ibovespa + 46 históricas/deslistadas (993 empresa-ano, rodada 4), depois com a extração anual bem mais robusta (rodada 5: 4 correções gerais, encontradas e validadas contra os PDFs reais, elevaram a taxa de extração confiável de ~44% para **~65%** — resolveu 22 empresas que antes tinham 0% de confiabilidade, agora só 5). O achado de viés de sobrevivência (empresas que saíram do índice mudam mais o texto) segue direcional mas não significativo mesmo com muito mais dados confiáveis (p=0,24 bruto / p=0,14 com filtro de consistência) — confirma que o resultado da rodada 4 não era só ruído de extração. Ainda falta propagar essa correção para o piloto trimestral (ITR)
-- [x] Aquisição de dados de mercado — **preços e índice recebidos e verificados**: export do Bloomberg com preços diários de 153 ações (`data/raw/market/prices/stock_prices_bloomberg.csv`) e o nível diário do Ibovespa para cálculo de retorno anormal (`data/raw/market/prices/ibov_index_bloomberg.csv`), 1/2014 a 8/2026. Cobertura das 111 empresas do universo conferida: as 66 atuais 100%, ~40 das 45 históricas (o resto fechou capital/fundiu/faliu e não tem mais ticker negociável — gap real). Falta obter os fundamentos econômico-financeiros (ver `TODO.md`)
-- [ ] Aquisição do consenso de EPS dos analistas (Bloomberg BEst)
-- [ ] Extração e limpeza de texto das notas — **em andamento**, ver POC (`src/processing/`)
-- [ ] Cálculo de similaridade de cosseno / mudança textual (TF-IDF) — validado na POC, falta rodar em escala
-- [ ] Construção das variáveis de controle
-- [x] Cálculo de retorno anormal — **primeiro checkpoint feito**: retorno ajustado ao mercado (sem beta) por empresa-ano, com data de evento real (`data/interim/dfp_filing_dates.csv`, via `src/acquisition/build_filing_dates.py`); correlação com a similaridade textual ainda nula nessa escala, como esperado sem variáveis de controle (ver §7 de `notebooks/poc_overview.ipynb` e `src/analysis/compute_abnormal_returns.py`). O cálculo definitivo (modelo de mercado/fatores + controles) ainda depende dos itens acima
-- [ ] Modelos de regressão e testes de hipótese
-- [ ] Análise complementar (consenso de analistas)
+- [x] Aquisição das notas de dívida via CVM (nota isolada, documento inteiro, Relatório da Administração e Fatores de Risco), 111 empresas não financeiras (66 constituintes atuais do Ibovespa + 45 históricas/deslistadas, corrigindo viés de sobrevivência), 2015–2024, anual e trimestral
+- [x] Extração e isolamento automático da nota de dívida — seis rodadas de aprimoramento da heurística, confiabilidade em **69,7%** na base anual e **62,0%** na trimestral (universo completo)
+- [x] Cálculo de similaridade textual (TF-IDF e cosseno), nas cinco fontes de texto testadas
+- [x] Dados de mercado (preços, Ibovespa) e consenso de EPS dos analistas (Bloomberg) recebidos e verificados
+- [x] Variáveis de controle (tamanho, alavancagem, rentabilidade, retorno passado) construídas a partir dos dados contábeis estruturados da CVM
+- [x] Cálculo de retorno anormal e modelo empírico completo — correlação simples, regressão agrupada (com e sem controles) e efeitos fixos de empresa e ano
+- [x] Testes de H1 e H2, nas cinco fontes de texto — **nulos em todos os estágios de rigor**; o achado secundário mais bem sustentado é a associação entre similaridade nos Fatores de Risco e saída subsequente do Ibovespa
+- [x] Aquisição parte 2 (universo não financeiro da B3 fora do Ibovespa) — não iniciada, não é mais necessária dado o resultado nulo já bem estabelecido no universo atual
+- [ ] Conclusão e Resumo/Abstract definitivos da dissertação (`docs/latex/main.tex`) — deliberadamente deixados para o final, por instrução do próprio guia do Exame de Qualificação

@@ -16,7 +16,7 @@ Consolidated statements (_con) are used when available (standard practice
 for groups with subsidiaries); individual (_ind) is the fallback for
 companies that don't file consolidated statements at all.
 
-Derived variables (see TODO.md's control-variable list):
+Derived variables:
     size        = ln(total assets), ln(net revenue)
     leverage    = (current + non-current liabilities) / total assets
     profitability = net income / total assets (ROA), net income / equity (ROE)

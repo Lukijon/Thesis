@@ -7,8 +7,10 @@ This is deliberately simple, not the thesis's final regression:
   - Market-adjusted return only (stock buy-and-hold minus Ibovespa
     buy-and-hold over the same window) -- no market-model beta, no size/
     value/momentum controls. A real market-model or Fama-French/Carhart
-    abnormal return belongs in src/analysis/ once control variables (still
-    outstanding, see TODO.md) are available.
+    abnormal return, using the control variables now built in
+    src/features/build_control_variables.py, is the natural next
+    refinement -- see docs/latex/main.tex Sec. 3.3 for the honest
+    limitation this leaves in the current specification.
   - Event date is the DFP's actual CVM receipt date (DT_RECEB) for the
     *current* fiscal year of each (year_prev, year_curr) similarity pair --
     i.e. when the changed note actually became public -- not the fiscal

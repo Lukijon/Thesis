@@ -17,7 +17,7 @@ Ignore everything else in `data/interim/`, `data/raw/`, and the many intermediat
 **Main thesis:**
 | File | What it is |
 |---|---|
-| `docs/dissertacao_esqueleto.docx` | **The actual submission document.** Introdução, Revisão de Literatura, Metodologia, and Resultados are written (~6,800 words, 6 tables). Conclusão and Resumo/Abstract are deliberately still placeholders. |
+| `docs/latex/main.tex` (compiles to `main.pdf`) | **The actual submission document**, now in LaTeX (ABNT-formatted). Introdução through Resultados are written, including the data-description chapter and the extraction-hardening validation. Conclusão and a final Resumo/Abstract are deliberately still placeholders. |
 | `docs/exame_qualificacao/` | The real Insper qualification-exam guide (PDF) — dates, requirements, defense mechanics. Read this if you haven't closely. |
 | `reports/panel_model_results.md` | The single most important supporting report — explains *why* H1/H2 are null even at the strictest test, with the fixed-effects methodology explained clearly. This is your best source for defending the methodology in the oral defense. |
 | `reports/risk_factors_exploration.md` | The delisting finding — your one real secondary result. |
@@ -35,8 +35,8 @@ Ignore everything else in `data/interim/`, `data/raw/`, and the many intermediat
 ## 3. Next steps, in order
 
 1. **Decide which thesis to submit.** This is the one thing left that's genuinely yours to decide, not something more testing will resolve — see Section 4 below for what each choice actually asks of you between now and the deadline.
-2. **Write the Conclusão and Resumo/Abstract** for whichever document you pick — deliberately left for last, per the exam guide's own instructions, now genuinely the next task.
-3. **Fill in the orientador's name and committee details** (marked `[a definir]` throughout).
+2. **Write the Conclusão and a final, non-provisional Resumo/Abstract** for whichever document you pick — deliberately left for last, per the exam guide's own instructions, now genuinely the next task.
+3. **Fill in committee details** — orientador (Ruy Monteiro Ribeiro) is already in; only the committee members remain.
 4. **Create your CV Lattes** (https://lattes.cnpq.br/) — mandatory for approval, unrelated to either paper's content, don't leave it for the last week.
 5. **Coordinate with your orientador**: confirm which topic, agree on a defense date inside the 03/08–03/10 window, and get them to schedule it via the Portal do Professor (≥7 days' notice required).
 6. **Send the written version to the committee** ≥7 days before the defense date (or earlier if your orientador asks).
@@ -72,4 +72,4 @@ Both guides assume the same total time budget. Adjust the split if your orientad
 
 ### If you genuinely can't decide before you have to commit
 
-Talk to your orientador with both `docs/dissertacao_esqueleto.docx` and `sidequest/dissertacao_diversidade_esqueleto.docx` in hand — they know the committee and the program's tolerance for a well-documented null far better than this analysis can. The one factor worth naming explicitly in that conversation: the main thesis is a completed research program (five sources, ten years, six methods); the sidequest is a well-executed first pass on a genuinely new question. Both are legitimate qualification-exam submissions. Which one is the better *dissertation* topic for the next several months is a different, bigger question than which one is ready fastest.
+Talk to your orientador with both `docs/latex/main.pdf` and `sidequest/dissertacao_diversidade_esqueleto.docx` in hand — they know the committee and the program's tolerance for a well-documented null far better than this analysis can. The one factor worth naming explicitly in that conversation: the main thesis is a completed research program (five sources, ten years, six methods); the sidequest is a well-executed first pass on a genuinely new question. Both are legitimate qualification-exam submissions. Which one is the better *dissertation* topic for the next several months is a different, bigger question than which one is ready fastest.

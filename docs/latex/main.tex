@@ -41,9 +41,6 @@
 \addto\captionsportuguese{\renewcommand{\contentsname}{Sumário}}
 \addto\captionsportuguese{\renewcommand{\bibname}{Referências}}
 
-% ---------------------------------------------------------------------------
-% PREENCHER antes da entrega
-% ---------------------------------------------------------------------------
 \title{Alterações textuais nas notas explicativas de dívida e a incorporação de informações pelo mercado brasileiro: evidências das notas de empréstimos, financiamentos e debêntures}
 \author{Jonathan Mark Miranda Buscariolli Majoni}
 \date{\the\year}
@@ -55,9 +52,6 @@
 
 \makeatletter
 
-% ---------------------------------------------------------------------------
-% Capa
-% ---------------------------------------------------------------------------
 \begin{titlepage}
     \begin{minipage}[t]{0.35\textwidth}
         \raggedright
@@ -78,9 +72,6 @@
 \end{titlepage}
 \newpage
 
-% ---------------------------------------------------------------------------
-% Folha de rosto
-% ---------------------------------------------------------------------------
 \begin{titlepage}
     \centering
     {\large \@author}\\[3cm]
@@ -108,13 +99,8 @@
 \thispagestyle{empty}
 \newpage
 
-% ---------------------------------------------------------------------------
-% Resumo
-% ---------------------------------------------------------------------------
 \renewcommand{\abstractname}{Resumo}
 \begin{abstract}
-    % [Resumo em português, parágrafo único, 150-500 palavras conforme ABNT NBR 6028.
-    % Escrever por último, depois que os resultados finais estiverem prontos.]
     Este estudo investiga se as alterações textuais ano a ano nas notas explicativas de empréstimos, financiamentos e debêntures das demonstrações financeiras anuais de empresas não financeiras listadas na B3 carregam conteúdo informacional incremental sobre o retorno anormal futuro das ações, mesmo após controlar pelas mudanças nos fundamentos econômico-financeiros da empresa. A mudança textual é medida por TF-IDF e similaridade de cosseno entre o texto da nota de um exercício e a do exercício anterior, seguindo a abordagem de \citeonline{cohen2020} e \citeonline{brown2011}. [Completar com amostra final, período, método empírico definitivo e principais resultados quando disponíveis.]
 \end{abstract}
 
@@ -123,20 +109,8 @@
 \thispagestyle{empty}
 \newpage
 
-% ---------------------------------------------------------------------------
-% Abstract
-% Nota: mantido em português no corpo (o pacote babel desta instalação não
-% carrega corretamente um segundo idioma "american"/"english" -- ver nota de
-% compilação). O texto abaixo já está em inglês; apenas a hifenização
-% automática usará as regras do português, o que é cosmético e não afeta a
-% correção do conteúdo. Ajustar se uma instalação TeX mais completa
-% (ex.: Overleaf, MiKTeX completo) estiver disponível para a versão final.
-% ---------------------------------------------------------------------------
 \renewcommand{\abstractname}{Abstract}
 \begin{abstract}
-    % [Tradução do resumo final --- versão abaixo já traduzida do resumo atual (ainda
-    % provisório); revisar/completar junto com o resumo em português quando os
-    % resultados finais estiverem prontos.]
     This study investigates whether year-over-year textual changes in the explanatory notes on loans, financing, and debentures in the annual financial statements of non-financial companies listed on B3 carry incremental informational content about firms' future abnormal stock returns, even after controlling for changes in the firm's economic and financial fundamentals. Textual change is measured via TF-IDF and cosine similarity between the note's text in a given fiscal year and the previous year, following the approach of \citeonline{cohen2020} and \citeonline{brown2011}. [To be completed with the final sample, period, definitive empirical method, and main results once available.]
 \end{abstract}
 
@@ -145,19 +119,11 @@
 \thispagestyle{empty}
 \newpage
 
-% ---------------------------------------------------------------------------
-% Sumário
-% ---------------------------------------------------------------------------
 \tableofcontents
 \thispagestyle{empty}
 \newpage
 
-% ===========================================================================
 \chapter{Introdução}
-% [Conteúdo desta seção adaptado diretamente de docs/pre-projeto.docx (Pergunta de pesquisa,
-% Objetivos, Hipóteses) --- já aprovado/escrito, reorganizado aqui na estrutura formal de
-% capítulo 1. A Justificativa do pré-projeto foi movida para dentro do Capítulo 2, que é onde
-% ela pertence estruturalmente numa dissertação em formato final.]
 
 \section{Pergunta de pesquisa e objetivos}
 
@@ -190,9 +156,7 @@ Optou-se por manter essa hipótese sem direção definida de propósito. Uma mud
 
 [PLACEHOLDER - Escrever após terminar a dissertação]
 
-% ===========================================================================
 \chapter{Referencial Teórico e Revisão de Literatura}
-% [Este capítulo consolida a Justificativa e o Embasamento teórico do pré-projeto.]
 
 \section{Assimetria informacional e divulgação corporativa}
 
@@ -224,14 +188,6 @@ A medida capta mudança lexical, isto é, alterações nas palavras e expressõe
 
 Dois estudos internacionais ligam diretamente a qualidade textual da divulgação a resultados no mercado de dívida, o que ajuda a justificar por que a pesquisa escolheu justamente as notas de empréstimos, financiamentos e debêntures. \citeonline{ertugrul2017} mostram que relatórios anuais menos legíveis e com tom mais ambíguo se associam a cláusulas de empréstimo mais restritivas e a maior risco futuro de queda abrupta no preço da ação. \citeonline{bonsall2017} mostram que menor legibilidade das divulgações narrativas se associa a ratings de crédito menos favoráveis e a mais divergência entre agências de rating. Os dois reforçam que o pedaço da divulgação relacionado à dívida é especialmente sensível à qualidade da comunicação textual.
 
-% [Nota: um teste exploratório inicial com o documento inteiro de notas produziu um resultado
-% aparentemente mais forte que o da nota isolada, o que motivou a checagem de robustez completa
-% reportada no Capítulo 4 --- e essa checagem mostrou que nenhuma das duas unidades de análise
-% sustenta um resultado significativo sob o modelo de efeitos fixos (Tabela 4.2). A tensão
-% original entre as duas abordagens está substancialmente resolvida nos dados: ambas concordam
-% em não encontrar associação robusta. Ver reports/wholenote_alignment_review.md e
-% reports/panel_model_results.md no repositório do projeto.]
-
 No Brasil, \citeonline{schiozer2021} mostram, com coleta manual em milhares de notas de empréstimos e financiamentos de empresas da B3, que essas notas carregam informação contratual concreta sobre covenants, o que reforça que vale a pena tratar essa nota especificamente, e não o documento inteiro, como unidade de análise.
 
 \section{Panorama brasileiro e a lacuna que a pesquisa ocupa}
@@ -240,14 +196,8 @@ A literatura nacional sobre notas explicativas cobre bem legibilidade \cite{borg
 
 A lacuna que esta dissertação ocupa é bem específica: nenhum desses trabalhos testa se a mudança textual ano a ano, medida de forma simples e replicável nas notas de dívida, carrega informação a mais sobre o retorno futuro das ações ou sobre a revisão das previsões dos analistas. É uma pergunta apoiada em literatura internacional já consolidada \cite{cohen2020,amelzadeh2016} e, ao mesmo tempo, uma lacuna concreta e delimitada na literatura brasileira sobre disclosure textual.
 
-% ===========================================================================
 \chapter{Metodologia}
 \label{ch:metodologia}
-% [Capítulo expandido a partir do pipeline de dados já construído no repositório do projeto.
-% Conferir números antes de finalizar, especialmente se a decisão de escopo (nota isolada vs.
-% documento inteiro) mudar. A descrição da amostra e dos dados foi movida para o Capítulo~4
-% (Descrição dos Dados e da Amostra), separando-a da metodologia propriamente dita, conforme
-% a estrutura padrão de dissertação apresentada no guia do Exame de Qualificação.]
 
 \section{Coleta e extração das notas explicativas}
 \label{sec:coleta}
@@ -258,12 +208,6 @@ As notas explicativas foram coletadas diretamente do portal de dados abertos da 
 \label{sec:medida}
 
 A mudança textual é medida por 1 menos a similaridade de cosseno entre os vetores TF-IDF do texto da nota em dois exercícios consecutivos da mesma empresa, com o vocabulário e os pesos IDF ajustados uma única vez sobre todo o corpus da amostra (não empresa a empresa), para que a ponderação reflita o que é de fato boilerplate genérico do setor/mercado. A ponderação TF-IDF especificamente segue \citeonline{brown2011}, que a adotam sobre o modelo de espaço vetorial clássico da literatura de recuperação de informação por sua simplicidade e popularidade. \citeonline{cohen2020} usam uma medida de cosseno análoga, mas sobre vetores de frequência bruta de termos, sem a ponderação por raridade que caracteriza o TF-IDF; a escolha desta dissertação segue a variante de \citeonline{brown2011}, por permitir separar melhor o boilerplate setorial da mudança de fato específica de cada empresa.
-
-% [DECISÃO PENDENTE --- apenas de enquadramento, não mais de resultado: o desenho original
-% (pré-projeto, Capítulo 2) especifica a nota de dívida isolada; um teste exploratório com o
-% documento inteiro de notas foi conduzido em paralelo e, após a checagem completa de robustez
-% (Capítulo 4), as duas unidades de análise convergem para o mesmo resultado nulo. Falta apenas
-% declarar qual delas é a medida principal da versão final, com a devida justificativa.]
 
 \section{Variável dependente: retorno anormal futuro}
 \label{sec:var_dependente}
@@ -319,7 +263,6 @@ A variável de revisão é construída, para cada par (empresa, exercício $t-1$
 
 Uma limitação de mensuração deve ser registrada já na definição do método, não apenas na leitura dos resultados: a série de consenso do Bloomberg disponível para este projeto é uma série \textit{rolante} (o consenso para o próximo resultado a ser divulgado), não uma série de mesmo trimestre-alvo reamostrada ao longo do tempo. Isso significa que parte da revisão medida pode refletir a mudança normal de nível do consenso entre divulgações consecutivas, e não apenas uma revisão genuína de sentimento dos analistas em reação ao texto. Corrigir essa limitação exigiria uma nova extração de dados do Bloomberg (uma série de previsões para o mesmo trimestre-alvo, acompanhada ao longo do tempo), não uma mudança de código.
 
-% ===========================================================================
 \chapter{Descrição dos Dados e da Amostra}
 \label{ch:dados}
 
@@ -448,7 +391,6 @@ Por fim, a Figura~\ref{fig:controles} mostra a distribuição das quatro variáv
     {\footnotesize Fonte: elaborada pelo autor a partir de dados contábeis estruturados da CVM. ROA e retorno passado truncados nos percentis 1/99 para legibilidade.}
 \end{figure}
 
-% ===========================================================================
 \chapter{Resultados}
 \label{ch:resultados}
 
@@ -651,15 +593,12 @@ Dos 56 testes totais (incluindo comparações de tercil e a checagem de deslista
 
 Vale lembrar que a limitação de mensuração da série de consenso, discutida na Seção~\ref{sec:h2_metodologia}, permanece em aberto: parte do nulo aqui reportado pode refletir essa limitação, não apenas ausência de relação real.
 
-% ===========================================================================
 \chapter{Conclusão}
-% [A escrever por último.]
 
-% ===========================================================================
-% Referências: geradas automaticamente pelo abntex2cite a partir de references.bib
+[PLACEHOLDER - Escrever após terminar a dissertação]
+
 \bibliography{references}
 
-% Apêndices (opcional)
 % \appendix
 % \chapter{Apêndice A}
 
