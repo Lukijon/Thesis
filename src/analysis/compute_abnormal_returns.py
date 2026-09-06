@@ -98,7 +98,7 @@ def build_ticker_map() -> pd.DataFrame:
     return pd.concat([current_map, hist_map], ignore_index=True).drop_duplicates("CD_CVM")
 
 
-def compute_returns(events: pd.DataFrame, ticker_map: pd.DataFrame) -> pd.DataFrame:
+def compute_returns(events: pd.DataFrame, ticker_map: pd.DataFrame, window_trading_days: int = WINDOW_TRADING_DAYS) -> pd.DataFrame:
     prices = pd.read_csv(MARKET / "stock_prices_bloomberg.csv", skiprows=[1]).rename(columns={"Unnamed: 0": "date"})
     prices["date"] = pd.to_datetime(prices["date"], format="%m/%d/%Y")
     for c in prices.columns:
@@ -126,9 +126,9 @@ def compute_returns(events: pd.DataFrame, ticker_map: pd.DataFrame) -> pd.DataFr
         if stock.empty:
             continue
         t0 = stock.index[0]
-        if len(stock) <= WINDOW_TRADING_DAYS:
+        if len(stock) <= window_trading_days:
             continue  # not enough forward trading history yet
-        t1 = stock.index[WINDOW_TRADING_DAYS]
+        t1 = stock.index[window_trading_days]
         if t1 > last_date:
             continue
 

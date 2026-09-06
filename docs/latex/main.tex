@@ -87,12 +87,12 @@
     {\Large \textbf{\@title}}\\[3cm]
 
     \begin{adjustwidth}{7cm}{0cm}
-        Dissertação apresentada ao Programa de Mestrado Profissional em [Economia, Área Finanças] do Insper Instituto de Ensino e Pesquisa, como requisito parcial para obtenção do título de Mestre.
+        Dissertação apresentada ao Programa de Mestrado Profissional em Economia do Insper Instituto de Ensino e Pesquisa, como requisito parcial para obtenção do título de Mestre.
 
         \vspace*{0.5cm}
         Orientador(a): \advisor
         \ifcsname coadvisor\endcsname
-            \\[0.25cm] Coorientador(a): \coadvisor
+            \\[0.25cm] Coorientador: \coadvisor
         \fi
     \end{adjustwidth}
 
@@ -119,7 +119,7 @@
 \end{abstract}
 
 \noindent
-\textbf{Palavras-chave:} [a definir; ex.: notas explicativas; análise textual; TF-IDF; retorno anormal; disclosure.]
+\textbf{Palavras-chave:} notas explicativas; análise textual; TF-IDF; retorno anormal; disclosure; consenso de estimativas.
 \thispagestyle{empty}
 \newpage
 
@@ -161,7 +161,7 @@
 
 \section{Pergunta de pesquisa e objetivos}
 
-A questão que este estudo busca responder é: as alterações textuais nas notas explicativas de dívida das empresas brasileiras carregam informação que o mercado demora para incorporar aos preços das ações?
+A questão que este estudo busca responder é: as alterações textuais nas notas explicativas de dívida das empresas brasileiras carregam informação que são posteriormente incorporadas aos preços das ações pelo mercado?
 
 Mais especificamente, em que medida as alterações textuais entre exercícios consecutivos, medidas por TF-IDF e similaridade de cosseno, nas notas de empréstimos, financiamentos e debêntures das demonstrações financeiras anuais de empresas não financeiras listadas na B3 estão associadas ao retorno anormal acumulado nos 12 meses seguintes à divulgação, depois de controlar pelas mudanças nos fundamentos econômico-financeiros da empresa? Como análise complementar, o estudo também verifica se essa mesma mudança textual se associa à revisão do consenso de previsões de lucro por ação (EPS) dos analistas depois da divulgação.
 
@@ -180,7 +180,7 @@ Objetivos específicos:
 
 \textbf{H1}: as alterações textuais entre exercícios nas notas de empréstimos, financiamentos e debêntures estão associadas ao retorno anormal futuro das ações, mesmo depois de controlar pelas mudanças observáveis nos fundamentos da empresa.
 
-Optou-se por manter essa hipótese sem direção definida de propósito. Uma mudança grande no texto pode ser notícia ruim, como quebra de covenant ou dificuldade de refinanciamento, mas também pode ser notícia boa, como alongamento de prazo, redução de taxa ou quitação de dívida. Não dá para assumir de antemão que mudança sempre significa notícia ruim. Essa leitura é consistente com \citeonline{brown2011}: a motivação central da medida de modificação textual dos autores não presume o sinal da mudança econômica subjacente. O argumento é que uma seção narrativa pouco modificada é pouco informativa após ``mudanças econômicas significativas'' na empresa, sem qualificar se essas mudanças são favoráveis ou desfavoráveis, e o teste principal do estudo usa a \emph{magnitude} da reação de preço ao texto modificado, não sua direção.
+Optou-se por manter essa hipótese sem direção definida de propósito. Uma mudança grande no texto pode ser notícia ruim, como quebra de covenant ou dificuldade de refinanciamento, mas também pode ser notícia boa, como alongamento de prazo, redução de taxa ou quitação de dívida. Não se pode assumir de antemão que mudança sempre representa um impacto negativo. Essa leitura é consistente com \citeonline{brown2011}: a motivação central da medida de modificação textual dos autores não presume o sinal da mudança econômica subjacente. O argumento é que uma seção narrativa pouco modificada é pouco informativa após ``mudanças econômicas significativas'' na empresa, sem qualificar se essas mudanças são favoráveis ou desfavoráveis, e o teste principal do estudo usa a \emph{magnitude} da reação de preço ao texto modificado, não sua direção.
 
 \textbf{H1a} (opcional, exploratória): empresas com maior mudança textual nas notas de dívida apresentam retorno anormal futuro menor, na linha do que ``Lazy Prices'' encontra para o mercado americano. Essa hipótese só se sustenta se a mudança estiver concentrada em notícia desfavorável, então é tratada como teste adicional, não como hipótese central da dissertação.
 
@@ -300,6 +300,8 @@ em que $i$ indexa a empresa e $t$ o exercício fiscal (ou trimestre, nas especif
 \end{equation}
 
 em que $\alpha_i$ são efeitos fixos de empresa (absorvem qualquer característica invariante no tempo) e $\delta_t$ são efeitos fixos de ano (absorvem choques comuns a todas as empresas em um dado ano, em parte já absorvidos pelo ajuste ao Ibovespa, mas não inteiramente). Sob efeitos fixos, $\beta$ é identificado apenas pela variação dentro de cada empresa ao longo do tempo: um teste substancialmente mais exigente do que a comparação entre empresas da equação~\ref{eq:base}.
+
+A escolha por um painel de efeitos fixos de empresa e ano tem três motivações concretas na literatura, não apenas interna ao projeto. No Brasil, \citeonline{santoscoelho2018} testam a relevância informacional de fatores de risco e de gestão de risco do Formulário de Referência para o valor de mercado de empresas brasileiras, com um desenho de painel (efeitos fixos ou aleatórios, escolhidos por teste de Hausman a cada especificação) sobre apenas três exercícios (2012--2014, $n=300$); os próprios autores apontam essa limitação, notando que ``os modelos econométricos constituem painel curto e podem gerar elevadas diferenças entre os estimadores das abordagens com efeito fixo e aleatório'', e sugerem que ``poderiam ser realizados estudos que explorassem horizontes temporais superiores''. Esta dissertação pode ser lida, em parte, como essa continuação sugerida: um painel de dez exercícios (2015--2024), mais de três vezes mais longo, com a mesma lógica de teste de especificação aplicada de forma sistemática. Essa escolha converge, ainda, com a prática já estabelecida na literatura internacional de disclosure textual citada nesta dissertação: \citeonline{cohen2020} empregam efeitos fixos de empresa e mês em testes complementares sobre desempenho operacional futuro e incidência de falência (embora não no teste principal de retorno, que usa portfólio calendário), e \citeonline{bonsall2017} adotam efeitos fixos de empresa e ano, com erros-padrão agrupados nas duas dimensões, como especificação principal em todas as regressões do estudo sobre legibilidade e custo de dívida.
 
 \textbf{Terceira verificação: método independente para a mesma ameaça.} Como checagem adicional, à parte da família de regressões acima, foi implementado o teste de portfólio calendário longo-curto (\textit{long-short}) de \citeonline{cohen2020}: a cada mês, as empresas com divulgação recente são ordenadas por similaridade e agrupadas; a carteira comprada nas de maior similaridade e vendida nas de menor similaridade tem seu retorno mensal testado por erro-padrão de Newey-West (HAC), robusto a autocorrelação. É uma solução diferente, e consolidada na literatura de finanças, para o mesmo problema de observações repetidas, com a vantagem adicional de não impor uma forma funcional linear à relação entre similaridade e retorno.
 
@@ -592,6 +594,35 @@ O Relatório da Administração é, novamente, a única fonte com algum sinal se
 O coeficiente é negativo e consistente com a direção esperada: maior similaridade textual média (menos mudança) associa-se a menor probabilidade de saída do índice. Diferentemente do achado do Relatório da Administração, este desenho não sofre do problema de observações repetidas em primeiro lugar, de modo que não há um teste mais rigoroso disponível capaz de invalidá-lo pela mesma via. Verificações de robustez (exclusão de cada empresa individualmente, pior caso $p=0{,}078$; e substituição da média por mediana, $p=0{,}033$) não enfraquecem o resultado.
 
 Esse é, no conjunto, o achado empírico mais bem sustentado deste projeto até o momento, mas sua interpretação deve ser precisa. Ele diz respeito à validade da medida de mudança textual como sinal de dificuldade da empresa, não à hipótese central H1 de que a mudança textual prevê retorno futuro; essa última permanece nula inclusive para os Fatores de Risco.
+
+\textbf{Comparação direta com o desenho de \citeonline{santoscoelho2018}.} Como verificação adicional, motivada diretamente pela limitação que os próprios autores apontam (Seção~\ref{sec:modelo}), o modelo de retorno anormal foi reestimado seguindo o desenho metodológico deles o mais de perto possível: efeito único de empresa (sem efeito de ano), escolhido por teste de Hausman a cada especificação (efeitos fixos quando o teste rejeita a hipótese nula de equivalência, efeitos aleatórios caso contrário), com erros-padrão robustos à heterocedasticidade em vez de agrupados por empresa. A diferença deliberada é o painel: dez exercícios (2015--2024) em vez de três, permitindo que o teste de Hausman discrimine com mais confiança entre as duas abordagens (Tabela~\ref{tab:santoscoelho}).
+
+\begin{table}[htbp]
+    \centering
+    \caption{Retorno anormal sob o desenho metodológico de Santos e Coelho (2018)}
+    \label{tab:santoscoelho}
+    \small
+    \begin{tabular}{@{}llrrrrl@{}}
+        \toprule
+        \textbf{Fonte de texto} & \textbf{Janela} & \textbf{Ef. fixos (2 vias)} & \textbf{FE (só empresa)} & \textbf{RE (só empresa)} & \textbf{Hausman} & \textbf{Escolhido} \\
+        \midrule
+        Nota de dívida (anual)      & 12m & 0,585 & 0,700 & 0,567 & 0,024 & FE: 0,700 \\
+                                     & 18m & 0,596 & 0,959 & 0,518 & 0,001 & FE: 0,959 \\
+        Conjunto completo de notas  & 12m & 0,660 & 0,220 & 0,427 & 0,768 & RE: 0,427 \\
+                                     & 18m & 0,182 & 0,080 & 0,177 & 0,802 & RE: 0,177 \\
+        Relatório da Administração  & 12m & 0,478 & 0,785 & \textbf{0,045} & 0,000 & FE: 0,785 \\
+                                     & 18m & 0,683 & 0,358 & 0,862 & 0,026 & FE: 0,358 \\
+        Fatores de Risco            & 12m & 0,758 & 0,567 & 0,355 & 0,160 & RE: 0,355 \\
+                                     & 18m & 0,426 & 0,232 & 0,071 & 0,013 & FE: 0,232 \\
+        \bottomrule
+    \end{tabular}
+    \\[0.3cm]
+    {\footnotesize Fonte: elaborada pelo autor. Valores são p-valores do coeficiente de similaridade, exceto a coluna Hausman (p-valor do teste de especificação) e a última coluna, que reporta o estimador escolhido pela regra de \citeonline{santoscoelho2018} (Hausman rejeita a 5\% $\rightarrow$ efeitos fixos; caso contrário, efeitos aleatórios) e o p-valor correspondente.}
+\end{table}
+
+O caso do Relatório da Administração aos 12 meses ilustra por que a regra de seleção importa: sob efeitos aleatórios sozinhos, o coeficiente pareceria significativo ($p=0{,}045$), mas o teste de Hausman rejeita decisivamente a equivalência entre os dois estimadores ($p<0{,}001$) e recomenda efeitos fixos, sob o qual o resultado é nulo ($p=0{,}785$). Aplicando a própria regra de decisão de \citeonline{santoscoelho2018} de forma correta, portanto, nenhuma fonte de texto e nenhuma janela mostra significância em nenhuma das duas versões do desenho.
+
+Esse exercício responde diretamente à limitação que os autores apontam em seu próprio estudo: um painel mais longo, dizem eles, poderia revelar diferenças relevantes entre as abordagens de efeito fixo e aleatório que um painel curto não capta com confiança. Um painel mais de três vezes mais longo (dez exercícios contra três) permite exatamente esse teste com mais poder estatístico, e o resultado, em vez de fortalecer ou reverter o achado nulo, o confirma sob mais uma combinação de modelo e amostra. Isso não invalida a contribuição de \citeonline{santoscoelho2018}, que trata de uma pergunta diferente (valor de mercado corrente, não retorno futuro) com um recorte amostral diferente; mas sugere que, ao menos para a relação entre mudança textual e retorno futuro, a inconclusividade não é um artefato de painel curto. Ela persiste mesmo quando essa limitação específica é removida.
 
 \section{Análise complementar (H2)}
 \label{sec:h2_resultados}
