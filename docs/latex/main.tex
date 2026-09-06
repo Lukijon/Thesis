@@ -131,9 +131,9 @@ A questão que este estudo busca responder é: as alterações textuais nas nota
 
 Mais especificamente, em que medida as alterações textuais entre exercícios consecutivos, medidas por TF-IDF e similaridade de cosseno, nas notas de empréstimos, financiamentos e debêntures das demonstrações financeiras anuais de empresas não financeiras listadas na B3 estão associadas ao retorno anormal acumulado nos 12 meses seguintes à divulgação, depois de controlar pelas mudanças nos fundamentos econômico-financeiros da empresa? Como análise complementar, o estudo também verifica se essa mesma mudança textual se associa à revisão do consenso de previsões de lucro por ação (EPS) dos analistas depois da divulgação.
 
-Objetivo geral: analisar se as alterações textuais entre exercícios consecutivos nas notas de empréstimos, financiamentos e debêntures carregam conteúdo informacional incremental para explicar os retornos anormais futuros de empresas não financeiras listadas na B3.
+\textbf{Objetivo geral:} analisar se as alterações textuais entre exercícios consecutivos nas notas de empréstimos, financiamentos e debêntures carregam conteúdo informacional incremental para explicar os retornos anormais futuros de empresas não financeiras listadas na B3.
 
-Objetivos específicos:
+\textbf{Objetivos específicos:}
 \begin{itemize}
     \item Extrair e organizar as notas de empréstimos, financiamentos e debêntures das DFPs anuais das empresas da amostra.
     \item Medir a similaridade textual entre a nota de cada exercício e a do exercício anterior, usando TF-IDF e cosseno.
@@ -207,7 +207,23 @@ As notas explicativas foram coletadas diretamente do portal de dados abertos da 
 \section{Medida de mudança textual (TF-IDF e similaridade de cosseno)}
 \label{sec:medida}
 
-A mudança textual é medida por 1 menos a similaridade de cosseno entre os vetores TF-IDF do texto da nota em dois exercícios consecutivos da mesma empresa, com o vocabulário e os pesos IDF ajustados uma única vez sobre todo o corpus da amostra (não empresa a empresa), para que a ponderação reflita o que é de fato boilerplate genérico do setor/mercado. A ponderação TF-IDF especificamente segue \citeonline{brown2011}, que a adotam sobre o modelo de espaço vetorial clássico da literatura de recuperação de informação por sua simplicidade e popularidade. \citeonline{cohen2020} usam uma medida de cosseno análoga, mas sobre vetores de frequência bruta de termos, sem a ponderação por raridade que caracteriza o TF-IDF; a escolha desta dissertação segue a variante de \citeonline{brown2011}, por permitir separar melhor o boilerplate setorial da mudança de fato específica de cada empresa.
+A mudança textual é medida por 1 menos a similaridade de cosseno entre os vetores TF-IDF do texto da nota em dois exercícios consecutivos da mesma empresa. Como essa medida é a base empírica de toda a dissertação, vale detalhar sua mecânica antes de descrever como ela é aplicada aqui.
+
+\textbf{TF-IDF.} A sigla vem do inglês \textit{Term Frequency-Inverse Document Frequency}, e resume duas informações sobre cada palavra de um documento. A primeira, TF (frequência do termo), é simplesmente quantas vezes uma palavra aparece no texto, normalizada pelo tamanho do documento para não favorecer notas apenas por serem mais longas. A segunda, IDF (frequência inversa nos documentos), penaliza palavras comuns e valoriza palavras raras, de acordo com a fórmula
+\begin{equation}
+    \mathit{IDF}(palavra) = \log\left(\frac{N}{\text{número de documentos que contêm a palavra}}\right),
+    \label{eq:idf}
+\end{equation}
+em que $N$ é o número total de documentos do corpus. Se uma palavra aparece em praticamente toda nota de dívida do setor (``empréstimo'', ``taxa'', ``vencimento'', ``garantia''), o denominador se aproxima de $N$, a razão se aproxima de 1 e o logaritmo se aproxima de zero: o IDF é baixo, e a palavra quase não pesa no resultado final, por mais vezes que se repita. Se a palavra aparece em pouquíssimos documentos (o nome de um banco credor específico, uma cláusula de covenant incomum), o IDF é alto, e ela passa a pesar bem mais. O peso final de cada palavra em cada documento é o produto das duas partes, $\mathit{TF\text{-}IDF} = \mathit{TF} \times \mathit{IDF}$: alto quando a palavra é frequente naquele texto específico \emph{e} rara no corpus como um todo, baixo quando qualquer uma das duas condições falha. Cada nota, assim, deixa de ser um bloco de texto e passa a ser um vetor numérico, com uma posição para cada palavra do vocabulário do corpus (tipicamente milhares de posições, a maioria delas zero).
+
+\textbf{Similaridade de cosseno.} Com cada nota já representada como um vetor, a pergunta seguinte é o quão parecidos são o vetor do exercício $t$ e o vetor do exercício $t-1$ da mesma empresa. A similaridade de cosseno mede o ângulo entre os dois vetores, não a distância bruta entre eles:
+\begin{equation}
+    \cos(A,B) = \frac{A \cdot B}{\lVert A \rVert \, \lVert B \rVert},
+    \label{eq:cosseno}
+\end{equation}
+em que $A \cdot B$ é o produto escalar dos dois vetores e $\lVert A \rVert$, $\lVert B \rVert$ são suas normas. Como os pesos TF-IDF nunca são negativos, o resultado varia de 0 a 1 neste contexto: 1 significa que os dois vetores apontam exatamente na mesma direção, ou seja, a mesma proporção relativa de palavras-chave nos dois exercícios (nota praticamente reciclada de um ano para o outro); 0 significa nenhuma sobreposição relevante de vocabulário entre os dois anos. A vantagem de usar cosseno em vez de, por exemplo, distância euclidiana, é que ele ignora o tamanho do documento e depende só da direção do vetor: uma nota pode crescer ou encolher de um ano para o outro sem necessariamente mudar de conteúdo (mais tabelas de detalhamento sobre o mesmo assunto, por exemplo), e o cosseno não confunde ``documento maior'' com ``documento diferente''.
+
+Com a nota já representada dessa forma nos dois exercícios, a mudança textual usada nesta dissertação é definida como o complemento da similaridade, $1 - \cos(A,B)$: quanto mais próxima de 1 a similaridade, menor a mudança; quanto mais próxima de 0, maior. O vocabulário e os pesos IDF são ajustados uma única vez sobre todo o corpus da amostra, não empresa a empresa, para que a ponderação reflita o que é de fato boilerplate genérico do setor e do mercado como um todo, e não apenas o que se repete para uma única empresa ao longo do tempo. A ponderação TF-IDF especificamente segue \citeonline{brown2011}, que a adotam sobre o modelo de espaço vetorial clássico da literatura de recuperação de informação por sua simplicidade e popularidade. \citeonline{cohen2020} usam uma medida de cosseno análoga, mas sobre vetores de frequência bruta de termos, sem a ponderação por raridade que caracteriza o TF-IDF; a escolha desta dissertação segue a variante de \citeonline{brown2011}, por permitir separar melhor o boilerplate setorial da mudança de fato específica de cada empresa.
 
 \section{Variável dependente: retorno anormal futuro}
 \label{sec:var_dependente}
