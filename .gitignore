@@ -7,6 +7,16 @@ venv/
 env/
 *.egg-info/
 
+# LaTeX build artifacts -- main.pdf is kept (the actual deliverable), these regenerate from it
+docs/latex/*.aux
+docs/latex/*.log
+docs/latex/*.out
+docs/latex/*.toc
+docs/latex/*.bbl
+docs/latex/*.blg
+docs/latex/compile_log_*.txt
+docs/latex/bibtex_log.txt
+
 # Environment / secrets
 .env
 .env.*

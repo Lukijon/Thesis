@@ -1,0 +1,591 @@
+\documentclass[a4paper,12pt]{report}
+
+% Pacotes (mantidos do template original do Insper, adequado para ABNT)
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\usepackage{longtable}
+\usepackage{tocbibind}
+\usepackage{changepage}
+\usepackage{geometry}
+\usepackage{setspace}
+\usepackage[portuguese]{babel}
+\usepackage{caption}
+\usepackage{ifthen}
+\usepackage{times}
+\usepackage[alf]{abntex2cite}
+\usepackage[titles]{tocloft}
+\usepackage{titlesec}
+\usepackage{booktabs}
+
+% Margens ABNT NBR 14724: superior 3cm, inferior 2cm, esquerda 3cm (encadernação), direita 2cm
+\geometry{top=3cm, bottom=2cm, left=3cm, right=2cm}
+\setlength{\parindent}{1.25cm}
+\onehalfspacing
+
+\renewenvironment{abstract}{
+    \begin{center}
+        \textbf{\abstractname}
+    \end{center}
+    \begin{quote}
+}{\end{quote}}
+
+\titleformat{\chapter}[hang]
+  {\normalfont\huge\bfseries}{\thechapter}{0.25em}{}
+
+\addto\captionsportuguese{\renewcommand{\contentsname}{Sumário}}
+\addto\captionsportuguese{\renewcommand{\bibname}{Referências}}
+
+% ---------------------------------------------------------------------------
+% PREENCHER antes da entrega
+% ---------------------------------------------------------------------------
+\title{Alterações textuais nas notas explicativas de dívida e a incorporação de informações pelo mercado brasileiro: evidências das notas de empréstimos, financiamentos e debêntures}
+\author{Jonathan Mark Miranda Buscariolli Majoni}
+\date{\the\year}
+\newcommand{\advisor}{Ruy Monteiro Ribeiro}
+% \newcommand{\coadvisor}{}
+
+\begin{document}
+\selectlanguage{portuguese}
+
+\makeatletter
+
+% ---------------------------------------------------------------------------
+% Capa
+% ---------------------------------------------------------------------------
+\begin{titlepage}
+    \begin{minipage}[t]{0.35\textwidth}
+        \raggedright
+        \includegraphics[width=0.7\textwidth]{Logo_Insper.png}
+    \end{minipage}
+
+    \vspace*{1.5cm}
+    \centering
+    {\large INSPER, INSTITUTO DE ENSINO E PESQUISA}\\[3cm]
+
+    {\large \@author}\\[3cm]
+
+    {\Large \textbf{\@title}}
+
+    \vfill
+    {\large São Paulo}\\
+    {\large \the\year}
+\end{titlepage}
+\newpage
+
+% ---------------------------------------------------------------------------
+% Folha de rosto
+% ---------------------------------------------------------------------------
+\begin{titlepage}
+    \centering
+    {\large \@author}\\[3cm]
+    {\Large \textbf{\@title}}\\[3cm]
+
+    \begin{adjustwidth}{7cm}{0cm}
+        Dissertação apresentada ao Programa de Mestrado Profissional em [Economia, Área Finanças] do Insper Instituto de Ensino e Pesquisa, como requisito parcial para obtenção do título de Mestre.
+
+        \vspace*{0.5cm}
+        Orientador(a): \advisor
+        \ifcsname coadvisor\endcsname
+            \\[0.25cm] Coorientador(a): \coadvisor
+        \fi
+    \end{adjustwidth}
+
+    \vfill
+    {\large São Paulo}\\
+    {\large \the\year}
+\end{titlepage}
+\newpage
+
+% Na versão final: Ficha catalográfica (biblioteca) e Folha de aprovação (pós-defesa) entram aqui.
+% Não incluídas nesta versão por dependerem de processos institucionais externos.
+
+\thispagestyle{empty}
+\newpage
+
+% ---------------------------------------------------------------------------
+% Resumo
+% ---------------------------------------------------------------------------
+\renewcommand{\abstractname}{Resumo}
+\begin{abstract}
+    % [Resumo em português, parágrafo único, 150-500 palavras conforme ABNT NBR 6028.
+    % Escrever por último, depois que os resultados finais estiverem prontos.]
+    Este estudo investiga se as alterações textuais ano a ano nas notas explicativas de empréstimos, financiamentos e debêntures das demonstrações financeiras anuais de empresas não financeiras listadas na B3 carregam conteúdo informacional incremental sobre o retorno anormal futuro das ações, mesmo após controlar pelas mudanças nos fundamentos econômico-financeiros da empresa. A mudança textual é medida por TF-IDF e similaridade de cosseno entre o texto da nota de um exercício e a do exercício anterior, seguindo a abordagem de \citeonline{cohen2020} e \citeonline{brown2011}. [Completar com amostra final, período, método empírico definitivo e principais resultados quando disponíveis.]
+\end{abstract}
+
+\noindent
+\textbf{Palavras-chave:} [a definir; ex.: notas explicativas; análise textual; TF-IDF; retorno anormal; disclosure.]
+\thispagestyle{empty}
+\newpage
+
+% ---------------------------------------------------------------------------
+% Abstract
+% Nota: mantido em português no corpo (o pacote babel desta instalação não
+% carrega corretamente um segundo idioma "american"/"english" -- ver nota de
+% compilação). O texto abaixo já está em inglês; apenas a hifenização
+% automática usará as regras do português, o que é cosmético e não afeta a
+% correção do conteúdo. Ajustar se uma instalação TeX mais completa
+% (ex.: Overleaf, MiKTeX completo) estiver disponível para a versão final.
+% ---------------------------------------------------------------------------
+\renewcommand{\abstractname}{Abstract}
+\begin{abstract}
+    % [Tradução do resumo final --- versão abaixo já traduzida do resumo atual (ainda
+    % provisório); revisar/completar junto com o resumo em português quando os
+    % resultados finais estiverem prontos.]
+    This study investigates whether year-over-year textual changes in the explanatory notes on loans, financing, and debentures in the annual financial statements of non-financial companies listed on B3 carry incremental informational content about firms' future abnormal stock returns, even after controlling for changes in the firm's economic and financial fundamentals. Textual change is measured via TF-IDF and cosine similarity between the note's text in a given fiscal year and the previous year, following the approach of \citeonline{cohen2020} and \citeonline{brown2011}. [To be completed with the final sample, period, definitive empirical method, and main results once available.]
+\end{abstract}
+
+\noindent
+\textbf{Keywords:} [to be defined].
+\thispagestyle{empty}
+\newpage
+
+% ---------------------------------------------------------------------------
+% Sumário
+% ---------------------------------------------------------------------------
+\tableofcontents
+\thispagestyle{empty}
+\newpage
+
+% ===========================================================================
+\chapter{Introdução}
+% [Conteúdo desta seção adaptado diretamente de docs/pre-projeto.docx (Pergunta de pesquisa,
+% Objetivos, Hipóteses) --- já aprovado/escrito, reorganizado aqui na estrutura formal de
+% capítulo 1. A Justificativa do pré-projeto foi movida para dentro do Capítulo 2, que é onde
+% ela pertence estruturalmente numa dissertação em formato final.]
+
+\section{Pergunta de pesquisa e objetivos}
+
+A questão que este estudo busca responder é: as alterações textuais nas notas explicativas de dívida das empresas brasileiras carregam informação que o mercado demora para incorporar aos preços das ações?
+
+Mais especificamente, em que medida as alterações textuais entre exercícios consecutivos, medidas por TF-IDF e similaridade de cosseno, nas notas de empréstimos, financiamentos e debêntures das demonstrações financeiras anuais de empresas não financeiras listadas na B3 estão associadas ao retorno anormal acumulado nos 12 meses seguintes à divulgação, depois de controlar pelas mudanças nos fundamentos econômico-financeiros da empresa? Como análise complementar, o estudo também verifica se essa mesma mudança textual se associa à revisão do consenso de previsões de lucro por ação (EPS) dos analistas depois da divulgação.
+
+Objetivo geral: analisar se as alterações textuais entre exercícios consecutivos nas notas de empréstimos, financiamentos e debêntures carregam conteúdo informacional incremental para explicar os retornos anormais futuros de empresas não financeiras listadas na B3.
+
+Objetivos específicos:
+\begin{itemize}
+    \item Extrair e organizar as notas de empréstimos, financiamentos e debêntures das DFPs anuais das empresas da amostra.
+    \item Medir a similaridade textual entre a nota de cada exercício e a do exercício anterior, usando TF-IDF e cosseno.
+    \item Testar se essa mudança textual se relaciona com o retorno anormal acumulado nos 12 meses seguintes à divulgação.
+    \item Verificar se essa relação se mantém depois de controlar por alavancagem, rentabilidade, tamanho, retorno passado e outros fundamentos.
+    \item Como análise complementar, testar se a mudança textual também se associa à revisão do consenso dos analistas depois da divulgação.
+\end{itemize}
+
+\section{Hipóteses}
+
+\textbf{H1}: as alterações textuais entre exercícios nas notas de empréstimos, financiamentos e debêntures estão associadas ao retorno anormal futuro das ações, mesmo depois de controlar pelas mudanças observáveis nos fundamentos da empresa.
+
+Optou-se por manter essa hipótese sem direção definida de propósito. Uma mudança grande no texto pode ser notícia ruim, como quebra de covenant ou dificuldade de refinanciamento, mas também pode ser notícia boa, como alongamento de prazo, redução de taxa ou quitação de dívida. Não dá para assumir de antemão que mudança sempre significa notícia ruim. Essa leitura é consistente com \citeonline{brown2011}: a motivação central da medida de modificação textual dos autores não presume o sinal da mudança econômica subjacente. O argumento é que uma seção narrativa pouco modificada é pouco informativa após ``mudanças econômicas significativas'' na empresa, sem qualificar se essas mudanças são favoráveis ou desfavoráveis, e o teste principal do estudo usa a \emph{magnitude} da reação de preço ao texto modificado, não sua direção.
+
+\textbf{H1a} (opcional, exploratória): empresas com maior mudança textual nas notas de dívida apresentam retorno anormal futuro menor, na linha do que ``Lazy Prices'' encontra para o mercado americano. Essa hipótese só se sustenta se a mudança estiver concentrada em notícia desfavorável, então é tratada como teste adicional, não como hipótese central da dissertação.
+
+\textbf{H2} (complementar): as alterações textuais nas notas de dívida também se associam à revisão do consenso de EPS dos analistas depois da divulgação.
+
+\section{Estrutura da dissertação}
+
+[PLACEHOLDER - Escrever após terminar a dissertação]
+
+% ===========================================================================
+\chapter{Referencial Teórico e Revisão de Literatura}
+% [Este capítulo consolida a Justificativa e o Embasamento teórico do pré-projeto.]
+
+\section{Assimetria informacional e divulgação corporativa}
+
+A base teórica mais geral é a existência de assimetria de informação entre os administradores, que acompanham de perto a operação da empresa, e os investidores de fora, que dependem do que é publicado. \citeonline{diamond1991} mostram que divulgação pública reduz a assimetria entre investidores informados e não informados, o que pode aumentar a liquidez e reduzir o custo de capital da empresa. \citeonline{healy2001}, numa revisão bem conhecida da literatura de disclosure, organizam as demonstrações financeiras, a auditoria, os intermediários de informação e as divulgações voluntárias como os mecanismos principais pelos quais o mercado tenta resolver esses problemas de informação e de agência.
+
+Aplicando isso a esta pesquisa, não basta a empresa divulgar o saldo total da dívida. Informação sobre vencimento, taxa, garantia, covenant e renegociação pode mudar como o mercado avalia o risco financeiro e os fluxos de caixa futuros da empresa. Se essas informações forem relevantes e ainda não estiverem refletidas nos outros números, mudanças no texto da nota podem carregar conteúdo a mais.
+
+\section{Atenção limitada e sub-reação do mercado}
+
+A hipótese tradicional de eficiência diz que os preços deveriam refletir rápido qualquer informação disponível. Mas essa incorporação depende de os investidores conseguirem localizar, ler e interpretar direito os documentos. \citeonline{hirshleifer2011} desenvolvem um modelo em que a atenção limitada dos investidores explica tanto sub-reação quanto sobre-reação a diferentes componentes da informação contábil, dependendo de quão saliente cada componente é.
+
+As notas explicativas são um ambiente bem propício para testar esse mecanismo. Elas podem conter informação relevante, mas são longas e disputam a atenção do investidor com o lucro líquido, o EBITDA, o release de resultados, a teleconferência, as projeções da administração e as recomendações de analistas. \citeonline{amelzadeh2016} dão a ligação mais direta com essa pesquisa: comparando o texto do relatório da administração (MD\&A) com o das notas explicativas em formulários 10-K americanos, encontram que a reação dos investidores é mais rápida e mais forte pro MD\&A do que pras notas, e que mudanças no texto das notas predizem retorno futuro e desempenho operacional. Isso justifica escolher as notas explicativas, e não o relatório da administração, como objeto de estudo: é justamente no pedaço mais técnico e menos lido da divulgação que a sub-reação parece mais provável de acontecer.
+
+\section{Mudança textual como sinal de informação nova}
+
+Documento financeiro tem muito texto repetido. Política contábil, descrição de contrato e trecho normativo podem ficar praticamente iguais por vários anos seguidos. Por isso, o nível absoluto de uma medida textual (por exemplo, quantas palavras negativas a nota tem) pode não separar bem texto estrutural repetitivo de informação nova do exercício.
+
+\citeonline{brown2011} comparam a seção MD\&A de cada empresa com a do ano anterior e mostram que a mudança de um ano pro outro está associada a mudanças econômicas reais e à reação dos preços. \citeonline{cohen2020}, no estudo conhecido como Lazy Prices, ampliam essa lógica pro histórico completo de documentos regulatórios (10-K e 10-Q) de empresas americanas: empresas cujos documentos mudam mais no texto têm desempenho futuro pior do que empresas cujos documentos ficam parecidos ano após ano, e isso sem reação de mercado imediata na data da divulgação, o que é consistente com desatenção dos investidores à mudança textual em si.
+
+É essa literatura que sustenta a medida usada aqui:
+\begin{align}
+    \text{Similaridade}(i,t) &= \cos\left(\mathit{TFIDF}(i,t), \mathit{TFIDF}(i,t-1)\right) \\
+    \text{Mudança textual}(i,t) &= 1 - \text{Similaridade}(i,t)
+\end{align}
+
+Um ponto importante que precisa ficar claro na dissertação: essa medida capta mudança lexical, ou seja, mudança nas palavras e expressões usadas, e não necessariamente mudança de significado. Duas frases podem dizer basicamente a mesma coisa com palavras bem diferentes, e nesse caso a similaridade de cosseno vai indicar baixa similaridade mesmo sem mudança econômica real. Por isso, optou-se por chamar essa variável de mudança textual ou mudança lexical, evitando termos como ``novidade semântica'', que sugeririam uma precisão que o método não tem.
+
+\section{Divulgação de dívida e resultados de mercado}
+
+Dois estudos internacionais ligam diretamente a qualidade textual da divulgação a resultados no mercado de dívida, o que ajuda a justificar por que a pesquisa escolheu justamente as notas de empréstimos, financiamentos e debêntures. \citeonline{ertugrul2017} mostram que relatórios anuais menos legíveis e com tom mais ambíguo se associam a cláusulas de empréstimo mais restritivas e a maior risco futuro de queda abrupta no preço da ação. \citeonline{bonsall2017} mostram que menor legibilidade das divulgações narrativas se associa a ratings de crédito menos favoráveis e a mais divergência entre agências de rating. Os dois reforçam que o pedaço da divulgação relacionado à dívida é especialmente sensível à qualidade da comunicação textual.
+
+% [Nota: um teste exploratório inicial com o documento inteiro de notas produziu um resultado
+% aparentemente mais forte que o da nota isolada, o que motivou a checagem de robustez completa
+% reportada no Capítulo 4 --- e essa checagem mostrou que nenhuma das duas unidades de análise
+% sustenta um resultado significativo sob o modelo de efeitos fixos (Tabela 4.2). A tensão
+% original entre as duas abordagens está substancialmente resolvida nos dados: ambas concordam
+% em não encontrar associação robusta. Ver reports/wholenote_alignment_review.md e
+% reports/panel_model_results.md no repositório do projeto.]
+
+No Brasil, \citeonline{schiozer2021} mostram, com coleta manual em milhares de notas de empréstimos e financiamentos de empresas da B3, que essas notas carregam informação contratual concreta sobre covenants, o que reforça que vale a pena tratar essa nota especificamente, e não o documento inteiro, como unidade de análise.
+
+\section{Panorama brasileiro e a lacuna que a pesquisa ocupa}
+
+A literatura nacional sobre notas explicativas cobre bem legibilidade \cite{borges,silva2019}, tom e crise \cite{muniz2025}, mineração de texto em notas de risco de instituições financeiras \cite{marcolin}, previsão de variação de indicador contábil a partir de texto de notas \cite{maeda2017}, conformidade com IFRS e erro de previsão de analista \cite{santos2018}, covenants em notas de dívida \cite{schiozer2021}, e, mais recentemente, um índice sofisticado de informatividade construído com modelo de linguagem em português \cite{costaneto2025}, ainda sem validação contra variável de mercado.
+
+A lacuna que esta dissertação ocupa é bem específica: nenhum desses trabalhos testa se a mudança textual ano a ano, medida de forma simples e replicável nas notas de dívida, carrega informação a mais sobre o retorno futuro das ações ou sobre a revisão das previsões dos analistas. É uma pergunta apoiada em literatura internacional já consolidada \cite{cohen2020,amelzadeh2016} e, ao mesmo tempo, uma lacuna concreta e delimitada na literatura brasileira sobre disclosure textual.
+
+% ===========================================================================
+\chapter{Metodologia}
+\label{ch:metodologia}
+% [Capítulo expandido a partir do pipeline de dados já construído no repositório do projeto.
+% Conferir números antes de finalizar, especialmente se a decisão de escopo (nota isolada vs.
+% documento inteiro) mudar. A descrição da amostra e dos dados foi movida para o Capítulo~4
+% (Descrição dos Dados e da Amostra), separando-a da metodologia propriamente dita, conforme
+% a estrutura padrão de dissertação apresentada no guia do Exame de Qualificação.]
+
+\section{Coleta e extração das notas explicativas}
+\label{sec:coleta}
+
+As notas explicativas foram coletadas diretamente do portal de dados abertos da CVM (DFP para dados anuais, ITR para trimestrais), a partir dos pacotes de arquivamento (\textit{filing packages}) de cada empresa-exercício. A nota específica de empréstimos, financiamentos e debêntures é isolada dentro do documento completo de notas explicativas (tipicamente 30--150 páginas) por meio de uma heurística baseada em metadados de layout do PDF (tamanho de fonte, negrito, posição), não por expressão regular simples sobre o texto, o que é necessário porque as mesmas palavras-chave aparecem em sumários, referências cruzadas e menções incidentais no corpo do texto, não apenas no título real da seção. A confiabilidade dessa extração e a cobertura obtida para cada fonte de texto são detalhadas no Capítulo~\ref{ch:dados}.
+
+\section{Medida de mudança textual (TF-IDF e similaridade de cosseno)}
+\label{sec:medida}
+
+Seguindo \citeonline{cohen2020} e \citeonline{brown2011}, a mudança textual é medida por 1 menos a similaridade de cosseno entre os vetores TF-IDF do texto da nota em dois exercícios consecutivos da mesma empresa, com o vocabulário e os pesos IDF ajustados uma única vez sobre todo o corpus da amostra (não empresa a empresa), para que a ponderação reflita o que é de fato boilerplate genérico do setor/mercado.
+
+% [DECISÃO PENDENTE --- apenas de enquadramento, não mais de resultado: o desenho original
+% (pré-projeto, Capítulo 2) especifica a nota de dívida isolada; um teste exploratório com o
+% documento inteiro de notas foi conduzido em paralelo e, após a checagem completa de robustez
+% (Capítulo 4), as duas unidades de análise convergem para o mesmo resultado nulo. Falta apenas
+% declarar qual delas é a medida principal da versão final, com a devida justificativa.]
+
+\section{Variável dependente: retorno anormal futuro}
+\label{sec:var_dependente}
+
+O retorno anormal é calculado como o retorno \textit{buy-and-hold} da ação nos 12 meses seguintes à data de divulgação da DFP (data real de recebimento pela CVM, não a data de fechamento do exercício), menos o retorno \textit{buy-and-hold} do Ibovespa no mesmo período.
+% [A ESPECIFICAR NA VERSÃO FINAL: esta é uma medida ajustada ao mercado, sem beta --- a versão
+% final deve considerar um modelo de mercado (CAPM) ou de fatores (Fama-French/Carhart) para o
+% cálculo definitivo do retorno anormal.]
+
+\section{Variáveis de controle}
+\label{sec:controles}
+
+As variáveis de controle utilizadas são: tamanho (logaritmo do ativo total e da receita líquida), alavancagem (passivo total sobre ativo total), rentabilidade (ROA e ROE) e retorno passado (retorno acumulado de 12 meses anterior à data-base). Tamanho, alavancagem e rentabilidade são extraídos diretamente dos dados contábeis estruturados e padronizados publicados pela CVM (não das notas em texto livre), o que garante cobertura praticamente completa na amostra. Retorno passado é calculado a partir da série de preços.
+
+\section{Modelo empírico}
+\label{sec:modelo}
+
+O modelo empírico foi construído em etapas de rigor crescente, cada uma motivada por uma ameaça específica à identificação encontrada ao longo do trabalho exploratório. Não se trata de uma sequência de tentativas, mas de um processo deliberado de teste e correção, descrito a seguir.
+
+A especificação de base é:
+\begin{equation}
+    \mathit{RetornoAnormal}_{it} = \beta \cdot \mathit{Similaridade}_{it} + \gamma' \mathit{Controles}_{it} + \varepsilon_{it}
+    \label{eq:base}
+\end{equation}
+
+em que $i$ indexa a empresa e $t$ o exercício fiscal (ou trimestre, nas especificações trimestrais); $\mathit{RetornoAnormal}_{it}$ é o retorno da ação, ajustado ao Ibovespa (\textit{buy-and-hold}, sem beta de mercado), nos 12 meses seguintes à data de divulgação da DFP referente ao exercício $t$; $\mathit{Similaridade}_{it}$ é a similaridade de cosseno TF-IDF entre o texto do exercício $t$ e do exercício $t-1$; e $\mathit{Controles}_{it}$ inclui alavancagem, ROA e o retorno dos 12 meses anteriores.
+
+\textbf{Primeira ameaça: observações repetidas por empresa.} A amostra tem, em média, entre 5 e 9 observações por empresa (múltiplos pares ano a ano da mesma companhia), que não são estatisticamente independentes entre si: choques específicos da empresa afetam simultaneamente todos os seus pares de similaridade e retorno. Estimar a equação~\ref{eq:base} por MQO ignorando essa estrutura infla artificialmente a significância. Foi exatamente esse problema que, em um teste preliminar sobre a associação entre mudança textual e saída do índice, produziu um resultado aparentemente muito significativo ($p<0{,}01$) que deixou de sê-lo assim que corrigido (Seção~\ref{sec:robustez}). A correção padrão, adotada em toda regressão reportada a partir daqui, é o agrupamento (\textit{clustering}) dos erros-padrão por empresa.
+
+\textbf{Segunda ameaça: variável omitida no nível da empresa.} Erros-padrão agrupados corrigem a inferência estatística, mas não corrigem um eventual viés no próprio coeficiente, caso alguma característica não observada e estável no tempo (qualidade de governança, do departamento jurídico ou de RI, cultura de divulgação) esteja correlacionada tanto com a similaridade textual quanto com o retorno. Para testar diretamente essa possibilidade, foi estimado um modelo de efeitos fixos em painel:
+\begin{equation}
+    \mathit{RetornoAnormal}_{it} = \beta \cdot \mathit{Similaridade}_{it} + \gamma' \mathit{Controles}_{it} + \alpha_i + \delta_t + \varepsilon_{it}
+    \label{eq:fe}
+\end{equation}
+
+em que $\alpha_i$ são efeitos fixos de empresa (absorvem qualquer característica invariante no tempo) e $\delta_t$ são efeitos fixos de ano (absorvem choques comuns a todas as empresas em um dado ano, em parte já absorvidos pelo ajuste ao Ibovespa, mas não inteiramente). Sob efeitos fixos, $\beta$ é identificado apenas pela variação dentro de cada empresa ao longo do tempo: um teste substancialmente mais exigente do que a comparação entre empresas da equação~\ref{eq:base}.
+
+\textbf{Terceira verificação: método independente para a mesma ameaça.} Como checagem adicional, à parte da família de regressões acima, foi implementado o teste de portfólio calendário longo-curto (\textit{long-short}) de \citeonline{cohen2020}: a cada mês, as empresas com divulgação recente são ordenadas por similaridade e agrupadas; a carteira comprada nas de maior similaridade e vendida nas de menor similaridade tem seu retorno mensal testado por erro-padrão de Newey-West (HAC), robusto a autocorrelação. É uma solução diferente, e consolidada na literatura de finanças, para o mesmo problema de observações repetidas, com a vantagem adicional de não impor uma forma funcional linear à relação entre similaridade e retorno.
+
+\textbf{Causalidade reversa.} A estrutura temporal do desenho reduz essa ameaça por construção: a similaridade é medida com base no texto já divulgado até a data de publicação da DFP, e a janela de retorno anormal começa estritamente após essa data: o retorno futuro não pode, mecanicamente, determinar um texto já publicado. O risco residual é de antecipação (a empresa escrever de forma diferente porque já sabe algo que o mercado ainda não precificou), que é, na verdade, a própria hipótese em teste (H1), e não uma ameaça a ela.
+
+\textbf{Escolha das variáveis de controle.} Alavancagem, ROA e o retorno dos 12 meses anteriores foram incluídos por serem determinantes padrão de retorno esperado na literatura de finanças. O tamanho (logaritmo do ativo total) foi testado e excluído do conjunto final de controles: nesta amostra, sua correlação com a similaridade textual ($r=0{,}12$) e com o retorno anormal ($r=-0{,}01$) é próxima de zero, de modo que sua inclusão ou exclusão não altera materialmente nenhum resultado reportado (Seção~\ref{sec:robustez}); trata-se de uma verificação empírica, e não de uma decisão arbitrária.
+
+\textbf{Múltiplas fontes de texto.} O mesmo modelo foi estimado separadamente para quatro operacionalizações do texto: (i) a nota de dívida isolada, em base anual e trimestral; (ii) o conjunto completo de notas explicativas; (iii) o Relatório da Administração, equivalente brasileiro ao MD\&A norte-americano; e (iv) a seção de Fatores de Risco do Formulário de Referência, equivalente ao Item 1A de um 10-K americano, exatamente a seção em que \citeonline{cohen2020} encontram o efeito mais forte. Testar múltiplas fontes de texto é, em si, parte da estratégia de identificação: se o resultado depender criticamente de qual seção do texto é usada, isso é informação relevante sobre sua robustez, e foi, de fato, o que se observou (Seções~\ref{sec:h1_resultados}--\ref{sec:robustez}).
+
+\section{Análise complementar: revisão de consenso de analistas (H2)}
+\label{sec:h2_metodologia}
+
+Como análise complementar, testa-se se a mudança textual na nota de dívida também se associa à revisão do consenso de previsões de EPS dos analistas após a divulgação, usando dados de consenso trimestral do Bloomberg.
+% [A ESPECIFICAR: definição exata da janela de revisão em torno de cada divulgação --- dados
+% já disponíveis, análise já realizada; ver Capítulo~\ref{ch:resultados}.]
+
+% ===========================================================================
+\chapter{Descrição dos Dados e da Amostra}
+\label{ch:dados}
+
+Este capítulo descreve, de forma consolidada, todas as fontes de dados usadas na dissertação (textuais e estruturadas, próprias e de terceiros), a amostra final resultante e as propriedades estatísticas das principais variáveis usadas nos capítulos seguintes. O objetivo é permitir que os resultados do Capítulo~\ref{ch:resultados} sejam interpretados com pleno conhecimento de como cada variável foi construída, qual sua cobertura e quais suas limitações conhecidas.
+
+\section{Amostra e período}
+\label{sec:amostra}
+
+A amostra compreende 111 empresas não financeiras listadas na B3: as 66 constituintes atuais do Ibovespa (não financeiras) mais 46 empresas que integraram o índice em algum momento entre 2015 e 2024 mas não integram mais, reconstruídas a partir de snapshots históricos via Internet Archive e de um export histórico de composição do Ibovespa, especificamente para corrigir o viés de sobrevivência que uma amostra baseada apenas na composição atual do índice teria. O período de análise é 2015--2024, com dados anuais (DFP) e, em caráter exploratório, dados trimestrais (ITR) para 2015--2024.
+
+Das 45 empresas históricas com par de similaridade computável, 30 ainda possuem um ticker negociável (por reorganização societária ou renomeação), permitindo o cálculo de retorno; as demais 15 saíram definitivamente do mercado, o que é, por si, uma diferença sistemática relevante para a checagem de associação com saída do índice (Seção~\ref{sec:robustez}). A Figura~\ref{fig:composicao} mostra como a amostra anual (nota de dívida) se distribui, ano a ano, entre empresas atuais e históricas.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.85\textwidth]{figures/sample_composition.png}
+    \caption{Composição da amostra por exercício fiscal}
+    \label{fig:composicao}
+    \vspace{0.2cm}
+
+    {\footnotesize Fonte: elaborada pelo autor. Total: 508 pares empresa-ano de empresas atuais e 308 de empresas históricas/deslistadas.}
+\end{figure}
+
+\section{Fontes de dados}
+\label{sec:fontes}
+
+Cinco fontes de texto e três fontes de dados estruturados foram combinadas nesta dissertação, todas descritas a seguir.
+
+\textbf{Texto (variável independente).} As cinco operacionalizações de mudança textual (Seção~\ref{sec:medida}) vêm de dois sistemas de arquivamento da CVM:
+\begin{itemize}
+    \item \textit{DFP} (Demonstrações Financeiras Padronizadas, anual): fonte da nota de dívida isolada (base anual) e do conjunto completo de notas explicativas.
+    \item \textit{ITR} (Informações Trimestrais): fonte da nota de dívida isolada em base trimestral, usada como checagem exploratória de robustez de frequência.
+    \item \textit{Formulário de Referência (FRE)}: fonte tanto do Relatório da Administração quanto da seção de Fatores de Risco (item 4.1), um tipo de arquivamento da CVM inteiramente diferente do DFP/ITR, com sua própria estrutura de pacote e, no caso de arquivamentos anteriores a 2021, um formato legado que exigiu um segundo pipeline de extração.
+\end{itemize}
+
+\textbf{Dados estruturados (variáveis de controle e de resultado).}
+\begin{itemize}
+    \item \textit{Demonstrações financeiras padronizadas da CVM} (mesmos pacotes DFP acima, mas os arquivos de dados contábeis estruturados, não as notas em texto livre): fonte de tamanho (ativo total, receita líquida), alavancagem, ROA e ROE.
+    \item \textit{Preços de mercado (Bloomberg)}: preços diários de fechamento da ação e do Ibovespa, 2014--2026, fonte do retorno anormal (variável dependente de H1) e do retorno passado (controle).
+    \item \textit{Consenso de EPS dos analistas (Bloomberg)}: série trimestral de consenso rolante, fonte da variável de revisão usada na análise complementar de H2 (Seção~\ref{sec:h2_metodologia}).
+\end{itemize}
+
+Nenhuma dessas fontes estruturadas depende da heurística de localização de seção usada para o texto (Seção~\ref{sec:coleta}): são dados tabulares já padronizados pela CVM ou pela Bloomberg, o que garante cobertura próxima de 100\% nas variáveis de controle.
+
+\section{Confiabilidade da extração e cobertura da aquisição}
+\label{sec:confiabilidade}
+
+A confiabilidade da extração e a cobertura da aquisição não são o mesmo problema, e a fonte de texto determina qual dos dois é o principal fator limitante.
+
+Para a nota de dívida isolada, o arquivamento inteiro (o documento completo de notas explicativas) já está disponível na quase totalidade dos casos: o problema é de \textit{localização precisa da seção} dentro de um documento de 30--150 páginas, dependendo de uma heurística baseada em tamanho de fonte e negrito, não de expressão regular simples, pois os mesmos termos-chave aparecem em sumários, corpo do texto e referências cruzadas. Após cinco rodadas de aprimoramento, cada uma validada contra casos de controle conhecidos para garantir ausência de regressão, a taxa de extração classificada como confiável atingiu 64,9\% da amostra completa (997 arquivos), partindo de 43,8\% na primeira rodada. Duas ideias adicionais de aprimoramento (detecção de sumário e navegação por referência cruzada, ``ver Nota N'') foram testadas empiricamente e rejeitadas, por baixo retorno (1,4\% de ganho) e alta taxa de falso positivo (apenas 26\% das correspondências corretas), respectivamente.
+
+Para o Relatório da Administração e a seção de Fatores de Risco, o problema é o inverso: uma vez que o arquivamento é obtido, a seção relevante já vem isolada como um anexo PDF dedicado dentro do pacote de envio da CVM (padrão confirmado por leitura de exemplos reais de empresas distintas antes de ser adotado como regra geral, e não assumido a priori), de modo que não há ambiguidade de localização. O fator limitante passa a ser a \textit{cobertura da aquisição}: o Relatório da Administração foi encontrado em 67,2\% dos arquivamentos possíveis (667 de 993), reprocessando pacotes de dados já baixados, sem necessidade de novos downloads; os Fatores de Risco, adquiridos por um pipeline novo que trata tanto o formato moderno quanto um formato legado pré-2021, atingiram 94,4\% de cobertura (923 de 978), consistente ao longo dos dez exercícios do período.
+
+A Figura~\ref{fig:confiabilidade} resume essas duas métricas lado a lado, deliberadamente rotuladas de forma distinta no gráfico, já que não medem a mesma coisa.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/extraction_reliability.png}
+    \caption{Confiabilidade de extração e cobertura de aquisição, por fonte de texto}
+    \label{fig:confiabilidade}
+    \vspace{0.2cm}
+
+    {\footnotesize Fonte: elaborada pelo autor a partir dos logs de extração/aquisição do projeto.}
+\end{figure}
+
+Um problema real de qualidade de dados foi identificado no cenário de conjunto completo de notas: para uma fração relevante dos arquivos, o anexo capturado era, na verdade, um documento diferente (por exemplo, um release de resultados em vez das demonstrações financeiras). O problema foi encontrado por leitura de exemplos reais de baixa similaridade, e não por inspeção de estatística agregada. Todos os resultados reportados no Capítulo~\ref{ch:resultados} usam apenas a versão já corrigida para essa contaminação.
+
+\section{Estatísticas descritivas das variáveis}
+\label{sec:estatisticas}
+
+O número de pares ano a ano com similaridade textual calculável varia por fonte de texto, refletindo tanto as diferenças de cobertura da Seção~\ref{sec:confiabilidade} quanto o fato de as fontes mais recentes (conjunto completo de notas, Relatório da Administração, Fatores de Risco) terem sido incorporadas ao corpus em etapas posteriores do projeto (Tabela~\ref{tab:sample}).
+
+\begin{table}[htbp]
+    \centering
+    \caption{Pares ano a ano por fonte de texto}
+    \label{tab:sample}
+    \begin{tabular}{@{}llrr@{}}
+        \toprule
+        \textbf{Fonte de texto} & \textbf{Frequência} & \textbf{Pares} & \textbf{Empresas} \\
+        \midrule
+        Nota de dívida isolada & Anual & 816 & 111 \\
+        Nota de dívida isolada & Trimestral & 2.572 & 112 \\
+        Conjunto completo de notas explicativas & Anual & 487 & $\sim$100 \\
+        Relatório da Administração & Anual & 562 & $\sim$100 \\
+        Fatores de Risco (FRE) & Anual & 811 & 104 \\
+        \bottomrule
+    \end{tabular}
+    \\[0.3cm]
+    {\footnotesize Fonte: elaborada pelo autor a partir de dados da CVM.}
+\end{table}
+
+Dados de mercado (preços diários da ação e do Ibovespa, 2014--2026) cobrem a totalidade das 66 empresas atuais. Dados de consenso de EPS dos analistas (Bloomberg), usados na análise complementar de H2, cobrem 64 das 66 empresas atuais e 27 das 45 históricas.
+
+A Figura~\ref{fig:similaridade} compara a distribuição da similaridade de cosseno entre as cinco fontes de texto. Um padrão salta aos olhos e é relevante para a leitura dos resultados do Capítulo~\ref{ch:resultados}: as fontes de documento inteiro ou pré-isolado por seção fixa (conjunto completo de notas, Fatores de Risco) concentram-se muito mais perto de 1 (mediana de 0,95 em ambas) do que a nota de dívida isolada (mediana de 0,69 na base anual). Ou seja, o recorte estreito da nota específica de dívida captura consistentemente mais mudança textual ano a ano do que o documento inteiro ou uma seção-padrão como Fatores de Risco, nos quais boilerplate estrutural dilui a mudança relativa.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.85\textwidth]{figures/similarity_by_source.png}
+    \caption{Distribuição da similaridade textual ano a ano, por fonte}
+    \label{fig:similaridade}
+    \vspace{0.2cm}
+
+    {\footnotesize Fonte: elaborada pelo autor. Caixas: 1º-3º quartil; linha central: mediana; pontos: valores atípicos.}
+\end{figure}
+
+A Figura~\ref{fig:retorno} mostra a distribuição do retorno anormal (variável dependente de H1, nota de dívida anual, $n=704$ pares computáveis). A distribuição é aproximadamente simétrica em torno de uma mediana ligeiramente negativa ($-8{,}2\%$), sem assimetria extrema que por si só explicaria a ausência de significância reportada no Capítulo~\ref{ch:resultados}. Um retorno anormal médio negativo é esperado em um mercado emergente com Ibovespa como referência em períodos de estresse macroeconômico (2015--2016, 2020), e não indica um problema de construção da variável.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/abnormal_return_dist.png}
+    \caption{Distribuição do retorno anormal (nota de dívida, base anual)}
+    \label{fig:retorno}
+    \vspace{0.2cm}
+
+    {\footnotesize Fonte: elaborada pelo autor a partir de preços da Bloomberg. Percentis 1 e 99 truncados para legibilidade; estatísticas calculadas sobre a amostra completa.}
+\end{figure}
+
+Por fim, a Figura~\ref{fig:controles} mostra a distribuição das quatro variáveis de controle usadas nas regressões (Seção~\ref{sec:controles}), sobre as 992 observações empresa-ano com dados contábeis estruturados disponíveis. O logaritmo do ativo total tem distribuição aproximadamente normal, como esperado; alavancagem concentra-se abaixo de 1, com uma cauda de poucas empresas em dificuldade financeira severa (passivo superior ao ativo); ROA concentra-se perto de zero com cauda esquerda mais longa (empresas com prejuízo); e o retorno passado tem assimetria positiva característica de retornos de ações.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.85\textwidth]{figures/control_variables.png}
+    \caption{Distribuição das variáveis de controle}
+    \label{fig:controles}
+    \vspace{0.2cm}
+
+    {\footnotesize Fonte: elaborada pelo autor a partir de dados contábeis estruturados da CVM. ROA e retorno passado truncados nos percentis 1/99 para legibilidade.}
+\end{figure}
+
+% ===========================================================================
+\chapter{Resultados}
+\label{ch:resultados}
+
+Este capítulo reporta os resultados obtidos até o momento deste Exame de Qualificação. Os resultados são preliminares no sentido definido pelo curso (mais de 50\% do trabalho está concluído), mas o núcleo empírico já reflete um teste amplo e reprodutível: duas hipóteses (H1 e H2), cinco fontes de texto e quatro níveis crescentes de rigor estatístico. Todo código, dado intermediário e log de execução referenciados aqui está versionado no repositório do projeto. A descrição da amostra, das fontes de dados e das estatísticas descritivas está no Capítulo~\ref{ch:dados}.
+
+\section{Resultados do modelo principal (H1)}
+\label{sec:h1_resultados}
+
+A Tabela~\ref{tab:h1} reporta o p-valor do coeficiente de Similaridade sobre o retorno anormal, para cada fonte de texto, nos quatro estágios de rigor descritos na Seção~\ref{sec:modelo}: (i) correlação simples, sem ajuste algum; (ii) regressão com erros-padrão agrupados por empresa, sem controles; (iii) a mesma regressão, com os controles de alavancagem, ROA e retorno passado; e (iv) o modelo de efeitos fixos de empresa e ano (equação~\ref{eq:fe}).
+
+\begin{table}[htbp]
+    \centering
+    \caption{Resultados do modelo principal (H1) por fonte de texto}
+    \label{tab:h1}
+    \small
+    \begin{tabular}{@{}lrrrrr@{}}
+        \toprule
+        \textbf{Fonte de texto} & \textbf{n} & \textbf{Simples} & \textbf{Agrup., s/c} & \textbf{Agrup., c/c} & \textbf{Ef. fixos} \\
+        \midrule
+        Nota de dívida (anual)       & 671   & 0,489 & 0,579 & 0,610 & 0,585 \\
+        Nota de dívida (trimestral)  & 2.138 & 0,876 & 0,899 & 0,987 & 0,826 \\
+        Conjunto completo de notas   & 411   & 0,628 & 0,641 & 0,513 & 0,660 \\
+        Relatório da Administração   & 484   & 0,153 & 0,140 & \textbf{0,031} & 0,478 \\
+        Fatores de Risco (FRE)       & 672   & 0,226 & 0,151 & 0,308 & 0,758 \\
+        \bottomrule
+    \end{tabular}
+    \\[0.3cm]
+    {\footnotesize Fonte: elaborada pelo autor. Valores são p-valores; ``Agrup., s/c'' = agrupado por empresa, sem controles; ``Agrup., c/c'' = agrupado com controles.}
+\end{table}
+
+Três padrões merecem destaque na leitura da Tabela~\ref{tab:h1}, e não apenas a coluna final. Primeiro: nota de dívida (anual e trimestral) e conjunto completo de notas não mostram associação significativa com retorno anormal em nenhum estágio. É um resultado nulo consistente, não sensível à especificação escolhida.
+
+Segundo, e mais interessante: o Relatório da Administração é a única fonte em que a significância aparece, mas apenas ao se adicionarem os controles ($p=0{,}140$ sem controles para $p=0{,}031$ com controles), e desaparece novamente sob efeitos fixos ($p=0{,}478$). Isso é informativo por si: a associação depende inteiramente da comparação entre empresas (algumas escrevem de forma mais estável e têm desempenho diferente por razões possivelmente não relacionadas ao texto), e não sobrevive à pergunta mais rigorosa: quando a similaridade de uma mesma empresa varia em relação à sua própria média, seu retorno varia também? A resposta, sob o teste mais exigente disponível neste trabalho, é não.
+
+Terceiro: o padrão não é aleatório em relação à teoria. \citeonline{cohen2020} e \citeonline{amelzadeh2016} documentam, dentro de suas próprias amostras, que o efeito de mudança textual sobre retorno futuro se concentra em texto de alta discricionariedade gerencial (Risk Factors, MD\&A) e é mais fraco em texto formulaico e auditado, como notas explicativas contábeis. O Relatório da Administração, o equivalente brasileiro ao MD\&A, é exatamente a fonte, entre as testadas, de maior discricionariedade narrativa, e é também a única em que algum sinal aparece. O resultado nulo da nota de dívida, portanto, é consistente com a literatura, não uma contradição dela. A seção de Fatores de Risco do Formulário de Referência, adquirida especificamente para testar essa previsão da literatura, é a mais alta em discricionariedade entre as quatro fontes testadas, e ainda assim não mostra associação significativa em nenhum estágio, o que pesa contra uma leitura simples de ``falta a fonte de texto certa''.
+
+\section{Testes de robustez}
+\label{sec:robustez}
+
+Dois testes de robustez adicionais foram aplicados especificamente ao único resultado que chegou a ser significativo em algum estágio, o Relatório da Administração sob regressão agrupada com controles ($p=0{,}031$, Tabela~\ref{tab:h1}), antes de ele ser interpretado como um indício real. Esse cuidado se justifica: duas outras vezes neste projeto, uma associação inicialmente significativa ($p<0{,}01$ em ambos os casos) revelou-se, após verificação, um artefato: uma contaminação de dados na coleta, em um caso, e um escore degenerado de um único ativo (exatamente 1,0 de similaridade, por texto estático de uma empresa específica), no outro.
+
+\textbf{Verificação por perturbação da amostra.} O coeficiente foi reestimado sob cinco perturbações: (i) winsorização do retorno anormal nos percentis 1/99 ($p=0{,}035$, praticamente inalterado); (ii) remoção dos 5 retornos mais extremos ($p=0{,}017$, mais significativo, não menos); (iii) remoção da única observação com similaridade próxima de zero ($p=0{,}054$, sensibilidade real, porém modesta); (iv) correlação de postos de Spearman, sem controles nem agrupamento ($\rho=0{,}108$, $p=0{,}018$); e (v) reestimação excluindo, uma de cada vez, cada uma das 77 empresas da amostra; o pior caso foi $p=0{,}068$, e o sinal do coeficiente nunca se inverteu.
+
+\textbf{Verificação por método independente: teste de portfólio.} O mesmo resultado foi testado pelo método de portfólio calendário longo-curto (Seção~\ref{sec:modelo}), primeiro em sua forma padrão e depois em uma forma ajustada por características (Tabela~\ref{tab:portfolio}).
+
+\begin{table}[htbp]
+    \centering
+    \caption{Teste de portfólio para o Relatório da Administração}
+    \label{tab:portfolio}
+    \begin{tabular}{@{}p{7cm}lr@{}}
+        \toprule
+        \textbf{Especificação} & \textbf{Melhor combinação} & \textbf{p-valor} \\
+        \midrule
+        Sem ajuste por características & 3 meses, 2 grupos & 0,428 \\
+        Ajustado por características & 12 meses, 3 grupos & 0,276 \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+Nenhuma das duas versões atinge significância convencional. É notável, porém, que a versão ajustada por características tenha um retorno longo-curto positivo em todas as nove combinações testadas, na mesma direção do coeficiente da regressão. A leitura mais honesta é que o resultado para o Relatório da Administração é condicional aos controles, real dentro do próprio método, mas não se sustenta como um padrão incondicional sob o método mais rigoroso disponível.
+
+\textbf{Checagem de associação com saída do índice.} Testou-se, para cada fonte de texto, se a similaridade textual está associada à saída subsequente da empresa do Ibovespa (Tabela~\ref{tab:delisting}).
+
+\begin{table}[htbp]
+    \centering
+    \caption{Associação entre similaridade e saída do índice, por fonte de texto}
+    \label{tab:delisting}
+    \begin{tabular}{@{}lrrr@{}}
+        \toprule
+        \textbf{Fonte de texto} & \textbf{Agrup., s/c} & \textbf{Agrup., c/ tamanho} & \textbf{Agrup., s/ tamanho} \\
+        \midrule
+        Nota de dívida (anual)      & 0,771 & 0,830 & 0,828 \\
+        Conjunto completo de notas  & 0,086 & 0,391 & 0,125 \\
+        Relatório da Administração  & \textbf{0,033} & 0,113 & 0,059 \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+O Relatório da Administração é, novamente, a única fonte com algum sinal sem controles, mas não sobrevive à adição de controles. Um teste de efeitos fixos não foi aplicado a essa checagem especificamente: a condição de deslistamento é constante dentro de cada empresa, e a transformação de efeitos fixos elimina exatamente a variação que se quer explicar. Estimar o modelo mesmo assim produz um coeficiente de ordem $10^{-17}$ (essencialmente zero de máquina) acompanhado de um p-valor de 0,0006, que pareceria altamente significativo se lido sem esse cuidado. Esse é um exemplo concreto de um teste mal especificado, identificado e descartado antes de ser reportado como resultado.
+
+\textbf{Achado adicional: Fatores de Risco e saída do índice, com desenho corrigido.} A checagem de deslistamento é, por natureza, uma pergunta no nível da empresa, não no nível do par ano a ano: o desenho tecnicamente correto é uma única observação por empresa. Construiu-se uma variável de similaridade média por empresa e estimou-se uma regressão puramente transversal ($n=110$, uma linha por empresa, sem necessidade de agrupamento) (Tabela~\ref{tab:riskfactors}).
+
+\begin{table}[htbp]
+    \centering
+    \caption{Fatores de Risco e saída do índice: desenho transversal}
+    \label{tab:riskfactors}
+    \begin{tabular}{@{}p{6.5cm}rrr@{}}
+        \toprule
+        \textbf{Especificação} & \textbf{n} & \textbf{Coef.} & \textbf{p-valor} \\
+        \midrule
+        Sem controles                              & 110 & $-1{,}19$ & 0,121 \\
+        Com controles (alav., ROA, tamanho), MQO    & 110 & $-1{,}45$ & \textbf{0,030} \\
+        Com controles, sem tamanho                  & 110 & $-1{,}01$ & 0,157 \\
+        Com controles, logit                        & 110 & $-8{,}54$ & \textbf{0,039} \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+O coeficiente é negativo e consistente com a direção esperada: maior similaridade textual média (menos mudança) associa-se a menor probabilidade de saída do índice. Diferentemente do achado do Relatório da Administração, este desenho não sofre do problema de observações repetidas em primeiro lugar, de modo que não há um teste mais rigoroso disponível capaz de invalidá-lo pela mesma via. Verificações de robustez (exclusão de cada empresa individualmente, pior caso $p=0{,}078$; e substituição da média por mediana, $p=0{,}033$) não enfraquecem o resultado.
+
+Esse é, no conjunto, o achado empírico mais bem sustentado deste projeto até o momento, mas sua interpretação deve ser precisa. Ele diz respeito à validade da medida de mudança textual como sinal de dificuldade da empresa, não à hipótese central H1 de que a mudança textual prevê retorno futuro; essa última permanece nula inclusive para os Fatores de Risco.
+
+\section{Análise complementar (H2)}
+\label{sec:h2_resultados}
+
+Como análise complementar (Seção~\ref{sec:h2_metodologia}), testou-se se a mudança textual também se associa à revisão do consenso de EPS dos analistas em torno da data de divulgação. A variável de revisão foi construída a partir da série de consenso rolante da Bloomberg (uma limitação de mensuração explicada abaixo) como a diferença percentual entre o último valor de consenso anterior à divulgação e o primeiro valor posterior, dentro de uma janela de 140 dias.
+
+A mesma progressão de rigor da Seção~\ref{sec:h1_resultados} foi aplicada às quatro fontes de texto, totalizando 56 testes. O resultado é um nulo limpo: nenhum dos 24 testes centrais atinge significância a 5\% (Tabela~\ref{tab:h2}).
+
+\begin{table}[htbp]
+    \centering
+    \caption{Resultados da análise complementar (H2) por fonte de texto}
+    \label{tab:h2}
+    \small
+    \begin{tabular}{@{}lrrrrr@{}}
+        \toprule
+        \textbf{Fonte de texto} & \textbf{n} & \textbf{Simples} & \textbf{Agrup., s/c} & \textbf{Agrup., c/c} & \textbf{Ef. fixos} \\
+        \midrule
+        Nota de dívida (anual)       & 518   & 0,585 & 0,615 & 0,605 & 0,919 \\
+        Nota de dívida (trimestral)  & 1.678 & 0,910 & 0,922 & 0,767 & 0,999 \\
+        Conjunto completo de notas   & 316   & 0,662 & 0,569 & 0,855 & 0,866 \\
+        Relatório da Administração   & 386   & 0,747 & 0,689 & 0,693 & 0,967 \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+Dos 56 testes totais (incluindo comparações de tercil e a checagem de deslistamento aplicada à revisão), 4 registraram $p<0{,}05$, um número muito próximo dos 2,8 esperados por acaso puro. Cada um dos quatro foi inspecionado individualmente: dois eram comparações de tercil com padrão não monótono, e o terceiro era a checagem de deslistamento no Relatório da Administração, que voltou a não ser significativa assim que testada com agrupamento por empresa ($p=0{,}050$ para $p=0{,}851$), uma terceira ocorrência, dentro deste mesmo projeto, do mesmo padrão identificado na Seção~\ref{sec:robustez}.
+
+Uma limitação de mensuração real, e ainda não resolvida, deve ser registrada aqui: a série de consenso da Bloomberg disponível é uma série rolante, não uma série de mesmo trimestre-alvo reamostrada ao longo do tempo. Isso significa que parte da ``revisão'' medida pode refletir a mudança normal de nível do consenso entre trimestres consecutivos, e não apenas uma revisão de sentimento. Corrigir isso exigiria uma nova extração de dados da Bloomberg, e não uma mudança de código.
+
+% ===========================================================================
+\chapter{Conclusão}
+% [A escrever por último.]
+
+% ===========================================================================
+% Referências: geradas automaticamente pelo abntex2cite a partir de references.bib
+\bibliography{references}
+
+% Apêndices (opcional)
+% \appendix
+% \chapter{Apêndice A}
+
+\end{document}
