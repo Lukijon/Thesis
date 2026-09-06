@@ -451,6 +451,51 @@ Por fim, a Figura~\ref{fig:controles} mostra a distribuição das quatro variáv
 
 Este capítulo reporta os resultados obtidos até o momento deste Exame de Qualificação. Os resultados são preliminares no sentido definido pelo curso (mais de 50\% do trabalho está concluído), mas o núcleo empírico já reflete um teste amplo e reprodutível: duas hipóteses (H1 e H2), cinco fontes de texto e quatro níveis crescentes de rigor estatístico. Todo código, dado intermediário e log de execução referenciados aqui está versionado no repositório do projeto. A descrição da amostra, das fontes de dados e das estatísticas descritivas está no Capítulo~\ref{ch:dados}.
 
+\section{Validação exploratória da medida de mudança textual}
+\label{sec:poc_validacao}
+
+Antes dos testes confirmatórios de H1 e H2 (Seções~\ref{sec:h1_resultados}--\ref{sec:h2_resultados}), uma fase exploratória extensa e iterativa (cinco rodadas de teste e correção, ao longo da construção do pipeline) verificou se a similaridade TF-IDF aplicada à nota de dívida extraída automaticamente captura de fato conteúdo textual real, e não apenas ruído de extração. Essa validação não é, em si, um teste de hipótese; é o alicerce que dá suporte à leitura dos resultados nulos das seções seguintes como uma resposta genuína sobre previsibilidade de retorno, e não como um artefato de um pipeline de dados malfeito.
+
+\textbf{Confiabilidade de extração ao longo das rodadas.} A Figura~\ref{fig:trajetoria_extracao} mostra a evolução da taxa de extração confiável (\textit{font\_heading}) sobre o corpus anual completo (997 arquivamentos), rodada a rodada. A rodada 4 estabeleceu a linha de base em 43,8\%; três aprimoramentos cumulativos, cada um motivado pela inspeção direta de casos reais de falha e validado contra controles já funcionais para garantir ausência de regressão, elevaram essa taxa para 64,9\%. O maior ganho isolado veio do reconhecimento de títulos em negrito do mesmo tamanho da fonte do corpo do texto (não apenas maiores), que resolveu sozinho 22 empresas que tinham taxa de extração confiável de 0\% em todos os anos verificados.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.85\textwidth]{figures/extraction_hardening_trajectory.png}
+    \caption{Confiabilidade de extração ao longo das rodadas de aprimoramento}
+    \label{fig:trajetoria_extracao}
+    \vspace{0.2cm}
+
+    {\footnotesize Fonte: elaborada pelo autor a partir dos logs de extração do projeto (corpus anual completo, 997 arquivamentos).}
+\end{figure}
+
+\textbf{A similaridade se comporta melhor exatamente onde a extração é confiável.} A Figura~\ref{fig:similaridade_bruta_confiavel} compara a distribuição de similaridade sobre todos os pares extraídos com a distribuição restrita aos pares em que ambos os anos tiveram extração confiável. Restringir à extração confiável desloca a média de 0,56 para 0,73 e a mediana de 0,69 para 0,84, e reduz a concentração anômala de escores próximos de 0 e exatamente 1 que caracteriza os casos de falha de extração conhecidos (ver adiante). Esse é o padrão esperado se a medida estiver de fato lendo o texto da nota; não seria o padrão esperado se a variação observada fosse puramente ruído de extração.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.9\textwidth]{figures/similarity_raw_vs_reliable.png}
+    \caption{Distribuição da similaridade textual: todos os pares vs. apenas extração confiável}
+    \label{fig:similaridade_bruta_confiavel}
+    \vspace{0.2cm}
+
+    {\footnotesize Fonte: elaborada pelo autor a partir de \textit{similarity\_results.csv} (POC, corpus anual atual, 66 empresas).}
+\end{figure}
+
+\textbf{Dois casos concretos, lidos linha a linha.} Um exemplo de similaridade genuinamente alta: WEG 2015$\to$2016 registra 0,9915, e a comparação direta do texto mostra que a estrutura da nota (cláusulas de covenant do BNDES/FINEP, categorias de taxa fixa e indexadores TJLP/UFIR) é idêntica entre os dois anos; apenas os valores de saldo e a data de referência mudam, além de uma inversão cosmética na ordem das palavras do título. É exatamente o padrão de ``boilerplate atualizado com novos números'' que a literatura de mudança textual pressupõe. Já o caso da Yduqs ilustra o oposto: quatro pares ano a ano diferentes (2015 a 2019) registram similaridade exatamente 1,0000, com texto idêntico de 648 caracteres em todos eles. A leitura do texto revela que não é a nota de dívida real, e sim um parágrafo genérico de política contábil (reconhecimento inicial de empréstimos a valor justo) que o localizador capturou por engano nesses anos específicos, quando a nota verdadeira (numerada separadamente pela empresa) ainda não estava estilizada de forma distinguível. Todo escore degenerado (exatamente 0 ou 1) inspecionado neste projeto rastreou até uma falha de extração conhecida e explicável, não até uma falha da própria medida de similaridade.
+
+\textbf{Checagem exploratória de plausibilidade econômica: saída do Ibovespa.} Como uma verificação adicional de que a medida capta algo economicamente sensato antes dos testes formais, comparou-se a similaridade textual de empresas que saíram do Ibovespa em algum momento do período (por delistagem, fusão ou reestruturação societária) com a das empresas que permaneceram, sobre pares com extração confiável em ambos os anos (Figura~\ref{fig:sobrevivencia}). A direção é a esperada pela lógica teórica do projeto (empresas em dificuldade tendem a mudar mais o texto da nota e também a sair do índice): mediana de 0,836 entre as que saíram contra 0,843 entre as que permaneceram. Sobre o universo completo e não enviesado (118 pares de empresas que saíram, 313 de empresas que permaneceram), essa diferença não atinge significância convencional (Mann-Whitney unilateral, $p=0{,}237$), um resultado consistente com a checagem de deslistamento formal reportada na Seção~\ref{sec:robustez} para a nota de dívida isolada. O valor desta checagem exploratória não está em produzir um achado citável (não produz), mas em mostrar que a direção do efeito é sempre a esperada teoricamente, mesmo quando não significativa, o que pesa contra a hipótese de que a medida é apenas ruído aleatório.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.7\textwidth]{figures/survivorship_boxplot.png}
+    \caption{Similaridade textual: empresas que saíram do Ibovespa vs. que permaneceram}
+    \label{fig:sobrevivencia}
+    \vspace{0.2cm}
+
+    {\footnotesize Fonte: elaborada pelo autor a partir de \textit{delisted\_similarity\_results.csv} (POC, pares com extração confiável em ambos os anos).}
+\end{figure}
+
+Em conjunto, essas três verificações (evolução da confiabilidade de extração, comportamento da distribuição de similaridade e plausibilidade econômica direcional) sustentam a leitura de que o pipeline de dados capta um sinal textual real e interpretável. É sobre essa base que os testes formais de H1 e H2, a seguir, devem ser lidos: o resultado nulo reportado nas próximas seções reflete ausência de previsibilidade de retorno e de revisão de consenso, não uma medida quebrada ou um dado sem sentido.
+
 \section{Resultados do modelo principal (H1)}
 \label{sec:h1_resultados}
 
