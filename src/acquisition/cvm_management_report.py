@@ -56,14 +56,25 @@ def _matches_filename(att: FilingAttachment) -> bool:
     return bool(FILENAME_RE.search(_strip_accents(att.filename)))
 
 
+CONTENT_MATCH_MAX_PAGES = 15  # see docstring below for why this isn't just 1-2
+
+
 def _first_page_matches(att: FilingAttachment) -> bool:
+    """Checks the first CONTENT_MATCH_MAX_PAGES pages, not just the first
+    two. Widened after a corpus-wide check of the ~326 "not_found"
+    company-years found that ~11% of them do have a "Relatório da
+    Administração" heading somewhere in an already-acquired attachment --
+    just past a cover page, index, or a message-from-the-board section that
+    pushes the real heading beyond page 2 (confirmed: hits cluster around
+    page 3, with a longer tail out to page 8 for reports embedded inside a
+    larger combined financial-statements bundle). No new download or
+    matching logic needed, only a wider read of the same already-cached
+    attachment.
+    """
     try:
         doc = fitz.open(stream=att.pdf_bytes, filetype="pdf")
-        first_page_text = doc[0].get_text() if len(doc) > 0 else ""
-        # a couple of pages, in case page 1 is a blank cover
-        if len(doc) > 1:
-            first_page_text += doc[1].get_text()
-        return bool(CONTENT_RE.search(first_page_text))
+        text = "".join(p.get_text() for p in doc[:CONTENT_MATCH_MAX_PAGES])
+        return bool(CONTENT_RE.search(text))
     except Exception:
         return False
 

@@ -1,36 +1,36 @@
 scenario,n_pairs,n_companies,test,stat,p_value,note
-narrow_annual__all,528,88,signed_pearson,-0.023791195918664944,0.5854360588517865,
-narrow_annual__all,528,88,signed_spearman,0.045623896759290676,0.2953682357000791,
-narrow_annual__all,528,88,magnitude_pearson,-0.06401580803478224,0.14183493241724027,
-narrow_annual__all,528,88,clustered_ols_no_controls,-0.17150639747029445,0.6152653350994886,
-narrow_annual__all,518,88,clustered_ols_with_controls,-0.1713946180551995,0.6225536532690814,
-narrow_annual__all,528,88,tercile_kruskal,1.0646471074642498,0.5872389020846451,low=+0.0479 mid=-0.1783 high=-0.0118
+narrow_annual__all,528,88,signed_pearson,-0.03252282138833959,0.4558222655605167,
+narrow_annual__all,528,88,signed_spearman,0.01219952248756294,0.7797309090218052,
+narrow_annual__all,528,88,magnitude_pearson,-0.06823637888259573,0.11733403261922083,
+narrow_annual__all,528,88,clustered_ols_no_controls,-0.23841326715658478,0.5025203649057779,
+narrow_annual__all,518,88,clustered_ols_with_controls,-0.2591948364703421,0.4742826927467202,
+narrow_annual__all,528,88,tercile_kruskal,0.2665456062592894,0.8752262950655205,low=+0.0934 mid=-0.1832 high=-0.0523
 narrow_annual__all,528,88,delisting_mannwhitney_revision,0.1599220134150291,0.29624055481019473,dropped_mean=+0.0765 stayed_mean=-0.0834 n_dropped=119 n_stayed=409
 narrow_annual__all,528,88,delisting_clustered_revision,0.15992201341502882,0.6547818063527058,
-narrow_annual__reliable_only,314,74,signed_pearson,0.010683784824467982,0.8504318099671095,
-narrow_annual__reliable_only,314,74,signed_spearman,0.07401438560994028,0.19083857630414236,
-narrow_annual__reliable_only,314,74,magnitude_pearson,0.0002195015408223422,0.9969089512196616,
-narrow_annual__reliable_only,314,74,clustered_ols_no_controls,0.07774349679337808,0.8033216837461885,
-narrow_annual__reliable_only,309,74,clustered_ols_with_controls,-0.06301975703245871,0.8479924494715281,
-narrow_annual__reliable_only,314,74,tercile_kruskal,2.3223903403292003,0.31311173535983094,low=-0.3402 mid=+0.1372 high=-0.1566
-narrow_annual__reliable_only,314,74,delisting_mannwhitney_revision,-0.1617950608725309,0.2897389407985371,dropped_mean=-0.2505 stayed_mean=-0.0887 n_dropped=62 n_stayed=252
-narrow_annual__reliable_only,314,74,delisting_clustered_revision,-0.16179506087253112,0.6351656373844118,
-narrow_quarterly__all,1704,90,signed_pearson,0.0027419397211729812,0.9099487766589751,
-narrow_quarterly__all,1704,90,signed_spearman,0.017370591058691678,0.4736346472507209,
-narrow_quarterly__all,1704,90,magnitude_pearson,0.03681113927781656,0.12877597942057498,
-narrow_quarterly__all,1704,90,clustered_ols_no_controls,0.029116446399082785,0.9224472556703374,
-narrow_quarterly__all,1678,90,clustered_ols_with_controls,-0.07512471289423016,0.7863837778790692,
-narrow_quarterly__all,1704,90,tercile_kruskal,0.6023247017615604,0.7399576302213429,low=+0.2197 mid=+0.3971 high=+0.0792
+narrow_annual__reliable_only,344,78,signed_pearson,-0.019935171375632093,0.7125502659325249,
+narrow_annual__reliable_only,344,78,signed_spearman,0.043817780352761876,0.41786554426237066,
+narrow_annual__reliable_only,344,78,magnitude_pearson,-0.015922276574981672,0.7685607603833969,
+narrow_annual__reliable_only,344,78,clustered_ols_no_controls,-0.140726324022168,0.6471174628085365,
+narrow_annual__reliable_only,339,78,clustered_ols_with_controls,-0.22270749508692078,0.4832522695431297,
+narrow_annual__reliable_only,344,78,tercile_kruskal,1.1189598614557141,0.571506209392328,low=-0.0415 mid=-0.0852 high=-0.1518
+narrow_annual__reliable_only,344,78,delisting_mannwhitney_revision,0.05290351110135376,0.13788972226333382,dropped_mean=-0.0513 stayed_mean=-0.1042 n_dropped=74 n_stayed=270
+narrow_annual__reliable_only,344,78,delisting_clustered_revision,0.05290351110135387,0.8715399750299162,
+narrow_quarterly__all,1704,90,signed_pearson,0.005096941879029867,0.8334753970504504,
+narrow_quarterly__all,1704,90,signed_spearman,0.01802478727391833,0.45713711841455174,
+narrow_quarterly__all,1704,90,magnitude_pearson,0.03179228678617241,0.18960809593770075,
+narrow_quarterly__all,1704,90,clustered_ols_no_controls,0.0548986419278403,0.8505907480594035,
+narrow_quarterly__all,1678,90,clustered_ols_with_controls,-0.0649502942423506,0.8083490140623216,
+narrow_quarterly__all,1704,90,tercile_kruskal,0.5572756573214309,0.7568139499079503,low=+0.2326 mid=+0.3802 high=+0.0835
 narrow_quarterly__all,1704,90,delisting_mannwhitney_revision,-0.10884647449701604,0.5077128885246358,dropped_mean=+0.1508 stayed_mean=+0.2597 n_dropped=432 n_stayed=1272
 narrow_quarterly__all,1704,90,delisting_clustered_revision,-0.1088464744970166,0.7130621274168195,
-narrow_quarterly__reliable_only,884,76,signed_pearson,0.04417835498128962,0.1894192342569388,
-narrow_quarterly__reliable_only,884,76,signed_spearman,0.04853248178422876,0.14936378466178507,
-narrow_quarterly__reliable_only,884,76,magnitude_pearson,0.02107171459955581,0.5315182210786759,
-narrow_quarterly__reliable_only,884,76,clustered_ols_no_controls,0.6278078757823256,0.18572680952330034,
-narrow_quarterly__reliable_only,868,76,clustered_ols_with_controls,0.4192414585121828,0.29298224502954673,
-narrow_quarterly__reliable_only,884,76,tercile_kruskal,15.357649751627553,0.0004625180957580808,low=+0.0788 mid=+0.4344 high=+0.1299
-narrow_quarterly__reliable_only,884,76,delisting_mannwhitney_revision,-0.6135485426882104,0.31384549767857384,dropped_mean=-0.2835 stayed_mean=+0.3300 n_dropped=167 n_stayed=717
-narrow_quarterly__reliable_only,884,76,delisting_clustered_revision,-0.6135485426882112,0.33952277179515467,
+narrow_quarterly__reliable_only,999,81,signed_pearson,0.037742204083846306,0.23332103309095234,
+narrow_quarterly__reliable_only,999,81,signed_spearman,0.04565018655770869,0.1493562820291666,
+narrow_quarterly__reliable_only,999,81,magnitude_pearson,0.021312847469748895,0.5010316538308764,
+narrow_quarterly__reliable_only,999,81,clustered_ols_no_controls,0.5091760879569721,0.23997829245307312,
+narrow_quarterly__reliable_only,982,81,clustered_ols_with_controls,0.3530591704554064,0.3462030143268675,
+narrow_quarterly__reliable_only,999,81,tercile_kruskal,21.42875431500482,2.2223124712771015e-05,low=-0.0227 mid=+0.5793 high=+0.1570
+narrow_quarterly__reliable_only,999,81,delisting_mannwhitney_revision,-0.486276943300278,0.25149596149386444,dropped_mean=-0.1438 stayed_mean=+0.3425 n_dropped=214 n_stayed=785
+narrow_quarterly__reliable_only,999,81,delisting_clustered_revision,-0.48627694330027765,0.34688582549260005,
 whole_notes__all,323,73,signed_pearson,-0.0244241351720367,0.6618800683989567,
 whole_notes__all,323,73,signed_spearman,0.0247486012531846,0.6576714696274726,
 whole_notes__all,323,73,magnitude_pearson,0.003094004569757919,0.9558272639213917,

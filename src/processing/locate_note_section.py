@@ -135,6 +135,72 @@ NUMBERED_PREFIX_RE = re.compile(r"^\(?\d{1,3}\)?[.\-–—]\s")
 ENABLE_SAME_SIZE_HEADING = True
 
 
+def _signal_strength(line: Line, body_size: float) -> int:
+    """0 for a candidate backed by a specific structural signal (elevated
+    size, ALL-CAPS, or a numbered prefix); 1 for a candidate that only
+    qualifies via the bare-purity same-size fallback below (bold, zero
+    impurity, no case or number signal at all). Used purely as a tie-break
+    layer ahead of size/impurity/document-order: a bolded, unnumbered,
+    non-caps mention of "Empréstimos e financiamentos" can legitimately
+    appear earlier in the document as a subsection of the accounting-
+    policies note (describing how loans are measured, not the real note
+    with balances) -- structurally indistinguishable from the real heading
+    on size and impurity alone, but the real heading almost always carries
+    a numbered prefix or ALL-CAPS styling that the policy-note mention
+    doesn't, so preferring tier-0 candidates on a tie keeps the fallback
+    purity rule from letting an earlier accounting-policy mention beat the
+    genuine, later, more strongly-signaled heading. Confirmed against a
+    real regression case (company 011312, 2017) before adding this.
+    """
+    if line.size >= body_size + SIZE_MARGIN:
+        return 0
+    if line.text.isupper() or NUMBERED_PREFIX_RE.match(line.text.strip()):
+        return 0
+    return 1
+
+
+def _has_note_number_anchor(lines: list[Line], idx: int) -> bool:
+    """True when `lines[idx]` is immediately preceded by a bare top-level
+    note number on its own line, at the same bold/size style (e.g. company
+    012793: bold "23" directly above bold "Empréstimos e financiamentos").
+    This is the same anchor `locate_note_section` itself uses to switch on
+    the precise number-tracking boundary search, so a candidate that has it
+    is materially more trustworthy than one that doesn't -- confirmed
+    against a real case (012793, 2015): the same zero-impurity phrase
+    appears twice, once inside the accounting-policies note (no anchor) and
+    once as the real, numbered note with actual balance data (anchored);
+    without this check the two are indistinguishable ties and the earlier,
+    wrong one wins on document order alone.
+    """
+    if idx == 0:
+        return False
+    prev = lines[idx - 1]
+    return bool(prev.bold and prev.size == lines[idx].size and _bare_note_number(prev.text) is not None)
+
+
+def _is_wrapped_continuation(lines: list[Line], idx: int) -> bool:
+    """True when `lines[idx]` is plausibly one word of a longer phrase that
+    landed on its own PDF line (an unusual but real layout quirk: company
+    018627's filings put each word of a justified/spaced bold paragraph on
+    its own line -- "d) Os" / "empréstimos," / "financiamentos," /
+    "debêntures" / "e" / "arrendamento" / "mercantil", one word per line).
+    Without this check, the bare-purity same-size rule below can pick
+    "debêntures" alone as a heading candidate, since a single keyword word
+    has zero impurity -- but it's a sentence fragment, not a title.
+
+    The signal is the *preceding* line: if it's bold and the same size (the
+    same visual run) and ends in a comma, this line is a continuation of an
+    enumeration, not a fresh heading start. This does not reject a genuine
+    heading preceded by its own bare note number on its own line (e.g.
+    Braskem: bold "17" immediately before bold "Debêntures", both size 11)
+    -- a bare number doesn't end in a comma, so it doesn't trip this check.
+    """
+    if idx == 0:
+        return False
+    prev = lines[idx - 1]
+    return prev.bold and prev.size == lines[idx].size and prev.text.rstrip().endswith(",")
+
+
 def _is_heading_shaped(line: Line, body_size: float, boilerplate: set[str]) -> bool:
     base = (
         len(line.text) < MAX_HEADING_LEN
@@ -158,6 +224,36 @@ def _is_heading_shaped(line: Line, body_size: float, boilerplate: set[str]) -> b
     # Not bold on its own is too weak a signal (way too much body text
     # qualifies), so this only fires when BOTH caps and numbering agree.
     if (not line.bold) and is_upper and has_number_prefix:
+        return True
+    # Found empirically (companies 004820/Braskem, 012793, 014443, 014761,
+    # 017450 and others, round-6 corpus-wide diagnostic): some filers style
+    # the heading in titlecase, bold, same size as body, with no numbering
+    # at all ("Debêntures", "Empréstimos e financiamentos") or with a
+    # decimal-style subsection number the simple NUMBERED_PREFIX_RE doesn't
+    # match ("3.11 Empréstimos e financiamentos", "4.6 Emissão de
+    # debêntures"). Neither caps nor a recognizable number prefix is
+    # available here, so the safety net is *purity*: a bold line containing
+    # only the debt keywords and connector words (zero impurity) is
+    # trustworthy, because every observed false-positive candidate of this
+    # shape is a cash-flow-statement/debt-movement-table caption that
+    # always carries an extra leading verb/noun and therefore fails purity
+    # ("Recebimento de empréstimos e financiamentos", "Pagamentos de...",
+    # "Amortização de... - Principal", "Encargos sobre... captados").
+    # Digits aren't counted as impurity (the word-extraction regex ignores
+    # them), so this also transparently covers the decimal-numbered case
+    # without a separate numbering pattern.
+    # A genuine heading also never opens with a lowercase letter (found
+    # empirically: company 018627's "debêntures" and company 024295's "e
+    # Debêntures)" are both bold, zero-impurity, one-word-per-PDF-line
+    # fragments of a wrapped table header/sentence -- "financiamentos,
+    # debêntures" or "Capitais (CRI's e Debêntures)" split across separate
+    # Line objects -- and both happen to start with a lowercase connector
+    # or keyword-lowercase fragment precisely because they're mid-phrase,
+    # not a title start). _is_wrapped_continuation below catches some of
+    # these via the preceding line; this catches the rest directly and more
+    # generally, since a real title is never lowercase-initial in Portuguese.
+    starts_lowercase = bool(re.match(r"^[a-zà-ü]", line.text.strip()))
+    if line.bold and not starts_lowercase and _heading_impurity(line.text) == 0:
         return True
     return False
 
@@ -275,6 +371,7 @@ class NoteSection:
 
 
 FALLBACK_MAX_LINES = 500  # cap for the no-formatting fallback, which has no structural end signal
+WEAK_SIGNAL_MAX_LINES = 3200  # cap for a weak-signal start with no note-number anchor; see its use site
 
 
 def _next_heading_boundary(
@@ -327,22 +424,60 @@ def locate_note_section(lines: list[Line], bookmarks: list[tuple[int, str, int]]
     boilerplate = _repeated_lines(lines)
     toc_region = _toc_region_lines(lines)
     visual_candidates = [
-        i for i, l in enumerate(lines) if i not in toc_region and _is_debt_heading_candidate(l, body_size, boilerplate)
+        i
+        for i, l in enumerate(lines)
+        if i not in toc_region
+        and _is_debt_heading_candidate(l, body_size, boilerplate)
+        # Only the weak (bare-purity, no case/number signal) candidates need
+        # the wrapped-continuation check -- a candidate backed by a real
+        # structural signal (elevated size, caps, or numbering) is already
+        # trustworthy regardless of what precedes it.
+        and not (_signal_strength(l, body_size) == 1 and _is_wrapped_continuation(lines, i))
     ]
 
     if visual_candidates:
-        # Size is the primary signal (a distinctly larger font reliably marks
-        # the top-level note across every filer checked); impurity only
-        # breaks ties between same-sized candidates. Prioritizing impurity
-        # first was wrong: it penalized legitimate compound titles like
-        # Vale's "Empréstimos, financiamentos e caixa e equivalentes de
-        # caixa" (a combined net-debt note) for mentioning "caixa", handing
-        # the match to an unrelated smaller-font subsection instead.
-        start_idx = min(visual_candidates, key=lambda i: (-lines[i].size, _heading_impurity(lines[i].text)))
+        # _signal_strength comes first, ahead of size: a candidate backed by
+        # a real structural signal (elevated size, caps, or numbering) must
+        # always beat a bare-purity same-size candidate, regardless of which
+        # one has the larger font. Found empirically (company 017671): a
+        # decimal-numbered *subsection* ("21.3 Empréstimos e financiamentos",
+        # breaking a combined note into parts) can be styled at an even
+        # larger size than its own parent note's numbered heading ("21.
+        # EMPRÉSTIMOS E FINANCIAMENTOS, DEBÊNTURES, ARRENDAMENTOS...") --
+        # sorting by size first let the subsection win, which starts the
+        # section deep inside the real note and breaks the end-of-note
+        # boundary search entirely (observed: a 142,000-character capture
+        # instead of a few thousand, because the boundary search no longer
+        # has the parent note's own number to search for).
+        # Next, a candidate anchored by a preceding bare note number beats
+        # one without: found empirically (company 012793) that the exact
+        # same zero-impurity phrase can appear twice -- once inside the
+        # accounting-policies note (no anchor), once as the real, numbered
+        # note with actual balance data (anchored) -- an otherwise perfect
+        # tie that document order alone would resolve in favor of the
+        # wrong, earlier one.
+        # Within the same tier, size is still primary (a distinctly larger
+        # font reliably marks the top-level note among same-tier candidates)
+        # and impurity only breaks a same-size tie. Prioritizing impurity
+        # over size was wrong for the same reason before: it penalized
+        # legitimate compound titles like Vale's "Empréstimos,
+        # financiamentos e caixa e equivalentes de caixa" (a combined
+        # net-debt note) for mentioning "caixa", handing the match to an
+        # unrelated smaller-font subsection instead.
+        start_idx = min(
+            visual_candidates,
+            key=lambda i: (
+                _signal_strength(lines[i], body_size),
+                0 if _has_note_number_anchor(lines, i) else 1,
+                -lines[i].size,
+                _heading_impurity(lines[i].text),
+            ),
+        )
         diagnostic = "font_heading"
         heading_size = lines[start_idx].size
 
         title_idx = start_idx
+        heading_signal_strength = _signal_strength(lines[title_idx], body_size)
         note_number = None
         if start_idx > 0 and start_idx - 1 not in toc_region and lines[start_idx - 1].size == heading_size and lines[start_idx - 1].bold:
             note_number = _bare_note_number(lines[start_idx - 1].text)
@@ -375,6 +510,28 @@ def locate_note_section(lines: list[Line], bookmarks: list[tuple[int, str, int]]
             if _debt_keyword_score(lines[title_idx].text) == 0:
                 break
             end_idx += 1  # step past this continuation heading, keep searching for the real end
+
+        # Safety net for the combination of two weak signals: no bare note
+        # number to anchor the boundary search on (note_number is None) AND
+        # the heading itself has no case/number signal either (see
+        # _signal_strength) -- only then does _next_heading_boundary fall
+        # back to its least precise check ("next same-size line with zero
+        # debt keywords"), which can occasionally be an accounting-policy
+        # note mentioning the same phrase (e.g. "Os empréstimos e
+        # financiamentos são reconhecidos inicialmente pelo valor justo...")
+        # rather than the real note. When that happens, the boundary search
+        # has nothing reliable to stop at and can run for thousands of lines
+        # through unrelated accounting-policy topics (confirmed on companies
+        # 012793 and 014443: 90,000-210,000-character captures, vs. a few
+        # thousand for a real note). A heading with a bare note number, or
+        # with its own case/number signal, never needs this cap: either
+        # anchors the boundary search precisely, which is exactly why
+        # runaway captures were never observed for those. WEAK_SIGNAL_MAX_LINES
+        # is set above the longest confirmed-genuine weak-signal note found
+        # in this corpus (2,928 lines, company 021091) with headroom, not an
+        # arbitrary round number.
+        if note_number is None and heading_signal_strength == 1:
+            end_idx = min(end_idx, start_idx + WEAK_SIGNAL_MAX_LINES)
     else:
         # No bold/sized heading found at all (e.g. no font metadata survived
         # extraction, or the note simply isn't styled distinctly) -- best

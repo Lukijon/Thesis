@@ -2,8 +2,8 @@
   "cd_cvm": "010456",
   "name": "Alpargatas S.A.",
   "quarter": "2024Q2",
-  "diagnostic": "regex_only",
-  "heading": "Pagamento de empréstimos e financiamentos – Principal",
+  "diagnostic": "font_heading",
+  "heading": "Empréstimos e Financiamentos",
   "n_total_lines": 2593,
-  "text": "Pagamento de empréstimos e financiamentos – Principal\n(163,8)\n(27,3)\nPagamento de juros sobre o capital próprio e dividendos\n(0,0)\n(0,0)\nPagamento de principal de arrendamento mercantil - IFRS 16\n(22,6)\n(17,6)\nVenda de ações em tesouraria\n5,3\nEfeito de variação cambial sobre caixa e equivalentes de caixa\n11,3\n(3,7)\nAumento (redução) de caixa e equivalentes de caixa\n353,1 (233,2)\nSaldo inicial do caixa e equivalentes de caixa\n922,5\n647,5\nSaldo final do caixa e equivalentes de caixa\n1.275,6\n414,3\n23\nRELAÇÕES COM INVESTIDORES\nri@alpargatas.com"
+  "text": "Empréstimos e Financiamentos\n1.416,3\n1.351,1\nCurto prazo\n222,7\n333,6\nLongo prazo\n1.193,5\n1.017,5\nCaixa e Aplicações\n1.288,1\n425,5\nCaixa e Equivalentes de caixa\n167,3\n91,7\nAplicações de curto prazo\n1.108,3\n322,6\nAplicações de longo prazo\n12,5\n11,2\nDívida Líquida\n128,2\n925,6\nEBITDA normalizado (LTM)\n323,8\n407,1\nDívida líquida/EBITDA\n0,4\n2,3\nCP\nLP\n2%\n1%\n+1p.p.\nLTM\nLTM\n18"
 }

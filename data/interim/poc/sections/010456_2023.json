@@ -2,8 +2,8 @@
   "cd_cvm": "010456",
   "name": "Alpargatas S.A.",
   "year": 2023,
-  "diagnostic": "regex_only",
-  "heading": "Pagamento de empréstimos e financiamentos – Principal",
+  "diagnostic": "font_heading",
+  "heading": "Empréstimos e Financiamentos",
   "n_total_lines": 2632,
-  "text": "Pagamento de empréstimos e financiamentos – Principal\n(260,3)\n(413,7)\nPagamento de juros sobre o capital próprio e dividendos\n(0,0)\n(89,3)\nPagamento de principal de arrendamento mercantil - IFRS 16\n(36,0)\n(31,2)\nVenda de ações em tesouraria\n9,0\nOferta restrita de ações, líquida dos custos da oferta\n2.451,2\nEfeito de variação cambial sobre caixa e equivalentes de caixa\n(1,6)\n(10,8)\nAumento de caixa e equivalentes de caixa\n275,0\n64,3\nSaldo inicial do caixa e equivalentes de caixa\n647,5\n583,2\nSaldo final do caixa e equivalentes de caixa\n922,5\n647,5\nDFC (em R$ milhões)\n24"
+  "text": "Empréstimos e Financiamentos\n1.485,6\n1.275,3\nCurto prazo\n127,4\n256,2\nLongo prazo\n1.358,2\n1.019,1\nCaixa e Aplicações\n934,4\n663,0\nCaixa e Equivalentes de caixa\n138,5\n59,0\nAplicações de curto Prazo\n784,0\n588,6\nAplicações de longo Prazo\n11,9\n15,4\nDívida Líquida\n551,2\n612,3\nEBITDA normalizado (LTM)\n214,8\n689,1\nDívida líquida/EBITDA\nnormalizado\n2,6\n0,9\nCP\nLP\n1%\n7%\n-6p.p.\nDez-22\nFY\nDez-23\nFY\n20\n256,2\n1.019,1"
 }

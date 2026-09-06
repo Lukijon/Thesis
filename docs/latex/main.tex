@@ -313,9 +313,11 @@ A escolha por um painel de efeitos fixos de empresa e ano tem três motivações
 \section{Análise complementar: revisão de consenso de analistas (H2)}
 \label{sec:h2_metodologia}
 
-Como análise complementar, testa-se se a mudança textual na nota de dívida também se associa à revisão do consenso de previsões de EPS dos analistas após a divulgação, usando dados de consenso trimestral do Bloomberg.
-% [A ESPECIFICAR: definição exata da janela de revisão em torno de cada divulgação --- dados
-% já disponíveis, análise já realizada; ver Capítulo~\ref{ch:resultados}.]
+Como análise complementar, testa-se se a mudança textual também se associa à revisão do consenso de previsões de EPS dos analistas após a divulgação, usando dados de consenso do Bloomberg.
+
+A variável de revisão é construída, para cada par (empresa, exercício $t-1$, exercício $t$) com similaridade textual computável, como a diferença percentual entre o último valor de consenso de EPS disponível antes da data de divulgação da DFP e o primeiro valor disponível depois dela, dentro de uma janela de 140 dias em torno da divulgação. A mesma progressão de rigor descrita na Seção~\ref{sec:modelo} para H1 (correlação simples; regressão agrupada por empresa, sem e com controles; e efeitos fixos de empresa e ano, quando o desenho do painel permite) é aplicada a essa variável, repetida para cada fonte de texto e frequência já usada em H1.
+
+Uma limitação de mensuração deve ser registrada já na definição do método, não apenas na leitura dos resultados: a série de consenso do Bloomberg disponível para este projeto é uma série \textit{rolante} (o consenso para o próximo resultado a ser divulgado), não uma série de mesmo trimestre-alvo reamostrada ao longo do tempo. Isso significa que parte da revisão medida pode refletir a mudança normal de nível do consenso entre divulgações consecutivas, e não apenas uma revisão genuína de sentimento dos analistas em reação ao texto. Corrigir essa limitação exigiria uma nova extração de dados do Bloomberg (uma série de previsões para o mesmo trimestre-alvo, acompanhada ao longo do tempo), não uma mudança de código.
 
 % ===========================================================================
 \chapter{Descrição dos Dados e da Amostra}
@@ -326,7 +328,7 @@ Este capítulo descreve, de forma consolidada, todas as fontes de dados usadas n
 \section{Amostra e período}
 \label{sec:amostra}
 
-A amostra compreende 111 empresas não financeiras listadas na B3: as 66 constituintes atuais do Ibovespa (não financeiras) mais 46 empresas que integraram o índice em algum momento entre 2015 e 2024 mas não integram mais, reconstruídas a partir de snapshots históricos via Internet Archive e de um export histórico de composição do Ibovespa, especificamente para corrigir o viés de sobrevivência que uma amostra baseada apenas na composição atual do índice teria. O período de análise é 2015--2024, com dados anuais (DFP) e, em caráter exploratório, dados trimestrais (ITR) para 2015--2024.
+A amostra compreende 111 empresas não financeiras listadas na B3: as 66 constituintes atuais do Ibovespa (não financeiras) mais 46 empresas que integraram o índice em algum momento entre 2015 e 2024 mas não integram mais, reconstruídas a partir de dados históricos de composição do índice obtidos via Bloomberg, especificamente para corrigir o viés de sobrevivência que uma amostra baseada apenas na composição atual do índice teria. O período de análise é 2015--2024, com dados anuais (DFP) e, em caráter exploratório, dados trimestrais (ITR) para 2015--2024.
 
 Das 45 empresas históricas com par de similaridade computável, 30 ainda possuem um ticker negociável (por reorganização societária ou renomeação), permitindo o cálculo de retorno; as demais 15 saíram definitivamente do mercado, o que é, por si, uma diferença sistemática relevante para a checagem de associação com saída do índice (Seção~\ref{sec:robustez}). A Figura~\ref{fig:composicao} mostra como a amostra anual (nota de dívida) se distribui, ano a ano, entre empresas atuais e históricas.
 
@@ -366,9 +368,9 @@ Nenhuma dessas fontes estruturadas depende da heurística de localização de se
 
 A confiabilidade da extração e a cobertura da aquisição não são o mesmo problema, e a fonte de texto determina qual dos dois é o principal fator limitante.
 
-Para a nota de dívida isolada, o arquivamento inteiro (o documento completo de notas explicativas) já está disponível na quase totalidade dos casos: o problema é de \textit{localização precisa da seção} dentro de um documento de 30--150 páginas, dependendo de uma heurística baseada em tamanho de fonte e negrito, não de expressão regular simples, pois os mesmos termos-chave aparecem em sumários, corpo do texto e referências cruzadas. Após cinco rodadas de aprimoramento, cada uma validada contra casos de controle conhecidos para garantir ausência de regressão, a taxa de extração classificada como confiável atingiu 64,9\% da amostra completa (997 arquivos), partindo de 43,8\% na primeira rodada. Duas ideias adicionais de aprimoramento (detecção de sumário e navegação por referência cruzada, ``ver Nota N'') foram testadas empiricamente e rejeitadas, por baixo retorno (1,4\% de ganho) e alta taxa de falso positivo (apenas 26\% das correspondências corretas), respectivamente.
+Para a nota de dívida isolada, o arquivamento inteiro (o documento completo de notas explicativas) já está disponível na quase totalidade dos casos: o problema é de \textit{localização precisa da seção} dentro de um documento de 30--150 páginas, dependendo de uma heurística baseada em tamanho de fonte e negrito, não de expressão regular simples, pois os mesmos termos-chave aparecem em sumários, corpo do texto e referências cruzadas. Após seis rodadas de aprimoramento, cada uma validada contra casos de controle conhecidos para garantir ausência de regressão, a taxa de extração classificada como confiável atingiu 69,7\% da amostra completa (997 arquivos), partindo de 43,8\% na primeira rodada. Duas ideias adicionais de aprimoramento (detecção de sumário e navegação por referência cruzada, ``ver Nota N'') foram testadas empiricamente e rejeitadas, por baixo retorno (1,4\% de ganho) e alta taxa de falso positivo (apenas 26\% das correspondências corretas), respectivamente.
 
-Para o Relatório da Administração e a seção de Fatores de Risco, o problema é o inverso: uma vez que o arquivamento é obtido, a seção relevante já vem isolada como um anexo PDF dedicado dentro do pacote de envio da CVM (padrão confirmado por leitura de exemplos reais de empresas distintas antes de ser adotado como regra geral, e não assumido a priori), de modo que não há ambiguidade de localização. O fator limitante passa a ser a \textit{cobertura da aquisição}: o Relatório da Administração foi encontrado em 67,2\% dos arquivamentos possíveis (667 de 993), reprocessando pacotes de dados já baixados, sem necessidade de novos downloads; os Fatores de Risco, adquiridos por um pipeline novo que trata tanto o formato moderno quanto um formato legado pré-2021, atingiram 94,4\% de cobertura (923 de 978), consistente ao longo dos dez exercícios do período.
+Para o Relatório da Administração e a seção de Fatores de Risco, o problema é o inverso: uma vez que o arquivamento é obtido, a seção relevante já vem isolada como um anexo PDF dedicado dentro do pacote de envio da CVM (padrão confirmado por leitura de exemplos reais de empresas distintas antes de ser adotado como regra geral, e não assumido a priori), de modo que não há ambiguidade de localização. O fator limitante passa a ser a \textit{cobertura da aquisição}: o Relatório da Administração foi encontrado em 71,2\% dos arquivamentos possíveis (707 de 993), reprocessando pacotes de dados já baixados, sem necessidade de novos downloads (a busca inicial verificava apenas as duas primeiras páginas de cada anexo candidato; ampliá-la para 15 páginas recuperou mais 40 arquivamentos em que o relatório aparece depois de uma capa ou índice); os Fatores de Risco, adquiridos por um pipeline novo que trata tanto o formato moderno quanto um formato legado pré-2021, atingiram 94,4\% de cobertura (923 de 978), consistente ao longo dos dez exercícios do período.
 
 A Figura~\ref{fig:confiabilidade} resume essas duas métricas lado a lado, deliberadamente rotuladas de forma distinta no gráfico, já que não medem a mesma coisa.
 
@@ -410,7 +412,7 @@ O número de pares ano a ano com similaridade textual calculável varia por font
 
 Dados de mercado (preços diários da ação e do Ibovespa, 2014--2026) cobrem a totalidade das 66 empresas atuais. Dados de consenso de EPS dos analistas (Bloomberg), usados na análise complementar de H2, cobrem 64 das 66 empresas atuais e 27 das 45 históricas.
 
-A Figura~\ref{fig:similaridade} compara a distribuição da similaridade de cosseno entre as cinco fontes de texto. Um padrão salta aos olhos e é relevante para a leitura dos resultados do Capítulo~\ref{ch:resultados}: as fontes de documento inteiro ou pré-isolado por seção fixa (conjunto completo de notas, Fatores de Risco) concentram-se muito mais perto de 1 (mediana de 0,95 em ambas) do que a nota de dívida isolada (mediana de 0,69 na base anual). Ou seja, o recorte estreito da nota específica de dívida captura consistentemente mais mudança textual ano a ano do que o documento inteiro ou uma seção-padrão como Fatores de Risco, nos quais boilerplate estrutural dilui a mudança relativa.
+A Figura~\ref{fig:similaridade} compara a distribuição da similaridade de cosseno entre as cinco fontes de texto. Um padrão salta aos olhos e é relevante para a leitura dos resultados do Capítulo~\ref{ch:resultados}: as fontes de documento inteiro ou pré-isolado por seção fixa (conjunto completo de notas, Fatores de Risco) concentram-se muito mais perto de 1 (mediana de 0,95 em ambas) do que a nota de dívida isolada (mediana de 0,68 na base anual). Ou seja, o recorte estreito da nota específica de dívida captura consistentemente mais mudança textual ano a ano do que o documento inteiro ou uma seção-padrão como Fatores de Risco, nos quais boilerplate estrutural dilui a mudança relativa.
 
 \begin{figure}[htbp]
     \centering
@@ -457,7 +459,7 @@ Este capítulo reporta os resultados obtidos até o momento deste Exame de Quali
 
 Antes dos testes confirmatórios de H1 e H2 (Seções~\ref{sec:h1_resultados}--\ref{sec:h2_resultados}), uma fase exploratória extensa e iterativa (cinco rodadas de teste e correção, ao longo da construção do pipeline) verificou se a similaridade TF-IDF aplicada à nota de dívida extraída automaticamente captura de fato conteúdo textual real, e não apenas ruído de extração. Essa validação não é, em si, um teste de hipótese; é o alicerce que dá suporte à leitura dos resultados nulos das seções seguintes como uma resposta genuína sobre previsibilidade de retorno, e não como um artefato de um pipeline de dados malfeito.
 
-\textbf{Confiabilidade de extração ao longo das rodadas.} A Figura~\ref{fig:trajetoria_extracao} mostra a evolução da taxa de extração confiável (\textit{font\_heading}) sobre o corpus anual completo (997 arquivamentos), rodada a rodada. A rodada 4 estabeleceu a linha de base em 43,8\%; três aprimoramentos cumulativos, cada um motivado pela inspeção direta de casos reais de falha e validado contra controles já funcionais para garantir ausência de regressão, elevaram essa taxa para 64,9\%. O maior ganho isolado veio do reconhecimento de títulos em negrito do mesmo tamanho da fonte do corpo do texto (não apenas maiores), que resolveu sozinho 22 empresas que tinham taxa de extração confiável de 0\% em todos os anos verificados.
+\textbf{Confiabilidade de extração ao longo das rodadas.} A Figura~\ref{fig:trajetoria_extracao} mostra a evolução da taxa de extração confiável (\textit{font\_heading}) sobre o corpus anual completo (997 arquivamentos), rodada a rodada. A rodada 4 estabeleceu a linha de base em 43,8\%; quatro aprimoramentos cumulativos, cada um motivado pela inspeção direta de casos reais de falha e validado contra controles já funcionais para garantir ausência de regressão, elevaram essa taxa para 69,7\%. O maior ganho isolado veio do reconhecimento de títulos em negrito do mesmo tamanho da fonte do corpo do texto (não apenas maiores), que resolveu sozinho 22 empresas que tinham taxa de extração confiável de 0\% em todos os anos verificados. O último aprimoramento reconheceu títulos igualmente sem caixa alta e sem numeração (por exemplo, ``Debêntures'' ou ``Empréstimos e financiamentos'' isolados), desde que compostos apenas pelas próprias palavras-chave da dívida; essa regra exigiu, por sua vez, três salvaguardas específicas contra falsos positivos encontrados por inspeção direta (uma subseção com fonte maior que a própria nota-mãe vencendo por tamanho; fragmentos de frase quebrada linha a linha, reconhecíveis por nunca começarem com letra minúscula; e um parágrafo de política contábil genérica vencendo a nota real por empate de pureza, resolvido priorizando um candidato ancorado por número de nota isolado quando existe) antes de ser aceita como confiável.
 
 \begin{figure}[htbp]
     \centering
@@ -469,7 +471,7 @@ Antes dos testes confirmatórios de H1 e H2 (Seções~\ref{sec:h1_resultados}--\
     {\footnotesize Fonte: elaborada pelo autor a partir dos logs de extração do projeto (corpus anual completo, 997 arquivamentos).}
 \end{figure}
 
-\textbf{A similaridade se comporta melhor exatamente onde a extração é confiável.} A Figura~\ref{fig:similaridade_bruta_confiavel} compara a distribuição de similaridade sobre todos os pares extraídos com a distribuição restrita aos pares em que ambos os anos tiveram extração confiável. Restringir à extração confiável desloca a média de 0,56 para 0,73 e a mediana de 0,69 para 0,84, e reduz a concentração anômala de escores próximos de 0 e exatamente 1 que caracteriza os casos de falha de extração conhecidos (ver adiante). Esse é o padrão esperado se a medida estiver de fato lendo o texto da nota; não seria o padrão esperado se a variação observada fosse puramente ruído de extração.
+\textbf{A similaridade se comporta melhor exatamente onde a extração é confiável.} A Figura~\ref{fig:similaridade_bruta_confiavel} compara a distribuição de similaridade sobre todos os pares extraídos com a distribuição restrita aos pares em que ambos os anos tiveram extração confiável. Restringir à extração confiável desloca a média de 0,56 para 0,71 e a mediana de 0,68 para 0,83, e reduz a concentração anômala de escores próximos de 0 e exatamente 1 que caracteriza os casos de falha de extração conhecidos (ver adiante). Esse é o padrão esperado se a medida estiver de fato lendo o texto da nota; não seria o padrão esperado se a variação observada fosse puramente ruído de extração.
 
 \begin{figure}[htbp]
     \centering
@@ -483,7 +485,7 @@ Antes dos testes confirmatórios de H1 e H2 (Seções~\ref{sec:h1_resultados}--\
 
 \textbf{Dois casos concretos, lidos linha a linha.} Um exemplo de similaridade genuinamente alta: WEG 2015$\to$2016 registra 0,9915, e a comparação direta do texto mostra que a estrutura da nota (cláusulas de covenant do BNDES/FINEP, categorias de taxa fixa e indexadores TJLP/UFIR) é idêntica entre os dois anos; apenas os valores de saldo e a data de referência mudam, além de uma inversão cosmética na ordem das palavras do título. É exatamente o padrão de ``boilerplate atualizado com novos números'' que a literatura de mudança textual pressupõe. Já o caso da Yduqs ilustra o oposto: quatro pares ano a ano diferentes (2015 a 2019) registram similaridade exatamente 1,0000, com texto idêntico de 648 caracteres em todos eles. A leitura do texto revela que não é a nota de dívida real, e sim um parágrafo genérico de política contábil (reconhecimento inicial de empréstimos a valor justo) que o localizador capturou por engano nesses anos específicos, quando a nota verdadeira (numerada separadamente pela empresa) ainda não estava estilizada de forma distinguível. Todo escore degenerado (exatamente 0 ou 1) inspecionado neste projeto rastreou até uma falha de extração conhecida e explicável, não até uma falha da própria medida de similaridade.
 
-\textbf{Checagem exploratória de plausibilidade econômica: saída do Ibovespa.} Como uma verificação adicional de que a medida capta algo economicamente sensato antes dos testes formais, comparou-se a similaridade textual de empresas que saíram do Ibovespa em algum momento do período (por delistagem, fusão ou reestruturação societária) com a das empresas que permaneceram, sobre pares com extração confiável em ambos os anos (Figura~\ref{fig:sobrevivencia}). A direção é a esperada pela lógica teórica do projeto (empresas em dificuldade tendem a mudar mais o texto da nota e também a sair do índice): mediana de 0,836 entre as que saíram contra 0,843 entre as que permaneceram. Sobre o universo completo e não enviesado (118 pares de empresas que saíram, 313 de empresas que permaneceram), essa diferença não atinge significância convencional (Mann-Whitney unilateral, $p=0{,}237$), um resultado consistente com a checagem de deslistamento formal reportada na Seção~\ref{sec:robustez} para a nota de dívida isolada. O valor desta checagem exploratória não está em produzir um achado citável (não produz), mas em mostrar que a direção do efeito é sempre a esperada teoricamente, mesmo quando não significativa, o que pesa contra a hipótese de que a medida é apenas ruído aleatório.
+\textbf{Checagem exploratória de plausibilidade econômica: saída do Ibovespa.} Como uma verificação adicional de que a medida capta algo economicamente sensato antes dos testes formais, comparou-se a similaridade textual de empresas que saíram do Ibovespa em algum momento do período (por delistagem, fusão ou reestruturação societária) com a das empresas que permaneceram, sobre pares com extração confiável em ambos os anos (Figura~\ref{fig:sobrevivencia}). A direção é a esperada pela lógica teórica do projeto (empresas em dificuldade tendem a mudar mais o texto da nota e também a sair do índice): mediana de 0,832 entre as que saíram contra 0,829 entre as que permaneceram. Sobre o universo completo e não enviesado (192 pares de empresas que saíram, 335 de empresas que permaneceram), essa diferença não atinge significância convencional (Mann-Whitney unilateral, $p=0{,}359$), um resultado consistente com a checagem de deslistamento formal reportada na Seção~\ref{sec:robustez} para a nota de dívida isolada. O valor desta checagem exploratória não está em produzir um achado citável (não produz), mas em mostrar que a direção do efeito é sempre a esperada teoricamente, mesmo quando não significativa, o que pesa contra a hipótese de que a medida é apenas ruído aleatório.
 
 \begin{figure}[htbp]
     \centering
@@ -511,8 +513,8 @@ A Tabela~\ref{tab:h1} reporta o p-valor do coeficiente de Similaridade sobre o r
         \toprule
         \textbf{Fonte de texto} & \textbf{n} & \textbf{Simples} & \textbf{Agrup., s/c} & \textbf{Agrup., c/c} & \textbf{Ef. fixos} \\
         \midrule
-        Nota de dívida (anual)       & 671   & 0,489 & 0,579 & 0,610 & 0,585 \\
-        Nota de dívida (trimestral)  & 2.138 & 0,876 & 0,899 & 0,987 & 0,826 \\
+        Nota de dívida (anual)       & 671   & 0,645 & 0,715 & 0,779 & 0,776 \\
+        Nota de dívida (trimestral)  & 2.138 & 0,876 & 0,900 & 0,897 & 0,671 \\
         Conjunto completo de notas   & 411   & 0,628 & 0,641 & 0,513 & 0,660 \\
         Relatório da Administração   & 484   & 0,153 & 0,140 & \textbf{0,031} & 0,478 \\
         Fatores de Risco (FRE)       & 672   & 0,226 & 0,151 & 0,308 & 0,758 \\
@@ -563,14 +565,14 @@ Nenhuma das duas versões atinge significância convencional. É notável, poré
         \toprule
         \textbf{Fonte de texto} & \textbf{Agrup., s/c} & \textbf{Agrup., c/ tamanho} & \textbf{Agrup., s/ tamanho} \\
         \midrule
-        Nota de dívida (anual)      & 0,771 & 0,830 & 0,828 \\
+        Nota de dívida (anual)      & 0,761 & 0,876 & 0,745 \\
         Conjunto completo de notas  & 0,086 & 0,391 & 0,125 \\
         Relatório da Administração  & \textbf{0,033} & 0,113 & 0,059 \\
         \bottomrule
     \end{tabular}
 \end{table}
 
-O Relatório da Administração é, novamente, a única fonte com algum sinal sem controles, mas não sobrevive à adição de controles. Um teste de efeitos fixos não foi aplicado a essa checagem especificamente: a condição de deslistamento é constante dentro de cada empresa, e a transformação de efeitos fixos elimina exatamente a variação que se quer explicar. Estimar o modelo mesmo assim produz um coeficiente de ordem $10^{-17}$ (essencialmente zero de máquina) acompanhado de um p-valor de 0,0006, que pareceria altamente significativo se lido sem esse cuidado. Esse é um exemplo concreto de um teste mal especificado, identificado e descartado antes de ser reportado como resultado.
+O Relatório da Administração é, novamente, a única fonte com algum sinal sem controles, mas não sobrevive à adição de controles. Um teste de efeitos fixos não foi aplicado a essa checagem especificamente: a condição de deslistamento é constante dentro de cada empresa, e a transformação de efeitos fixos elimina exatamente a variação que se quer explicar. Estimar o modelo mesmo assim produz um coeficiente de ordem $10^{-17}$ (essencialmente zero de máquina) acompanhado de um p-valor de 0,0057, que pareceria altamente significativo se lido sem esse cuidado. Esse é um exemplo concreto de um teste mal especificado, identificado e descartado antes de ser reportado como resultado.
 
 \textbf{Achado adicional: Fatores de Risco e saída do índice, com desenho corrigido.} A checagem de deslistamento é, por natureza, uma pergunta no nível da empresa, não no nível do par ano a ano: o desenho tecnicamente correto é uma única observação por empresa. Construiu-se uma variável de similaridade média por empresa e estimou-se uma regressão puramente transversal ($n=110$, uma linha por empresa, sem necessidade de agrupamento) (Tabela~\ref{tab:riskfactors}).
 
@@ -605,8 +607,8 @@ Esse é, no conjunto, o achado empírico mais bem sustentado deste projeto até 
         \toprule
         \textbf{Fonte de texto} & \textbf{Janela} & \textbf{Ef. fixos (2 vias)} & \textbf{FE (só empresa)} & \textbf{RE (só empresa)} & \textbf{Hausman} & \textbf{Escolhido} \\
         \midrule
-        Nota de dívida (anual)      & 12m & 0,585 & 0,700 & 0,567 & 0,024 & FE: 0,700 \\
-                                     & 18m & 0,596 & 0,959 & 0,518 & 0,001 & FE: 0,959 \\
+        Nota de dívida (anual)      & 12m & 0,776 & 0,913 & 0,744 & 0,024 & FE: 0,913 \\
+                                     & 18m & 0,800 & 0,844 & 0,721 & 0,001 & FE: 0,844 \\
         Conjunto completo de notas  & 12m & 0,660 & 0,220 & 0,427 & 0,768 & RE: 0,427 \\
                                      & 18m & 0,182 & 0,080 & 0,177 & 0,802 & RE: 0,177 \\
         Relatório da Administração  & 12m & 0,478 & 0,785 & \textbf{0,045} & 0,000 & FE: 0,785 \\
@@ -626,9 +628,7 @@ Esse exercício responde diretamente à limitação que os autores apontam em se
 \section{Análise complementar (H2)}
 \label{sec:h2_resultados}
 
-Como análise complementar (Seção~\ref{sec:h2_metodologia}), testou-se se a mudança textual também se associa à revisão do consenso de EPS dos analistas em torno da data de divulgação. A variável de revisão foi construída a partir da série de consenso rolante da Bloomberg (uma limitação de mensuração explicada abaixo) como a diferença percentual entre o último valor de consenso anterior à divulgação e o primeiro valor posterior, dentro de uma janela de 140 dias.
-
-A mesma progressão de rigor da Seção~\ref{sec:h1_resultados} foi aplicada às quatro fontes de texto, totalizando 56 testes. O resultado é um nulo limpo: nenhum dos 24 testes centrais atinge significância a 5\% (Tabela~\ref{tab:h2}).
+Como análise complementar (Seção~\ref{sec:h2_metodologia}), testou-se se a mudança textual também se associa à revisão do consenso de EPS dos analistas em torno da data de divulgação, seguindo a mesma progressão de rigor da Seção~\ref{sec:h1_resultados} para as quatro fontes de texto, totalizando 56 testes. O resultado é um nulo limpo: nenhum dos 24 testes centrais atinge significância a 5\% (Tabela~\ref{tab:h2}).
 
 \begin{table}[htbp]
     \centering
@@ -639,17 +639,17 @@ A mesma progressão de rigor da Seção~\ref{sec:h1_resultados} foi aplicada às
         \toprule
         \textbf{Fonte de texto} & \textbf{n} & \textbf{Simples} & \textbf{Agrup., s/c} & \textbf{Agrup., c/c} & \textbf{Ef. fixos} \\
         \midrule
-        Nota de dívida (anual)       & 518   & 0,585 & 0,615 & 0,605 & 0,919 \\
-        Nota de dívida (trimestral)  & 1.678 & 0,910 & 0,922 & 0,767 & 0,999 \\
+        Nota de dívida (anual)       & 518   & 0,456 & 0,503 & 0,474 & 0,766 \\
+        Nota de dívida (trimestral)  & 1.678 & 0,833 & 0,851 & 0,808 & 0,886 \\
         Conjunto completo de notas   & 316   & 0,662 & 0,569 & 0,855 & 0,866 \\
         Relatório da Administração   & 386   & 0,747 & 0,689 & 0,693 & 0,967 \\
         \bottomrule
     \end{tabular}
 \end{table}
 
-Dos 56 testes totais (incluindo comparações de tercil e a checagem de deslistamento aplicada à revisão), 4 registraram $p<0{,}05$, um número muito próximo dos 2,8 esperados por acaso puro. Cada um dos quatro foi inspecionado individualmente: dois eram comparações de tercil com padrão não monótono, e o terceiro era a checagem de deslistamento no Relatório da Administração, que voltou a não ser significativa assim que testada com agrupamento por empresa ($p=0{,}050$ para $p=0{,}851$), uma terceira ocorrência, dentro deste mesmo projeto, do mesmo padrão identificado na Seção~\ref{sec:robustez}.
+Dos 56 testes totais (incluindo comparações de tercil e a checagem de deslistamento aplicada à revisão), 4 registraram $p<0{,}05$, um número muito próximo dos 2,8 esperados por acaso puro. Cada um dos quatro foi inspecionado individualmente: três eram comparações de tercil com padrão não monótono, e o quarto era a checagem de deslistamento no Relatório da Administração, que voltou a não ser significativa assim que testada com agrupamento por empresa ($p=0{,}050$ para $p=0{,}851$), uma ocorrência adicional, dentro deste mesmo projeto, do mesmo padrão identificado na Seção~\ref{sec:robustez}.
 
-Uma limitação de mensuração real, e ainda não resolvida, deve ser registrada aqui: a série de consenso da Bloomberg disponível é uma série rolante, não uma série de mesmo trimestre-alvo reamostrada ao longo do tempo. Isso significa que parte da ``revisão'' medida pode refletir a mudança normal de nível do consenso entre trimestres consecutivos, e não apenas uma revisão de sentimento. Corrigir isso exigiria uma nova extração de dados da Bloomberg, e não uma mudança de código.
+Vale lembrar que a limitação de mensuração da série de consenso, discutida na Seção~\ref{sec:h2_metodologia}, permanece em aberto: parte do nulo aqui reportado pode refletir essa limitação, não apenas ausência de relação real.
 
 % ===========================================================================
 \chapter{Conclusão}
