@@ -218,7 +218,7 @@ Documento financeiro tem muito texto repetido. Política contábil, descrição 
     \text{Mudança textual}(i,t) &= 1 - \text{Similaridade}(i,t)
 \end{align}
 
-Um ponto importante que precisa ficar claro na dissertação: essa medida capta mudança lexical, ou seja, mudança nas palavras e expressões usadas, e não necessariamente mudança de significado. Duas frases podem dizer basicamente a mesma coisa com palavras bem diferentes, e nesse caso a similaridade de cosseno vai indicar baixa similaridade mesmo sem mudança econômica real. Por isso, optou-se por chamar essa variável de mudança textual ou mudança lexical, evitando termos como ``novidade semântica'', que sugeririam uma precisão que o método não tem.
+A medida capta mudança lexical, isto é, alterações nas palavras e expressões utilizadas, não necessariamente mudança de significado: duas frases semanticamente equivalentes, mas redigidas com vocabulário distinto, produziriam baixa similaridade de cosseno mesmo na ausência de mudança econômica real. Por isso, a variável é denominada mudança textual ou lexical ao longo desta dissertação, evitando termos como ``novidade semântica'', que sugeririam uma precisão que o método não possui.
 
 \section{Divulgação de dívida e resultados de mercado}
 
@@ -257,7 +257,7 @@ As notas explicativas foram coletadas diretamente do portal de dados abertos da 
 \section{Medida de mudança textual (TF-IDF e similaridade de cosseno)}
 \label{sec:medida}
 
-Seguindo \citeonline{cohen2020} e \citeonline{brown2011}, a mudança textual é medida por 1 menos a similaridade de cosseno entre os vetores TF-IDF do texto da nota em dois exercícios consecutivos da mesma empresa, com o vocabulário e os pesos IDF ajustados uma única vez sobre todo o corpus da amostra (não empresa a empresa), para que a ponderação reflita o que é de fato boilerplate genérico do setor/mercado.
+A mudança textual é medida por 1 menos a similaridade de cosseno entre os vetores TF-IDF do texto da nota em dois exercícios consecutivos da mesma empresa, com o vocabulário e os pesos IDF ajustados uma única vez sobre todo o corpus da amostra (não empresa a empresa), para que a ponderação reflita o que é de fato boilerplate genérico do setor/mercado. A ponderação TF-IDF especificamente segue \citeonline{brown2011}, que a adotam sobre o modelo de espaço vetorial clássico da literatura de recuperação de informação por sua simplicidade e popularidade. \citeonline{cohen2020} usam uma medida de cosseno análoga, mas sobre vetores de frequência bruta de termos, sem a ponderação por raridade que caracteriza o TF-IDF; a escolha desta dissertação segue a variante de \citeonline{brown2011}, por permitir separar melhor o boilerplate setorial da mudança de fato específica de cada empresa.
 
 % [DECISÃO PENDENTE --- apenas de enquadramento, não mais de resultado: o desenho original
 % (pré-projeto, Capítulo 2) especifica a nota de dívida isolada; um teste exploratório com o
@@ -268,10 +268,9 @@ Seguindo \citeonline{cohen2020} e \citeonline{brown2011}, a mudança textual é 
 \section{Variável dependente: retorno anormal futuro}
 \label{sec:var_dependente}
 
-O retorno anormal é calculado como o retorno \textit{buy-and-hold} da ação nos 12 meses seguintes à data de divulgação da DFP (data real de recebimento pela CVM, não a data de fechamento do exercício), menos o retorno \textit{buy-and-hold} do Ibovespa no mesmo período.
-% [A ESPECIFICAR NA VERSÃO FINAL: esta é uma medida ajustada ao mercado, sem beta --- a versão
-% final deve considerar um modelo de mercado (CAPM) ou de fatores (Fama-French/Carhart) para o
-% cálculo definitivo do retorno anormal.]
+O retorno anormal é calculado como o retorno \textit{buy-and-hold} da ação nos 12 meses seguintes à data de divulgação da DFP (data real de recebimento pela CVM, não a data de fechamento do exercício), menos o retorno \textit{buy-and-hold} do Ibovespa no mesmo período. Trata-se de um retorno anormal ajustado ao mercado (\textit{market-adjusted}), sem estimação de beta, na tradição metodológica descrita por \citeonline{barberlyon1997} para estudos de retorno de longo prazo. É também a mesma família de medida usada por \citeonline{brown2011} para o retorno em torno do arquivamento do 10-K, ainda que em janela muito mais curta (três dias): a diferença entre esta dissertação e aquele estudo está no horizonte (doze meses, compatível com a periodicidade anual da divulgação, contra três dias, adequado a um teste de reação imediata), não na família de medida.
+
+\citeonline{barberlyon1997} documentam que o retorno ajustado ao mercado tende a apresentar menor poder estatístico e maior viés de especificação do que abordagens baseadas em carteira de referência ou empresa de controle pareada por tamanho e \textit{book-to-market}, especialmente em horizontes mais longos. A escolha por um retorno ajustado ao mercado nesta dissertação é, portanto, uma simplificação deliberada e reconhecida como tal, adequada à etapa exploratória do trabalho, mas não a especificação definitiva mais rigorosa disponível na literatura. A versão final deve considerar um modelo de mercado (CAPM) ou de fatores (Fama-French/Carhart), ou uma carteira de referência pareada por tamanho, para o cálculo definitivo do retorno anormal.
 
 \section{Variáveis de controle}
 \label{sec:controles}
@@ -281,7 +280,7 @@ As variáveis de controle utilizadas são: tamanho (logaritmo do ativo total e d
 \section{Modelo empírico}
 \label{sec:modelo}
 
-O modelo empírico foi construído em etapas de rigor crescente, cada uma motivada por uma ameaça específica à identificação encontrada ao longo do trabalho exploratório. Não se trata de uma sequência de tentativas, mas de um processo deliberado de teste e correção, descrito a seguir.
+O modelo empírico foi construído em etapas de rigor crescente, cada uma motivada por uma ameaça específica à identificação, em um processo deliberado de teste e correção de especificação, descrito a seguir.
 
 A especificação de base é:
 \begin{equation}
