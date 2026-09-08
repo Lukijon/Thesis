@@ -39,6 +39,10 @@ scenario rather than one row per source:
       A named reference point: saved separately to
       data/interim/poc/cenario_alpha_results.csv so it can be cited in
       future work without rerunning the whole battery.
+  17. Cenário Alpha + caracteres totais da nota -- adds chars_total
+      (chars_prev + chars_curr, the extracted debt-note length across the
+      pair, already present in every narrow-note source file) as a
+      control for document/note length.
 
 Covers H1 return (narrow_annual, narrow_quarterly), H1 delisting
 (narrow_annual), and H2 revision (narrow_annual, narrow_quarterly) -- the
@@ -82,6 +86,8 @@ WITH_DEBT_LINE_DELTA_LIAB_NO_ROA_NO_LEVERAGE = ["past_12m_return", "debt_line_it
 # be cited/reused without re-running the full battery.
 CENARIO_ALPHA_LABEL = "Cenário Alpha (Empréstimos+Financiamentos+Debêntures + variação do passivo, sem ROA/alavancagem/retorno passado)"
 CENARIO_ALPHA_CONTROLS = ["debt_line_item", "delta_liabilities"]
+CENARIO_ALPHA_CHARS_LABEL = CENARIO_ALPHA_LABEL + ", com caracteres totais da nota"
+CENARIO_ALPHA_CHARS_CONTROLS = CENARIO_ALPHA_CONTROLS + ["chars_total"]
 
 SCENARIOS = [
     ("Base (c/ ROA)", WITH_ROA, False, False),
@@ -102,6 +108,7 @@ SCENARIOS = [
     ("Idem, sem retorno passado", WITH_DEBT_LINE_DELTA_LIAB_NO_ROA_NO_PASTRET, False, False),
     ("Idem, sem alavancagem", WITH_DEBT_LINE_DELTA_LIAB_NO_ROA_NO_LEVERAGE, False, False),
     (CENARIO_ALPHA_LABEL, CENARIO_ALPHA_CONTROLS, False, False),
+    (CENARIO_ALPHA_CHARS_LABEL, CENARIO_ALPHA_CHARS_CONTROLS, False, False),
 ]
 
 
@@ -221,6 +228,7 @@ def _load_sources() -> dict:
 
     for (df, *_rest) in sources.values():
         df["setor"] = df["cd_cvm"].map(sector_map)
+        df["chars_total"] = df["chars_prev"] + df["chars_curr"]
 
     return sources
 
