@@ -1,20 +1,23 @@
 """Follow-up robustness checks requested directly, run on top of the new
 default methodology (narrow-note results restricted to font_heading/
-font_heading pairs, src/analysis/build_reliable_only_datasets.py):
+font_heading pairs, src/analysis/build_reliable_only_datasets.py). Six
+control/sample specifications, each producing one full battery table
+(all sources x all applicable rigor stages), organized one table per
+scenario rather than one row per source:
 
-  1. Drop ROA from the control set (leverage + past_12m_return only).
-  2. Drop pairs that span more than one fiscal year (year_curr - year_prev
-     != 1) -- the silently-bridged-gap issue found earlier
-     (src/analysis/test_year_gap_robustness.py), now checked against the
-     reliable-only base instead of the full sample.
-  3. Combined: both restrictions applied together (no ROA AND no
-     year-gap pairs).
+  1. Base -- leverage + ROA + past_12m_return (the thesis's current default).
+  2. Sem ROA -- leverage + past_12m_return.
+  3. Com tamanho -- ln_total_assets + leverage + ROA + past_12m_return.
+  4. Com tamanho, sem ROA -- ln_total_assets + leverage + past_12m_return.
+  5. Sem pares com salto de ano -- base controls, dropping pairs where
+     year_curr - year_prev != 1 (the silently-bridged-gap issue, see
+     test_year_gap_robustness.py). Annual sources only -- "consecutive
+     years" has no analogue in the quarter-indexed series.
+  6. Combinado -- sem ROA AND sem pares com salto de ano.
 
 Covers H1 return (narrow_annual, narrow_quarterly), H1 delisting
 (narrow_annual), and H2 revision (narrow_annual, narrow_quarterly) -- the
-same scope as the reliable-only switch itself. The year-gap filter (and
-therefore the combined scenario) only applies to the two annual sources --
-"consecutive years" has no direct analogue in the quarter-indexed series.
+same scope as the reliable-only switch itself.
 
 Usage:
     python -u -m src.analysis.test_reliable_only_scenarios
@@ -35,6 +38,17 @@ POC = INTERIM / "poc"
 
 WITH_ROA = ["leverage", "roa", "past_12m_return"]
 NO_ROA = ["leverage", "past_12m_return"]
+WITH_SIZE = ["ln_total_assets", "leverage", "roa", "past_12m_return"]
+WITH_SIZE_NO_ROA = ["ln_total_assets", "leverage", "past_12m_return"]
+
+SCENARIOS = [
+    ("Base (c/ ROA)", WITH_ROA, False),
+    ("Sem ROA", NO_ROA, False),
+    ("Com tamanho", WITH_SIZE, False),
+    ("Com tamanho, sem ROA", WITH_SIZE_NO_ROA, False),
+    ("Sem pares com salto de ano", WITH_ROA, True),
+    ("Combinado (sem ROA + sem salto)", NO_ROA, True),
+]
 
 
 def _load_controls() -> pd.DataFrame:
@@ -87,67 +101,59 @@ def rigor_progression(df: pd.DataFrame, outcome: str, ctrl_year_col: str, contro
             "n_ctrl": n_c, "p_agrup_cc": p_c, "n_fe": n_fe, "p_ef_fixos": p_fe}
 
 
+def _load_sources() -> dict:
+    """Returns {(família, fonte): (df, outcome, ctrl_year_col, with_fe, supports_gap_filter)}."""
+    sources = {}
+
+    ret_annual = pd.read_csv(POC / "abnormal_returns_poc_reliable.csv")
+    sources[("H1_retorno", "narrow_annual")] = (ret_annual, "abnormal_return", "year_curr", True, True)
+
+    ret_qtr = pd.read_csv(POC / "abnormal_returns_itr_reliable.csv")
+    ret_qtr["ctrl_year_col"] = ret_qtr["quarter_curr"].str[:4].astype(int)
+    sources[("H1_retorno", "narrow_quarterly")] = (ret_qtr, "abnormal_return", "ctrl_year_col", True, False)
+
+    dl = pd.read_csv(POC / "delisted_similarity_results_reliable.csv")
+    dl["is_dropped"] = (dl["group"] == "dropped_or_delisted").astype(int)
+    sources[("H1_delisting", "narrow_annual")] = (dl, "is_dropped", "year_curr", False, True)
+
+    h2_annual = pd.read_csv(POC / "h2_eps_revision_narrow_annual_all_reliable.csv")
+    sources[("H2_revisão", "narrow_annual")] = (h2_annual, "revision_pct", "year_curr", False, True)
+
+    h2_qtr = pd.read_csv(POC / "h2_eps_revision_narrow_quarterly_all_reliable.csv")
+    h2_qtr["ctrl_year_col"] = h2_qtr["quarter_curr"].str[:4].astype(int)
+    sources[("H2_revisão", "narrow_quarterly")] = (h2_qtr, "revision_pct", "ctrl_year_col", False, False)
+
+    return sources
+
+
 def main() -> None:
-    rows = []
+    sources = _load_sources()
+    all_tables = {}
 
-    return_sources = {
-        "narrow_annual": (POC / "abnormal_returns_poc_reliable.csv", "year_curr"),
-        "narrow_quarterly": (POC / "abnormal_returns_itr_reliable.csv", "quarter_curr"),
-    }
-    for name, (path, ycol) in return_sources.items():
-        df = pd.read_csv(path)
-        scenarios = [("base (c/ ROA)", df, WITH_ROA), ("sem ROA", df, NO_ROA)]
-        if ycol == "quarter_curr":
-            df["ctrl_year_col"] = df["quarter_curr"].str[:4].astype(int)
-            ycol_use = "ctrl_year_col"
-            # "consecutive years" doesn't map cleanly onto a quarter-indexed
-            # series (a year-over-year gap concept was only ever defined for
-            # the annual sources) -- skip rather than force an ill-fitting filter.
-        else:
-            ycol_use = ycol
-            gap = df["year_curr"] - df["year_prev"]
-            scenarios.append(("sem pares com salto de ano", df[gap == 1], WITH_ROA))
-            scenarios.append(("combinado (sem ROA + sem salto)", df[gap == 1], NO_ROA))
+    for scen_label, controls, needs_gap_filter in SCENARIOS:
+        rows = []
+        for (familia, fonte), (df, outcome, ycol, with_fe, supports_gap) in sources.items():
+            if needs_gap_filter:
+                if not supports_gap:
+                    continue
+                gap = df["year_curr"] - df["year_prev"]
+                subset = df[gap == 1]
+            else:
+                subset = df
+            r = rigor_progression(subset, outcome, ycol, controls, with_fe)
+            rows.append({"Família": familia, "Fonte": fonte, **r})
+        all_tables[scen_label] = pd.DataFrame(rows)
 
-        for scen_label, subset, controls in scenarios:
-            r = rigor_progression(subset, "abnormal_return", ycol_use, controls, with_fe=True)
-            rows.append({"família": "H1_retorno", "fonte": name, "cenário": scen_label, **r})
+    pd.set_option("display.width", 200)
+    combined_rows = []
+    for scen_label, table in all_tables.items():
+        print(f"\n=== Cenário: {scen_label} ===")
+        print(table.round(4).to_string(index=False))
+        t = table.copy()
+        t.insert(0, "Cenário", scen_label)
+        combined_rows.append(t)
 
-    df = pd.read_csv(POC / "delisted_similarity_results_reliable.csv")
-    df["is_dropped"] = (df["group"] == "dropped_or_delisted").astype(int)
-    gap = df["year_curr"] - df["year_prev"]
-    for scen_label, subset, controls in [
-        ("base (c/ ROA)", df, WITH_ROA),
-        ("sem ROA", df, NO_ROA),
-        ("sem pares com salto de ano", df[gap == 1], WITH_ROA),
-        ("combinado (sem ROA + sem salto)", df[gap == 1], NO_ROA),
-    ]:
-        r = rigor_progression(subset, "is_dropped", "year_curr", controls, with_fe=False)
-        rows.append({"família": "H1_delisting", "fonte": "narrow_annual", "cenário": scen_label, **r})
-
-    h2_sources = {
-        "narrow_annual": POC / "h2_eps_revision_narrow_annual_all_reliable.csv",
-        "narrow_quarterly": POC / "h2_eps_revision_narrow_quarterly_all_reliable.csv",
-    }
-    for name, path in h2_sources.items():
-        df = pd.read_csv(path)
-        scenarios = [("base (c/ ROA)", df, WITH_ROA), ("sem ROA", df, NO_ROA)]
-        ycol = "year_curr" if "year_curr" in df.columns else None
-        if ycol is None:
-            df["ctrl_year_col"] = df["quarter_curr"].str[:4].astype(int)
-            ycol = "ctrl_year_col"
-            # quarter-indexed: no well-defined "consecutive years" gap filter here
-        else:
-            gap = df["year_curr"] - df["year_prev"]
-            scenarios.append(("sem pares com salto de ano", df[gap == 1], WITH_ROA))
-            scenarios.append(("combinado (sem ROA + sem salto)", df[gap == 1], NO_ROA))
-        for scen_label, subset, controls in scenarios:
-            r = rigor_progression(subset, "revision_pct", ycol, controls, with_fe=False)
-            rows.append({"família": "H2_revisão", "fonte": name, "cenário": scen_label, **r})
-
-    out = pd.DataFrame(rows)
-    pd.set_option("display.width", 220)
-    print(out.round(4).to_string(index=False))
+    out = pd.concat(combined_rows, ignore_index=True)
     out_path = POC / "reliable_only_extra_scenarios.csv"
     out.to_csv(out_path, index=False)
     print(f"\nWritten: {out_path}")
