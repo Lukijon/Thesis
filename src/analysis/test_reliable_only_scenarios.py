@@ -14,6 +14,12 @@ scenario rather than one row per source:
      test_year_gap_robustness.py). Annual sources only -- "consecutive
      years" has no analogue in the quarter-indexed series.
   6. Combinado -- sem ROA AND sem pares com salto de ano.
+  7. Com indústria -- base controls plus sector fixed effects (C(setor)),
+     pooled stage only. Company+year fixed effects already absorb sector
+     (it's time-invariant per company), so the FE column is marked N/A
+     here rather than reported as a redundant, collinear estimate --
+     mirrors the reasoning in test_sector_control.py.
+  8. Com indústria, sem ROA -- same, without ROA in the control set.
 
 Covers H1 return (narrow_annual, narrow_quarterly), H1 delisting
 (narrow_annual), and H2 revision (narrow_annual, narrow_quarterly) -- the
@@ -42,12 +48,14 @@ WITH_SIZE = ["ln_total_assets", "leverage", "roa", "past_12m_return"]
 WITH_SIZE_NO_ROA = ["ln_total_assets", "leverage", "past_12m_return"]
 
 SCENARIOS = [
-    ("Base (c/ ROA)", WITH_ROA, False),
-    ("Sem ROA", NO_ROA, False),
-    ("Com tamanho", WITH_SIZE, False),
-    ("Com tamanho, sem ROA", WITH_SIZE_NO_ROA, False),
-    ("Sem pares com salto de ano", WITH_ROA, True),
-    ("Combinado (sem ROA + sem salto)", NO_ROA, True),
+    ("Base (c/ ROA)", WITH_ROA, False, False),
+    ("Sem ROA", NO_ROA, False, False),
+    ("Com tamanho", WITH_SIZE, False, False),
+    ("Com tamanho, sem ROA", WITH_SIZE_NO_ROA, False, False),
+    ("Sem pares com salto de ano", WITH_ROA, True, False),
+    ("Combinado (sem ROA + sem salto)", NO_ROA, True, False),
+    ("Com indústria", WITH_ROA, False, True),
+    ("Com indústria, sem ROA", NO_ROA, False, True),
 ]
 
 
@@ -57,7 +65,8 @@ def _load_controls() -> pd.DataFrame:
     })
 
 
-def rigor_progression(df: pd.DataFrame, outcome: str, ctrl_year_col: str, controls: list[str], with_fe: bool) -> dict:
+def rigor_progression(df: pd.DataFrame, outcome: str, ctrl_year_col: str, controls: list[str], with_fe: bool,
+                       with_sector: bool = False) -> dict:
     ctrl = _load_controls()
     d = df.dropna(subset=[outcome, "cosine_similarity"]).copy()
     n_simple = len(d)
@@ -77,16 +86,22 @@ def rigor_progression(df: pd.DataFrame, outcome: str, ctrl_year_col: str, contro
             d_c["ctrl_year"] = d_c[ctrl_year_col]
     else:
         d_c = d.merge(ctrl, left_on=["cd_cvm", ctrl_year_col], right_on=["cd_cvm", "ctrl_year"], how="left")
-    d_c = d_c.dropna(subset=["cd_cvm"] + controls)
+    dropna_cols = ["cd_cvm"] + controls + (["setor"] if with_sector else [])
+    d_c = d_c.dropna(subset=dropna_cols)
     if d_c["cd_cvm"].nunique() >= 3 and controls:
         formula = f"{outcome} ~ cosine_similarity + " + " + ".join(controls)
+        if with_sector:
+            formula += " + C(setor)"
         mod_c = smf.ols(formula, data=d_c).fit(cov_type="cluster", cov_kwds={"groups": d_c["cd_cvm"]})
         p_c, n_c = mod_c.pvalues["cosine_similarity"], len(d_c)
     else:
         p_c, n_c = np.nan, len(d_c)
 
+    # Sector FE is collinear with company fixed effects (sector doesn't
+    # change within-company over the sample window), so the FE stage is
+    # left N/A here rather than reported as a redundant estimate.
     p_fe, n_fe = np.nan, np.nan
-    if with_fe:
+    if with_fe and not with_sector:
         d_fe = d_c.dropna(subset=["ctrl_year"]).drop_duplicates(subset=["cd_cvm", "ctrl_year"])
         if d_fe["cd_cvm"].nunique() >= 5 and len(d_fe) >= 20:
             panel_df = d_fe.set_index(["cd_cvm", "ctrl_year"])
@@ -103,6 +118,9 @@ def rigor_progression(df: pd.DataFrame, outcome: str, ctrl_year_col: str, contro
 
 def _load_sources() -> dict:
     """Returns {(família, fonte): (df, outcome, ctrl_year_col, with_fe, supports_gap_filter)}."""
+    from src.analysis.test_sector_control import build_sector_map
+    sector_map = build_sector_map()
+
     sources = {}
 
     ret_annual = pd.read_csv(POC / "abnormal_returns_poc_reliable.csv")
@@ -123,6 +141,9 @@ def _load_sources() -> dict:
     h2_qtr["ctrl_year_col"] = h2_qtr["quarter_curr"].str[:4].astype(int)
     sources[("H2_revisão", "narrow_quarterly")] = (h2_qtr, "revision_pct", "ctrl_year_col", False, False)
 
+    for (df, *_rest) in sources.values():
+        df["setor"] = df["cd_cvm"].map(sector_map)
+
     return sources
 
 
@@ -130,7 +151,7 @@ def main() -> None:
     sources = _load_sources()
     all_tables = {}
 
-    for scen_label, controls, needs_gap_filter in SCENARIOS:
+    for scen_label, controls, needs_gap_filter, with_sector in SCENARIOS:
         rows = []
         for (familia, fonte), (df, outcome, ycol, with_fe, supports_gap) in sources.items():
             if needs_gap_filter:
@@ -140,7 +161,7 @@ def main() -> None:
                 subset = df[gap == 1]
             else:
                 subset = df
-            r = rigor_progression(subset, outcome, ycol, controls, with_fe)
+            r = rigor_progression(subset, outcome, ycol, controls, with_fe, with_sector=with_sector)
             rows.append({"Família": familia, "Fonte": fonte, **r})
         all_tables[scen_label] = pd.DataFrame(rows)
 
