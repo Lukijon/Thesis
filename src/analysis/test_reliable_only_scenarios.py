@@ -25,6 +25,8 @@ scenario rather than one row per source:
   10. Com passivo, sem ROA -- same, without ROA in the control set.
   11. Com passivo (só nível), sem ROA -- level only, no ROA.
   12. Com passivo (só variação), sem ROA -- change only, no ROA.
+  13. Com passivo (só variação), sem ROA, com tamanho -- change only,
+      no ROA, plus ln_total_assets.
 
 Covers H1 return (narrow_annual, narrow_quarterly), H1 delisting
 (narrow_annual), and H2 revision (narrow_annual, narrow_quarterly) -- the
@@ -55,6 +57,7 @@ WITH_LIAB = ["leverage", "roa", "past_12m_return", "total_liabilities_curr", "de
 WITH_LIAB_NO_ROA = ["leverage", "past_12m_return", "total_liabilities_curr", "delta_liabilities"]
 WITH_LIAB_LEVEL_NO_ROA = ["leverage", "past_12m_return", "total_liabilities_curr"]
 WITH_LIAB_DELTA_NO_ROA = ["leverage", "past_12m_return", "delta_liabilities"]
+WITH_LIAB_DELTA_NO_ROA_SIZE = ["ln_total_assets", "leverage", "past_12m_return", "delta_liabilities"]
 
 SCENARIOS = [
     ("Base (c/ ROA)", WITH_ROA, False, False),
@@ -69,6 +72,7 @@ SCENARIOS = [
     ("Com passivo (nível + variação), sem ROA", WITH_LIAB_NO_ROA, False, False),
     ("Com passivo (só nível), sem ROA", WITH_LIAB_LEVEL_NO_ROA, False, False),
     ("Com passivo (só variação), sem ROA", WITH_LIAB_DELTA_NO_ROA, False, False),
+    ("Com passivo (só variação), sem ROA, com tamanho", WITH_LIAB_DELTA_NO_ROA_SIZE, False, False),
 ]
 
 
