@@ -1,0 +1,1497 @@
+cd_cvm,name,quarter_prev,quarter_curr,cosine_similarity,chars_prev,chars_curr,diagnostic_prev,diagnostic_curr
+2437,AXIA ENERGIA S.A.,2015Q1,2015Q2,0.982,7416,7685,font_heading,font_heading
+2437,AXIA ENERGIA S.A.,2015Q2,2015Q3,0.9659,7685,8021,font_heading,font_heading
+2437,AXIA ENERGIA S.A.,2015Q3,2016Q1,0.9569,8021,7773,font_heading,font_heading
+2437,AXIA ENERGIA S.A.,2016Q1,2016Q2,0.9921,7773,7935,font_heading,font_heading
+2437,AXIA ENERGIA S.A.,2016Q2,2016Q3,0.9863,7935,8036,font_heading,font_heading
+2437,AXIA ENERGIA S.A.,2016Q3,2017Q1,0.9818,8036,8032,font_heading,font_heading
+2437,AXIA ENERGIA S.A.,2017Q1,2017Q2,0.9576,8032,7646,font_heading,font_heading
+2437,AXIA ENERGIA S.A.,2017Q2,2017Q3,0.9347,7646,7767,font_heading,font_heading
+2437,AXIA ENERGIA S.A.,2017Q3,2018Q1,0.8274,7767,10553,font_heading,font_heading
+2437,AXIA ENERGIA S.A.,2018Q1,2018Q2,0.9341,10553,9288,font_heading,font_heading
+2437,AXIA ENERGIA S.A.,2018Q2,2018Q3,0.9534,9288,9358,font_heading,font_heading
+2437,AXIA ENERGIA S.A.,2018Q3,2019Q1,0.651,9358,5749,font_heading,font_heading
+2437,AXIA ENERGIA S.A.,2019Q1,2019Q2,0.7512,5749,7169,font_heading,font_heading
+2437,AXIA ENERGIA S.A.,2019Q2,2019Q3,0.95,7169,8496,font_heading,font_heading
+2437,AXIA ENERGIA S.A.,2019Q3,2020Q1,0.8358,8496,5545,font_heading,font_heading
+2437,AXIA ENERGIA S.A.,2020Q1,2020Q2,0.9598,5545,6390,font_heading,font_heading
+2437,AXIA ENERGIA S.A.,2020Q2,2020Q3,0.0696,6390,430,font_heading,font_heading
+2437,AXIA ENERGIA S.A.,2020Q3,2021Q1,0.1104,430,8727,font_heading,font_heading
+2437,AXIA ENERGIA S.A.,2021Q1,2021Q2,0.5561,8727,6966,font_heading,font_heading
+2437,AXIA ENERGIA S.A.,2021Q2,2021Q3,0.1968,6966,15470,font_heading,font_heading
+2437,AXIA ENERGIA S.A.,2021Q3,2022Q1,0.1731,15470,6189,font_heading,font_heading
+2437,AXIA ENERGIA S.A.,2022Q1,2022Q2,0.5942,6189,14862,font_heading,font_heading
+2437,AXIA ENERGIA S.A.,2022Q2,2022Q3,0.6038,14862,7483,font_heading,font_heading
+2437,AXIA ENERGIA S.A.,2022Q3,2023Q1,0.1862,7483,2506,font_heading,font_heading
+2437,AXIA ENERGIA S.A.,2023Q1,2023Q2,0.2678,2506,10782,font_heading,font_heading
+2437,AXIA ENERGIA S.A.,2023Q2,2023Q3,0.9498,10782,12333,font_heading,font_heading
+2437,AXIA ENERGIA S.A.,2023Q3,2024Q1,0.1063,12333,1472,font_heading,font_heading
+2437,AXIA ENERGIA S.A.,2024Q1,2024Q2,0.4516,1472,1101,font_heading,font_heading
+2437,AXIA ENERGIA S.A.,2024Q2,2024Q3,0.2511,1101,82493,font_heading,font_heading
+2453,CIA ENERGETICA DE MINAS GERAIS - CEMIG,2015Q1,2015Q2,0.9728,9457,11239,font_heading,font_heading
+2453,CIA ENERGETICA DE MINAS GERAIS - CEMIG,2015Q2,2015Q3,0.7769,11239,2952,font_heading,font_heading
+2453,CIA ENERGETICA DE MINAS GERAIS - CEMIG,2016Q3,2017Q1,0.7997,3144,3564,font_heading,font_heading
+2453,CIA ENERGETICA DE MINAS GERAIS - CEMIG,2017Q1,2017Q2,0.8309,3564,12297,font_heading,font_heading
+2453,CIA ENERGETICA DE MINAS GERAIS - CEMIG,2017Q2,2017Q3,0.9735,12297,12762,font_heading,font_heading
+2453,CIA ENERGETICA DE MINAS GERAIS - CEMIG,2017Q3,2018Q1,0.8615,12762,12681,font_heading,font_heading
+2453,CIA ENERGETICA DE MINAS GERAIS - CEMIG,2018Q1,2018Q2,0.971,12681,14449,font_heading,font_heading
+2453,CIA ENERGETICA DE MINAS GERAIS - CEMIG,2018Q2,2018Q3,0.3841,14449,2702,font_heading,font_heading
+2453,CIA ENERGETICA DE MINAS GERAIS - CEMIG,2018Q3,2019Q1,0.9284,2702,3146,font_heading,font_heading
+2453,CIA ENERGETICA DE MINAS GERAIS - CEMIG,2019Q1,2019Q2,0.2948,3146,2648,font_heading,font_heading
+2453,CIA ENERGETICA DE MINAS GERAIS - CEMIG,2019Q2,2019Q3,0.3648,2648,16209,font_heading,font_heading
+2453,CIA ENERGETICA DE MINAS GERAIS - CEMIG,2019Q3,2020Q1,0.9454,16209,13663,font_heading,font_heading
+2453,CIA ENERGETICA DE MINAS GERAIS - CEMIG,2020Q1,2020Q2,0.9716,13663,14903,font_heading,font_heading
+2453,CIA ENERGETICA DE MINAS GERAIS - CEMIG,2020Q2,2020Q3,0.9559,14903,15856,font_heading,font_heading
+2453,CIA ENERGETICA DE MINAS GERAIS - CEMIG,2020Q3,2021Q1,0.928,15856,12738,font_heading,font_heading
+2453,CIA ENERGETICA DE MINAS GERAIS - CEMIG,2021Q1,2021Q2,0.9129,12738,15369,font_heading,font_heading
+2453,CIA ENERGETICA DE MINAS GERAIS - CEMIG,2021Q2,2021Q3,0.9825,15369,15613,font_heading,font_heading
+2453,CIA ENERGETICA DE MINAS GERAIS - CEMIG,2021Q3,2022Q1,0.8371,15613,9225,font_heading,font_heading
+2453,CIA ENERGETICA DE MINAS GERAIS - CEMIG,2022Q1,2022Q2,0.9431,9225,11319,font_heading,font_heading
+2453,CIA ENERGETICA DE MINAS GERAIS - CEMIG,2022Q2,2022Q3,0.9676,11319,11936,font_heading,font_heading
+2453,CIA ENERGETICA DE MINAS GERAIS - CEMIG,2022Q3,2023Q1,0.887,11936,8436,font_heading,font_heading
+2453,CIA ENERGETICA DE MINAS GERAIS - CEMIG,2023Q1,2023Q2,0.9434,8436,10474,font_heading,font_heading
+2453,CIA ENERGETICA DE MINAS GERAIS - CEMIG,2023Q2,2023Q3,0.9267,10474,8620,font_heading,font_heading
+2453,CIA ENERGETICA DE MINAS GERAIS - CEMIG,2023Q3,2024Q1,0.8985,8620,10410,font_heading,font_heading
+2453,CIA ENERGETICA DE MINAS GERAIS - CEMIG,2024Q1,2024Q2,0.6441,10410,4463,font_heading,font_heading
+2453,CIA ENERGETICA DE MINAS GERAIS - CEMIG,2024Q2,2024Q3,0.6495,4463,13071,font_heading,font_heading
+2577,CESP - Companhia Energética de São Paulo,2015Q1,2015Q2,0.9092,687,686,font_heading,font_heading
+2577,CESP - Companhia Energética de São Paulo,2015Q2,2015Q3,1.0,686,686,font_heading,font_heading
+2577,CESP - Companhia Energética de São Paulo,2015Q3,2016Q1,0.0403,686,101,font_heading,font_heading
+2577,CESP - Companhia Energética de São Paulo,2016Q1,2016Q2,1.0,101,101,font_heading,font_heading
+2577,CESP - Companhia Energética de São Paulo,2016Q2,2016Q3,1.0,101,101,font_heading,font_heading
+2577,CESP - Companhia Energética de São Paulo,2016Q3,2017Q1,0.3263,101,154,font_heading,font_heading
+2577,CESP - Companhia Energética de São Paulo,2017Q1,2017Q2,1.0,154,154,font_heading,font_heading
+2577,CESP - Companhia Energética de São Paulo,2017Q2,2017Q3,0.2617,154,1676,font_heading,font_heading
+2577,CESP - Companhia Energética de São Paulo,2017Q3,2018Q1,0.2617,1676,154,font_heading,font_heading
+2577,CESP - Companhia Energética de São Paulo,2018Q1,2018Q2,1.0,154,154,font_heading,font_heading
+2577,CESP - Companhia Energética de São Paulo,2018Q2,2018Q3,1.0,154,154,font_heading,font_heading
+2577,CESP - Companhia Energética de São Paulo,2018Q3,2019Q1,0.0504,154,1494,font_heading,font_heading
+2577,CESP - Companhia Energética de São Paulo,2019Q1,2019Q2,0.7003,1494,2061,font_heading,font_heading
+2577,CESP - Companhia Energética de São Paulo,2019Q2,2019Q3,0.8315,2061,2128,font_heading,font_heading
+2577,CESP - Companhia Energética de São Paulo,2019Q3,2020Q1,0.3674,2128,1644,font_heading,font_heading
+2577,CESP - Companhia Energética de São Paulo,2020Q1,2020Q2,0.3113,1644,304,font_heading,font_heading
+2577,CESP - Companhia Energética de São Paulo,2020Q2,2020Q3,0.4349,304,1529,font_heading,font_heading
+2577,CESP - Companhia Energética de São Paulo,2020Q3,2021Q1,0.377,1529,1841,font_heading,font_heading
+2577,CESP - Companhia Energética de São Paulo,2021Q1,2021Q2,0.7447,1841,835,font_heading,font_heading
+2577,CESP - Companhia Energética de São Paulo,2021Q2,2021Q3,0.1256,835,281,font_heading,font_heading
+2577,CESP - Companhia Energética de São Paulo,2021Q3,2022Q1,0.0967,281,1116,font_heading,font_heading
+2577,CESP - Companhia Energética de São Paulo,2022Q1,2022Q3,0.9177,1116,1152,font_heading,font_heading
+2577,CESP - Companhia Energética de São Paulo,2022Q3,2023Q1,0.6692,1152,1961,font_heading,font_heading
+2577,CESP - Companhia Energética de São Paulo,2023Q1,2023Q2,0.279,1961,4119,font_heading,font_heading
+2577,CESP - Companhia Energética de São Paulo,2023Q2,2023Q3,0.6829,4119,3596,font_heading,font_heading
+2577,CESP - Companhia Energética de São Paulo,2023Q3,2024Q1,0.8357,3596,4117,font_heading,font_heading
+2577,CESP - Companhia Energética de São Paulo,2024Q1,2024Q2,0.8726,4117,4138,font_heading,font_heading
+3980,GERDAU S.A.,2015Q2,2015Q3,0.7364,6670,5664,font_heading,font_heading
+3980,GERDAU S.A.,2015Q3,2016Q2,0.8807,5664,5539,font_heading,font_heading
+3980,GERDAU S.A.,2021Q2,2021Q3,0.964,3326,3543,font_heading,font_heading
+3980,GERDAU S.A.,2021Q3,2022Q1,0.9064,3543,3442,font_heading,font_heading
+3980,GERDAU S.A.,2022Q1,2022Q2,0.8618,3442,3658,font_heading,font_heading
+3980,GERDAU S.A.,2023Q1,2023Q2,0.9865,13893,15772,font_heading,font_heading
+3980,GERDAU S.A.,2023Q2,2023Q3,0.9952,15772,16276,font_heading,font_heading
+3980,GERDAU S.A.,2023Q3,2024Q1,0.6539,16276,2071,font_heading,font_heading
+3980,GERDAU S.A.,2024Q1,2024Q2,0.2486,2071,3035,font_heading,font_heading
+3980,GERDAU S.A.,2024Q2,2024Q3,0.9445,3035,3691,font_heading,font_heading
+4030,CIA SIDERURGICA NACIONAL,2016Q2,2016Q3,0.9639,4221,3819,font_heading,font_heading
+4030,CIA SIDERURGICA NACIONAL,2021Q3,2022Q1,0.8338,4931,5297,font_heading,font_heading
+4030,CIA SIDERURGICA NACIONAL,2022Q1,2022Q2,0.9765,5297,5516,font_heading,font_heading
+4030,CIA SIDERURGICA NACIONAL,2022Q2,2022Q3,0.9409,5516,5511,font_heading,font_heading
+4030,CIA SIDERURGICA NACIONAL,2022Q3,2023Q1,0.6296,5511,4008,font_heading,font_heading
+4030,CIA SIDERURGICA NACIONAL,2023Q1,2023Q2,0.9115,4008,3452,font_heading,font_heading
+4030,CIA SIDERURGICA NACIONAL,2023Q2,2023Q3,1.0,3452,3455,font_heading,font_heading
+4030,CIA SIDERURGICA NACIONAL,2023Q3,2024Q1,0.7581,3455,4343,font_heading,font_heading
+4057,Souza Cruz S.A.,2015Q2,2015Q3,0.2223,1141,167,font_heading,font_heading
+4170,VALE S.A.,2015Q1,2015Q2,0.8038,5214,5162,font_heading,font_heading
+4170,VALE S.A.,2015Q2,2015Q3,0.9312,5162,5201,font_heading,font_heading
+4170,VALE S.A.,2015Q3,2016Q1,0.8559,5201,4393,font_heading,font_heading
+4170,VALE S.A.,2016Q1,2016Q2,0.9305,4393,4691,font_heading,font_heading
+4170,VALE S.A.,2016Q2,2016Q3,0.9494,4691,4713,font_heading,font_heading
+4170,VALE S.A.,2016Q3,2017Q1,0.7645,4713,7212,font_heading,font_heading
+4170,VALE S.A.,2017Q1,2017Q2,0.9567,7212,7352,font_heading,font_heading
+4170,VALE S.A.,2017Q2,2017Q3,0.9406,7352,8228,font_heading,font_heading
+4170,VALE S.A.,2017Q3,2018Q1,0.8028,8228,5787,font_heading,font_heading
+4170,VALE S.A.,2018Q1,2018Q2,0.9472,5787,5653,font_heading,font_heading
+4170,VALE S.A.,2018Q2,2018Q3,0.9781,5653,5583,font_heading,font_heading
+4170,VALE S.A.,2018Q3,2019Q1,0.7047,5583,2916,font_heading,font_heading
+4170,VALE S.A.,2019Q1,2019Q2,0.9636,2916,3035,font_heading,font_heading
+4170,VALE S.A.,2019Q2,2019Q3,0.8938,3035,3814,font_heading,font_heading
+4170,VALE S.A.,2019Q3,2020Q1,0.7456,3814,5134,font_heading,font_heading
+4170,VALE S.A.,2020Q1,2020Q2,0.9434,5134,5378,font_heading,font_heading
+4170,VALE S.A.,2020Q2,2020Q3,0.8615,5378,6972,font_heading,font_heading
+4170,VALE S.A.,2020Q3,2021Q2,0.7642,6972,8783,font_heading,font_heading
+4170,VALE S.A.,2021Q2,2021Q3,0.885,8783,9101,font_heading,font_heading
+4170,VALE S.A.,2021Q3,2022Q1,0.8367,9101,7936,font_heading,font_heading
+4170,VALE S.A.,2022Q1,2022Q2,0.8867,7936,8610,font_heading,font_heading
+4170,VALE S.A.,2022Q2,2022Q3,0.5208,8610,20762,font_heading,font_heading
+4170,VALE S.A.,2022Q3,2023Q1,0.8118,20762,34273,font_heading,font_heading
+4170,VALE S.A.,2023Q1,2023Q2,0.1278,34273,674,font_heading,font_heading
+4170,VALE S.A.,2023Q2,2023Q3,0.9334,674,1025,font_heading,font_heading
+4170,VALE S.A.,2024Q2,2024Q3,0.9301,4268,4545,font_heading,font_heading
+4820,BRASKEM S.A.,2024Q1,2024Q3,0.4913,4659,1198,font_heading,font_heading
+5258,RAIA DROGASIL S.A.,2021Q2,2021Q3,0.9967,10004,10048,font_heading,font_heading
+5258,RAIA DROGASIL S.A.,2021Q3,2022Q1,0.8898,10048,10901,font_heading,font_heading
+5258,RAIA DROGASIL S.A.,2024Q1,2024Q2,0.9942,5715,5773,font_heading,font_heading
+5258,RAIA DROGASIL S.A.,2024Q2,2024Q3,1.0,5773,5756,font_heading,font_heading
+5410,WEG S.A.,2015Q1,2015Q2,0.993,2386,2438,font_heading,font_heading
+5410,WEG S.A.,2015Q2,2015Q3,0.9681,2438,2557,font_heading,font_heading
+5410,WEG S.A.,2015Q3,2016Q1,0.9672,2557,2419,font_heading,font_heading
+5410,WEG S.A.,2016Q1,2016Q2,1.0,2419,2394,font_heading,font_heading
+5410,WEG S.A.,2016Q2,2016Q3,0.9955,2394,2424,font_heading,font_heading
+5410,WEG S.A.,2016Q3,2017Q1,0.9819,2424,2368,font_heading,font_heading
+5410,WEG S.A.,2017Q1,2017Q2,0.9839,2368,2410,font_heading,font_heading
+5410,WEG S.A.,2017Q2,2017Q3,0.9957,2410,2531,font_heading,font_heading
+5410,WEG S.A.,2017Q3,2018Q1,0.9969,2531,2581,font_heading,font_heading
+5410,WEG S.A.,2018Q1,2018Q2,0.9912,2581,2672,font_heading,font_heading
+5410,WEG S.A.,2018Q2,2018Q3,0.9967,2672,2631,font_heading,font_heading
+5410,WEG S.A.,2018Q3,2019Q1,0.9873,2631,2522,font_heading,font_heading
+5410,WEG S.A.,2019Q1,2019Q2,0.9965,2522,2587,font_heading,font_heading
+5410,WEG S.A.,2019Q2,2019Q3,0.9893,2587,2550,font_heading,font_heading
+5410,WEG S.A.,2019Q3,2020Q1,0.9761,2550,2571,font_heading,font_heading
+5410,WEG S.A.,2020Q1,2020Q2,0.9852,2571,2908,font_heading,font_heading
+5410,WEG S.A.,2020Q2,2020Q3,1.0,2908,2899,font_heading,font_heading
+5410,WEG S.A.,2020Q3,2021Q1,0.9241,2899,1958,font_heading,font_heading
+5410,WEG S.A.,2021Q1,2021Q2,0.9803,1958,2017,font_heading,font_heading
+5410,WEG S.A.,2021Q2,2021Q3,0.9767,2017,2025,font_heading,font_heading
+5410,WEG S.A.,2021Q3,2022Q1,0.9462,2025,2088,font_heading,font_heading
+5410,WEG S.A.,2022Q1,2022Q2,0.9893,2088,2141,font_heading,font_heading
+5410,WEG S.A.,2022Q2,2022Q3,0.9361,2141,2286,font_heading,font_heading
+5410,WEG S.A.,2022Q3,2023Q1,0.9751,2286,2283,font_heading,font_heading
+5410,WEG S.A.,2023Q1,2023Q2,0.9987,2283,2289,font_heading,font_heading
+5410,WEG S.A.,2023Q2,2023Q3,0.9991,2289,2339,font_heading,font_heading
+5410,WEG S.A.,2023Q3,2024Q1,0.9584,2339,2102,font_heading,font_heading
+5410,WEG S.A.,2024Q1,2024Q2,0.9522,2102,2577,font_heading,font_heading
+5410,WEG S.A.,2024Q2,2024Q3,0.9975,2577,2588,font_heading,font_heading
+6505,Grupo Casas Bahia S.A. (Via Varejo),2015Q1,2015Q2,0.8629,2490,3476,font_heading,font_heading
+6505,Grupo Casas Bahia S.A. (Via Varejo),2015Q2,2015Q3,0.9638,3476,3322,font_heading,font_heading
+6505,Grupo Casas Bahia S.A. (Via Varejo),2015Q3,2016Q1,0.8535,3322,2458,font_heading,font_heading
+6505,Grupo Casas Bahia S.A. (Via Varejo),2021Q2,2021Q3,1.0,533,533,font_heading,font_heading
+6505,Grupo Casas Bahia S.A. (Via Varejo),2021Q3,2022Q1,1.0,533,533,font_heading,font_heading
+6505,Grupo Casas Bahia S.A. (Via Varejo),2022Q1,2022Q2,0.029,533,1002,font_heading,font_heading
+6505,Grupo Casas Bahia S.A. (Via Varejo),2022Q2,2022Q3,0.029,1002,533,font_heading,font_heading
+6505,Grupo Casas Bahia S.A. (Via Varejo),2022Q3,2023Q1,0.0686,533,2360,font_heading,font_heading
+6505,Grupo Casas Bahia S.A. (Via Varejo),2023Q1,2023Q2,0.0686,2360,533,font_heading,font_heading
+6505,Grupo Casas Bahia S.A. (Via Varejo),2023Q2,2023Q3,0.3093,533,10097,font_heading,font_heading
+6505,Grupo Casas Bahia S.A. (Via Varejo),2023Q3,2024Q1,0.9286,10097,10578,font_heading,font_heading
+6505,Grupo Casas Bahia S.A. (Via Varejo),2024Q1,2024Q2,0.5668,10578,6800,font_heading,font_heading
+6505,Grupo Casas Bahia S.A. (Via Varejo),2024Q2,2024Q3,0.8404,6800,8569,font_heading,font_heading
+8087,Lojas Americanas S.A. (pre-2021 restructuring entity),2016Q1,2016Q2,0.9757,6597,7072,font_heading,font_heading
+8087,Lojas Americanas S.A. (pre-2021 restructuring entity),2019Q3,2020Q1,0.9701,8105,7198,font_heading,font_heading
+8087,Lojas Americanas S.A. (pre-2021 restructuring entity),2020Q1,2020Q2,0.9447,7198,9441,font_heading,font_heading
+8087,Lojas Americanas S.A. (pre-2021 restructuring entity),2020Q2,2020Q3,0.9911,9441,9651,font_heading,font_heading
+8087,Lojas Americanas S.A. (pre-2021 restructuring entity),2020Q3,2021Q1,0.7908,9651,10406,font_heading,font_heading
+8133,LOJAS RENNER S.A.,2015Q1,2015Q2,1.0,963,963,font_heading,font_heading
+8133,LOJAS RENNER S.A.,2015Q2,2015Q3,0.9911,963,928,font_heading,font_heading
+8133,LOJAS RENNER S.A.,2015Q3,2016Q1,0.1392,928,11318,font_heading,font_heading
+8133,LOJAS RENNER S.A.,2016Q1,2016Q2,0.9778,11318,12204,font_heading,font_heading
+8133,LOJAS RENNER S.A.,2016Q2,2016Q3,0.8956,12204,9930,font_heading,font_heading
+8133,LOJAS RENNER S.A.,2016Q3,2017Q1,0.9413,9930,12123,font_heading,font_heading
+8133,LOJAS RENNER S.A.,2017Q1,2017Q2,0.9699,12123,12101,font_heading,font_heading
+8133,LOJAS RENNER S.A.,2017Q2,2017Q3,0.9642,12101,12579,font_heading,font_heading
+8133,LOJAS RENNER S.A.,2017Q3,2018Q1,0.2705,12579,2881,font_heading,font_heading
+8133,LOJAS RENNER S.A.,2018Q1,2018Q2,0.2526,2881,10949,font_heading,font_heading
+8133,LOJAS RENNER S.A.,2018Q2,2018Q3,0.7954,10949,6256,font_heading,font_heading
+8133,LOJAS RENNER S.A.,2018Q3,2019Q1,0.72,6256,7139,font_heading,font_heading
+8133,LOJAS RENNER S.A.,2019Q1,2019Q2,0.942,7139,6109,font_heading,font_heading
+8133,LOJAS RENNER S.A.,2019Q2,2019Q3,0.9906,6109,6328,font_heading,font_heading
+8133,LOJAS RENNER S.A.,2019Q3,2020Q1,0.1392,6328,3242,font_heading,font_heading
+8133,LOJAS RENNER S.A.,2020Q3,2021Q1,0.0535,6496,1505,font_heading,font_heading
+8133,LOJAS RENNER S.A.,2021Q1,2021Q2,0.2086,1505,704,font_heading,font_heading
+8133,LOJAS RENNER S.A.,2021Q2,2021Q3,0.0082,704,2156,font_heading,font_heading
+8133,LOJAS RENNER S.A.,2023Q2,2023Q3,0.969,2991,2941,font_heading,font_heading
+8133,LOJAS RENNER S.A.,2023Q3,2024Q1,0.0513,2941,3599,font_heading,font_heading
+8133,LOJAS RENNER S.A.,2024Q1,2024Q2,0.0562,3599,4751,font_heading,font_heading
+8133,LOJAS RENNER S.A.,2024Q2,2024Q3,0.9908,4751,4577,font_heading,font_heading
+8451,MARCOPOLO S.A.,2015Q1,2015Q2,0.9956,3233,3241,font_heading,font_heading
+8451,MARCOPOLO S.A.,2015Q2,2015Q3,0.9347,3241,3457,font_heading,font_heading
+8451,MARCOPOLO S.A.,2015Q3,2016Q1,0.9294,3457,3452,font_heading,font_heading
+8451,MARCOPOLO S.A.,2016Q1,2016Q2,0.9944,3452,3481,font_heading,font_heading
+8451,MARCOPOLO S.A.,2016Q2,2016Q3,0.9932,3481,3532,font_heading,font_heading
+8451,MARCOPOLO S.A.,2016Q3,2017Q1,0.9852,3532,3719,font_heading,font_heading
+8451,MARCOPOLO S.A.,2017Q1,2017Q2,0.9965,3719,3717,font_heading,font_heading
+8451,MARCOPOLO S.A.,2017Q2,2017Q3,0.9883,3717,3660,font_heading,font_heading
+8451,MARCOPOLO S.A.,2017Q3,2018Q1,0.8969,3660,3954,font_heading,font_heading
+8451,MARCOPOLO S.A.,2018Q1,2018Q2,0.9862,3954,3973,font_heading,font_heading
+8451,MARCOPOLO S.A.,2018Q2,2018Q3,0.954,3973,3562,font_heading,font_heading
+8451,MARCOPOLO S.A.,2018Q3,2019Q1,0.9774,3562,3530,font_heading,font_heading
+8451,MARCOPOLO S.A.,2019Q1,2019Q2,0.9867,3530,3554,font_heading,font_heading
+8451,MARCOPOLO S.A.,2019Q2,2019Q3,0.9963,3554,3571,font_heading,font_heading
+8451,MARCOPOLO S.A.,2019Q3,2020Q1,0.1372,3571,703,font_heading,font_heading
+8451,MARCOPOLO S.A.,2020Q1,2020Q2,1.0,703,703,font_heading,font_heading
+8451,MARCOPOLO S.A.,2020Q2,2020Q3,1.0,703,703,font_heading,font_heading
+8451,MARCOPOLO S.A.,2020Q3,2021Q1,0.1385,703,3445,font_heading,font_heading
+8451,MARCOPOLO S.A.,2021Q1,2021Q2,0.9717,3445,3312,font_heading,font_heading
+8451,MARCOPOLO S.A.,2021Q2,2021Q3,0.9959,3312,3314,font_heading,font_heading
+8451,MARCOPOLO S.A.,2021Q3,2022Q1,0.994,3314,3278,font_heading,font_heading
+8451,MARCOPOLO S.A.,2022Q1,2022Q2,0.9927,3278,3132,font_heading,font_heading
+8451,MARCOPOLO S.A.,2022Q2,2022Q3,0.9957,3132,3132,font_heading,font_heading
+8451,MARCOPOLO S.A.,2022Q3,2023Q1,0.9861,3132,3301,font_heading,font_heading
+8451,MARCOPOLO S.A.,2023Q1,2023Q2,0.9963,3301,3281,font_heading,font_heading
+8451,MARCOPOLO S.A.,2023Q2,2023Q3,0.1379,3281,703,font_heading,font_heading
+8451,MARCOPOLO S.A.,2023Q3,2024Q1,0.1442,703,3115,font_heading,font_heading
+8451,MARCOPOLO S.A.,2024Q1,2024Q2,0.9911,3115,3136,font_heading,font_heading
+8451,MARCOPOLO S.A.,2024Q2,2024Q3,0.9957,3136,3125,font_heading,font_heading
+8656,METALURGICA GERDAU S.A.,2015Q2,2015Q3,0.7703,7487,6427,font_heading,font_heading
+8656,METALURGICA GERDAU S.A.,2015Q3,2016Q2,0.8732,6427,6680,font_heading,font_heading
+8656,METALURGICA GERDAU S.A.,2016Q2,2016Q3,0.9653,6680,7725,font_heading,font_heading
+8656,METALURGICA GERDAU S.A.,2018Q2,2018Q3,0.9979,8169,8105,font_heading,font_heading
+8656,METALURGICA GERDAU S.A.,2021Q2,2021Q3,0.9765,3155,3242,font_heading,font_heading
+8656,METALURGICA GERDAU S.A.,2021Q3,2022Q1,0.8583,3242,3500,font_heading,font_heading
+8656,METALURGICA GERDAU S.A.,2023Q1,2023Q2,0.9681,24196,33136,font_heading,font_heading
+8656,METALURGICA GERDAU S.A.,2023Q2,2023Q3,0.9954,33136,34618,font_heading,font_heading
+8656,METALURGICA GERDAU S.A.,2023Q3,2024Q1,0.3587,34618,2706,font_heading,font_heading
+8656,METALURGICA GERDAU S.A.,2024Q1,2024Q2,0.142,2706,1625,font_heading,font_heading
+8656,METALURGICA GERDAU S.A.,2024Q2,2024Q3,0.9792,1625,1602,font_heading,font_heading
+8672,IGUATEMI S.A.,2015Q1,2015Q2,0.839,1072,1074,font_heading,font_heading
+8672,IGUATEMI S.A.,2015Q2,2015Q3,0.8432,1074,1079,font_heading,font_heading
+8672,IGUATEMI S.A.,2015Q3,2016Q1,0.8767,1079,990,font_heading,font_heading
+8672,IGUATEMI S.A.,2016Q1,2016Q2,0.9853,990,997,font_heading,font_heading
+8672,IGUATEMI S.A.,2016Q2,2016Q3,0.968,997,1035,font_heading,font_heading
+8672,IGUATEMI S.A.,2016Q3,2017Q1,0.9848,1035,1017,font_heading,font_heading
+8672,IGUATEMI S.A.,2017Q1,2017Q2,0.1808,1017,1462,font_heading,font_heading
+8672,IGUATEMI S.A.,2017Q2,2017Q3,0.9969,1462,1472,font_heading,font_heading
+8672,IGUATEMI S.A.,2017Q3,2018Q1,0.5623,1472,1710,font_heading,font_heading
+8672,IGUATEMI S.A.,2018Q1,2018Q2,0.9867,1710,1743,font_heading,font_heading
+8672,IGUATEMI S.A.,2018Q2,2018Q3,0.9964,1743,1785,font_heading,font_heading
+8672,IGUATEMI S.A.,2018Q3,2020Q2,0.9497,1785,1927,font_heading,font_heading
+8672,IGUATEMI S.A.,2020Q2,2020Q3,0.9988,1927,1934,font_heading,font_heading
+8672,IGUATEMI S.A.,2020Q3,2021Q1,0.985,1934,1936,font_heading,font_heading
+8672,IGUATEMI S.A.,2021Q1,2021Q2,0.999,1936,1932,font_heading,font_heading
+8672,IGUATEMI S.A.,2021Q2,2021Q3,0.9794,1932,1659,font_heading,font_heading
+8672,IGUATEMI S.A.,2021Q3,2023Q2,0.5528,1659,4949,font_heading,font_heading
+8672,IGUATEMI S.A.,2023Q2,2023Q3,0.9969,4949,4905,font_heading,font_heading
+8672,IGUATEMI S.A.,2023Q3,2024Q1,0.8882,4905,4543,font_heading,font_heading
+8672,IGUATEMI S.A.,2024Q1,2024Q2,0.533,4543,5955,font_heading,font_heading
+8672,IGUATEMI S.A.,2024Q2,2024Q3,0.9706,5955,6555,font_heading,font_heading
+10456,Alpargatas S.A.,2015Q3,2016Q2,0.8033,4719,4732,font_heading,font_heading
+10456,Alpargatas S.A.,2016Q2,2016Q3,0.928,4732,5307,font_heading,font_heading
+10456,Alpargatas S.A.,2016Q3,2017Q1,0.9103,5307,5562,font_heading,font_heading
+10456,Alpargatas S.A.,2017Q1,2017Q2,0.9996,5562,5566,font_heading,font_heading
+10456,Alpargatas S.A.,2017Q2,2017Q3,0.9488,5566,6161,font_heading,font_heading
+10456,Alpargatas S.A.,2017Q3,2018Q1,0.9845,6161,6842,font_heading,font_heading
+10456,Alpargatas S.A.,2019Q2,2019Q3,0.9394,6158,5666,font_heading,font_heading
+10456,Alpargatas S.A.,2019Q3,2020Q1,0.7107,5666,6318,font_heading,font_heading
+10456,Alpargatas S.A.,2020Q1,2020Q3,0.864,6318,7510,font_heading,font_heading
+10456,Alpargatas S.A.,2023Q1,2023Q2,0.9419,417,400,font_heading,font_heading
+10456,Alpargatas S.A.,2023Q2,2023Q3,0.9412,400,385,font_heading,font_heading
+10456,Alpargatas S.A.,2023Q3,2024Q1,0.9705,385,395,font_heading,font_heading
+10456,Alpargatas S.A.,2024Q1,2024Q2,0.9694,395,370,font_heading,font_heading
+10456,Alpargatas S.A.,2024Q2,2024Q3,0.9694,370,380,font_heading,font_heading
+11312,Oi S.A. - Em Recuperação Judicial,2016Q3,2017Q1,0.8361,1751,2003,font_heading,font_heading
+11312,Oi S.A. - Em Recuperação Judicial,2017Q1,2017Q2,0.848,2003,2132,font_heading,font_heading
+11312,Oi S.A. - Em Recuperação Judicial,2017Q2,2017Q3,1.0,2132,2135,font_heading,font_heading
+11312,Oi S.A. - Em Recuperação Judicial,2017Q3,2018Q1,0.3969,2135,3179,font_heading,font_heading
+11312,Oi S.A. - Em Recuperação Judicial,2018Q1,2018Q2,0.9569,3179,3037,font_heading,font_heading
+11312,Oi S.A. - Em Recuperação Judicial,2018Q2,2018Q3,0.9259,3037,2934,font_heading,font_heading
+11312,Oi S.A. - Em Recuperação Judicial,2018Q3,2019Q1,0.6742,2934,1657,font_heading,font_heading
+11312,Oi S.A. - Em Recuperação Judicial,2019Q1,2019Q2,0.9969,1657,1632,font_heading,font_heading
+11312,Oi S.A. - Em Recuperação Judicial,2019Q2,2019Q3,0.9091,1632,1430,font_heading,font_heading
+11312,Oi S.A. - Em Recuperação Judicial,2019Q3,2020Q1,0.9688,1430,1478,font_heading,font_heading
+11312,Oi S.A. - Em Recuperação Judicial,2020Q1,2020Q2,0.9932,1478,1499,font_heading,font_heading
+11312,Oi S.A. - Em Recuperação Judicial,2020Q2,2020Q3,0.9951,1499,1499,font_heading,font_heading
+11312,Oi S.A. - Em Recuperação Judicial,2020Q3,2021Q1,0.9949,1499,1513,font_heading,font_heading
+11312,Oi S.A. - Em Recuperação Judicial,2021Q1,2021Q2,0.9701,1513,1654,font_heading,font_heading
+11312,Oi S.A. - Em Recuperação Judicial,2021Q2,2021Q3,0.9933,1654,1657,font_heading,font_heading
+11312,Oi S.A. - Em Recuperação Judicial,2021Q3,2022Q1,0.9634,1657,1501,font_heading,font_heading
+11312,Oi S.A. - Em Recuperação Judicial,2022Q1,2022Q2,0.994,1501,1469,font_heading,font_heading
+11312,Oi S.A. - Em Recuperação Judicial,2022Q2,2022Q3,0.9782,1469,1450,font_heading,font_heading
+11312,Oi S.A. - Em Recuperação Judicial,2022Q3,2023Q1,0.9789,1450,1430,font_heading,font_heading
+11312,Oi S.A. - Em Recuperação Judicial,2023Q1,2023Q2,0.9688,1430,1507,font_heading,font_heading
+11312,Oi S.A. - Em Recuperação Judicial,2023Q2,2023Q3,0.9497,1507,1507,font_heading,font_heading
+11312,Oi S.A. - Em Recuperação Judicial,2023Q3,2024Q1,0.9473,1507,1518,font_heading,font_heading
+12653,KLABIN S.A.,2015Q2,2015Q3,0.9482,11160,11384,font_heading,font_heading
+12653,KLABIN S.A.,2015Q3,2016Q1,0.9127,11384,12730,font_heading,font_heading
+12653,KLABIN S.A.,2016Q1,2016Q2,0.9583,12730,12985,font_heading,font_heading
+12653,KLABIN S.A.,2016Q2,2016Q3,0.9301,12985,14512,font_heading,font_heading
+12653,KLABIN S.A.,2016Q3,2017Q1,0.9038,14512,13812,font_heading,font_heading
+12653,KLABIN S.A.,2017Q1,2017Q2,0.9527,13812,14100,font_heading,font_heading
+12653,KLABIN S.A.,2021Q2,2021Q3,0.9626,18500,17713,font_heading,font_heading
+12653,KLABIN S.A.,2021Q3,2022Q1,0.8693,17713,17920,font_heading,font_heading
+12653,KLABIN S.A.,2022Q1,2022Q2,0.7293,17920,19616,font_heading,font_heading
+12653,KLABIN S.A.,2022Q2,2022Q3,0.6896,19616,9589,font_heading,font_heading
+12653,KLABIN S.A.,2022Q3,2023Q1,0.7734,9589,11437,font_heading,font_heading
+12653,KLABIN S.A.,2023Q1,2023Q2,0.9302,11437,10951,font_heading,font_heading
+12653,KLABIN S.A.,2023Q2,2023Q3,0.9817,10951,10529,font_heading,font_heading
+12653,KLABIN S.A.,2023Q3,2024Q1,0.6228,10529,2404,font_heading,font_heading
+12653,KLABIN S.A.,2024Q1,2024Q2,0.9888,2404,2440,font_heading,font_heading
+12653,KLABIN S.A.,2024Q2,2024Q3,0.6356,2440,12189,font_heading,font_heading
+13986,SUZANO S.A.,2015Q1,2015Q2,0.9312,7598,8997,font_heading,font_heading
+13986,SUZANO S.A.,2015Q2,2015Q3,0.9746,8997,9424,font_heading,font_heading
+13986,SUZANO S.A.,2015Q3,2016Q1,0.9609,9424,9806,font_heading,font_heading
+13986,SUZANO S.A.,2020Q1,2020Q2,0.9496,10003,11422,font_heading,font_heading
+13986,SUZANO S.A.,2024Q1,2024Q2,0.9727,2795,2844,font_heading,font_heading
+13986,SUZANO S.A.,2024Q2,2024Q3,0.9911,2844,2868,font_heading,font_heading
+14176,Eletropaulo Metropolitana Eletricidade de São Paulo S.A.,2015Q1,2015Q2,0.8452,1968,1702,font_heading,font_heading
+14176,Eletropaulo Metropolitana Eletricidade de São Paulo S.A.,2015Q2,2015Q3,0.9655,1702,1969,font_heading,font_heading
+14176,Eletropaulo Metropolitana Eletricidade de São Paulo S.A.,2015Q3,2016Q1,0.7838,1969,1562,font_heading,font_heading
+14176,Eletropaulo Metropolitana Eletricidade de São Paulo S.A.,2016Q1,2016Q2,0.1898,1562,59814,font_heading,font_heading
+14176,Eletropaulo Metropolitana Eletricidade de São Paulo S.A.,2016Q2,2016Q3,0.9862,59814,64948,font_heading,font_heading
+14176,Eletropaulo Metropolitana Eletricidade de São Paulo S.A.,2016Q3,2017Q1,0.2263,64948,3356,font_heading,font_heading
+14176,Eletropaulo Metropolitana Eletricidade de São Paulo S.A.,2017Q1,2017Q2,0.5383,3356,1686,font_heading,font_heading
+14176,Eletropaulo Metropolitana Eletricidade de São Paulo S.A.,2017Q2,2017Q3,0.9648,1686,1482,font_heading,font_heading
+14176,Eletropaulo Metropolitana Eletricidade de São Paulo S.A.,2017Q3,2018Q1,0.0443,1482,24936,font_heading,font_heading
+14176,Eletropaulo Metropolitana Eletricidade de São Paulo S.A.,2018Q1,2018Q2,0.9953,24936,26332,font_heading,font_heading
+14176,Eletropaulo Metropolitana Eletricidade de São Paulo S.A.,2018Q2,2018Q3,0.3953,26332,181122,font_heading,font_heading
+14176,Eletropaulo Metropolitana Eletricidade de São Paulo S.A.,2018Q3,2019Q1,0.426,181122,13084,font_heading,font_heading
+14176,Eletropaulo Metropolitana Eletricidade de São Paulo S.A.,2019Q1,2019Q2,0.2079,13084,1352,font_heading,font_heading
+14176,Eletropaulo Metropolitana Eletricidade de São Paulo S.A.,2019Q2,2019Q3,0.2792,1352,15013,font_heading,font_heading
+14176,Eletropaulo Metropolitana Eletricidade de São Paulo S.A.,2022Q1,2022Q2,0.3508,5129,317,font_heading,font_heading
+14176,Eletropaulo Metropolitana Eletricidade de São Paulo S.A.,2022Q2,2022Q3,0.568,317,125,font_heading,font_heading
+14176,Eletropaulo Metropolitana Eletricidade de São Paulo S.A.,2022Q3,2023Q1,0.1281,125,16803,font_heading,font_heading
+14176,Eletropaulo Metropolitana Eletricidade de São Paulo S.A.,2023Q1,2023Q2,0.809,16803,8405,font_heading,font_heading
+14176,Eletropaulo Metropolitana Eletricidade de São Paulo S.A.,2024Q1,2024Q2,0.9776,22135,22733,font_heading,font_heading
+14176,Eletropaulo Metropolitana Eletricidade de São Paulo S.A.,2024Q2,2024Q3,0.3314,22733,152713,font_heading,font_heading
+14311,CIA PARANAENSE DE ENERGIA - COPEL,2015Q1,2015Q2,0.982,17296,17197,font_heading,font_heading
+14311,CIA PARANAENSE DE ENERGIA - COPEL,2015Q2,2015Q3,0.748,17197,14449,font_heading,font_heading
+14311,CIA PARANAENSE DE ENERGIA - COPEL,2015Q3,2016Q1,0.9772,14449,16197,font_heading,font_heading
+14311,CIA PARANAENSE DE ENERGIA - COPEL,2016Q1,2016Q2,0.9983,16197,16419,font_heading,font_heading
+14311,CIA PARANAENSE DE ENERGIA - COPEL,2016Q2,2016Q3,0.9946,16419,16925,font_heading,font_heading
+14311,CIA PARANAENSE DE ENERGIA - COPEL,2016Q3,2017Q1,0.9736,16925,19032,font_heading,font_heading
+14311,CIA PARANAENSE DE ENERGIA - COPEL,2017Q1,2017Q2,0.9652,19032,18852,font_heading,font_heading
+14311,CIA PARANAENSE DE ENERGIA - COPEL,2017Q2,2017Q3,0.9962,18852,19476,font_heading,font_heading
+14311,CIA PARANAENSE DE ENERGIA - COPEL,2017Q3,2018Q1,0.9936,19476,18522,font_heading,font_heading
+14311,CIA PARANAENSE DE ENERGIA - COPEL,2018Q1,2018Q2,0.9968,18522,18870,font_heading,font_heading
+14311,CIA PARANAENSE DE ENERGIA - COPEL,2018Q2,2018Q3,0.9885,18870,19917,font_heading,font_heading
+14311,CIA PARANAENSE DE ENERGIA - COPEL,2018Q3,2019Q1,0.9838,19917,21511,font_heading,font_heading
+14311,CIA PARANAENSE DE ENERGIA - COPEL,2019Q1,2019Q2,0.9592,21511,19486,font_heading,font_heading
+14311,CIA PARANAENSE DE ENERGIA - COPEL,2019Q2,2019Q3,0.9418,19486,20306,font_heading,font_heading
+14311,CIA PARANAENSE DE ENERGIA - COPEL,2019Q3,2020Q1,0.9742,20306,19893,font_heading,font_heading
+14311,CIA PARANAENSE DE ENERGIA - COPEL,2020Q1,2020Q2,0.9964,19893,19456,font_heading,font_heading
+14311,CIA PARANAENSE DE ENERGIA - COPEL,2020Q2,2020Q3,0.9934,19456,20208,font_heading,font_heading
+14311,CIA PARANAENSE DE ENERGIA - COPEL,2020Q3,2021Q1,0.9889,20208,18958,font_heading,font_heading
+14311,CIA PARANAENSE DE ENERGIA - COPEL,2021Q1,2021Q2,0.9998,18958,19024,font_heading,font_heading
+14311,CIA PARANAENSE DE ENERGIA - COPEL,2021Q2,2022Q1,0.9607,19024,19377,font_heading,font_heading
+14311,CIA PARANAENSE DE ENERGIA - COPEL,2022Q1,2022Q2,0.9949,19377,19883,font_heading,font_heading
+14311,CIA PARANAENSE DE ENERGIA - COPEL,2022Q2,2022Q3,0.9952,19883,20590,font_heading,font_heading
+14311,CIA PARANAENSE DE ENERGIA - COPEL,2022Q3,2023Q1,0.9698,20590,21800,font_heading,font_heading
+14311,CIA PARANAENSE DE ENERGIA - COPEL,2023Q1,2023Q2,0.9747,21800,24083,font_heading,font_heading
+14311,CIA PARANAENSE DE ENERGIA - COPEL,2023Q2,2023Q3,0.9938,24083,24628,font_heading,font_heading
+14311,CIA PARANAENSE DE ENERGIA - COPEL,2023Q3,2024Q1,0.9798,24628,21187,font_heading,font_heading
+14311,CIA PARANAENSE DE ENERGIA - COPEL,2024Q1,2024Q2,0.9526,21187,19037,font_heading,font_heading
+14311,CIA PARANAENSE DE ENERGIA - COPEL,2024Q2,2024Q3,0.4471,19037,5747,font_heading,font_heading
+14320,USINAS SID DE MINAS GERAIS S.A.-USIMINAS,2016Q2,2016Q3,0.2642,2518,9218,font_heading,font_heading
+14320,USINAS SID DE MINAS GERAIS S.A.-USIMINAS,2016Q3,2017Q1,0.3866,9218,3134,font_heading,font_heading
+14320,USINAS SID DE MINAS GERAIS S.A.-USIMINAS,2017Q3,2018Q1,0.4162,7162,2984,font_heading,font_heading
+14320,USINAS SID DE MINAS GERAIS S.A.-USIMINAS,2018Q1,2018Q2,0.7569,2984,3495,font_heading,font_heading
+14320,USINAS SID DE MINAS GERAIS S.A.-USIMINAS,2018Q2,2018Q3,0.7558,3495,2795,font_heading,font_heading
+14320,USINAS SID DE MINAS GERAIS S.A.-USIMINAS,2018Q3,2019Q1,0.8866,2795,2766,font_heading,font_heading
+14320,USINAS SID DE MINAS GERAIS S.A.-USIMINAS,2019Q1,2019Q2,0.6395,2766,3887,font_heading,font_heading
+14320,USINAS SID DE MINAS GERAIS S.A.-USIMINAS,2019Q2,2019Q3,0.5256,3887,8749,font_heading,font_heading
+14320,USINAS SID DE MINAS GERAIS S.A.-USIMINAS,2019Q3,2020Q1,0.5478,8749,2411,font_heading,font_heading
+14320,USINAS SID DE MINAS GERAIS S.A.-USIMINAS,2020Q1,2020Q2,0.9199,2411,2477,font_heading,font_heading
+14320,USINAS SID DE MINAS GERAIS S.A.-USIMINAS,2020Q2,2020Q3,0.9288,2477,2495,font_heading,font_heading
+14320,USINAS SID DE MINAS GERAIS S.A.-USIMINAS,2020Q3,2021Q1,0.9309,2495,2395,font_heading,font_heading
+14320,USINAS SID DE MINAS GERAIS S.A.-USIMINAS,2021Q1,2021Q2,0.9357,2395,2412,font_heading,font_heading
+14320,USINAS SID DE MINAS GERAIS S.A.-USIMINAS,2021Q2,2021Q3,0.9288,2412,2424,font_heading,font_heading
+14443,CIA SANEAMENTO BASICO EST SAO PAULO,2015Q1,2015Q2,0.0834,200,181,font_heading,font_heading
+14443,CIA SANEAMENTO BASICO EST SAO PAULO,2015Q2,2015Q3,0.0468,181,496,font_heading,font_heading
+14443,CIA SANEAMENTO BASICO EST SAO PAULO,2015Q3,2016Q1,0.0617,496,115,font_heading,font_heading
+14443,CIA SANEAMENTO BASICO EST SAO PAULO,2016Q1,2016Q2,0.1425,115,355,font_heading,font_heading
+14443,CIA SANEAMENTO BASICO EST SAO PAULO,2016Q2,2016Q3,0.0398,355,10898,font_heading,font_heading
+14443,CIA SANEAMENTO BASICO EST SAO PAULO,2016Q3,2017Q1,0.0422,10898,263,font_heading,font_heading
+14443,CIA SANEAMENTO BASICO EST SAO PAULO,2017Q1,2017Q2,0.0414,263,10597,font_heading,font_heading
+14443,CIA SANEAMENTO BASICO EST SAO PAULO,2017Q2,2017Q3,0.9711,10597,12570,font_heading,font_heading
+14443,CIA SANEAMENTO BASICO EST SAO PAULO,2017Q3,2018Q1,0.9648,12570,14579,font_heading,font_heading
+14443,CIA SANEAMENTO BASICO EST SAO PAULO,2018Q1,2018Q2,0.9771,14579,13664,font_heading,font_heading
+14443,CIA SANEAMENTO BASICO EST SAO PAULO,2018Q2,2018Q3,0.9916,13664,13584,font_heading,font_heading
+14443,CIA SANEAMENTO BASICO EST SAO PAULO,2018Q3,2019Q1,0.9743,13584,12784,font_heading,font_heading
+14443,CIA SANEAMENTO BASICO EST SAO PAULO,2019Q1,2019Q2,0.0893,12784,653,font_heading,font_heading
+14443,CIA SANEAMENTO BASICO EST SAO PAULO,2019Q2,2019Q3,0.1173,653,15108,font_heading,font_heading
+14443,CIA SANEAMENTO BASICO EST SAO PAULO,2019Q3,2020Q1,0.9393,15108,12885,font_heading,font_heading
+14443,CIA SANEAMENTO BASICO EST SAO PAULO,2020Q1,2020Q2,0.4133,12885,2465,font_heading,font_heading
+14443,CIA SANEAMENTO BASICO EST SAO PAULO,2020Q2,2020Q3,0.463,2465,16139,font_heading,font_heading
+14443,CIA SANEAMENTO BASICO EST SAO PAULO,2020Q3,2021Q1,0.9518,16139,14373,font_heading,font_heading
+14443,CIA SANEAMENTO BASICO EST SAO PAULO,2021Q1,2021Q2,0.9939,14373,14894,font_heading,font_heading
+14443,CIA SANEAMENTO BASICO EST SAO PAULO,2021Q2,2021Q3,0.9764,14894,17860,font_heading,font_heading
+14443,CIA SANEAMENTO BASICO EST SAO PAULO,2021Q3,2022Q1,0.972,17860,16500,font_heading,font_heading
+14443,CIA SANEAMENTO BASICO EST SAO PAULO,2022Q1,2022Q2,0.9929,16500,17083,font_heading,font_heading
+14443,CIA SANEAMENTO BASICO EST SAO PAULO,2022Q2,2022Q3,0.9695,17083,20079,font_heading,font_heading
+14443,CIA SANEAMENTO BASICO EST SAO PAULO,2022Q3,2023Q1,0.9448,20079,14784,font_heading,font_heading
+14443,CIA SANEAMENTO BASICO EST SAO PAULO,2023Q1,2023Q2,0.9618,14784,17837,font_heading,font_heading
+14443,CIA SANEAMENTO BASICO EST SAO PAULO,2023Q2,2023Q3,0.9942,17837,18233,font_heading,font_heading
+14443,CIA SANEAMENTO BASICO EST SAO PAULO,2023Q3,2024Q1,0.9494,18233,16899,font_heading,font_heading
+14443,CIA SANEAMENTO BASICO EST SAO PAULO,2024Q1,2024Q2,0.9732,16899,20296,font_heading,font_heading
+14443,CIA SANEAMENTO BASICO EST SAO PAULO,2024Q2,2024Q3,0.9849,20296,22674,font_heading,font_heading
+14460,CYRELA BRAZIL REALTY S.A.EMPREEND E PART,2015Q1,2015Q2,0.8684,9529,8582,font_heading,font_heading
+14460,CYRELA BRAZIL REALTY S.A.EMPREEND E PART,2015Q2,2015Q3,0.9787,8582,8642,font_heading,font_heading
+14460,CYRELA BRAZIL REALTY S.A.EMPREEND E PART,2015Q3,2016Q2,0.9472,8642,8037,font_heading,font_heading
+14460,CYRELA BRAZIL REALTY S.A.EMPREEND E PART,2016Q2,2017Q2,0.9561,8037,7498,font_heading,font_heading
+14460,CYRELA BRAZIL REALTY S.A.EMPREEND E PART,2017Q2,2018Q1,0.5692,7498,6679,font_heading,font_heading
+14460,CYRELA BRAZIL REALTY S.A.EMPREEND E PART,2018Q3,2019Q1,0.8798,8019,7593,font_heading,font_heading
+14460,CYRELA BRAZIL REALTY S.A.EMPREEND E PART,2019Q1,2019Q2,0.9694,7593,7566,font_heading,font_heading
+14460,CYRELA BRAZIL REALTY S.A.EMPREEND E PART,2019Q2,2019Q3,0.9875,7566,7275,font_heading,font_heading
+14460,CYRELA BRAZIL REALTY S.A.EMPREEND E PART,2019Q3,2020Q1,0.9685,7275,7192,font_heading,font_heading
+14460,CYRELA BRAZIL REALTY S.A.EMPREEND E PART,2023Q1,2023Q2,1.0,628,628,font_heading,font_heading
+14460,CYRELA BRAZIL REALTY S.A.EMPREEND E PART,2023Q2,2023Q3,1.0,628,628,font_heading,font_heading
+14761,Cia Hering,2015Q1,2015Q2,0.5875,1133,772,font_heading,font_heading
+14761,Cia Hering,2015Q2,2016Q2,0.8361,772,429,font_heading,font_heading
+14761,Cia Hering,2016Q2,2018Q2,0.2419,429,991,font_heading,font_heading
+14761,Cia Hering,2018Q2,2018Q3,1.0,991,991,font_heading,font_heading
+14826,Companhia Brasileira de Distribuição (GPA),2015Q1,2015Q2,1.0,127,127,font_heading,font_heading
+14826,Companhia Brasileira de Distribuição (GPA),2015Q2,2015Q3,1.0,127,127,font_heading,font_heading
+14826,Companhia Brasileira de Distribuição (GPA),2015Q3,2016Q1,1.0,127,127,font_heading,font_heading
+14826,Companhia Brasileira de Distribuição (GPA),2016Q1,2016Q2,1.0,127,127,font_heading,font_heading
+14826,Companhia Brasileira de Distribuição (GPA),2016Q2,2016Q3,1.0,127,127,font_heading,font_heading
+14826,Companhia Brasileira de Distribuição (GPA),2018Q1,2018Q2,0.9802,4960,4964,font_heading,font_heading
+14826,Companhia Brasileira de Distribuição (GPA),2018Q2,2018Q3,0.9686,4964,5253,font_heading,font_heading
+14826,Companhia Brasileira de Distribuição (GPA),2022Q1,2022Q2,0.9834,4863,4859,font_heading,font_heading
+14826,Companhia Brasileira de Distribuição (GPA),2022Q2,2022Q3,0.9686,4859,5034,font_heading,font_heading
+15253,ENERGISA S.A.,2015Q1,2015Q2,0.9889,33682,33662,font_heading,font_heading
+15253,ENERGISA S.A.,2015Q2,2015Q3,0.9952,33662,34119,font_heading,font_heading
+15253,ENERGISA S.A.,2015Q3,2016Q1,0.7639,34119,34472,font_heading,font_heading
+15253,ENERGISA S.A.,2016Q1,2016Q2,0.9636,34472,34807,font_heading,font_heading
+15253,ENERGISA S.A.,2016Q2,2016Q3,0.9841,34807,33719,font_heading,font_heading
+15253,ENERGISA S.A.,2016Q3,2017Q1,0.9853,33719,32442,font_heading,font_heading
+15253,ENERGISA S.A.,2017Q1,2017Q2,0.9816,32442,34116,font_heading,font_heading
+15253,ENERGISA S.A.,2017Q2,2017Q3,0.9776,34116,36203,font_heading,font_heading
+15253,ENERGISA S.A.,2017Q3,2018Q1,0.9632,36203,33257,font_heading,font_heading
+15253,ENERGISA S.A.,2018Q1,2018Q2,0.9946,33257,34631,font_heading,font_heading
+15253,ENERGISA S.A.,2018Q2,2018Q3,0.9957,34631,36085,font_heading,font_heading
+15253,ENERGISA S.A.,2018Q3,2019Q1,0.8485,36085,25744,font_heading,font_heading
+15253,ENERGISA S.A.,2019Q1,2019Q2,0.5106,25744,8772,font_heading,font_heading
+15253,ENERGISA S.A.,2019Q2,2019Q3,0.9585,8772,9009,font_heading,font_heading
+15253,ENERGISA S.A.,2019Q3,2020Q1,0.9077,9009,14191,font_heading,font_heading
+15253,ENERGISA S.A.,2020Q1,2020Q2,0.9339,14191,13642,font_heading,font_heading
+15253,ENERGISA S.A.,2020Q2,2020Q3,0.8732,13642,14642,font_heading,font_heading
+15253,ENERGISA S.A.,2020Q3,2021Q1,0.9607,14642,15408,font_heading,font_heading
+15253,ENERGISA S.A.,2021Q1,2021Q2,0.9949,15408,15652,font_heading,font_heading
+15253,ENERGISA S.A.,2021Q2,2021Q3,0.9953,15652,15673,font_heading,font_heading
+15253,ENERGISA S.A.,2021Q3,2022Q1,0.2026,15673,944,font_heading,font_heading
+15253,ENERGISA S.A.,2022Q1,2022Q2,0.2064,944,17756,font_heading,font_heading
+15253,ENERGISA S.A.,2022Q2,2022Q3,0.9894,17756,18294,font_heading,font_heading
+15253,ENERGISA S.A.,2022Q3,2023Q1,0.9755,18294,16453,font_heading,font_heading
+15253,ENERGISA S.A.,2023Q1,2023Q2,0.9216,16453,16639,font_heading,font_heading
+15253,ENERGISA S.A.,2023Q2,2023Q3,0.1888,16639,912,font_heading,font_heading
+15253,ENERGISA S.A.,2023Q3,2024Q1,0.1853,912,17077,font_heading,font_heading
+15253,ENERGISA S.A.,2024Q1,2024Q2,0.9805,17077,18308,font_heading,font_heading
+15253,ENERGISA S.A.,2024Q2,2024Q3,0.9904,18308,19734,font_heading,font_heading
+16101,Gafisa S.A.,2016Q1,2016Q2,1.0,1068,1063,font_heading,font_heading
+16101,Gafisa S.A.,2016Q2,2016Q3,1.0,1063,1041,font_heading,font_heading
+16101,Gafisa S.A.,2023Q3,2024Q1,0.8312,8478,7480,font_heading,font_heading
+16101,Gafisa S.A.,2024Q1,2024Q2,0.9721,7480,7350,font_heading,font_heading
+16306,Rossi Residencial S.A. - Em Recuperação Judicial,2015Q1,2015Q2,0.8486,6491,5405,font_heading,font_heading
+16306,Rossi Residencial S.A. - Em Recuperação Judicial,2015Q2,2015Q3,0.9514,5405,5864,font_heading,font_heading
+16306,Rossi Residencial S.A. - Em Recuperação Judicial,2015Q3,2016Q1,0.0876,5864,2327,font_heading,font_heading
+16306,Rossi Residencial S.A. - Em Recuperação Judicial,2017Q3,2018Q1,0.0706,666,812,font_heading,font_heading
+16306,Rossi Residencial S.A. - Em Recuperação Judicial,2018Q1,2018Q2,0.868,812,1336,font_heading,font_heading
+16306,Rossi Residencial S.A. - Em Recuperação Judicial,2018Q2,2018Q3,1.0,1336,1339,font_heading,font_heading
+16306,Rossi Residencial S.A. - Em Recuperação Judicial,2018Q3,2019Q1,0.5757,1339,1220,font_heading,font_heading
+16306,Rossi Residencial S.A. - Em Recuperação Judicial,2019Q1,2019Q2,1.0,1220,1223,font_heading,font_heading
+16306,Rossi Residencial S.A. - Em Recuperação Judicial,2019Q2,2019Q3,1.0,1223,1220,font_heading,font_heading
+16306,Rossi Residencial S.A. - Em Recuperação Judicial,2019Q3,2020Q1,0.9939,1220,1200,font_heading,font_heading
+16306,Rossi Residencial S.A. - Em Recuperação Judicial,2023Q2,2024Q1,0.8015,449,478,font_heading,font_heading
+16306,Rossi Residencial S.A. - Em Recuperação Judicial,2024Q1,2024Q2,0.9557,478,456,font_heading,font_heading
+17329,ENGIE BRASIL ENERGIA S.A.,2015Q1,2016Q2,0.6779,9040,3320,font_heading,font_heading
+17329,ENGIE BRASIL ENERGIA S.A.,2016Q2,2016Q3,0.0305,3320,191,font_heading,font_heading
+17329,ENGIE BRASIL ENERGIA S.A.,2016Q3,2017Q1,0.0215,191,2178,font_heading,font_heading
+17329,ENGIE BRASIL ENERGIA S.A.,2017Q1,2017Q2,0.9439,2178,2415,font_heading,font_heading
+17329,ENGIE BRASIL ENERGIA S.A.,2017Q2,2017Q3,0.9274,2415,2767,font_heading,font_heading
+17329,ENGIE BRASIL ENERGIA S.A.,2017Q3,2018Q1,0.4864,2767,2758,font_heading,font_heading
+17329,ENGIE BRASIL ENERGIA S.A.,2018Q1,2018Q2,0.8992,2758,2577,font_heading,font_heading
+17329,ENGIE BRASIL ENERGIA S.A.,2018Q2,2018Q3,0.9628,2577,2805,font_heading,font_heading
+17329,ENGIE BRASIL ENERGIA S.A.,2018Q3,2019Q1,0.8731,2805,3246,font_heading,font_heading
+17329,ENGIE BRASIL ENERGIA S.A.,2019Q1,2019Q2,1.0,3246,3358,font_heading,font_heading
+17329,ENGIE BRASIL ENERGIA S.A.,2019Q2,2019Q3,0.9614,3358,3520,font_heading,font_heading
+17329,ENGIE BRASIL ENERGIA S.A.,2019Q3,2020Q1,0.9856,3520,3589,font_heading,font_heading
+17329,ENGIE BRASIL ENERGIA S.A.,2020Q1,2020Q2,0.9686,3589,3530,font_heading,font_heading
+17329,ENGIE BRASIL ENERGIA S.A.,2020Q2,2020Q3,0.9026,3530,4116,font_heading,font_heading
+17329,ENGIE BRASIL ENERGIA S.A.,2020Q3,2021Q1,0.8543,4116,4327,font_heading,font_heading
+17329,ENGIE BRASIL ENERGIA S.A.,2021Q1,2021Q2,0.0935,4327,1764,font_heading,font_heading
+17329,ENGIE BRASIL ENERGIA S.A.,2021Q2,2021Q3,0.9388,1764,1838,font_heading,font_heading
+17329,ENGIE BRASIL ENERGIA S.A.,2021Q3,2022Q1,0.8621,1838,1707,font_heading,font_heading
+17329,ENGIE BRASIL ENERGIA S.A.,2022Q1,2022Q3,0.8095,1707,1162,font_heading,font_heading
+17329,ENGIE BRASIL ENERGIA S.A.,2022Q3,2023Q1,0.0645,1162,601,font_heading,font_heading
+17329,ENGIE BRASIL ENERGIA S.A.,2023Q1,2023Q2,0.9939,601,644,font_heading,font_heading
+17329,ENGIE BRASIL ENERGIA S.A.,2023Q2,2023Q3,1.0,644,642,font_heading,font_heading
+17329,ENGIE BRASIL ENERGIA S.A.,2023Q3,2024Q1,0.989,642,562,font_heading,font_heading
+17329,ENGIE BRASIL ENERGIA S.A.,2024Q1,2024Q2,0.0632,562,460,font_heading,font_heading
+17329,ENGIE BRASIL ENERGIA S.A.,2024Q2,2024Q3,0.9154,460,672,font_heading,font_heading
+17450,RUMO S.A.,2015Q2,2015Q3,0.9264,2879,3267,font_heading,font_heading
+17450,RUMO S.A.,2015Q3,2016Q1,0.3168,3267,3655,font_heading,font_heading
+17450,RUMO S.A.,2016Q1,2016Q2,0.8557,3655,4343,font_heading,font_heading
+17450,RUMO S.A.,2016Q2,2016Q3,0.7135,4343,3694,font_heading,font_heading
+17450,RUMO S.A.,2016Q3,2017Q1,0.3786,3694,2993,font_heading,font_heading
+17450,RUMO S.A.,2017Q1,2017Q2,0.9534,2993,2966,font_heading,font_heading
+17450,RUMO S.A.,2017Q2,2017Q3,0.9839,2966,2774,font_heading,font_heading
+17450,RUMO S.A.,2017Q3,2018Q1,0.9875,2774,2805,font_heading,font_heading
+17450,RUMO S.A.,2018Q1,2018Q2,0.9981,2805,2839,font_heading,font_heading
+17450,RUMO S.A.,2018Q2,2018Q3,0.9939,2839,2890,font_heading,font_heading
+17450,RUMO S.A.,2018Q3,2019Q1,0.9542,2890,2958,font_heading,font_heading
+17450,RUMO S.A.,2019Q1,2019Q2,0.9851,2958,3093,font_heading,font_heading
+17450,RUMO S.A.,2019Q2,2019Q3,0.9858,3093,2911,font_heading,font_heading
+17450,RUMO S.A.,2019Q3,2020Q1,0.9633,2911,3049,font_heading,font_heading
+17450,RUMO S.A.,2020Q1,2020Q2,0.9362,3049,2820,font_heading,font_heading
+17450,RUMO S.A.,2020Q2,2020Q3,0.0635,2820,3185,font_heading,font_heading
+17450,RUMO S.A.,2020Q3,2021Q1,0.0574,3185,2664,font_heading,font_heading
+17450,RUMO S.A.,2021Q1,2021Q2,0.986,2664,2686,font_heading,font_heading
+17450,RUMO S.A.,2023Q2,2023Q3,0.1979,3062,5875,font_heading,font_heading
+17450,RUMO S.A.,2023Q3,2024Q1,0.7346,5875,8225,font_heading,font_heading
+17450,RUMO S.A.,2024Q1,2024Q2,0.9042,8225,11154,font_heading,font_heading
+17450,RUMO S.A.,2024Q2,2024Q3,0.9151,11154,8295,font_heading,font_heading
+17671,TELEFÔNICA BRASIL S.A,2015Q1,2015Q2,0.8976,20891,27854,font_heading,font_heading
+17671,TELEFÔNICA BRASIL S.A,2015Q2,2015Q3,0.962,27854,29328,font_heading,font_heading
+17671,TELEFÔNICA BRASIL S.A,2015Q3,2016Q1,0.8991,29328,26755,font_heading,font_heading
+17671,TELEFÔNICA BRASIL S.A,2016Q1,2016Q2,0.7575,26755,17007,font_heading,font_heading
+17671,TELEFÔNICA BRASIL S.A,2016Q2,2016Q3,0.9848,17007,17299,font_heading,font_heading
+17671,TELEFÔNICA BRASIL S.A,2016Q3,2017Q1,0.5109,17299,6260,font_heading,font_heading
+17671,TELEFÔNICA BRASIL S.A,2017Q1,2017Q2,0.9528,6260,6813,font_heading,font_heading
+17671,TELEFÔNICA BRASIL S.A,2017Q2,2017Q3,0.9515,6813,7123,font_heading,font_heading
+17671,TELEFÔNICA BRASIL S.A,2017Q3,2018Q1,0.852,7123,5699,font_heading,font_heading
+17671,TELEFÔNICA BRASIL S.A,2018Q1,2018Q2,0.9544,5699,5916,font_heading,font_heading
+17671,TELEFÔNICA BRASIL S.A,2018Q2,2018Q3,0.9513,5916,6089,font_heading,font_heading
+17671,TELEFÔNICA BRASIL S.A,2018Q3,2019Q1,0.861,6089,5681,font_heading,font_heading
+17671,TELEFÔNICA BRASIL S.A,2019Q1,2019Q2,0.9529,5681,5947,font_heading,font_heading
+17671,TELEFÔNICA BRASIL S.A,2019Q2,2019Q3,0.9315,5947,5541,font_heading,font_heading
+17671,TELEFÔNICA BRASIL S.A,2019Q3,2020Q1,0.8911,5541,5846,font_heading,font_heading
+17671,TELEFÔNICA BRASIL S.A,2020Q1,2020Q2,0.959,5846,6151,font_heading,font_heading
+17671,TELEFÔNICA BRASIL S.A,2020Q2,2020Q3,0.9377,6151,6655,font_heading,font_heading
+17671,TELEFÔNICA BRASIL S.A,2020Q3,2021Q1,0.2292,6655,364,font_heading,font_heading
+17671,TELEFÔNICA BRASIL S.A,2021Q1,2021Q2,0.9849,364,364,font_heading,font_heading
+17671,TELEFÔNICA BRASIL S.A,2021Q2,2021Q3,0.9838,364,367,font_heading,font_heading
+17671,TELEFÔNICA BRASIL S.A,2021Q3,2022Q1,0.0759,367,184,font_heading,font_heading
+17671,TELEFÔNICA BRASIL S.A,2022Q1,2022Q2,1.0,184,184,font_heading,font_heading
+17671,TELEFÔNICA BRASIL S.A,2022Q2,2022Q3,0.3289,184,1355,font_heading,font_heading
+17671,TELEFÔNICA BRASIL S.A,2022Q3,2023Q1,0.0513,1355,602,font_heading,font_heading
+17671,TELEFÔNICA BRASIL S.A,2023Q1,2023Q2,0.9949,602,602,font_heading,font_heading
+17671,TELEFÔNICA BRASIL S.A,2023Q2,2023Q3,0.8716,602,656,font_heading,font_heading
+17671,TELEFÔNICA BRASIL S.A,2023Q3,2024Q1,0.4756,656,9277,font_heading,font_heading
+17671,TELEFÔNICA BRASIL S.A,2024Q1,2024Q2,0.9249,9277,10123,font_heading,font_heading
+17671,TELEFÔNICA BRASIL S.A,2024Q2,2024Q3,0.923,10123,11573,font_heading,font_heading
+17892,Santos Brasil Participações S.A.,2015Q1,2015Q2,0.9976,3948,3991,font_heading,font_heading
+17892,Santos Brasil Participações S.A.,2015Q2,2015Q3,0.9449,3991,4884,font_heading,font_heading
+17892,Santos Brasil Participações S.A.,2015Q3,2016Q1,0.8648,4884,5720,font_heading,font_heading
+17892,Santos Brasil Participações S.A.,2016Q1,2016Q2,0.9731,5720,6291,font_heading,font_heading
+17892,Santos Brasil Participações S.A.,2016Q2,2016Q3,0.9483,6291,6780,font_heading,font_heading
+17892,Santos Brasil Participações S.A.,2016Q3,2017Q2,0.8814,6780,6464,font_heading,font_heading
+17892,Santos Brasil Participações S.A.,2017Q2,2017Q3,0.9971,6464,6415,font_heading,font_heading
+17892,Santos Brasil Participações S.A.,2017Q3,2018Q1,0.915,6415,6274,font_heading,font_heading
+17892,Santos Brasil Participações S.A.,2018Q1,2018Q2,0.9191,6274,5846,font_heading,font_heading
+17892,Santos Brasil Participações S.A.,2018Q2,2018Q3,0.8324,5846,4949,font_heading,font_heading
+17892,Santos Brasil Participações S.A.,2018Q3,2019Q1,0.859,4949,4840,font_heading,font_heading
+17892,Santos Brasil Participações S.A.,2019Q1,2019Q2,0.9205,4840,7178,font_heading,font_heading
+17892,Santos Brasil Participações S.A.,2019Q2,2019Q3,0.9632,7178,7195,font_heading,font_heading
+17892,Santos Brasil Participações S.A.,2019Q3,2020Q1,0.752,7195,6878,font_heading,font_heading
+17892,Santos Brasil Participações S.A.,2020Q1,2020Q2,0.9824,6878,7139,font_heading,font_heading
+17892,Santos Brasil Participações S.A.,2020Q2,2020Q3,0.9874,7139,7342,font_heading,font_heading
+17892,Santos Brasil Participações S.A.,2020Q3,2021Q1,0.9663,7342,7187,font_heading,font_heading
+17892,Santos Brasil Participações S.A.,2021Q1,2021Q2,0.9924,7187,7132,font_heading,font_heading
+17892,Santos Brasil Participações S.A.,2024Q1,2024Q2,0.9971,5633,5633,font_heading,font_heading
+17914,Massa Falida da MMX Mineração e Metálicos S.A.,2015Q1,2015Q2,1.0,982,990,font_heading,font_heading
+17914,Massa Falida da MMX Mineração e Metálicos S.A.,2015Q2,2015Q3,0.9937,990,972,font_heading,font_heading
+17914,Massa Falida da MMX Mineração e Metálicos S.A.,2015Q3,2016Q1,0.9882,972,980,font_heading,font_heading
+17914,Massa Falida da MMX Mineração e Metálicos S.A.,2017Q1,2017Q2,0.9794,828,756,font_heading,font_heading
+17914,Massa Falida da MMX Mineração e Metálicos S.A.,2017Q2,2017Q3,0.9794,756,828,font_heading,font_heading
+17914,Massa Falida da MMX Mineração e Metálicos S.A.,2017Q3,2018Q1,0.9794,828,739,font_heading,font_heading
+17914,Massa Falida da MMX Mineração e Metálicos S.A.,2018Q1,2018Q2,1.0,739,752,font_heading,font_heading
+17914,Massa Falida da MMX Mineração e Metálicos S.A.,2018Q2,2018Q3,1.0,752,741,font_heading,font_heading
+17914,Massa Falida da MMX Mineração e Metálicos S.A.,2018Q3,2019Q1,1.0,741,744,font_heading,font_heading
+17914,Massa Falida da MMX Mineração e Metálicos S.A.,2019Q1,2019Q2,1.0,744,744,font_heading,font_heading
+17914,Massa Falida da MMX Mineração e Metálicos S.A.,2019Q2,2019Q3,1.0,744,755,font_heading,font_heading
+17973,COGNA EDUCAÇÃO S.A.,2015Q2,2015Q3,0.9503,2119,2039,font_heading,font_heading
+17973,COGNA EDUCAÇÃO S.A.,2015Q3,2016Q1,0.459,2039,1941,font_heading,font_heading
+17973,COGNA EDUCAÇÃO S.A.,2016Q3,2017Q1,0.7632,2103,3029,font_heading,font_heading
+17973,COGNA EDUCAÇÃO S.A.,2017Q1,2017Q2,0.9862,3029,2984,font_heading,font_heading
+17973,COGNA EDUCAÇÃO S.A.,2017Q2,2017Q3,0.9948,2984,2965,font_heading,font_heading
+17973,COGNA EDUCAÇÃO S.A.,2017Q3,2018Q1,0.9713,2965,2702,font_heading,font_heading
+17973,COGNA EDUCAÇÃO S.A.,2018Q1,2018Q2,0.9992,2702,2715,font_heading,font_heading
+17973,COGNA EDUCAÇÃO S.A.,2018Q2,2018Q3,0.8638,2715,4751,font_heading,font_heading
+17973,COGNA EDUCAÇÃO S.A.,2018Q3,2019Q1,0.7055,4751,4421,font_heading,font_heading
+17973,COGNA EDUCAÇÃO S.A.,2023Q3,2024Q1,0.9895,8374,8310,font_heading,font_heading
+17973,COGNA EDUCAÇÃO S.A.,2024Q1,2024Q2,0.9626,8310,7250,font_heading,font_heading
+17973,COGNA EDUCAÇÃO S.A.,2024Q2,2024Q3,0.9915,7250,7041,font_heading,font_heading
+18376,ISA ENERGIA BRASIL S.A,2015Q1,2015Q2,0.9822,11688,11150,font_heading,font_heading
+18376,ISA ENERGIA BRASIL S.A,2015Q2,2015Q3,0.9985,11150,11135,font_heading,font_heading
+18376,ISA ENERGIA BRASIL S.A,2015Q3,2016Q1,0.9507,11135,10774,font_heading,font_heading
+18376,ISA ENERGIA BRASIL S.A,2016Q1,2016Q2,0.9899,10774,11462,font_heading,font_heading
+18376,ISA ENERGIA BRASIL S.A,2016Q2,2016Q3,0.9955,11462,11735,font_heading,font_heading
+18376,ISA ENERGIA BRASIL S.A,2016Q3,2017Q1,0.9624,11735,12357,font_heading,font_heading
+18376,ISA ENERGIA BRASIL S.A,2017Q1,2017Q2,0.9899,12357,12693,font_heading,font_heading
+18376,ISA ENERGIA BRASIL S.A,2017Q2,2017Q3,0.8906,12693,18611,font_heading,font_heading
+18376,ISA ENERGIA BRASIL S.A,2017Q3,2018Q1,0.9894,18611,18436,font_heading,font_heading
+18376,ISA ENERGIA BRASIL S.A,2018Q1,2018Q2,0.9877,18436,19587,font_heading,font_heading
+18376,ISA ENERGIA BRASIL S.A,2018Q2,2018Q3,0.9709,19587,22939,font_heading,font_heading
+18376,ISA ENERGIA BRASIL S.A,2018Q3,2019Q1,0.6962,22939,14185,font_heading,font_heading
+18376,ISA ENERGIA BRASIL S.A,2019Q1,2019Q2,0.828,14185,8671,font_heading,font_heading
+18376,ISA ENERGIA BRASIL S.A,2020Q2,2020Q3,0.9932,14766,15080,font_heading,font_heading
+18376,ISA ENERGIA BRASIL S.A,2020Q3,2021Q1,0.9332,15080,16204,font_heading,font_heading
+18376,ISA ENERGIA BRASIL S.A,2021Q1,2021Q2,0.997,16204,16442,font_heading,font_heading
+18376,ISA ENERGIA BRASIL S.A,2021Q2,2021Q3,0.993,16442,16279,font_heading,font_heading
+18376,ISA ENERGIA BRASIL S.A,2021Q3,2022Q1,0.6891,16279,7635,font_heading,font_heading
+18376,ISA ENERGIA BRASIL S.A,2022Q1,2022Q2,0.9989,7635,7684,font_heading,font_heading
+18376,ISA ENERGIA BRASIL S.A,2022Q2,2022Q3,0.8953,7684,10898,font_heading,font_heading
+18376,ISA ENERGIA BRASIL S.A,2024Q1,2024Q2,0.9953,6647,7026,font_heading,font_heading
+18376,ISA ENERGIA BRASIL S.A,2024Q2,2024Q3,0.1792,7026,432,font_heading,font_heading
+18465,ULTRAPAR PARTICIPACOES S.A.,2015Q1,2015Q2,0.9897,16407,16674,font_heading,font_heading
+18465,ULTRAPAR PARTICIPACOES S.A.,2015Q2,2015Q3,0.9979,16674,16862,font_heading,font_heading
+18465,ULTRAPAR PARTICIPACOES S.A.,2015Q3,2016Q1,0.9481,16862,14668,font_heading,font_heading
+18465,ULTRAPAR PARTICIPACOES S.A.,2016Q1,2016Q2,0.9899,14668,15719,font_heading,font_heading
+18465,ULTRAPAR PARTICIPACOES S.A.,2016Q2,2016Q3,0.9883,15719,15892,font_heading,font_heading
+18465,ULTRAPAR PARTICIPACOES S.A.,2016Q3,2017Q1,0.9518,15892,15696,font_heading,font_heading
+18465,ULTRAPAR PARTICIPACOES S.A.,2017Q1,2017Q2,0.9814,15696,17508,font_heading,font_heading
+18465,ULTRAPAR PARTICIPACOES S.A.,2017Q2,2017Q3,0.9975,17508,17924,font_heading,font_heading
+18465,ULTRAPAR PARTICIPACOES S.A.,2017Q3,2018Q1,0.0978,17924,1532,font_heading,font_heading
+18465,ULTRAPAR PARTICIPACOES S.A.,2018Q1,2018Q2,0.0794,1532,20333,font_heading,font_heading
+18465,ULTRAPAR PARTICIPACOES S.A.,2018Q2,2018Q3,0.9906,20333,20546,font_heading,font_heading
+18465,ULTRAPAR PARTICIPACOES S.A.,2018Q3,2019Q1,0.2436,20546,3013,font_heading,font_heading
+18465,ULTRAPAR PARTICIPACOES S.A.,2019Q1,2019Q2,1.0,3013,3013,font_heading,font_heading
+18465,ULTRAPAR PARTICIPACOES S.A.,2019Q2,2019Q3,0.2403,3013,19684,font_heading,font_heading
+18465,ULTRAPAR PARTICIPACOES S.A.,2019Q3,2020Q1,0.7641,19684,7714,font_heading,font_heading
+18465,ULTRAPAR PARTICIPACOES S.A.,2020Q1,2020Q2,0.8147,7714,22558,font_heading,font_heading
+18465,ULTRAPAR PARTICIPACOES S.A.,2020Q2,2020Q3,0.9782,22558,21936,font_heading,font_heading
+18465,ULTRAPAR PARTICIPACOES S.A.,2020Q3,2021Q1,0.8067,21936,9637,font_heading,font_heading
+18465,ULTRAPAR PARTICIPACOES S.A.,2021Q1,2021Q2,0.9507,9637,7475,font_heading,font_heading
+18465,ULTRAPAR PARTICIPACOES S.A.,2021Q2,2021Q3,1.0,7475,7475,font_heading,font_heading
+18465,ULTRAPAR PARTICIPACOES S.A.,2021Q3,2022Q1,0.3012,7475,5413,font_heading,font_heading
+18465,ULTRAPAR PARTICIPACOES S.A.,2022Q1,2022Q2,0.7703,5413,8463,font_heading,font_heading
+18465,ULTRAPAR PARTICIPACOES S.A.,2022Q2,2022Q3,0.9675,8463,9135,font_heading,font_heading
+18465,ULTRAPAR PARTICIPACOES S.A.,2022Q3,2023Q1,0.6364,9135,7202,font_heading,font_heading
+18465,ULTRAPAR PARTICIPACOES S.A.,2023Q1,2023Q2,0.7879,7202,7429,font_heading,font_heading
+18465,ULTRAPAR PARTICIPACOES S.A.,2023Q2,2023Q3,0.8518,7429,10529,font_heading,font_heading
+18465,ULTRAPAR PARTICIPACOES S.A.,2023Q3,2024Q1,0.1924,10529,1823,font_heading,font_heading
+18465,ULTRAPAR PARTICIPACOES S.A.,2024Q1,2024Q2,0.1223,1823,5318,font_heading,font_heading
+18465,ULTRAPAR PARTICIPACOES S.A.,2024Q2,2024Q3,0.6856,5318,2676,font_heading,font_heading
+18627,Cia. de Saneamento do Paraná (Sanepar),2015Q1,2015Q2,0.9907,19968,22095,font_heading,font_heading
+18627,Cia. de Saneamento do Paraná (Sanepar),2015Q2,2015Q3,0.9359,22095,25557,font_heading,font_heading
+18627,Cia. de Saneamento do Paraná (Sanepar),2015Q3,2016Q1,0.561,25557,7451,font_heading,font_heading
+18627,Cia. de Saneamento do Paraná (Sanepar),2016Q1,2016Q2,0.9954,7451,7402,font_heading,font_heading
+18627,Cia. de Saneamento do Paraná (Sanepar),2016Q2,2016Q3,0.9767,7402,8520,font_heading,font_heading
+18627,Cia. de Saneamento do Paraná (Sanepar),2016Q3,2017Q1,0.2117,8520,153,font_heading,font_heading
+18627,Cia. de Saneamento do Paraná (Sanepar),2017Q1,2017Q2,1.0,153,153,font_heading,font_heading
+18627,Cia. de Saneamento do Paraná (Sanepar),2017Q2,2017Q3,1.0,153,153,font_heading,font_heading
+18627,Cia. de Saneamento do Paraná (Sanepar),2017Q3,2018Q1,1.0,153,153,font_heading,font_heading
+18627,Cia. de Saneamento do Paraná (Sanepar),2018Q1,2018Q2,1.0,153,153,font_heading,font_heading
+18627,Cia. de Saneamento do Paraná (Sanepar),2020Q1,2020Q2,0.9728,16056,16387,font_heading,font_heading
+18627,Cia. de Saneamento do Paraná (Sanepar),2021Q1,2021Q2,0.9989,18207,18339,font_heading,font_heading
+18627,Cia. de Saneamento do Paraná (Sanepar),2021Q2,2021Q3,0.9979,18339,18436,font_heading,font_heading
+18627,Cia. de Saneamento do Paraná (Sanepar),2021Q3,2022Q1,0.9912,18436,19207,font_heading,font_heading
+18627,Cia. de Saneamento do Paraná (Sanepar),2022Q1,2022Q2,0.9976,19207,19251,font_heading,font_heading
+18627,Cia. de Saneamento do Paraná (Sanepar),2022Q2,2022Q3,0.9958,19251,19053,font_heading,font_heading
+18627,Cia. de Saneamento do Paraná (Sanepar),2022Q3,2023Q1,0.9942,19053,18465,font_heading,font_heading
+18627,Cia. de Saneamento do Paraná (Sanepar),2023Q1,2023Q2,0.9949,18465,19123,font_heading,font_heading
+18627,Cia. de Saneamento do Paraná (Sanepar),2023Q2,2023Q3,0.9983,19123,19203,font_heading,font_heading
+18627,Cia. de Saneamento do Paraná (Sanepar),2023Q3,2024Q1,0.9011,19203,14653,font_heading,font_heading
+18627,Cia. de Saneamento do Paraná (Sanepar),2024Q1,2024Q2,0.9966,14653,15034,font_heading,font_heading
+18627,Cia. de Saneamento do Paraná (Sanepar),2024Q2,2024Q3,0.9967,15034,14984,font_heading,font_heading
+18660,CPFL ENERGIA S.A.,2015Q1,2015Q2,0.5488,707,281,font_heading,font_heading
+18660,CPFL ENERGIA S.A.,2015Q2,2015Q3,1.0,281,281,font_heading,font_heading
+18660,CPFL ENERGIA S.A.,2015Q3,2016Q1,0.7887,281,445,font_heading,font_heading
+18660,CPFL ENERGIA S.A.,2016Q1,2016Q2,1.0,445,445,font_heading,font_heading
+18660,CPFL ENERGIA S.A.,2016Q2,2016Q3,1.0,445,445,font_heading,font_heading
+18660,CPFL ENERGIA S.A.,2016Q3,2017Q1,0.9962,445,458,font_heading,font_heading
+18660,CPFL ENERGIA S.A.,2017Q1,2017Q2,0.4211,458,4018,font_heading,font_heading
+18660,CPFL ENERGIA S.A.,2017Q2,2017Q3,0.7688,4018,7020,font_heading,font_heading
+18660,CPFL ENERGIA S.A.,2017Q3,2018Q1,0.6272,7020,4940,font_heading,font_heading
+18660,CPFL ENERGIA S.A.,2018Q1,2018Q2,0.7597,4940,6637,font_heading,font_heading
+18660,CPFL ENERGIA S.A.,2018Q2,2018Q3,0.9519,6637,5980,font_heading,font_heading
+18660,CPFL ENERGIA S.A.,2018Q3,2019Q1,0.8944,5980,6086,font_heading,font_heading
+18660,CPFL ENERGIA S.A.,2019Q1,2019Q2,0.9864,6086,6428,font_heading,font_heading
+18660,CPFL ENERGIA S.A.,2019Q2,2019Q3,0.6738,6428,12126,font_heading,font_heading
+18660,CPFL ENERGIA S.A.,2019Q3,2020Q1,0.6346,12126,5940,font_heading,font_heading
+18660,CPFL ENERGIA S.A.,2020Q1,2020Q2,0.9452,5940,6277,font_heading,font_heading
+18660,CPFL ENERGIA S.A.,2020Q2,2020Q3,0.9664,6277,6600,font_heading,font_heading
+18660,CPFL ENERGIA S.A.,2021Q2,2021Q3,0.6238,6153,14855,font_heading,font_heading
+18660,CPFL ENERGIA S.A.,2021Q3,2022Q1,0.5614,14855,6129,font_heading,font_heading
+18660,CPFL ENERGIA S.A.,2022Q1,2022Q2,0.683,6129,3112,font_heading,font_heading
+18660,CPFL ENERGIA S.A.,2022Q2,2022Q3,0.9945,3112,3131,font_heading,font_heading
+18660,CPFL ENERGIA S.A.,2022Q3,2023Q1,0.8601,3131,1505,font_heading,font_heading
+18660,CPFL ENERGIA S.A.,2023Q1,2023Q2,0.9976,1505,1508,font_heading,font_heading
+18660,CPFL ENERGIA S.A.,2023Q2,2023Q3,0.9949,1508,1511,font_heading,font_heading
+18660,CPFL ENERGIA S.A.,2023Q3,2024Q1,0.7533,1511,2091,font_heading,font_heading
+18660,CPFL ENERGIA S.A.,2024Q1,2024Q2,0.9341,2091,1996,font_heading,font_heading
+18660,CPFL ENERGIA S.A.,2024Q2,2024Q3,0.503,1996,5917,font_heading,font_heading
+18724,BRADESPAR S.A.,2015Q1,2015Q2,0.9959,856,856,font_heading,font_heading
+18724,BRADESPAR S.A.,2015Q2,2015Q3,0.9069,856,1007,font_heading,font_heading
+18724,BRADESPAR S.A.,2015Q3,2016Q1,0.2967,1007,25551,font_heading,font_heading
+18724,BRADESPAR S.A.,2016Q1,2016Q2,0.9596,25551,28925,font_heading,font_heading
+18724,BRADESPAR S.A.,2016Q2,2016Q3,0.9608,28925,32067,font_heading,font_heading
+18724,BRADESPAR S.A.,2016Q3,2017Q1,0.8725,32067,35427,font_heading,font_heading
+18724,BRADESPAR S.A.,2017Q1,2017Q2,0.953,35427,40342,font_heading,font_heading
+18724,BRADESPAR S.A.,2018Q1,2018Q2,0.9708,38789,43053,font_heading,font_heading
+18724,BRADESPAR S.A.,2018Q2,2018Q3,0.9732,43053,44427,font_heading,font_heading
+18724,BRADESPAR S.A.,2018Q3,2019Q1,0.6286,44427,47988,font_heading,font_heading
+18724,BRADESPAR S.A.,2019Q3,2020Q1,0.3004,43156,1979,font_heading,font_heading
+18724,BRADESPAR S.A.,2020Q1,2020Q2,0.9959,1979,1979,font_heading,font_heading
+18724,BRADESPAR S.A.,2020Q2,2020Q3,0.9419,1979,2495,font_heading,font_heading
+18821,MOTIVA INFRAESTRUTURA DE MOBILIDADE S.A.,2015Q1,2015Q2,0.938,6222,9476,font_heading,font_heading
+18821,MOTIVA INFRAESTRUTURA DE MOBILIDADE S.A.,2015Q2,2015Q3,0.884,9476,5287,font_heading,font_heading
+18821,MOTIVA INFRAESTRUTURA DE MOBILIDADE S.A.,2015Q3,2016Q1,0.2412,5287,60426,font_heading,font_heading
+18821,MOTIVA INFRAESTRUTURA DE MOBILIDADE S.A.,2016Q1,2016Q2,0.9839,60426,69159,font_heading,font_heading
+18821,MOTIVA INFRAESTRUTURA DE MOBILIDADE S.A.,2016Q2,2016Q3,0.9942,69159,68458,font_heading,font_heading
+18821,MOTIVA INFRAESTRUTURA DE MOBILIDADE S.A.,2016Q3,2017Q1,0.2253,68458,4700,font_heading,font_heading
+18821,MOTIVA INFRAESTRUTURA DE MOBILIDADE S.A.,2017Q1,2017Q2,0.2273,4700,827,font_heading,font_heading
+18821,MOTIVA INFRAESTRUTURA DE MOBILIDADE S.A.,2017Q2,2017Q3,0.0893,827,166,font_heading,font_heading
+18821,MOTIVA INFRAESTRUTURA DE MOBILIDADE S.A.,2017Q3,2018Q1,0.248,166,6120,font_heading,font_heading
+18821,MOTIVA INFRAESTRUTURA DE MOBILIDADE S.A.,2018Q1,2018Q2,0.9926,6120,6532,font_heading,font_heading
+18821,MOTIVA INFRAESTRUTURA DE MOBILIDADE S.A.,2018Q2,2018Q3,0.9959,6532,6813,font_heading,font_heading
+18821,MOTIVA INFRAESTRUTURA DE MOBILIDADE S.A.,2018Q3,2019Q1,0.2182,6813,2921,font_heading,font_heading
+18821,MOTIVA INFRAESTRUTURA DE MOBILIDADE S.A.,2019Q1,2019Q2,0.8669,2921,3926,font_heading,font_heading
+18821,MOTIVA INFRAESTRUTURA DE MOBILIDADE S.A.,2019Q2,2019Q3,0.9786,3926,3840,font_heading,font_heading
+18821,MOTIVA INFRAESTRUTURA DE MOBILIDADE S.A.,2019Q3,2020Q1,0.8227,3840,3389,font_heading,font_heading
+18821,MOTIVA INFRAESTRUTURA DE MOBILIDADE S.A.,2020Q1,2020Q2,0.8287,3389,5971,font_heading,font_heading
+18821,MOTIVA INFRAESTRUTURA DE MOBILIDADE S.A.,2020Q2,2020Q3,0.9982,5971,5980,font_heading,font_heading
+18821,MOTIVA INFRAESTRUTURA DE MOBILIDADE S.A.,2020Q3,2021Q1,0.6867,5980,10418,font_heading,font_heading
+18821,MOTIVA INFRAESTRUTURA DE MOBILIDADE S.A.,2021Q1,2021Q2,0.9665,10418,12874,font_heading,font_heading
+18821,MOTIVA INFRAESTRUTURA DE MOBILIDADE S.A.,2021Q2,2021Q3,0.9738,12874,14142,font_heading,font_heading
+18821,MOTIVA INFRAESTRUTURA DE MOBILIDADE S.A.,2021Q3,2022Q1,0.8898,14142,19374,font_heading,font_heading
+18821,MOTIVA INFRAESTRUTURA DE MOBILIDADE S.A.,2022Q1,2022Q2,0.8584,19374,11714,font_heading,font_heading
+18821,MOTIVA INFRAESTRUTURA DE MOBILIDADE S.A.,2022Q2,2022Q3,0.9928,11714,12364,font_heading,font_heading
+18821,MOTIVA INFRAESTRUTURA DE MOBILIDADE S.A.,2023Q2,2023Q3,0.8379,10309,12043,font_heading,font_heading
+18821,MOTIVA INFRAESTRUTURA DE MOBILIDADE S.A.,2023Q3,2024Q1,0.9675,12043,11227,font_heading,font_heading
+18821,MOTIVA INFRAESTRUTURA DE MOBILIDADE S.A.,2024Q1,2024Q2,0.997,11227,11550,font_heading,font_heading
+19445,CIA SANEAMENTO DE MINAS GERAIS-COPASA MG,2018Q3,2019Q1,0.9841,7627,7868,font_heading,font_heading
+19445,CIA SANEAMENTO DE MINAS GERAIS-COPASA MG,2019Q1,2019Q2,0.7527,7868,11650,font_heading,font_heading
+19445,CIA SANEAMENTO DE MINAS GERAIS-COPASA MG,2019Q2,2019Q3,0.9996,11650,11658,font_heading,font_heading
+19445,CIA SANEAMENTO DE MINAS GERAIS-COPASA MG,2019Q3,2020Q1,0.1304,11658,1740,font_heading,font_heading
+19445,CIA SANEAMENTO DE MINAS GERAIS-COPASA MG,2020Q1,2020Q2,0.9988,1740,1731,font_heading,font_heading
+19445,CIA SANEAMENTO DE MINAS GERAIS-COPASA MG,2020Q2,2020Q3,0.9865,1731,1751,font_heading,font_heading
+19445,CIA SANEAMENTO DE MINAS GERAIS-COPASA MG,2020Q3,2021Q1,1.0,1751,1750,font_heading,font_heading
+19445,CIA SANEAMENTO DE MINAS GERAIS-COPASA MG,2021Q1,2021Q2,0.9406,1750,1962,font_heading,font_heading
+19445,CIA SANEAMENTO DE MINAS GERAIS-COPASA MG,2021Q2,2021Q3,1.0,1962,1962,font_heading,font_heading
+19445,CIA SANEAMENTO DE MINAS GERAIS-COPASA MG,2021Q3,2022Q1,0.162,1962,8399,font_heading,font_heading
+19445,CIA SANEAMENTO DE MINAS GERAIS-COPASA MG,2022Q1,2022Q2,0.856,8399,7156,font_heading,font_heading
+19445,CIA SANEAMENTO DE MINAS GERAIS-COPASA MG,2022Q2,2022Q3,0.9806,7156,7087,font_heading,font_heading
+19445,CIA SANEAMENTO DE MINAS GERAIS-COPASA MG,2022Q3,2023Q1,0.8292,7087,4642,font_heading,font_heading
+19445,CIA SANEAMENTO DE MINAS GERAIS-COPASA MG,2023Q1,2023Q2,0.9249,4642,4729,font_heading,font_heading
+19445,CIA SANEAMENTO DE MINAS GERAIS-COPASA MG,2023Q2,2023Q3,0.9385,4729,5644,font_heading,font_heading
+19445,CIA SANEAMENTO DE MINAS GERAIS-COPASA MG,2023Q3,2024Q1,0.9262,5644,6113,font_heading,font_heading
+19445,CIA SANEAMENTO DE MINAS GERAIS-COPASA MG,2024Q1,2024Q2,0.9713,6113,5665,font_heading,font_heading
+19445,CIA SANEAMENTO DE MINAS GERAIS-COPASA MG,2024Q2,2024Q3,0.9357,5665,7823,font_heading,font_heading
+19453,Ecorodovias Infraestrutura e Logística S.A.,2015Q1,2015Q2,0.9101,12645,13830,font_heading,font_heading
+19453,Ecorodovias Infraestrutura e Logística S.A.,2015Q2,2015Q3,0.9959,13830,14428,font_heading,font_heading
+19453,Ecorodovias Infraestrutura e Logística S.A.,2015Q3,2016Q1,0.9527,14428,19175,font_heading,font_heading
+19453,Ecorodovias Infraestrutura e Logística S.A.,2016Q1,2016Q2,0.896,19175,13527,font_heading,font_heading
+19453,Ecorodovias Infraestrutura e Logística S.A.,2016Q2,2016Q3,0.9612,13527,14022,font_heading,font_heading
+19453,Ecorodovias Infraestrutura e Logística S.A.,2016Q3,2017Q1,0.9621,14022,14461,font_heading,font_heading
+19453,Ecorodovias Infraestrutura e Logística S.A.,2017Q1,2017Q2,0.4717,14461,31038,font_heading,font_heading
+19453,Ecorodovias Infraestrutura e Logística S.A.,2017Q2,2017Q3,0.9949,31038,31691,font_heading,font_heading
+19453,Ecorodovias Infraestrutura e Logística S.A.,2017Q3,2018Q1,0.8494,31691,26118,font_heading,font_heading
+19453,Ecorodovias Infraestrutura e Logística S.A.,2018Q1,2018Q2,0.9995,26118,26299,font_heading,font_heading
+19453,Ecorodovias Infraestrutura e Logística S.A.,2018Q2,2018Q3,0.9389,26299,26123,font_heading,font_heading
+19453,Ecorodovias Infraestrutura e Logística S.A.,2018Q3,2019Q1,0.9855,26123,30524,font_heading,font_heading
+19453,Ecorodovias Infraestrutura e Logística S.A.,2019Q1,2019Q2,0.9963,30524,34215,font_heading,font_heading
+19453,Ecorodovias Infraestrutura e Logística S.A.,2019Q2,2019Q3,0.9944,34215,34092,font_heading,font_heading
+19453,Ecorodovias Infraestrutura e Logística S.A.,2021Q1,2021Q2,0.5536,6815,4652,font_heading,font_heading
+19453,Ecorodovias Infraestrutura e Logística S.A.,2021Q2,2021Q3,0.9913,4652,4655,font_heading,font_heading
+19453,Ecorodovias Infraestrutura e Logística S.A.,2021Q3,2022Q1,0.757,4655,6710,font_heading,font_heading
+19453,Ecorodovias Infraestrutura e Logística S.A.,2022Q1,2022Q2,0.8897,6710,9370,font_heading,font_heading
+19453,Ecorodovias Infraestrutura e Logística S.A.,2022Q2,2022Q3,0.1726,9370,326,font_heading,font_heading
+19453,Ecorodovias Infraestrutura e Logística S.A.,2024Q1,2024Q2,0.7204,3653,8281,font_heading,font_heading
+19453,Ecorodovias Infraestrutura e Logística S.A.,2024Q2,2024Q3,0.9942,8281,8474,font_heading,font_heading
+19550,NATURA COSMETICOS S.A.,2015Q2,2015Q3,0.9969,9227,9285,font_heading,font_heading
+19550,NATURA COSMETICOS S.A.,2016Q2,2016Q3,0.9994,10655,10663,font_heading,font_heading
+19550,NATURA COSMETICOS S.A.,2016Q3,2017Q1,0.9788,10663,10630,font_heading,font_heading
+19550,NATURA COSMETICOS S.A.,2020Q1,2020Q2,0.8837,6165,6071,font_heading,font_heading
+19550,NATURA COSMETICOS S.A.,2020Q2,2020Q3,0.1604,6071,107,font_heading,font_heading
+19550,NATURA COSMETICOS S.A.,2020Q3,2021Q1,1.0,107,179,font_heading,font_heading
+19550,NATURA COSMETICOS S.A.,2021Q1,2022Q1,1.0,179,167,font_heading,font_heading
+19550,NATURA COSMETICOS S.A.,2022Q1,2022Q2,1.0,167,106,font_heading,font_heading
+19550,NATURA COSMETICOS S.A.,2022Q2,2023Q1,1.0,106,106,font_heading,font_heading
+19550,NATURA COSMETICOS S.A.,2023Q1,2023Q2,1.0,106,167,font_heading,font_heading
+19550,NATURA COSMETICOS S.A.,2023Q2,2023Q3,1.0,167,167,font_heading,font_heading
+19550,NATURA COSMETICOS S.A.,2023Q3,2024Q1,1.0,167,167,font_heading,font_heading
+19550,NATURA COSMETICOS S.A.,2024Q1,2024Q2,1.0,167,167,font_heading,font_heading
+19550,NATURA COSMETICOS S.A.,2024Q2,2024Q3,1.0,167,167,font_heading,font_heading
+19569,Gol Linhas Aéreas Inteligentes S.A.,2015Q3,2016Q1,0.9131,10993,8454,font_heading,font_heading
+19569,Gol Linhas Aéreas Inteligentes S.A.,2016Q1,2016Q2,0.9582,8454,8825,font_heading,font_heading
+19569,Gol Linhas Aéreas Inteligentes S.A.,2016Q2,2016Q3,0.8879,8825,11947,font_heading,font_heading
+19569,Gol Linhas Aéreas Inteligentes S.A.,2016Q3,2017Q1,0.9261,11947,5567,font_heading,font_heading
+19569,Gol Linhas Aéreas Inteligentes S.A.,2017Q1,2017Q2,0.9899,5567,5897,font_heading,font_heading
+19569,Gol Linhas Aéreas Inteligentes S.A.,2017Q2,2017Q3,0.8712,5897,12629,font_heading,font_heading
+19569,Gol Linhas Aéreas Inteligentes S.A.,2017Q3,2018Q1,0.9059,12629,12861,font_heading,font_heading
+19569,Gol Linhas Aéreas Inteligentes S.A.,2018Q1,2018Q2,0.9649,12861,14679,font_heading,font_heading
+19569,Gol Linhas Aéreas Inteligentes S.A.,2019Q1,2019Q2,0.6008,55686,12668,font_heading,font_heading
+19569,Gol Linhas Aéreas Inteligentes S.A.,2019Q2,2019Q3,0.7892,12668,10674,font_heading,font_heading
+19569,Gol Linhas Aéreas Inteligentes S.A.,2019Q3,2020Q1,0.7103,10674,7336,font_heading,font_heading
+19569,Gol Linhas Aéreas Inteligentes S.A.,2020Q1,2020Q2,0.8156,7336,9393,font_heading,font_heading
+19569,Gol Linhas Aéreas Inteligentes S.A.,2020Q2,2020Q3,0.8647,9393,11322,font_heading,font_heading
+19569,Gol Linhas Aéreas Inteligentes S.A.,2020Q3,2021Q1,0.7113,11322,8212,font_heading,font_heading
+19569,Gol Linhas Aéreas Inteligentes S.A.,2021Q1,2021Q2,0.89,8212,8953,font_heading,font_heading
+19569,Gol Linhas Aéreas Inteligentes S.A.,2021Q2,2021Q3,0.903,8953,9694,font_heading,font_heading
+19569,Gol Linhas Aéreas Inteligentes S.A.,2021Q3,2022Q1,0.7131,9694,9204,font_heading,font_heading
+19569,Gol Linhas Aéreas Inteligentes S.A.,2022Q1,2022Q2,0.99,9204,9201,font_heading,font_heading
+19569,Gol Linhas Aéreas Inteligentes S.A.,2022Q2,2022Q3,0.9865,9201,9771,font_heading,font_heading
+19569,Gol Linhas Aéreas Inteligentes S.A.,2022Q3,2023Q1,0.828,9771,15422,font_heading,font_heading
+19569,Gol Linhas Aéreas Inteligentes S.A.,2023Q1,2023Q2,0.9901,15422,15210,font_heading,font_heading
+19569,Gol Linhas Aéreas Inteligentes S.A.,2023Q2,2023Q3,0.9591,15210,17376,font_heading,font_heading
+19569,Gol Linhas Aéreas Inteligentes S.A.,2023Q3,2024Q1,0.9194,17376,17096,font_heading,font_heading
+19569,Gol Linhas Aéreas Inteligentes S.A.,2024Q1,2024Q2,0.7558,17096,947,font_heading,font_heading
+19569,Gol Linhas Aéreas Inteligentes S.A.,2024Q2,2024Q3,0.0149,947,382,font_heading,font_heading
+19623,Diagnósticos da América S.A. (Dasa),2015Q1,2015Q2,0.9933,13737,13161,font_heading,font_heading
+19623,Diagnósticos da América S.A. (Dasa),2015Q2,2015Q3,0.9978,13161,13194,font_heading,font_heading
+19623,Diagnósticos da América S.A. (Dasa),2015Q3,2016Q1,0.9852,13194,14340,font_heading,font_heading
+19623,Diagnósticos da América S.A. (Dasa),2016Q1,2016Q2,0.9699,14340,14105,font_heading,font_heading
+19623,Diagnósticos da América S.A. (Dasa),2016Q2,2016Q3,0.9929,14105,14397,font_heading,font_heading
+19623,Diagnósticos da América S.A. (Dasa),2016Q3,2017Q1,0.2054,14397,1566,font_heading,font_heading
+19623,Diagnósticos da América S.A. (Dasa),2017Q1,2017Q2,0.594,1566,3378,font_heading,font_heading
+19623,Diagnósticos da América S.A. (Dasa),2017Q2,2017Q3,0.9155,3378,3993,font_heading,font_heading
+19623,Diagnósticos da América S.A. (Dasa),2017Q3,2018Q1,0.8309,3993,7328,font_heading,font_heading
+19623,Diagnósticos da América S.A. (Dasa),2018Q1,2018Q2,0.9983,7328,7334,font_heading,font_heading
+19623,Diagnósticos da América S.A. (Dasa),2018Q2,2018Q3,0.9977,7334,7369,font_heading,font_heading
+19623,Diagnósticos da América S.A. (Dasa),2018Q3,2019Q1,0.7497,7369,3911,font_heading,font_heading
+19623,Diagnósticos da América S.A. (Dasa),2019Q1,2019Q2,0.9941,3911,4169,font_heading,font_heading
+19623,Diagnósticos da América S.A. (Dasa),2019Q2,2019Q3,0.9812,4169,4370,font_heading,font_heading
+19623,Diagnósticos da América S.A. (Dasa),2019Q3,2020Q1,0.8947,4370,3533,font_heading,font_heading
+19623,Diagnósticos da América S.A. (Dasa),2020Q1,2020Q2,0.9561,3533,4770,font_heading,font_heading
+19623,Diagnósticos da América S.A. (Dasa),2020Q2,2020Q3,0.9974,4770,4852,font_heading,font_heading
+19623,Diagnósticos da América S.A. (Dasa),2020Q3,2021Q1,0.8607,4852,9407,font_heading,font_heading
+19623,Diagnósticos da América S.A. (Dasa),2021Q1,2021Q2,0.9994,9407,9439,font_heading,font_heading
+19623,Diagnósticos da América S.A. (Dasa),2021Q2,2021Q3,0.9985,9439,9650,font_heading,font_heading
+19623,Diagnósticos da América S.A. (Dasa),2021Q3,2022Q1,0.719,9650,6447,font_heading,font_heading
+19623,Diagnósticos da América S.A. (Dasa),2022Q1,2022Q2,0.9781,6447,5619,font_heading,font_heading
+19623,Diagnósticos da América S.A. (Dasa),2022Q2,2022Q3,0.9949,5619,5477,font_heading,font_heading
+19623,Diagnósticos da América S.A. (Dasa),2022Q3,2023Q1,0.4275,5477,2501,font_heading,font_heading
+19623,Diagnósticos da América S.A. (Dasa),2023Q1,2023Q2,0.5596,2501,5483,font_heading,font_heading
+19623,Diagnósticos da América S.A. (Dasa),2023Q2,2023Q3,0.3292,5483,1239,font_heading,font_heading
+19623,Diagnósticos da América S.A. (Dasa),2023Q3,2024Q1,0.6,1239,1557,font_heading,font_heading
+19623,Diagnósticos da América S.A. (Dasa),2024Q1,2024Q2,0.9183,1557,1487,font_heading,font_heading
+19623,Diagnósticos da América S.A. (Dasa),2024Q2,2024Q3,0.7606,1487,1377,font_heading,font_heading
+19739,LOCALIZA RENT A CAR S.A.,2015Q1,2015Q2,0.3029,5711,487,font_heading,font_heading
+19739,LOCALIZA RENT A CAR S.A.,2015Q2,2015Q3,0.7393,487,784,font_heading,font_heading
+19739,LOCALIZA RENT A CAR S.A.,2015Q3,2016Q1,0.1664,784,261,font_heading,font_heading
+19739,LOCALIZA RENT A CAR S.A.,2016Q1,2016Q2,0.2045,261,739,font_heading,font_heading
+19739,LOCALIZA RENT A CAR S.A.,2016Q2,2016Q3,0.6593,739,951,font_heading,font_heading
+19739,LOCALIZA RENT A CAR S.A.,2016Q3,2017Q1,0.0982,951,50,font_heading,font_heading
+19739,LOCALIZA RENT A CAR S.A.,2017Q1,2017Q2,0.0783,50,831,font_heading,font_heading
+19739,LOCALIZA RENT A CAR S.A.,2017Q2,2017Q3,0.9975,831,905,font_heading,font_heading
+19739,LOCALIZA RENT A CAR S.A.,2017Q3,2018Q1,0.385,905,1194,font_heading,font_heading
+19739,LOCALIZA RENT A CAR S.A.,2018Q1,2018Q2,0.9226,1194,712,font_heading,font_heading
+19739,LOCALIZA RENT A CAR S.A.,2018Q2,2018Q3,0.9959,712,942,font_heading,font_heading
+19739,LOCALIZA RENT A CAR S.A.,2018Q3,2019Q1,0.332,942,245,font_heading,font_heading
+19739,LOCALIZA RENT A CAR S.A.,2019Q1,2019Q2,0.3358,245,1029,font_heading,font_heading
+19739,LOCALIZA RENT A CAR S.A.,2019Q2,2019Q3,0.9956,1029,1371,font_heading,font_heading
+19739,LOCALIZA RENT A CAR S.A.,2019Q3,2020Q1,0.5619,1371,11197,font_heading,font_heading
+19739,LOCALIZA RENT A CAR S.A.,2020Q1,2020Q2,0.9886,11197,11897,font_heading,font_heading
+19739,LOCALIZA RENT A CAR S.A.,2020Q2,2020Q3,0.9832,11897,12064,font_heading,font_heading
+19739,LOCALIZA RENT A CAR S.A.,2020Q3,2021Q1,0.0284,12064,233,font_heading,font_heading
+19739,LOCALIZA RENT A CAR S.A.,2021Q1,2021Q2,0.0183,233,4804,font_heading,font_heading
+19739,LOCALIZA RENT A CAR S.A.,2021Q2,2021Q3,0.9983,4804,4814,font_heading,font_heading
+19739,LOCALIZA RENT A CAR S.A.,2021Q3,2022Q1,0.7865,4814,3467,font_heading,font_heading
+19739,LOCALIZA RENT A CAR S.A.,2022Q1,2022Q2,0.7679,3467,4708,font_heading,font_heading
+19739,LOCALIZA RENT A CAR S.A.,2022Q2,2022Q3,0.861,4708,6540,font_heading,font_heading
+19739,LOCALIZA RENT A CAR S.A.,2022Q3,2023Q1,0.8388,6540,3773,font_heading,font_heading
+19739,LOCALIZA RENT A CAR S.A.,2023Q1,2023Q2,0.9712,3773,4746,font_heading,font_heading
+19739,LOCALIZA RENT A CAR S.A.,2023Q2,2023Q3,0.9755,4746,5975,font_heading,font_heading
+19739,LOCALIZA RENT A CAR S.A.,2023Q3,2024Q1,0.8287,5975,5978,font_heading,font_heading
+19739,LOCALIZA RENT A CAR S.A.,2024Q1,2024Q2,0.892,5978,8700,font_heading,font_heading
+19739,LOCALIZA RENT A CAR S.A.,2024Q2,2024Q3,0.9862,8700,8466,font_heading,font_heading
+19763,EDP Energias do Brasil S/A,2015Q2,2015Q3,0.1374,159729,906,font_heading,font_heading
+19763,EDP Energias do Brasil S/A,2016Q2,2016Q3,0.073,661,751,font_heading,font_heading
+19763,EDP Energias do Brasil S/A,2016Q3,2017Q1,0.0739,751,588,font_heading,font_heading
+19763,EDP Energias do Brasil S/A,2017Q1,2017Q2,1.0,588,634,font_heading,font_heading
+19763,EDP Energias do Brasil S/A,2017Q2,2017Q3,1.0,634,667,font_heading,font_heading
+19763,EDP Energias do Brasil S/A,2017Q3,2018Q1,0.0298,667,8448,font_heading,font_heading
+19763,EDP Energias do Brasil S/A,2018Q1,2018Q2,0.6827,8448,5528,font_heading,font_heading
+19763,EDP Energias do Brasil S/A,2018Q2,2018Q3,0.0024,5528,702,font_heading,font_heading
+19763,EDP Energias do Brasil S/A,2018Q3,2019Q1,1.0,702,673,font_heading,font_heading
+19763,EDP Energias do Brasil S/A,2019Q1,2019Q2,1.0,673,708,font_heading,font_heading
+19763,EDP Energias do Brasil S/A,2019Q2,2019Q3,1.0,708,780,font_heading,font_heading
+19763,EDP Energias do Brasil S/A,2019Q3,2020Q1,1.0,780,680,font_heading,font_heading
+19763,EDP Energias do Brasil S/A,2020Q1,2020Q2,1.0,680,729,font_heading,font_heading
+19763,EDP Energias do Brasil S/A,2020Q2,2020Q3,1.0,729,752,font_heading,font_heading
+19763,EDP Energias do Brasil S/A,2020Q3,2021Q1,0.9843,752,724,font_heading,font_heading
+19763,EDP Energias do Brasil S/A,2021Q1,2021Q2,1.0,724,746,font_heading,font_heading
+19763,EDP Energias do Brasil S/A,2021Q2,2021Q3,0.9861,746,898,font_heading,font_heading
+19763,EDP Energias do Brasil S/A,2021Q3,2022Q1,1.0,898,730,font_heading,font_heading
+19763,EDP Energias do Brasil S/A,2022Q1,2022Q2,1.0,730,778,font_heading,font_heading
+19763,EDP Energias do Brasil S/A,2023Q3,2024Q1,0.9975,715,570,font_heading,font_heading
+19763,EDP Energias do Brasil S/A,2024Q1,2024Q2,1.0,570,575,font_heading,font_heading
+19763,EDP Energias do Brasil S/A,2024Q2,2024Q3,1.0,575,586,font_heading,font_heading
+19836,COSAN S.A.,2015Q1,2015Q2,0.1318,4420,1633,font_heading,font_heading
+19836,COSAN S.A.,2015Q2,2015Q3,0.9916,1633,1624,font_heading,font_heading
+19836,COSAN S.A.,2015Q3,2016Q1,0.0306,1624,2547,font_heading,font_heading
+19836,COSAN S.A.,2016Q1,2016Q2,0.9213,2547,2852,font_heading,font_heading
+19836,COSAN S.A.,2016Q2,2016Q3,0.9224,2852,2554,font_heading,font_heading
+19836,COSAN S.A.,2016Q3,2017Q1,0.9173,2554,2256,font_heading,font_heading
+19836,COSAN S.A.,2017Q1,2017Q2,0.9423,2256,2121,font_heading,font_heading
+19836,COSAN S.A.,2017Q2,2017Q3,0.9415,2121,2213,font_heading,font_heading
+19836,COSAN S.A.,2017Q3,2018Q1,0.9216,2213,2337,font_heading,font_heading
+19836,COSAN S.A.,2018Q1,2018Q2,0.9125,2337,2215,font_heading,font_heading
+19836,COSAN S.A.,2018Q2,2018Q3,0.9529,2215,2229,font_heading,font_heading
+19836,COSAN S.A.,2018Q3,2019Q1,0.0525,2229,3717,font_heading,font_heading
+19836,COSAN S.A.,2019Q1,2019Q2,0.9919,3717,3792,font_heading,font_heading
+19836,COSAN S.A.,2019Q2,2019Q3,0.9631,3792,3725,font_heading,font_heading
+19836,COSAN S.A.,2019Q3,2020Q1,0.0325,3725,2403,font_heading,font_heading
+19836,COSAN S.A.,2020Q1,2020Q2,0.9181,2403,2542,font_heading,font_heading
+19836,COSAN S.A.,2020Q2,2020Q3,0.9026,2542,2710,font_heading,font_heading
+19836,COSAN S.A.,2021Q2,2021Q3,0.965,8854,9589,font_heading,font_heading
+19836,COSAN S.A.,2021Q3,2022Q1,0.9557,9589,9561,font_heading,font_heading
+19836,COSAN S.A.,2022Q1,2022Q3,0.902,9561,11118,font_heading,font_heading
+19836,COSAN S.A.,2022Q3,2023Q1,0.1122,11118,269,font_heading,font_heading
+19836,COSAN S.A.,2023Q1,2023Q2,0.1751,269,8451,font_heading,font_heading
+19836,COSAN S.A.,2023Q2,2023Q3,0.9816,8451,10499,font_heading,font_heading
+19836,COSAN S.A.,2023Q3,2024Q1,0.9499,10499,12123,font_heading,font_heading
+19836,COSAN S.A.,2024Q1,2024Q2,0.9878,12123,12634,font_heading,font_heading
+19836,COSAN S.A.,2024Q2,2024Q3,0.9923,12634,12035,font_heading,font_heading
+19879,Light S.A. - Em Recuperação Judicial,2017Q2,2017Q3,0.4815,1555,473,font_heading,font_heading
+19879,Light S.A. - Em Recuperação Judicial,2018Q3,2019Q1,0.5564,512,20075,font_heading,font_heading
+19879,Light S.A. - Em Recuperação Judicial,2019Q1,2019Q2,0.6941,20075,321,font_heading,font_heading
+19879,Light S.A. - Em Recuperação Judicial,2019Q2,2019Q3,0.7108,321,21982,font_heading,font_heading
+19879,Light S.A. - Em Recuperação Judicial,2019Q3,2020Q1,0.9757,21982,9124,font_heading,font_heading
+19879,Light S.A. - Em Recuperação Judicial,2020Q1,2020Q2,0.9993,9124,9242,font_heading,font_heading
+19879,Light S.A. - Em Recuperação Judicial,2020Q2,2020Q3,0.6099,9242,836,font_heading,font_heading
+19879,Light S.A. - Em Recuperação Judicial,2020Q3,2021Q1,0.7077,836,413,font_heading,font_heading
+19879,Light S.A. - Em Recuperação Judicial,2021Q1,2021Q2,0.0107,413,82,font_heading,font_heading
+19879,Light S.A. - Em Recuperação Judicial,2021Q2,2021Q3,0.6187,82,67,font_heading,font_heading
+19879,Light S.A. - Em Recuperação Judicial,2021Q3,2022Q1,0.1333,67,328,font_heading,font_heading
+19879,Light S.A. - Em Recuperação Judicial,2022Q1,2022Q2,0.1784,328,130,font_heading,font_heading
+19879,Light S.A. - Em Recuperação Judicial,2022Q2,2022Q3,1.0,130,132,font_heading,font_heading
+19879,Light S.A. - Em Recuperação Judicial,2023Q3,2024Q1,0.884,14225,5515,font_heading,font_heading
+19879,Light S.A. - Em Recuperação Judicial,2024Q1,2024Q2,0.9091,5515,5295,font_heading,font_heading
+19879,Light S.A. - Em Recuperação Judicial,2024Q2,2024Q3,0.9978,5295,5169,font_heading,font_heading
+19909,BR Malls Participações S.A.,2016Q1,2016Q2,0.1512,47,397,font_heading,font_heading
+19909,BR Malls Participações S.A.,2016Q2,2016Q3,0.0569,397,168,font_heading,font_heading
+19909,BR Malls Participações S.A.,2020Q1,2020Q2,0.9173,1642,1829,font_heading,font_heading
+19909,BR Malls Participações S.A.,2020Q2,2020Q3,0.5892,1829,1527,font_heading,font_heading
+19909,BR Malls Participações S.A.,2023Q1,2023Q2,0.9195,4790,4428,font_heading,font_heading
+19909,BR Malls Participações S.A.,2023Q2,2023Q3,0.9216,4428,4220,font_heading,font_heading
+19909,BR Malls Participações S.A.,2023Q3,2024Q1,0.6466,4220,2602,font_heading,font_heading
+19909,BR Malls Participações S.A.,2024Q1,2024Q2,0.1603,2602,4546,font_heading,font_heading
+19909,BR Malls Participações S.A.,2024Q2,2024Q3,0.9424,4546,5698,font_heading,font_heading
+19925,BR Properties S.A.,2015Q1,2015Q2,0.9971,12700,12788,font_heading,font_heading
+19925,BR Properties S.A.,2015Q2,2015Q3,0.2952,12788,5739,font_heading,font_heading
+19925,BR Properties S.A.,2015Q3,2016Q1,0.8975,5739,7040,font_heading,font_heading
+19925,BR Properties S.A.,2016Q1,2016Q2,0.8703,7040,8856,font_heading,font_heading
+19925,BR Properties S.A.,2016Q2,2016Q3,0.8293,8856,14061,font_heading,font_heading
+19925,BR Properties S.A.,2016Q3,2017Q1,0.4704,14061,4535,font_heading,font_heading
+19925,BR Properties S.A.,2017Q1,2017Q2,0.9382,4535,3090,font_heading,font_heading
+19925,BR Properties S.A.,2017Q2,2017Q3,0.8789,3090,5158,font_heading,font_heading
+19925,BR Properties S.A.,2017Q3,2018Q1,0.7315,5158,4681,font_heading,font_heading
+19925,BR Properties S.A.,2018Q1,2018Q2,0.917,4681,5429,font_heading,font_heading
+19925,BR Properties S.A.,2018Q2,2018Q3,0.9704,5429,5688,font_heading,font_heading
+19925,BR Properties S.A.,2018Q3,2019Q1,0.7906,5688,6092,font_heading,font_heading
+19925,BR Properties S.A.,2019Q1,2019Q2,0.7665,6092,4383,font_heading,font_heading
+19925,BR Properties S.A.,2019Q2,2019Q3,0.8109,4383,6689,font_heading,font_heading
+19925,BR Properties S.A.,2019Q3,2020Q1,0.8693,6689,5979,font_heading,font_heading
+19925,BR Properties S.A.,2020Q1,2020Q2,0.9837,5979,6647,font_heading,font_heading
+19925,BR Properties S.A.,2020Q2,2020Q3,0.4944,6647,48983,font_heading,font_heading
+19925,BR Properties S.A.,2020Q3,2021Q1,0.4887,48983,6640,font_heading,font_heading
+19925,BR Properties S.A.,2021Q1,2021Q2,0.9359,6640,7501,font_heading,font_heading
+19925,BR Properties S.A.,2021Q2,2021Q3,0.9653,7501,9041,font_heading,font_heading
+19925,BR Properties S.A.,2021Q3,2022Q1,0.8286,9041,6679,font_heading,font_heading
+19925,BR Properties S.A.,2022Q1,2022Q2,0.7558,6679,7624,font_heading,font_heading
+19925,BR Properties S.A.,2022Q2,2022Q3,0.8699,7624,7170,font_heading,font_heading
+19925,BR Properties S.A.,2022Q3,2023Q1,0.3097,7170,1537,font_heading,font_heading
+19925,BR Properties S.A.,2023Q1,2023Q2,0.5642,1537,2514,font_heading,font_heading
+19925,BR Properties S.A.,2023Q2,2023Q3,0.2666,2514,12401,font_heading,font_heading
+19992,TOTVS S.A.,2015Q1,2015Q2,0.9819,3005,3010,font_heading,font_heading
+19992,TOTVS S.A.,2015Q2,2015Q3,0.9414,3010,3301,font_heading,font_heading
+19992,TOTVS S.A.,2015Q3,2016Q1,0.7105,3301,2636,font_heading,font_heading
+19992,TOTVS S.A.,2016Q1,2016Q2,0.979,2636,2658,font_heading,font_heading
+19992,TOTVS S.A.,2016Q2,2016Q3,0.946,2658,2792,font_heading,font_heading
+19992,TOTVS S.A.,2016Q3,2017Q1,0.7679,2792,2956,font_heading,font_heading
+19992,TOTVS S.A.,2017Q1,2017Q2,0.9489,2956,3005,font_heading,font_heading
+19992,TOTVS S.A.,2017Q2,2017Q3,0.8201,3005,4235,font_heading,font_heading
+19992,TOTVS S.A.,2017Q3,2018Q1,0.8359,4235,4609,font_heading,font_heading
+19992,TOTVS S.A.,2018Q1,2018Q2,0.9838,4609,4652,font_heading,font_heading
+19992,TOTVS S.A.,2018Q2,2018Q3,0.9813,4652,4706,font_heading,font_heading
+19992,TOTVS S.A.,2018Q3,2019Q1,0.8958,4706,5927,font_heading,font_heading
+19992,TOTVS S.A.,2019Q1,2019Q2,0.9582,5927,5881,font_heading,font_heading
+19992,TOTVS S.A.,2019Q2,2019Q3,0.9566,5881,5774,font_heading,font_heading
+19992,TOTVS S.A.,2022Q1,2022Q2,0.9909,2134,2098,font_heading,font_heading
+19992,TOTVS S.A.,2022Q2,2023Q1,0.8918,2098,1929,font_heading,font_heading
+20010,EQUATORIAL S.A.,2015Q1,2015Q2,0.8903,8435,9816,font_heading,font_heading
+20010,EQUATORIAL S.A.,2015Q2,2015Q3,0.9433,9816,9272,font_heading,font_heading
+20010,EQUATORIAL S.A.,2015Q3,2016Q1,0.8479,9272,7818,font_heading,font_heading
+20010,EQUATORIAL S.A.,2023Q1,2023Q2,0.3454,215,12128,font_heading,font_heading
+20087,EMBRAER S.A.,2016Q1,2018Q1,0.9383,8724,8208,font_heading,font_heading
+20087,EMBRAER S.A.,2018Q1,2018Q2,0.9901,8208,8416,font_heading,font_heading
+20087,EMBRAER S.A.,2018Q2,2018Q3,0.9462,8416,7094,font_heading,font_heading
+20257,TRANSMISSORA ALIANÇA DE ENERGIA ELÉTRICA S.A.,2015Q1,2015Q2,1.0,47,47,font_heading,font_heading
+20257,TRANSMISSORA ALIANÇA DE ENERGIA ELÉTRICA S.A.,2015Q2,2015Q3,1.0,47,47,font_heading,font_heading
+20257,TRANSMISSORA ALIANÇA DE ENERGIA ELÉTRICA S.A.,2015Q3,2016Q1,0.0952,47,16362,font_heading,font_heading
+20257,TRANSMISSORA ALIANÇA DE ENERGIA ELÉTRICA S.A.,2016Q1,2016Q2,0.9709,16362,14755,font_heading,font_heading
+20257,TRANSMISSORA ALIANÇA DE ENERGIA ELÉTRICA S.A.,2016Q2,2016Q3,0.8345,14755,11824,font_heading,font_heading
+20257,TRANSMISSORA ALIANÇA DE ENERGIA ELÉTRICA S.A.,2016Q3,2017Q1,0.1077,11824,233,font_heading,font_heading
+20257,TRANSMISSORA ALIANÇA DE ENERGIA ELÉTRICA S.A.,2017Q1,2017Q2,1.0,233,233,font_heading,font_heading
+20257,TRANSMISSORA ALIANÇA DE ENERGIA ELÉTRICA S.A.,2017Q2,2017Q3,1.0,233,233,font_heading,font_heading
+20257,TRANSMISSORA ALIANÇA DE ENERGIA ELÉTRICA S.A.,2017Q3,2018Q1,0.1152,233,8988,font_heading,font_heading
+20257,TRANSMISSORA ALIANÇA DE ENERGIA ELÉTRICA S.A.,2018Q1,2018Q2,0.9486,8988,9857,font_heading,font_heading
+20257,TRANSMISSORA ALIANÇA DE ENERGIA ELÉTRICA S.A.,2018Q2,2018Q3,0.9588,9857,11358,font_heading,font_heading
+20257,TRANSMISSORA ALIANÇA DE ENERGIA ELÉTRICA S.A.,2018Q3,2019Q1,0.796,11358,7560,font_heading,font_heading
+20257,TRANSMISSORA ALIANÇA DE ENERGIA ELÉTRICA S.A.,2019Q1,2019Q2,0.9659,7560,9565,font_heading,font_heading
+20257,TRANSMISSORA ALIANÇA DE ENERGIA ELÉTRICA S.A.,2019Q2,2019Q3,0.9924,9565,10122,font_heading,font_heading
+20257,TRANSMISSORA ALIANÇA DE ENERGIA ELÉTRICA S.A.,2019Q3,2020Q1,0.747,10122,2839,font_heading,font_heading
+20257,TRANSMISSORA ALIANÇA DE ENERGIA ELÉTRICA S.A.,2020Q1,2020Q2,0.9964,2839,2925,font_heading,font_heading
+20257,TRANSMISSORA ALIANÇA DE ENERGIA ELÉTRICA S.A.,2020Q2,2020Q3,0.8124,2925,7627,font_heading,font_heading
+20257,TRANSMISSORA ALIANÇA DE ENERGIA ELÉTRICA S.A.,2020Q3,2021Q1,0.994,7627,7156,font_heading,font_heading
+20257,TRANSMISSORA ALIANÇA DE ENERGIA ELÉTRICA S.A.,2021Q1,2021Q2,0.9892,7156,8196,font_heading,font_heading
+20257,TRANSMISSORA ALIANÇA DE ENERGIA ELÉTRICA S.A.,2021Q2,2022Q1,0.6433,8196,9321,font_heading,font_heading
+20257,TRANSMISSORA ALIANÇA DE ENERGIA ELÉTRICA S.A.,2024Q1,2024Q2,0.994,11000,11290,font_heading,font_heading
+20257,TRANSMISSORA ALIANÇA DE ENERGIA ELÉTRICA S.A.,2024Q2,2024Q3,0.5275,11290,84874,font_heading,font_heading
+20478,PDG Realty S.A. Empreendimentos e Participações,2015Q1,2015Q2,0.9891,2718,2790,font_heading,font_heading
+20478,PDG Realty S.A. Empreendimentos e Participações,2015Q2,2015Q3,0.9899,2790,2802,font_heading,font_heading
+20478,PDG Realty S.A. Empreendimentos e Participações,2015Q3,2016Q1,0.5239,2802,12730,font_heading,font_heading
+20478,PDG Realty S.A. Empreendimentos e Participações,2016Q1,2016Q2,0.9543,12730,12463,font_heading,font_heading
+20478,PDG Realty S.A. Empreendimentos e Participações,2016Q2,2016Q3,0.9268,12463,13176,font_heading,font_heading
+20478,PDG Realty S.A. Empreendimentos e Participações,2016Q3,2017Q1,0.7898,13176,10134,font_heading,font_heading
+20478,PDG Realty S.A. Empreendimentos e Participações,2017Q1,2017Q2,0.8868,10134,11342,font_heading,font_heading
+20478,PDG Realty S.A. Empreendimentos e Participações,2017Q2,2017Q3,0.9749,11342,11454,font_heading,font_heading
+20478,PDG Realty S.A. Empreendimentos e Participações,2017Q3,2018Q1,0.8555,11454,9790,font_heading,font_heading
+20478,PDG Realty S.A. Empreendimentos e Participações,2018Q1,2018Q2,0.9815,9790,9363,font_heading,font_heading
+20478,PDG Realty S.A. Empreendimentos e Participações,2018Q2,2018Q3,0.9765,9363,8975,font_heading,font_heading
+20494,Iguatemi Empresa de Shopping Centers S/A (pre-restructuring entity),2015Q1,2015Q2,0.9628,22239,22293,font_heading,font_heading
+20494,Iguatemi Empresa de Shopping Centers S/A (pre-restructuring entity),2015Q2,2015Q3,0.9445,22293,23604,font_heading,font_heading
+20494,Iguatemi Empresa de Shopping Centers S/A (pre-restructuring entity),2015Q3,2016Q1,0.9341,23604,24819,font_heading,font_heading
+20494,Iguatemi Empresa de Shopping Centers S/A (pre-restructuring entity),2016Q1,2016Q2,0.9584,24819,21838,font_heading,font_heading
+20494,Iguatemi Empresa de Shopping Centers S/A (pre-restructuring entity),2016Q2,2016Q3,0.9724,21838,22481,font_heading,font_heading
+20494,Iguatemi Empresa de Shopping Centers S/A (pre-restructuring entity),2023Q1,2023Q2,0.9991,3862,4059,font_heading,font_heading
+20494,Iguatemi Empresa de Shopping Centers S/A (pre-restructuring entity),2023Q2,2023Q3,0.999,4059,3896,font_heading,font_heading
+20494,Iguatemi Empresa de Shopping Centers S/A (pre-restructuring entity),2023Q3,2024Q1,0.9836,3896,3779,font_heading,font_heading
+20494,Iguatemi Empresa de Shopping Centers S/A (pre-restructuring entity),2024Q1,2024Q2,0.6787,3779,4333,font_heading,font_heading
+20494,Iguatemi Empresa de Shopping Centers S/A (pre-restructuring entity),2024Q2,2024Q3,0.9445,4333,6016,font_heading,font_heading
+20516,São Martinho S.A.,2021Q2,2021Q3,0.4264,1722,6654,font_heading,font_heading
+20516,São Martinho S.A.,2021Q3,2022Q2,0.9433,6654,5904,font_heading,font_heading
+20516,São Martinho S.A.,2022Q2,2023Q2,0.9826,5904,6416,font_heading,font_heading
+20516,São Martinho S.A.,2023Q2,2023Q3,0.9716,6416,6516,font_heading,font_heading
+20516,São Martinho S.A.,2023Q3,2024Q2,0.5236,6516,2845,font_heading,font_heading
+20516,São Martinho S.A.,2024Q2,2024Q3,0.9937,2845,2745,font_heading,font_heading
+20524,Even Construtora e Incorporadora S/A,2015Q1,2015Q2,0.9042,3886,3064,font_heading,font_heading
+20524,Even Construtora e Incorporadora S/A,2015Q2,2015Q3,0.9159,3064,3516,font_heading,font_heading
+20524,Even Construtora e Incorporadora S/A,2015Q3,2016Q1,0.8893,3516,3374,font_heading,font_heading
+20524,Even Construtora e Incorporadora S/A,2016Q1,2016Q2,0.976,3374,3152,font_heading,font_heading
+20524,Even Construtora e Incorporadora S/A,2020Q1,2020Q2,0.8852,2733,1819,font_heading,font_heading
+20524,Even Construtora e Incorporadora S/A,2024Q1,2024Q2,0.9122,3601,3872,font_heading,font_heading
+20524,Even Construtora e Incorporadora S/A,2024Q2,2024Q3,0.9668,3872,3866,font_heading,font_heading
+20745,SLC AGRICOLA S.A.,2018Q2,2019Q2,0.9133,6009,6947,font_heading,font_heading
+20745,SLC AGRICOLA S.A.,2020Q3,2021Q2,0.7956,5798,8183,font_heading,font_heading
+20745,SLC AGRICOLA S.A.,2021Q2,2021Q3,0.9998,8183,8188,font_heading,font_heading
+20745,SLC AGRICOLA S.A.,2021Q3,2022Q1,0.9414,8188,5969,font_heading,font_heading
+20745,SLC AGRICOLA S.A.,2022Q1,2022Q2,0.9932,5969,5931,font_heading,font_heading
+20745,SLC AGRICOLA S.A.,2022Q2,2023Q1,0.6767,5931,3080,font_heading,font_heading
+20745,SLC AGRICOLA S.A.,2023Q1,2023Q2,1.0,3080,3074,font_heading,font_heading
+20745,SLC AGRICOLA S.A.,2023Q2,2023Q3,0.9931,3074,3074,font_heading,font_heading
+20770,EZ Tec Empreendimentos e Participações S/A,2021Q1,2021Q2,0.9857,1059,1065,font_heading,font_heading
+20770,EZ Tec Empreendimentos e Participações S/A,2021Q2,2021Q3,0.9757,1065,1105,font_heading,font_heading
+20770,EZ Tec Empreendimentos e Participações S/A,2021Q3,2022Q1,0.8549,1105,1196,font_heading,font_heading
+20770,EZ Tec Empreendimentos e Participações S/A,2022Q1,2022Q2,0.6598,1196,2617,font_heading,font_heading
+20770,EZ Tec Empreendimentos e Participações S/A,2022Q2,2022Q3,0.9884,2617,2536,font_heading,font_heading
+20770,EZ Tec Empreendimentos e Participações S/A,2022Q3,2023Q1,0.9015,2536,3183,font_heading,font_heading
+20770,EZ Tec Empreendimentos e Participações S/A,2023Q1,2023Q2,0.9957,3183,3220,font_heading,font_heading
+20770,EZ Tec Empreendimentos e Participações S/A,2023Q2,2023Q3,0.9847,3220,3190,font_heading,font_heading
+20770,EZ Tec Empreendimentos e Participações S/A,2023Q3,2024Q1,0.9792,3190,3318,font_heading,font_heading
+20770,EZ Tec Empreendimentos e Participações S/A,2024Q1,2024Q2,0.9152,3318,4100,font_heading,font_heading
+20770,EZ Tec Empreendimentos e Participações S/A,2024Q2,2024Q3,0.9983,4100,4105,font_heading,font_heading
+20788,MARFRIG GLOBAL FOODS S.A.,2016Q1,2016Q2,0.982,16909,19362,font_heading,font_heading
+20788,MARFRIG GLOBAL FOODS S.A.,2016Q2,2016Q3,0.9964,19362,20154,font_heading,font_heading
+20788,MARFRIG GLOBAL FOODS S.A.,2016Q3,2017Q1,0.978,20154,17274,font_heading,font_heading
+20788,MARFRIG GLOBAL FOODS S.A.,2017Q1,2017Q2,0.2424,17274,740,font_heading,font_heading
+20788,MARFRIG GLOBAL FOODS S.A.,2017Q2,2017Q3,0.4989,740,128,font_heading,font_heading
+20788,MARFRIG GLOBAL FOODS S.A.,2017Q3,2018Q1,1.0,128,117,font_heading,font_heading
+20788,MARFRIG GLOBAL FOODS S.A.,2018Q1,2018Q2,1.0,117,117,font_heading,font_heading
+20788,MARFRIG GLOBAL FOODS S.A.,2018Q2,2018Q3,0.1393,117,6389,font_heading,font_heading
+20788,MARFRIG GLOBAL FOODS S.A.,2018Q3,2019Q1,0.1393,6389,117,font_heading,font_heading
+20788,MARFRIG GLOBAL FOODS S.A.,2019Q1,2019Q2,0.1244,117,2326,font_heading,font_heading
+20788,MARFRIG GLOBAL FOODS S.A.,2019Q2,2019Q3,0.9892,2326,2495,font_heading,font_heading
+20788,MARFRIG GLOBAL FOODS S.A.,2020Q2,2020Q3,0.2086,2439,117,font_heading,font_heading
+20788,MARFRIG GLOBAL FOODS S.A.,2020Q3,2021Q1,0.1796,117,2413,font_heading,font_heading
+20788,MARFRIG GLOBAL FOODS S.A.,2021Q1,2021Q2,0.9108,2413,2273,font_heading,font_heading
+20788,MARFRIG GLOBAL FOODS S.A.,2021Q2,2021Q3,0.5653,2273,6189,font_heading,font_heading
+20788,MARFRIG GLOBAL FOODS S.A.,2021Q3,2022Q1,0.5814,6189,2156,font_heading,font_heading
+20788,MARFRIG GLOBAL FOODS S.A.,2022Q1,2022Q2,0.8119,2156,4781,font_heading,font_heading
+20788,MARFRIG GLOBAL FOODS S.A.,2022Q2,2022Q3,0.8553,4781,2719,font_heading,font_heading
+20788,MARFRIG GLOBAL FOODS S.A.,2022Q3,2023Q1,0.65,2719,5380,font_heading,font_heading
+20788,MARFRIG GLOBAL FOODS S.A.,2023Q3,2024Q1,0.6186,6718,2731,font_heading,font_heading
+20788,MARFRIG GLOBAL FOODS S.A.,2024Q1,2024Q2,0.6815,2731,7139,font_heading,font_heading
+20788,MARFRIG GLOBAL FOODS S.A.,2024Q2,2024Q3,0.6005,7139,4428,font_heading,font_heading
+20915,MRV ENGENHARIA E PARTICIPACOES S.A.,2015Q1,2015Q2,1.0,119,119,font_heading,font_heading
+20915,MRV ENGENHARIA E PARTICIPACOES S.A.,2019Q3,2020Q1,1.0,119,119,font_heading,font_heading
+20915,MRV ENGENHARIA E PARTICIPACOES S.A.,2020Q3,2021Q1,0.0194,119,1930,font_heading,font_heading
+20915,MRV ENGENHARIA E PARTICIPACOES S.A.,2021Q1,2021Q2,0.0194,1930,119,font_heading,font_heading
+20915,MRV ENGENHARIA E PARTICIPACOES S.A.,2021Q2,2021Q3,1.0,119,119,font_heading,font_heading
+20915,MRV ENGENHARIA E PARTICIPACOES S.A.,2021Q3,2022Q1,1.0,119,119,font_heading,font_heading
+20915,MRV ENGENHARIA E PARTICIPACOES S.A.,2022Q1,2022Q2,1.0,119,119,font_heading,font_heading
+20915,MRV ENGENHARIA E PARTICIPACOES S.A.,2022Q2,2022Q3,1.0,119,119,font_heading,font_heading
+20915,MRV ENGENHARIA E PARTICIPACOES S.A.,2022Q3,2023Q1,1.0,119,119,font_heading,font_heading
+20915,MRV ENGENHARIA E PARTICIPACOES S.A.,2023Q1,2023Q2,1.0,119,119,font_heading,font_heading
+20915,MRV ENGENHARIA E PARTICIPACOES S.A.,2023Q2,2023Q3,1.0,119,119,font_heading,font_heading
+20931,MINERVA S.A.,2017Q3,2018Q1,0.2506,1172,4982,font_heading,font_heading
+20931,MINERVA S.A.,2019Q1,2019Q2,0.9067,2442,3403,font_heading,font_heading
+20931,MINERVA S.A.,2019Q2,2019Q3,0.9961,3403,3399,font_heading,font_heading
+20931,MINERVA S.A.,2019Q3,2020Q1,0.9647,3399,4343,font_heading,font_heading
+20931,MINERVA S.A.,2021Q3,2022Q1,0.9636,17612,18384,font_heading,font_heading
+20931,MINERVA S.A.,2022Q1,2022Q2,0.9903,18384,18288,font_heading,font_heading
+20931,MINERVA S.A.,2022Q2,2022Q3,0.9843,18288,20503,font_heading,font_heading
+20931,MINERVA S.A.,2022Q3,2023Q1,0.9885,20503,20620,font_heading,font_heading
+20931,MINERVA S.A.,2023Q1,2023Q2,0.9934,20620,20937,font_heading,font_heading
+20931,MINERVA S.A.,2023Q2,2023Q3,0.9911,20937,21008,font_heading,font_heading
+20931,MINERVA S.A.,2023Q3,2024Q1,0.958,21008,25158,font_heading,font_heading
+20931,MINERVA S.A.,2024Q1,2024Q2,0.9943,25158,25233,font_heading,font_heading
+20931,MINERVA S.A.,2024Q2,2024Q3,0.9944,25233,25016,font_heading,font_heading
+20982,MULTIPLAN - EMPREEND IMOBILIARIOS S.A.,2015Q1,2015Q2,0.0452,1254,22493,font_heading,font_heading
+20982,MULTIPLAN - EMPREEND IMOBILIARIOS S.A.,2015Q2,2015Q3,0.995,22493,22621,font_heading,font_heading
+20982,MULTIPLAN - EMPREEND IMOBILIARIOS S.A.,2015Q3,2016Q1,0.9799,22621,24444,font_heading,font_heading
+20982,MULTIPLAN - EMPREEND IMOBILIARIOS S.A.,2016Q1,2016Q2,0.9872,24444,21566,font_heading,font_heading
+20982,MULTIPLAN - EMPREEND IMOBILIARIOS S.A.,2016Q2,2016Q3,0.0407,21566,1269,font_heading,font_heading
+20982,MULTIPLAN - EMPREEND IMOBILIARIOS S.A.,2016Q3,2017Q1,0.9617,1269,1310,font_heading,font_heading
+20982,MULTIPLAN - EMPREEND IMOBILIARIOS S.A.,2017Q1,2017Q2,1.0,1310,1310,font_heading,font_heading
+20982,MULTIPLAN - EMPREEND IMOBILIARIOS S.A.,2017Q2,2017Q3,0.0521,1310,20226,font_heading,font_heading
+20982,MULTIPLAN - EMPREEND IMOBILIARIOS S.A.,2021Q1,2021Q2,0.1487,5634,26339,font_heading,font_heading
+20982,MULTIPLAN - EMPREEND IMOBILIARIOS S.A.,2021Q2,2021Q3,0.9976,26339,26567,font_heading,font_heading
+20982,MULTIPLAN - EMPREEND IMOBILIARIOS S.A.,2021Q3,2022Q1,0.9916,26567,25534,font_heading,font_heading
+20982,MULTIPLAN - EMPREEND IMOBILIARIOS S.A.,2022Q1,2022Q2,0.9983,25534,25807,font_heading,font_heading
+20982,MULTIPLAN - EMPREEND IMOBILIARIOS S.A.,2022Q2,2022Q3,0.9507,25807,21759,font_heading,font_heading
+20982,MULTIPLAN - EMPREEND IMOBILIARIOS S.A.,2022Q3,2023Q1,0.9905,21759,21399,font_heading,font_heading
+20982,MULTIPLAN - EMPREEND IMOBILIARIOS S.A.,2023Q1,2023Q2,0.4181,21399,82798,font_heading,font_heading
+20982,MULTIPLAN - EMPREEND IMOBILIARIOS S.A.,2023Q2,2023Q3,0.749,82798,47219,font_heading,font_heading
+20982,MULTIPLAN - EMPREEND IMOBILIARIOS S.A.,2023Q3,2024Q1,0.8806,47219,36466,font_heading,font_heading
+20982,MULTIPLAN - EMPREEND IMOBILIARIOS S.A.,2024Q1,2024Q2,0.9877,36466,39991,font_heading,font_heading
+20982,MULTIPLAN - EMPREEND IMOBILIARIOS S.A.,2024Q2,2024Q3,0.9903,39991,41316,font_heading,font_heading
+20990,Americanas S.A. - Em Recuperação Judicial,2022Q3,2023Q1,0.7187,6718,5323,font_heading,font_heading
+20990,Americanas S.A. - Em Recuperação Judicial,2023Q1,2023Q2,0.9941,5323,5329,font_heading,font_heading
+20990,Americanas S.A. - Em Recuperação Judicial,2023Q2,2023Q3,0.9906,5329,5292,font_heading,font_heading
+20990,Americanas S.A. - Em Recuperação Judicial,2023Q3,2024Q1,0.64,5292,5847,font_heading,font_heading
+20990,Americanas S.A. - Em Recuperação Judicial,2024Q1,2024Q2,0.9986,5847,5877,font_heading,font_heading
+20990,Americanas S.A. - Em Recuperação Judicial,2024Q2,2024Q3,0.5299,5877,1893,font_heading,font_heading
+21016,YDUQS PARTICIPACOES S.A.,2015Q1,2015Q2,0.9522,3500,3463,font_heading,font_heading
+21016,YDUQS PARTICIPACOES S.A.,2015Q2,2015Q3,0.9345,3463,4071,font_heading,font_heading
+21016,YDUQS PARTICIPACOES S.A.,2015Q3,2016Q1,0.7585,4071,3430,font_heading,font_heading
+21016,YDUQS PARTICIPACOES S.A.,2020Q1,2020Q2,0.5688,2366,2543,font_heading,font_heading
+21016,YDUQS PARTICIPACOES S.A.,2020Q2,2020Q3,0.5789,2543,930,font_heading,font_heading
+21016,YDUQS PARTICIPACOES S.A.,2020Q3,2021Q1,0.6873,930,2617,font_heading,font_heading
+21016,YDUQS PARTICIPACOES S.A.,2021Q1,2021Q2,0.6531,2617,1565,font_heading,font_heading
+21091,Dexco S.A. (formerly Duratex),2015Q1,2015Q2,0.473,4421,36769,font_heading,font_heading
+21091,Dexco S.A. (formerly Duratex),2015Q2,2015Q3,0.9798,36769,36222,font_heading,font_heading
+21091,Dexco S.A. (formerly Duratex),2015Q3,2016Q1,0.9571,36222,38758,font_heading,font_heading
+21091,Dexco S.A. (formerly Duratex),2016Q1,2016Q2,0.7528,38758,17947,font_heading,font_heading
+21091,Dexco S.A. (formerly Duratex),2016Q2,2016Q3,0.9619,17947,17216,font_heading,font_heading
+21091,Dexco S.A. (formerly Duratex),2016Q3,2017Q1,0.6464,17216,36035,font_heading,font_heading
+21091,Dexco S.A. (formerly Duratex),2017Q1,2017Q2,0.98,36035,39169,font_heading,font_heading
+21091,Dexco S.A. (formerly Duratex),2017Q2,2017Q3,0.9731,39169,39420,font_heading,font_heading
+21091,Dexco S.A. (formerly Duratex),2017Q3,2018Q1,0.5199,39420,4968,font_heading,font_heading
+21091,Dexco S.A. (formerly Duratex),2018Q1,2018Q2,0.4679,4968,41813,font_heading,font_heading
+21091,Dexco S.A. (formerly Duratex),2018Q2,2018Q3,0.986,41813,42607,font_heading,font_heading
+21091,Dexco S.A. (formerly Duratex),2018Q3,2019Q1,0.9326,42607,38091,font_heading,font_heading
+21091,Dexco S.A. (formerly Duratex),2019Q1,2019Q2,0.9792,38091,39009,font_heading,font_heading
+21091,Dexco S.A. (formerly Duratex),2019Q2,2019Q3,0.9262,39009,39868,font_heading,font_heading
+21091,Dexco S.A. (formerly Duratex),2019Q3,2020Q1,0.9384,39868,44675,font_heading,font_heading
+21091,Dexco S.A. (formerly Duratex),2020Q1,2020Q2,0.503,44675,9497,font_heading,font_heading
+21091,Dexco S.A. (formerly Duratex),2020Q2,2020Q3,0.3413,9497,46871,font_heading,font_heading
+21091,Dexco S.A. (formerly Duratex),2020Q3,2021Q1,0.98,46871,48150,font_heading,font_heading
+21091,Dexco S.A. (formerly Duratex),2021Q1,2021Q3,0.8948,48150,51632,font_heading,font_heading
+21091,Dexco S.A. (formerly Duratex),2021Q3,2022Q1,0.9669,51632,49307,font_heading,font_heading
+21091,Dexco S.A. (formerly Duratex),2022Q1,2022Q2,0.9821,49307,50609,font_heading,font_heading
+21091,Dexco S.A. (formerly Duratex),2022Q2,2022Q3,0.9905,50609,49627,font_heading,font_heading
+21091,Dexco S.A. (formerly Duratex),2022Q3,2023Q1,0.4239,49627,6873,font_heading,font_heading
+21091,Dexco S.A. (formerly Duratex),2023Q1,2023Q2,0.4542,6873,51089,font_heading,font_heading
+21091,Dexco S.A. (formerly Duratex),2023Q2,2023Q3,0.961,51089,42750,font_heading,font_heading
+21091,Dexco S.A. (formerly Duratex),2023Q3,2024Q1,0.941,42750,50232,font_heading,font_heading
+21091,Dexco S.A. (formerly Duratex),2024Q1,2024Q2,0.9722,50232,50134,font_heading,font_heading
+21091,Dexco S.A. (formerly Duratex),2024Q2,2024Q3,0.979,50134,51331,font_heading,font_heading
+21237,ENEVA S.A,2015Q1,2015Q2,0.8736,28828,22551,font_heading,font_heading
+21237,ENEVA S.A,2015Q2,2015Q3,0.9649,22551,21836,font_heading,font_heading
+21237,ENEVA S.A,2015Q3,2016Q1,0.8532,21836,16097,font_heading,font_heading
+21237,ENEVA S.A,2016Q1,2016Q2,0.9015,16097,19823,font_heading,font_heading
+21237,ENEVA S.A,2016Q2,2016Q3,0.4711,19823,6052,font_heading,font_heading
+21237,ENEVA S.A,2016Q3,2017Q2,0.7327,6052,7232,font_heading,font_heading
+21237,ENEVA S.A,2017Q2,2017Q3,0.9418,7232,6926,font_heading,font_heading
+21237,ENEVA S.A,2017Q3,2018Q1,0.919,6926,7528,font_heading,font_heading
+21237,ENEVA S.A,2018Q1,2018Q2,0.878,7528,8141,font_heading,font_heading
+21237,ENEVA S.A,2018Q2,2018Q3,0.9665,8141,9083,font_heading,font_heading
+21237,ENEVA S.A,2018Q3,2019Q1,0.8246,9083,7946,font_heading,font_heading
+21237,ENEVA S.A,2019Q1,2019Q2,0.9667,7946,8840,font_heading,font_heading
+21237,ENEVA S.A,2019Q2,2019Q3,0.9059,8840,7259,font_heading,font_heading
+21237,ENEVA S.A,2019Q3,2020Q1,0.8473,7259,7012,font_heading,font_heading
+21237,ENEVA S.A,2020Q1,2020Q2,0.559,7012,1674,font_heading,font_heading
+21237,ENEVA S.A,2020Q2,2020Q3,0.0446,1674,544,font_heading,font_heading
+21237,ENEVA S.A,2020Q3,2021Q1,0.0385,544,1584,font_heading,font_heading
+21237,ENEVA S.A,2021Q1,2021Q2,0.9669,1584,1626,font_heading,font_heading
+21237,ENEVA S.A,2021Q2,2021Q3,0.3469,1626,6153,font_heading,font_heading
+21237,ENEVA S.A,2021Q3,2022Q1,0.9212,6153,6367,font_heading,font_heading
+21237,ENEVA S.A,2022Q1,2022Q2,0.911,6367,5934,font_heading,font_heading
+21237,ENEVA S.A,2022Q2,2022Q3,0.2659,5934,5533,font_heading,font_heading
+21237,ENEVA S.A,2022Q3,2023Q1,0.1796,5533,8618,font_heading,font_heading
+21350,DIRECIONAL ENGENHARIA S.A.,2015Q1,2015Q2,0.9605,1750,1683,font_heading,font_heading
+21350,DIRECIONAL ENGENHARIA S.A.,2015Q2,2015Q3,0.9557,1683,1654,font_heading,font_heading
+21350,DIRECIONAL ENGENHARIA S.A.,2015Q3,2016Q1,0.8792,1654,2107,font_heading,font_heading
+21350,DIRECIONAL ENGENHARIA S.A.,2016Q1,2016Q2,0.2202,2107,7173,font_heading,font_heading
+21350,DIRECIONAL ENGENHARIA S.A.,2016Q2,2016Q3,0.211,7173,2094,font_heading,font_heading
+21350,DIRECIONAL ENGENHARIA S.A.,2016Q3,2017Q1,0.9272,2094,2076,font_heading,font_heading
+21350,DIRECIONAL ENGENHARIA S.A.,2017Q1,2017Q2,0.1675,2076,56107,font_heading,font_heading
+21350,DIRECIONAL ENGENHARIA S.A.,2017Q2,2017Q3,0.8434,56107,3361,font_heading,font_heading
+21350,DIRECIONAL ENGENHARIA S.A.,2017Q3,2018Q1,0.8088,3361,10428,font_heading,font_heading
+21350,DIRECIONAL ENGENHARIA S.A.,2018Q1,2018Q2,0.1272,10428,865,font_heading,font_heading
+21350,DIRECIONAL ENGENHARIA S.A.,2018Q2,2018Q3,0.5427,865,1110,font_heading,font_heading
+21431,HYPERA S.A.,2015Q1,2015Q2,0.9655,7562,7563,font_heading,font_heading
+21431,HYPERA S.A.,2015Q2,2015Q3,0.9786,7563,7718,font_heading,font_heading
+21431,HYPERA S.A.,2015Q3,2016Q1,0.8312,7718,5656,font_heading,font_heading
+21431,HYPERA S.A.,2016Q1,2016Q2,0.9132,5656,5440,font_heading,font_heading
+21431,HYPERA S.A.,2016Q2,2016Q3,0.9259,5440,4773,font_heading,font_heading
+21431,HYPERA S.A.,2016Q3,2017Q1,0.8648,4773,3916,font_heading,font_heading
+21431,HYPERA S.A.,2017Q1,2017Q2,0.9643,3916,4086,font_heading,font_heading
+21431,HYPERA S.A.,2017Q2,2017Q3,0.9674,4086,3800,font_heading,font_heading
+21431,HYPERA S.A.,2017Q3,2018Q1,0.3782,3800,9258,font_heading,font_heading
+21431,HYPERA S.A.,2018Q1,2018Q2,0.9336,9258,7286,font_heading,font_heading
+21431,HYPERA S.A.,2018Q2,2018Q3,0.9777,7286,7571,font_heading,font_heading
+21431,HYPERA S.A.,2018Q3,2019Q1,0.8256,7571,5860,font_heading,font_heading
+21431,HYPERA S.A.,2019Q1,2019Q2,0.9653,5860,6156,font_heading,font_heading
+21431,HYPERA S.A.,2019Q2,2019Q3,0.9794,6156,6136,font_heading,font_heading
+21431,HYPERA S.A.,2019Q3,2020Q1,0.8797,6136,7475,font_heading,font_heading
+21431,HYPERA S.A.,2020Q1,2020Q2,0.9456,7475,8644,font_heading,font_heading
+21431,HYPERA S.A.,2020Q2,2020Q3,0.9532,8644,9222,font_heading,font_heading
+21431,HYPERA S.A.,2020Q3,2021Q1,0.9399,9222,9632,font_heading,font_heading
+21431,HYPERA S.A.,2021Q1,2021Q2,0.9071,9632,9214,font_heading,font_heading
+21431,HYPERA S.A.,2021Q2,2021Q3,0.9706,9214,10058,font_heading,font_heading
+21431,HYPERA S.A.,2021Q3,2022Q1,0.9329,10058,10531,font_heading,font_heading
+21431,HYPERA S.A.,2022Q1,2022Q2,0.9897,10531,10878,font_heading,font_heading
+21431,HYPERA S.A.,2022Q2,2022Q3,0.9586,10878,12533,font_heading,font_heading
+21431,HYPERA S.A.,2022Q3,2023Q1,0.9667,12533,12567,font_heading,font_heading
+21431,HYPERA S.A.,2023Q1,2023Q2,0.9909,12567,13254,font_heading,font_heading
+21431,HYPERA S.A.,2023Q2,2023Q3,0.9944,13254,13471,font_heading,font_heading
+21431,HYPERA S.A.,2023Q3,2024Q1,0.9815,13471,14570,font_heading,font_heading
+21431,HYPERA S.A.,2024Q1,2024Q2,0.9874,14570,15891,font_heading,font_heading
+21431,HYPERA S.A.,2024Q2,2024Q3,0.9986,15891,15889,font_heading,font_heading
+21881,FLEURY S.A.,2015Q1,2015Q2,0.9696,7784,7779,font_heading,font_heading
+21881,FLEURY S.A.,2015Q2,2015Q3,0.1408,7779,12659,font_heading,font_heading
+21881,FLEURY S.A.,2015Q3,2016Q1,0.7415,12659,11809,font_heading,font_heading
+21881,FLEURY S.A.,2019Q1,2019Q2,0.2949,4046,39453,font_heading,font_heading
+21881,FLEURY S.A.,2019Q2,2019Q3,0.3042,39453,3260,font_heading,font_heading
+21881,FLEURY S.A.,2021Q3,2022Q1,0.9959,4940,4754,font_heading,font_heading
+21881,FLEURY S.A.,2022Q1,2022Q2,0.9909,4754,5464,font_heading,font_heading
+21881,FLEURY S.A.,2022Q2,2022Q3,0.9927,5464,5480,font_heading,font_heading
+21881,FLEURY S.A.,2022Q3,2023Q1,0.9959,5480,5254,font_heading,font_heading
+21881,FLEURY S.A.,2023Q1,2023Q3,0.6521,5254,5521,font_heading,font_heading
+21881,FLEURY S.A.,2023Q3,2024Q1,0.8017,5521,2820,font_heading,font_heading
+21881,FLEURY S.A.,2024Q1,2024Q2,0.8062,2820,5257,font_heading,font_heading
+21881,FLEURY S.A.,2024Q2,2024Q3,0.9966,5257,5242,font_heading,font_heading
+22187,PRIO S.A.,2015Q1,2015Q2,0.2226,1250,3196,font_heading,font_heading
+22187,PRIO S.A.,2015Q2,2015Q3,0.9909,3196,3199,font_heading,font_heading
+22187,PRIO S.A.,2015Q3,2016Q1,0.8059,3199,2586,font_heading,font_heading
+22187,PRIO S.A.,2016Q1,2016Q2,0.9966,2586,2615,font_heading,font_heading
+22187,PRIO S.A.,2019Q3,2020Q1,0.1415,1092,991,font_heading,font_heading
+22187,PRIO S.A.,2020Q1,2020Q3,0.5224,991,2050,font_heading,font_heading
+22187,PRIO S.A.,2020Q3,2021Q2,0.0619,2050,39,font_heading,font_heading
+22187,PRIO S.A.,2021Q2,2021Q3,1.0,39,39,font_heading,font_heading
+22349,AZZAS 2154 S.A.,2015Q1,2015Q2,0.9647,3332,3206,font_heading,font_heading
+22349,AZZAS 2154 S.A.,2015Q2,2015Q3,0.972,3206,3203,font_heading,font_heading
+22349,AZZAS 2154 S.A.,2015Q3,2016Q1,0.9377,3203,3053,font_heading,font_heading
+22349,AZZAS 2154 S.A.,2016Q1,2016Q2,0.9868,3053,3041,font_heading,font_heading
+22349,AZZAS 2154 S.A.,2016Q2,2016Q3,0.9853,3041,3045,font_heading,font_heading
+22349,AZZAS 2154 S.A.,2016Q3,2017Q1,0.9712,3045,3113,font_heading,font_heading
+22349,AZZAS 2154 S.A.,2017Q1,2017Q2,0.9738,3113,3180,font_heading,font_heading
+22349,AZZAS 2154 S.A.,2017Q2,2017Q3,0.9822,3180,3195,font_heading,font_heading
+22349,AZZAS 2154 S.A.,2017Q3,2018Q1,0.9451,3195,3262,font_heading,font_heading
+22349,AZZAS 2154 S.A.,2018Q1,2018Q2,0.9492,3262,3493,font_heading,font_heading
+22349,AZZAS 2154 S.A.,2018Q2,2018Q3,0.9725,3493,3503,font_heading,font_heading
+22349,AZZAS 2154 S.A.,2021Q3,2022Q1,0.9049,7091,5840,font_heading,font_heading
+22349,AZZAS 2154 S.A.,2022Q1,2022Q2,0.9554,5840,6177,font_heading,font_heading
+22349,AZZAS 2154 S.A.,2022Q2,2022Q3,0.9645,6177,6382,font_heading,font_heading
+22349,AZZAS 2154 S.A.,2022Q3,2023Q1,0.9433,6382,6137,font_heading,font_heading
+22349,AZZAS 2154 S.A.,2023Q1,2023Q2,0.9602,6137,6175,font_heading,font_heading
+22349,AZZAS 2154 S.A.,2023Q2,2023Q3,0.9721,6175,6196,font_heading,font_heading
+22349,AZZAS 2154 S.A.,2023Q3,2024Q1,0.8972,6196,5209,font_heading,font_heading
+22349,AZZAS 2154 S.A.,2024Q1,2024Q2,0.9765,5209,5220,font_heading,font_heading
+22349,AZZAS 2154 S.A.,2024Q2,2024Q3,0.7662,5220,9012,font_heading,font_heading
+22357,ALLOS S.A,2021Q1,2021Q2,0.2056,28409,4986,font_heading,font_heading
+22357,ALLOS S.A,2022Q3,2023Q1,0.8559,7424,8875,font_heading,font_heading
+22357,ALLOS S.A,2023Q1,2023Q2,0.9979,8875,8973,font_heading,font_heading
+22357,ALLOS S.A,2023Q2,2024Q1,0.5991,8973,6028,font_heading,font_heading
+22470,MAGAZINE LUIZA S.A.,2018Q2,2018Q3,0.9555,3341,3317,font_heading,font_heading
+22470,MAGAZINE LUIZA S.A.,2023Q3,2024Q1,0.9721,3992,3675,font_heading,font_heading
+22691,Companhia de Locação das Américas (Locamerica),2015Q1,2015Q2,0.8991,6214,6832,font_heading,font_heading
+22691,Companhia de Locação das Américas (Locamerica),2015Q2,2015Q3,0.9646,6832,7114,font_heading,font_heading
+22691,Companhia de Locação das Américas (Locamerica),2017Q2,2017Q3,0.097,88,7305,font_heading,font_heading
+22691,Companhia de Locação das Américas (Locamerica),2017Q3,2018Q1,0.6819,7305,5686,font_heading,font_heading
+22691,Companhia de Locação das Américas (Locamerica),2022Q3,2023Q1,0.6113,6602,2265,font_heading,font_heading
+22691,Companhia de Locação das Américas (Locamerica),2023Q1,2023Q2,0.7557,2265,2797,font_heading,font_heading
+22691,Companhia de Locação das Américas (Locamerica),2023Q2,2023Q3,0.7378,2797,4346,font_heading,font_heading
+22691,Companhia de Locação das Américas (Locamerica),2023Q3,2024Q1,0.681,4346,3561,font_heading,font_heading
+22691,Companhia de Locação das Américas (Locamerica),2024Q1,2024Q2,0.9409,3561,3805,font_heading,font_heading
+22691,Companhia de Locação das Américas (Locamerica),2024Q2,2024Q3,0.928,3805,3518,font_heading,font_heading
+23140,Smiles S.A.,2015Q1,2015Q2,0.973,1697,1589,font_heading,font_heading
+23140,Smiles S.A.,2015Q2,2015Q3,0.3139,1589,492,font_heading,font_heading
+23264,AMBEV S.A.,2015Q1,2015Q2,0.9891,1645,1666,font_heading,font_heading
+23264,AMBEV S.A.,2015Q2,2015Q3,0.9978,1666,1664,font_heading,font_heading
+23264,AMBEV S.A.,2019Q1,2019Q2,0.9841,859,852,font_heading,font_heading
+23264,AMBEV S.A.,2019Q2,2019Q3,1.0,852,854,font_heading,font_heading
+23264,AMBEV S.A.,2019Q3,2020Q1,1.0,854,845,font_heading,font_heading
+23264,AMBEV S.A.,2020Q1,2020Q2,0.852,845,1186,font_heading,font_heading
+23264,AMBEV S.A.,2022Q2,2022Q3,1.0,750,741,font_heading,font_heading
+23264,AMBEV S.A.,2022Q3,2023Q1,0.9864,741,705,font_heading,font_heading
+23264,AMBEV S.A.,2023Q1,2023Q2,1.0,705,709,font_heading,font_heading
+23264,AMBEV S.A.,2023Q2,2023Q3,0.2994,709,1205,font_heading,font_heading
+23264,AMBEV S.A.,2023Q3,2024Q1,0.2981,1205,748,font_heading,font_heading
+23264,AMBEV S.A.,2024Q1,2024Q2,0.1295,748,312,font_heading,font_heading
+23264,AMBEV S.A.,2024Q2,2024Q3,0.1295,312,747,font_heading,font_heading
+23272,LOG Commercial Properties e Participações,2015Q1,2015Q2,0.5449,786,9838,font_heading,font_heading
+23272,LOG Commercial Properties e Participações,2015Q2,2015Q3,0.5017,9838,1318,font_heading,font_heading
+23272,LOG Commercial Properties e Participações,2015Q3,2016Q1,0.8698,1318,833,font_heading,font_heading
+23272,LOG Commercial Properties e Participações,2016Q1,2016Q2,0.9906,833,925,font_heading,font_heading
+23272,LOG Commercial Properties e Participações,2016Q2,2016Q3,0.5787,925,12460,font_heading,font_heading
+23272,LOG Commercial Properties e Participações,2016Q3,2017Q1,0.4123,12460,1491,font_heading,font_heading
+23272,LOG Commercial Properties e Participações,2017Q1,2017Q2,0.6569,1491,921,font_heading,font_heading
+23272,LOG Commercial Properties e Participações,2017Q2,2017Q3,0.916,921,1330,font_heading,font_heading
+23272,LOG Commercial Properties e Participações,2017Q3,2018Q1,0.829,1330,951,font_heading,font_heading
+23272,LOG Commercial Properties e Participações,2018Q1,2018Q2,0.9516,951,1542,font_heading,font_heading
+23272,LOG Commercial Properties e Participações,2018Q2,2018Q3,0.9203,1542,1741,font_heading,font_heading
+23272,LOG Commercial Properties e Participações,2018Q3,2019Q1,0.8734,1741,1262,font_heading,font_heading
+23272,LOG Commercial Properties e Participações,2019Q1,2019Q3,0.0316,1262,1117,font_heading,font_heading
+23272,LOG Commercial Properties e Participações,2021Q1,2021Q2,0.9371,1055,1295,font_heading,font_heading
+23272,LOG Commercial Properties e Participações,2021Q2,2021Q3,0.9613,1295,1329,font_heading,font_heading
+23272,LOG Commercial Properties e Participações,2023Q1,2023Q2,0.2646,68,46,font_heading,font_heading
+23272,LOG Commercial Properties e Participações,2023Q2,2023Q3,0.2829,46,66,font_heading,font_heading
+23310,CVC Brasil Operadora e Agência de Viagens S.A.,2015Q1,2015Q2,0.6186,2601,887,font_heading,font_heading
+23310,CVC Brasil Operadora e Agência de Viagens S.A.,2015Q2,2015Q3,0.945,887,1155,font_heading,font_heading
+23310,CVC Brasil Operadora e Agência de Viagens S.A.,2015Q3,2016Q1,0.8504,1155,1341,font_heading,font_heading
+23310,CVC Brasil Operadora e Agência de Viagens S.A.,2016Q1,2016Q2,0.9306,1341,1618,font_heading,font_heading
+23310,CVC Brasil Operadora e Agência de Viagens S.A.,2016Q2,2016Q3,0.9982,1618,1629,font_heading,font_heading
+23310,CVC Brasil Operadora e Agência de Viagens S.A.,2016Q3,2017Q1,0.3641,1629,5457,font_heading,font_heading
+23310,CVC Brasil Operadora e Agência de Viagens S.A.,2017Q1,2017Q2,0.9237,5457,6712,font_heading,font_heading
+23310,CVC Brasil Operadora e Agência de Viagens S.A.,2017Q2,2017Q3,0.9989,6712,6756,font_heading,font_heading
+23310,CVC Brasil Operadora e Agência de Viagens S.A.,2017Q3,2018Q1,0.7945,6756,9916,font_heading,font_heading
+23310,CVC Brasil Operadora e Agência de Viagens S.A.,2018Q1,2018Q2,0.9461,9916,11766,font_heading,font_heading
+23310,CVC Brasil Operadora e Agência de Viagens S.A.,2018Q2,2018Q3,0.8823,11766,21090,font_heading,font_heading
+23310,CVC Brasil Operadora e Agência de Viagens S.A.,2020Q1,2020Q2,0.9749,61156,63761,font_heading,font_heading
+23310,CVC Brasil Operadora e Agência de Viagens S.A.,2020Q2,2020Q3,0.278,63761,5073,font_heading,font_heading
+23310,CVC Brasil Operadora e Agência de Viagens S.A.,2020Q3,2021Q1,0.7925,5073,8543,font_heading,font_heading
+23310,CVC Brasil Operadora e Agência de Viagens S.A.,2021Q1,2021Q2,0.8012,8543,3760,font_heading,font_heading
+23310,CVC Brasil Operadora e Agência de Viagens S.A.,2021Q2,2021Q3,0.7864,3760,9085,font_heading,font_heading
+23310,CVC Brasil Operadora e Agência de Viagens S.A.,2021Q3,2022Q1,0.9405,9085,6730,font_heading,font_heading
+23310,CVC Brasil Operadora e Agência de Viagens S.A.,2022Q1,2022Q2,0.9384,6730,7649,font_heading,font_heading
+23310,CVC Brasil Operadora e Agência de Viagens S.A.,2022Q2,2022Q3,1.0,7649,7650,font_heading,font_heading
+23310,CVC Brasil Operadora e Agência de Viagens S.A.,2022Q3,2023Q1,0.8786,7650,5143,font_heading,font_heading
+23310,CVC Brasil Operadora e Agência de Viagens S.A.,2023Q1,2023Q2,0.8076,5143,8750,font_heading,font_heading
+23310,CVC Brasil Operadora e Agência de Viagens S.A.,2023Q2,2023Q3,0.9961,8750,8694,font_heading,font_heading
+23310,CVC Brasil Operadora e Agência de Viagens S.A.,2023Q3,2024Q1,0.9566,8694,7683,font_heading,font_heading
+23310,CVC Brasil Operadora e Agência de Viagens S.A.,2024Q1,2024Q2,0.9989,7683,7635,font_heading,font_heading
+23310,CVC Brasil Operadora e Agência de Viagens S.A.,2024Q2,2024Q3,0.7844,7635,7828,font_heading,font_heading
+24112,Azul S.A.,2017Q1,2017Q2,0.198,2932,5836,font_heading,font_heading
+24112,Azul S.A.,2017Q2,2017Q3,0.6639,5836,3726,font_heading,font_heading
+24112,Azul S.A.,2018Q2,2018Q3,0.9954,5455,5329,font_heading,font_heading
+24112,Azul S.A.,2018Q3,2019Q1,0.8838,5329,4197,font_heading,font_heading
+24112,Azul S.A.,2019Q1,2019Q2,0.9995,4197,4194,font_heading,font_heading
+24112,Azul S.A.,2019Q2,2019Q3,0.9883,4194,4215,font_heading,font_heading
+24112,Azul S.A.,2019Q3,2020Q1,0.8697,4215,5397,font_heading,font_heading
+24112,Azul S.A.,2020Q1,2020Q2,0.6967,5397,3480,font_heading,font_heading
+24112,Azul S.A.,2021Q2,2021Q3,0.9865,5195,5080,font_heading,font_heading
+24112,Azul S.A.,2021Q3,2022Q1,0.5869,5080,4186,font_heading,font_heading
+24112,Azul S.A.,2022Q1,2022Q2,0.7292,4186,3083,font_heading,font_heading
+24112,Azul S.A.,2022Q2,2022Q3,0.1396,3083,1702,font_heading,font_heading
+24112,Azul S.A.,2022Q3,2023Q1,0.1746,1702,949,font_heading,font_heading
+24112,Azul S.A.,2023Q3,2024Q1,0.7394,3795,3747,font_heading,font_heading
+24112,Azul S.A.,2024Q1,2024Q2,0.6435,3747,3245,font_heading,font_heading
+24112,Azul S.A.,2024Q2,2024Q3,0.7342,3245,2450,font_heading,font_heading
+24171,Atacadão S.A.,2019Q3,2020Q1,0.252,407,2666,font_heading,font_heading
+24171,Atacadão S.A.,2021Q2,2021Q3,0.9895,2960,3139,font_heading,font_heading
+24171,Atacadão S.A.,2021Q3,2022Q1,0.9312,3139,2807,font_heading,font_heading
+24171,Atacadão S.A.,2022Q1,2022Q2,0.4178,2807,3159,font_heading,font_heading
+24171,Atacadão S.A.,2022Q2,2022Q3,0.4326,3159,4260,font_heading,font_heading
+24171,Atacadão S.A.,2022Q3,2023Q1,0.9323,4260,5419,font_heading,font_heading
+24171,Atacadão S.A.,2023Q1,2023Q2,0.8031,5419,5413,font_heading,font_heading
+24171,Atacadão S.A.,2023Q2,2023Q3,1.0,5413,5413,font_heading,font_heading
+24171,Atacadão S.A.,2023Q3,2024Q1,0.7883,5413,6446,font_heading,font_heading
+24252,Smiles Fidelidade S.A.,2017Q1,2017Q2,0.5433,671,636,font_heading,font_heading
+24260,SMARTFIT ESCOLA DE GINÁSTICA E DANÇA S.A.,2017Q1,2017Q2,0.9988,8170,8173,font_heading,font_heading
+24260,SMARTFIT ESCOLA DE GINÁSTICA E DANÇA S.A.,2017Q2,2017Q3,0.9554,8173,10532,font_heading,font_heading
+24260,SMARTFIT ESCOLA DE GINÁSTICA E DANÇA S.A.,2017Q3,2018Q1,0.9278,10532,13050,font_heading,font_heading
+24260,SMARTFIT ESCOLA DE GINÁSTICA E DANÇA S.A.,2018Q1,2018Q2,0.9842,13050,13368,font_heading,font_heading
+24260,SMARTFIT ESCOLA DE GINÁSTICA E DANÇA S.A.,2018Q2,2018Q3,0.9787,13368,14390,font_heading,font_heading
+24260,SMARTFIT ESCOLA DE GINÁSTICA E DANÇA S.A.,2018Q3,2019Q1,0.9254,14390,10081,font_heading,font_heading
+24260,SMARTFIT ESCOLA DE GINÁSTICA E DANÇA S.A.,2021Q2,2021Q3,0.9988,9878,9842,font_heading,font_heading
+24260,SMARTFIT ESCOLA DE GINÁSTICA E DANÇA S.A.,2021Q3,2022Q1,0.5365,9842,1557,font_heading,font_heading
+24260,SMARTFIT ESCOLA DE GINÁSTICA E DANÇA S.A.,2022Q1,2022Q2,0.1625,1557,168,font_heading,font_heading
+24260,SMARTFIT ESCOLA DE GINÁSTICA E DANÇA S.A.,2022Q2,2022Q3,1.0,168,168,font_heading,font_heading
+24260,SMARTFIT ESCOLA DE GINÁSTICA E DANÇA S.A.,2022Q3,2023Q1,0.111,168,784,font_heading,font_heading
+24260,SMARTFIT ESCOLA DE GINÁSTICA E DANÇA S.A.,2023Q1,2023Q2,1.0,784,784,font_heading,font_heading
+24260,SMARTFIT ESCOLA DE GINÁSTICA E DANÇA S.A.,2023Q2,2023Q3,0.8315,784,1337,font_heading,font_heading
+24260,SMARTFIT ESCOLA DE GINÁSTICA E DANÇA S.A.,2023Q3,2024Q1,0.2128,1337,1043,font_heading,font_heading
+24295,VIBRA ENERGIA S.A.,2021Q1,2021Q2,0.9545,2794,3158,font_heading,font_heading
+24295,VIBRA ENERGIA S.A.,2021Q2,2021Q3,0.6141,3158,1795,font_heading,font_heading
+24384,Notre Dame Intermédica Participações S.A.,2018Q2,2018Q3,0.966,3280,3599,font_heading,font_heading
+24392,HAPVIDA PARTICIPACOES E INVESTIMENTOS SA,2019Q2,2019Q3,0.0261,774,272,font_heading,font_heading
+24392,HAPVIDA PARTICIPACOES E INVESTIMENTOS SA,2019Q3,2020Q1,0.0869,272,4843,font_heading,font_heading
+24392,HAPVIDA PARTICIPACOES E INVESTIMENTOS SA,2022Q1,2022Q2,0.9845,8965,9134,font_heading,font_heading
+24392,HAPVIDA PARTICIPACOES E INVESTIMENTOS SA,2023Q1,2023Q2,0.884,4650,5262,font_heading,font_heading
+24392,HAPVIDA PARTICIPACOES E INVESTIMENTOS SA,2023Q2,2023Q3,0.9965,5262,5274,font_heading,font_heading
+24392,HAPVIDA PARTICIPACOES E INVESTIMENTOS SA,2023Q3,2024Q1,0.7499,5274,14266,font_heading,font_heading
+24392,HAPVIDA PARTICIPACOES E INVESTIMENTOS SA,2024Q1,2024Q2,0.9708,14266,15298,font_heading,font_heading
+24392,HAPVIDA PARTICIPACOES E INVESTIMENTOS SA,2024Q2,2024Q3,0.984,15298,15631,font_heading,font_heading
+24716,VAMOS LOCAÇÃO DE CAMINHÕES. MÁQUINAS E EQUIP. S.A.,2019Q1,2019Q2,0.8923,7559,8737,font_heading,font_heading
+24716,VAMOS LOCAÇÃO DE CAMINHÕES. MÁQUINAS E EQUIP. S.A.,2019Q2,2019Q3,0.9058,8737,10778,font_heading,font_heading
+24716,VAMOS LOCAÇÃO DE CAMINHÕES. MÁQUINAS E EQUIP. S.A.,2019Q3,2020Q1,0.8289,10778,12847,font_heading,font_heading
+24716,VAMOS LOCAÇÃO DE CAMINHÕES. MÁQUINAS E EQUIP. S.A.,2020Q3,2021Q1,0.9104,13523,12970,font_heading,font_heading
+24716,VAMOS LOCAÇÃO DE CAMINHÕES. MÁQUINAS E EQUIP. S.A.,2021Q1,2021Q2,0.0533,12970,237,font_heading,font_heading
+24716,VAMOS LOCAÇÃO DE CAMINHÕES. MÁQUINAS E EQUIP. S.A.,2021Q2,2021Q3,0.0063,237,3627,font_heading,font_heading
+24716,VAMOS LOCAÇÃO DE CAMINHÕES. MÁQUINAS E EQUIP. S.A.,2021Q3,2022Q1,0.6199,3627,14856,font_heading,font_heading
+24716,VAMOS LOCAÇÃO DE CAMINHÕES. MÁQUINAS E EQUIP. S.A.,2022Q1,2022Q2,0.6921,14856,7556,font_heading,font_heading
+24716,VAMOS LOCAÇÃO DE CAMINHÕES. MÁQUINAS E EQUIP. S.A.,2022Q2,2022Q3,0.8016,7556,16661,font_heading,font_heading
+24783,Natura & Co Holding S.A. (pre-restructuring parent entity),2020Q1,2020Q2,1.0,166,166,font_heading,font_heading
+24783,Natura & Co Holding S.A. (pre-restructuring parent entity),2020Q2,2020Q3,0.1225,166,5821,font_heading,font_heading
+24783,Natura & Co Holding S.A. (pre-restructuring parent entity),2020Q3,2021Q1,0.1225,5821,179,font_heading,font_heading
+24783,Natura & Co Holding S.A. (pre-restructuring parent entity),2021Q1,2021Q2,0.0695,179,8376,font_heading,font_heading
+24805,VIVARA PARTICIPAÇOES S.A,2021Q3,2022Q1,0.871,2703,2074,font_heading,font_heading
+24805,VIVARA PARTICIPAÇOES S.A,2022Q1,2022Q2,0.9562,2074,2347,font_heading,font_heading
+24805,VIVARA PARTICIPAÇOES S.A,2022Q2,2022Q3,0.9359,2347,2668,font_heading,font_heading
+24805,VIVARA PARTICIPAÇOES S.A,2022Q3,2023Q1,0.8872,2668,1882,font_heading,font_heading
+24805,VIVARA PARTICIPAÇOES S.A,2023Q1,2023Q2,0.9873,1882,1918,font_heading,font_heading
+24805,VIVARA PARTICIPAÇOES S.A,2023Q2,2023Q3,0.9059,1918,2538,font_heading,font_heading
+24805,VIVARA PARTICIPAÇOES S.A,2023Q3,2024Q1,0.986,2538,2454,font_heading,font_heading
+24805,VIVARA PARTICIPAÇOES S.A,2024Q1,2024Q2,0.9445,2454,2121,font_heading,font_heading
+24805,VIVARA PARTICIPAÇOES S.A,2024Q2,2024Q3,0.9538,2121,2639,font_heading,font_heading
+24821,REDE DOR SÃO LUIZ S.A.,2019Q1,2019Q2,0.984,6035,6653,font_heading,font_heading
+24821,REDE DOR SÃO LUIZ S.A.,2020Q1,2020Q2,0.5963,6601,27178,font_heading,font_heading
+24821,REDE DOR SÃO LUIZ S.A.,2021Q2,2021Q3,0.6615,8440,27255,font_heading,font_heading
+24821,REDE DOR SÃO LUIZ S.A.,2021Q3,2022Q1,0.8874,27255,22524,font_heading,font_heading
+24821,REDE DOR SÃO LUIZ S.A.,2022Q1,2022Q2,0.9684,22524,24669,font_heading,font_heading
+24821,REDE DOR SÃO LUIZ S.A.,2022Q2,2022Q3,0.8518,24669,22502,font_heading,font_heading
+24821,REDE DOR SÃO LUIZ S.A.,2023Q2,2023Q3,0.9882,12350,13900,font_heading,font_heading
+24821,REDE DOR SÃO LUIZ S.A.,2024Q2,2024Q3,0.9997,11779,11753,font_heading,font_heading
+24910,LWSA S/A (Locaweb),2019Q1,2019Q2,0.3897,9728,2054,font_heading,font_heading
+24910,LWSA S/A (Locaweb),2019Q2,2019Q3,0.3517,2054,12480,font_heading,font_heading
+24910,LWSA S/A (Locaweb),2019Q3,2020Q1,0.2781,12480,2415,font_heading,font_heading
+24910,LWSA S/A (Locaweb),2020Q3,2021Q1,0.6516,2796,1537,font_heading,font_heading
+24910,LWSA S/A (Locaweb),2021Q1,2021Q2,0.9855,1537,1529,font_heading,font_heading
+24910,LWSA S/A (Locaweb),2021Q2,2021Q3,0.9936,1529,1487,font_heading,font_heading
+24910,LWSA S/A (Locaweb),2021Q3,2022Q1,0.7468,1487,1620,font_heading,font_heading
+24910,LWSA S/A (Locaweb),2023Q1,2023Q2,0.9545,1223,1138,font_heading,font_heading
+24910,LWSA S/A (Locaweb),2023Q2,2023Q3,0.9628,1138,1212,font_heading,font_heading
+24910,LWSA S/A (Locaweb),2023Q3,2024Q1,0.5867,1212,1594,font_heading,font_heading
+24910,LWSA S/A (Locaweb),2024Q1,2024Q2,0.9793,1594,1633,font_heading,font_heading
+24910,LWSA S/A (Locaweb),2024Q2,2024Q3,0.9608,1633,1581,font_heading,font_heading
+24929,TIM S.A.,2019Q1,2019Q2,0.9831,7140,6776,font_heading,font_heading
+24929,TIM S.A.,2019Q2,2019Q3,0.9808,6776,7160,font_heading,font_heading
+24929,TIM S.A.,2019Q3,2020Q1,0.7589,7160,5951,font_heading,font_heading
+24929,TIM S.A.,2020Q1,2020Q2,0.9488,5951,6836,font_heading,font_heading
+24929,TIM S.A.,2020Q2,2020Q3,0.949,6836,7283,font_heading,font_heading
+24929,TIM S.A.,2020Q3,2021Q1,0.79,7283,3942,font_heading,font_heading
+24929,TIM S.A.,2021Q1,2021Q2,0.8603,3942,5990,font_heading,font_heading
+24929,TIM S.A.,2021Q2,2021Q3,0.984,5990,5976,font_heading,font_heading
+24929,TIM S.A.,2021Q3,2022Q1,0.8685,5976,4426,font_heading,font_heading
+24929,TIM S.A.,2022Q3,2023Q2,0.8959,5027,4213,font_heading,font_heading
+24929,TIM S.A.,2023Q2,2023Q3,0.9934,4213,4226,font_heading,font_heading
+24929,TIM S.A.,2023Q3,2024Q1,0.8898,4226,3733,font_heading,font_heading
+24929,TIM S.A.,2024Q1,2024Q2,0.8989,3733,4406,font_heading,font_heading
+24929,TIM S.A.,2024Q2,2024Q3,0.6971,4406,4440,font_heading,font_heading
+25100,CURY CONSTRUTORA E INCORPORADORA S.A.,2020Q1,2020Q2,0.9808,3916,4173,font_heading,font_heading
+25291,BRAVA ENERGIA S.A.,2020Q3,2021Q1,0.0437,814,1854,font_heading,font_heading
+25291,BRAVA ENERGIA S.A.,2021Q1,2021Q2,0.9841,1854,1856,font_heading,font_heading
+25291,BRAVA ENERGIA S.A.,2021Q2,2021Q3,1.0,1856,1853,font_heading,font_heading
+25372,SENDAS DISTRIBUIDORA S.A.,2024Q1,2024Q2,0.8703,6714,5204,font_heading,font_heading
+25372,SENDAS DISTRIBUIDORA S.A.,2024Q2,2024Q3,0.6769,5204,12166,font_heading,font_heading
+25585,CSN MINERAÇÃO S.A.,2020Q1,2020Q2,0.9981,2311,2312,font_heading,font_heading
+25585,CSN MINERAÇÃO S.A.,2020Q2,2020Q3,0.1948,2312,259,font_heading,font_heading
+25585,CSN MINERAÇÃO S.A.,2021Q3,2022Q1,0.843,3614,2385,font_heading,font_heading
+25585,CSN MINERAÇÃO S.A.,2022Q1,2022Q2,0.1832,2385,281,font_heading,font_heading
+25585,CSN MINERAÇÃO S.A.,2022Q2,2022Q3,0.3129,281,3712,font_heading,font_heading
+25585,CSN MINERAÇÃO S.A.,2022Q3,2023Q1,0.8915,3712,2868,font_heading,font_heading
+25585,CSN MINERAÇÃO S.A.,2023Q1,2023Q2,0.8383,2868,2766,font_heading,font_heading
+25585,CSN MINERAÇÃO S.A.,2023Q2,2023Q3,0.9253,2766,3176,font_heading,font_heading
+25585,CSN MINERAÇÃO S.A.,2023Q3,2024Q1,0.8943,3176,3045,font_heading,font_heading
+25585,CSN MINERAÇÃO S.A.,2024Q1,2024Q2,0.8969,3045,2969,font_heading,font_heading
+25585,CSN MINERAÇÃO S.A.,2024Q2,2024Q3,0.9685,2969,2982,font_heading,font_heading
+25780,PETRORECÔNCAVO S.A.,2021Q3,2022Q1,0.6173,6959,6528,font_heading,font_heading
+25780,PETRORECÔNCAVO S.A.,2022Q1,2022Q3,0.61,6528,4373,font_heading,font_heading
+25780,PETRORECÔNCAVO S.A.,2022Q3,2023Q1,0.811,4373,4762,font_heading,font_heading
+25780,PETRORECÔNCAVO S.A.,2024Q1,2024Q2,0.1713,2870,125,font_heading,font_heading
+25780,PETRORECÔNCAVO S.A.,2024Q2,2024Q3,0.1808,125,7819,font_heading,font_heading
+25917,Raízen S.A.,2020Q2,2020Q3,0.947,3455,3148,font_heading,font_heading
+25917,Raízen S.A.,2022Q2,2022Q3,0.9368,6694,8047,font_heading,font_heading
+25917,Raízen S.A.,2022Q3,2023Q2,0.8887,8047,7519,font_heading,font_heading
+25917,Raízen S.A.,2023Q2,2023Q3,0.8258,7519,7499,font_heading,font_heading
+25917,Raízen S.A.,2023Q3,2024Q2,0.8689,7499,7792,font_heading,font_heading
+25917,Raízen S.A.,2024Q2,2024Q3,0.9054,7792,9248,font_heading,font_heading
+26620,AUREN ENERGIA S.A.,2022Q1,2022Q2,0.8998,4584,5508,font_heading,font_heading
+26620,AUREN ENERGIA S.A.,2022Q2,2022Q3,0.9906,5508,5446,font_heading,font_heading
+26620,AUREN ENERGIA S.A.,2022Q3,2023Q1,0.8161,5446,5033,font_heading,font_heading
+26620,AUREN ENERGIA S.A.,2023Q1,2023Q2,0.8781,5033,7085,font_heading,font_heading
+26620,AUREN ENERGIA S.A.,2023Q2,2023Q3,0.9397,7085,6555,font_heading,font_heading
+26620,AUREN ENERGIA S.A.,2023Q3,2024Q1,0.956,6555,5789,font_heading,font_heading
+26620,AUREN ENERGIA S.A.,2024Q1,2024Q2,0.956,5789,6208,font_heading,font_heading
+26620,AUREN ENERGIA S.A.,2024Q2,2024Q3,0.9877,6208,6992,font_heading,font_heading

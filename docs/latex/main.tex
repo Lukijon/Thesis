@@ -291,7 +291,7 @@ Este capítulo descreve, de forma consolidada, todas as fontes de dados usadas n
 
 A amostra compreende 111 empresas não financeiras listadas na B3: as 66 constituintes atuais do Ibovespa (não financeiras) mais 46 empresas que integraram o índice em algum momento entre 2015 e 2024 mas não integram mais, reconstruídas a partir de dados históricos de composição do índice obtidos via Bloomberg, especificamente para corrigir o viés de sobrevivência que uma amostra baseada apenas na composição atual do índice teria. O período de análise é 2015--2024, com dados anuais (DFP) e, em caráter exploratório, dados trimestrais (ITR) para 2015--2024.
 
-Das 45 empresas históricas com par de similaridade computável, 30 ainda possuem um ticker negociável (por reorganização societária ou renomeação), permitindo o cálculo de retorno; as demais 15 saíram definitivamente do mercado, o que é, por si, uma diferença sistemática relevante para a checagem de associação com saída do índice (Seção~\ref{sec:robustez}). A Figura~\ref{fig:composicao} mostra como a amostra anual (nota de dívida) se distribui, ano a ano, entre empresas atuais e históricas.
+Das 37 empresas históricas com par de similaridade confiável computável (Seção~\ref{sec:confiabilidade}), 24 ainda possuem um ticker negociável (por reorganização societária ou renomeação), permitindo o cálculo de retorno; as demais 13 saíram definitivamente do mercado, o que é, por si, uma diferença sistemática relevante para a checagem de associação com saída do índice (Seção~\ref{sec:robustez}). A Figura~\ref{fig:composicao} mostra como a amostra anual (nota de dívida) se distribui, ano a ano, entre empresas atuais e históricas.
 
 \begin{figure}[htbp]
     \centering
@@ -300,7 +300,7 @@ Das 45 empresas históricas com par de similaridade computável, 30 ainda possue
     \label{fig:composicao}
     \vspace{0.2cm}
 
-    {\footnotesize Fonte: elaborada pelo autor. Total: 508 pares empresa-ano de empresas atuais e 308 de empresas históricas/deslistadas.}
+    {\footnotesize Fonte: elaborada pelo autor. Total: 335 pares empresa-ano de empresas atuais e 192 de empresas históricas/deslistadas (amostra de extração confiável, Seção~\ref{sec:confiabilidade}).}
 \end{figure}
 
 \section{Fontes de dados}
@@ -349,6 +349,8 @@ A Figura~\ref{fig:confiabilidade} resume essas duas métricas lado a lado, delib
 
 A prática adotada ao longo de todo o projeto foi verificar cada padrão suspeito lendo diretamente uma amostra dos arquivos e casos concretos por trás dele, em vez de confiar apenas na estatística agregada. Foi exatamente essa prática, aplicada em várias rodadas de leitura e teste manual de exemplos, que revelou um problema real de qualidade de dados no cenário de conjunto completo de notas: para uma fração relevante dos arquivos, o anexo capturado era, na verdade, um documento diferente (por exemplo, um release de resultados em vez das demonstrações financeiras). Todos os resultados reportados no Capítulo~\ref{ch:resultados} usam apenas a versão já corrigida para essa contaminação.
 
+\textbf{Regra metodológica: apenas extração confiável para a nota de dívida isolada.} A nota de dívida isolada (base anual e trimestral) é a única fonte de texto sujeita à heurística de localização de seção descrita acima, e portanto a única com uma classificação de confiabilidade (\textit{font\_heading} vs. \textit{regex\_only}) a considerar; as outras três fontes já chegam pré-isoladas, sem essa ambiguidade. A Seção~\ref{sec:poc_validacao} mostra que restringir a amostra a pares com \textit{font\_heading} nos dois anos desloca a distribuição de similaridade para um padrão mais bem comportado (Figura~\ref{fig:similaridade_bruta_confiavel}) sem alterar nenhuma conclusão de H1 ou H2. Diante disso, todos os resultados da nota de dívida isolada reportados a partir daqui -- Tabela~\ref{tab:sample} em diante, Capítulos~\ref{ch:resultados} -- usam exclusivamente essa amostra restrita, não mais o conjunto completo de pares computáveis.
+
 \section{Estatísticas descritivas das variáveis}
 \label{sec:estatisticas}
 
@@ -362,20 +364,20 @@ O número de pares ano a ano com similaridade textual calculável varia por font
         \toprule
         \textbf{Fonte de texto} & \textbf{Frequência} & \textbf{Pares} & \textbf{Empresas} \\
         \midrule
-        Nota de dívida isolada & Anual & 816 & 111 \\
-        Nota de dívida isolada & Trimestral & 2.572 & 112 \\
+        Nota de dívida isolada (confiável) & Anual & 527 & 99 \\
+        Nota de dívida isolada (confiável) & Trimestral & 1.496 & 103 \\
         Conjunto completo de notas explicativas & Anual & 487 & $\sim$100 \\
         Relatório da Administração & Anual & 562 & $\sim$100 \\
         Fatores de Risco (FRE) & Anual & 811 & 104 \\
         \bottomrule
     \end{tabular}
     \\[0.3cm]
-    {\footnotesize Fonte: elaborada pelo autor a partir de dados da CVM.}
+    {\footnotesize Fonte: elaborada pelo autor a partir de dados da CVM. Nota de dívida isolada restrita a pares com extração confiável (\textit{font\_heading}) nos dois anos, Seção~\ref{sec:confiabilidade}.}
 \end{table}
 
 Dados de mercado (preços diários da ação e do Ibovespa, 2014--2026) cobrem a totalidade das 66 empresas atuais. Dados de consenso de EPS dos analistas (Bloomberg), usados na análise complementar de H2, cobrem 64 das 66 empresas atuais e 27 das 45 históricas.
 
-A nota de dívida isolada em base anual é o objeto central desta dissertação (H1 e H2, Seção~\ref{sec:hipoteses}); as outras quatro fontes de texto entram apenas como critério de comparação metodológica (Seção~\ref{sec:medida}), não como parte do teste das hipóteses. A Figura~\ref{fig:similaridade} compara a distribuição da similaridade de cosseno entre as cinco fontes. Um padrão salta aos olhos e é relevante para a leitura dos resultados do Capítulo~\ref{ch:resultados}: as fontes de documento inteiro ou pré-isolado por seção fixa (conjunto completo de notas, Fatores de Risco) concentram-se muito mais perto de 1 (mediana de 0,95 em ambas) do que a nota de dívida isolada (mediana de 0,68 na base anual). Ou seja, o recorte estreito da nota específica de dívida captura consistentemente mais mudança textual ano a ano do que o documento inteiro ou uma seção-padrão como Fatores de Risco, nos quais boilerplate estrutural dilui a mudança relativa.
+A nota de dívida isolada em base anual é o objeto central desta dissertação (H1 e H2, Seção~\ref{sec:hipoteses}); as outras quatro fontes de texto entram apenas como critério de comparação metodológica (Seção~\ref{sec:medida}), não como parte do teste das hipóteses. A Figura~\ref{fig:similaridade} compara a distribuição da similaridade de cosseno entre as cinco fontes. Um padrão salta aos olhos e é relevante para a leitura dos resultados do Capítulo~\ref{ch:resultados}: as fontes de documento inteiro ou pré-isolado por seção fixa (conjunto completo de notas, Fatores de Risco) concentram-se muito mais perto de 1 (mediana de 0,95 em ambas) do que a nota de dívida isolada (mediana de 0,83 na base anual, já sobre a amostra de extração confiável). Ou seja, mesmo restrita à extração mais confiável, o recorte estreito da nota específica de dívida ainda captura mais mudança textual ano a ano do que o documento inteiro ou uma seção-padrão como Fatores de Risco, nos quais boilerplate estrutural dilui a mudança relativa -- uma diferença menor do que a observada sobre a amostra completa, mas na mesma direção.
 
 \begin{figure}[htbp]
     \centering
@@ -387,7 +389,7 @@ A nota de dívida isolada em base anual é o objeto central desta dissertação 
     {\footnotesize Fonte: elaborada pelo autor. Caixas: 1º-3º quartil; linha central: mediana; pontos: valores atípicos.}
 \end{figure}
 
-A Figura~\ref{fig:retorno} mostra a distribuição do retorno anormal (variável dependente de H1, nota de dívida anual, $n=704$ pares computáveis). A distribuição é aproximadamente simétrica em torno de uma mediana ligeiramente negativa ($-8{,}2\%$), sem assimetria extrema que por si só explicaria a ausência de significância reportada no Capítulo~\ref{ch:resultados}. Um retorno anormal médio negativo é esperado em um mercado emergente com Ibovespa como referência em períodos de estresse macroeconômico (2015--2016, 2020), e não indica um problema de construção da variável.
+A Figura~\ref{fig:retorno} mostra a distribuição do retorno anormal (variável dependente de H1, nota de dívida anual, $n=450$ pares, amostra de extração confiável). A distribuição é aproximadamente simétrica em torno de uma mediana ligeiramente negativa ($-6{,}7\%$), sem assimetria extrema que por si só explicaria a ausência de significância reportada no Capítulo~\ref{ch:resultados}. Um retorno anormal médio negativo é esperado em um mercado emergente com Ibovespa como referência em períodos de estresse macroeconômico (2015--2016, 2020), e não indica um problema de construção da variável.
 
 \begin{figure}[htbp]
     \centering
@@ -396,7 +398,7 @@ A Figura~\ref{fig:retorno} mostra a distribuição do retorno anormal (variável
     \label{fig:retorno}
     \vspace{0.2cm}
 
-    {\footnotesize Fonte: elaborada pelo autor a partir de preços da Bloomberg. Percentis 1 e 99 truncados para legibilidade; estatísticas calculadas sobre a amostra completa.}
+    {\footnotesize Fonte: elaborada pelo autor a partir de preços da Bloomberg. Percentis 1 e 99 truncados para legibilidade; estatísticas calculadas sobre a amostra de extração confiável.}
 \end{figure}
 
 Por fim, a Figura~\ref{fig:controles} mostra a distribuição das quatro variáveis de controle usadas nas regressões (Seção~\ref{sec:controles}), sobre as 992 observações empresa-ano com dados contábeis estruturados disponíveis. O logaritmo do ativo total tem distribuição aproximadamente normal, como esperado; alavancagem concentra-se abaixo de 1, com uma cauda de poucas empresas em dificuldade financeira severa (passivo superior ao ativo); ROA concentra-se perto de zero com cauda esquerda mais longa (empresas com prejuízo); e o retorno passado tem assimetria positiva característica de retornos de ações.
@@ -433,7 +435,7 @@ Antes dos testes confirmatórios de H1 e H2 (Seções~\ref{sec:h1_resultados}--\
     {\footnotesize Fonte: elaborada pelo autor a partir dos logs de extração do projeto (corpus anual completo, 997 arquivamentos).}
 \end{figure}
 
-\textbf{A similaridade se comporta melhor exatamente onde a extração é confiável.} A Figura~\ref{fig:similaridade_bruta_confiavel} compara a distribuição de similaridade sobre todos os pares extraídos com a distribuição restrita aos pares em que ambos os anos tiveram extração confiável. Restringir à extração confiável desloca a média de 0,56 para 0,71 e a mediana de 0,68 para 0,83, e reduz a concentração anômala de escores próximos de 0 e exatamente 1 que caracteriza os casos de falha de extração conhecidos (ver adiante). Esse é o padrão esperado se a medida estiver de fato lendo o texto da nota; não seria o padrão esperado se a variação observada fosse puramente ruído de extração.
+\textbf{A similaridade se comporta melhor exatamente onde a extração é confiável.} A Figura~\ref{fig:similaridade_bruta_confiavel} compara a distribuição de similaridade sobre todos os pares extraídos com a distribuição restrita aos pares em que ambos os anos tiveram extração confiável. Restringir à extração confiável desloca a média de 0,56 para 0,71 e a mediana de 0,68 para 0,83, e reduz a concentração anômala de escores próximos de 0 e exatamente 1 que caracteriza os casos de falha de extração conhecidos (ver adiante). Esse é o padrão esperado se a medida estiver de fato lendo o texto da nota; não seria o padrão esperado se a variação observada fosse puramente ruído de extração. É essa evidência, junto com a ausência de qualquer mudança nas conclusões de H1 e H2 ao aplicar a restrição (Seção~\ref{sec:h1_resultados}), que motiva adotar a extração confiável como a amostra padrão da nota de dívida isolada em todo o restante do trabalho (Seção~\ref{sec:confiabilidade}), em vez de mantê-la apenas como um teste de robustez à parte.
 
 \begin{figure}[htbp]
     \centering
@@ -475,15 +477,15 @@ A Tabela~\ref{tab:h1} reporta o p-valor do coeficiente de Similaridade sobre o r
         \toprule
         \textbf{Fonte de texto} & \textbf{n} & \textbf{Simples} & \textbf{Agrup., s/c} & \textbf{Agrup., c/c} & \textbf{Ef. fixos} \\
         \midrule
-        Nota de dívida (anual)       & 671   & 0,645 & 0,715 & 0,779 & 0,776 \\
-        Nota de dívida (trimestral)  & 2.138 & 0,876 & 0,900 & 0,897 & 0,671 \\
+        Nota de dívida (anual)       & 432   & 0,155 & 0,274 & 0,321 & 0,203 \\
+        Nota de dívida (trimestral)  & 1.226 & 0,500 & 0,605 & 0,782 & 0,348 \\
         Conjunto completo de notas   & 411   & 0,628 & 0,641 & 0,513 & 0,660 \\
         Relatório da Administração   & 484   & 0,153 & 0,140 & \textbf{0,031} & 0,478 \\
         Fatores de Risco (FRE)       & 672   & 0,226 & 0,151 & 0,308 & 0,758 \\
         \bottomrule
     \end{tabular}
     \\[0.3cm]
-    {\footnotesize Fonte: elaborada pelo autor. Valores são p-valores; ``Agrup., s/c'' = agrupado por empresa, sem controles; ``Agrup., c/c'' = agrupado com controles.}
+    {\footnotesize Fonte: elaborada pelo autor. Valores são p-valores; ``Agrup., s/c'' = agrupado por empresa, sem controles; ``Agrup., c/c'' = agrupado com controles. Nota de dívida (anual e trimestral): amostra restrita a pares com extração confiável (Seção~\ref{sec:confiabilidade}).}
 \end{table}
 
 Três padrões merecem destaque na leitura da Tabela~\ref{tab:h1}, e não apenas a coluna final. Primeiro: nota de dívida (anual e trimestral) e conjunto completo de notas não mostram associação significativa com retorno anormal em nenhum estágio. É um resultado nulo consistente, não sensível à especificação escolhida.
@@ -527,11 +529,13 @@ Nenhuma das duas versões atinge significância convencional. É notável, poré
         \toprule
         \textbf{Fonte de texto} & \textbf{Agrup., s/c} & \textbf{Agrup., c/ tamanho} & \textbf{Agrup., s/ tamanho} \\
         \midrule
-        Nota de dívida (anual)      & 0,761 & 0,876 & 0,745 \\
+        Nota de dívida (anual)      & 0,649 & 0,851 & 0,860 \\
         Conjunto completo de notas  & 0,086 & 0,391 & 0,125 \\
         Relatório da Administração  & \textbf{0,033} & 0,113 & 0,059 \\
         \bottomrule
     \end{tabular}
+    \\[0.3cm]
+    {\footnotesize Nota de dívida (anual): amostra restrita a pares com extração confiável (Seção~\ref{sec:confiabilidade}).}
 \end{table}
 
 O Relatório da Administração é, novamente, a única fonte com algum sinal sem controles, mas não sobrevive à adição de controles. Um teste de efeitos fixos não foi aplicado a essa checagem especificamente: a condição de deslistamento é constante dentro de cada empresa, e a transformação de efeitos fixos elimina exatamente a variação que se quer explicar. Estimar o modelo mesmo assim produz um coeficiente de ordem $10^{-17}$ (essencialmente zero de máquina) acompanhado de um p-valor de 0,0057, que pareceria altamente significativo se lido sem esse cuidado. Esse é um exemplo concreto de um teste mal especificado, identificado e descartado antes de ser reportado como resultado.
@@ -570,8 +574,8 @@ Esse é, no conjunto, o achado empírico mais bem sustentado deste projeto até 
         \toprule
         \textbf{Fonte de texto} & \textbf{Janela} & \textbf{Ef. fixos (2 vias)} & \textbf{FE (só empresa)} & \textbf{RE (só empresa)} & \textbf{Hausman} & \textbf{Escolhido} \\
         \midrule
-        Nota de dívida (anual)      & 12m & 0,776 & 0,913 & 0,744 & 0,024 & FE: 0,913 \\
-                                     & 18m & 0,800 & 0,844 & 0,721 & 0,001 & FE: 0,844 \\
+        Nota de dívida (anual)      & 12m & 0,203 & 0,349 & 0,270 & 0,000 & FE: 0,349 \\
+                                     & 18m & 0,385 & 0,506 & 0,525 & 0,001 & FE: 0,506 \\
         Conjunto completo de notas  & 12m & 0,660 & 0,220 & 0,427 & 0,768 & RE: 0,427 \\
                                      & 18m & 0,182 & 0,080 & 0,177 & 0,802 & RE: 0,177 \\
         Relatório da Administração  & 12m & 0,478 & 0,785 & \textbf{0,045} & 0,000 & FE: 0,785 \\
@@ -582,7 +586,7 @@ Esse é, no conjunto, o achado empírico mais bem sustentado deste projeto até 
     \end{tabular}%
     }
     \\[0.3cm]
-    {\footnotesize Fonte: elaborada pelo autor. Valores são p-valores do coeficiente de similaridade, exceto a coluna Hausman (p-valor do teste de especificação) e a última coluna, que reporta o estimador escolhido pela regra de \citeonline{santoscoelho2018} (Hausman rejeita a 5\% $\rightarrow$ efeitos fixos; caso contrário, efeitos aleatórios) e o p-valor correspondente.}
+    {\footnotesize Fonte: elaborada pelo autor. Valores são p-valores do coeficiente de similaridade, exceto a coluna Hausman (p-valor do teste de especificação) e a última coluna, que reporta o estimador escolhido pela regra de \citeonline{santoscoelho2018} (Hausman rejeita a 5\% $\rightarrow$ efeitos fixos; caso contrário, efeitos aleatórios) e o p-valor correspondente. Nota de dívida (anual): amostra restrita a pares com extração confiável (Seção~\ref{sec:confiabilidade}).}
 \end{table}
 
 O caso do Relatório da Administração aos 12 meses ilustra por que a regra de seleção importa: sob efeitos aleatórios sozinhos, o coeficiente pareceria significativo ($p=0{,}045$), mas o teste de Hausman rejeita decisivamente a equivalência entre os dois estimadores ($p<0{,}001$) e recomenda efeitos fixos, sob o qual o resultado é nulo ($p=0{,}785$). Aplicando a própria regra de decisão de \citeonline{santoscoelho2018} de forma correta, portanto, nenhuma fonte de texto e nenhuma janela mostra significância em nenhuma das duas versões do desenho.
@@ -592,7 +596,7 @@ Esse exercício responde diretamente à limitação que os autores apontam em se
 \section{Análise complementar (H2)}
 \label{sec:h2_resultados}
 
-Como análise complementar (Seção~\ref{sec:h2_metodologia}), testou-se se a mudança textual também se associa à revisão do consenso de EPS dos analistas em torno da data de divulgação, seguindo a mesma progressão de rigor da Seção~\ref{sec:h1_resultados} para as quatro fontes de texto, totalizando 56 testes. O resultado é um nulo limpo: nenhum dos 24 testes centrais atinge significância a 5\% (Tabela~\ref{tab:h2}).
+Como análise complementar (Seção~\ref{sec:h2_metodologia}), testou-se se a mudança textual também se associa à revisão do consenso de EPS dos analistas em torno da data de divulgação, seguindo a mesma progressão de rigor da Seção~\ref{sec:h1_resultados} para as quatro fontes de texto (nota de dívida anual e trimestral já restritas à amostra de extração confiável, Seção~\ref{sec:confiabilidade}), totalizando 32 testes. O resultado central é um nulo limpo: nenhum dos 12 testes centrais (correlação e regressão agrupada, com e sem controles) atinge significância a 5\% (Tabela~\ref{tab:h2}).
 
 \begin{table}[htbp]
     \centering
@@ -603,15 +607,17 @@ Como análise complementar (Seção~\ref{sec:h2_metodologia}), testou-se se a mu
         \toprule
         \textbf{Fonte de texto} & \textbf{n} & \textbf{Simples} & \textbf{Agrup., s/c} & \textbf{Agrup., c/c} & \textbf{Ef. fixos} \\
         \midrule
-        Nota de dívida (anual)       & 518   & 0,456 & 0,503 & 0,474 & 0,766 \\
-        Nota de dívida (trimestral)  & 1.678 & 0,833 & 0,851 & 0,808 & 0,886 \\
+        Nota de dívida (anual)       & 339   & 0,713 & 0,647 & 0,480 & 0,851 \\
+        Nota de dívida (trimestral)  & 982   & 0,233 & 0,240 & 0,383 & 0,305 \\
         Conjunto completo de notas   & 316   & 0,662 & 0,569 & 0,855 & 0,866 \\
         Relatório da Administração   & 386   & 0,747 & 0,689 & 0,693 & 0,967 \\
         \bottomrule
     \end{tabular}
+    \\[0.3cm]
+    {\footnotesize Nota de dívida (anual e trimestral): amostra restrita a pares com extração confiável (Seção~\ref{sec:confiabilidade}).}
 \end{table}
 
-Dos 56 testes totais (incluindo comparações de tercil e a checagem de deslistamento aplicada à revisão), 4 registraram $p<0{,}05$, um número muito próximo dos 2,8 esperados por acaso puro. Cada um dos quatro foi inspecionado individualmente: três eram comparações de tercil com padrão não monótono, e o quarto era a checagem de deslistamento no Relatório da Administração, que voltou a não ser significativa assim que testada com agrupamento por empresa ($p=0{,}050$ para $p=0{,}851$), uma ocorrência adicional, dentro deste mesmo projeto, do mesmo padrão identificado na Seção~\ref{sec:robustez}.
+Dos 32 testes totais (incluindo comparações de tercil e a checagem de deslistamento aplicada à revisão), 3 registraram $p<0{,}05$, um número próximo dos 1,6 esperados por acaso puro. Os três foram inspecionados individualmente: dois eram comparações de tercil com padrão não monótono (nota de dívida trimestral, $p<0{,}001$, terço médio de revisão muito acima dos dois extremos; conjunto completo de notas, $p=0{,}024$, recuo no terço médio antes de subir no terço alto -- robustos à remoção de valores extremos, portanto não um artefato isolado, mas ainda sem uma leitura monotônica compatível com H2), e o terceiro era a checagem de deslistamento no Relatório da Administração, que voltou a não ser significativa assim que testada com agrupamento por empresa ($p=0{,}050$ para $p=0{,}851$), uma ocorrência adicional, dentro deste mesmo projeto, do mesmo padrão identificado na Seção~\ref{sec:robustez}.
 
 Vale lembrar que a limitação de mensuração da série de consenso, discutida na Seção~\ref{sec:h2_metodologia}, permanece em aberto: parte do nulo aqui reportado pode refletir essa limitação, não apenas ausência de relação real.
 
