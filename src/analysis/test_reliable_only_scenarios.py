@@ -64,6 +64,7 @@ WITH_LIAB_LEVEL_NO_ROA = ["leverage", "past_12m_return", "total_liabilities_curr
 WITH_LIAB_DELTA_NO_ROA = ["leverage", "past_12m_return", "delta_liabilities"]
 WITH_LIAB_DELTA_NO_ROA_SIZE = ["ln_total_assets", "leverage", "past_12m_return", "delta_liabilities"]
 WITH_DEBT_LINE_NO_ROA = ["leverage", "past_12m_return", "debt_line_item"]
+WITH_DEBT_LINE_DELTA_LIAB_NO_ROA = ["leverage", "past_12m_return", "debt_line_item", "delta_liabilities"]
 
 SCENARIOS = [
     ("Base (c/ ROA)", WITH_ROA, False, False),
@@ -80,6 +81,7 @@ SCENARIOS = [
     ("Com passivo (só variação), sem ROA", WITH_LIAB_DELTA_NO_ROA, False, False),
     ("Com passivo (só variação), sem ROA, com tamanho", WITH_LIAB_DELTA_NO_ROA_SIZE, False, False),
     ("Com Empréstimos+Financiamentos+Debêntures, sem ROA", WITH_DEBT_LINE_NO_ROA, False, False),
+    ("Com Empréstimos+Financiamentos+Debêntures, sem ROA, com variação do passivo", WITH_DEBT_LINE_DELTA_LIAB_NO_ROA, False, False),
 ]
 
 

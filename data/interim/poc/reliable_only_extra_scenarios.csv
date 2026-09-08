@@ -65,3 +65,8 @@ Com passivo (nível + variação),H2_revisão,narrow_quarterly,999,0.23332103309
 "Com Empréstimos+Financiamentos+Debêntures, sem ROA",H1_delisting,narrow_annual,527,0.45111379508560945,527,0.6486303354559362,441,0.8507709309756267,,
 "Com Empréstimos+Financiamentos+Debêntures, sem ROA",H2_revisão,narrow_annual,344,0.7125502659325249,344,0.6471174628085365,339,0.4663123371438975,,
 "Com Empréstimos+Financiamentos+Debêntures, sem ROA",H2_revisão,narrow_quarterly,999,0.23332103309095234,999,0.23997829245307212,982,0.41854818725581644,,
+"Com Empréstimos+Financiamentos+Debêntures, sem ROA, com variação do passivo",H1_retorno,narrow_annual,450,0.15542825801934224,450,0.2743804567916355,432,0.2996962599437787,432.0,0.15319242896334684
+"Com Empréstimos+Financiamentos+Debêntures, sem ROA, com variação do passivo",H1_retorno,narrow_quarterly,1300,0.5004125272307212,1300,0.6052495577000987,1226,0.7578960257843661,502.0,0.453593050235676
+"Com Empréstimos+Financiamentos+Debêntures, sem ROA, com variação do passivo",H1_delisting,narrow_annual,527,0.45111379508560945,527,0.6486303354559362,441,0.850667557714041,,
+"Com Empréstimos+Financiamentos+Debêntures, sem ROA, com variação do passivo",H2_revisão,narrow_annual,344,0.7125502659325249,344,0.6471174628085365,339,0.46523279693051367,,
+"Com Empréstimos+Financiamentos+Debêntures, sem ROA, com variação do passivo",H2_revisão,narrow_quarterly,999,0.23332103309095234,999,0.23997829245307212,982,0.42000487541273546,,
