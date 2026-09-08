@@ -1,5 +1,5 @@
-"""Two follow-up robustness checks requested directly, run on top of the
-new default methodology (narrow-note results restricted to font_heading/
+"""Follow-up robustness checks requested directly, run on top of the new
+default methodology (narrow-note results restricted to font_heading/
 font_heading pairs, src/analysis/build_reliable_only_datasets.py):
 
   1. Drop ROA from the control set (leverage + past_12m_return only).
@@ -7,10 +7,14 @@ font_heading pairs, src/analysis/build_reliable_only_datasets.py):
      != 1) -- the silently-bridged-gap issue found earlier
      (src/analysis/test_year_gap_robustness.py), now checked against the
      reliable-only base instead of the full sample.
+  3. Combined: both restrictions applied together (no ROA AND no
+     year-gap pairs).
 
 Covers H1 return (narrow_annual, narrow_quarterly), H1 delisting
 (narrow_annual), and H2 revision (narrow_annual, narrow_quarterly) -- the
-same scope as the reliable-only switch itself.
+same scope as the reliable-only switch itself. The year-gap filter (and
+therefore the combined scenario) only applies to the two annual sources --
+"consecutive years" has no direct analogue in the quarter-indexed series.
 
 Usage:
     python -u -m src.analysis.test_reliable_only_scenarios
@@ -103,6 +107,7 @@ def main() -> None:
             ycol_use = ycol
             gap = df["year_curr"] - df["year_prev"]
             scenarios.append(("sem pares com salto de ano", df[gap == 1], WITH_ROA))
+            scenarios.append(("combinado (sem ROA + sem salto)", df[gap == 1], NO_ROA))
 
         for scen_label, subset, controls in scenarios:
             r = rigor_progression(subset, "abnormal_return", ycol_use, controls, with_fe=True)
@@ -115,6 +120,7 @@ def main() -> None:
         ("base (c/ ROA)", df, WITH_ROA),
         ("sem ROA", df, NO_ROA),
         ("sem pares com salto de ano", df[gap == 1], WITH_ROA),
+        ("combinado (sem ROA + sem salto)", df[gap == 1], NO_ROA),
     ]:
         r = rigor_progression(subset, "is_dropped", "year_curr", controls, with_fe=False)
         rows.append({"família": "H1_delisting", "fonte": "narrow_annual", "cenário": scen_label, **r})
@@ -134,6 +140,7 @@ def main() -> None:
         else:
             gap = df["year_curr"] - df["year_prev"]
             scenarios.append(("sem pares com salto de ano", df[gap == 1], WITH_ROA))
+            scenarios.append(("combinado (sem ROA + sem salto)", df[gap == 1], NO_ROA))
         for scen_label, subset, controls in scenarios:
             r = rigor_progression(subset, "revision_pct", ycol, controls, with_fe=False)
             rows.append({"família": "H2_revisão", "fonte": name, "cenário": scen_label, **r})
