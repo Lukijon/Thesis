@@ -32,6 +32,13 @@ scenario rather than one row per source:
       2.02.01 non-current, which already includes debêntures as a
       sub-account -- src/features/build_debt_line_item.py) added as a
       control, in place of ROA.
+  15. Idem + variação do passivo, and no-past-return / no-leverage
+      variants of it.
+  16. "Cenário Alpha" -- controls reduced to just debt_line_item and
+      delta_liabilities (leverage, ROA, and past_12m_return all dropped).
+      A named reference point: saved separately to
+      data/interim/poc/cenario_alpha_results.csv so it can be cited in
+      future work without rerunning the whole battery.
 
 Covers H1 return (narrow_annual, narrow_quarterly), H1 delisting
 (narrow_annual), and H2 revision (narrow_annual, narrow_quarterly) -- the
@@ -67,7 +74,14 @@ WITH_DEBT_LINE_NO_ROA = ["leverage", "past_12m_return", "debt_line_item"]
 WITH_DEBT_LINE_DELTA_LIAB_NO_ROA = ["leverage", "past_12m_return", "debt_line_item", "delta_liabilities"]
 WITH_DEBT_LINE_DELTA_LIAB_NO_ROA_NO_PASTRET = ["leverage", "debt_line_item", "delta_liabilities"]
 WITH_DEBT_LINE_DELTA_LIAB_NO_ROA_NO_LEVERAGE = ["past_12m_return", "debt_line_item", "delta_liabilities"]
-DEBT_LINE_DELTA_LIAB_ONLY = ["debt_line_item", "delta_liabilities"]
+# "Cenário Alpha": a named reference point for future tests. Controls
+# reduced to just the two debt-specific variables -- the precise
+# Empréstimos+Financiamentos+Debêntures balance-sheet line and its
+# year-over-year change in total liabilities -- with leverage, ROA and
+# past_12m_return all dropped. Saved to its own CSV (see main()) so it can
+# be cited/reused without re-running the full battery.
+CENARIO_ALPHA_LABEL = "Cenário Alpha (Empréstimos+Financiamentos+Debêntures + variação do passivo, sem ROA/alavancagem/retorno passado)"
+CENARIO_ALPHA_CONTROLS = ["debt_line_item", "delta_liabilities"]
 
 SCENARIOS = [
     ("Base (c/ ROA)", WITH_ROA, False, False),
@@ -87,7 +101,7 @@ SCENARIOS = [
     ("Com Empréstimos+Financiamentos+Debêntures, sem ROA, com variação do passivo", WITH_DEBT_LINE_DELTA_LIAB_NO_ROA, False, False),
     ("Idem, sem retorno passado", WITH_DEBT_LINE_DELTA_LIAB_NO_ROA_NO_PASTRET, False, False),
     ("Idem, sem alavancagem", WITH_DEBT_LINE_DELTA_LIAB_NO_ROA_NO_LEVERAGE, False, False),
-    ("Só Empréstimos+Financiamentos+Debêntures + variação do passivo (sem ROA, alavancagem, retorno passado)", DEBT_LINE_DELTA_LIAB_ONLY, False, False),
+    (CENARIO_ALPHA_LABEL, CENARIO_ALPHA_CONTROLS, False, False),
 ]
 
 
@@ -242,6 +256,10 @@ def main() -> None:
     out_path = POC / "reliable_only_extra_scenarios.csv"
     out.to_csv(out_path, index=False)
     print(f"\nWritten: {out_path}")
+
+    alpha_path = POC / "cenario_alpha_results.csv"
+    all_tables[CENARIO_ALPHA_LABEL].to_csv(alpha_path, index=False)
+    print(f"Written (Cenário Alpha, standalone): {alpha_path}")
 
 
 if __name__ == "__main__":
