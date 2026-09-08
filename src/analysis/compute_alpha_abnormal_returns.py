@@ -109,12 +109,23 @@ def event_window_residuals(ret: pd.Series, factors: pd.DataFrame, alpha: float, 
     return df["r"] - expected
 
 
-def main() -> None:
-    base = pd.read_csv(POC / "abnormal_returns_poc_reliable.csv")
+# One base file per text source. narrow_annual/narrow_quarterly already
+# use the reliable-only (font_heading) sample, the current default for
+# those two sources; the other three have no such distinction (Sec 4.3).
+SOURCES = {
+    "narrow_annual": ("abnormal_returns_poc_reliable.csv", "year_prev", "year_curr"),
+    "narrow_quarterly": ("abnormal_returns_itr_reliable.csv", "quarter_prev", "quarter_curr"),
+    "whole_notes": ("abnormal_returns_full_notes_VERIFIED.csv", "year_prev", "year_curr"),
+    "mgmt_report": ("abnormal_returns_mgmt_report.csv", "year_prev", "year_curr"),
+    "risk_factors": ("abnormal_returns_risk_factors.csv", "year_prev", "year_curr"),
+}
+
+
+def process_source(fname: str, pair_prev_col: str, pair_curr_col: str, prices: pd.DataFrame,
+                    factors: pd.DataFrame) -> pd.DataFrame:
+    base = pd.read_csv(POC / fname)
     base["window_start"] = pd.to_datetime(base["window_start"])
     base["window_end"] = pd.to_datetime(base["window_end"])
-    prices = load_prices()
-    factors = load_factors()
 
     rows = []
     n_dropped_estimation = n_dropped_event = 0
@@ -136,9 +147,8 @@ def main() -> None:
             continue
 
         rows.append({
-            "cd_cvm": row.cd_cvm, "year_prev": row.year_prev, "year_curr": row.year_curr,
+            "cd_cvm": row.cd_cvm, pair_prev_col: getattr(row, pair_prev_col), pair_curr_col: getattr(row, pair_curr_col),
             "cosine_similarity": row.cosine_similarity,
-            "diagnostic_prev": row.diagnostic_prev, "diagnostic_curr": row.diagnostic_curr,
             "ticker": row.ticker, "window_start": row.window_start, "window_end": row.window_end,
             "stock_return": row.stock_return, "ar_market_adjusted": row.abnormal_return,
             "alpha_i": alpha, "beta_mkt": betas["Rm_minus_Rf"], "beta_smb": betas["SMB"],
@@ -149,24 +159,27 @@ def main() -> None:
         })
 
     df = pd.DataFrame(rows)
-    print(f"{len(df)} events with a computable alpha-based abnormal return "
-          f"({n_dropped_estimation} dropped for <{MIN_OBS} estimation-window obs, "
-          f"{n_dropped_event} dropped for insufficient event-window data)")
+    print(f"  {len(df)} computable ({n_dropped_estimation} dropped <{MIN_OBS} est.-window obs, "
+          f"{n_dropped_event} dropped insufficient event-window data)")
+    return df
 
-    out_path = POC / "abnormal_returns_alpha.csv"
-    df.to_csv(out_path, index=False)
-    print(f"Written: {out_path}\n")
 
-    print("Beta plausibility (should center near 1 for beta_mkt, wider/noisier for the others):")
-    print(df[["alpha_i", "beta_mkt", "beta_smb", "beta_hml", "beta_mom"]].describe().round(4))
-    print()
-    print("Abnormal return distributions:")
-    print(df[["alpha_ar_sum", "alpha_ar_compound", "ar_market_adjusted"]].describe().round(4))
-    print()
-    print("Correlation between the new alpha-based AR and the current market-adjusted AR:")
-    print("  sum vs. market-adjusted:     r =", round(df["alpha_ar_sum"].corr(df["ar_market_adjusted"]), 4))
-    print("  compound vs. market-adjusted: r =", round(df["alpha_ar_compound"].corr(df["ar_market_adjusted"]), 4))
-    print("  sum vs. compound:             r =", round(df["alpha_ar_sum"].corr(df["alpha_ar_compound"]), 4))
+def main() -> None:
+    prices = load_prices()
+    factors = load_factors()
+
+    for name, (fname, prev_col, curr_col) in SOURCES.items():
+        print(f"{name} ({fname}):")
+        df = process_source(fname, prev_col, curr_col, prices, factors)
+        out_path = POC / f"abnormal_returns_alpha_{name}.csv"
+        df.to_csv(out_path, index=False)
+        print(f"  Written: {out_path}")
+
+        if not df.empty:
+            print("  beta_mkt median:", round(df["beta_mkt"].median(), 3),
+                  " alpha_ar_sum median:", round(df["alpha_ar_sum"].median(), 4),
+                  " alpha_ar_compound median:", round(df["alpha_ar_compound"].median(), 4))
+        print()
 
 
 if __name__ == "__main__":
