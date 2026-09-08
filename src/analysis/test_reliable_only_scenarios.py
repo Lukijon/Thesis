@@ -27,6 +27,11 @@ scenario rather than one row per source:
   12. Com passivo (só variação), sem ROA -- change only, no ROA.
   13. Com passivo (só variação), sem ROA, com tamanho -- change only,
       no ROA, plus ln_total_assets.
+  14. Com Empréstimos+Financiamentos+Debêntures, sem ROA -- the specific
+      debt-line-item balance-sheet account (CD_CONTA 2.01.04 current +
+      2.02.01 non-current, which already includes debêntures as a
+      sub-account -- src/features/build_debt_line_item.py) added as a
+      control, in place of ROA.
 
 Covers H1 return (narrow_annual, narrow_quarterly), H1 delisting
 (narrow_annual), and H2 revision (narrow_annual, narrow_quarterly) -- the
@@ -58,6 +63,7 @@ WITH_LIAB_NO_ROA = ["leverage", "past_12m_return", "total_liabilities_curr", "de
 WITH_LIAB_LEVEL_NO_ROA = ["leverage", "past_12m_return", "total_liabilities_curr"]
 WITH_LIAB_DELTA_NO_ROA = ["leverage", "past_12m_return", "delta_liabilities"]
 WITH_LIAB_DELTA_NO_ROA_SIZE = ["ln_total_assets", "leverage", "past_12m_return", "delta_liabilities"]
+WITH_DEBT_LINE_NO_ROA = ["leverage", "past_12m_return", "debt_line_item"]
 
 SCENARIOS = [
     ("Base (c/ ROA)", WITH_ROA, False, False),
@@ -73,6 +79,7 @@ SCENARIOS = [
     ("Com passivo (só nível), sem ROA", WITH_LIAB_LEVEL_NO_ROA, False, False),
     ("Com passivo (só variação), sem ROA", WITH_LIAB_DELTA_NO_ROA, False, False),
     ("Com passivo (só variação), sem ROA, com tamanho", WITH_LIAB_DELTA_NO_ROA_SIZE, False, False),
+    ("Com Empréstimos+Financiamentos+Debêntures, sem ROA", WITH_DEBT_LINE_NO_ROA, False, False),
 ]
 
 
@@ -93,6 +100,13 @@ def _add_liability_controls(df: pd.DataFrame, year_prev_col: str, year_curr_col:
                 on=["cd_cvm", year_prev_col], how="left")
     d["delta_liabilities"] = d["total_liabilities_curr"] - d["total_liabilities_prev"]
     return d
+
+
+def _add_debt_line_item(df: pd.DataFrame, year_curr_col: str) -> pd.DataFrame:
+    """Adds debt_line_item (Empréstimos e Financiamentos + Debêntures,
+    CD_CONTA 2.01.04 + 2.02.01, at year_curr) to df."""
+    debt = pd.read_csv(INTERIM / "debt_line_item.csv")[["cd_cvm", "fiscal_year", "debt_line_item"]]
+    return df.merge(debt.rename(columns={"fiscal_year": year_curr_col}), on=["cd_cvm", year_curr_col], how="left")
 
 
 def rigor_progression(df: pd.DataFrame, outcome: str, ctrl_year_col: str, controls: list[str], with_fe: bool,
@@ -155,27 +169,32 @@ def _load_sources() -> dict:
 
     ret_annual = pd.read_csv(POC / "abnormal_returns_poc_reliable.csv")
     ret_annual = _add_liability_controls(ret_annual, "year_prev", "year_curr")
+    ret_annual = _add_debt_line_item(ret_annual, "year_curr")
     sources[("H1_retorno", "narrow_annual")] = (ret_annual, "abnormal_return", "year_curr", True, True)
 
     ret_qtr = pd.read_csv(POC / "abnormal_returns_itr_reliable.csv")
     ret_qtr["ctrl_year_col"] = ret_qtr["quarter_curr"].str[:4].astype(int)
     ret_qtr["ctrl_year_col_prev"] = ret_qtr["quarter_prev"].str[:4].astype(int)
     ret_qtr = _add_liability_controls(ret_qtr, "ctrl_year_col_prev", "ctrl_year_col")
+    ret_qtr = _add_debt_line_item(ret_qtr, "ctrl_year_col")
     sources[("H1_retorno", "narrow_quarterly")] = (ret_qtr, "abnormal_return", "ctrl_year_col", True, False)
 
     dl = pd.read_csv(POC / "delisted_similarity_results_reliable.csv")
     dl["is_dropped"] = (dl["group"] == "dropped_or_delisted").astype(int)
     dl = _add_liability_controls(dl, "year_prev", "year_curr")
+    dl = _add_debt_line_item(dl, "year_curr")
     sources[("H1_delisting", "narrow_annual")] = (dl, "is_dropped", "year_curr", False, True)
 
     h2_annual = pd.read_csv(POC / "h2_eps_revision_narrow_annual_all_reliable.csv")
     h2_annual = _add_liability_controls(h2_annual, "year_prev", "year_curr")
+    h2_annual = _add_debt_line_item(h2_annual, "year_curr")
     sources[("H2_revisão", "narrow_annual")] = (h2_annual, "revision_pct", "year_curr", False, True)
 
     h2_qtr = pd.read_csv(POC / "h2_eps_revision_narrow_quarterly_all_reliable.csv")
     h2_qtr["ctrl_year_col"] = h2_qtr["quarter_curr"].str[:4].astype(int)
     h2_qtr["ctrl_year_col_prev"] = h2_qtr["quarter_prev"].str[:4].astype(int)
     h2_qtr = _add_liability_controls(h2_qtr, "ctrl_year_col_prev", "ctrl_year_col")
+    h2_qtr = _add_debt_line_item(h2_qtr, "ctrl_year_col")
     sources[("H2_revisão", "narrow_quarterly")] = (h2_qtr, "revision_pct", "ctrl_year_col", False, False)
 
     for (df, *_rest) in sources.values():
