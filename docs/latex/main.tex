@@ -306,9 +306,9 @@ A escolha por um painel de efeitos fixos de empresa e ano tem três motivações
 \section{Análise complementar: revisão de consenso de analistas (H2)}
 \label{sec:h2_metodologia}
 
-Como análise complementar, testa-se se a mudança textual também se associa à revisão do consenso de previsões de EPS dos analistas após a divulgação, usando dados de consenso do Bloomberg.
+Como análise complementar, testa-se se TextChange também se associa à revisão do consenso de previsões de EPS dos analistas após a divulgação, usando dados de consenso do Bloomberg.
 
-A variável de revisão é construída, para cada par (empresa, exercício $t-1$, exercício $t$) com similaridade textual computável, como a diferença percentual entre o último valor de consenso de EPS disponível antes da data de divulgação da DFP e o primeiro valor disponível depois dela, dentro de uma janela de 140 dias em torno da divulgação. A mesma progressão de rigor descrita na Seção~\ref{sec:modelo} para H1 (correlação simples; regressão agrupada por empresa, sem e com controles; e efeitos fixos de empresa e ano, quando o desenho do painel permite) é aplicada a essa variável, repetida para cada fonte de texto e frequência já usada em H1.
+A variável de revisão é construída, para cada par (empresa, exercício $t-1$, exercício $t$) com mudança textual computável, como a diferença percentual entre o último valor de consenso de EPS disponível antes da data de divulgação da DFP e o primeiro valor disponível depois dela, dentro de uma janela de 140 dias em torno da divulgação. A mesma grade M0-M3 descrita na Seção~\ref{sec:controles} para H1 é aplicada a essa variável, repetida para cada fonte de texto e frequência já usada em H1 (exceto Fatores de Risco, para a qual a revisão de consenso não foi construída).
 
 Uma limitação de mensuração deve ser registrada já na definição do método, não apenas na leitura dos resultados: a série de consenso do Bloomberg disponível para este projeto é uma série \textit{rolante} (o consenso para o próximo resultado a ser divulgado), não uma série de mesmo trimestre-alvo reamostrada ao longo do tempo. Isso significa que parte da revisão medida pode refletir a mudança normal de nível do consenso entre divulgações consecutivas, e não apenas uma revisão genuína de sentimento dos analistas em reação ao texto. Corrigir essa limitação exigiria uma nova extração de dados do Bloomberg (uma série de previsões para o mesmo trimestre-alvo, acompanhada ao longo do tempo), não uma mudança de código.
 
@@ -648,28 +648,28 @@ Esse exercício responde diretamente à limitação que os autores apontam em se
 \section{Análise complementar (H2)}
 \label{sec:h2_resultados}
 
-Como análise complementar (Seção~\ref{sec:h2_metodologia}), testou-se se a mudança textual também se associa à revisão do consenso de EPS dos analistas em torno da data de divulgação, seguindo a mesma progressão de rigor da Seção~\ref{sec:h1_resultados} para as quatro fontes de texto (nota de dívida anual e trimestral já restritas à amostra de extração confiável, Seção~\ref{sec:confiabilidade}), totalizando 32 testes. O resultado central é um nulo limpo: nenhum dos 12 testes centrais (correlação e regressão agrupada, com e sem controles) atinge significância a 5\% (Tabela~\ref{tab:h2}).
+Como análise complementar (Seção~\ref{sec:h2_metodologia}), testou-se se TextChange também se associa à revisão do consenso de EPS dos analistas em torno da data de divulgação, seguindo a mesma grade M0-M3 da Seção~\ref{sec:h1_resultados} para as quatro fontes de texto aplicáveis (nota de dívida anual e trimestral já restritas à amostra de extração confiável, Seção~\ref{sec:confiabilidade}). O resultado é um nulo limpo em toda a grade: nenhuma fonte atinge significância a 5\% em nenhum M (Tabela~\ref{tab:h2}).
 
 \begin{table}[htbp]
     \centering
-    \caption{Resultados da análise complementar (H2) por fonte de texto}
+    \caption{Resultados da análise complementar (H2) por fonte de texto, grade M0-M3}
     \label{tab:h2}
     \small
     \begin{tabular}{@{}lrrrrr@{}}
         \toprule
-        \textbf{Fonte de texto} & \textbf{n} & \textbf{Simples} & \textbf{Agrup., s/c} & \textbf{Agrup., c/c} & \textbf{Ef. fixos} \\
+        \textbf{Fonte de texto} & \textbf{n (M3)} & \textbf{M0} & \textbf{M1} & \textbf{M2*} & \textbf{M3} \\
         \midrule
-        Nota de dívida (anual)       & 339   & 0,713 & 0,647 & 0,480 & 0,851 \\
-        Nota de dívida (trimestral)  & 982   & 0,233 & 0,240 & 0,383 & 0,305 \\
-        Conjunto completo de notas   & 316   & 0,662 & 0,569 & 0,855 & 0,866 \\
-        Relatório da Administração   & 386   & 0,747 & 0,689 & 0,693 & 0,967 \\
+        Nota de dívida (anual)       & 339 & 0,704 & 0,826 & 0,839 & 0,746 \\
+        Nota de dívida (trimestral)  & 378 & 0,365 & 0,346 & 0,314 & 0,268 \\
+        Conjunto completo de notas   & 316 & 0,913 & 0,897 & 0,932 & 0,780 \\
+        Relatório da Administração   & 386 & 0,629 & 0,972 & 0,735 & 0,631 \\
         \bottomrule
     \end{tabular}
     \\[0.3cm]
-    {\footnotesize Nota de dívida (anual e trimestral): amostra restrita a pares com extração confiável (Seção~\ref{sec:confiabilidade}).}
+    {\footnotesize Fonte: elaborada pelo autor. Valores são p-valores do coeficiente de TextChange, erros-padrão agrupados por empresa. *M2 é a especificação principal. Nota de dívida (anual e trimestral): amostra restrita a pares com extração confiável (Seção~\ref{sec:confiabilidade}). Fatores de Risco não consta: a revisão de consenso não foi construída para essa fonte.}
 \end{table}
 
-Dos 32 testes totais (incluindo comparações de tercil e a checagem de deslistamento aplicada à revisão), 3 registraram $p<0{,}05$, um número próximo dos 1,6 esperados por acaso puro. Os três foram inspecionados individualmente: dois eram comparações de tercil com padrão não monótono (nota de dívida trimestral, $p<0{,}001$, terço médio de revisão muito acima dos dois extremos; conjunto completo de notas, $p=0{,}024$, recuo no terço médio antes de subir no terço alto -- robustos à remoção de valores extremos, portanto não um artefato isolado, mas ainda sem uma leitura monotônica compatível com H2), e o terceiro era a checagem de deslistamento no Relatório da Administração, que voltou a não ser significativa assim que testada com agrupamento por empresa ($p=0{,}050$ para $p=0{,}851$), uma ocorrência adicional, dentro deste mesmo projeto, do mesmo padrão identificado na Seção~\ref{sec:robustez}.
+Uma bateria secundária de testes exploratórios (comparação de tercil de TextChange e uma checagem de deslistamento aplicada à revisão), construída antes da adoção da grade M0-M3 e ainda sobre o conjunto de controles anterior (alavancagem, ROA, retorno passado, sem as mudanças contemporâneas nem \textit{book-to-market}/volatilidade), havia produzido três células com $p<0{,}05$ em 56 testes -- um número próximo do esperado por acaso puro, e nenhuma das três sobreviveu à inspeção (padrão de tercil não monotônico em duas, e a checagem de deslistamento perdendo significância sob agrupamento por empresa na terceira). Essa bateria não foi reestimada sob M0-M3; seu resultado qualitativo -- nulo, com achados exploratórios isolados que não resistem a exame -- é o mesmo já confirmado pelo teste central da Tabela~\ref{tab:h2}.
 
 Vale lembrar que a limitação de mensuração da série de consenso, discutida na Seção~\ref{sec:h2_metodologia}, permanece em aberto: parte do nulo aqui reportado pode refletir essa limitação, não apenas ausência de relação real.
 
