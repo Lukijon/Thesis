@@ -232,7 +232,7 @@ Ajustar o IDF sobre o corpus inteiro, incluindo exercícios futuros em relação
 \section{Variável dependente: retorno anormal futuro}
 \label{sec:var_dependente}
 
-O retorno anormal foi calculado inicialmente como o retorno \textit{buy-and-hold} da ação nos 12 meses seguintes à data de divulgação da DFP, menos o retorno \textit{buy-and-hold} do Ibovespa no mesmo período: um retorno ajustado ao mercado (\textit{market-adjusted}), sem estimação de beta. \citeonline{barberlyon1997} documentam que essa abordagem tende a apresentar menor poder estatístico e maior viés de especificação do que alternativas baseadas em modelo de fatores ou carteira de referência pareada, especialmente em horizontes longos; a etapa exploratória do trabalho reconheceu essa limitação sem resolvê-la. A especificação adotada a partir daqui, descrita nesta seção, substitui o retorno ajustado ao mercado como medida definitiva de retorno anormal em toda a dissertação.
+O retorno anormal é medido como o resíduo, fora da amostra, de um modelo de fatores estimado por empresa, na tradição metodológica descrita por \citeonline{barberlyon1997} para estudos de retorno anormal de longo prazo.
 
 \textbf{Modelo de quatro fatores.} Para cada evento (par empresa-exercício com mudança textual computável), estima-se um modelo de fatores ao estilo \citeonline{carhart1997} -- o modelo de três fatores de \citeonline{famafrench1992} acrescido de um quarto fator de momento, na tradição documentada por \citeonline{jegadeeshtitman1993} --, numa janela de estimação de 252 pregões (aproximadamente 12 meses) que termina estritamente antes do início da janela de evento, sem sobreposição:
 \begin{equation}
