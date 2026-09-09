@@ -539,29 +539,44 @@ A Tabela~\ref{tab:h1} reporta o p-valor do coeficiente de TextChange sobre o BHA
         \bottomrule
     \end{tabular}
     \\[0.3cm]
-    {\footnotesize Fonte: elaborada pelo autor. Valores são p-valores do coeficiente de TextChange, erros-padrão agrupados por empresa em todos os modelos (M0-M3 incluem efeitos fixos de empresa e ano). *M2 é a especificação principal (Seção~\ref{sec:controles}). Nota de dívida (anual e trimestral): amostra restrita a pares com extração confiável (Seção~\ref{sec:confiabilidade}). Coeficientes, erros-padrão e intervalos de confiança completos para todas as células estão na Tabela~\ref{tab:h1_m2_detalhe} (M2) e em \textit{m0\_m3\_all\_sources\_results.csv}.}
+    {\footnotesize Fonte: elaborada pelo autor. Valores são p-valores do coeficiente de TextChange, erros-padrão agrupados por empresa em todos os modelos (M0-M3 incluem efeitos fixos de empresa e ano). *M2 é a especificação principal (Seção~\ref{sec:controles}). Nota de dívida (anual e trimestral): amostra restrita a pares com extração confiável (Seção~\ref{sec:confiabilidade}). Coeficientes, erros-padrão e intervalos de confiança completos para todas as células estão na Tabela~\ref{tab:h1_m2_detalhe} e em \textit{m0\_m3\_all\_sources\_results.csv}.}
 \end{table}
 
-Nenhuma fonte de texto mostra associação significativa com o retorno anormal em nenhum estágio da grade. É um resultado nulo consistente, não sensível à especificação de controles escolhida -- e, notavelmente, mais nulo do que sob a especificação exploratória anterior: o Relatório da Administração, a única fonte que já havia mostrado algum sinal (retorno ajustado ao mercado, regressão agrupada com controles, $p=0{,}031$), agora não se aproxima da significância em nenhum M ($p \geq 0{,}78$ em todos). A Tabela~\ref{tab:h1_m2_detalhe} detalha o coeficiente, o erro-padrão e o intervalo de confiança de 95\% do modelo principal (M2) para cada fonte.
+Nenhuma fonte de texto mostra associação significativa com o retorno anormal em nenhum estágio da grade. É um resultado nulo consistente, não sensível à especificação de controles escolhida -- e, notavelmente, mais nulo do que sob a especificação exploratória anterior: o Relatório da Administração, a única fonte que já havia mostrado algum sinal (retorno ajustado ao mercado, regressão agrupada com controles, $p=0{,}031$), agora não se aproxima da significância em nenhum M ($p \geq 0{,}78$ em todos). A Tabela~\ref{tab:h1_m2_detalhe} detalha o coeficiente, o erro-padrão e o intervalo de confiança de 95\% de cada modelo e cada fonte.
 
 \begin{table}[htbp]
     \centering
-    \caption{Modelo principal (M2): coeficiente, erro-padrão e IC 95\% por fonte de texto}
+    \caption{H1, grade M0-M3 completa: coeficiente, erro-padrão e IC 95\% por fonte de texto e modelo}
     \label{tab:h1_m2_detalhe}
     \small
-    \begin{tabular}{@{}lrrrr@{}}
+    \begin{tabular}{@{}llrrrr@{}}
         \toprule
-        \textbf{Fonte de texto} & \textbf{n} & \textbf{$\hat\beta$ (EP)} & \textbf{IC 95\%} & \textbf{p} \\
+        \textbf{Fonte de texto} & \textbf{M} & \textbf{n} & \textbf{$\hat\beta$ (EP)} & \textbf{IC 95\%} & \textbf{p} \\
         \midrule
-        Nota de dívida (anual)       & 432 & 0,106 (0,095) & [$-$0,082; 0,293] & 0,268 \\
-        Nota de dívida (trimestral)  & 456 & $-$0,031 (0,029) & [$-$0,088; 0,026] & 0,286 \\
-        Conjunto completo de notas   & 411 & $-$0,078 (0,163) & [$-$0,400; 0,243] & 0,631 \\
-        Relatório da Administração   & 484 & 0,022 (0,244) & [$-$0,457; 0,502] & 0,928 \\
-        Fatores de Risco (FRE)       & 672 & 0,211 (0,230) & [$-$0,241; 0,664] & 0,359 \\
+        Nota de dívida (anual)      & M0 & 437 & 0,175 (0,140) & [$-$0,100; 0,449] & 0,211 \\
+                                     & M1 & 432 & 0,117 (0,105) & [$-$0,089; 0,324] & 0,265 \\
+                                     & M2* & 432 & 0,106 (0,095) & [$-$0,082; 0,293] & 0,268 \\
+                                     & M3 & 418 & 0,078 (0,097) & [$-$0,113; 0,270] & 0,421 \\
+        Nota de dívida (trimestral) & M0 & 504 & $-$0,015 (0,027) & [$-$0,068; 0,037] & 0,563 \\
+                                     & M1 & 501 & $-$0,019 (0,028) & [$-$0,073; 0,036] & 0,506 \\
+                                     & M2* & 456 & $-$0,031 (0,029) & [$-$0,088; 0,026] & 0,286 \\
+                                     & M3 & 437 & $-$0,025 (0,029) & [$-$0,082; 0,032] & 0,390 \\
+        Conjunto completo de notas  & M0 & 416 & $-$0,185 (0,231) & [$-$0,640; 0,270] & 0,424 \\
+                                     & M1 & 411 & $-$0,068 (0,167) & [$-$0,396; 0,260] & 0,683 \\
+                                     & M2* & 411 & $-$0,078 (0,163) & [$-$0,400; 0,243] & 0,631 \\
+                                     & M3 & 404 & $-$0,085 (0,166) & [$-$0,411; 0,242] & 0,611 \\
+        Relatório da Administração  & M0 & 489 & 0,076 (0,275) & [$-$0,465; 0,617] & 0,781 \\
+                                     & M1 & 484 & 0,028 (0,241) & [$-$0,446; 0,502] & 0,908 \\
+                                     & M2* & 484 & 0,022 (0,244) & [$-$0,457; 0,502] & 0,928 \\
+                                     & M3 & 462 & $-$0,016 (0,251) & [$-$0,509; 0,477] & 0,949 \\
+        Fatores de Risco (FRE)      & M0 & 677 & 0,184 (0,228) & [$-$0,264; 0,631] & 0,420 \\
+                                     & M1 & 672 & 0,198 (0,214) & [$-$0,222; 0,619] & 0,355 \\
+                                     & M2* & 672 & 0,211 (0,230) & [$-$0,241; 0,664] & 0,359 \\
+                                     & M3 & 650 & 0,298 (0,231) & [$-$0,155; 0,752] & 0,197 \\
         \bottomrule
     \end{tabular}
     \\[0.3cm]
-    {\footnotesize Fonte: elaborada pelo autor. EP = erro-padrão agrupado por empresa. Todos os intervalos de confiança contêm zero.}
+    {\footnotesize Fonte: elaborada pelo autor. EP = erro-padrão agrupado por empresa. *M2 é a especificação principal. Todos os intervalos de confiança contêm zero, em todo modelo e toda fonte. Nota de dívida (anual e trimestral): amostra restrita a pares com extração confiável (Seção~\ref{sec:confiabilidade}).}
 \end{table}
 
 Um padrão nos coeficientes (não apenas nos p-valores) vale registrar: o sinal de $\hat\beta$ é positivo -- mais mudança textual associada a mais retorno anormal futuro -- na nota de dívida anual e nos Fatores de Risco em todo M0-M3, e na nota trimestral e no conjunto completo de notas é negativo em todo M0-M3. Nenhum dos dois padrões é significativo, e o próprio sinal do efeito não é interpretado como achado (Seção~\ref{sec:modelo}, ``Como ler $\beta$''); mas a inconsistência de sinal entre fontes que deveriam, em princípio, captar o mesmo mecanismo é ela própria uma informação: pesa contra uma leitura de que existe um efeito real pequeno e apenas não detectado por falta de poder estatístico, e a favor de que o que se observa em cada fonte, nesses coeficientes de magnitude pequena e não significativa, é majoritariamente ruído amostral.
@@ -652,7 +667,7 @@ Esse exercício responde diretamente à limitação que os autores apontam em se
 \section{Análise complementar (H2)}
 \label{sec:h2_resultados}
 
-Como análise complementar (Seção~\ref{sec:h2_metodologia}), testou-se se TextChange também se associa à revisão do consenso de EPS dos analistas em torno da data de divulgação, seguindo a mesma grade M0-M3 da Seção~\ref{sec:h1_resultados} para as quatro fontes de texto aplicáveis (nota de dívida anual e trimestral já restritas à amostra de extração confiável, Seção~\ref{sec:confiabilidade}). O resultado é um nulo limpo em toda a grade: nenhuma fonte atinge significância a 5\% em nenhum M (Tabela~\ref{tab:h2}).
+Como análise complementar (Seção~\ref{sec:h2_metodologia}), testou-se se TextChange também se associa à revisão do consenso de EPS dos analistas em torno da data de divulgação, seguindo a mesma grade M0-M3 da Seção~\ref{sec:h1_resultados} para as quatro fontes de texto aplicáveis (nota de dívida anual e trimestral já restritas à amostra de extração confiável, Seção~\ref{sec:confiabilidade}). O resultado é um nulo limpo em toda a grade: nenhuma fonte atinge significância a 5\% em nenhum M (Tabela~\ref{tab:h2}); a Tabela~\ref{tab:h2_detalhe} traz o coeficiente, o erro-padrão e o intervalo de confiança de 95\% de cada célula.
 
 \begin{table}[htbp]
     \centering
@@ -671,6 +686,37 @@ Como análise complementar (Seção~\ref{sec:h2_metodologia}), testou-se se Text
     \end{tabular}
     \\[0.3cm]
     {\footnotesize Fonte: elaborada pelo autor. Valores são p-valores do coeficiente de TextChange, erros-padrão agrupados por empresa. *M2 é a especificação principal. Nota de dívida (anual e trimestral): amostra restrita a pares com extração confiável (Seção~\ref{sec:confiabilidade}). Fatores de Risco não consta: a revisão de consenso não foi construída para essa fonte.}
+\end{table}
+
+\begin{table}[htbp]
+    \centering
+    \caption{H2, grade M0-M3 completa: coeficiente, erro-padrão e IC 95\% por fonte de texto e modelo}
+    \label{tab:h2_detalhe}
+    \small
+    \begin{tabular}{@{}llrrrr@{}}
+        \toprule
+        \textbf{Fonte de texto} & \textbf{M} & \textbf{n} & \textbf{$\hat\beta$ (EP)} & \textbf{IC 95\%} & \textbf{p} \\
+        \midrule
+        Nota de dívida (anual)      & M0 & 344 & 0,206 (0,540) & [$-$0,858; 1,270] & 0,704 \\
+                                     & M1 & 339 & 0,127 (0,576) & [$-$1,009; 1,262] & 0,826 \\
+                                     & M2* & 339 & 0,118 (0,577) & [$-$1,018; 1,254] & 0,839 \\
+                                     & M3 & 339 & 0,182 (0,562) & [$-$0,926; 1,290] & 0,746 \\
+        Nota de dívida (trimestral) & M0 & 422 & $-$0,841 (0,928) & [$-$2,665; 0,984] & 0,365 \\
+                                     & M1 & 414 & $-$0,806 (0,854) & [$-$2,486; 0,875] & 0,346 \\
+                                     & M2* & 378 & $-$0,947 (0,937) & [$-$2,792; 0,899] & 0,314 \\
+                                     & M3 & 378 & $-$1,061 (0,956) & [$-$2,943; 0,821] & 0,268 \\
+        Conjunto completo de notas  & M0 & 323 & 0,080 (0,731) & [$-$1,360; 1,520] & 0,913 \\
+                                     & M1 & 316 & $-$0,093 (0,721) & [$-$1,514; 1,327] & 0,897 \\
+                                     & M2* & 316 & 0,064 (0,745) & [$-$1,404; 1,532] & 0,932 \\
+                                     & M3 & 316 & 0,221 (0,788) & [$-$1,331; 1,772] & 0,780 \\
+        Relatório da Administração  & M0 & 391 & $-$0,388 (0,802) & [$-$1,965; 1,189] & 0,629 \\
+                                     & M1 & 386 & 0,025 (0,717) & [$-$1,385; 1,435] & 0,972 \\
+                                     & M2* & 386 & 0,236 (0,694) & [$-$1,130; 1,601] & 0,735 \\
+                                     & M3 & 386 & 0,350 (0,729) & [$-$1,084; 1,784] & 0,631 \\
+        \bottomrule
+    \end{tabular}
+    \\[0.3cm]
+    {\footnotesize Fonte: elaborada pelo autor. EP = erro-padrão agrupado por empresa. *M2 é a especificação principal. Todos os intervalos de confiança contêm zero, em todo modelo e toda fonte.}
 \end{table}
 
 Uma bateria secundária de testes exploratórios (comparação de tercil de TextChange e uma checagem de deslistamento aplicada à revisão), construída antes da adoção da grade M0-M3 e ainda sobre o conjunto de controles anterior (alavancagem, ROA, retorno passado, sem as mudanças contemporâneas nem \textit{book-to-market}/volatilidade), havia produzido três células com $p<0{,}05$ em 56 testes -- um número próximo do esperado por acaso puro, e nenhuma das três sobreviveu à inspeção (padrão de tercil não monotônico em duas, e a checagem de deslistamento perdendo significância sob agrupamento por empresa na terceira). Essa bateria não foi reestimada sob M0-M3; seu resultado qualitativo -- nulo, com achados exploratórios isolados que não resistem a exame -- é o mesmo já confirmado pelo teste central da Tabela~\ref{tab:h2}.
