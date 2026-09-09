@@ -436,24 +436,19 @@ A Figura~\ref{fig:retorno} mostra a distribuição do retorno anormal (variável
     {\footnotesize Fonte: elaborada pelo autor a partir de preços da Bloomberg. Percentis 1 e 99 truncados para legibilidade; estatísticas calculadas sobre a amostra de extração confiável.}
 \end{figure}
 
-Por fim, a Figura~\ref{fig:controles} mostra a distribuição das quatro variáveis de controle usadas nas regressões (Seção~\ref{sec:controles}), sobre as 992 observações empresa-ano com dados contábeis estruturados disponíveis -- um exercício fiscal individual por observação, e não um par ano a ano como nas contagens da Tabela~\ref{tab:sample}, o que explica o número maior. O logaritmo do ativo total tem distribuição aproximadamente normal, como esperado; alavancagem concentra-se abaixo de 1, com uma cauda de poucas empresas em dificuldade financeira severa (passivo superior ao ativo); ROA concentra-se perto de zero com cauda esquerda mais longa (empresas com prejuízo); e o retorno passado tem assimetria positiva característica de retornos de ações.
+A Figura~\ref{fig:controles} e a Figura~\ref{fig:controles_m0m3} mostram a distribuição das nove variáveis de controle da grade M0-M3 (Seção~\ref{sec:controles}): a Figura~\ref{fig:controles} cobre os quatro fundamentos de nível que entram em M1 (tamanho, ROA, alavancagem, momento), sobre as 992 observações empresa-ano com dados contábeis estruturados disponíveis -- um exercício fiscal individual por observação, e não um par ano a ano como nas contagens da Tabela~\ref{tab:sample}, o que explica o número maior; a Figura~\ref{fig:controles_m0m3} cobre as cinco variáveis que entram em M2 (as três mudanças contemporâneas, $\Delta$ROA, $\Delta$Alavancagem e $\Delta$Dívida) e M3 (\textit{book-to-market} e volatilidade), sobre a amostra da nota de dívida anual (extração confiável). O logaritmo do ativo total tem distribuição aproximadamente normal, como esperado; alavancagem concentra-se abaixo de 1, com uma cauda de poucas empresas em dificuldade financeira severa (passivo superior ao ativo); ROA concentra-se perto de zero com cauda esquerda mais longa (empresas com prejuízo); e o retorno passado tem assimetria positiva característica de retornos de ações.
 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.85\textwidth]{figures/control_variables.png}
-    \caption{Distribuição das variáveis de controle}
+    \caption{Distribuição dos controles de nível (M1)}
     \label{fig:controles}
     \vspace{0.2cm}
 
     {\footnotesize Fonte: elaborada pelo autor a partir de dados contábeis estruturados da CVM. ROA e retorno passado truncados nos percentis 1/99 para legibilidade.}
 \end{figure}
 
-\section{Controles adicionais da grade M0-M3}
-\label{sec:controles_m0m3}
-
-Além das quatro variáveis de nível da Figura~\ref{fig:controles}, a grade M0-M3 (Seção~\ref{sec:controles}) acrescenta cinco variáveis: três mudanças contemporâneas ($\Delta$ROA, $\Delta$Alavancagem, $\Delta$Dívida) e duas variáveis de risco/retorno esperado (\textit{book-to-market} e volatilidade). A Figura~\ref{fig:controles_m0m3} mostra a distribuição de cada uma, sobre a amostra da nota de dívida anual (extração confiável).
-
-As três mudanças concentram-se perto de zero, como esperado para uma variação ano a ano em empresas maduras, com caudas moderadas nos dois sentidos (empresas em reestruturação financeira mais acentuada). O \textit{book-to-market} tem a assimetria positiva característica dessa variável (poucas empresas negociando muito abaixo do valor patrimonial, a maioria acima), consistente com o que a literatura reporta para outros mercados \cite{famafrench1992}. A volatilidade concentra-se entre 1,5\% e 3,5\% de desvio-padrão diário, com uma cauda de empresas mais voláteis -- tipicamente aquelas atravessando dificuldade financeira ou operando em setores mais cíclicos no período.
+As três mudanças de M2 concentram-se perto de zero, como esperado para uma variação ano a ano em empresas maduras, com caudas moderadas nos dois sentidos (empresas em reestruturação financeira mais acentuada). O \textit{book-to-market} de M3 tem a assimetria positiva característica dessa variável (poucas empresas negociando muito abaixo do valor patrimonial, a maioria acima), consistente com o que a literatura reporta para outros mercados \cite{famafrench1992}. A volatilidade de M3 concentra-se entre 1,5\% e 3,5\% de desvio-padrão diário, com uma cauda de empresas mais voláteis -- tipicamente aquelas atravessando dificuldade financeira ou operando em setores mais cíclicos no período.
 
 \begin{figure}[htbp]
     \centering
@@ -465,7 +460,7 @@ As três mudanças concentram-se perto de zero, como esperado para uma variaçã
     {\footnotesize Fonte: elaborada pelo autor a partir de dados contábeis estruturados da CVM (mudanças) e de preços/indicadores de mercado da Bloomberg (\textit{book-to-market}, volatilidade). Percentis 1/99 truncados para legibilidade.}
 \end{figure}
 
-A cobertura é alta em todas as cinco variáveis: 436 de 437 pares (99,8\%) para as três mudanças contemporâneas e para a volatilidade, e 423 de 437 (96,8\%) para \textit{book-to-market}, cuja pequena lacuna reflete casos sem cotação de preço-sobre-valor-patrimonial disponível na data de referência.
+A cobertura é alta nas cinco variáveis de M2/M3: 436 de 437 pares (99,8\%) para as três mudanças contemporâneas e para a volatilidade, e 423 de 437 (96,8\%) para \textit{book-to-market}, cuja pequena lacuna reflete casos sem cotação de preço-sobre-valor-patrimonial disponível na data de referência.
 
 \chapter{Resultados}
 \label{ch:resultados}
