@@ -230,45 +230,76 @@ Com a nota já representada dessa forma nos dois exercícios, a mudança textual
 \section{Variável dependente: retorno anormal futuro}
 \label{sec:var_dependente}
 
-O retorno anormal é calculado como o retorno \textit{buy-and-hold} da ação nos 12 meses seguintes à data de divulgação da DFP (data real de recebimento pela CVM, não a data de fechamento do exercício), menos o retorno \textit{buy-and-hold} do Ibovespa no mesmo período. Trata-se de um retorno anormal ajustado ao mercado (\textit{market-adjusted}), sem estimação de beta, na tradição metodológica descrita por \citeonline{barberlyon1997} para estudos de retorno de longo prazo. É também a mesma família de medida usada por \citeonline{brown2011} para o retorno em torno do arquivamento do 10-K, ainda que em janela muito mais curta (três dias): a diferença entre esta dissertação e aquele estudo está no horizonte (doze meses, compatível com a periodicidade anual da divulgação, contra três dias, adequado a um teste de reação imediata), não na família de medida.
+O retorno anormal foi calculado inicialmente como o retorno \textit{buy-and-hold} da ação nos 12 meses seguintes à data de divulgação da DFP, menos o retorno \textit{buy-and-hold} do Ibovespa no mesmo período: um retorno ajustado ao mercado (\textit{market-adjusted}), sem estimação de beta. \citeonline{barberlyon1997} documentam que essa abordagem tende a apresentar menor poder estatístico e maior viés de especificação do que alternativas baseadas em modelo de fatores ou carteira de referência pareada, especialmente em horizontes longos; a etapa exploratória do trabalho reconheceu essa limitação sem resolvê-la. A especificação adotada a partir daqui, descrita nesta seção, substitui o retorno ajustado ao mercado como medida definitiva de retorno anormal em toda a dissertação.
 
-\citeonline{barberlyon1997} documentam que o retorno ajustado ao mercado tende a apresentar menor poder estatístico e maior viés de especificação do que abordagens baseadas em carteira de referência ou empresa de controle pareada por tamanho e \textit{book-to-market}, especialmente em horizontes mais longos. A escolha por um retorno ajustado ao mercado nesta dissertação é, portanto, uma simplificação deliberada e reconhecida como tal, adequada à etapa exploratória do trabalho, mas não a especificação definitiva mais rigorosa disponível na literatura. A versão final deve considerar um modelo de mercado (CAPM) ou de fatores (Fama-French/Carhart), ou uma carteira de referência pareada por tamanho, para o cálculo definitivo do retorno anormal.
+\textbf{Modelo de quatro fatores.} Para cada evento (par empresa-exercício com mudança textual computável), estima-se um modelo de fatores ao estilo \citeonline{carhart1997} -- o modelo de três fatores de \citeonline{famafrench1992} acrescido de um quarto fator de momento, na tradição documentada por \citeonline{jegadeeshtitman1993} --, numa janela de estimação de 252 pregões (aproximadamente 12 meses) que termina estritamente antes do início da janela de evento, sem sobreposição:
+\begin{equation}
+    R_{i,d} - R_{f,d} = \alpha_i + \beta_M \mathit{MKT}_d + \beta_S \mathit{SMB}_d + \beta_H \mathit{HML}_d + \beta_{Mom} \mathit{MOM}_d + \varepsilon_{i,d},
+    \label{eq:fatores}
+\end{equation}
+em que $R_{i,d}$ é o retorno diário da ação $i$, $R_{f,d}$ a taxa livre de risco, e $\mathit{MKT}$, $\mathit{SMB}$, $\mathit{HML}$ e $\mathit{MOM}$ os fatores de mercado, tamanho, valor e momento para o mercado brasileiro, publicados pelo NEFIN/USP \cite{nefin2026}. Diferentemente do CAPM (que usa apenas $\mathit{MKT}$), o modelo de quatro fatores permite que o retorno esperado da ação reflita também sua exposição a tamanho, valor e momento, dimensões que a literatura de \textit{asset pricing} associa a variação relevante no retorno médio das ações \cite{famafrench1992}.
 
-\section{Variáveis de controle}
+\textbf{Retorno anormal como resíduo fora da amostra.} O alfa $\alpha_i$ e os betas estimados na equação~\ref{eq:fatores} definem o desempenho ``normal'' de cada empresa: seu retorno médio esperado, dado o que aconteceu com os quatro fatores em cada dia. O retorno anormal na janela de evento (os 12 meses seguintes à divulgação) é o desvio, dia a dia, entre o retorno realmente observado e esse desempenho esperado, calculado com os parâmetros já fixados na janela de estimação anterior -- ou seja, fora da amostra usada para estimá-los:
+\begin{equation}
+    \varepsilon_{i,d}^{evento} = \left(R_{i,d} - R_{f,d}\right) - \left(\hat\alpha_i + \hat\beta_M \mathit{MKT}_d + \hat\beta_S \mathit{SMB}_d + \hat\beta_H \mathit{HML}_d + \hat\beta_{Mom} \mathit{MOM}_d\right).
+    \label{eq:residuo_evento}
+\end{equation}
+Note que $\hat\alpha_i$ permanece na conta: o desempenho idiossincrático médio da própria empresa durante a janela de estimação é tratado como parte do ``normal'' dessa empresa, e só o desvio em relação a esse próprio referencial conta como retorno anormal -- uma diferença deliberada em relação a um modelo de fatores sem alfa, que trataria qualquer desempenho idiossincrático médio da empresa como já ``anormal'' por definição.
+
+\textbf{CAR versus BHAR.} A literatura de retorno anormal de longo prazo oferece duas formas usuais de agregar os resíduos diários da janela de evento numa única medida por evento. A primeira, CAR (\textit{Cumulative Abnormal Return}), soma os resíduos diários:
+\begin{equation}
+    \mathit{CAR}_i = \sum_{d=1}^{D} \varepsilon_{i,d}^{evento}.
+    \label{eq:car}
+\end{equation}
+A segunda, BHAR (\textit{Buy-and-Hold Abnormal Return}), compõe os resíduos multiplicativamente, replicando o que um investidor realmente experimentaria comprando e mantendo a posição:
+\begin{equation}
+    \mathit{BHAR}_i = \prod_{d=1}^{D}\left(1 + \varepsilon_{i,d}^{evento}\right) - 1.
+    \label{eq:bhar}
+\end{equation}
+\citeonline{barberlyon1997} defendem o BHAR como mais fiel ao ganho econômico real de uma estratégia de longo prazo, mas tanto eles quanto \citeonline{fama1998} documentam um problema estatístico associado à composição multiplicativa: como o retorno de uma ação é limitado em $-100\%$ mas ilimitado para cima, compor retornos diários ao longo de uma janela de 12 meses produz uma distribuição fortemente assimétrica à direita, mesmo na ausência de qualquer sinal real -- um problema que se agrava em amostras pequenas e que \citeonline{lyonbarbertsai1999} tratam formalmente, propondo testes ajustados por assimetria e métodos de \textit{bootstrap} como correção. Nesta amostra (nota de dívida anual, $n=437$), a assimetria do BHAR bruto é de $10{,}07$ -- muito acima do que testes paramétricos usuais (como a regressão por MQO agrupada por empresa usada em toda a dissertação, Seção~\ref{sec:modelo}) pressupõem sem ajuste.
+
+\textbf{BHAR ajustado.} Em vez de um teste ajustado por assimetria (desenhado originalmente para comparação de médias entre dois grupos, não para regressão multivariada), adotou-se a correção mais direta e já aplicada em outros pontos desta dissertação para o mesmo tipo de problema (Seção~\ref{sec:robustez}): a winsorização do BHAR nos percentis 1 e 99, que reduz a assimetria da amostra de $10{,}07$ para $1{,}90$ sem descartar nenhuma observação. Essa medida -- BHAR ajustado -- é a variável dependente usada em toda regressão reportada a partir daqui, em substituição tanto ao retorno ajustado ao mercado da etapa exploratória quanto ao BHAR bruto.
+
+Os betas estimados na equação~\ref{eq:fatores} são plausíveis: o beta de mercado tem mediana de $0{,}96$ na amostra completa de eventos, consistente com uma carteira de ações do próprio índice de referência. Um mínimo de 100 observações diárias válidas é exigido na janela de estimação; eventos que não atingem esse mínimo são descartados (cerca de 3\% da amostra).
+
+\section{Variáveis de controle: grade M0-M3}
 \label{sec:controles}
 
-As variáveis de controle utilizadas são: tamanho (logaritmo do ativo total e da receita líquida), alavancagem (passivo total sobre ativo total), rentabilidade (ROA e ROE) e retorno passado (retorno acumulado de 12 meses anterior à data-base). Tamanho, alavancagem e rentabilidade são extraídos diretamente dos dados contábeis estruturados e padronizados publicados pela CVM (não das notas em texto livre), o que garante cobertura praticamente completa na amostra. Retorno passado é calculado a partir da série de preços.
+As variáveis de controle foram organizadas ex ante em blocos cumulativos (M0 a M3), definidos e documentados antes da rodada de estimações que gerou os resultados do Capítulo~\ref{ch:resultados}, e não ajustados posteriormente para alterar a significância de nenhum coeficiente. O princípio orientador é que a escolha de um controle deve ser justificada por teoria e literatura prévia, não pela correlação amostral observada com a variável de interesse ou pelo efeito sobre o p-valor -- um problema real na versão exploratória anterior deste trabalho, em que o tamanho da empresa havia sido excluído dos controles citando principalmente sua baixa correlação amostral, uma justificativa que este trabalho reconhece como insuficiente e substitui pela lógica abaixo.
+
+\textbf{M0 -- diagnóstico.} Apenas TextChange, com efeitos fixos de empresa e ano (Seção~\ref{sec:modelo}). Não é interpretado como o teste de conteúdo informacional incremental; estabelece o comportamento do coeficiente antes da entrada dos blocos de fundamentos, para que a comparação com M1-M3 seja informativa.
+
+\textbf{M1 -- fundamentos clássicos (\textit{baseline}).} Acrescenta tamanho (logaritmo do ativo total), rentabilidade (ROA, lucro líquido sobre ativo total), alavancagem (passivo total sobre ativo total) e momento (retorno acumulado dos 12 meses anteriores à divulgação). Tamanho e \textit{momentum} têm respaldo direto em \citeonline{famafrench1992}, que mostram que tamanho captura variação relevante na seção transversal de retornos médios, e em \citeonline{jegadeeshtitman1993}, que documentam persistência de desempenho em estratégias formadas por retorno passado em horizontes de 3 a 12 meses -- horizonte compatível com a janela usada aqui. ROA e alavancagem seguem \citeonline{santos2018}, que os utilizam como controle em modelo de erro de previsão de analistas no contexto brasileiro; alavancagem é, além disso, um controle particularmente natural numa dissertação centrada em divulgação de dívida, por aproximar diretamente risco financeiro e estrutura de capital.
+
+\textbf{M2 -- mudança nos fundamentos (\textbf{modelo principal}).} Acrescenta a variação, entre o exercício $t-1$ e o exercício $t$, de ROA ($\Delta\mathit{ROA}$), de alavancagem ($\Delta\mathit{Alavancagem}$) e de dívida ($\Delta\mathit{Dívida}$, mudança na conta específica de empréstimos, financiamentos e debêntures, normalizada pelo ativo total do exercício anterior). A variável de interesse, TextChange, é por construção uma mudança entre $t-1$ e $t$; controlar apenas o \emph{nível} dos fundamentos em M1 deixa aberta a possibilidade de TextChange estar funcionando como um proxy para mudanças econômicas contemporâneas, não para conteúdo textual incremental. \citeonline{brown2011} tornam essa preocupação concreta ao mostrar que firmas com maiores mudanças econômicas modificam mais sua narrativa: se a nota mudou simplesmente porque a empresa tomou, amortizou ou refinanciou dívida, TextChange pode estar capturando essa alteração já observável em $\Delta\mathit{Dívida}$, não informação adicional. M2 é, portanto, o modelo que mais fielmente traduz a pergunta desta dissertação -- conteúdo textual incremental, condicionado às mudanças econômicas já observáveis --, e é reportado como especificação principal independentemente do resultado.
+
+\textbf{M3 -- risco e determinantes de retorno esperado.} Acrescenta \textit{book-to-market} (patrimônio líquido contábil sobre valor de mercado) e volatilidade (desvio-padrão dos retornos diários nos 12 meses anteriores à divulgação, medida estritamente antes da janela de evento). \citeonline{famafrench1992} mostram que tamanho e \textit{book-to-market} caracterizam de forma relevante a seção transversal de retornos médios, e \citeonline{barberlyon1997} recomendam especificamente o pareamento por tamanho e \textit{book-to-market} em estudos de retorno anormal de longo prazo -- a mesma tradição metodológica usada para a variável dependente desta dissertação (Seção~\ref{sec:var_dependente}). Volatilidade segue novamente \citeonline{santos2018}, que a incluem (como desvio-padrão dos retornos diários) em seu modelo de erro de previsão de analistas.
+
+Dois blocos adicionais do documento de especificação original (M4, com liquidez e cobertura de analistas; M5, com efeitos fixos de setor por ano em vez de ano simples) não integram o núcleo confirmatório: M4 não pôde ser construído por completo, pois nenhuma fonte de dados do projeto contém o número de analistas cobrindo cada empresa (apenas o valor de consenso), e M5 é uma robustez propositalmente mais exigente, não uma especificação central. Ambos podem ser reportados como robustez adicional, mas não substituem M2 como teste principal nem M3 como principal robustez econômica.
 
 \section{Modelo empírico}
 \label{sec:modelo}
 
 O modelo empírico foi construído em etapas de rigor crescente, cada uma motivada por uma ameaça específica à identificação, em um processo deliberado de teste e correção de especificação, descrito a seguir.
 
-A especificação de base é:
+A especificação mais completa da grade M0-M3 (Seção~\ref{sec:controles}) é:
 \begin{equation}
-    \mathit{RetornoAnormal}_{it} = \beta \cdot \mathit{Similaridade}_{it} + \gamma' \mathit{Controles}_{it} + \varepsilon_{it}
+    \mathit{BHARajustado}_{it} = \beta \cdot \mathit{TextChange}_{it} + \gamma' \mathit{Controles}^{M1\text{-}M3}_{it} + \alpha_i + \delta_t + \varepsilon_{it}
     \label{eq:base}
 \end{equation}
+em que $i$ indexa a empresa e $t$ o exercício fiscal (ou trimestre, nas especificações trimestrais); $\mathit{BHARajustado}_{it}$ é o retorno anormal do exercício~$t$ (Seção~\ref{sec:var_dependente}); $\mathit{TextChange}_{it} = 1 - \mathit{Similaridade}_{it}$ é a mudança textual entre o exercício $t$ e o exercício $t-1$; $\mathit{Controles}^{M1\text{-}M3}_{it}$ é o vetor cumulativo de controles de cada modelo (vazio em M0, os quatro fundamentos clássicos em M1, mais as três mudanças em M2, mais \textit{book-to-market} e volatilidade em M3); e $\alpha_i$, $\delta_t$ são efeitos fixos de empresa e ano, presentes em M0-M4 (M5 substitui $\delta_t$ por efeitos fixos de setor por ano, Seção~\ref{sec:controles}).
 
-em que $i$ indexa a empresa e $t$ o exercício fiscal (ou trimestre, nas especificações trimestrais); $\mathit{RetornoAnormal}_{it}$ é o retorno da ação, ajustado ao Ibovespa (\textit{buy-and-hold}, sem beta de mercado), nos 12 meses seguintes à data de divulgação da DFP referente ao exercício $t$; $\mathit{Similaridade}_{it}$ é a similaridade de cosseno TF-IDF entre o texto do exercício $t$ e do exercício $t-1$; e $\mathit{Controles}_{it}$ inclui alavancagem, ROA e o retorno dos 12 meses anteriores.
+\textbf{Como ler $\beta$ ao longo de M0-M3.} Um $\beta$ significativo e estável do diagnóstico (M0) até a robustez econômica (M3) é a leitura mais favorável a H1: a associação sobrevive tanto à comparação entre empresas quanto ao controle por fundamentos e suas mudanças. Um $\beta$ significativo em M0/M1 que desaparece em M2 sugere que a mudança textual estava, em boa parte, capturando mudança econômica contemporânea já observável (o problema que $\Delta\mathit{ROA}$, $\Delta\mathit{Alavancagem}$ e $\Delta\mathit{Dívida}$ existem para isolar), não conteúdo textual incremental. Já um $\beta$ que aparece apenas em M2 ou M3, sem sinal em M0/M1, sugere supressão -- os controles revelando uma associação que a comparação bruta mascarava --, e pede investigação da estabilidade do coeficiente antes de ser tratado como achado. Em nenhum caso um modelo é promovido a principal, ou descartado, apenas por cruzar o limiar de 5\%: M2 é reportado como especificação principal, e M3 como principal robustez, independentemente do resultado (Capítulo~\ref{ch:resultados}).
 
 \textbf{Primeira ameaça: observações repetidas por empresa.} A amostra tem, em média, entre 5 e 9 observações por empresa (múltiplos pares ano a ano da mesma companhia), que não são estatisticamente independentes entre si: choques específicos da empresa afetam simultaneamente todos os seus pares de similaridade e retorno. Estimar a equação~\ref{eq:base} por MQO ignorando essa estrutura infla artificialmente a significância. Foi exatamente esse problema que, em um teste preliminar sobre a associação entre mudança textual e saída do índice, produziu um resultado aparentemente muito significativo ($p<0{,}01$) que deixou de sê-lo assim que corrigido (Seção~\ref{sec:robustez}). A correção padrão, adotada em toda regressão reportada a partir daqui, é o agrupamento (\textit{clustering}) dos erros-padrão por empresa.
 
-\textbf{Segunda ameaça: variável omitida no nível da empresa.} Erros-padrão agrupados corrigem a inferência estatística, mas não corrigem um eventual viés no próprio coeficiente, caso alguma característica não observada e estável no tempo (qualidade de governança, do departamento jurídico ou de RI, cultura de divulgação) esteja correlacionada tanto com a similaridade textual quanto com o retorno. Para testar diretamente essa possibilidade, foi estimado um modelo de efeitos fixos em painel:
-\begin{equation}
-    \mathit{RetornoAnormal}_{it} = \beta \cdot \mathit{Similaridade}_{it} + \gamma' \mathit{Controles}_{it} + \alpha_i + \delta_t + \varepsilon_{it}
-    \label{eq:fe}
-\end{equation}
-
-em que $\alpha_i$ são efeitos fixos de empresa (absorvem qualquer característica invariante no tempo) e $\delta_t$ são efeitos fixos de ano (absorvem choques comuns a todas as empresas em um dado ano, em parte já absorvidos pelo ajuste ao Ibovespa, mas não inteiramente). Sob efeitos fixos, $\beta$ é identificado apenas pela variação dentro de cada empresa ao longo do tempo: um teste substancialmente mais exigente do que a comparação entre empresas da equação~\ref{eq:base}.
+\textbf{Segunda ameaça: variável omitida no nível da empresa.} Erros-padrão agrupados corrigem a inferência estatística, mas não corrigem um eventual viés no próprio coeficiente, caso alguma característica não observada e estável no tempo (qualidade de governança, do departamento jurídico ou de RI, cultura de divulgação) esteja correlacionada tanto com a mudança textual quanto com o retorno. Os efeitos fixos de empresa ($\alpha_i$) e ano ($\delta_t$) já presentes na equação~\ref{eq:base} respondem diretamente a essa ameaça: $\alpha_i$ absorve qualquer característica invariante no tempo, e $\delta_t$ absorve choques comuns a todas as empresas em um dado ano. Sob efeitos fixos, $\beta$ é identificado apenas pela variação dentro de cada empresa ao longo do tempo -- um teste substancialmente mais exigente do que uma comparação simples entre empresas.
 
 A escolha por um painel de efeitos fixos de empresa e ano tem três motivações concretas na literatura, não apenas interna ao projeto. No Brasil, \citeonline{santoscoelho2018} testam a relevância informacional de fatores de risco e de gestão de risco do Formulário de Referência para o valor de mercado de empresas brasileiras, com um desenho de painel (efeitos fixos ou aleatórios, escolhidos por teste de Hausman a cada especificação) sobre apenas três exercícios (2012--2014, $n=300$); os próprios autores apontam essa limitação, notando que ``os modelos econométricos constituem painel curto e podem gerar elevadas diferenças entre os estimadores das abordagens com efeito fixo e aleatório'', e sugerem que ``poderiam ser realizados estudos que explorassem horizontes temporais superiores''. Esta dissertação pode ser lida, em parte, como essa continuação sugerida: um painel de dez exercícios (2015--2024), mais de três vezes mais longo, com a mesma lógica de teste de especificação aplicada de forma sistemática. Essa escolha converge, ainda, com a prática já estabelecida na literatura internacional de disclosure textual citada nesta dissertação: \citeonline{cohen2020} empregam efeitos fixos de empresa e mês em testes complementares sobre desempenho operacional futuro e incidência de falência (embora não no teste principal de retorno, que usa portfólio calendário), e \citeonline{bonsall2017} adotam efeitos fixos de empresa e ano, com erros-padrão agrupados nas duas dimensões, como especificação principal em todas as regressões do estudo sobre legibilidade e custo de dívida.
 
 \textbf{Terceira verificação: método independente para a mesma ameaça.} Como checagem adicional, à parte da família de regressões acima, foi implementado o teste de portfólio calendário longo-curto (\textit{long-short}) de \citeonline{cohen2020}: a cada mês, as empresas com divulgação recente são ordenadas por similaridade e agrupadas; a carteira comprada nas de maior similaridade e vendida nas de menor similaridade tem seu retorno mensal testado por erro-padrão de Newey-West (HAC), robusto a autocorrelação. É uma solução diferente, e consolidada na literatura de finanças, para o mesmo problema de observações repetidas, com a vantagem adicional de não impor uma forma funcional linear à relação entre similaridade e retorno.
 
 \textbf{Causalidade reversa.} A estrutura temporal do desenho reduz essa ameaça por construção: a similaridade é medida com base no texto já divulgado até a data de publicação da DFP, e a janela de retorno anormal começa estritamente após essa data: o retorno futuro não pode, mecanicamente, determinar um texto já publicado. O risco residual é de antecipação (a empresa escrever de forma diferente porque já sabe algo que o mercado ainda não precificou), que é, na verdade, a própria hipótese em teste (H1), e não uma ameaça a ela.
-
-\textbf{Escolha das variáveis de controle.} Alavancagem, ROA e o retorno dos 12 meses anteriores foram incluídos por serem determinantes padrão de retorno esperado na literatura de finanças. O tamanho (logaritmo do ativo total) foi testado e excluído do conjunto final de controles: nesta amostra, sua correlação com a similaridade textual ($r=0{,}00$) é essencialmente nula e com o retorno anormal ($r=-0{,}10$) é fraca, de modo que sua inclusão ou exclusão não altera materialmente nenhum resultado reportado; trata-se de uma verificação empírica, e não de uma decisão arbitrária.
 
 \textbf{Múltiplas fontes de texto.} A nota de empréstimos, financiamentos e debêntures, o objeto central desta dissertação, é um recorte deliberadamente estreito e ainda pouco explorado na literatura, tanto internacional quanto brasileira (Seção~\ref{sec:medida}). Para verificar se um eventual resultado é específico desse recorte ou se generaliza para áreas de divulgação textual já mais exploradas na literatura internacional, o mesmo modelo foi estimado também sobre quatro operacionalizações adicionais do texto, que servem tanto de controle metodológico quanto de termo de comparação: (i) a própria nota de dívida em base trimestral, em vez de anual; (ii) o conjunto completo de notas explicativas; (iii) o Relatório da Administração, equivalente brasileiro ao MD\&A norte-americano; e (iv) a seção de Fatores de Risco do Formulário de Referência, equivalente ao Item 1A de um 10-K americano, exatamente a seção em que \citeonline{cohen2020} encontram o efeito mais forte. Testar múltiplas fontes de texto é, em si, parte da estratégia de identificação: se o resultado depender criticamente de qual seção do texto é usada, isso é informação relevante sobre sua robustez, e foi, de fato, o que se observou (Seções~\ref{sec:h1_resultados}--\ref{sec:robustez}).
 
@@ -415,6 +446,25 @@ Por fim, a Figura~\ref{fig:controles} mostra a distribuição das quatro variáv
     {\footnotesize Fonte: elaborada pelo autor a partir de dados contábeis estruturados da CVM. ROA e retorno passado truncados nos percentis 1/99 para legibilidade.}
 \end{figure}
 
+\section{Controles adicionais da grade M0-M3}
+\label{sec:controles_m0m3}
+
+Além das quatro variáveis de nível da Figura~\ref{fig:controles}, a grade M0-M3 (Seção~\ref{sec:controles}) acrescenta cinco variáveis: três mudanças contemporâneas ($\Delta$ROA, $\Delta$Alavancagem, $\Delta$Dívida) e duas variáveis de risco/retorno esperado (\textit{book-to-market} e volatilidade). A Figura~\ref{fig:controles_m0m3} mostra a distribuição de cada uma, sobre a amostra da nota de dívida anual (extração confiável).
+
+As três mudanças concentram-se perto de zero, como esperado para uma variação ano a ano em empresas maduras, com caudas moderadas nos dois sentidos (empresas em reestruturação financeira mais acentuada). O \textit{book-to-market} tem a assimetria positiva característica dessa variável (poucas empresas negociando muito abaixo do valor patrimonial, a maioria acima), consistente com o que a literatura reporta para outros mercados \cite{famafrench1992}. A volatilidade concentra-se entre 1,5\% e 3,5\% de desvio-padrão diário, com uma cauda de empresas mais voláteis -- tipicamente aquelas atravessando dificuldade financeira ou operando em setores mais cíclicos no período.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.95\textwidth]{figures/m2_m3_controls.png}
+    \caption{Distribuição dos controles de M2-M3}
+    \label{fig:controles_m0m3}
+    \vspace{0.2cm}
+
+    {\footnotesize Fonte: elaborada pelo autor a partir de dados contábeis estruturados da CVM (mudanças) e de preços/indicadores de mercado da Bloomberg (\textit{book-to-market}, volatilidade). Percentis 1/99 truncados para legibilidade.}
+\end{figure}
+
+A cobertura é alta em todas as cinco variáveis: 436 de 437 pares (99,8\%) para as três mudanças contemporâneas e para a volatilidade, e 423 de 437 (96,8\%) para \textit{book-to-market}, cuja pequena lacuna reflete casos sem cotação de preço-sobre-valor-patrimonial disponível na data de referência.
+
 \chapter{Resultados}
 \label{ch:resultados}
 
@@ -468,58 +518,58 @@ Em conjunto, essas três verificações (evolução da confiabilidade de extraç
 \section{Resultados do modelo principal (H1)}
 \label{sec:h1_resultados}
 
-A Tabela~\ref{tab:h1} reporta o p-valor do coeficiente de Similaridade sobre o retorno anormal, para cada fonte de texto, nos quatro estágios de rigor descritos na Seção~\ref{sec:modelo}: (i) correlação simples, sem ajuste algum; (ii) regressão com erros-padrão agrupados por empresa, sem controles; (iii) a mesma regressão, com os controles de alavancagem, ROA e retorno passado; e (iv) o modelo de efeitos fixos de empresa e ano (equação~\ref{eq:fe}).
+A Tabela~\ref{tab:h1} reporta o p-valor do coeficiente de TextChange sobre o BHAR ajustado (Seção~\ref{sec:var_dependente}), para cada fonte de texto, ao longo da grade M0-M3 (Seção~\ref{sec:controles}): M0 (TextChange isolado, com efeitos fixos de empresa e ano), M1 (mais tamanho, ROA, alavancagem e momento), M2 (mais as mudanças contemporâneas de ROA, alavancagem e dívida -- especificação principal) e M3 (mais \textit{book-to-market} e volatilidade).
 
 \begin{table}[htbp]
     \centering
-    \caption{Resultados do modelo principal (H1) por fonte de texto}
+    \caption{Resultados do modelo principal (H1) por fonte de texto, grade M0-M3}
     \label{tab:h1}
     \small
     \begin{tabular}{@{}lrrrrr@{}}
         \toprule
-        \textbf{Fonte de texto} & \textbf{n} & \textbf{Simples} & \textbf{Agrup., s/c} & \textbf{Agrup., c/c} & \textbf{Ef. fixos} \\
+        \textbf{Fonte de texto} & \textbf{n (M3)} & \textbf{M0} & \textbf{M1} & \textbf{M2*} & \textbf{M3} \\
         \midrule
-        Nota de dívida (anual)       & 432   & 0,155 & 0,274 & 0,321 & 0,203 \\
-        Nota de dívida (trimestral)  & 1.226 & 0,500 & 0,605 & 0,782 & 0,348 \\
-        Conjunto completo de notas   & 411   & 0,628 & 0,641 & 0,513 & 0,660 \\
-        Relatório da Administração   & 484   & 0,153 & 0,140 & \textbf{0,031} & 0,478 \\
-        Fatores de Risco (FRE)       & 672   & 0,226 & 0,151 & 0,308 & 0,758 \\
+        Nota de dívida (anual)       & 418 & 0,211 & 0,265 & 0,268 & 0,421 \\
+        Nota de dívida (trimestral)  & 437 & 0,563 & 0,506 & 0,286 & 0,390 \\
+        Conjunto completo de notas   & 404 & 0,424 & 0,683 & 0,631 & 0,611 \\
+        Relatório da Administração   & 462 & 0,781 & 0,908 & 0,928 & 0,949 \\
+        Fatores de Risco (FRE)       & 650 & 0,420 & 0,355 & 0,359 & 0,197 \\
         \bottomrule
     \end{tabular}
     \\[0.3cm]
-    {\footnotesize Fonte: elaborada pelo autor. Valores são p-valores; ``Agrup., s/c'' = agrupado por empresa, sem controles; ``Agrup., c/c'' = agrupado com controles. Nota de dívida (anual e trimestral): amostra restrita a pares com extração confiável (Seção~\ref{sec:confiabilidade}).}
+    {\footnotesize Fonte: elaborada pelo autor. Valores são p-valores do coeficiente de TextChange, erros-padrão agrupados por empresa em todos os modelos (M0-M3 incluem efeitos fixos de empresa e ano). *M2 é a especificação principal (Seção~\ref{sec:controles}). Nota de dívida (anual e trimestral): amostra restrita a pares com extração confiável (Seção~\ref{sec:confiabilidade}). Coeficientes, erros-padrão e intervalos de confiança completos para todas as células estão na Tabela~\ref{tab:h1_m2_detalhe} (M2) e em \textit{m0\_m3\_all\_sources\_results.csv}.}
 \end{table}
 
-Três padrões merecem destaque na leitura da Tabela~\ref{tab:h1}, e não apenas a coluna final. Primeiro: nota de dívida (anual e trimestral) e conjunto completo de notas não mostram associação significativa com retorno anormal em nenhum estágio. É um resultado nulo consistente, não sensível à especificação escolhida.
+Nenhuma fonte de texto mostra associação significativa com o retorno anormal em nenhum estágio da grade. É um resultado nulo consistente, não sensível à especificação de controles escolhida -- e, notavelmente, mais nulo do que sob a especificação exploratória anterior: o Relatório da Administração, a única fonte que já havia mostrado algum sinal (retorno ajustado ao mercado, regressão agrupada com controles, $p=0{,}031$), agora não se aproxima da significância em nenhum M ($p \geq 0{,}78$ em todos). A Tabela~\ref{tab:h1_m2_detalhe} detalha o coeficiente, o erro-padrão e o intervalo de confiança de 95\% do modelo principal (M2) para cada fonte.
 
-Segundo, e mais interessante: o Relatório da Administração é a única fonte em que a significância aparece, mas apenas ao se adicionarem os controles ($p=0{,}140$ sem controles para $p=0{,}031$ com controles), e desaparece novamente sob efeitos fixos ($p=0{,}478$). Isso é informativo por si: a associação depende inteiramente da comparação entre empresas (algumas escrevem de forma mais estável e têm desempenho diferente por razões possivelmente não relacionadas ao texto), e não sobrevive à pergunta mais rigorosa: quando a similaridade de uma mesma empresa varia em relação à sua própria média, seu retorno varia também? A resposta, sob o teste mais exigente disponível neste trabalho, é não.
+\begin{table}[htbp]
+    \centering
+    \caption{Modelo principal (M2): coeficiente, erro-padrão e IC 95\% por fonte de texto}
+    \label{tab:h1_m2_detalhe}
+    \small
+    \begin{tabular}{@{}lrrrr@{}}
+        \toprule
+        \textbf{Fonte de texto} & \textbf{n} & \textbf{$\hat\beta$ (EP)} & \textbf{IC 95\%} & \textbf{p} \\
+        \midrule
+        Nota de dívida (anual)       & 432 & 0,106 (0,095) & [$-$0,082; 0,293] & 0,268 \\
+        Nota de dívida (trimestral)  & 456 & $-$0,031 (0,029) & [$-$0,088; 0,026] & 0,286 \\
+        Conjunto completo de notas   & 411 & $-$0,078 (0,163) & [$-$0,400; 0,243] & 0,631 \\
+        Relatório da Administração   & 484 & 0,022 (0,244) & [$-$0,457; 0,502] & 0,928 \\
+        Fatores de Risco (FRE)       & 672 & 0,211 (0,230) & [$-$0,241; 0,664] & 0,359 \\
+        \bottomrule
+    \end{tabular}
+    \\[0.3cm]
+    {\footnotesize Fonte: elaborada pelo autor. EP = erro-padrão agrupado por empresa. Todos os intervalos de confiança contêm zero.}
+\end{table}
 
-Terceiro: o padrão não é aleatório em relação à teoria. \citeonline{cohen2020} e \citeonline{amelzadeh2016} documentam, dentro de suas próprias amostras, que o efeito de mudança textual sobre retorno futuro se concentra em texto de alta discricionariedade gerencial (Risk Factors, MD\&A) e é mais fraco em texto formulaico e auditado, como notas explicativas contábeis. O Relatório da Administração, o equivalente brasileiro ao MD\&A, é exatamente a fonte, entre as testadas, de maior discricionariedade narrativa, e é também a única em que algum sinal aparece. O resultado nulo da nota de dívida, portanto, é consistente com a literatura, não uma contradição dela. A seção de Fatores de Risco do Formulário de Referência, adquirida especificamente para testar essa previsão da literatura, é a mais alta em discricionariedade entre as quatro fontes testadas, e ainda assim não mostra associação significativa em nenhum estágio, o que pesa contra uma leitura simples de ``falta a fonte de texto certa''.
+Um padrão nos coeficientes (não apenas nos p-valores) vale registrar: o sinal de $\hat\beta$ é positivo -- mais mudança textual associada a mais retorno anormal futuro -- na nota de dívida anual e nos Fatores de Risco em todo M0-M3, e na nota trimestral e no conjunto completo de notas é negativo em todo M0-M3. Nenhum dos dois padrões é significativo, e o próprio sinal do efeito não é interpretado como achado (Seção~\ref{sec:modelo}, ``Como ler $\beta$''); mas a inconsistência de sinal entre fontes que deveriam, em princípio, captar o mesmo mecanismo é ela própria uma informação: pesa contra uma leitura de que existe um efeito real pequeno e apenas não detectado por falta de poder estatístico, e a favor de que o que se observa em cada fonte, nesses coeficientes de magnitude pequena e não significativa, é majoritariamente ruído amostral.
+
+O padrão de resultados por fonte de texto também não é aleatório em relação à teoria. \citeonline{cohen2020} e \citeonline{amelzadeh2016} documentam, dentro de suas próprias amostras, que o efeito de mudança textual sobre retorno futuro se concentra em texto de alta discricionariedade gerencial (Risk Factors, MD\&A) e é mais fraco em texto formulaico e auditado, como notas explicativas contábeis. O Relatório da Administração, o equivalente brasileiro ao MD\&A, e a seção de Fatores de Risco, adquirida especificamente para testar essa previsão da literatura, são as fontes de maior discricionariedade narrativa entre as testadas -- e, ainda assim, nenhuma mostra associação significativa em nenhum estágio da grade M0-M3, o que pesa contra uma leitura simples de ``falta a fonte de texto certa''.
 
 \section{Testes de robustez}
 \label{sec:robustez}
 
-Dois testes de robustez adicionais foram aplicados especificamente ao único resultado que chegou a ser significativo em algum estágio, o Relatório da Administração sob regressão agrupada com controles ($p=0{,}031$, Tabela~\ref{tab:h1}), antes de ele ser interpretado como um indício real. Esse cuidado se justifica: duas outras vezes neste projeto, uma associação inicialmente significativa ($p<0{,}01$ em ambos os casos) revelou-se, após verificação, um artefato: uma contaminação de dados na coleta, em um caso, e um escore degenerado de um único ativo (exatamente 1,0 de similaridade, por texto estático de uma empresa específica), no outro.
-
-\textbf{Verificação por perturbação da amostra.} O coeficiente foi reestimado sob cinco perturbações: (i) winsorização do retorno anormal nos percentis 1/99 ($p=0{,}035$, praticamente inalterado); (ii) remoção dos 5 retornos mais extremos ($p=0{,}017$, mais significativo, não menos); (iii) remoção da única observação com similaridade próxima de zero ($p=0{,}054$, sensibilidade real, porém modesta); (iv) correlação de postos de Spearman, sem controles nem agrupamento ($\rho=0{,}108$, $p=0{,}018$); e (v) reestimação excluindo, uma de cada vez, cada uma das 77 empresas da amostra; o pior caso foi $p=0{,}068$, e o sinal do coeficiente nunca se inverteu.
-
-\textbf{Verificação por método independente: teste de portfólio.} O mesmo resultado foi testado pelo método de portfólio calendário longo-curto (Seção~\ref{sec:modelo}), primeiro em sua forma padrão e depois em uma forma ajustada por características (Tabela~\ref{tab:portfolio}).
-
-\begin{table}[htbp]
-    \centering
-    \caption{Teste de portfólio para o Relatório da Administração}
-    \label{tab:portfolio}
-    \begin{tabular}{@{}p{7cm}lr@{}}
-        \toprule
-        \textbf{Especificação} & \textbf{Melhor combinação} & \textbf{p-valor} \\
-        \midrule
-        Sem ajuste por características & 3 meses, 2 grupos & 0,428 \\
-        Ajustado por características & 12 meses, 3 grupos & 0,276 \\
-        \bottomrule
-    \end{tabular}
-\end{table}
-
-Nenhuma das duas versões atinge significância convencional. É notável, porém, que a versão ajustada por características tenha um retorno longo-curto positivo em todas as nove combinações testadas, na mesma direção do coeficiente da regressão. A leitura mais honesta é que o resultado para o Relatório da Administração é condicional aos controles, real dentro do próprio método, mas não se sustenta como um padrão incondicional sob o método mais rigoroso disponível.
+Numa etapa exploratória anterior deste trabalho, com o retorno ajustado ao mercado sem beta (Seção~\ref{sec:var_dependente}) e um conjunto de controles escolhido \textit{a posteriori}, o Relatório da Administração chegou a mostrar um coeficiente significativo numa única especificação (regressão agrupada com controles, $p=0{,}031$). Esse indício foi submetido a uma bateria extensa de verificação -- perturbação da amostra (winsorização, remoção de extremos, exclusão empresa a empresa, correlação de postos), um teste de portfólio calendário independente e efeitos fixos de empresa e ano -- por precaução, já que duas outras vezes neste projeto uma associação inicialmente significativa ($p<0{,}01$) revelou-se, após verificação, um artefato de coleta de dados. O indício não sobreviveu a efeitos fixos ($p=0{,}478$ sob a especificação exploratória) nem ao teste de portfólio (melhor caso $p=0{,}276$), e não reaparece em nenhuma célula da grade M0-M3 sob a especificação definitiva de retorno anormal (Tabela~\ref{tab:h1}, $p \geq 0{,}78$ em todo M para o Relatório da Administração). O detalhamento completo da bateria de perturbação está preservado no histórico de versões do repositório do projeto, não reproduzido aqui por não ser mais relevante para a leitura dos resultados finais.
 
 \textbf{Checagem de associação com saída do índice.} Testou-se, para cada fonte de texto, se a similaridade textual está associada à saída subsequente da empresa do Ibovespa (Tabela~\ref{tab:delisting}).
 
@@ -564,7 +614,7 @@ O coeficiente é negativo e consistente com a direção esperada: maior similari
 
 Esse é, no conjunto, o achado empírico mais bem sustentado deste projeto até o momento, mas sua interpretação deve ser precisa. Ele diz respeito à validade da medida de mudança textual como sinal de dificuldade da empresa, não à hipótese central H1 de que a mudança textual prevê retorno futuro; essa última permanece nula inclusive para os Fatores de Risco.
 
-\textbf{Comparação direta com o desenho de \citeonline{santoscoelho2018}.} Como verificação adicional, motivada diretamente pela limitação que os próprios autores apontam (Seção~\ref{sec:modelo}), o modelo de retorno anormal foi reestimado seguindo o desenho metodológico deles o mais de perto possível: efeito único de empresa (sem efeito de ano), escolhido por teste de Hausman a cada especificação (efeitos fixos quando o teste rejeita a hipótese nula de equivalência, efeitos aleatórios caso contrário), com erros-padrão robustos à heterocedasticidade em vez de agrupados por empresa. A diferença deliberada é o painel: dez exercícios (2015--2024) em vez de três, permitindo que o teste de Hausman discrimine com mais confiança entre as duas abordagens (Tabela~\ref{tab:santoscoelho}).
+\textbf{Comparação direta com o desenho de \citeonline{santoscoelho2018}.} Como verificação adicional, motivada diretamente pela limitação que os próprios autores apontam (Seção~\ref{sec:modelo}), o modelo de retorno anormal foi reestimado seguindo o desenho metodológico deles o mais de perto possível: efeito único de empresa (sem efeito de ano), escolhido por teste de Hausman a cada especificação (efeitos fixos quando o teste rejeita a hipótese nula de equivalência, efeitos aleatórios caso contrário), com erros-padrão robustos à heterocedasticidade em vez de agrupados por empresa, com TextChange e o BHAR ajustado (Seção~\ref{sec:var_dependente}) no lugar da similaridade e do retorno ajustado ao mercado. A diferença deliberada é o painel: dez exercícios (2015--2024) em vez de três, permitindo que o teste de Hausman discrimine com mais confiança entre as duas abordagens (Tabela~\ref{tab:santoscoelho}).
 
 \begin{table}[htbp]
     \centering
@@ -576,24 +626,24 @@ Esse é, no conjunto, o achado empírico mais bem sustentado deste projeto até 
         \toprule
         \textbf{Fonte de texto} & \textbf{Janela} & \textbf{Ef. fixos (2 vias)} & \textbf{FE (só empresa)} & \textbf{RE (só empresa)} & \textbf{Hausman} & \textbf{Escolhido} \\
         \midrule
-        Nota de dívida (anual)      & 12m & 0,203 & 0,349 & 0,270 & 0,000 & FE: 0,349 \\
-                                     & 18m & 0,385 & 0,506 & 0,525 & 0,001 & FE: 0,506 \\
-        Conjunto completo de notas  & 12m & 0,660 & 0,220 & 0,427 & 0,768 & RE: 0,427 \\
-                                     & 18m & 0,182 & 0,080 & 0,177 & 0,802 & RE: 0,177 \\
-        Relatório da Administração  & 12m & 0,478 & 0,785 & \textbf{0,045} & 0,000 & FE: 0,785 \\
-                                     & 18m & 0,683 & 0,358 & 0,862 & 0,026 & FE: 0,358 \\
-        Fatores de Risco            & 12m & 0,758 & 0,567 & 0,355 & 0,160 & RE: 0,355 \\
-                                     & 18m & 0,426 & 0,232 & 0,071 & 0,013 & FE: 0,232 \\
+        Nota de dívida (anual)      & 12m & 0,272 & 0,307 & 0,229 & 0,348 & RE: 0,229 \\
+                                     & 18m & 0,104 & 0,071 & 0,192 & 0,469 & RE: 0,192 \\
+        Conjunto completo de notas  & 12m & 0,686 & 0,953 & 0,717 & 0,030 & FE: 0,953 \\
+                                     & 18m & 0,983 & 0,992 & 0,924 & 0,011 & FE: 0,992 \\
+        Relatório da Administração  & 12m & 0,895 & 0,526 & 0,533 & 0,005 & FE: 0,526 \\
+                                     & 18m & 0,321 & 0,092 & 0,415 & 0,010 & FE: 0,092 \\
+        Fatores de Risco            & 12m & 0,365 & 0,352 & 0,735 & 0,000 & FE: 0,352 \\
+                                     & 18m & 0,923 & 0,908 & 0,578 & 0,078 & RE: 0,578 \\
         \bottomrule
     \end{tabular}%
     }
     \\[0.3cm]
-    {\footnotesize Fonte: elaborada pelo autor. Valores são p-valores do coeficiente de similaridade, exceto a coluna Hausman (p-valor do teste de especificação) e a última coluna, que reporta o estimador escolhido pela regra de \citeonline{santoscoelho2018} (Hausman rejeita a 5\% $\rightarrow$ efeitos fixos; caso contrário, efeitos aleatórios) e o p-valor correspondente. Nota de dívida (anual): amostra restrita a pares com extração confiável (Seção~\ref{sec:confiabilidade}).}
+    {\footnotesize Fonte: elaborada pelo autor. Valores são p-valores do coeficiente de TextChange, exceto a coluna Hausman (p-valor do teste de especificação) e a última coluna, que reporta o estimador escolhido pela regra de \citeonline{santoscoelho2018} (Hausman rejeita a 5\% $\rightarrow$ efeitos fixos; caso contrário, efeitos aleatórios) e o p-valor correspondente. Nota de dívida (anual): amostra restrita a pares com extração confiável (Seção~\ref{sec:confiabilidade}).}
 \end{table}
 
-O caso do Relatório da Administração aos 12 meses ilustra por que a regra de seleção importa: sob efeitos aleatórios sozinhos, o coeficiente pareceria significativo ($p=0{,}045$), mas o teste de Hausman rejeita decisivamente a equivalência entre os dois estimadores ($p<0{,}001$) e recomenda efeitos fixos, sob o qual o resultado é nulo ($p=0{,}785$). Aplicando a própria regra de decisão de \citeonline{santoscoelho2018} de forma correta, portanto, nenhuma fonte de texto e nenhuma janela mostra significância em nenhuma das duas versões do desenho.
+Nenhuma fonte de texto e nenhuma janela mostra significância em nenhuma das duas versões do desenho, sob nenhum dos dois métodos de agrupamento (Hausman ou dois-vias). O caso mais próximo de significância -- Relatório da Administração aos 18 meses, efeitos fixos apenas de empresa, $p=0{,}092$ -- ainda está longe do limiar convencional.
 
-Esse exercício responde diretamente à limitação que os autores apontam em seu próprio estudo: um painel mais longo, dizem eles, poderia revelar diferenças relevantes entre as abordagens de efeito fixo e aleatório que um painel curto não capta com confiança. Um painel mais de três vezes mais longo (dez exercícios contra três) permite exatamente esse teste com mais poder estatístico, e o resultado, em vez de fortalecer ou reverter o achado nulo, o confirma sob mais uma combinação de modelo e amostra. Isso não invalida a contribuição de \citeonline{santoscoelho2018}, que trata de uma pergunta diferente (valor de mercado corrente, não retorno futuro) com um recorte amostral diferente; mas sugere que, ao menos para a relação entre mudança textual e retorno futuro, a inconclusividade não é um artefato de painel curto. Ela persiste mesmo quando essa limitação específica é removida.
+Esse exercício responde diretamente à limitação que os autores apontam em seu próprio estudo: um painel mais longo, dizem eles, poderia revelar diferenças relevantes entre as abordagens de efeito fixo e aleatório que um painel curto não capta com confiança. Um painel mais de três vezes mais longo (dez exercícios contra três) permite exatamente esse teste com mais poder estatístico, e o resultado, em vez de fortalecer ou reverter o achado nulo, o confirma sob mais uma combinação de modelo, amostra e -- agora -- de especificação de retorno anormal. Isso não invalida a contribuição de \citeonline{santoscoelho2018}, que trata de uma pergunta diferente (valor de mercado corrente, não retorno futuro) com um recorte amostral diferente; mas sugere que, ao menos para a relação entre mudança textual e retorno futuro, a inconclusividade não é um artefato de painel curto nem da escolha de retorno ajustado ao mercado sem beta. Ela persiste mesmo quando essas duas limitações específicas são removidas.
 
 \section{Análise complementar (H2)}
 \label{sec:h2_resultados}
