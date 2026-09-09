@@ -51,7 +51,10 @@ DV_LABELS = {
     "ar_market_adjusted": "Ajustado ao mercado (original)",
     "alpha_ar_sum": "CAR (alpha, soma dos resíduos)",
     "alpha_ar_compound": "BHAR (alpha, resíduo composto)",
+    "alpha_ar_compound_winsorized": "BHAR ajustado (winsorizado 1/99)",
 }
+
+WINSOR_LO, WINSOR_HI = 0.01, 0.99
 
 M0 = []
 M1 = ["ln_total_assets", "roa", "leverage", "past_12m_return"]
@@ -108,6 +111,12 @@ def main() -> None:
     df = build_panel(sample)
     df["TextChange"] = 1 - df["cosine_similarity"]
     df["amihud_illiquidity_scaled"] = df["amihud_illiquidity"] * 1e6  # rescaled for coefficient readability
+
+    # BHAR ajustado: winsorized at 1/99 to tame the compounding-induced
+    # right skew (raw skewness ~10.1 -> ~1.9 after winsorizing), the same
+    # treatment already used elsewhere in this project for extreme values.
+    lo, hi = df["alpha_ar_compound"].quantile([WINSOR_LO, WINSOR_HI])
+    df["alpha_ar_compound_winsorized"] = df["alpha_ar_compound"].clip(lo, hi)
 
     sector_map = build_sector_map()
     df["setor"] = df["cd_cvm"].map(sector_map)
