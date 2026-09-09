@@ -28,6 +28,12 @@
 % isolada anual, confiável) em tabelas comparativas de fontes de texto.
 \definecolor{fontechave}{RGB}{214,227,239}
 
+% Cores usadas para destacar o modelo principal (M2) em tabelas de
+% resultados por fonte de texto x grade M0-M3, e a interseção entre a
+% coluna M2 e a linha da fonte principal (nota de dívida anual).
+\definecolor{m2principal}{RGB}{253,236,209}
+\definecolor{m2intersecao}{RGB}{233,231,224}
+
 % Margens ABNT NBR 14724: superior 3cm, inferior 2cm, esquerda 3cm (encadernação), direita 2cm
 \geometry{top=3cm, bottom=2cm, left=3cm, right=2cm}
 \setlength{\parindent}{1.25cm}
@@ -543,17 +549,18 @@ A Tabela~\ref{tab:h1} reporta o p-valor do coeficiente de TextChange sobre o BHA
     \small
     \begin{tabular}{@{}lrrrrr@{}}
         \toprule
-        \textbf{Fonte de texto} & \textbf{n (M3)} & \textbf{M0} & \textbf{M1} & \textbf{M2*} & \textbf{M3} \\
+        \textbf{Fonte de texto} & \textbf{n (M3)} & \textbf{M0} & \textbf{M1} & \cellcolor{m2principal}\textbf{M2*} & \textbf{M3} \\
         \midrule
-        Nota de dívida (anual)       & 418 & 0,211 & 0,265 & 0,268 & 0,421 \\
-        Nota de dívida (trimestral)  & 437 & 0,563 & 0,506 & 0,286 & 0,390 \\
-        Conjunto completo de notas   & 404 & 0,424 & 0,683 & 0,631 & 0,611 \\
-        Relatório da Administração   & 462 & 0,781 & 0,908 & 0,928 & 0,949 \\
-        Fatores de Risco (FRE)       & 650 & 0,420 & 0,355 & 0,359 & 0,197 \\
+        \rowcolor{fontechave}
+        \textbf{Nota de dívida (anual)}       & \textbf{418} & \textbf{0,211} & \textbf{0,265} & \cellcolor{m2intersecao}\textbf{0,268} & \textbf{0,421} \\
+        Nota de dívida (trimestral)  & 437 & 0,563 & 0,506 & \cellcolor{m2principal}0,286 & 0,390 \\
+        Conjunto completo de notas   & 404 & 0,424 & 0,683 & \cellcolor{m2principal}0,631 & 0,611 \\
+        Relatório da Administração   & 462 & 0,781 & 0,908 & \cellcolor{m2principal}0,928 & 0,949 \\
+        Fatores de Risco (FRE)       & 650 & 0,420 & 0,355 & \cellcolor{m2principal}0,359 & 0,197 \\
         \bottomrule
     \end{tabular}
     \\[0.3cm]
-    {\footnotesize Fonte: elaborada pelo autor. Valores são p-valores do coeficiente de TextChange, erros-padrão agrupados por empresa em todos os modelos (M0-M3 incluem efeitos fixos de empresa e ano). *M2 é a especificação principal (Seção~\ref{sec:controles}). Nota de dívida (anual e trimestral): amostra restrita a pares com extração confiável (Seção~\ref{sec:confiabilidade}). Coeficientes, erros-padrão e intervalos de confiança completos para todas as células estão na Tabela~\ref{tab:h1_m2_detalhe} e em \textit{m0\_m3\_all\_sources\_results.csv}.}
+    {\footnotesize Fonte: elaborada pelo autor. Valores são p-valores do coeficiente de TextChange, erros-padrão agrupados por empresa em todos os modelos (M0-M3 incluem efeitos fixos de empresa e ano). *M2 é a especificação principal (Seção~\ref{sec:controles}), em destaque na coluna; a linha em destaque (nota de dívida anual) é a fonte de texto principal desta dissertação (Tabela~\ref{tab:sample}). Nota de dívida (anual e trimestral): amostra restrita a pares com extração confiável (Seção~\ref{sec:confiabilidade}). Coeficientes, erros-padrão e intervalos de confiança completos para todas as células estão na Tabela~\ref{tab:h1_m2_detalhe} e em \textit{m0\_m3\_all\_sources\_results.csv}.}
 \end{table}
 
 Nenhuma fonte de texto mostra associação significativa com o retorno anormal em nenhum estágio da grade. É um resultado nulo consistente, não sensível à especificação de controles escolhida -- e, notavelmente, mais nulo do que sob a especificação exploratória anterior: o Relatório da Administração, a única fonte que já havia mostrado algum sinal (retorno ajustado ao mercado, regressão agrupada com controles, $p=0{,}031$), agora não se aproxima da significância em nenhum M ($p \geq 0{,}78$ em todos). A Tabela~\ref{tab:h1_m2_detalhe} detalha o coeficiente, o erro-padrão e o intervalo de confiança de 95\% de cada modelo e cada fonte.
