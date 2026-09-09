@@ -22,6 +22,11 @@
 \usepackage[titles]{tocloft}
 \usepackage{titlesec}
 \usepackage{booktabs}
+\usepackage[table]{xcolor}
+
+% Cor usada para destacar a fonte de texto principal (nota de dívida
+% isolada anual, confiável) em tabelas comparativas de fontes de texto.
+\definecolor{fontechave}{RGB}{214,227,239}
 
 % Margens ABNT NBR 14724: superior 3cm, inferior 2cm, esquerda 3cm (encadernação), direita 2cm
 \geometry{top=3cm, bottom=2cm, left=3cm, right=2cm}
@@ -399,7 +404,8 @@ O número de pares ano a ano com similaridade textual calculável varia por font
         \textbf{Fonte de texto} & \textbf{Frequência} & \textbf{Pares} & \textbf{Empresas} \\
         \midrule
         Nota de dívida isolada (total)      & Anual & 816 & 111 \\
-        Nota de dívida isolada (confiável)  & Anual & 527 & 99 \\
+        \rowcolor{fontechave}
+        \textbf{Nota de dívida isolada (confiável)}  & \textbf{Anual} & \textbf{527} & \textbf{99} \\
         Nota de dívida isolada (total)      & Trimestral & 2.572 & 112 \\
         Nota de dívida isolada (confiável)  & Trimestral & 1.496 & 103 \\
         Conjunto completo de notas explicativas & Anual & 487 & 96 \\
@@ -408,7 +414,7 @@ O número de pares ano a ano com similaridade textual calculável varia por font
         \bottomrule
     \end{tabular}
     \\[0.3cm]
-    {\footnotesize Fonte: elaborada pelo autor a partir de dados da CVM. ``Total'' = todos os pares com similaridade computável; ``confiável'' = restrito a pares com extração confiável (\textit{font\_heading}) nos dois anos (Seção~\ref{sec:confiabilidade}), a amostra usada nos resultados a partir daqui.}
+    {\footnotesize Fonte: elaborada pelo autor a partir de dados da CVM. ``Total'' = todos os pares com similaridade computável; ``confiável'' = restrito a pares com extração confiável (\textit{font\_heading}) nos dois anos (Seção~\ref{sec:confiabilidade}), a amostra usada nos resultados a partir daqui. A linha em destaque (nota de dívida isolada, confiável, anual) é a fonte de texto principal desta dissertação (Seção~\ref{sec:medida}); as demais são comparações de robustez e generalização (Seção~\ref{sec:identificacao}).}
 \end{table}
 
 Dados de mercado (preços diários da ação e do Ibovespa, 2014--2026) cobrem a totalidade das 66 empresas atuais. Dados de consenso de EPS dos analistas (Bloomberg), usados na análise complementar de H2, cobrem 64 das 66 empresas atuais e 27 das 45 históricas.
