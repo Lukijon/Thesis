@@ -118,6 +118,11 @@ SOURCES = {
     "whole_notes": ("abnormal_returns_full_notes_VERIFIED.csv", "year_prev", "year_curr"),
     "mgmt_report": ("abnormal_returns_mgmt_report.csv", "year_prev", "year_curr"),
     "risk_factors": ("abnormal_returns_risk_factors.csv", "year_prev", "year_curr"),
+    # 18-month window variants, for the Santos & Coelho (2018) style comparison
+    "narrow_annual_18m": ("abnormal_returns_poc_18m_reliable.csv", "year_prev", "year_curr"),
+    "whole_notes_18m": ("abnormal_returns_full_notes_VERIFIED_18m.csv", "year_prev", "year_curr"),
+    "mgmt_report_18m": ("abnormal_returns_mgmt_report_18m.csv", "year_prev", "year_curr"),
+    "risk_factors_18m": ("abnormal_returns_risk_factors_18m.csv", "year_prev", "year_curr"),
 }
 
 
