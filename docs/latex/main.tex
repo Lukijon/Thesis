@@ -571,11 +571,11 @@ O padrão de resultados por fonte de texto também não é aleatório em relaç�
 
 Numa etapa exploratória anterior deste trabalho, com o retorno ajustado ao mercado sem beta (Seção~\ref{sec:var_dependente}) e um conjunto de controles escolhido \textit{a posteriori}, o Relatório da Administração chegou a mostrar um coeficiente significativo numa única especificação (regressão agrupada com controles, $p=0{,}031$). Esse indício foi submetido a uma bateria extensa de verificação -- perturbação da amostra (winsorização, remoção de extremos, exclusão empresa a empresa, correlação de postos), um teste de portfólio calendário independente e efeitos fixos de empresa e ano -- por precaução, já que duas outras vezes neste projeto uma associação inicialmente significativa ($p<0{,}01$) revelou-se, após verificação, um artefato de coleta de dados. O indício não sobreviveu a efeitos fixos ($p=0{,}478$ sob a especificação exploratória) nem ao teste de portfólio (melhor caso $p=0{,}276$), e não reaparece em nenhuma célula da grade M0-M3 sob a especificação definitiva de retorno anormal (Tabela~\ref{tab:h1}, $p \geq 0{,}78$ em todo M para o Relatório da Administração). O detalhamento completo da bateria de perturbação está preservado no histórico de versões do repositório do projeto, não reproduzido aqui por não ser mais relevante para a leitura dos resultados finais.
 
-\textbf{Checagem de associação com saída do índice.} Testou-se, para cada fonte de texto, se a similaridade textual está associada à saída subsequente da empresa do Ibovespa (Tabela~\ref{tab:delisting}).
+\textbf{Checagem de associação com saída do índice.} Testou-se, para cada fonte de texto, se TextChange está associado à saída subsequente da empresa do Ibovespa (Tabela~\ref{tab:delisting}).
 
 \begin{table}[htbp]
     \centering
-    \caption{Associação entre similaridade e saída do índice, por fonte de texto}
+    \caption{Associação entre TextChange e saída do índice, por fonte de texto}
     \label{tab:delisting}
     \begin{tabular}{@{}lrrr@{}}
         \toprule
@@ -592,7 +592,7 @@ Numa etapa exploratória anterior deste trabalho, com o retorno ajustado ao merc
 
 O Relatório da Administração é, novamente, a única fonte com algum sinal sem controles, mas não sobrevive à adição de controles. Um teste de efeitos fixos não foi aplicado a essa checagem especificamente: a condição de deslistamento é constante dentro de cada empresa, e a transformação de efeitos fixos elimina exatamente a variação que se quer explicar. Estimar o modelo mesmo assim produz um coeficiente de ordem $10^{-17}$ (essencialmente zero de máquina) acompanhado de um p-valor de 0,0057, que pareceria altamente significativo se lido sem esse cuidado. Esse é um exemplo concreto de um teste mal especificado, identificado e descartado antes de ser reportado como resultado.
 
-\textbf{Achado adicional: Fatores de Risco e saída do índice, com desenho corrigido.} A checagem de deslistamento é, por natureza, uma pergunta no nível da empresa, não no nível do par ano a ano: o desenho tecnicamente correto é uma única observação por empresa. Construiu-se uma variável de similaridade média por empresa e estimou-se uma regressão puramente transversal ($n=110$, uma linha por empresa, sem necessidade de agrupamento) (Tabela~\ref{tab:riskfactors}).
+\textbf{Achado adicional: Fatores de Risco e saída do índice, com desenho corrigido.} A checagem de deslistamento é, por natureza, uma pergunta no nível da empresa, não no nível do par ano a ano: o desenho tecnicamente correto é uma única observação por empresa. Construiu-se uma variável de TextChange média por empresa e estimou-se uma regressão puramente transversal ($n=110$, uma linha por empresa, sem necessidade de agrupamento) (Tabela~\ref{tab:riskfactors}).
 
 \begin{table}[htbp]
     \centering
@@ -602,15 +602,15 @@ O Relatório da Administração é, novamente, a única fonte com algum sinal se
         \toprule
         \textbf{Especificação} & \textbf{n} & \textbf{Coef.} & \textbf{p-valor} \\
         \midrule
-        Sem controles                              & 110 & $-1{,}19$ & 0,121 \\
-        Com controles (alav., ROA, tamanho), MQO    & 110 & $-1{,}45$ & \textbf{0,030} \\
-        Com controles, sem tamanho                  & 110 & $-1{,}01$ & 0,157 \\
-        Com controles, logit                        & 110 & $-8{,}54$ & \textbf{0,039} \\
+        Sem controles                              & 110 & $1{,}19$ & 0,121 \\
+        Com controles (alav., ROA, tamanho), MQO    & 110 & $1{,}45$ & \textbf{0,030} \\
+        Com controles, sem tamanho                  & 110 & $1{,}01$ & 0,157 \\
+        Com controles, logit                        & 110 & $8{,}54$ & \textbf{0,039} \\
         \bottomrule
     \end{tabular}
 \end{table}
 
-O coeficiente é negativo e consistente com a direção esperada: maior similaridade textual média (menos mudança) associa-se a menor probabilidade de saída do índice. Diferentemente do achado do Relatório da Administração, este desenho não sofre do problema de observações repetidas em primeiro lugar, de modo que não há um teste mais rigoroso disponível capaz de invalidá-lo pela mesma via. Verificações de robustez (exclusão de cada empresa individualmente, pior caso $p=0{,}078$; e substituição da média por mediana, $p=0{,}033$) não enfraquecem o resultado.
+O coeficiente é positivo e consistente com a direção esperada: maior TextChange médio (mais mudança textual) associa-se a maior probabilidade de saída do índice. Diferentemente do achado do Relatório da Administração, este desenho não sofre do problema de observações repetidas em primeiro lugar, de modo que não há um teste mais rigoroso disponível capaz de invalidá-lo pela mesma via. Verificações de robustez (exclusão de cada empresa individualmente, pior caso $p=0{,}078$; e substituição da média por mediana, $p=0{,}033$) não enfraquecem o resultado.
 
 Esse é, no conjunto, o achado empírico mais bem sustentado deste projeto até o momento, mas sua interpretação deve ser precisa. Ele diz respeito à validade da medida de mudança textual como sinal de dificuldade da empresa, não à hipótese central H1 de que a mudança textual prevê retorno futuro; essa última permanece nula inclusive para os Fatores de Risco.
 
