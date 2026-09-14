@@ -35,6 +35,7 @@ warnings.filterwarnings("ignore")
 
 SECTIONS_DIR = Path("data/interim/poc/sections")
 RESULTS_CSV = Path("data/interim/poc/similarity_results_full_history.csv")
+RELIABLE_CSV = Path("data/interim/poc/similarity_results_full_history_reliable.csv")
 
 
 def _clean_for_tfidf(text: str) -> str:
@@ -97,9 +98,15 @@ def main() -> None:
     print("Similarity distribution:")
     print(results["cosine_similarity"].describe())
 
-    reliable = results[(results["diagnostic_prev"] == "font_heading") & (results["diagnostic_curr"] == "font_heading")]
+    reliable = results[(results["diagnostic_prev"] == "font_heading") & (results["diagnostic_curr"] == "font_heading")].reset_index(drop=True)
     print(f"\n{len(reliable)}/{len(results)} pairs ({len(reliable)/len(results):.1%}) have font_heading on both years (the reliable subsample).")
-    print(f"\nResults: {RESULTS_CSV}")
+    reliable.to_csv(RELIABLE_CSV, index=False)
+    print(f"Reliable-only companies: {reliable['cd_cvm'].nunique()}")
+    print("Reliable-only similarity distribution:")
+    print(reliable["cosine_similarity"].describe())
+
+    print(f"\nResults (all): {RESULTS_CSV}")
+    print(f"Results (reliable only): {RELIABLE_CSV}")
 
 
 if __name__ == "__main__":
