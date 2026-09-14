@@ -35,6 +35,8 @@ from io import BytesIO
 from pathlib import Path
 from xml.etree import ElementTree
 
+import fitz  # pymupdf
+
 from src.utils.http import get_bytes
 
 FILING_URL = "https://www.rad.cvm.gov.br/ENETCONSULTA/frmDownloadDocumento.aspx?CodigoInstituicao=1&NumeroSequencialDocumento={id_doc}"
@@ -107,14 +109,42 @@ def looks_like_earnings_release_text(first_page_text: str) -> bool:
     "C:\\CVM\\EmpresasNet\\Temp\\files\\00125016530000000000000000.pdf.pdf")
     that carry no usable filename signal at all -- an earnings-release PDF
     still starts with recognizable boilerplate ("Divulgação de Resultados",
-    "Teleconferência...") even with no descriptive filename. Intended to be
-    checked against the first page of any `largest_attachment_fallback`
-    candidate before it's trusted; not yet wired into the fallback-selection
-    path itself (would need re-running acquisition against the already-
-    cached filing zips -- no new downloads required, but out of scope for
-    this pass; see the correction doc for why that wasn't done automatically).
+    "Teleconferência...") even with no descriptive filename. Wired into
+    `select_source_attachments`'s fallback tier below (round 7 of note-
+    extraction hardening, 2026-09).
     """
     return bool(EARNINGS_RELEASE_TEXT_RE.search(first_page_text))
+
+
+MANAGEMENT_REPORT_TEXT_RE = re.compile(
+    r"(?i)relat[oó]rio\s+da\s+administra[cç][aã]o|senhores acionistas|"
+    r"submete[a-z]*\s+[aà]\s+(?:aprecia|apreciac)"
+)
+
+
+def looks_like_management_report_text(first_page_text: str) -> bool:
+    """Content-based fallback for opaque legacy filenames, same rationale as
+    `looks_like_earnings_release_text` above but for a different wrong-
+    attachment category found empirically during round 7 (2026-09, after
+    expanding the corpus to 185 companies / 2010-2025): for filings with no
+    descriptive attachment filename, `select_source_attachments`'s
+    largest-attachment fallback sometimes picks the Relatório da
+    Administração instead of the actual Notas Explicativas/DFP, because the
+    RA document happens to be the largest PDF in that specific filing
+    package. Confirmed by direct inspection of real cases before adding
+    this check (not guessed at) -- e.g. Braskem 2011 ("RELATÓRIO DA
+    ADMINISTRAÇÃO 2011... A Administração da Braskem S.A. (“Braskem”)
+    submete à apreciação de V. Sas. o Relatório da Administração..."),
+    Lojas Americanas 2010 (CVM's own standardized cover line "13.01 -
+    RELATÓRIO DA ADMINISTRAÇÃO"), Paranapanema 2010 ("Relatório da
+    Administração do exercício de 2010"), TIM Participações 2010-2012
+    ("submete à apreciação de V. Sas. o Relatório da Administração e as
+    Demonstrações Financeiras..."). A corpus-wide scan found this pattern in
+    ~10% of all cached filings (202/2113), not just newly-acquired ones --
+    Braskem's long-known low reliability rate, for one, traces directly to
+    this rather than to any locate_note_section.py weakness.
+    """
+    return bool(MANAGEMENT_REPORT_TEXT_RE.search(first_page_text))
 
 
 @dataclass
@@ -202,6 +232,22 @@ def list_attachments(
     raise FileNotFoundError("No recognized attachment structure (neither modern nor legacy) found in filing package")
 
 
+def _first_page_text(pdf_bytes: bytes, max_chars: int = 3000) -> str:
+    """Plain text of a PDF's first page, for content-based filtering of the
+    largest-attachment fallback below when the filename gives no signal at
+    all (opaque legacy temp names). Best-effort: a malformed/unparseable PDF
+    just yields an empty string, which fails every content check harmlessly
+    instead of raising and aborting the whole selection.
+    """
+    try:
+        with fitz.open(stream=pdf_bytes, filetype="pdf") as doc:
+            if len(doc) == 0:
+                return ""
+            return doc[0].get_text()[:max_chars]
+    except Exception:
+        return ""
+
+
 def select_source_attachments(attachments: list[FilingAttachment]) -> tuple[list[FilingAttachment], str]:
     """Pick the attachment(s) most likely to contain the debt note, per the
     tiered strategy described in the module docstring. Returns the matches
@@ -217,7 +263,24 @@ def select_source_attachments(attachments: list[FilingAttachment]) -> tuple[list
 
     fallback_pool = [a for a in attachments if not looks_like_non_statement_attachment(a.filename)] or attachments
     if fallback_pool:
-        return [max(fallback_pool, key=lambda a: len(a.pdf_bytes))], "largest_attachment_fallback"
+        # Filename alone can't rule out a wrong document for legacy filings
+        # with opaque temp names (no "administracao"/"_er_" substring to
+        # catch) -- content-check each candidate, largest first, skipping
+        # any that reads like a Relatório da Administração or earnings
+        # release instead of the real statements/notes (round 7 fix, found
+        # by a corpus-wide scan: see looks_like_management_report_text).
+        by_size = sorted(fallback_pool, key=lambda a: len(a.pdf_bytes), reverse=True)
+        for a in by_size:
+            text = _first_page_text(a.pdf_bytes)
+            if looks_like_earnings_release_text(text) or looks_like_management_report_text(text):
+                continue
+            tier = "largest_attachment_fallback" if a is by_size[0] else "largest_attachment_fallback_content_filtered"
+            return [a], tier
+        # Every candidate in the pool looked like a wrong document by
+        # content (rare) -- fall back to the plain largest rather than
+        # returning nothing, but flag it distinctly so QC can find these
+        # without re-litigating the whole fallback tier.
+        return [by_size[0]], "largest_attachment_fallback_all_flagged"
 
     return [], "no_attachments"
 

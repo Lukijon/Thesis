@@ -212,10 +212,23 @@ def _is_heading_shaped(line: Line, body_size: float, boilerplate: set[str]) -> b
     size_elevated = line.size >= body_size + SIZE_MARGIN
     if line.bold and size_elevated:
         return True
+    has_number_prefix = bool(NUMBERED_PREFIX_RE.match(line.text.strip()))
+    # Found empirically (companies 025844, 014176; round-7 corpus-wide scan
+    # after expanding to 185 companies): some filers style the heading with
+    # a numbered prefix and clearly elevated size, but no bold at all --
+    # e.g. "8.  Empréstimos, financiamentos e debêntures" at 12.6pt against
+    # an 8.8pt body; "14.   Empréstimos, financiamentos e debêntures" at
+    # 11.3pt against a 9.3pt body. Unlike the same-size fallback below,
+    # this doesn't need the ENABLE_SAME_SIZE_HEADING gate or an is_upper/
+    # bold requirement: elevated size together with a numbered prefix is
+    # already a strong structural signal on its own -- a table cell or body
+    # sentence is never both meaningfully larger than the surrounding text
+    # and prefixed with its own top-level section number.
+    if size_elevated and has_number_prefix:
+        return True
     if not ENABLE_SAME_SIZE_HEADING:
         return False
     is_upper = line.text.isupper()
-    has_number_prefix = bool(NUMBERED_PREFIX_RE.match(line.text.strip()))
     if line.bold and (is_upper or has_number_prefix):
         return True
     # Found empirically (companies 020770, 024260): some filers style

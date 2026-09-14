@@ -2,8 +2,8 @@
   "cd_cvm": "025585",
   "name": "CSNMINERACAO",
   "year": 2020,
-  "diagnostic": "regex_only",
-  "heading": "Juros pagos sobre empréstimos e financiamentos",
-  "n_total_lines": 2005,
-  "text": "Juros pagos sobre empréstimos e financiamentos\n(11.898)\n(9.232)\nFluxo de Caixa das Atividades de Investimentos\n(186.484)\n(152.592)\nAquisição de ativos imobilizados\n(186.484)\n(152.592)\nFluxo de Caixa das Atividades de Financiamento\n(1.519.044)\n(1.094.125)\nPagamento do principal sobre empréstimos\n(344.299)\n(9.931)\nCaptações\n130.668\n-\nCusto de transação\n(265)\n-\nDividendos pagos\n(1.300.000)\n(1.080.000)\nPassivos de arrendamentos\n(5.148)\n(4.194)\nAumento do Caixa e Equivalentes de Caixa\n128.406\n851.958\nCaixa e equivalentes de caixa no início do período\n2.844.115\n1.992.157\nCaixa e equivalentes de caixa no fim do período\n2.972.521\n2.844.115"
+  "diagnostic": "font_heading",
+  "heading": "13. EMPRÉSTIMOS E FINANCIAMENTOS",
+  "n_total_lines": 5086,
+  "text": "13. EMPRÉSTIMOS E FINANCIAMENTOS\nOs saldos de empréstimos e financiamentos que se encontram registrados ao custo amortizado são conforme abaixo:\nAs notas de crédito à exportação (NCE) possuem vencimentos escalonados entre o período de 2021 e 2024.\nEm outubro de 2020 a Companhia amortizou R$331 milhões em NCEs cujos vencimentos ocorreriam ao longo do\nexercício.\nNa tabela a seguir demonstramos a taxa média de juros:\nVencimentos dos empréstimos e financiamentos apresentados no passivo não circulante\nEm 31 de dezembro de 2020, o montante principal atualizado de juros e correção monetária dos empréstimos e\nfinanciamentos de longo prazo apresenta a seguinte composição por ano de vencimento:\nBenefícios de curto prazo para empregados e administradores\n6.626\n7.262\nBenefícios pós-emprego\n202\n199\n6.828\n7.461"
 }

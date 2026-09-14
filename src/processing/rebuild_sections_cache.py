@@ -1,10 +1,10 @@
 """Bridges eval_note_locator's already-built lines_cache (raw PDF lines,
-997 DFP + 2915 ITR filings, no re-parsing needed) into the sections/
-itr_sections/ cache format run_poc_tfidf.py / run_delisted_analysis.py /
-run_itr_tfidf_full.py expect -- so regenerating similarity_results.csv
-after a locate_note_section.py change doesn't need a slow full PDF
-re-parse, just a fast rerun of the (now-changed) heuristic against
-already-extracted lines.
+now 2129 DFP + 2915 ITR filings across the 185-company expanded universe,
+no re-parsing needed) into the sections/ itr_sections/ cache format
+run_poc_tfidf.py / run_delisted_analysis.py / run_itr_tfidf_full.py expect
+-- so regenerating similarity_results.csv after a locate_note_section.py
+change doesn't need a slow full PDF re-parse, just a fast rerun of the
+(now-changed) heuristic against already-extracted lines.
 
 Run this once after any locate_note_section.py change, before rerunning
 run_poc_tfidf.py / run_delisted_analysis.py (run_itr_tfidf_full.py already
@@ -18,6 +18,8 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
+import pandas as pd
+
 from src.acquisition.b3_ibov_historical import NEW_HISTORICAL_CD_CVM
 from src.processing.eval_note_locator import LINES_CACHE, load_cached_bookmarks, load_cached_lines
 from src.processing.locate_note_section import locate_note_section
@@ -25,6 +27,7 @@ from src.processing.run_poc_tfidf import POC_COMPANIES
 
 SECTIONS_DIR = Path("data/interim/poc/sections")
 ITR_SECTIONS_DIR = Path("data/interim/poc/itr_sections")
+IBX_EXTRA_UNIVERSE = Path("data/interim/ibx_extra_universe.csv")
 
 
 def main() -> None:
@@ -33,6 +36,9 @@ def main() -> None:
 
     name_map = dict(POC_COMPANIES)
     name_map.update({f"{cd:06d}": name for cd, name in NEW_HISTORICAL_CD_CVM.items()})
+    if IBX_EXTRA_UNIVERSE.exists():
+        ibx_extra = pd.read_csv(IBX_EXTRA_UNIVERSE, dtype={"CD_CVM": str})
+        name_map.update({f"{int(row.CD_CVM):06d}": row.Name for row in ibx_extra.itertuples()})
 
     n_dfp = n_itr = 0
     for cache_path in sorted(LINES_CACHE.glob("*.json")):
