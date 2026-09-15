@@ -57,7 +57,9 @@ def build_bhar(sim_path: Path) -> pd.DataFrame:
         eps = event_window_residuals(ret, factors, alpha, betas, row.window_start, row.window_end)
         if eps is None or len(eps) < 20:
             continue
-        rows.append({"cd_cvm": row.cd_cvm, "year_curr": row.year_curr, "TextChange": row.TextChange,
+        rows.append({"cd_cvm": row.cd_cvm, "year_curr": row.year_curr, "ticker": row.ticker,
+                     "window_start": row.window_start, "window_end": row.window_end,
+                     "TextChange": row.TextChange,
                      "cosine_similarity": row.cosine_similarity, "BHAR_raw": float((1 + eps).prod() - 1)})
     df = pd.DataFrame(rows)
     lo, hi = df["BHAR_raw"].quantile([0.01, 0.99])
