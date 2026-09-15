@@ -3,27 +3,31 @@ see compute_alpha_abnormal_returns.py and docs/latex/main.tex Secao 3.3)
 for the round-7 universe expansion (111-company panel's 2010-2014
 extension + 74 IBX-extra companies), then regresses it on TextChange
 (1 - cosine similarity) to answer "what's the p-value for the new
-universe" honestly, including the real market-data constraint: Bloomberg
-price coverage (data/raw/market/prices/stock_prices_bloomberg.csv) only
-starts 2014-01-01, and only 7 of the 74 IBX-extra companies' tickers
-appear in that file at all (it was built for the original 111-company
-scope, not the broader IBX) -- so the computable sample here is a small
-fraction of the reliable TextChange pairs in
-similarity_results_new_universe_reliable.csv, not all 796 of them.
+universe".
+
+Price data comes from two sources, combined: the original
+stock_prices_bloomberg.csv (the 111-company panel's existing, already-
+validated source) plus ibx.xlsx's `px_last` sheet -- a user-supplied
+export added specifically to close the gap this script first found (only
+7/74 IBX-extra tickers were in stock_prices_bloomberg.csv; px_last covers
+all 74). Where a ticker exists in both, stock_prices_bloomberg.csv wins
+(no reason to prefer the newer, narrower export for companies already
+covered by the established one).
 
 Two-stage pipeline, mirroring compute_abnormal_returns.py ->
 compute_alpha_abnormal_returns.py: first the simple window/ticker
 resolution (event date, first trading day on/after it, 252 trading days
 forward), then the 4-factor alpha/BHAR computation on top (252-trading-day
-PRE-event estimation window, needs >=100 obs -- this is the binding
-constraint for how far back into 2010-2014 this can actually reach).
+PRE-event estimation window, needs >=100 obs -- this, not ticker coverage
+anymore, is the binding constraint for how far back into 2010-2014 this
+can actually reach, since Bloomberg price data of either source starts
+2010-01-01/2014-01-01 respectively).
 
 Usage:
     python -u -m src.analysis.compute_new_universe_returns
 """
 from __future__ import annotations
 
-import re
 import warnings
 from pathlib import Path
 
@@ -31,14 +35,12 @@ import pandas as pd
 import statsmodels.api as sm
 import statsmodels.formula.api as smf
 
-from src.acquisition.b3_ibov import fetch_b3_company_registry
 from src.analysis.compute_abnormal_returns import build_ticker_map as build_original_ticker_map
 from src.analysis.compute_alpha_abnormal_returns import (
     FACTOR_COLS,
     estimate_alpha_model,
     event_window_residuals,
     load_factors,
-    load_prices,
 )
 
 warnings.filterwarnings("ignore")
@@ -48,6 +50,7 @@ INTERIM = ROOT / "data" / "interim"
 POC = INTERIM / "poc"
 CACHE_DIR = ROOT / "data" / "raw" / "dfp" / "_cache"
 MARKET = ROOT / "data" / "raw" / "market" / "prices"
+IBX_XLSX = ROOT / "ibx.xlsx"
 WINDOW_TRADING_DAYS = 252
 
 SIMILARITY_CSV = POC / "similarity_results_new_universe_reliable.csv"
@@ -55,44 +58,54 @@ IBX_EXTRA_UNIVERSE = INTERIM / "ibx_extra_universe.csv"
 OUT_CSV = POC / "abnormal_returns_alpha_new_universe.csv"
 
 
+def load_original_prices() -> pd.DataFrame:
+    prices = pd.read_csv(MARKET / "stock_prices_bloomberg.csv", skiprows=[1]).rename(columns={"Unnamed: 0": "date"})
+    prices["date"] = pd.to_datetime(prices["date"], format="%m/%d/%Y")
+    for c in prices.columns:
+        if c != "date":
+            prices[c] = pd.to_numeric(prices[c], errors="coerce")
+    return prices.set_index("date").sort_index()
+
+
+def load_ibx_prices() -> pd.DataFrame:
+    """ibx.xlsx's `px_last` sheet: a Bloomberg BQL export laid out like
+    ibov.xlsx's sheets, but with one fewer header row -- ticker row and
+    data start are found by locating the literal 'DATES' label rather than
+    hardcoding row offsets, so this doesn't silently misalign if the two
+    files' export layouts ever drift apart again.
+    """
+    raw = pd.read_excel(IBX_XLSX, sheet_name="px_last", header=None)
+    label_row = raw.index[raw[0] == "DATES"][0]
+    tickers = raw.iloc[label_row - 1, 1:].tolist()  # already suffixed "... BS Equity"
+    data = raw.iloc[label_row + 1 :, :].copy()
+    data.columns = ["date"] + tickers
+    data["date"] = pd.to_datetime(data["date"])
+    for c in data.columns:
+        if c != "date":
+            data[c] = pd.to_numeric(data[c], errors="coerce")
+    return data.set_index("date").sort_index()
+
+
+def load_combined_prices() -> pd.DataFrame:
+    original = load_original_prices()
+    ibx = load_ibx_prices()
+    extra_cols = [c for c in ibx.columns if c not in original.columns]
+    combined = original.join(ibx[extra_cols], how="outer")
+    return combined.sort_index()
+
+
 def build_full_ticker_map() -> pd.DataFrame:
     """Original 111-panel companies via the existing resolution logic, plus
-    a best-effort extension for the 74 IBX-extra companies: ibx.xlsx's own
-    Bloomberg ID checked directly against the price file first (fast path,
-    covers the case the ticker never changed), then the same B3-registry
-    issuer-code resolution used for historical/delisted companies in
-    compute_abnormal_returns.py for the rest.
+    the 74 IBX-extra companies via ibx.xlsx's own Bloomberg ID (now that
+    px_last covers all 74, this is a direct, complete match -- no B3-
+    registry fallback needed).
     """
     original_map = build_original_ticker_map()
 
-    price_cols = pd.read_csv(MARKET / "stock_prices_bloomberg.csv", nrows=0).columns
-    price_tickers = set(c.replace(" BS Equity", "") for c in price_cols if c != "Unnamed: 0")
-
     ibx_extra = pd.read_csv(IBX_EXTRA_UNIVERSE, dtype={"CD_CVM": str})
     ibx_extra["ticker_guess"] = ibx_extra["ID"].str.replace(" BS Equity", "", regex=False)
-    direct_hits = ibx_extra[ibx_extra["ticker_guess"].isin(price_tickers)]
-    extra_rows = [{"CD_CVM": int(r.CD_CVM), "ticker": r.ticker_guess} for r in direct_hits.itertuples()]
-
-    unresolved = set(ibx_extra["CD_CVM"].astype(int)) - {r["CD_CVM"] for r in extra_rows}
-    if unresolved:
-        registry = fetch_b3_company_registry(CACHE_DIR)
-        registry = registry.assign(codeCVM=pd.to_numeric(registry["codeCVM"], errors="coerce")).dropna(subset=["codeCVM"])
-        registry["codeCVM"] = registry["codeCVM"].astype(int)
-        issuer_of = {t: re.sub(r"\d+$", "", t) for t in price_tickers}
-        by_issuer: dict[str, list[str]] = {}
-        for t, issuer in issuer_of.items():
-            by_issuer.setdefault(issuer, []).append(t)
-        for cd_cvm in unresolved:
-            issuer_rows = registry.loc[registry["codeCVM"] == cd_cvm, "issuingCompany"]
-            if issuer_rows.empty:
-                continue
-            candidates = by_issuer.get(issuer_rows.iloc[0], [])
-            if candidates:
-                extra_rows.append({"CD_CVM": cd_cvm, "ticker": candidates[0]})
-
-    extra_map = pd.DataFrame(extra_rows)
-    print(f"IBX-extra ticker resolution: {len(extra_map)}/{len(ibx_extra)} companies resolved to a priced ticker "
-          f"({len(direct_hits)} direct, {len(extra_map) - len(direct_hits)} via B3 registry)")
+    extra_map = pd.DataFrame({"CD_CVM": ibx_extra["CD_CVM"].astype(int), "ticker": ibx_extra["ticker_guess"]})
+    print(f"IBX-extra ticker resolution: {len(extra_map)}/{len(ibx_extra)} companies resolved (direct, via ibx.xlsx px_last)")
 
     return pd.concat([original_map, extra_map], ignore_index=True).drop_duplicates("CD_CVM")
 
@@ -106,13 +119,7 @@ def load_combined_event_dates() -> pd.DataFrame:
     ].assign(event_date=lambda d: pd.to_datetime(d["event_date"]))
 
 
-def compute_windows(events: pd.DataFrame, ticker_map: pd.DataFrame) -> pd.DataFrame:
-    prices = pd.read_csv(MARKET / "stock_prices_bloomberg.csv", skiprows=[1]).rename(columns={"Unnamed: 0": "date"})
-    prices["date"] = pd.to_datetime(prices["date"], format="%m/%d/%Y")
-    for c in prices.columns:
-        if c != "date":
-            prices[c] = pd.to_numeric(prices[c], errors="coerce")
-    prices = prices.set_index("date").sort_index()
+def compute_windows(events: pd.DataFrame, ticker_map: pd.DataFrame, prices: pd.DataFrame) -> pd.DataFrame:
     last_date = prices.index.max()
 
     rows = []
@@ -144,22 +151,24 @@ def main() -> None:
 
     ticker_map = build_full_ticker_map()
     events = load_combined_event_dates()
-    windows = compute_windows(events, ticker_map)
+    prices = load_combined_prices()
+    print(f"Combined price source: {len(prices.columns)} tickers, {prices.index.min().date()} to {prices.index.max().date()}")
+
+    windows = compute_windows(events, ticker_map, prices)
     print(f"{len(windows)} pairs have a resolvable ticker + valid 252-trading-day forward window")
 
     merged = sim.merge(windows, on=["cd_cvm", "year_curr"], how="inner")
     print(f"{len(merged)} pairs after merging with TextChange (have both text and a price window)")
 
-    daily_returns = load_prices()
     factors = load_factors()
 
     rows = []
     n_dropped_estimation = n_dropped_event = 0
     for row in merged.itertuples(index=False):
         col = f"{row.ticker} BS Equity"
-        if col not in daily_returns.columns:
+        if col not in prices.columns:
             continue
-        ret = daily_returns[col].dropna().pct_change().dropna()
+        ret = prices[col].dropna().pct_change().dropna()
 
         est = estimate_alpha_model(ret, factors, row.window_start)
         if est is None:
@@ -204,16 +213,45 @@ def main() -> None:
     print(f"beta={model_pooled.params['TextChange']:.4f}  se={model_pooled.bse['TextChange']:.4f}  "
           f"p={model_pooled.pvalues['TextChange']:.4f}  n={int(model_pooled.nobs)}  R2={model_pooled.rsquared:.4f}")
 
-    if n_companies >= 10:
-        model_clustered = smf.ols("BHAR_ajustado ~ TextChange", data=df).fit(
-            cov_type="cluster", cov_kwds={"groups": df["cd_cvm"]}
-        )
-        print("\n=== OLS, clustered by company (the thesis's standard practice) ===")
-        print(f"beta={model_clustered.params['TextChange']:.4f}  se={model_clustered.bse['TextChange']:.4f}  "
-              f"p={model_clustered.pvalues['TextChange']:.4f}  n={int(model_clustered.nobs)}  n_companies={n_companies}")
-    else:
+    if n_companies < 10:
         print(f"\nOnly {n_companies} distinct companies -- too few for clustered SEs to be meaningful "
               f"(clustering needs many clusters to be trustworthy); pooled HC1 above is the honest number here.")
+        return
+
+    model_clustered = smf.ols("BHAR_ajustado ~ TextChange", data=df).fit(
+        cov_type="cluster", cov_kwds={"groups": df["cd_cvm"]}
+    )
+    headline_p = model_clustered.pvalues["TextChange"]
+    print("\n=== OLS, clustered by company (the thesis's standard practice) ===")
+    print(f"beta={model_clustered.params['TextChange']:.4f}  se={model_clustered.bse['TextChange']:.4f}  "
+          f"p={headline_p:.4f}  n={int(model_clustered.nobs)}  n_companies={n_companies}")
+
+    # Same skepticism discipline applied to every borderline result elsewhere
+    # in this project (portfolio-sort degenerate-score check, leave-one-out
+    # on the Fatores de Risco delisting finding) -- run it here too rather
+    # than reporting a marginal p-value without scrutiny.
+    if headline_p < 0.15:
+        print("\n--- Robustness checks (p < 0.15, so worth scrutinizing before trusting it) ---")
+
+        degenerate = (df["cosine_similarity"] >= 0.999) | (df["cosine_similarity"] <= 0.001)
+        clean = df[~degenerate]
+        if degenerate.sum() and clean["cd_cvm"].nunique() >= 10:
+            m_clean = smf.ols("BHAR_ajustado ~ TextChange", data=clean).fit(
+                cov_type="cluster", cov_kwds={"groups": clean["cd_cvm"]}
+            )
+            print(f"Excluding {int(degenerate.sum())} degenerate-similarity pairs (>=0.999 or <=0.001): "
+                  f"p={m_clean.pvalues['TextChange']:.4f}  n={int(m_clean.nobs)}")
+
+        worst_p = headline_p
+        for cd in df["cd_cvm"].unique():
+            sub = df[df["cd_cvm"] != cd]
+            if sub["cd_cvm"].nunique() < 10:
+                continue
+            m_loo = smf.ols("BHAR_ajustado ~ TextChange", data=sub).fit(
+                cov_type="cluster", cov_kwds={"groups": sub["cd_cvm"]}
+            )
+            worst_p = max(worst_p, m_loo.pvalues["TextChange"])
+        print(f"Leave-one-company-out worst case: p={worst_p:.4f}")
 
 
 if __name__ == "__main__":
