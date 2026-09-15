@@ -87,10 +87,22 @@ def load_ibx_prices() -> pd.DataFrame:
 
 
 def load_combined_prices() -> pd.DataFrame:
+    """Row-level merge, not column-level: ibx.xlsx's px_last has the same
+    values as stock_prices_bloomberg.csv wherever both cover a (ticker,
+    date) cell (verified exactly, 0.0 max abs diff across sampled tickers),
+    but starts in 2010 instead of 2014 -- for tickers present in both files,
+    a column-level "original wins" join (the previous version) silently
+    discarded ibx.xlsx's 2010-2013 history for those tickers, which is
+    exactly the years the 2010-2014 panel extension needs. combine_first
+    takes the original's value per cell where it exists and only falls back
+    to ibx.xlsx where the original has nothing -- for the ~8 months at the
+    end of stock_prices_bloomberg.csv's range (through 2026-08) that
+    ibx.xlsx's export doesn't reach (stops 2026-01), the original still
+    wins there too.
+    """
     original = load_original_prices()
     ibx = load_ibx_prices()
-    extra_cols = [c for c in ibx.columns if c not in original.columns]
-    combined = original.join(ibx[extra_cols], how="outer")
+    combined = original.combine_first(ibx)
     return combined.sort_index()
 
 
