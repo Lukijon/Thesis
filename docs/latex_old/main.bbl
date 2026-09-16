@@ -1,0 +1,137 @@
+\providecommand{\abntreprintinfo}[1]{%
+ \citeonline{#1}}
+\setlength{\labelsep}{0pt}\begin{thebibliography}{}
+\providecommand{\abntrefinfo}[3]{}
+\providecommand{\abntbstabout}[1]{}
+\abntbstabout{v-1.9.7 }
+
+\bibitem[Amel-Zadeh e Faasse 2016]{amelzadeh2016}
+\abntrefinfo{Amel-Zadeh e Faasse}{AMEL-ZADEH; FAASSE}{2016}
+{AMEL-ZADEH, A.; FAASSE, J. The information content of 10-k narratives: comparing md\&a and footnotes disclosures.
+\emph{SSRN Working Paper}, 2016.}
+
+\bibitem[Barber e Lyon 1997]{barberlyon1997}
+\abntrefinfo{Barber e Lyon}{BARBER; LYON}{1997}
+{BARBER, B.~M.; LYON, J.~D. Detecting long-run abnormal stock returns: the empirical power and specification of test statistics.
+\emph{Journal of Financial Economics}, v.~43, n.~3, p. 341--372, 1997.}
+
+\bibitem[Benjamini e Hochberg 1995]{benjaminihochberg1995}
+\abntrefinfo{Benjamini e Hochberg}{BENJAMINI; HOCHBERG}{1995}
+{BENJAMINI, Y.; HOCHBERG, Y. Controlling the false discovery rate: A practical and powerful approach to multiple testing.
+\emph{Journal of the Royal Statistical Society: Series B}, v.~57, n.~1, p. 289--300, 1995.}
+
+\bibitem[Bonsall e Miller 2017]{bonsall2017}
+\abntrefinfo{Bonsall e Miller}{BONSALL; MILLER}{2017}
+{BONSALL, S.~B.; MILLER, B.~P. The impact of narrative disclosure readability on bond ratings and the cost of debt.
+\emph{Review of Accounting Studies}, 2017.}
+
+\bibitem[Borges e Rech n.d.]{borges}
+\abntrefinfo{Borges e Rech}{BORGES; RECH}{n.d.}
+{BORGES, G.~F.; RECH, I.~J. Caracter{\'i}sticas determinantes da legibilidade das notas explicativas de empresas brasileiras.
+\emph{Revista de Gest{\~a}o, Finan{\c c}as e Contabilidade}, n.d.
+Ano de publica\c{c}\~ao a confirmar -- j\'a sinalizado como pend\^encia no pr\'e-projeto original.}
+
+\bibitem[Brown e Tucker 2011]{brown2011}
+\abntrefinfo{Brown e Tucker}{BROWN; TUCKER}{2011}
+{BROWN, S.~V.; TUCKER, J.~W. Large-sample evidence on firms' year-over-year md\&a modifications.
+\emph{Journal of Accounting Research}, v.~49, n.~2, p. 309--346, 2011.}
+
+\bibitem[Carhart 1997]{carhart1997}
+\abntrefinfo{Carhart}{CARHART}{1997}
+{CARHART, M.~M. On persistence in mutual fund performance.
+\emph{The Journal of Finance}, v.~52, n.~1, p. 57--82, 1997.}
+
+\bibitem[Cohen, Malloy e Nguyen 2020]{cohen2020}
+\abntrefinfo{Cohen, Malloy e Nguyen}{COHEN; MALLOY; NGUYEN}{2020}
+{COHEN, L.; MALLOY, C.; NGUYEN, Q. Lazy prices.
+\emph{The Journal of Finance}, v.~75, n.~3, p. 1371--1415, 2020.}
+
+\bibitem[Diamond e Verrecchia 1991]{diamond1991}
+\abntrefinfo{Diamond e Verrecchia}{DIAMOND; VERRECCHIA}{1991}
+{DIAMOND, D.~W.; VERRECCHIA, R.~E. Disclosure, liquidity, and the cost of capital.
+\emph{The Journal of Finance}, v.~46, n.~4, p. 1325--1359, 1991.}
+
+\bibitem[Ertugrul et al. 2017]{ertugrul2017}
+\abntrefinfo{Ertugrul et al.}{ERTUGRUL et al.}{2017}
+{ERTUGRUL, M. et al. Annual report readability, tone ambiguity, and the cost of borrowing.
+\emph{Journal of Financial and Quantitative Analysis}, v.~52, n.~2, p. 811--836, 2017.}
+
+\bibitem[Fama 1998]{fama1998}
+\abntrefinfo{Fama}{FAMA}{1998}
+{FAMA, E.~F. Market efficiency, long-term returns, and behavioral finance.
+\emph{Journal of Financial Economics}, v.~49, n.~3, p. 283--306, 1998.}
+
+\bibitem[Fama e French 1992]{famafrench1992}
+\abntrefinfo{Fama e French}{FAMA; FRENCH}{1992}
+{FAMA, E.~F.; FRENCH, K.~R. The cross-section of expected stock returns.
+\emph{The Journal of Finance}, v.~47, n.~2, p. 427--465, 1992.}
+
+\bibitem[Healy e Palepu 2001]{healy2001}
+\abntrefinfo{Healy e Palepu}{HEALY; PALEPU}{2001}
+{HEALY, P.~M.; PALEPU, K.~G. Information asymmetry, corporate disclosure, and the capital markets: a review of the empirical disclosure literature.
+\emph{Journal of Accounting and Economics}, v.~31, n.~1-3, p. 405--440, 2001.}
+
+\bibitem[Hirshleifer, Lim e Teoh 2011]{hirshleifer2011}
+\abntrefinfo{Hirshleifer, Lim e Teoh}{HIRSHLEIFER; LIM; TEOH}{2011}
+{HIRSHLEIFER, D.; LIM, S.~S.; TEOH, S.~H. Limited investor attention and stock market misreactions to accounting information.
+\emph{The Review of Asset Pricing Studies}, v.~1, n.~1, p. 35--73, 2011.}
+
+\bibitem[Jegadeesh e Titman 1993]{jegadeeshtitman1993}
+\abntrefinfo{Jegadeesh e Titman}{JEGADEESH; TITMAN}{1993}
+{JEGADEESH, N.; TITMAN, S. Returns to buying winners and selling losers: implications for stock market efficiency.
+\emph{The Journal of Finance}, v.~48, n.~1, p. 65--91, 1993.}
+
+\bibitem[Lyon, Barber e Tsai 1999]{lyonbarbertsai1999}
+\abntrefinfo{Lyon, Barber e Tsai}{LYON; BARBER; TSAI}{1999}
+{LYON, J.~D.; BARBER, B.~M.; TSAI, C.-L. Improved methods for tests of long-run abnormal stock returns.
+\emph{The Journal of Finance}, v.~54, n.~1, p. 165--201, 1999.}
+
+\bibitem[Maeda, Carvalho e Carvalho 2017]{maeda2017}
+\abntrefinfo{Maeda, Carvalho e Carvalho}{MAEDA; CARVALHO; CARVALHO}{2017}
+{MAEDA, A. C.~A.; CARVALHO, R.~S.; CARVALHO, R.~N. Evaluating the use of brazilian companies' financial footnotes texts for debt variation prediction. In:  \emph{IEEE International Conference on Machine Learning and Applications (ICMLA)}. [S.l.: s.n.], 2017.}
+
+\bibitem[Marcolin et al. n.d.]{marcolin}
+\abntrefinfo{Marcolin et al.}{MARCOLIN et al.}{n.d.}
+{MARCOLIN, C.~B. et al. Notas explicativas explicam? an\'alise da comunica\c{c}\~ao do gerenciamento de risco a partir de t\'ecnicas de text mining.
+\emph{Revista Contempor\^anea de Contabilidade}, n.d.
+Ano/volume a confirmar -- lista completa de coautores tamb\'em pendente, j\'a sinalizado no pr\'e-projeto original.}
+
+\bibitem[Muniz 2025]{muniz2025}
+\abntrefinfo{Muniz}{MUNIZ}{2025}
+{MUNIZ, J.~P.
+\emph{Influ\^encia da restri\c{c}\~ao financeira e das crises na legibilidade e no humor das notas explicativas}.
+Disserta\c{c}\~{a}o (Mestrado) --- Universidade Federal do Esp\'irito Santo (UFES), 2025.}
+
+\bibitem[{NEFIN -- N{\'u}cleo de Pesquisa em Economia Financeira, USP} 2026]{nefin2026}
+\abntrefinfo{{NEFIN -- N{\'u}cleo de Pesquisa em Economia Financeira, USP}}{{NEFIN -- N{\'u}cleo de Pesquisa em Economia Financeira, USP}}{2026}
+{{NEFIN -- N{\'u}cleo de Pesquisa em Economia Financeira, USP}. \emph{Risk factors -- Brazilian market}. 2026. \url{https://nefin.com.br/resources/risk_factors/}.
+Dados di{\'a}rios de fatores de risco (mercado, tamanho, valor, momento, liquidez) para o mercado brasileiro. Acesso em setembro de 2026.}
+
+\bibitem[Neto e Anjos 2025]{costaneto2025}
+\abntrefinfo{Neto e Anjos}{NETO; ANJOS}{2025}
+{NETO, A. M.~d. C.; ANJOS, L. C. M.~d.
+\emph{Readability in accounting: an ensemble learning approach}.
+Tese (Doutorado) --- Universidade Federal de Pernambuco (UFPE), 2025. Tese de Doutorado, defendida em novembro de 2025.}
+
+\bibitem[Santos et al. 2018]{santos2018}
+\abntrefinfo{Santos et al.}{SANTOS et al.}{2018}
+{SANTOS, E.~S. et al. Compliance with ifrs required disclosure and analysts' forecast errors: evidence from brazil.
+\emph{Revista Contabilidade Vista \& Revista}, v.~29, n.~1, p. 77--100, 2018.}
+
+\bibitem[Santos e Coelho 2018]{santoscoelho2018}
+\abntrefinfo{Santos e Coelho}{SANTOS; COELHO}{2018}
+{SANTOS, J. G. C.~d.; COELHO, A.~C. Value-relevance do disclosure: fatores e gest{\~a}o de riscos em firmas brasileiras.
+\emph{Revista Contabilidade \& Finan{\c c}as}, v.~29, n.~78, p. 390--404, 2018.}
+
+\bibitem[Schiozer e Albanez 2021]{schiozer2021}
+\abntrefinfo{Schiozer e Albanez}{SCHIOZER; ALBANEZ}{2021}
+{SCHIOZER, R.; ALBANEZ, T. \emph{Panorama dos covenants em contratos de d\'ivida de empresas listadas na B3}.
+[S.l.], 2021.}
+
+\bibitem[Silva 2019]{silva2019}
+\abntrefinfo{Silva}{SILVA}{2019}
+{SILVA, A. W. M.~d.
+\emph{A legibilidade das demonstra\c{c}\~oes financeiras e o custo de capital de terceiros}.
+Disserta\c{c}\~{a}o (Mestrado) --- FUCAPE Business School, 2019.}
+
+\end{thebibliography}
