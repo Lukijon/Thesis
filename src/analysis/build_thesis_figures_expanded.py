@@ -165,13 +165,18 @@ def fig_m2_m3_controls() -> None:
 def fig_similarity_by_source() -> None:
     sources = {
         "Nota de dívida\n(anual, confiável)": POC / "similarity_results_full_history_reliable.csv",
+        "Nota de dívida\n(trimestral, confiável)": None,  # handled separately, needs reliability filter
         "Conjunto completo\nde notas": POC / "full_notes_similarity_results_full_history.csv",
         "Relatório da\nAdministração": POC / "mgmt_report_similarity_results_full_history.csv",
         "Fatores de Risco\n(FRE)": POC / "risk_factors_similarity_results_full_history.csv",
     }
     data, labels, medians = [], [], []
     for label, path in sources.items():
-        s = pd.read_csv(path)["cosine_similarity"].dropna()
+        if path is None:
+            itr = pd.read_csv(POC / "itr_similarity_results_full_history.csv")
+            s = itr[(itr["diagnostic_prev"] == "font_heading") & (itr["diagnostic_curr"] == "font_heading")]["cosine_similarity"].dropna()
+        else:
+            s = pd.read_csv(path)["cosine_similarity"].dropna()
         data.append(s.values)
         labels.append(label)
         medians.append(s.median())
@@ -224,10 +229,10 @@ def fig_extraction_hardening_trajectory() -> None:
 
 
 def fig_extraction_reliability() -> None:
-    labels = ["Nota de dívida\n(anual)", "Relatório da\nAdministração", "Fatores de Risco\n(FRE)"]
-    values = [80.3, 71.5, 96.6]
-    metric = ["Confiabilidade\nde extração", "Cobertura de\naquisição", "Cobertura de\naquisição"]
-    colors = [C_MAIN, C_IBX, C_IBX]
+    labels = ["Nota de dívida\n(anual)", "Nota de dívida\n(trimestral)", "Relatório da\nAdministração", "Fatores de Risco\n(FRE)"]
+    values = [80.3, 69.4, 71.5, 96.6]
+    metric = ["Confiabilidade\nde extração", "Confiabilidade\nde extração", "Cobertura de\naquisição", "Cobertura de\naquisição"]
+    colors = [C_MAIN, C_MAIN, C_IBX, C_IBX]
 
     fig, ax = plt.subplots(figsize=(8, 4.8))
     bars = ax.bar(labels, values, color=colors, alpha=0.85)
