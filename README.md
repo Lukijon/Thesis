@@ -2,7 +2,7 @@
 
 Repositório central da dissertação de mestrado (título provisório): **"Alterações textuais nas notas explicativas de dívida e a incorporação de informações pelo mercado brasileiro: evidências das notas de empréstimos, financiamentos e debêntures."**
 
-O documento completo do pré-projeto está em [tese/pre-projeto.docx](tese/pre-projeto.docx). Este README resume o essencial para orientar o trabalho no repositório; o texto da própria dissertação ([tese/latex/tese_jonathan.tex](tese/latex/tese_jonathan.tex)) é a fonte de verdade para o embasamento teórico, a metodologia e os resultados.
+O documento completo do pré-projeto está em `privado/pre-projeto.docx` (local-only, não versionado -- ver a seção sobre `privado/` abaixo). Este README resume o essencial para orientar o trabalho no repositório; o texto da própria dissertação ([tese/latex/tese_jonathan.tex](tese/latex/tese_jonathan.tex)) é a fonte de verdade para o embasamento teórico, a metodologia e os resultados.
 
 ## Pergunta de pesquisa
 
@@ -23,11 +23,8 @@ O repositório é dividido em três pastas principais, cada uma com um papel dif
 ```
 .
 ├── tese/                     # O DOCUMENTO da dissertação -- o entregável em si
-│   ├── latex/                  # tese_jonathan.tex + tese_jonathan.pdf (ABNT, compila via MiKTeX/TinyTeX)
-│   │   └── figures/              # Figuras da dissertação (geradas a partir de suporte/data, ver abaixo)
-│   ├── latex_old/               # Snapshot congelado do rascunho pré-expansão do universo (histórico, não editar)
-│   ├── pre-projeto.docx         # Pré-projeto original, já aprovado
-│   └── NEXT_STEPS_AND_PRESENTATION_GUIDE.md
+│   └── latex/                   # tese_jonathan.tex + tese_jonathan.pdf (ABNT, compila via MiKTeX/TinyTeX)
+│       └── figures/                # Figuras da dissertação (geradas a partir de suporte/data, ver abaixo)
 │
 ├── suporte/                  # O que é PRECISO para produzir/reproduzir a tese: dados, código
 │   ├── data/
@@ -59,7 +56,10 @@ O repositório é dividido em três pastas principais, cada uma com um papel dif
     ├── feedback_dissertacao.pdf, especificacoes_m0_m5_dissertacao.pdf,
     │   recomendacoes.txt, transcricao_conversa_orientador.txt   # Feedback/orientação do orientador
     ├── Exame_qualificacao_MPE22-parte2.pdf                        # Guia institucional do Exame de Qualificação
-    └── Lazy Prices_Cohen_Nguyen.pdf                                # Paper usado como referência de estrutura/conteúdo
+    ├── Lazy Prices_Cohen_Nguyen.pdf                                # Paper usado como referência de estrutura/conteúdo
+    ├── latex_old/                                                  # Snapshot congelado do rascunho pré-expansão do universo
+    ├── pre-projeto.docx                                            # Pré-projeto original, já aprovado
+    └── NEXT_STEPS_AND_PRESENTATION_GUIDE.md
 ```
 
 Todos os comandos `python -m src.<...>` devem ser executados com o diretório de trabalho em `suporte/` (é de lá que `src/` e `data/` enxergam um ao outro). Scripts em `exploracao/src/` foram movidos para fora de `suporte/` justamente por não fazerem mais parte do pipeline ativo — eles ainda importam de `src.*`, então, para rodá-los de novo, aponte `PYTHONPATH` para `suporte/` (ou copie o script de volta temporariamente); a maioria já teve sua conclusão incorporada a um relatório em `exploracao/reports/` e não precisa ser reexecutada.
@@ -70,7 +70,7 @@ A maior parte de `suporte/data/` é ignorada pelo git (ver [.gitignore](.gitigno
 
 Checklist resumido — para o detalhe rodada a rodada, ver `CLAUDE.md`.
 
-- [x] Pré-projeto redigido (ver `tese/pre-projeto.docx`)
+- [x] Pré-projeto redigido (ver `privado/pre-projeto.docx`)
 - [x] Universo expandido para 185 empresas não financeiras (66 constituintes atuais do Ibovespa + 45 históricas/deslistadas + 74 do índice IBX que nunca integraram o Ibovespa), 2010–2025, anual e trimestral
 - [x] Extração e isolamento automático da nota de dívida — sete rodadas de aprimoramento da heurística, confiabilidade em **80,3%** na base anual e **69,4%** na trimestral (universo expandido)
 - [x] Cálculo de similaridade textual (TF-IDF e cosseno), nas cinco fontes de texto testadas
