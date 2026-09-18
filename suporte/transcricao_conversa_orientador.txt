@@ -1,0 +1,435 @@
+Transcrição da conversa com o orientador
+
+PARTE 1
+
+Rui: Uma recomendação é assim — na verdade, é quase recomendação de texto de site, tá? Porque é a mesma estrutura que tem que ter. Você lê a primeira página, ou no máximo a segunda página, e você sabe tudo que você gostaria de saber.
+
+Vai ter um parágrafo em que você vai dizer por que a pergunta é importante. No segundo parágrafo, você vai dizer qual é a sua pergunta, onde ela se encaixa na literatura. Terceiro parágrafo, que pode estar na primeira página: quais são os seus resultados. Em um parágrafo, todos os resultados principais.
+
+E, assim, o resto é explicar isso melhor.
+
+Se quiser botar na estrutura mesmo — e muito artigo é assim —, nos próximos parágrafos você vai estar dizendo: “Eu achei isso; eu fiz dessa forma e os outros também fizeram dessa forma; os outros não fizeram.” “Eu achei isso e os outros não acharam isso.”
+
+Então eu aposto até que a estrutura daquele artigo que eu mencionei, do Cohen-Malloy, vai estar nessa estrutura. Não vai ter uma seção de revisão bibliográfica. Você vai citar os outros para justificar o que você fez ou para mostrar como você é diferente.
+
+Você tem que ter uma visão egoísta do mundo. Todo mundo escreveu os artigos anteriores para você escrever o seu, certo?
+
+Você tem que falar assim: “Eu achei isso. Eu fiz dessa forma e os outros fizeram assim.” Aí: “Eu sigo a metodologia utilizada pelos outros”, mas é você.
+
+Você não vai falar: “Tem outros papers que fizeram isso e eu fiz o mesmo.” Não. O leitor quer saber o que você fez, não quer saber o que os outros fizeram.
+
+Aqui, a revisão bibliográfica, na maior parte dos artigos, é escrita dessa forma. Você fala sobre a sua contribuição versus os outros.
+
+Então esses próximos parágrafos seriam: ou você fala da metodologia e conta como ela é relacionada à anterior; um parágrafo vai ser sobre os resultados, como diferem dos outros; e vão ter um, dois, três parágrafos em que você vai dizer qual é a sua contribuição.
+
+“A contribuição desse paper é mostrar o quê? Pá, pá, pá.”
+
+E tem um montão de gente que também fez pergunta parecida e você cita depois, no mesmo parágrafo.
+
+“Há outros papers que fizeram perguntas parecidas. Por exemplo, esse cara fez isso aqui, mas ele não olhou o dado dessa forma. O outro cara fez isso, mas ele não fez do jeito que eu fiz. Ele usou esse dado, mas ele só olhou para os covenants, não olhou para o texto como um todo.”
+
+Visão egocêntrica do mundo. O leitor quer saber sobre você, não sobre os outros.
+
+Isso vai tornar muito mais fácil de ler. Talvez não seja natural das pessoas serem egocêntricas, mas é bom ser no mercado de trabalho e quando você está vendendo uma ideia.
+
+Então tenta encaixar um pouco.
+
+E aqui ainda está muito com a estrutura de projeto, pelo menos no começo. Esse negócio de colocar hipótese, teste, não sei o quê... não precisa falar. Você vai falar qual é a sua pergunta.
+
+Tenta vender de uma forma mais... “Minha pergunta é essa.” E tentar vender logo no início por que ela é importante.
+
+E, quando fizer outras perguntas, você vai direto. As pessoas vão querer saber o resultado.
+
+Agora você não tem um resultado tão claro. Você vai ter que dizer que não encontra, né?
+
+Você: Sim.
+
+Rui: Que é sempre mais difícil, mas pode ser assim.
+
+No fim das contas, pode ir por esse caminho. Acho que o importante é você fazer um bom trabalho e implementar da forma correta, fazer a análise correta. A conclusão é secundária.
+
+Mas é sempre melhor ter o resultado positivo do que o negativo.
+
+Esse negócio da amostra aí é mais para... se você acredita que é positivo, ter mais confiança.
+
+A única coisa que você precisa é dar uma encolhidinha nele, fazer a aposta de que o passado era parecido e vamos ver o que acontece. Ele vai dar uma encolhida e você fica tranquilo.
+
+Você não tem apenas um trabalho bem feito, mas tem um resultado para apontar.
+
+E ainda pode fazer variações e ver onde, que tipo de firma tem mais impacto, o que acontece, se tem alguma coisa condicional.
+
+Você ainda pode tentar ver isso. Vai fazer subconjuntos e ver se tem algumas que têm mais impacto e outras não têm. O que é? Se tem a ver com a performance passada da firma.
+
+Será que as firmas que estão em momento ruim... isso acaba sendo mais informativo?
+
+Não sei. Não sei se os outros papers olham para isso, mas só da conversa já dá para pensar algumas coisas para fazer.
+
+Você: Mas, se a amostra for pequena, dividir a amostra em subgrupos...
+
+Rui: Sim, fica pior ainda. Pode piorar ainda. Vai ter... vai ficar... tem um riscozinho.
+
+Mas, como você está mudando, olhando para análise textual, não quer dizer que necessariamente vai...
+
+Assim, eu acho que você está usando IA, né? Eu reconheço até pelo formato de tabela, de vez em quando. Ou você está usando alguma coisa parecida?
+
+Você: Sim. As tabelas são todas com Python. Eu fiz todas as tabelas com...
+
+Rui: Mas eu não sei por que eu reconheci algumas coisas. Acho que é até escolha de letra, assim, tem um pouquinho.
+
+E eu uso toda hora agora. Uso e abuso, não tem problema. Então tenta explorar o fato de que fica mais fácil aumentar a amostra e coisas do tipo.
+
+Você: É. A própria extração dos documentos eu pedi para o Claude mesmo: “Ó, está aqui o link, está aqui o documento que eu quero, pega tudo.”
+
+Rui: Então manda ver.
+
+No passado eu falava: “Pô, vai dar custo, vai dar problema.” Mas acho que agora é um pouquinho mais tranquilo fazer essas coisas.
+
+Se um dia a gente tiver tempo para conversar, só para te contar a história dos absurdos que eu consegui fazer com dados que demorariam anos para coletar, e agora eu demoro... vou gastar um dia ou dois só para montar a estrutura para conseguir montar o negócio.
+
+É ridículo como essas coisas mudaram. Foi muito rápido.
+
+Pelo menos lá na Bloomberg, acho que no passado era: “Olha, cuidado, hein? Esse papo de usar IA, ficar colocando coisa na IA não é muito seguro.”
+
+Hoje em dia é tipo: “E aí? Mas por que você não está na IA? Por que não fez com a IA? Como é que... você lê o texto inteiro? Você não perguntou para ele?”
+
+É quase isso lá no meu trabalho hoje em dia.
+
+Não, mas eu mudei de opinião. A gente falava que o ChatGPT, na época, era um idiota com muita informação. Agora a parte do “idiota” eu já abandonei.
+
+De vez em quando ele faz umas besteiras, interpreta, vai para uns caminhos errados. Mas, cara, para implementar, montar a estrutura, fazer o negócio bem feito, implementar direitinho, com cuidado e tudo mais... Tem que saber usar.
+
+Mas agora até não precisa saber tanto, porque está... eu sinto a diferença ao longo dos meses.
+
+Eu fiz algumas coisas assim. Tem um paper antigo meu que eu sempre pensei: “Pô...”
+
+PARTE 2
+
+Rui: [Trecho inicial pouco claro] ... coletar, procurar dado...
+
+Aí resolvi assim: já tinha dado todo o contexto. O cara já tinha lido o artigo, já tinha entendido, já tinha... o contexto estava bem definido.
+
+Aí eu falei: “Você consegue replicar esse bichinho?”
+
+Só fiz uma frase curtinha, só para ver o que ia acontecer: “Você consegue replicar esse paper?” O meu, né?
+
+Em seis horas estava com as tabelas todas replicadas.
+
+Eu não tinha dado nenhum dos dados. Não dei nenhum dos dados. Só dei o artigo.
+
+Coletou tudo do zero.
+
+Você: Caramba.
+
+Rui: E alguns não eram fáceis de coletar. Era público, mas não era fácil de coletar.
+
+E, no dia seguinte, eu tinha estendido a base de dados, já tinha feito umas cem páginas, tabelas a mais, testes adicionais...
+
+Eu demoraria seis meses, um ano para fazer esse negócio.
+
+Você: Uma coisa com que eu fiquei impressionado no meu: quando eu fui pegar o histórico do Ibov, ele não conseguiu. Pedi para o Claude.
+
+Rui: É.
+
+Você: E é uma coisa assim: tudo bem, com acesso à Bloomberg é trivial. Você puxa lá uma API e tem em um minuto.
+
+Mas eu estava em casa, não estava nem logado na Bloomberg. Falei: “Ah, pega o histórico aí do Ibov.” Eu não queria ter que logar.
+
+Rui: Nem tentou enfiar o Finance lá, pegar alguma coisa?
+
+Você: Ele tentou. Ele procurou. Ele começou a demorar muito tempo.
+
+Rui: Mas você está usando como? Claude? Você está usando o Claude ou qual?
+
+Você: O Claude. Eu tenho o Claude e o GPT em casa. Normalmente eu uso o Claude.
+
+Rui: Normalmente como? Você está usando Code, Code Work ou...?
+
+Você: Code, normalmente.
+
+Rui: Code.
+
+Você: É porque normalmente eu fico no VS Code.
+
+Rui: Code, Work etc., de vez em quando dá umas travadas com o acesso, né?
+
+Você: É. Não, mas eu uso o Code, uso no VS Code mesmo.
+
+Mas aí ele começou a demorar. Achei estranho e falei: “Não, agora eu quero ver até onde ele vai.”
+
+Ele não conseguiu. Ele começou a pegar páginas, aqueles sites que arquivam o histórico da internet, para procurar essas páginas com membros históricos.
+
+Encontrou alguns, mas não encontrou tudo.
+
+Exótico isso. Eu fiquei tipo: “Nossa.”
+
+Então a B3 está fazendo um bom trabalho.
+
+Rui: A questão é que ela caminha para ganhar dinheiro com dados, né?
+
+Você: Ah, eu sei. Já deu tanta briga entre a Bloomberg e a B3.
+
+Rui: Imagina.
+
+Você: Aí eu deixei ele até o final. Eu já tinha até entrado na Bloomberg e pegado, mas falei: “Não, quero ver o que ele vai me entregar agora.”
+
+Rui: Mas vamos lá. Vamos falar de outras coisas.
+
+Dá uma olhada no texto, tá?
+
+E a gente tem que marcar a apresentação.
+
+Então vamos lá. O deadline é dia 3 de outubro.
+
+Só que eu tenho um pequeno problema. Eu não vou pedir para você apresentar antes, até para você ter tempo de dar uma ajeitada, somente no texto.
+
+Se não der tempo para aumentar a amostra, você deve falar assim: “Eu vou fazer isso.”
+
+É bom e importante o último slide da apresentação ser: “O que você planeja fazer”, next steps.
+
+Então a gente pode falar mais sobre a apresentação. Só quero te dar uma ideia do caminho.
+
+Você: Sim.
+
+Rui: Então prepara o texto. Uma semana antes você vai mandar.
+
+Eu não vou pedir para você apresentar antes, para você ter mais tempo.
+
+Na última semana, por acaso, eu estou fora do país a semana inteira e vai ser muito complicado para mim.
+
+Então eu vou ter que pedir para o coordenador para você defender uma semana depois, tá bom?
+
+Eu acabei de falar com ele e ele aprovou.
+
+Você: Que bom.
+
+Rui: E a gente escolhe alguma data naquela semana.
+
+Como funciona? Eu vou chamar alguém do Insper. Acho que já tenho ideia de quem. É minha parte.
+
+Você só tem que me sugerir datas que sejam convenientes, se tiver alguma restrição.
+
+Semana seguinte ao dia 3. Dia 3 é tipo um sábado, não sei, botaram sábado, de cabeça.
+
+Você precisa escolher uma data ali.
+
+Você: Eu não tenho nada nessa semana, qualquer dia funcionaria. Posso até puxar minha agenda.
+
+É durante o dia ou pós-horário de trabalho?
+
+Rui: Pode ser pós-horário. Acho que eu consigo.
+
+Você: Para mim não é o fim do mundo sendo durante o dia também. Eu tenho a possibilidade de tirar meio dia de folga lá.
+
+Eu não tirei nenhuma... minhas férias vencem em janeiro agora. Eu estava guardando dias de férias exatamente para trabalhar na tese ou para, se precisasse...
+
+Então, se for um dia à tarde também...
+
+Rui: Mas acho que a gente consegue. Eu vou falar...
+
+Acho que eu vou chamar a Andréia Minardi, tá?
+
+Tem outras pessoas que eu posso chamar aqui agora. Aumentou o número de pessoas que dá para chamar.
+
+Eu vou pensar quem seria a melhor pessoa.
+
+Mas qualquer dia meio que funciona para mim.
+
+Ah, mas a gente tenta à noite, tá? Para não atrapalhar a sua vida.
+
+Você: Perfeito.
+
+Rui: A sessão é tranquila.
+
+A ideia aqui é só ter que mostrar que você está no meio do caminho. Se estiver até no meio do caminho, melhor ainda. E que é uma tese de mestrado.
+
+É mais assim: é nível e fase. É isso.
+
+A ideia é dar feedback, a pessoa ter uma visão mais crítica. Supostamente é para ser mais crítica, mas normalmente é tranquilo.
+
+E você vai ter feedback. Eu também vou ler com mais calma e tudo mais, com detalhe, tentar pensar junto, provocar, na verdade, a pessoa para gerar discussão.
+
+Você vai fazer uma apresentação de 20 minutinhos, 15 minutinhos.
+
+Todo mundo vai ter lido — eu e a pessoa — e é mais para você meio que explicar o que você fez. Aí seguem as perguntas.
+
+Eu falo muito pouco. Quem fala mais é a pessoa convidada.
+
+Aí segue a mesma linha que eu te dei como sugestão.
+
+Já começa com essa ideia: esse é o porquê, isso é o que eu fiz.
+
+Na verdade, qual é o primeiro slide?
+
+“Por quê?”
+
+Por que a pergunta? Qual é o contexto? Por que é importante? Dá uma motivação.
+
+Motivação é a mesma coisa.
+
+Segundo slide: qual é a minha pergunta?
+
+E aí a apresentação de paper, todo mundo segue esse estilo. É meio quase ridículo mesmo. Nos papers, de vez em quando alguém tenta fazer um negócio mais floreado, mas muita gente segue essa linha.
+
+Primeiro slide: “Por quê?” Por que eu estou olhando para isso? Qual é o contexto? Por que é importante?
+
+Segundo: qual é a minha pergunta? Muitas vezes coloca assim: “My question...”
+
+E o terceiro: “Results”, “Main results”. Main porque você vai tentar falar o que é principal.
+
+E aí “Contribution”. Tem um slide chamado “Contribution”, normalmente. Ou “Literature”.
+
+Aí você vai falar: “Meu paper está nessa linha aqui. Tem outros que fizeram coisa parecida, mas é diferente do que eles fizeram.”
+
+Você apresenta dessa forma:
+
+“Eu contribuo para essa literatura porque mostro isso, isso e isso. Tem outros papers que também fizeram isso, olharam para outras bases de dados, olharam para outros países, encontraram que funciona, encontraram que não, mas eles fizeram de outra forma.”
+
+Aí: “Minha outra contribuição é essa”, e também tem o resto do pessoal.
+
+E esse é o começo da apresentação.
+
+Aí você vai para uma seção de metodologia. Normalmente você não precisa, tá? Só se for uma coisa muito diferente.
+
+Para você, talvez eu diria que é mais assim: dados. Quais são os dados que você vai usar?
+
+E aí você faz metodologia e resultados meio que misturados.
+
+Quando a gente estiver falando dos dados: “Tá, agora isso aqui, isso aqui, o que eu vou usar? Vou usar o abnormal return etc.”
+
+Não precisa explicar o que é abnormal return numa seção muito antes.
+
+Eu ia fazer esse comentário, mas talvez fique um pouco mais encaixadinho.
+
+Dado o contexto do paper, abnormal return é uma coisa tradicional. Não é esse o valor adicionado.
+
+O valor adicionado está focado na pergunta em si.
+
+Se você tivesse: “Ah, pô, minha pergunta é tão diferente que eu tenho que propor uma metodologia nova para analisar”, aí talvez tenha que ter uma seção de metodologia, porque você está criando um método.
+
+“Estou fazendo um teste diferente”, então tem que convencer as pessoas primeiro de que a metodologia faz sentido.
+
+É para convencer, não é para descrever.
+
+Acho que no seu caso não é tão necessário.
+
+Você pode descrever rapidamente e botar a coisa no apêndice: “Mais detalhes no apêndice.”
+
+A ideia é: quanto mais conciso, direto, punch — “Eu fiz isso. Pá.” — melhor para você.
+
+E é melhor porque é melhor para o leitor.
+
+O leitor vai ler mais do artigo, vai entender a ideia, vai ficar feliz porque entendeu a ideia.
+
+Isso gera mais impacto.
+
+Você: Perfeito.
+
+Rui: Faz sentido?
+
+Você: Sim.
+
+Rui: Então foca nisso, até para organizar mais.
+
+Porque, se ficar claro para o leitor, principalmente quem estiver na banca, os comentários vão ser melhores também.
+
+Você: Tá.
+
+Rui: Aí você pode deixar, se tiver tempo, tudo bem, vai ver o negócio da base de dados e já deixa lá o Claudinho fazer esse paralelo.
+
+Você: É isso que eu ia falar. Na verdade, aumentar a minha base de dados eu acho que vai demorar. Vai demorar porque demora o download, mas não vai dar trabalho nenhum.
+
+Porque, quando eu baixei, eu já pedi para o Claudinho, já criei uma skill de download de dados da CVM.
+
+Eu já sabia que talvez fosse precisar de mais coisa.
+
+Porque eu primeiro baixei 20. Falei: “Ó, deu todos os erros, fiz tudo.”
+
+Fez da forma correta.
+
+Então já está...
+
+Rui: É, tem que ser sempre melhor.
+
+Você: Então já estava pronto para ter que baixar mais coisa.
+
+Rui: Agora eu estou com você, cara. Eu demoro horas para montar a estrutura do que eu quero, porque já deixo tudo estruturado, tudo organizadinho, porque eu também sei que vou querer o dado de novo.
+
+Eu fiz agora um livro — o Claudinho me ajudou também — para fazer um livro de investimentos.
+
+Então eu uso agora o meu livro, que é bem diferente do Bodie, Kane e Marcus, um nível um pouco mais elevado.
+
+Todos os gráficos do livro estão linkados com dados, e os dados eu consigo automatizar todos eles.
+
+Então os gráficos todos atualizam.
+
+Tudo que eu tenho agora no curso é com dado até agosto de 2026.
+
+Vai ficar 500 páginas de trabalho, mas não foi meu trabalho. Eu fui um coordenador. Gastei muito tempo, mas ficou legalzinho.
+
+Você: Se você quiser... eu não sei quando você pretende começar a ler, mas na próxima semana eu consigo tirar mais uns dias até de folga para conseguir focar.
+
+Até o fim da semana que vem talvez eu consiga te mandar uma versão com boa parte dos ajustes.
+
+Rui: Você me avisa.
+
+Eu vi o que você fez, está claro. E é importante o negócio da argumentação, e a gente ajudar a pensar.
+
+Você pode fazer uma qualificação, pensar em outras coisas para fazer, pode mudar, fazer subsample, o que pode ser...
+
+Eu vou tentar trazer uma pessoa que consiga trazer talvez ideias fora da caixa.
+
+Você: Legal.
+
+Rui: Eu vou tentar ver os artigos que você cita, para ficar mais... poder conversar contigo no e-mail.
+
+Beleza?
+
+Você: Perfeito. Muito obrigado, Rui.
+
+Rui: Boa. Valeu.
+
+Então a gente se fala em breve.
+
+Aí a gente tenta marcar de qualquer jeito. Se quiser deixar para conversar daqui a duas semanas...
+
+Você: Pode ser.
+
+Rui: Sim. Ou até para a semana exatamente antes.
+
+Pelo menos uma semana, no máximo uma semana exatamente antes, porque acho que eu vou ficar fora.
+
+Aí eu posso te dar feedback, você manda uma versão nova, a gente conversa.
+
+Você, de repente, já começa a preparar uma apresentação.
+
+Você: Pode ser.
+
+Rui: E coisa curta, assim: 12 slides.
+
+Se quiser colocar: “Queria botar alguma coisa a mais aqui”, coloca num appendix.
+
+É meio que... você usa como carta na manga.
+
+E daí conciso mesmo, direto.
+
+Acho que você não fez isso, mas não é para ficar fazendo revisão da história de finanças. Você não fez isso, ficou bom, foi feliz.
+
+Você só tem que citar o que tem a ver com o seu paper.
+
+Não é para encher linguiça, é para achar uma boa linguiça.
+
+Você: Tranquilo.
+
+Rui: Beleza?
+
+Você: Beleza. Então semana que vem já vou focar bastante nisso.
+
+Se eu tiver alguma coisa lá pelo meio da semana, já te mando e a gente marca a próxima para semana que vem ou, no máximo, a outra.
+
+Rui: Combinado.
+
+Você: Obrigado. Um bom fim de semana.
+
+Rui: Tchau, tchau. Você também.
+
+Você: Tchau, tchau.

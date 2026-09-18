@@ -1,0 +1,67 @@
+cd_cvm,ano,n_chars_extraidos,saldo_emprestimos_financiamentos,ativo_total,fonte_dado,confianca_nota_nao_existe,motivo
+14761,2019,21489,0.0,1704129.0,con,alta,saldo de Empréstimos e Financiamentos é zero (ou negativo por erro de sinal) nos dados estruturados
+18724,2022,63183,0.0,7553824.0,con,alta,saldo de Empréstimos e Financiamentos é zero (ou negativo por erro de sinal) nos dados estruturados
+18724,2023,11735,0.0,8062022.0,con,alta,saldo de Empréstimos e Financiamentos é zero (ou negativo por erro de sinal) nos dados estruturados
+18724,2024,11023,0.0,7890458.0,ind,alta,saldo de Empréstimos e Financiamentos é zero (ou negativo por erro de sinal) nos dados estruturados
+24392,2017,18479,0.0,1934619.0,con,alta,saldo de Empréstimos e Financiamentos é zero (ou negativo por erro de sinal) nos dados estruturados
+25232,2019,20103,0.0,20936.0,ind,alta,saldo de Empréstimos e Financiamentos é zero (ou negativo por erro de sinal) nos dados estruturados
+25232,2020,17493,0.0,0.0,con,alta,saldo de Empréstimos e Financiamentos é zero (ou negativo por erro de sinal) nos dados estruturados
+25291,2019,149480,0.0,425782.0,con,alta,saldo de Empréstimos e Financiamentos é zero (ou negativo por erro de sinal) nos dados estruturados
+2577,2021,154863,1825562.0,14680300.0,con,baixa,saldo de Empréstimos e Financiamentos é material (~12.44% do ativo total)
+4820,2015,63268,20336563.0,49421751.0,con,baixa,saldo de Empréstimos e Financiamentos é material (~41.15% do ativo total)
+4820,2016,282753,27350511.0,60626900.0,con,baixa,saldo de Empréstimos e Financiamentos é material (~45.11% do ativo total)
+4820,2023,106900,35716000.0,88049000.0,con,baixa,saldo de Empréstimos e Financiamentos é material (~40.56% do ativo total)
+8656,2020,30819,16049867.0,54048736.0,con,baixa,saldo de Empréstimos e Financiamentos é material (~29.70% do ativo total)
+8672,2016,10506,2364035.0,5441706.0,con,baixa,saldo de Empréstimos e Financiamentos é material (~43.44% do ativo total)
+8672,2020,7356,2466811.0,5748047.0,con,baixa,saldo de Empréstimos e Financiamentos é material (~42.92% do ativo total)
+10456,2018,24433,733643.0,3846392.0,con,baixa,saldo de Empréstimos e Financiamentos é material (~19.07% do ativo total)
+14311,2022,1051,11826061.0,49537535.0,con,baixa,saldo de Empréstimos e Financiamentos é material (~23.87% do ativo total)
+14826,2023,842,5863000.0,43839000.0,con,baixa,saldo de Empréstimos e Financiamentos é material (~13.37% do ativo total)
+16306,2019,47488,1604295.0,2542246.0,con,baixa,saldo de Empréstimos e Financiamentos é material (~63.11% do ativo total)
+17914,2017,2097,133532.0,186186.0,con,baixa,saldo de Empréstimos e Financiamentos é material (~71.72% do ativo total)
+18465,2021,2794,19209504.0,36250162.0,con,baixa,saldo de Empréstimos e Financiamentos é material (~52.99% do ativo total)
+19879,2015,36061,6582301.0,13634194.0,con,baixa,saldo de Empréstimos e Financiamentos é material (~48.28% do ativo total)
+19879,2016,47035,7574385.0,14901420.0,con,baixa,saldo de Empréstimos e Financiamentos é material (~50.83% do ativo total)
+19879,2020,53049,8766540.0,23843768.0,con,baixa,saldo de Empréstimos e Financiamentos é material (~36.77% do ativo total)
+20010,2019,51555,11536180.0,25505996.0,con,baixa,saldo de Empréstimos e Financiamentos é material (~45.23% do ativo total)
+20010,2023,49308,41183525.0,90617397.0,con,baixa,saldo de Empréstimos e Financiamentos é material (~45.45% do ativo total)
+20087,2015,64460,6662022.0,27653600.0,con,baixa,saldo de Empréstimos e Financiamentos é material (~24.09% do ativo total)
+20087,2018,77561,13888790.0,39611818.0,con,baixa,saldo de Empréstimos e Financiamentos é material (~35.06% do ativo total)
+20087,2022,127200,22472050.0,56670203.0,con,baixa,saldo de Empréstimos e Financiamentos é material (~39.65% do ativo total)
+20257,2016,239707,3672545.0,8862458.0,con,baixa,saldo de Empréstimos e Financiamentos é material (~41.44% do ativo total)
+20362,2024,264086,1385733.0,4581833.0,con,baixa,saldo de Empréstimos e Financiamentos é material (~30.24% do ativo total)
+20494,2019,35628,2241319.0,5290203.0,con,baixa,saldo de Empréstimos e Financiamentos é material (~42.37% do ativo total)
+20605,2018,38229,1338317.0,4466181.0,con,baixa,saldo de Empréstimos e Financiamentos é material (~29.97% do ativo total)
+20745,2015,71945,1331976.0,4498634.0,con,baixa,saldo de Empréstimos e Financiamentos é material (~29.61% do ativo total)
+20745,2016,79737,1878877.0,5309633.0,con,baixa,saldo de Empréstimos e Financiamentos é material (~35.39% do ativo total)
+20745,2017,91266,1901245.0,5453376.0,con,baixa,saldo de Empréstimos e Financiamentos é material (~34.86% do ativo total)
+20745,2018,81302,1589174.0,5293685.0,con,baixa,saldo de Empréstimos e Financiamentos é material (~30.02% do ativo total)
+20745,2019,93085,1605071.0,5755537.0,con,baixa,saldo de Empréstimos e Financiamentos é material (~27.89% do ativo total)
+20788,2018,53672,12458980.0,21301799.0,con,baixa,saldo de Empréstimos e Financiamentos é material (~58.49% do ativo total)
+20915,2020,29073,3202158.0,14686323.0,con,baixa,saldo de Empréstimos e Financiamentos é material (~21.80% do ativo total)
+20990,2018,73131,6242029.0,12623127.0,con,baixa,saldo de Empréstimos e Financiamentos é material (~49.45% do ativo total)
+20990,2019,69945,6844265.0,13027217.0,con,baixa,saldo de Empréstimos e Financiamentos é material (~52.54% do ativo total)
+22187,2022,6902,3901293.0,12221416.0,con,baixa,saldo de Empréstimos e Financiamentos é material (~31.92% do ativo total)
+22187,2023,7688,9222756.0,20302520.0,con,baixa,saldo de Empréstimos e Financiamentos é material (~45.43% do ativo total)
+22187,2024,7938,9554402.0,28310932.0,con,baixa,saldo de Empréstimos e Financiamentos é material (~33.75% do ativo total)
+23272,2018,17011,930034.0,3073803.0,con,baixa,saldo de Empréstimos e Financiamentos é material (~30.26% do ativo total)
+23272,2019,17628,940313.0,3222897.0,con,baixa,saldo de Empréstimos e Financiamentos é material (~29.18% do ativo total)
+23272,2020,10987,889805.0,3988727.0,con,baixa,saldo de Empréstimos e Financiamentos é material (~22.31% do ativo total)
+24384,2020,46491,2177939.0,13148040.0,con,baixa,saldo de Empréstimos e Financiamentos é material (~16.56% do ativo total)
+24848,2022,37669,1374826.0,8672666.0,con,baixa,saldo de Empréstimos e Financiamentos é material (~15.85% do ativo total)
+24848,2024,226,1687854.0,9725565.0,con,baixa,saldo de Empréstimos e Financiamentos é material (~17.35% do ativo total)
+25011,2023,23106,1204276.0,10638039.0,con,baixa,saldo de Empréstimos e Financiamentos é material (~11.32% do ativo total)
+25585,2019,61958,2783048.0,15135472.0,con,baixa,saldo de Empréstimos e Financiamentos é material (~18.39% do ativo total)
+9512,2015,0,351035000.0,793375000.0,con,indeterminado,"texto extraído quase vazio (provável falha de extração/leitura do PDF, não dá para avaliar)"
+19550,2023,0,7622192.0,24648800.0,con,indeterminado,"texto extraído quase vazio (provável falha de extração/leitura do PDF, não dá para avaliar)"
+19909,2018,188,3319241.0,18003585.0,con,indeterminado,"texto extraído quase vazio (provável falha de extração/leitura do PDF, não dá para avaliar)"
+22349,2020,93,180784.0,1413249.0,con,indeterminado,"texto extraído quase vazio (provável falha de extração/leitura do PDF, não dá para avaliar)"
+22357,2019,13,0.0,4744122.0,con,indeterminado,"texto extraído quase vazio (provável falha de extração/leitura do PDF, não dá para avaliar)"
+22357,2021,0,0.0,10887575.0,con,indeterminado,"texto extraído quase vazio (provável falha de extração/leitura do PDF, não dá para avaliar)"
+24295,2023,0,17391000.0,41110000.0,con,indeterminado,"texto extraído quase vazio (provável falha de extração/leitura do PDF, não dá para avaliar)"
+25011,2019,0,192137.0,993986.0,con,indeterminado,"texto extraído quase vazio (provável falha de extração/leitura do PDF, não dá para avaliar)"
+25011,2020,129,362902.0,1255854.0,con,indeterminado,"texto extraído quase vazio (provável falha de extração/leitura do PDF, não dá para avaliar)"
+25232,2024,0,846.0,978995.0,con,indeterminado,"texto extraído quase vazio (provável falha de extração/leitura do PDF, não dá para avaliar)"
+20087,2020,99429,366729.0,42614656.0,con,moderada,saldo pequeno em relação ao ativo total (~0.86%)
+20770,2020,8666,41537.0,4275916.0,con,moderada,saldo pequeno em relação ao ativo total (~0.97%)
+14761,2016,27313,1308.0,1472492.0,con,moderada-alta,saldo positivo mas irrisório (~0.0888% do ativo total)

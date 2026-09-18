@@ -1,0 +1,17 @@
+Opção A — alpha/retorno residual por ação
+
+Para cada empresa, estime algo como:
+
+$$ R_{i,d}-R_{f,d} = \alpha_i+\beta_M(MKT_d) +\beta_S SMB_d +\beta_H HML_d +\beta_{Mom} MOM_d+\epsilon_{i,d} $$
+
+e depois acumule os resíduos no período posterior à divulgação:
+
+$$ AR_{i,t+1}=\sum_{d=1}^{D}\hat{\epsilon}_{i,d} $$
+
+ou faça a versão composta, dependendo da definição escolhida.
+
+Esse AR substitui sua variável dependente atual na regressão M0-M5.
+
+Essa seria minha opção preferida se você quer continuar com uma observação empresa-ano e manter praticamente toda a arquitetura atual da tese.
+
+Opção B — calendar-time portfolio

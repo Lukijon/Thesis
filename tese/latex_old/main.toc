@@ -1,0 +1,34 @@
+\babel@toc {portuguese}{}\relax 
+\babel@toc {portuguese}{}\relax 
+\contentsline {chapter}{Sumário}{3}{chapter*.1}%
+\contentsline {chapter}{\numberline {1}Introdução}{5}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Pergunta de pesquisa e objetivos}{5}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Hipóteses}{6}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Estrutura da dissertação}{6}{section.1.3}%
+\contentsline {chapter}{\numberline {2}Referencial Teórico e Revisão de Literatura}{7}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Assimetria informacional e divulgação corporativa}{7}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Atenção limitada e sub-reação do mercado}{7}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Mudança textual como sinal de informação nova}{8}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Divulgação de dívida e resultados de mercado}{8}{section.2.4}%
+\contentsline {section}{\numberline {2.5}Panorama brasileiro e a lacuna que a pesquisa ocupa}{9}{section.2.5}%
+\contentsline {chapter}{\numberline {3}Metodologia}{10}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Coleta e extração das notas explicativas}{10}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Medida de mudança textual (TF-IDF e similaridade de cosseno)}{10}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Variável dependente: retorno anormal futuro}{12}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Variáveis de controle: grade M0-M3}{13}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Modelo empírico: especificação de base}{14}{section.3.5}%
+\contentsline {section}{\numberline {3.6}Interpretação da grade de controles M0-M3}{15}{section.3.6}%
+\contentsline {section}{\numberline {3.7}Estratégia de identificação}{15}{section.3.7}%
+\contentsline {section}{\numberline {3.8}Análise complementar: revisão de consenso de analistas (H2)}{17}{section.3.8}%
+\contentsline {chapter}{\numberline {4}Descrição dos Dados e da Amostra}{18}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Amostra e período}{18}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Fontes de dados}{18}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Confiabilidade da extração e cobertura da aquisição}{20}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Estatísticas descritivas das variáveis}{21}{section.4.4}%
+\contentsline {chapter}{\numberline {5}Resultados}{26}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Validação da medida de mudança textual}{26}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Resultados do modelo principal (H1)}{29}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Testes de robustez}{31}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Análise complementar (H2)}{34}{section.5.4}%
+\contentsline {chapter}{\numberline {6}Conclusão}{36}{chapter.6}%
+\contentsline {chapter}{Referências}{37}{chapter*.20}%

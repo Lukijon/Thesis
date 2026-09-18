@@ -1,0 +1,9 @@
+{
+  "cd_cvm": "020478",
+  "name": "PDG Realty S.A. Empreendimentos e Participações",
+  "quarter": "2022Q1",
+  "diagnostic": "regex_only",
+  "heading": "Empréstimos e financiamentos",
+  "n_total_lines": 4790,
+  "text": "Empréstimos e financiamentos\n-           4.365        (4.365)\n-           4.365        (4.365)\nReconciliação com os eventos não caixa:\nPagamento a credores concursais com dação de ativos\n-          (6.205)\n-          (6.205)\nAmortização de SFH e outras obrigações com dação de ativos\n-           6.205\n-          1.840\nReclassificação contingências para RJ\n537\n-         16.154\nAjustes entre dívidas extraconcursal e concurrsal\n(20.519)\n-        (20.519)\nCessão de dívida com partes relacionadas\n19.982\n-          (4.365)\n(4.365)"
+}

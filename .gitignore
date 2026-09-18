@@ -7,15 +7,15 @@ venv/
 env/
 *.egg-info/
 
-# LaTeX build artifacts -- main.pdf is kept (the actual deliverable), these regenerate from it
-docs/latex/*.aux
-docs/latex/*.log
-docs/latex/*.out
-docs/latex/*.toc
-docs/latex/*.bbl
-docs/latex/*.blg
-docs/latex/compile_log_*.txt
-docs/latex/bibtex_log.txt
+# LaTeX build artifacts -- tese_jonathan.pdf is kept (the actual deliverable), these regenerate from it
+tese/latex/*.aux
+tese/latex/*.log
+tese/latex/*.out
+tese/latex/*.toc
+tese/latex/*.bbl
+tese/latex/*.blg
+tese/latex/compile_log_*.txt
+tese/latex/bibtex_log.txt
 
 # Environment / secrets
 .env
@@ -23,65 +23,65 @@ docs/latex/bibtex_log.txt
 !.env.example
 
 # Data
-data/raw/*
-!data/raw/*/
-!data/raw/*/.gitkeep
+suporte/data/raw/*
+!suporte/data/raw/*/
+!suporte/data/raw/*/.gitkeep
 
 # CVM DFP: both the raw filing zip cache and the extracted notes
 # PDFs/metadata stay local-only -- multi-GB, and re-fetchable from CVM any
-# time via src/acquisition/. Previously the extracted PDFs were tracked via
+# time via suporte/src/acquisition/. Previously the extracted PDFs were tracked via
 # git-lfs and pushed to GitHub; that was reversed (history rewritten to
 # strip them, see git log around the CLAUDE.md commit) because the LFS
 # payload wasn't meant to go to the shared remote. They still live on disk
 # locally (see CLAUDE.md), just outside git now.
-data/raw/dfp/*
-!data/raw/dfp/.gitkeep
+suporte/data/raw/dfp/*
+!suporte/data/raw/dfp/.gitkeep
 
 # ITR (quarterly) debt-note PDFs -- pilot for a quarterly-frequency textual
 # similarity check, local-only like the annual DFP corpus above.
-data/raw/itr/*
-!data/raw/itr/.gitkeep
+suporte/data/raw/itr/*
+!suporte/data/raw/itr/.gitkeep
 
 # Relatório da Administração (Management Report) PDFs -- same local-only
 # treatment as the debt-note corpus above; re-fetchable from the already-
-# cached filing zips any time via src/acquisition/cvm_management_report.py.
-data/raw/dfp_mgmt_report/*
-!data/raw/dfp_mgmt_report/.gitkeep
+# cached filing zips any time via suporte/src/acquisition/cvm_management_report.py.
+suporte/data/raw/dfp_mgmt_report/*
+!suporte/data/raw/dfp_mgmt_report/.gitkeep
 
 # Risk Factors (Formulario de Referencia item 4.1) PDFs -- same local-only
-# treatment; re-fetchable any time via src/acquisition/cvm_fre.py.
-data/raw/risk_factors/*
-!data/raw/risk_factors/.gitkeep
+# treatment; re-fetchable any time via suporte/src/acquisition/cvm_fre.py.
+suporte/data/raw/risk_factors/*
+!suporte/data/raw/risk_factors/.gitkeep
 
 # Bloomberg-derived market/analyst data: likely redistribution-restricted
 # under Bloomberg's data license, so never commit regardless of size.
-data/raw/market/*
-!data/raw/market/.gitkeep
-data/raw/analysts/*
-!data/raw/analysts/.gitkeep
+suporte/data/raw/market/*
+!suporte/data/raw/market/.gitkeep
+suporte/data/raw/analysts/*
+!suporte/data/raw/analysts/.gitkeep
 
 # Small manifest/log CSVs describing what was acquired are worth keeping;
 # everything else in interim is regenerable from raw + code.
-data/interim/*
-!data/interim/.gitkeep
-!data/interim/*.csv
+suporte/data/interim/*
+!suporte/data/interim/.gitkeep
+!suporte/data/interim/*.csv
 
-# POC (small, and cited directly in reports/poc_note_extraction_findings.md).
+# POC (small, and cited directly in exploracao/reports/poc_note_extraction_findings.md).
 # lines_cache/ and bookmarks_cache/ are NOT excepted here deliberately --
 # they're a large (1.6GB+), purely regenerable raw-PDF-parsing cache for
-# iterating on the extraction heuristic (see src/processing/eval_note_locator.py),
-# the same category as data/raw/dfp/_cache/ above: never commit regardless of size.
-!data/interim/poc/
-data/interim/poc/*
-!data/interim/poc/*.csv
-!data/interim/poc/sections/
-!data/interim/poc/itr_sections/
+# iterating on the extraction heuristic (see suporte/src/processing/eval_note_locator.py),
+# the same category as suporte/data/raw/dfp/_cache/ above: never commit regardless of size.
+!suporte/data/interim/poc/
+suporte/data/interim/poc/*
+!suporte/data/interim/poc/*.csv
+!suporte/data/interim/poc/sections/
+!suporte/data/interim/poc/itr_sections/
 
 # Reports / generated figures -- real chart deliverables are tracked
 # (small PNGs); this still blocks anything else that lands here.
-reports/figures/**
-!reports/figures/.gitkeep
-!reports/figures/*.png
+exploracao/reports/figures/**
+!exploracao/reports/figures/.gitkeep
+!exploracao/reports/figures/*.png
 
 # OS / editor
 .DS_Store

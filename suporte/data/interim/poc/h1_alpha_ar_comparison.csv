@@ -1,0 +1,11 @@
+Fonte,VD,n,Simples,Agrup s/c,Agrup c/c,Ef.fixos
+narrow_annual,CAR,432,0.6592,0.6251,0.2922,0.5101
+narrow_annual,BHAR,432,0.2031,0.2842,0.1787,0.2755
+narrow_quarterly,CAR,1223,0.5413,0.4757,0.4045,0.4072
+narrow_quarterly,BHAR,1223,0.5848,0.5177,0.4679,0.3256
+whole_notes,CAR,411,0.164,0.173,0.5948,0.8009
+whole_notes,BHAR,411,0.4202,0.1392,0.5716,0.8334
+mgmt_report,CAR,484,0.8328,0.8276,0.5954,0.8848
+mgmt_report,BHAR,484,0.1597,0.5283,0.6568,0.5365
+risk_factors,CAR,672,0.4101,0.377,0.2856,0.1999
+risk_factors,BHAR,672,0.1665,0.3662,0.3466,0.2411
