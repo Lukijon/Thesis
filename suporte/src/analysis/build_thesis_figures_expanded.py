@@ -1,9 +1,11 @@
 """Regenerates every thesis figure in tese/latex/figures/ for the round-7
 expanded universe (185 companies, 2010-2025), following the "adjust the
 universe" step of the advisor's feedback (universe expansion first, prose
-second). Quarterly (ITR) figures are NOT touched here -- acquisition still
-running; those numbers get slotted in once it completes. The survivorship
-(delisting) boxplot is also NOT regenerated -- "saida do Ibovespa" is only
+second). Quarterly (ITR) is excluded from every figure here: as a quarterly
+document its effect/impact is economically distinct from the four annual
+sources and doesn't have a clean rationale for sitting alongside them --
+see the "reduce to four sources" text edit in tese_jonathan.tex. The
+survivorship (delisting) boxplot is also NOT regenerated -- "saida do Ibovespa" is only
 a meaningful outcome for the original 111-company IBOV panel (66 current +
 45 historical); the 74 IBX-extra companies were never IBOV constituents,
 so that specific check stays scoped to its original 111-company/2015-2024
@@ -163,20 +165,19 @@ def fig_m2_m3_controls() -> None:
 
 
 def fig_similarity_by_source() -> None:
+    # Quarterly (ITR) dropped per user decision: as a quarterly document its
+    # effect/impact is economically distinct from the annual sources and
+    # doesn't have a clean rationale for sitting alongside them here -- see
+    # the round-8 "reduce to four sources" edit.
     sources = {
         "Nota de dívida\n(anual, confiável)": POC / "similarity_results_full_history_reliable.csv",
-        "Nota de dívida\n(trimestral, confiável)": None,  # handled separately, needs reliability filter
         "Conjunto completo\nde notas": POC / "full_notes_similarity_results_full_history.csv",
         "Relatório da\nAdministração": POC / "mgmt_report_similarity_results_full_history.csv",
         "Fatores de Risco\n(FRE)": POC / "risk_factors_similarity_results_full_history.csv",
     }
     data, labels, medians = [], [], []
     for label, path in sources.items():
-        if path is None:
-            itr = pd.read_csv(POC / "itr_similarity_results_full_history.csv")
-            s = itr[(itr["diagnostic_prev"] == "font_heading") & (itr["diagnostic_curr"] == "font_heading")]["cosine_similarity"].dropna()
-        else:
-            s = pd.read_csv(path)["cosine_similarity"].dropna()
+        s = pd.read_csv(path)["cosine_similarity"].dropna()
         data.append(s.values)
         labels.append(label)
         medians.append(s.median())
@@ -229,10 +230,10 @@ def fig_extraction_hardening_trajectory() -> None:
 
 
 def fig_extraction_reliability() -> None:
-    labels = ["Nota de dívida\n(anual)", "Nota de dívida\n(trimestral)", "Relatório da\nAdministração", "Fatores de Risco\n(FRE)"]
-    values = [80.3, 69.4, 71.5, 96.6]
-    metric = ["Confiabilidade\nde extração", "Confiabilidade\nde extração", "Cobertura de\naquisição", "Cobertura de\naquisição"]
-    colors = [C_MAIN, C_MAIN, C_IBX, C_IBX]
+    labels = ["Nota de dívida\n(anual)", "Relatório da\nAdministração", "Fatores de Risco\n(FRE)"]
+    values = [80.3, 71.5, 96.6]
+    metric = ["Confiabilidade\nde extração", "Cobertura de\naquisição", "Cobertura de\naquisição"]
+    colors = [C_MAIN, C_IBX, C_IBX]
 
     fig, ax = plt.subplots(figsize=(8, 4.8))
     bars = ax.bar(labels, values, color=colors, alpha=0.85)
