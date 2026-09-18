@@ -18,7 +18,7 @@ Ignore everything else in `data/interim/`, `data/raw/`, and the many intermediat
 | File | What it is |
 |---|---|
 | `tese/latex/tese_jonathan.tex` (compiles to `tese_jonathan.pdf`) | **The actual submission document**, now in LaTeX (ABNT-formatted). Introdução through Resultados are written, including the data-description chapter and the extraction-hardening validation. Conclusão and a final Resumo/Abstract are deliberately still placeholders. |
-| `docs/exame_qualificacao/` | The real Insper qualification-exam guide (PDF) — dates, requirements, defense mechanics. Read this if you haven't closely. |
+| `../privado/Exame_qualificacao_MPE22-parte2.pdf` | The real Insper qualification-exam guide (PDF) — dates, requirements, defense mechanics. Read this if you haven't closely. |
 | `../exploracao/reports/panel_model_results.md` | The single most important supporting report — explains *why* H1/H2 are null even at the strictest test, with the fixed-effects methodology explained clearly. This is your best source for defending the methodology in the oral defense. |
 | `../exploracao/reports/risk_factors_exploration.md` | The delisting finding — your one real secondary result. |
 | `CLAUDE.md` | Full project history/status if you need to reconstruct any decision or number. |

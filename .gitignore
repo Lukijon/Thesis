@@ -1,3 +1,8 @@
+# Local-only reference material -- advisor feedback, dissertation/exam
+# guides, and guide papers. Personal/institutional communication and
+# third-party copyrighted PDFs, not meant for the shared remote.
+privado/
+
 # Python
 __pycache__/
 *.pyc
