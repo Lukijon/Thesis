@@ -71,11 +71,12 @@ A maior parte de `suporte/data/` é ignorada pelo git (ver [.gitignore](.gitigno
 Checklist resumido — para o detalhe rodada a rodada, ver `CLAUDE.md`.
 
 - [x] Pré-projeto redigido (ver `privado/pre-projeto.docx`)
-- [x] Universo expandido para 185 empresas não financeiras (66 constituintes atuais do Ibovespa + 45 históricas/deslistadas + 74 do índice IBX que nunca integraram o Ibovespa), 2010–2025, anual e trimestral
-- [x] Extração e isolamento automático da nota de dívida — sete rodadas de aprimoramento da heurística, confiabilidade em **80,3%** na base anual e **69,4%** na trimestral (universo expandido)
-- [x] Cálculo de similaridade textual (TF-IDF e cosseno), nas cinco fontes de texto testadas
+- [x] Universo expandido para 185 empresas não financeiras (66 constituintes atuais do Ibovespa + 45 históricas/deslistadas + 74 do índice IBX que nunca integraram o Ibovespa), 2010–2025
+- [x] Extração e isolamento automático da nota de dívida — sete rodadas de aprimoramento da heurística, confiabilidade em **80,3%** na base anual (universo expandido)
+- [x] Cálculo de similaridade textual (TF-IDF e cosseno), em **quatro fontes de texto** (nota de dívida anual, conjunto completo de notas, Relatório da Administração, Fatores de Risco do FRE) — o ITR (nota trimestral) foi removido do escopo: como documento trimestral seu efeito não é comparável aos das fontes anuais e não tinha justificativa econômica clara para permanecer
 - [x] Retorno anormal medido como resíduo fora da amostra de um modelo de quatro fatores (BHAR ajustado), grade de controles M0-M3 pré-especificada
-- [x] **Resultado principal**: a mudança textual da nota de dívida anual está associada ao retorno anormal futuro, significativa a 5% em toda a grade M0-M3 (M2: p=0,017), corroborada por um teste de portfólio calendário (p=0,0011) e pelo desenho de Santos & Coelho 2018 (p=0,04–0,08) — mas não sobrevive à correção de Benjamini-Hochberg para múltiplos testes (p ajustado=0,156); lido como resultado candidato, não confirmado. Nenhuma das outras quatro fontes de texto mostra o mesmo padrão.
+- [x] **Resultado principal**: a mudança textual da nota de dívida anual está associada ao retorno anormal futuro, significativa a 5% em toda a grade M0-M3 (M2: β=0,156, p=0,017), corroborada por um teste de portfólio calendário (p=0,0011) e pelo desenho de Santos & Coelho 2018 (p=0,043–0,080). Este é o único teste confirmatório pré-especificado da dissertação; as outras três fontes de texto servem como checagens de especificidade/generalização, não como testes confirmatórios independentes, e nenhuma mostra o mesmo padrão. (A correção de Benjamini-Hochberg para múltiplos testes, usada numa versão anterior do texto, foi removida junto com essa reformulação — deixou de fazer sentido tratar as fontes secundárias como uma "família" de testes independentes da mesma hipótese.)
 - [x] H2 (revisão de consenso de EPS) — nulo em toda a grade, ainda no universo original de 111 empresas
-- [x] Repositório reorganizado em três pastas principais (`tese/`, `suporte/`, `exploracao/`)
-- [ ] Conclusão e Resumo/Abstract definitivos da dissertação (`tese/latex/tese_jonathan.tex`) — Resumo/Abstract já preenchidos com os resultados; Conclusão ainda pendente
+- [x] Repositório reorganizado em três pastas principais (`tese/`, `suporte/`, `exploracao/`) + `privado/` (local-only)
+- [x] Resumo/Abstract, Introdução (Capítulo 1) e Descrição dos Dados revisados para um tom mais direto, no estilo de paper de economia (Lazy Prices) em vez de texto acadêmico genérico — pedido explícito do orientador
+- [ ] Conclusão da dissertação (`tese/latex/tese_jonathan.tex`) — ainda placeholder, deliberadamente deixada para o final
