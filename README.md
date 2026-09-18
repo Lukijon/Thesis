@@ -18,7 +18,7 @@ Mais especificamente: em que medida a mudança textual ano a ano (medida por TF-
 
 ## Estrutura do repositório
 
-O repositório é dividido em três pastas principais, cada uma com um papel diferente:
+O repositório é dividido em três pastas principais, cada uma com um papel diferente, mais uma quarta pasta local-only:
 
 ```
 .
@@ -27,10 +27,9 @@ O repositório é dividido em três pastas principais, cada uma com um papel dif
 │   │   └── figures/              # Figuras da dissertação (geradas a partir de suporte/data, ver abaixo)
 │   ├── latex_old/               # Snapshot congelado do rascunho pré-expansão do universo (histórico, não editar)
 │   ├── pre-projeto.docx         # Pré-projeto original, já aprovado
-│   ├── exame_qualificacao/      # Guia do Exame de Qualificação (datas, requisitos)
 │   └── NEXT_STEPS_AND_PRESENTATION_GUIDE.md
 │
-├── suporte/                  # O que é PRECISO para produzir/reproduzir a tese: dados, código, referências
+├── suporte/                  # O que é PRECISO para produzir/reproduzir a tese: dados, código
 │   ├── data/
 │   │   ├── raw/                 # Dados brutos, exatamente como coletados (nunca editados manualmente)
 │   │   │   ├── dfp/               # DFPs / notas explicativas de dívida (CVM), gitignorado
@@ -47,16 +46,20 @@ O repositório é dividido em três pastas principais, cada uma com um papel dif
 │   │   ├── analysis/            # Regressões, testes de hipótese, resultados, figuras da tese
 │   │   └── utils/                # Funções auxiliares compartilhadas
 │   ├── ibov.xlsx, ibx.xlsx, cdi.xlsx      # Exportações Bloomberg fornecidas pelo usuário (preços, IBX, CDI)
-│   ├── especificacoes_m0_m5_dissertacao.pdf, feedback_dissertacao.pdf,
-│   │   recomendacoes.txt, transcricao_conversa_orientador.txt   # Materiais/orientação do orientador
 │   └── requirements.txt
 │
-└── exploracao/                # PoCs, testes, rodadas de investigação e sidequests -- não é o entregável
-    ├── notebooks/                # POC: exploração e validações, narradas em primeira pessoa
-    ├── reports/                  # Relatórios narrativos por rodada/investigação (muitos resultados nulos/descartados)
-    │   └── figures/                 # Figuras desses relatórios (não as da dissertação)
-    ├── sidequest/                 # Projeto paralelo não relacionado (diversidade de conselho vs. custo de dívida)
-    └── src/                       # Scripts exploratórios/superados (não fazem parte do pipeline ativo)
+├── exploracao/                # PoCs, testes, rodadas de investigação e sidequests -- não é o entregável
+│   ├── notebooks/                # POC: exploração e validações, narradas em primeira pessoa
+│   ├── reports/                  # Relatórios narrativos por rodada/investigação (muitos resultados nulos/descartados)
+│   │   └── figures/                 # Figuras desses relatórios (não as da dissertação)
+│   ├── sidequest/                 # Projeto paralelo não relacionado (diversidade de conselho vs. custo de dívida)
+│   └── src/                       # Scripts exploratórios/superados (não fazem parte do pipeline ativo)
+│
+└── privado/                   # LOCAL-ONLY (gitignorado) -- nunca sobe pro GitHub
+    ├── feedback_dissertacao.pdf, especificacoes_m0_m5_dissertacao.pdf,
+    │   recomendacoes.txt, transcricao_conversa_orientador.txt   # Feedback/orientação do orientador
+    ├── Exame_qualificacao_MPE22-parte2.pdf                        # Guia institucional do Exame de Qualificação
+    └── Lazy Prices_Cohen_Nguyen.pdf                                # Paper usado como referência de estrutura/conteúdo
 ```
 
 Todos os comandos `python -m src.<...>` devem ser executados com o diretório de trabalho em `suporte/` (é de lá que `src/` e `data/` enxergam um ao outro). Scripts em `exploracao/src/` foram movidos para fora de `suporte/` justamente por não fazerem mais parte do pipeline ativo — eles ainda importam de `src.*`, então, para rodá-los de novo, aponte `PYTHONPATH` para `suporte/` (ou copie o script de volta temporariamente); a maioria já teve sua conclusão incorporada a um relatório em `exploracao/reports/` e não precisa ser reexecutada.
