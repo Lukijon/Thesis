@@ -1,6 +1,6 @@
 # Where things stand, what to look at, and how to present each paper
 
-Written after exhausting the search for a positive correlation on both projects (see `sidequest/results_v3.md`'s final section for the last, most nuanced attempt). Both are now honestly null. This document is the practical "what do I actually do next" reference — not a thesis deliverable itself.
+Written after exhausting the search for a positive correlation on both projects (see `../exploracao/sidequest/results_v3.md`'s final section for the last, most nuanced attempt). Both are now honestly null. This document is the practical "what do I actually do next" reference — not a thesis deliverable itself.
 
 ## 1. The walkthrough: what we actually have
 
@@ -17,20 +17,20 @@ Ignore everything else in `data/interim/`, `data/raw/`, and the many intermediat
 **Main thesis:**
 | File | What it is |
 |---|---|
-| `docs/latex/main.tex` (compiles to `main.pdf`) | **The actual submission document**, now in LaTeX (ABNT-formatted). Introdução through Resultados are written, including the data-description chapter and the extraction-hardening validation. Conclusão and a final Resumo/Abstract are deliberately still placeholders. |
+| `tese/latex/tese_jonathan.tex` (compiles to `tese_jonathan.pdf`) | **The actual submission document**, now in LaTeX (ABNT-formatted). Introdução through Resultados are written, including the data-description chapter and the extraction-hardening validation. Conclusão and a final Resumo/Abstract are deliberately still placeholders. |
 | `docs/exame_qualificacao/` | The real Insper qualification-exam guide (PDF) — dates, requirements, defense mechanics. Read this if you haven't closely. |
-| `reports/panel_model_results.md` | The single most important supporting report — explains *why* H1/H2 are null even at the strictest test, with the fixed-effects methodology explained clearly. This is your best source for defending the methodology in the oral defense. |
-| `reports/risk_factors_exploration.md` | The delisting finding — your one real secondary result. |
+| `../exploracao/reports/panel_model_results.md` | The single most important supporting report — explains *why* H1/H2 are null even at the strictest test, with the fixed-effects methodology explained clearly. This is your best source for defending the methodology in the oral defense. |
+| `../exploracao/reports/risk_factors_exploration.md` | The delisting finding — your one real secondary result. |
 | `CLAUDE.md` | Full project history/status if you need to reconstruct any decision or number. |
 
 **Sidequest:**
 | File | What it is |
 |---|---|
-| `sidequest/dissertacao_diversidade_esqueleto.docx` | The parallel submission document, same structure (~4,100 words). |
-| `sidequest/README.md` | Entry point — start here if you haven't looked at the sidequest in a while. |
-| `sidequest/novelty_verification.md` | The adversarial literature check — your strongest asset if you present this one, since it's a genuinely verified gap. |
-| `sidequest/results_v3.md` | The full empirical story, including the final specification-sensitivity finding. |
-| `sidequest/diversity_exploration.ipynb` | Visual walkthrough — useful if you want charts for a presentation. |
+| `../exploracao/sidequest/dissertacao_diversidade_esqueleto.docx` | The parallel submission document, same structure (~4,100 words). |
+| `../exploracao/sidequest/README.md` | Entry point — start here if you haven't looked at the sidequest in a while. |
+| `../exploracao/sidequest/novelty_verification.md` | The adversarial literature check — your strongest asset if you present this one, since it's a genuinely verified gap. |
+| `../exploracao/sidequest/results_v3.md` | The full empirical story, including the final specification-sensitivity finding. |
+| `../exploracao/sidequest/diversity_exploration.ipynb` | Visual walkthrough — useful if you want charts for a presentation. |
 
 ## 3. Next steps, in order
 
@@ -72,4 +72,4 @@ Both guides assume the same total time budget. Adjust the split if your orientad
 
 ### If you genuinely can't decide before you have to commit
 
-Talk to your orientador with both `docs/latex/main.pdf` and `sidequest/dissertacao_diversidade_esqueleto.docx` in hand — they know the committee and the program's tolerance for a well-documented null far better than this analysis can. The one factor worth naming explicitly in that conversation: the main thesis is a completed research program (five sources, ten years, six methods); the sidequest is a well-executed first pass on a genuinely new question. Both are legitimate qualification-exam submissions. Which one is the better *dissertation* topic for the next several months is a different, bigger question than which one is ready fastest.
+Talk to your orientador with both `tese/latex/tese_jonathan.pdf` and `../exploracao/sidequest/dissertacao_diversidade_esqueleto.docx` in hand — they know the committee and the program's tolerance for a well-documented null far better than this analysis can. The one factor worth naming explicitly in that conversation: the main thesis is a completed research program (five sources, ten years, six methods); the sidequest is a well-executed first pass on a genuinely new question. Both are legitimate qualification-exam submissions. Which one is the better *dissertation* topic for the next several months is a different, bigger question than which one is ready fastest.

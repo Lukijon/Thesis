@@ -1,5 +1,5 @@
 """Computes BHAR ajustado (the thesis's definitive H1 dependent variable --
-see compute_alpha_abnormal_returns.py and docs/latex/main.tex Secao 3.3)
+see compute_alpha_abnormal_returns.py and tese/latex/tese_jonathan.tex Secao 3.3)
 for the round-7 universe expansion (111-company panel's 2010-2014
 extension + 74 IBX-extra companies), then regresses it on TextChange
 (1 - cosine similarity) to answer "what's the p-value for the new

@@ -1,4 +1,4 @@
-"""Regenerates every thesis figure in docs/latex/figures/ for the round-7
+"""Regenerates every thesis figure in tese/latex/figures/ for the round-7
 expanded universe (185 companies, 2010-2025), following the "adjust the
 universe" step of the advisor's feedback (universe expansion first, prose
 second). Quarterly (ITR) figures are NOT touched here -- acquisition still
@@ -30,7 +30,7 @@ warnings.filterwarnings("ignore")
 ROOT = Path(__file__).resolve().parents[2]
 POC = ROOT / "data" / "interim" / "poc"
 INTERIM = ROOT / "data" / "interim"
-FIG_DIR = ROOT / "docs" / "latex" / "figures"
+FIG_DIR = ROOT.parent / "tese" / "latex" / "figures"
 
 plt.rcParams.update({
     "font.size": 11,

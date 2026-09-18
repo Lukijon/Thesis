@@ -9,7 +9,7 @@ This is deliberately simple, not the thesis's final regression:
     value/momentum controls. A real market-model or Fama-French/Carhart
     abnormal return, using the control variables now built in
     src/features/build_control_variables.py, is the natural next
-    refinement -- see docs/latex/main.tex Sec. 3.3 for the honest
+    refinement -- see tese/latex/tese_jonathan.tex Sec. 3.3 for the honest
     limitation this leaves in the current specification.
   - Event date is the DFP's actual CVM receipt date (DT_RECEB) for the
     *current* fiscal year of each (year_prev, year_curr) similarity pair --
