@@ -3,6 +3,10 @@
 # third-party copyrighted PDFs, not meant for the shared remote.
 privado/
 
+# Qualification presentation drafts -- built from the private advisor
+# transcript and exam guide above, so kept local-only as well.
+slides_qualificacao/
+
 # Python
 __pycache__/
 *.pyc
