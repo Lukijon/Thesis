@@ -32,7 +32,6 @@ The user is doing the actual academic work; this repo is the data/code side plus
 **Next / pending:**
 - **Storytelling pass (active).** Carry the "words vs. numbers" argument into the Introdução (first page) and the Conclusão. Strong candidate: one concrete company-year example where the note text changed a lot while the debt balance barely moved, followed by abnormal returns (find it in the data; `exploracao/notebooks/poc_overview.ipynb` has text-evidence material). The user will share the full written presentation feedback; incorporate it when it arrives.
 - **Conclusão** is still a placeholder (deliberately, per the exam guide's "write it last" instruction) — the main remaining piece of writing.
-- `suporte/ibx.xlsx` is a Bloomberg export that ended up tracked in git during the September reorganization, which conflicts with the "never commit Bloomberg data" rule. Its November update was deliberately *not* committed. The user decides whether to untrack it (`git rm --cached`, add to `.gitignore`).
 - Thesis text work otherwise arrives incrementally (a section at a time, against advisor feedback or the Lazy Prices example).
 
 ## Repo map
@@ -75,7 +74,8 @@ Full detail lives in `.claude/skills/cvm-debt-notes/SKILL.md` and in code docstr
 - `suporte/data/raw/dfp/_cache/` (raw CVM zips) and `suporte/data/raw/market/` + `suporte/data/raw/analysts/` (Bloomberg-derived data — redistribution-restricted under Bloomberg's license) are **gitignored**, never commit these regardless of size.
 - Small manifest/log CSVs under `suporte/data/interim/` are tracked; bulk intermediate caches generally aren't, except `suporte/data/interim/poc/` which is small enough (~5MB) to keep for reproducibility.
 - `privado/` is entirely gitignored (see `.gitignore` for the full rationale) — never move anything out of it into a tracked location without checking first.
-- **Force-pushes / history rewrites**: only ever done once, explicitly requested by the user. Don't do this again without the same kind of explicit, specific request.
+- `suporte/*.xlsx` (`ibx.xlsx`, `ibov.xlsx`, `cdi.xlsx`: Bloomberg prices, volume, P/B, index membership) are gitignored, local-only. They had been tracked by the September reorganization; on 2026-11-19, at the user's explicit request, they were purged from all history with `git-filter-repo` and both branches were force-pushed. The repo is **public**. A local backup copy is in `C:\Users\jomma\Documents\Thesis_bloomberg_backup`.
+- **Force-pushes / history rewrites**: done twice (dfp PDFs, then the xlsx files), each explicitly requested by the user. Don't do this again without the same kind of explicit, specific request.
 - After any edit to `tese/latex/tese_jonathan.tex`, recompile before committing: from `tese/latex/`, `pdflatex -interaction=nonstopmode tese_jonathan.tex` → `bibtex tese_jonathan` → `pdflatex ...` (×2), confirm 0 undefined references, then delete build artifacts (`*.aux *.log *.out *.toc *.bbl *.blg missfont.log compile_log_*.txt bibtex_log.txt`) before `git add` — the compiled `tese_jonathan.pdf` is the only build output that's tracked.
 
 ## How this user likes to work
