@@ -48,17 +48,21 @@ C_ACCENT = "#c0504d"
 
 
 def load_company_categories() -> dict[int, str]:
-    current = pd.read_csv(INTERIM / "ibov_non_financial_universe.csv")["CD_CVM"].astype(int)
-    hist = pd.read_csv(INTERIM / "ibov_historical_notes_download_log.csv")["CD_CVM"].astype(int).unique()
-    ibx = pd.read_csv(INTERIM / "ibx_extra_universe.csv", dtype={"CD_CVM": str})["CD_CVM"].astype(int)
-    cats: dict[int, str] = {}
-    for cd in ibx:
-        cats[cd] = "IBX (nunca no Ibovespa)"
-    for cd in hist:
-        cats[cd] = "Histórica (saiu do Ibovespa)"
-    for cd in current:
-        cats[cd] = "Atual (Ibovespa)"
-    return cats
+    """Two groups spanning the final IBX universe: companies that are
+    CURRENT IBX members today vs. companies that were part of the index in
+    the past but no longer are. Status comes from the real daily IBX
+    membership history the user added to ibx.xlsx (see
+    src.acquisition.ibx_membership_status, which produces
+    ibx_current_status.csv) -- NOT from which of the three original
+    acquisition lists (current-Ibovespa / historical-Ibovespa / IBX-extra)
+    a company happens to come from, since that grouping conflates the two:
+    64 of the 74 "IBX-extra" companies have since rotated out of IBX, and
+    8 of the 45 "historical-Ibovespa" companies are still current IBX
+    members (they just left Ibovespa specifically).
+    """
+    status = pd.read_csv(INTERIM / "ibx_current_status.csv")
+    label = {"atual": "IBX atual", "historico": "IBX histórico"}
+    return dict(zip(status["CD_CVM"].astype(int), status["status_ibx"].map(label)))
 
 
 def fig_sample_composition() -> None:
@@ -67,12 +71,12 @@ def fig_sample_composition() -> None:
     cats = load_company_categories()
     df["categoria"] = df["cd_cvm"].map(cats)
     counts = df.groupby(["year_curr", "categoria"]).size().unstack(fill_value=0)
-    order = ["Atual (Ibovespa)", "Histórica (saiu do Ibovespa)", "IBX (nunca no Ibovespa)"]
+    order = ["IBX atual", "IBX histórico"]
     order = [c for c in order if c in counts.columns]
     counts = counts[order]
 
     fig, ax = plt.subplots(figsize=(9, 5))
-    colors = {"Atual (Ibovespa)": C_CURRENT, "Histórica (saiu do Ibovespa)": C_HIST, "IBX (nunca no Ibovespa)": C_IBX}
+    colors = {"IBX atual": C_CURRENT, "IBX histórico": C_HIST}
     bottom = np.zeros(len(counts))
     for cat in order:
         ax.bar(counts.index.astype(str), counts[cat], bottom=bottom, label=cat, color=colors[cat])
@@ -112,7 +116,7 @@ def fig_control_variables() -> None:
     specs = [
         ("ln_total_assets", "Log(ativo total)", False),
         ("roa", "ROA", True),
-        ("leverage", "Alavancagem", False),
+        ("leverage", "Alavancagem", True),
         ("past_12m_return", "Retorno passado (12m)", True),
     ]
     for ax, (col, label, trim) in zip(axes.flat, specs):

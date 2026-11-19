@@ -79,4 +79,6 @@ Checklist resumido — para o detalhe rodada a rodada, ver `CLAUDE.md`.
 - [x] H2 (revisão de consenso de EPS) — nulo em toda a grade, ainda no universo original de 111 empresas
 - [x] Repositório reorganizado em três pastas principais (`tese/`, `suporte/`, `exploracao/`) + `privado/` (local-only)
 - [x] Resumo/Abstract, Introdução (Capítulo 1) e Descrição dos Dados revisados para um tom mais direto, no estilo de paper de economia (Lazy Prices) em vez de texto acadêmico genérico — pedido explícito do orientador
+- [x] Composição histórica real do IBX (matriz diária Bloomberg) — amostra descrita em dois grupos: IBX atual e IBX histórico
+- [ ] Storytelling (feedback da qualificação): por que a mudança no texto da nota carrega sinal que o número não carrega — Capítulo 2 e Resumo feitos; falta Introdução e um exemplo concreto
 - [ ] Conclusão da dissertação (`tese/latex/tese_jonathan.tex`) — ainda placeholder, deliberadamente deixada para o final

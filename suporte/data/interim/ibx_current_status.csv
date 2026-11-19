@@ -1,0 +1,186 @@
+CD_CVM,tickers,status_ibx
+2437,ELET3 BS Equity;ELET6 BS Equity;AXIA3 BS Equity;AXIA6 BS Equity;AXIA7 BS Equity,atual
+2453,CMIG4 BS Equity;CMIG3 BS Equity,atual
+2461,CLSC4 BS Equity,historico
+2577,CESP6 BS Equity,historico
+3980,GGBR3 BS Equity;GGBR4 BS Equity,atual
+4030,CSNA3 BS Equity,atual
+4057,CRUZ3 BS Equity,historico
+4170,VALE3 BS Equity;VALE5 BS Equity,atual
+4650,CNFB4 BS Equity,historico
+4820,BRKM5 BS Equity,atual
+5258,RADL3 BS Equity,atual
+5410,WEGE3 BS Equity,atual
+6173,TASA4 BS Equity,historico
+6343,TUPY3 BS Equity,historico
+6505,VVAR11 BS Equity;BHIA3 BS Equity,historico
+7870,KEPL3 BS Equity,historico
+8087,LAME4 BS Equity;LAME3 BS Equity,historico
+8133,LREN3 BS Equity,atual
+8451,POMO4 BS Equity,atual
+8575,LEVE3 BS Equity,historico
+8656,GOAU4 BS Equity,atual
+8672,IGTI11 BS Equity,atual
+9393,PMAM3 BS Equity,historico
+9512,PETR3 BS Equity;PETR4 BS Equity,atual
+9989,RPMG3 BS Equity,historico
+10456,ALPA4 BS Equity,historico
+11312,OIBR3 BS Equity;OIBR4 BS Equity;TNLP3 BS Equity;TNLP4 BS Equity,historico
+11320,TMAR5 BS Equity,historico
+11932,MYPK3 BS Equity,historico
+12653,KLBN4 BS Equity;KLBN11 BS Equity,atual
+12793,FIBR3 BS Equity,historico
+13471,PLAS3 BS Equity,historico
+13986,SUZB5 BS Equity;SUZB3 BS Equity,atual
+14028,FFTL4 BS Equity,historico
+14109,RAPT4 BS Equity,atual
+14176,ELPL4 BS Equity;ELPL3 BS Equity,historico
+14249,VBBR3 BS Equity,atual
+14311,CPLE6 BS Equity;CPLE3 BS Equity;CPLE5 BS Equity,atual
+14320,USIM3 BS Equity;USIM5 BS Equity,atual
+14443,SBSP3 BS Equity,atual
+14460,CYRE3 BS Equity,atual
+14621,NETC4 BS Equity,historico
+14761,HGTX3 BS Equity,historico
+14826,PCAR4 BS Equity;PCAR3 BS Equity,atual
+15253,ENGI11 BS Equity,atual
+15539,NEOE3 BS Equity,historico
+15636,CGAS5 BS Equity,historico
+16101,GFSA3 BS Equity,historico
+16292,BRFS3 BS Equity,historico
+16306,RSID3 BS Equity,historico
+17329,EGIE3 BS Equity,atual
+17450,ALLL11 BS Equity;ALLL3 BS Equity;RAIL3 BS Equity,atual
+17639,TCSL4 BS Equity,historico
+17671,VIVT4 BS Equity;VIVT3 BS Equity,atual
+17710,VIVO4 BS Equity,historico
+17892,STBP3 BS Equity,historico
+17914,MMXM3 BS Equity,historico
+17973,COGN3 BS Equity,atual
+18112,AMBV3 BS Equity,historico
+18350,GETI4 BS Equity,historico
+18376,TRPL4 BS Equity;ISAE4 BS Equity,atual
+18465,UGPA4 BS Equity;UGPA3 BS Equity,atual
+18627,SAPR4 BS Equity;SAPR11 BS Equity,atual
+18660,CPFE3 BS Equity,atual
+18724,BRAP4 BS Equity,atual
+18821,CCRO3 BS Equity;MOTV3 BS Equity,atual
+18961,AEDU3 BS Equity,historico
+18970,TIET11 BS Equity,historico
+19445,CSMG3 BS Equity,atual
+19453,ECOR3 BS Equity,atual
+19550,NATU3 BS Equity,atual
+19569,GOLL4 BS Equity;GOLL54 BS Equity,historico
+19615,GRND3 BS Equity,historico
+19623,DASA3 BS Equity,historico
+19739,RENT3 BS Equity;RENT4 BS Equity,atual
+19763,ENBR3 BS Equity,historico
+19771,ARTR3 BS Equity,historico
+19836,CSAN3 BS Equity,atual
+19879,LIGT3 BS Equity,historico
+19909,BRML3 BS Equity,historico
+19925,BRPR3 BS Equity,historico
+19992,TOTS3 BS Equity,atual
+20010,EQTL3 BS Equity,atual
+20028,VLID3 BS Equity,historico
+20060,LUPA3 BS Equity,historico
+20087,EMBR3 BS Equity;EMBJ3 BS Equity,atual
+20117,GVTT3 BS Equity,historico
+20125,ODPV3 BS Equity,historico
+20168,OGXP3 BS Equity,historico
+20184,0927042D BS Equity,historico
+20249,KSSA3 BS Equity,historico
+20257,TAEE11 BS Equity,atual
+20338,MDIA3 BS Equity,historico
+20354,TESA3 BS Equity,historico
+20362,POSI3 BS Equity,historico
+20435,TCSA3 BS Equity,historico
+20478,PDGR3 BS Equity,historico
+20494,IGTA3 BS Equity,historico
+20516,SMTO3 BS Equity,atual
+20524,EVEN3 BS Equity,historico
+20575,JBSS3 BS Equity,historico
+20605,JHSF3 BS Equity,historico
+20621,FHER3 BS Equity,historico
+20702,VIVR3 BS Equity,historico
+20745,SLCE3 BS Equity,atual
+20770,EZTC3 BS Equity,atual
+20788,MRFG3 BS Equity;MBRF3 BS Equity,atual
+20842,MAGG3 BS Equity,historico
+20893,RDCD3 BS Equity,historico
+20915,MRVE3 BS Equity,atual
+20931,BEEF3 BS Equity,atual
+20940,ACGU3 BS Equity,historico
+20982,MULT3 BS Equity,atual
+20990,AMER3 BS Equity,historico
+21016,YDUQ3 BS Equity,atual
+21091,DXCO3 BS Equity,historico
+21148,TEND3 BS Equity,atual
+21180,NEXP3 BS Equity,historico
+21237,ENEV3 BS Equity,atual
+21300,ALSC3 BS Equity,historico
+21342,OSXB3 BS Equity,historico
+21350,DIRR3 BS Equity,atual
+21407,LWSA3 BS Equity,atual
+21431,HYPE3 BS Equity,atual
+21490,ALUP11 BS Equity,historico
+21776,PRTX3 BS Equity,historico
+21881,FLRY3 BS Equity,atual
+21911,AGEI3 BS Equity,historico
+21946,MPLU3 BS Equity,historico
+22012,MILS3 BS Equity,historico
+22055,AMAR3 BS Equity,historico
+22136,TERI3 BS Equity,historico
+22187,PRIO3 BS Equity,atual
+22349,AZZA3 BS Equity,atual
+22357,ALOS3 BS Equity,atual
+22365,ENAT3 BS Equity,historico
+22470,MGLU3 BS Equity,atual
+22691,LCAM3 BS Equity,historico
+23035,LINX3 BS Equity,historico
+23140,SMLS3 BS Equity,historico
+23221,SEER3 BS Equity,historico
+23248,ANIM3 BS Equity,atual
+23264,ABEV3 BS Equity,atual
+23272,LOGG3 BS Equity,historico
+23310,CVCB3 BS Equity,atual
+23450,RUMO3 BS Equity,historico
+23485,RLOG3 BS Equity,historico
+23574,MEAL3 BS Equity,historico
+23825,MOVI3 BS Equity,atual
+24112,AZUL4 BS Equity;AZUL54 BS Equity,historico
+24171,CRFB3 BS Equity,historico
+24252,SMLS3 BS Equity,historico
+24260,SMFT3 BS Equity,atual
+24295,VBBR3 BS Equity,atual
+24384,GNDI3 BS Equity,historico
+24392,HAPV3 BS Equity,atual
+24694,SBFG3 BS Equity,historico
+24716,VAMO3 BS Equity,atual
+24783,NTCO3 BS Equity,historico
+24805,VIVA3 BS Equity,atual
+24821,RDOR3 BS Equity,atual
+24848,CEAB3 BS Equity,atual
+24910,LWSA3 BS Equity,atual
+24929,TIMS3 BS Equity,atual
+24961,AMBP3 BS Equity,historico
+25003,SIMH3 BS Equity,historico
+25011,SOMA3 BS Equity,historico
+25089,PETZ3 BS Equity,atual
+25100,CURY3 BS Equity,atual
+25186,GMAT3 BS Equity,atual
+25232,CASH3 BS Equity,historico
+25291,RRRP3 BS Equity;BRAV3 BS Equity,atual
+25372,ASAI3 BS Equity,atual
+25453,INTB3 BS Equity,atual
+25585,CMIN3 BS Equity,atual
+25712,GGPS3 BS Equity,atual
+25780,RECV3 BS Equity,atual
+25844,BISA3 BS Equity,historico
+25917,RAIZ4 BS Equity,atual
+25984,CBAV3 BS Equity,historico
+26123,ONCO3 BS Equity,historico
+26441,SRNA3 BS Equity,historico
+26620,AURE3 BS Equity,atual
+27111,XPBR31 BS Equity,historico
+27707,AMOB3 BS Equity,historico
