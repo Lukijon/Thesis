@@ -13,8 +13,8 @@ Mais especificamente: em que medida a mudança textual ano a ano (medida por TF-
 ## Hipóteses
 
 - **H1** — a mudança textual ano a ano nas notas de dívida está associada ao retorno anormal futuro das ações, mesmo controlando pelas mudanças observáveis nos fundamentos (sem direção definida a priori).
-- **H1a** (exploratória, opcional) — maior mudança textual associa-se a retorno anormal futuro *menor*, na linha de *Lazy Prices* (Cohen, Malloy e Nguyen, 2020).
-- **H2** (complementar) — a mudança textual nas notas de dívida também se associa à revisão do consenso de EPS dos analistas após a divulgação.
+- **H2** (exploratória, antiga H1a) — maior mudança textual associa-se a retorno anormal futuro *menor*, na linha de *Lazy Prices* (Cohen, Malloy e Nguyen, 2020). Rejeitada: o sinal encontrado é positivo.
+- Revisão do consenso de EPS dos analistas (antiga H2): fora do escopo; testes preliminares ficam como sugestão de pesquisa futura na Conclusão.
 
 ## Estrutura do repositório
 
@@ -76,9 +76,10 @@ Checklist resumido — para o detalhe rodada a rodada, ver `CLAUDE.md`.
 - [x] Cálculo de similaridade textual (TF-IDF e cosseno), em **quatro fontes de texto** (nota de dívida anual, conjunto completo de notas, Relatório da Administração, Fatores de Risco do FRE) — o ITR (nota trimestral) foi removido do escopo: como documento trimestral seu efeito não é comparável aos das fontes anuais e não tinha justificativa econômica clara para permanecer
 - [x] Retorno anormal medido como resíduo fora da amostra de um modelo de quatro fatores (BHAR ajustado), grade de controles M0-M3 pré-especificada
 - [x] **Resultado principal**: a mudança textual da nota de dívida anual está associada ao retorno anormal futuro, significativa a 5% em toda a grade M0-M3 (M2: β=0,156, p=0,017), corroborada por um teste de portfólio calendário (p=0,0011) e pelo desenho de Santos & Coelho 2018 (p=0,043–0,080). Este é o único teste confirmatório pré-especificado da dissertação; as outras três fontes de texto servem como checagens de especificidade/generalização, não como testes confirmatórios independentes, e nenhuma mostra o mesmo padrão. (A correção de Benjamini-Hochberg para múltiplos testes, usada numa versão anterior do texto, foi removida junto com essa reformulação — deixou de fazer sentido tratar as fontes secundárias como uma "família" de testes independentes da mesma hipótese.)
-- [x] H2 (revisão de consenso de EPS) — nulo em toda a grade, ainda no universo original de 111 empresas
+- [x] Antiga H2 (revisão de consenso de EPS) retirada dos objetivos; testes preliminares (nulos) reportados como pesquisa futura
 - [x] Repositório reorganizado em três pastas principais (`tese/`, `suporte/`, `exploracao/`) + `privado/` (local-only)
 - [x] Resumo/Abstract, Introdução (Capítulo 1) e Descrição dos Dados revisados para um tom mais direto, no estilo de paper de economia (Lazy Prices) em vez de texto acadêmico genérico — pedido explícito do orientador
 - [x] Composição histórica real do IBX (matriz diária Bloomberg) — amostra descrita em dois grupos: IBX atual e IBX histórico
 - [ ] Storytelling (feedback da qualificação): por que a mudança no texto da nota carrega sinal que o número não carrega — Capítulo 2 e Resumo feitos; falta Introdução e um exemplo concreto
+- [ ] **Prioridade:** interpretar a rejeição da H2 (sinal oposto ao do Lazy Prices: mais mudança textual, retorno futuro maior), com verificação nos dados
 - [ ] Conclusão da dissertação (`tese/latex/tese_jonathan.tex`) — ainda placeholder, deliberadamente deixada para o final
