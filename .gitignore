@@ -97,3 +97,6 @@ exploracao/reports/figures/**
 Thumbs.db
 .vscode/
 .idea/
+
+# Bloomberg exports (prices, volume, P/B, index membership) -- redistribution-restricted, keep local-only
+suporte/*.xlsx
