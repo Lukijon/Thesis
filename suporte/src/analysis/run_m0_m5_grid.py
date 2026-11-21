@@ -39,8 +39,8 @@ import pandas as pd
 import statsmodels.formula.api as smf
 from linearmodels.panel import PanelOLS
 
-from src.analysis.test_sector_control import build_sector_map
 from src.features.build_m0_m5_controls import build_panel
+from src.features.sector import build_sector_map
 
 warnings.filterwarnings("ignore")
 
